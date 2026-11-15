@@ -149,11 +149,14 @@ chaquopy {
             ?.flatMap { it.listFiles()?.asSequence() ?: emptySequence() }
             ?.map { it.resolve("dependencies/python/python.exe") }
             ?.firstOrNull { it.isFile }
+        val actionsPython = System.getenv("pythonLocation")
+            ?.let { file("$it/bin/python").takeIf(File::isFile)?.absolutePath }
         val buildPythonPath = System.getenv("PYTHON")?.takeIf { file(it).isFile }
+            ?: actionsPython
             ?: cachePython?.absolutePath
-            ?: sequenceOf("/usr/bin/python3", "/usr/local/bin/python3")
+            ?: sequenceOf("/usr/bin/python3.12", "/usr/local/bin/python3.12")
                 .firstOrNull { file(it).isFile }
-            ?: error("Python 3 was not found. Set PYTHON to a Python 3.12 executable.")
+            ?: error("Python 3.12 was not found. Set PYTHON to a Python 3.12 executable.")
         buildPython(buildPythonPath)
         // App-owned CPython runtime. Protocol libraries are bundled at build time;
         // the installed APK never depends on pip/ensurepip on the Android device.
