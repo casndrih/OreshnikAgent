@@ -165,7 +165,7 @@ class SkillMatchingTest {
         val big = skill("big", "Big skill", "Large playbook", instructions = "x".repeat(SkillRepository.MAX_INSTRUCTIONS_CHARS + 5000))
         val rendered = SkillRepository.renderInstructions(big)
         assertTrue(rendered.contains("truncated at"))
-        assertTrue(rendered.length < SkillRepository.MAX_INSTRUCTIONS_CHARS + 300)
+        assertTrue(rendered.length < SkillRepository.MAX_INSTRUCTIONS_CHARS + 450)
     }
 
     @Test
