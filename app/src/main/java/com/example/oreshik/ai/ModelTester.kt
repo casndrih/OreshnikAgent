@@ -44,7 +44,7 @@ object ModelTester {
      *  - TIMEOUT → timed out / rate-limited / transient provider error (orange)
      *  - PROBING → not probed yet, still being checked (gray, pulsing)
      */
-    enum class ModelStatus { ONLINE, OFFLINE, TIMEOUT, PROBING }
+    enum class ModelStatus { ONLINE, OFFLINE, TIMEOUT, PROBING, RESTRICTED, UNAVAILABLE }
 
     private fun noopProgress(@Suppress("UNUSED_PARAMETER") done: Int, @Suppress("UNUSED_PARAMETER") total: Int, @Suppress("UNUSED_PARAMETER") latest: Model) { /* default no-op */ }
 
@@ -125,8 +125,22 @@ object ModelTester {
     fun statusFor(m: Model): ModelStatus = when {
         m.tested == true -> ModelStatus.ONLINE
         m.tested == null -> ModelStatus.PROBING
+        isRestrictedNote(m.testNote) -> ModelStatus.RESTRICTED
+        isUnavailableNote(m.testNote) -> ModelStatus.UNAVAILABLE
         isTransientNote(m.testNote) -> ModelStatus.TIMEOUT
         else -> ModelStatus.OFFLINE
+    }
+
+    internal fun isRestrictedNote(note: String): Boolean {
+        val n = note.lowercase()
+        return listOf("http 401", "http 402", "http 403", "invalid key", "paid account",
+            "not allowed for this key", "unauthorized", "forbidden", "insufficient credits").any(n::contains)
+    }
+
+    internal fun isUnavailableNote(note: String): Boolean {
+        val n = note.lowercase()
+        return listOf("http 404", "http 410", "model not found", "not found on provider",
+            "unknown model", "model is deprecated", "model unavailable").any(n::contains)
     }
 
     internal fun isTransientNote(note: String): Boolean {
@@ -134,8 +148,9 @@ object ModelTester {
         return n.contains("timed out") || n.contains("timeout") ||
                 n.contains("rate limited") || n.contains("rate-limit") ||
                 n.contains("http 408") || n.contains("http 429") ||
-                n.contains("http 504") || n.contains("http 524") ||
-                n.contains("network error")
+                Regex("http 5[0-9]{2}").containsMatchIn(n) ||
+                n.contains("network error") || n.contains("connection reset") ||
+                n.contains("temporarily unavailable")
     }
 
     /** Probe with a cache short-circuit: returns the cached outcome when present. */
