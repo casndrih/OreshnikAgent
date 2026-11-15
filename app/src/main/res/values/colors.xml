@@ -24,10 +24,6 @@
     <color name="canvas_bg">#FFFFFF</color>
     <color name="divider">#E4E0D3</color>
 
-    <!-- Hairline for the composer card, so the floating shadow reads
-         cleanly against the white canvas in light mode -->
-    <color name="composer_stroke">#14000000</color>
-
     <!-- Composer icon-button background. Light mode: same cream pill as
          before. Dark mode overrides this (see values-night) to the
          near-black bg_pill_dark tone instead, to match the "Get more
@@ -52,8 +48,6 @@
     <color name="text_tertiary">#9C9A90</color>
 
     <color name="error">#B00020</color>
-    <!-- Hairline stroke for tool chips + thinking bubble -->
-    <color name="chip_stroke">#E4E2DC</color>
     <!-- Tool-chip state tints -->
     <color name="chip_running_bg">#F2F8E6</color>
     <color name="chip_error_fg">#B3261E</color>
@@ -71,7 +65,6 @@
 
     <!-- Tool Card Colors -->
     <color name="surface_variant">@color/bg_card</color>
-    <color name="outline_variant">@color/divider</color>
 
     <!-- Chip colors -->
     <color name="chip_neutral">#E0E0E0</color>
