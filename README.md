@@ -29,11 +29,13 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 
 - **Multiple AI backends:** NVIDIA, ChatGPT plan integration, OpenRouter, BlueSmind, NaraRouter, Mistral, and configurable OpenAI-compatible endpoints.
 - **Online and local inference:** switch between remote providers and an on-device GGUF model runtime.
-- **Tool-using agent:** structured tool definitions, a registry, permission categories, task execution, progress events, and tool collaboration.
+- **Tool-using agent:** structured tool definitions, a registry, per-tool default/ask/allow/deny policies, hard capability gates, task execution, progress events, and tool collaboration.
 - **Coding tools:** workspace file operations, Python execution, Git inspection, and Android/Gradle build integration.
 - **Android computer use:** screen inspection and accessibility-driven interactions, subject to Android's accessibility controls.
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
+- **Encrypted backups:** passphrase-protected settings/provider/chat/memory/skills exports using PBKDF2-HMAC-SHA256 and AES-256-GCM.
+- **Redacted audit trail:** app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
 - **Encrypted configuration backups:** passphrase-protected exports using PBKDF2-HMAC-SHA256 and AES-256-GCM, with legacy JSON restore compatibility.
 - **Tool audit trail:** app-private JSONL records for permission decisions and tool outcomes, with recursive credential redaction.
@@ -75,13 +77,16 @@ OreshnikAgent uses a structured agent engine rather than treating every request 
 
 The source includes:
 
+- Per-tool policies: use global defaults, ask every time, always allow, or always deny, configurable from the existing expanded tool cards. Explicit deny and disabled top-level capabilities cannot be overridden by an approval dialog; the global ask-before-write safeguard remains active.
+- Redacted app-private audit records for tool permission decisions and execution outcomes. API keys, passwords, bearer tokens, and common inline credentials are redacted before storage.
 - Agent API client, configuration, task manager, and execution service.
 - Tool definitions with names, descriptions, parameters, categories, and permission requirements.
 - Tool registry for exposing available capabilities to the model.
 - Structured tool results and execution progress.
 - Tool collaboration and collaborative analysis helpers.
 - Event bus for agent/task events.
-- Permission approval and workspace-ownership components.
+- Permission approval, per-tool approval policies, hard capability gates, and workspace-ownership components.
+- App-private redacted tool audit records (tool, session, permission outcome, execution result, duration, timestamp).
 - Session learning and context retrieval.
 
 ### Tool categories represented in the code
@@ -369,7 +374,7 @@ The following are **proposed enhancements**, not claims about features already s
 
 ### P1 — Agent quality and control
 
-- Add a per-tool approval policy: always allow, ask every time, or deny.
+- Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
 - Add task plans with visible steps, cancellation, retry, and resumable execution.
 - Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
 - Add workspace snapshots and one-tap rollback for automated file edits.
