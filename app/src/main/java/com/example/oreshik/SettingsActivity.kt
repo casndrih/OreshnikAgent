@@ -48,6 +48,7 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState); AgentConfig.init(this); setContentView(R.layout.activity_settings)
         findViewById<MaterialToolbar>(R.id.toolbar).setNavigationOnClickListener { finish() }
+        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnExportDiagnostics).setOnClickListener { exportDiagnosticLog() }
         // Connection (endpoint/API key) management now lives in the Providers
         // screen (nav drawer); Settings only shows a read-only status line.
         val active = findViewById<TextView>(R.id.tvActiveModel)
@@ -356,6 +357,28 @@ class SettingsActivity : AppCompatActivity() {
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
+    }
+
+    private fun exportDiagnosticLog() {
+        val file = com.example.oreshik.logging.AppLogger.getLogFile()
+        if (file == null || !file.exists() || file.length() == 0L) {
+            Toast.makeText(this, "No diagnostic entries recorded yet", Toast.LENGTH_SHORT).show()
+            return
+        }
+        runCatching {
+            val uri = androidx.core.content.FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
+            val send = Intent(Intent.ACTION_SEND).apply {
+                type = "text/plain"
+                putExtra(Intent.EXTRA_SUBJECT, "Oreshik Agent diagnostics")
+                putExtra(Intent.EXTRA_STREAM, uri)
+                clipData = android.content.ClipData.newUri(contentResolver, file.name, uri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            startActivity(Intent.createChooser(send, "Share diagnostic log"))
+        }.onFailure {
+            com.example.oreshik.logging.AppLogger.e("Settings", "Diagnostic export failed", it)
+            Toast.makeText(this, "Export failed: ${it.message}", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun bindSwitch(id:Int, checked:Boolean, action:(Boolean)->Unit){ findViewById<SwitchMaterial>(id).apply { isChecked=checked; setOnCheckedChangeListener{_,v->action(v)} } }
