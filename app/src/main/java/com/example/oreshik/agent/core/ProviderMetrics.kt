@@ -4,9 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import java.net.URI
-import java.util.concurrent.ConcurrentHashMap
 
-/** In-process request telemetry. It stores model/host/usage only, never prompts or credentials. */
+/** Persistent app-private request telemetry. It stores model/host/usage only, never prompts or credentials. */
 object ProviderMetrics {
     data class Snapshot(
         val host: String,
