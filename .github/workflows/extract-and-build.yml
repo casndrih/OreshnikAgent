@@ -22,7 +22,7 @@ permissions:
 
 concurrency:
   group: oreshik-main-build-v3
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   extract-and-build:
