@@ -71,7 +71,11 @@ jobs:
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Extract patched Android source into main"
-            git push origin HEAD:main
+            git fetch origin main
+            git rebase origin/main
+            git fetch origin main
+git rebase origin/main
+git push origin HEAD:main
           else
             echo "No source changes to commit"
           fi
@@ -141,7 +145,11 @@ jobs:
           git add OreshnikAgent-release.apk OreshnikAgent-release.apk.sha256
           if ! git diff --cached --quiet; then
             git commit -m "Publish verified release APK in repository root"
-            git push origin HEAD:main
+            git fetch origin main
+            git rebase origin/main
+            git fetch origin main
+git rebase origin/main
+git push origin HEAD:main
           fi
 
       - name: Upload release APK
