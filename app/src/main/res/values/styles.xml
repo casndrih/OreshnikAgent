@@ -13,6 +13,12 @@
         <item name="backgroundTint">@android:color/transparent</item>
     </style>
 
+    <style name="Widget.Oreshik.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">0dp</item>
+        <item name="cardMaxElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
     <!-- Nav drawer row label -->
     <style name="NavItemTextAppearance" parent="android:TextAppearance">
         <item name="android:textSize">15sp</item>
