@@ -130,9 +130,7 @@ jobs:
             git commit -m "Publish verified Termux ARM64 runtime catalogue"
             git fetch origin main
             git rebase origin/main
-            git fetch origin main
-git rebase origin/main
-git push origin HEAD:main
+            git push origin HEAD:main
           fi
 
       - name: Trigger APK build with updated runtime catalogue
