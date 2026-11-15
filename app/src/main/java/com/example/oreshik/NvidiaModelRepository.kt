@@ -45,14 +45,16 @@ class NvidiaModelRepository {
                     if (id.isBlank()) continue
                     val owned = o["owned_by"]?.asString.orEmpty()
                     val desc = o["description"]?.asString.orEmpty()
-                    val reasoning = isReasoningModel(id, desc)
+                    val reasoningCapability = ModelCapabilities.reasoningCapability(o, id, desc)
+                    val reasoning = reasoningCapability.supported
                     val model = Model(
                         id = id,
                         description = desc.ifBlank { category(id) },
                         ownedBy = owned,
                         reasoning = reasoning,
                         vision = listOf("vl", "vision", "vila", "llava").any { marker -> id.lowercase().contains(marker) },
-                        thinkingLevels = levelsFor(id, reasoning),
+                        thinkingLevels = reasoningCapability.levels,
+                        reasoningVerified = reasoningCapability.verified,
                     )
                     collected.putIfAbsent(model.id, model)
                 }
