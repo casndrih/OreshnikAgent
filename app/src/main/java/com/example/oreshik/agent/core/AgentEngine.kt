@@ -71,7 +71,7 @@ class AgentEngine(
             val toolsJson = JsonObject().apply { if (toolSchemas.size() > 0) add("tools", toolSchemas) }
             val providerCallStarted = System.currentTimeMillis()
             val providerResult = apiClient.complete(model, messagesJson, toolsJson, reasoningEffort)
-            recordProviderMetrics(provider.baseUrl, model, providerCallStarted, providerResult)
+            recordProviderMetrics(provider.getEffectiveBaseUrl(), model, providerCallStarted, providerResult)
             val response = providerResult.getOrElse {
                     AppLogger.e(TAG, "run failed on provider=${provider.id} model=$model at step ${step + 1}: ${it.javaClass.simpleName}: ${it.message?.take(300)}", it)
                     emit(Event(Event.Type.ERROR, text = it.message)); return@withContext Result.failure(it)
@@ -344,7 +344,7 @@ class AgentEngine(
         } else {
             api.completeText(baseUrl, apiKey, model, prompt, reasoningEffort)
         }
-        recordProviderMetrics(baseUrl, model, providerCallStarted, result)
+        if (apiClient != null) recordProviderMetrics(baseUrl, model, providerCallStarted, result)
         val summary = result.getOrNull()?.let { response ->
             response.arrayOrNull("choices")?.firstOrNull()?.asJsonObject
                 ?.objectOrNull("message")?.get("content")?.takeUnless { it.isJsonNull }?.asString
