@@ -51,7 +51,7 @@ object ModelCapabilities {
 
     /** Prefer explicit provider metadata; use model-name heuristics only as a probe candidate. */
     fun reasoningCapability(entry: com.google.gson.JsonObject, id: String, description: String = ""): ReasoningCapability {
-        val capabilityObject = entry.getAsJsonObject("capabilities")
+        val capabilityObject = entry.get("capabilities")?.takeIf { it.isJsonObject }?.asJsonObject
         val parameterArrays = listOfNotNull(
             entry.getAsJsonArray("supported_parameters"),
             capabilityObject?.getAsJsonArray("supported_parameters"),
