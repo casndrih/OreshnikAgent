@@ -70,7 +70,8 @@ class AgentApiClient(
         reasoningEffort: String = "off",
     ): Result<JsonObject> = withContext(Dispatchers.IO) {
         val key = capabilityKey(baseUrl, model)
-        val requestedReasoning = if (reasoningSupport[key] == false) "off" else reasoningEffort
+        val detectedReasoning = reasoningSupport[key] ?: persistedReasoningSupport(model)?.also { reasoningSupport[key] = it }
+        val requestedReasoning = if (detectedReasoning == false) "off" else reasoningEffort
         val first = requestCompletion(baseUrl, apiKey, model, messages, null, requestedReasoning)
         if (first.isSuccess) {
             reportKeyOutcome(apiKey, first)
@@ -337,6 +338,20 @@ class AgentApiClient(
         AppLogger.e("AgentApi", "chat $model → exhausted $maxRetries retries: ${lastException?.javaClass?.simpleName}: ${lastException?.message?.take(200)}")
         return Result.failure(lastException ?: IllegalStateException("Max retries exceeded"))
     }
+
+    /** Reuse the latest live/catalog capability result produced by ModelTester for NVIDIA. */
+    private fun persistedReasoningSupport(model: String): Boolean? = runCatching {
+        val raw = AgentConfig.getRaw("modeltest_nvidia")
+        if (raw.isBlank()) return@runCatching null
+        val rows = JsonParser.parseString(raw).asJsonArray
+        for (row in rows) {
+            if (!row.isJsonObject) continue
+            val item = row.asJsonObject
+            if (item.get("id")?.takeUnless { it.isJsonNull }?.asString != model) continue
+            return@runCatching item.get("reasoningVerified")?.takeUnless { it.isJsonNull }?.asBoolean
+        }
+        null
+    }.getOrNull()
 
     private fun capabilityKey(baseUrl: String, model: String) = "${baseUrl.trimEnd('/')}::$model"
 
