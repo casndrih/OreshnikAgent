@@ -114,7 +114,7 @@ class ToolPackInstaller(private val context: Context) {
         // semantics and scripts written for other interpreters.
         val prefixReplacement = destination.absolutePath.replace("\\", "\\\\").replace("&", "\\&").replace("#", "\\#")
         val relocateScripts =
-            "grep -rl '@RUNTIME_PREFIX@' ${shellQuote(destination.absolutePath)} 2>/dev/null | " +
+            "grep -rIl '@RUNTIME_PREFIX@' ${shellQuote(destination.absolutePath)} 2>/dev/null | " +
             "while IFS= read -r f; do [ -f \"\$f\" ] || continue; " +
             "sed -i 's#@RUNTIME_PREFIX@#$prefixReplacement#g' \"\$f\" || exit 41; done"
         val normalizeSystemSh =
