@@ -12,8 +12,6 @@
     <color name="bg_assistant_bubble">#111111</color>
     <color name="canvas_bg">#000000</color>
     <color name="divider">#242424</color>
-    <color name="composer_stroke">#2EFFFFFF</color>
-    <color name="chip_stroke">#2A2A2A</color>
     <color name="chip_running_bg">#082A30</color>
     <color name="chip_error_fg">#F2B8B5</color>
     <color name="chip_error_bg">#2C1513</color>
