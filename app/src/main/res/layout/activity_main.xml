@@ -185,17 +185,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Soft top-cast shadow: Android's elevation shadow is strongest below this bottom-anchored card. -->
-        <View
-            android:id="@+id/composerTopShadow"
-            android:layout_width="0dp"
-            android:layout_height="18dp"
-            android:background="@drawable/bg_composer_top_shadow"
-            android:importantForAccessibility="no"
-            app:layout_constraintBottom_toTopOf="@id/composerCard"
-            app:layout_constraintStart_toStartOf="@id/composerCard"
-            app:layout_constraintEnd_toEndOf="@id/composerCard" />
-
         <!-- Composer card -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/composerCard"
@@ -204,6 +193,8 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginBottom="18dp"
             app:cardBackgroundColor="@color/bg_card"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
             app:cardCornerRadius="26dp"
             app:strokeWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
