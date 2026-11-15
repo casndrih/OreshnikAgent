@@ -215,7 +215,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnChooseGguf"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
@@ -253,7 +253,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUnloadGguf"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
@@ -264,7 +264,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDeleteGguf"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="8dp"
