@@ -78,7 +78,8 @@ jobs:
               assert len(manifest["packages"]) >= 20
               print("Validated", len(manifest["packages"]), "Termux packages and", len(manifest["entrypoints"]), "entrypoints")
           PY
-          sha256sum -c dist/termux-arm64.zip.sha256
+          (cd dist && sha256sum -c termux-arm64.zip.sha256)
+          test "$(stat -c%s dist/termux-arm64.zip)" -lt 200000000
 
       - name: Publish runtime pack release asset
         env:
