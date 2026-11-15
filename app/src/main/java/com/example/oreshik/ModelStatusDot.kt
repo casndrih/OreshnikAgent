@@ -123,6 +123,8 @@ class ModelStatusDot @JvmOverloads constructor(
         ModelTester.ModelStatus.OFFLINE -> ContextCompat.getColor(context, R.color.status_offline)
         ModelTester.ModelStatus.TIMEOUT -> ContextCompat.getColor(context, R.color.status_timeout)
         ModelTester.ModelStatus.PROBING -> ContextCompat.getColor(context, R.color.status_probing)
+        ModelTester.ModelStatus.RESTRICTED -> ContextCompat.getColor(context, R.color.status_restricted)
+        ModelTester.ModelStatus.UNAVAILABLE -> ContextCompat.getColor(context, R.color.status_unavailable)
     }
 
     private fun statusText(s: ModelTester.ModelStatus): String = when (s) {
@@ -130,6 +132,8 @@ class ModelStatusDot @JvmOverloads constructor(
         ModelTester.ModelStatus.OFFLINE -> context.getString(R.string.model_status_offline)
         ModelTester.ModelStatus.TIMEOUT -> context.getString(R.string.model_status_timeout)
         ModelTester.ModelStatus.PROBING -> context.getString(R.string.model_status_probing)
+        ModelTester.ModelStatus.RESTRICTED -> context.getString(R.string.model_status_restricted)
+        ModelTester.ModelStatus.UNAVAILABLE -> context.getString(R.string.model_status_unavailable)
     }
 
     private fun dip(dp: Int): Int = (dp * resources.displayMetrics.density + 0.5f).toInt()
