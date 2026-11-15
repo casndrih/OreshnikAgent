@@ -69,8 +69,10 @@ class AgentEngine(
             val requestHistory = buildRequestHistory(history, userText, sessionId, provider.id)
             val messagesJson = JsonObject().apply { add("messages", JsonArray().also { requestHistory.forEach(it::add) }) }
             val toolsJson = JsonObject().apply { if (toolSchemas.size() > 0) add("tools", toolSchemas) }
-            val response = apiClient.complete(model, messagesJson, toolsJson, reasoningEffort)
-                .getOrElse {
+            val providerCallStarted = System.currentTimeMillis()
+            val providerResult = apiClient.complete(model, messagesJson, toolsJson, reasoningEffort)
+            recordProviderMetrics(provider.baseUrl, model, providerCallStarted, providerResult)
+            val response = providerResult.getOrElse {
                     AppLogger.e(TAG, "run failed on provider=${provider.id} model=$model at step ${step + 1}: ${it.javaClass.simpleName}: ${it.message?.take(300)}", it)
                     emit(Event(Event.Type.ERROR, text = it.message)); return@withContext Result.failure(it)
                 }
@@ -336,11 +338,13 @@ class AgentEngine(
             add(message("system", "You are a conversation compactor for a coding agent. Produce a concise but technically precise state summary that preserves user goals, decisions, files changed, important code/config details, commands and their results, errors, unresolved issues, constraints, and next steps. Do not invent facts. This summary will be used as durable context after older messages are removed."))
             add(message("user", "Compress this coding-agent conversation into durable working context:\n\n$transcript"))
         }
+        val providerCallStarted = System.currentTimeMillis()
         val result = if (apiClient != null) {
             apiClient.completeText(model, JsonObject().apply { add("messages", prompt) }, reasoningEffort)
         } else {
             api.completeText(baseUrl, apiKey, model, prompt, reasoningEffort)
         }
+        recordProviderMetrics(baseUrl, model, providerCallStarted, result)
         val summary = result.getOrNull()?.let { response ->
             response.arrayOrNull("choices")?.firstOrNull()?.asJsonObject
                 ?.objectOrNull("message")?.get("content")?.takeUnless { it.isJsonNull }?.asString
@@ -461,6 +465,29 @@ class AgentEngine(
      * explicit "remember that…" requests are captured immediately, and periodic LLM passes extract
      * durable facts from recent session context. Never blocks or fails the reply.
      */
+    private fun recordProviderMetrics(
+        baseUrl: String,
+        model: String,
+        startedAt: Long,
+        result: Result<JsonObject>,
+    ) {
+        val usage = result.getOrNull()?.getAsJsonObject("usage")
+        val promptTokens = runCatching {
+            usage?.get("prompt_tokens")?.asLong ?: usage?.get("input_tokens")?.asLong ?: 0L
+        }.getOrDefault(0L)
+        val completionTokens = runCatching {
+            usage?.get("completion_tokens")?.asLong ?: usage?.get("output_tokens")?.asLong ?: 0L
+        }.getOrDefault(0L)
+        ProviderMetrics.record(
+            baseUrl,
+            model,
+            System.currentTimeMillis() - startedAt,
+            result.isSuccess,
+            promptTokens,
+            completionTokens,
+        )
+    }
+
     private fun fireLearningHook(
         sessionId: String,
         userText: String,
