@@ -35,7 +35,7 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
 - **Encrypted backups:** passphrase-protected settings/provider/chat/memory/skills exports using PBKDF2-HMAC-SHA256 and AES-256-GCM.
-- **Redacted audit trail:** app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
+- **Redacted audit trail:** view and clear app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
 - **Encrypted configuration backups:** passphrase-protected exports using PBKDF2-HMAC-SHA256 and AES-256-GCM, with legacy JSON restore compatibility.
 - **Tool audit trail:** app-private JSONL records for permission decisions and tool outcomes, with recursive credential redaction.
@@ -374,7 +374,7 @@ The following are **proposed enhancements**, not claims about features already s
 
 ### P1 — Agent quality and control
 
-- Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
+- Add audit-log retention controls, configurable filtering, and export for the existing redacted tool audit trail.
 - Add task plans with visible steps, cancellation, retry, and resumable execution.
 - Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
 - Add workspace snapshots and one-tap rollback for automated file edits.
