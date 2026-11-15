@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,7 @@ import com.example.oreshik.agent.core.ToolCategory
 import com.example.oreshik.agent.core.ToolPermission
 import com.example.oreshik.agent.security.PermissionBroker
 import com.example.oreshik.agent.security.PermissionManager
+import com.example.oreshik.agent.security.ToolApprovalPolicy
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
@@ -291,6 +293,9 @@ class ToolsActivity : AppCompatActivity() {
         val toolParametersLabel = card.findViewById<TextView>(R.id.toolParametersLabel)
         val toolParametersContainer = card.findViewById<LinearLayout>(R.id.toolParametersContainer)
         val toolPermissionsContainer = card.findViewById<LinearLayout>(R.id.toolPermissionsContainer)
+        val policyButton = card.findViewById<MaterialButton>(R.id.btnToolApprovalPolicy)
+        val policyManager = PermissionManager(applicationContext)
+        var currentPolicy = ToolApprovalPolicy.DEFAULT
 
         permissionChipsContainer.removeAllViews()
         toolParametersContainer.removeAllViews()
@@ -360,6 +365,39 @@ class ToolsActivity : AppCompatActivity() {
             }
         }
         
+        policyButton.tag = tool.definition.name
+        policyButton.visibility = if (tool.definition.permissions.isEmpty()) View.GONE else View.VISIBLE
+        policyButton.text = approvalPolicyLabel(ToolApprovalPolicy.DEFAULT)
+        lifecycleScope.launch {
+            val loadedPolicy = withContext(Dispatchers.IO) {
+                policyManager.getToolPolicy(tool.definition.name)
+            }
+            if (policyButton.tag == tool.definition.name) {
+                currentPolicy = loadedPolicy
+                policyButton.text = approvalPolicyLabel(loadedPolicy)
+            }
+        }
+        policyButton.setOnClickListener {
+            val policies = listOf(
+                ToolApprovalPolicy.DEFAULT,
+                ToolApprovalPolicy.ASK,
+                ToolApprovalPolicy.ALLOW,
+                ToolApprovalPolicy.DENY,
+            )
+            val labels = arrayOf("Use global default", "Ask every time", "Always allow", "Always deny")
+            AlertDialog.Builder(this@ToolsActivity)
+                .setTitle("Approval policy · ${tool.definition.name}")
+                .setSingleChoiceItems(labels, policies.indexOf(currentPolicy)) { dialog, which ->
+                    val selected = policies[which]
+                    currentPolicy = selected
+                    policyManager.setToolPolicy(tool.definition.name, selected)
+                    policyButton.text = approvalPolicyLabel(selected)
+                    dialog.dismiss()
+                }
+                .setNegativeButton(android.R.string.cancel, null)
+                .show()
+        }
+
         // Add permissions detail
         tool.definition.permissions.forEach { perm ->
             val permChip = Chip(this@ToolsActivity).apply {
@@ -390,6 +428,13 @@ class ToolsActivity : AppCompatActivity() {
         
     }
     
+    private fun approvalPolicyLabel(policy: ToolApprovalPolicy): String = when (policy) {
+        ToolApprovalPolicy.DEFAULT -> "Approval policy: Default"
+        ToolApprovalPolicy.ASK -> "Approval policy: Ask every time"
+        ToolApprovalPolicy.ALLOW -> "Approval policy: Always allow"
+        ToolApprovalPolicy.DENY -> "Approval policy: Always deny"
+    }
+
     private fun getChipColor(perm: ToolPermission): Int {
         return when (perm) {
             ToolPermission.ROOT -> R.color.chip_error
