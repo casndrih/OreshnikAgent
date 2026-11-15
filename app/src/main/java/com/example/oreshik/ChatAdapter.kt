@@ -963,7 +963,6 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.VH>() {
             background = android.graphics.drawable.GradientDrawable().apply {
                 setColor(ContextCompat.getColor(context, R.color.bg_card))
                 cornerRadius = dp(12).toFloat()
-                setStroke(dp(1), ContextCompat.getColor(context, R.color.divider))
             }
             clipToOutline = true
             setPadding(dp(12), dp(6), dp(12), dp(8))
