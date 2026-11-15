@@ -6,7 +6,14 @@ on:
     branches: [main]
     paths:
       - 'OreshnikAgent-patched-source.zip'
-      - '.github/workflows/extract-and-build.yml'
+      - '.github/workflows/**'
+      - 'app/**'
+      - 'gradle/**'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - 'gradle.properties'
+      - 'runtime-catalog.json'
+      - 'BUILDING.md'
   workflow_dispatch:
 
 permissions:
@@ -101,7 +108,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ./gradlew :app:testDebugUnitTest --stacktrace
+          ./gradlew :app:testDebugUnitTest :app:lintRelease --stacktrace
           ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > dependency-report.txt
 
       - name: Build release APK
@@ -118,6 +125,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: OreshnikAgent-release-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: |
+            app/build/outputs/apk/release/*
+            dependency-report.txt
           if-no-files-found: error
           retention-days: 14
