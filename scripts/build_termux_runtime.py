@@ -82,7 +82,7 @@ def authenticated_index(repo, inrelease, work):
     path=next((p for p in ("main/binary-aarch64/Packages.xz","main/binary-aarch64/Packages.gz","main/binary-aarch64/Packages") if p in hashes),None)
     if not path: raise RuntimeError("Signed InRelease has no ARM64 package index")
     index=work/Path(path).name
-    download(repo.rstrip("/")+"/"+path,index)
+    download(repo.rstrip("/")+"/dists/stable/"+path,index)
     actual=hashlib.sha256(index.read_bytes()).hexdigest()
     if actual!=hashes[path]: raise RuntimeError("Packages index hash differs from signed InRelease")
     raw=index.read_bytes()
