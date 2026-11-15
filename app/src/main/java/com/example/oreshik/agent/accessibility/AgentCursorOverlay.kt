@@ -30,7 +30,7 @@ import android.widget.ImageView
 @SuppressLint("StaticFieldLeak")
 object AgentCursorOverlay {
     private const val CURSOR_SIZE = 48
-    private const val CURSOR_GLOW_PADDING = 0
+    private const val CURSOR_PADDING = 0
     private const val CURSOR_VIEW_SIZE = CURSOR_SIZE + CURSOR_GLOW_PADDING * 2
     private const val CURSOR_TAP_SIZE = 76
     private const val FADE_MS = 500L
@@ -175,7 +175,7 @@ object AgentCursorOverlay {
         val wm = windowManager ?: return
         try {
             val lp = (cursor.layoutParams as? WindowManager.LayoutParams) ?: return
-            // The arrow is centered inside its padded glow view. Align its tip
+            // The arrow is centered inside its cursor view. Align its tip
             // (28% x / 12% y of the arrow) with the real screen coordinate.
             val density = cursor.resources.displayMetrics.density
             val arrowOrigin = CURSOR_GLOW_PADDING * density
