@@ -114,11 +114,11 @@ class ToolPackInstaller(private val context: Context) {
         // semantics and scripts written for other interpreters.
         val prefixReplacement = destination.absolutePath.replace("\\", "\\\\").replace("&", "\\&").replace("#", "\\#")
         val relocateScripts =
-            "grep -rl '@RUNTIME_PREFIX@' \${shellQuote(destination.absolutePath)} 2>/dev/null | " +
+            "grep -rl '@RUNTIME_PREFIX@' ${shellQuote(destination.absolutePath)} 2>/dev/null | " +
             "while IFS= read -r f; do [ -f \"\$f\" ] || continue; " +
             "sed -i 's#@RUNTIME_PREFIX@#$prefixReplacement#g' \"\$f\" || exit 41; done"
         val normalizeSystemSh =
-            "grep -rIl '^#!/bin/sh\\|^#!/usr/bin/sh' \${shellQuote(destination.absolutePath)} 2>/dev/null | " +
+            "grep -rIl '^#!/bin/sh\\|^#!/usr/bin/sh' ${shellQuote(destination.absolutePath)} 2>/dev/null | " +
             "while IFS= read -r f; do [ -f \"\$f\" ] || continue; " +
             "sed -i '1s|^#!.*|#!/system/bin/sh|' \"\$f\" || exit 42; done"
         val (scriptsFixed, scriptsOutput) = root.execute(
@@ -127,8 +127,8 @@ class ToolPackInstaller(private val context: Context) {
         )
         if (scriptsFixed != 0) {
             AppLogger.e(TAG, "Runtime script relocation failed for $packId: $scriptsOutput")
-            runCatching { root.execute("rm -rf \${shellQuote(tmpDir.absolutePath)}", timeoutSeconds = 60) }
-            return@withContext InstallReport(packId, ok = false, detail = "script relocation failed: \${scriptsOutput.take(300)}")
+            runCatching { root.execute("rm -rf ${shellQuote(tmpDir.absolutePath)}", timeoutSeconds = 60) }
+            return@withContext InstallReport(packId, ok = false, detail = "script relocation failed: ${scriptsOutput.take(300)}")
         }
 
         val (contextsFixed, contextDetail) = root.fixSelinuxContextForRuntime(
