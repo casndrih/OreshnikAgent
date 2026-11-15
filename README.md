@@ -31,7 +31,7 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Online and local inference:** switch between remote providers and an on-device GGUF model runtime.
 - **Tool-using agent:** structured tool definitions, a registry, per-tool default/ask/allow/deny policies, hard capability gates, task execution, progress events, and tool collaboration.
 - **Coding tools:** workspace file operations, Python execution, Git inspection and HTTPS remote operations, offline project templates, and Android/Gradle build integration.
-- **Android computer use:** screen inspection, accessibility-driven interactions, and bounded repeatable UI-test sequences, subject to Android's accessibility controls.
+- **Android computer use:** screen inspection, accessibility-driven interactions, bounded repeatable UI-test sequences, and app-private UI regression snapshots with pixel-difference comparison.
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
 - **Encrypted backups:** passphrase-protected settings/provider/chat/memory/skills exports using PBKDF2-HMAC-SHA256 and AES-256-GCM.
@@ -92,7 +92,7 @@ The source includes:
 - Workspace snapshots: app-private ZIP snapshots exclude build/dependency caches, cap file count and archive size, validate every restore path, and automatically create a safety snapshot before rollback.
 - Git operations: local branch list/create/switch/delete, explicit path staging, staged-only commits, patch export, plus HTTPS clone/fetch/pull/push. Credentials are supplied per call, never persisted, and force-push is not exposed.
 - Offline project templates: Android/Kotlin, Kotlin CLI, Python, Node.js, and PHP API starters; creation is workspace-scoped and never overwrites an existing target.
-- Accessibility sequence playback: bounded, step-reported tap, long-press, swipe, text click/input, scroll, focus, global navigation, and wait actions.
+- Accessibility sequence playback: bounded, step-reported tap, long-press, swipe, text click/input, scroll, focus, global navigation, and wait actions. UI snapshots can be captured, listed, and compared with a bounded pixel-difference report.
 - Saved workflow builder: create/list/delete/run read-only inspection workflows, with up to 12 steps, bounded retries, and saved failure checkpoints for resume.
 - Persistent workflow scheduling: WorkManager schedules read-only workflows from 15 minutes upward. Background execution requires every tool permission to be pre-approved; network-dependent workflows automatically require a network connection.
 
@@ -109,7 +109,7 @@ The registered tool surface includes the following areas. Availability of indivi
 | Android build | Build Android projects using an app-managed Android SDK/JDK/Gradle toolchain |
 | Databases | SQLite, JDBC, Microsoft Access/Jet, MDBTools, and Python ODBC workflows |
 | System | Process listing/management, installed-app inventory, and process termination |
-| Android accessibility | Read screens, click, scroll, focus, invoke global actions, and play bounded UI-test sequences |
+| Android accessibility | Read screens, click, scroll, focus, invoke global actions, play bounded UI-test sequences, capture/compare UI snapshots |
 | Web | Search, crawl, and browser interaction |
 | Memory and skills | Search/save/delete memory, inspect memory statistics, list/activate skills, build and schedule read-only workflows |
 | Network and traffic | Port scanning, HTTP capture/history/replay, packet capture, and traffic inspection |
