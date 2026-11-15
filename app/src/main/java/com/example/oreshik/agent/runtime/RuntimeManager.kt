@@ -1501,6 +1501,7 @@ class RuntimeManager(private val context: Context) {
                 connection.disconnect()
             }
         }.onFailure { failure ->
+            if (failure is CancellationException) throw failure
             networkFailure = failure as? Exception ?: IllegalStateException(failure)
             AppLogger.w(TAG, "Runtime catalogue network request failed; checking offline cache: ${failure.message}")
         }.getOrNull()
