@@ -82,7 +82,7 @@ object ConfigBackup {
      * Builds the full backup JSON on a worker thread and streams it to the SAF uri.
      * Returns a human-readable success line (row counts) for the status view.
      */
-    suspend fun writeBackup(context: Context, uri: Uri): Result<String> = withContext(Dispatchers.IO) {
+    suspend fun writeBackup(context: Context, uri: Uri, passphrase: CharArray? = null): Result<String> = withContext(Dispatchers.IO) {
         runCatching {
             val db = AgentDatabase.get(context)
             val gson = Gson()
@@ -146,7 +146,7 @@ object ConfigBackup {
      * single Room transaction — a failed restore leaves the current data untouched.
      * Re-applies the theme and refreshes the AgentConfig cache afterwards.
      */
-    suspend fun restore(context: Context, uri: Uri): Result<String> = withContext(Dispatchers.IO) {
+    suspend fun restore(context: Context, uri: Uri, passphrase: CharArray? = null): Result<String> = withContext(Dispatchers.IO) {
         runCatching {
             val raw = context.contentResolver.openInputStream(uri)?.use { readBounded(it) }
                 ?.toString(Charsets.UTF_8) ?: error("Could not read the selected file")
@@ -288,6 +288,52 @@ object ConfigBackup {
         }.also { r ->
             r.onSuccess { AppLogger.i(TAG, it) }
                 .onFailure { AppLogger.e(TAG, "restore failed: ${it.message}", it) }
+        }
+    }
+
+
+    private fun isEncryptedBackup(bytes: ByteArray): Boolean =
+        bytes.size > ENCRYPTED_MAGIC.size &&
+            bytes.copyOfRange(0, ENCRYPTED_MAGIC.size).contentEquals(ENCRYPTED_MAGIC)
+
+    /** PBKDF2-HMAC-SHA256 + AES-256-GCM authenticated encryption. */
+    private fun encryptBackup(plain: ByteArray, passphrase: CharArray): ByteArray {
+        require(passphrase.size >= 10) { "Use a backup passphrase of at least 10 characters" }
+        val salt = ByteArray(SALT_BYTES).also(SecureRandom()::nextBytes)
+        val iv = ByteArray(GCM_IV_BYTES).also(SecureRandom()::nextBytes)
+        val key = deriveBackupKey(passphrase, salt)
+        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+        cipher.init(Cipher.ENCRYPT_MODE, key, GCMParameterSpec(128, iv))
+        val encrypted = cipher.doFinal(plain)
+        return ENCRYPTED_MAGIC + salt + iv + encrypted
+    }
+
+    private fun decryptBackup(payload: ByteArray, passphrase: CharArray): ByteArray {
+        require(passphrase.isNotEmpty()) { "Backup passphrase is required" }
+        val headerSize = ENCRYPTED_MAGIC.size + SALT_BYTES + GCM_IV_BYTES
+        require(payload.size > headerSize) { "Encrypted backup is truncated" }
+        val saltStart = ENCRYPTED_MAGIC.size
+        val ivStart = saltStart + SALT_BYTES
+        val salt = payload.copyOfRange(saltStart, ivStart)
+        val iv = payload.copyOfRange(ivStart, headerSize)
+        val ciphertext = payload.copyOfRange(headerSize, payload.size)
+        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+        cipher.init(Cipher.DECRYPT_MODE, deriveBackupKey(passphrase, salt), GCMParameterSpec(128, iv))
+        return try {
+            cipher.doFinal(ciphertext)
+        } catch (_: javax.crypto.AEADBadTagException) {
+            throw IllegalArgumentException("Incorrect passphrase or backup file was modified")
+        }
+    }
+
+    private fun deriveBackupKey(passphrase: CharArray, salt: ByteArray): SecretKeySpec {
+        val spec = PBEKeySpec(passphrase, salt, PBKDF2_ITERATIONS, 256)
+        return try {
+            val bytes = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
+                .generateSecret(spec).encoded
+            SecretKeySpec(bytes, "AES")
+        } finally {
+            spec.clearPassword()
         }
     }
 
