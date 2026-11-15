@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/chatgpt_add_account"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                style="@style/Widget.Oreshik.Button.Outlined" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -73,7 +73,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/chatgpt_switch_account"
             android:visibility="gone"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnChatGptSignOut"
@@ -82,7 +82,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/chatgpt_sign_out"
             android:visibility="gone"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
     </LinearLayout>
 
     <EditText
@@ -142,7 +142,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="@string/validate"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSelectModel"
@@ -151,7 +151,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="@string/select_model"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSetActive"
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/set_active"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
     </LinearLayout>
 
     <LinearLayout
@@ -183,7 +183,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="@string/test_models"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnShowWorkingOnly"
@@ -191,7 +191,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/working_only_off"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
     </LinearLayout>
 
     <LinearLayout
@@ -224,5 +224,5 @@
         android:layout_marginTop="8dp"
         android:text="Remove this compatible provider"
         android:visibility="gone"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+        style="@style/Widget.Oreshik.Button.Outlined" />
 </LinearLayout>
