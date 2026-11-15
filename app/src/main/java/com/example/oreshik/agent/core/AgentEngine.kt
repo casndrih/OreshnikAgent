@@ -137,6 +137,7 @@ class AgentEngine(
                 if (!permissions.require(name, tool.definition.permissions)) {
                     val denied = ToolResult(ok = false, error = "Permission denied for ${tool.definition.permissions.joinToString()}")
                     ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
+                    ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
                     history += toolResult(id, gson.toJson(denied), registry.externalName(name))
                     emit(Event(Event.Type.TOOL_COMPLETED, name, result = denied))
                     continue
@@ -151,6 +152,7 @@ class AgentEngine(
                         AppLogger.e(TAG, "tool '$name' threw on provider=${provider.id} model=$model: ${it.javaClass.simpleName}: ${it.message?.take(200)}", it)
                         ToolResult(ok = false, error = it.message)
                     }
+                ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 collaboration.record(tool, args, result)
                 if (!result.ok) {
@@ -271,11 +273,13 @@ class AgentEngine(
                 emit(Event(Event.Type.TOOL_STARTED, name, text = tool.definition.description))
                 if (!permissions.require(name, tool.definition.permissions)) {
                     val denied = ToolResult(ok = false, error = "Permission denied for ${tool.definition.permissions.joinToString()}")
+                    ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
                     history += toolResult(id, gson.toJson(denied), registry.externalName(name))
                     emit(Event(Event.Type.TOOL_COMPLETED, name, result = denied))
                     continue
                 }
                 val toolContext = createToolContext(sessionId, collaboration, emit)
+                val toolStartedAt = SystemClock.elapsedRealtime()
                 val result = runCatching {
                     WorkspaceOwnershipGuard.ensureAppOwned(toolContext.app, toolContext.workspace)
                     tool.execute(toolContext, args)
@@ -284,6 +288,7 @@ class AgentEngine(
                         AppLogger.e(TAG, "legacy run: tool '$name' threw on model=$model: ${it.javaClass.simpleName}: ${it.message?.take(200)}", it)
                         ToolResult(ok = false, error = it.message)
                     }
+                ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 collaboration.record(tool, args, result)
                 if (!result.ok) {
                     AppLogger.w(TAG, "legacy run: tool '$name' failed (${result.error?.take(150)}) — model=$model step=${step + 1}")
