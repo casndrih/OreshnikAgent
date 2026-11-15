@@ -187,6 +187,15 @@ def main():
                 path.unlink()
         for path in sorted(stage.rglob("pkgconfig"),reverse=True):
             if path.is_dir(): shutil.rmtree(path,ignore_errors=True)
+        # Report payload composition so unexpectedly large upstream packages can be pruned.
+        all_files=[p for p in stage.rglob("*") if p.is_file()]
+        print(f"Runtime payload: {len(all_files)} files",flush=True)
+        for child in sorted(stage.iterdir()):
+            if child.is_dir():
+                total=sum(p.stat().st_size for p in child.rglob("*") if p.is_file())
+                print(f"Payload directory {child.name}: {total} bytes",flush=True)
+        for path in sorted(all_files,key=lambda p:p.stat().st_size,reverse=True)[:25]:
+            print(f"Largest payload file: {path.relative_to(stage)} {path.stat().st_size} bytes",flush=True)
         patch_shebangs(stage)
         entrypoints={name:f"bin/{name}" for name in ENTRYPOINTS if (stage/"bin"/name).is_file()}
         if "curl" not in entrypoints and "curlie" in entrypoints:
