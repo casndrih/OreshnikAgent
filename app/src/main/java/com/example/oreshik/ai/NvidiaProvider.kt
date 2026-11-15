@@ -131,11 +131,11 @@ class NvidiaProvider(
                     val owned = o["owned_by"]?.asString.orEmpty()
                     val desc = o["description"]?.asString.orEmpty()
                     val x = "$id $desc".lowercase()
-                    val reasoning = listOf("deepseek-r", "deepseek-v3.2", "deepseek-v4", "qwen3", "qwen3.5", "qwq", "reason", "thinking", "glm-", "nemotron-", "inkling").any { it in x }
+                    val reasoningCapability = ModelCapabilities.reasoningCapability(o, id, desc)
+                    val reasoning = reasoningCapability.supported
                     val vision = listOf("vl", "vision", "vila", "llava").any { s -> id.lowercase().contains(s) }
                     val audio = ModelCapabilities.hasInputModality(o, "audio")
-                    // NIM accepts only none/minimal/low/medium/high/xhigh/max — "ultra" is rejected (HTTP 400).
-                    val thinkingLevels = if (reasoning) listOf("low", "high", "max") else listOf("off")
+                    val thinkingLevels = reasoningCapability.levels
                     parsedModels.add(
                         Model(
                             id = id,
@@ -150,6 +150,7 @@ class NvidiaProvider(
                             vision = vision,
                             audio = audio,
                             thinkingLevels = thinkingLevels,
+                            reasoningVerified = reasoningCapability.verified,
                         ),
                     )
                 }
