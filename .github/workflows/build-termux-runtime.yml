@@ -90,7 +90,7 @@ jobs:
 
       - name: Publish runtime pack release asset
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           tag="termux-runtime-packs"
@@ -144,5 +144,5 @@ jobs:
 
       - name: Trigger APK build with updated runtime catalogue
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: gh workflow run extract-and-build.yml --repo "$GITHUB_REPOSITORY" --ref main
