@@ -47,6 +47,7 @@ object ModelCapabilities {
         val levels: List<String>,
         /** null means provider metadata did not explicitly advertise support. */
         val verified: Boolean?,
+        val levelsAdvertised: Boolean = false,
     )
 
     /** Prefer explicit provider metadata; use model-name heuristics only as a probe candidate. */
@@ -91,7 +92,7 @@ object ModelCapabilities {
             advertisedLevels.isNotEmpty() -> advertisedLevels
             else -> listOf("low", "medium", "high")
         }
-        return ReasoningCapability(supported, levels, if (explicit) advertised else null)
+        return ReasoningCapability(supported, levels, if (explicit) advertised else null, levelArrays.any { it.size() > 0 })
     }
 
     fun hasInputModality(entry: com.google.gson.JsonObject, modality: String): Boolean {
