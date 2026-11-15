@@ -109,21 +109,27 @@ class ToolPackInstaller(private val context: Context) {
             )
         }
 
-        // Normalize non-Android shebangs: Android has no /usr/bin/env or /bin sh.
-        // - skips PHP files and PHARs (<?php or PHAR signature would be corrupted by sed,
-        //   breaking e.g. composer's SHA512 signature) — those are shipped with correct
-        //   wrappers baked into the packs.
-        // - scripts already pointing into the runtimes (bundled bash) are untouched.
-        runCatching { root.execute(
-            "grep -rlZm1 -E '^#!(/usr/bin/env |" +
-                "/bin/bash|/bin/sh|/usr/bin/bash|/usr/bin/sh)' ${shellQuote(destination.absolutePath)} 2>/dev/null | " +
-            "tr '\\0' '\\n' | while read -r f; do " +
-            "[ -n \"\$f\" ] || continue; " +
-            "case \"\$f\" in *.php|*.phar) continue;; esac; " +
-            "head -c 8 \"\$f\" | grep -q '<?php' && continue; " +
-            "sed -i \"1s|^#!.*|#!/system/bin/sh|\" \"\$f\" 2>/dev/null; done; true",
+        // Resolve relocatable Termux interpreter paths after the final install directory
+        // is known. Do not rewrite every script to /system/bin/sh: that breaks Bash/env
+        // semantics and scripts written for other interpreters.
+        val prefixReplacement = destination.absolutePath.replace("\\", "\\\\").replace("&", "\\&").replace("#", "\\#")
+        val relocateScripts =
+            "grep -rl '@RUNTIME_PREFIX@' \${shellQuote(destination.absolutePath)} 2>/dev/null | " +
+            "while IFS= read -r f; do [ -f \"\$f\" ] || continue; " +
+            "sed -i 's#@RUNTIME_PREFIX@#$prefixReplacement#g' \"\$f\" || exit 41; done"
+        val normalizeSystemSh =
+            "grep -rIl '^#!/bin/sh\\|^#!/usr/bin/sh' \${shellQuote(destination.absolutePath)} 2>/dev/null | " +
+            "while IFS= read -r f; do [ -f \"\$f\" ] || continue; " +
+            "sed -i '1s|^#!.*|#!/system/bin/sh|' \"\$f\" || exit 42; done"
+        val (scriptsFixed, scriptsOutput) = root.execute(
+            "$relocateScripts && $normalizeSystemSh",
             timeoutSeconds = 300,
-        ) }.onFailure { AppLogger.w(TAG, "Shebang normalization failed for $packId", it) }
+        )
+        if (scriptsFixed != 0) {
+            AppLogger.e(TAG, "Runtime script relocation failed for $packId: $scriptsOutput")
+            runCatching { root.execute("rm -rf \${shellQuote(tmpDir.absolutePath)}", timeoutSeconds = 60) }
+            return@withContext InstallReport(packId, ok = false, detail = "script relocation failed: \${scriptsOutput.take(300)}")
+        }
 
         val (contextsFixed, contextDetail) = root.fixSelinuxContextForRuntime(
             destination.absolutePath,
