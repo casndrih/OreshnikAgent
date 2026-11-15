@@ -13,7 +13,7 @@ if (tasks.findByName("prepareKotlinBuildScriptModel") == null) {
 
 android {
     namespace = "com.example.oreshik"
-    compileSdk = 37
+    compileSdk = 36
     ndkVersion = "30.0.16248370"
 
     defaultConfig {
@@ -88,7 +88,7 @@ android {
     }
 
     lint {
-        // API 37 is still in preview; target the latest stable release (API 36).
+        // Use the latest stable Android SDK platform available in standard CI images (API 36).
         disable += "OldTargetApi"
     }
 
