@@ -128,7 +128,8 @@ class OpenAiCompatibleProvider(
                     val lower = modelId.lowercase()
                     val vision = listOf("vision", "-vl", "_vl", "4o", "gpt-4.1").any { lower.contains(it) }
                     val audio = ModelCapabilities.supportsChatAudio(modelId, item.get("description")?.takeUnless { it.isJsonNull }?.asString.orEmpty())
-                    val reasoning = listOf("reason", "thinking", "o1", "o3", "o4", "r1").any { lower.contains(it) }
+                    val reasoningCapability = ModelCapabilities.reasoningCapability(item, modelId, item.get("description")?.takeUnless { it.isJsonNull }?.asString.orEmpty())
+                    val reasoning = reasoningCapability.supported
                     models.putIfAbsent(modelId, Model(
                         id = modelId,
                         description = "${item.get("owned_by")?.takeUnless { it.isJsonNull }?.asString?.takeIf { it.isNotBlank() } ?: displayName} • $modelId",
@@ -136,7 +137,8 @@ class OpenAiCompatibleProvider(
                         reasoning = reasoning,
                         vision = vision,
                         audio = audio,
-                        thinkingLevels = if (reasoning) listOf("off", "low", "medium", "high", "max") else listOf("off"),
+                        thinkingLevels = reasoningCapability.levels,
+                        reasoningVerified = reasoningCapability.verified,
                     ))
                 }
                 Result.success(models.values.sortedBy { it.id.lowercase() })
