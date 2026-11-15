@@ -90,6 +90,12 @@ class RuntimeManager(private val context: Context) {
         val root: File,
     )
 
+    private data class ManifestData(
+        val id: String,
+        val version: String,
+        val entrypoints: Map<String, String>,
+    )
+
     // Bundled pack ids → (id, title, description)
     private val known = mapOf(
         "libs" to Triple(
@@ -855,7 +861,7 @@ class RuntimeManager(private val context: Context) {
     fun resolveExecutable(name: String): File? {
         runCatching {
             runtimes.listFiles()?.filter { it.isDirectory }?.forEach { root ->
-                val (manifestData) = readManifest(root)?.let { listOf(it) } ?: return@forEach
+                val manifestData = readManifest(root) ?: return@forEach
                 val relative = manifestData.entrypoints[name] ?: return@forEach
                 val candidate = File(root, relative)
                 if (candidate.isFile && candidate.canExecute()) return candidate
@@ -890,6 +896,10 @@ class RuntimeManager(private val context: Context) {
 
     fun javaHome(): File? =
         resolveExecutable("java")?.parentFile?.parentFile?.takeIf { it.isDirectory }
+
+    /** Optional JDK 25 home, resolved only when a compatible pack is installed. */
+    fun java25Home(): File? =
+        resolveExecutable("java25")?.parentFile?.parentFile?.takeIf { it.isDirectory }
 
     fun gradleHome(): File? =
         resolveExecutable("gradle")?.parentFile?.parentFile?.takeIf { it.isDirectory }
