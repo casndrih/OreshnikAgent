@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build a relocatable ARM64 runtime from the authenticated Termux APT index."""
 from __future__ import annotations
-import argparse, hashlib, json, lzma, re, shutil, subprocess, tempfile, urllib.request, zipfile
+import argparse, hashlib, json, lzma, os, re, shutil, subprocess, tempfile, urllib.request, zipfile
 from pathlib import Path
 
 PREFIX = "data/data/com.termux/files/usr"
