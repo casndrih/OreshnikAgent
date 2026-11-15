@@ -37,6 +37,8 @@
     <color name="status_offline">#F87171</color>
     <color name="status_timeout">#FBBF24</color>
     <color name="status_probing">#777777</color>
+    <color name="status_restricted">#C4B5FD</color>
+    <color name="status_unavailable">#94A3B8</color>
     <color name="colorBackgroundDark">#000000</color>
     <color name="colorSurfaceDark">#111111</color>
     <color name="colorOnBackgroundDark">#F5F5F5</color>
