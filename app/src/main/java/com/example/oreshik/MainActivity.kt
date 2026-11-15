@@ -79,6 +79,17 @@ class MainActivity : AppCompatActivity(), ModelSelectionListener {
     }
     private val greetings = listOf("What are we building?", "What should we fix?", "Ready to code.", "Describe the task.")
     private val chatAdapter = ChatAdapter()
+    // A RecyclerView.Adapter owns transient ViewHolder/work-ticker state. Never
+    // attach one adapter instance to both the full chat and PiP RecyclerViews.
+    private val pipChatAdapter = ChatAdapter()
+    private val pipAdapterObserver = object : RecyclerView.AdapterDataObserver() {
+        override fun onChanged() = syncPipChatAdapter()
+        override fun onItemRangeChanged(positionStart: Int, itemCount: Int) = syncPipChatAdapter()
+        override fun onItemRangeChanged(positionStart: Int, itemCount: Int, payload: Any?) = syncPipChatAdapter()
+        override fun onItemRangeInserted(positionStart: Int, itemCount: Int) = syncPipChatAdapter()
+        override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) = syncPipChatAdapter()
+        override fun onItemRangeMoved(fromPosition: Int, toPosition: Int, itemCount: Int) = syncPipChatAdapter()
+    }
     private val history = mutableListOf<JsonObject>()
     private val pendingChatAttachments = mutableListOf<ChatAttachment>()
     private var hasSentFirstMessage = false
@@ -1002,11 +1013,15 @@ class MainActivity : AppCompatActivity(), ModelSelectionListener {
     private fun setupRecycler() {
         messagesRecycler.adapter = chatAdapter
         messagesRecycler.layoutManager = LinearLayoutManager(this).apply { stackFromEnd = true }
-        // PiP uses the same adapter as the full chat. Every text chunk, thinking
-        // update, and tool activity notification therefore repaints both surfaces
-        // through the normal RecyclerView adapter updates.
-        pipMessagesRecycler.adapter = chatAdapter
+
+        // Keep PiP visually in sync using a separate adapter and independent
+        // ViewHolders. Sharing a single adapter between two RecyclerViews makes
+        // its transient holder/ticker state ambiguous during response completion
+        // and RecyclerView layout.
+        chatAdapter.registerAdapterDataObserver(pipAdapterObserver)
+        pipMessagesRecycler.adapter = pipChatAdapter
         pipMessagesRecycler.layoutManager = LinearLayoutManager(this).apply { stackFromEnd = true }
+        syncPipChatAdapter()
 
         val topBar = findViewById<LinearLayout>(R.id.topBar)
         val selectionBar = findViewById<LinearLayout>(R.id.selectionBar)
@@ -1083,6 +1098,16 @@ class MainActivity : AppCompatActivity(), ModelSelectionListener {
                 refreshPipPreview()
             }
         }
+    }
+
+    /** Mirror the chat snapshot into PiP without sharing RecyclerView ViewHolders. */
+    private fun syncPipChatAdapter() {
+        if (!::pipMessagesRecycler.isInitialized) return
+        val recycler = pipMessagesRecycler
+        val sync = Runnable {
+            if (!isDestroyed) pipChatAdapter.replaceAll(chatAdapter.messages.toList())
+        }
+        if (recycler.isComputingLayout) recycler.post(sync) else sync.run()
     }
 
     private fun setupFileDiffDrawer() {
