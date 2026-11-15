@@ -232,7 +232,7 @@ class SkillsActivity : AppCompatActivity() {
             val preview = skill.instructions.take(1800)
             AlertDialog.Builder(this@SkillsActivity)
                 .setTitle("Review: ${skill.name}")
-                .setMessage("${skill.description}\\n\\nSource: ${remote.source}\\n\\n${preview}\\n\\nThis skill will be added DISABLED. Review it before enabling.")
+                .setMessage("${skill.description}\n\nSource: ${remote.source}\n\n${preview}\n\nThis skill will be added DISABLED. Review it before enabling.")
                 .setNegativeButton("Discard", null)
                 .setPositiveButton("Install disabled") { _, _ ->
                     scope.launch(Dispatchers.IO) {
