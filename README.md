@@ -105,7 +105,7 @@ The registered tool surface includes the following areas. Availability of indivi
 | Files and workspace | List, read, write, search, patch, delete, snapshots, listing, and rollback |
 | Python | Execute code and files; manage packages through the app-owned Python runtime |
 | Build and languages | Node.js/npm, Java/javac, Gradle, Kotlin compiler, PHP/Composer, Ruby, Clang, Make, and offline project templates |
-| Git | Working-tree status, diffs, commit history, HTTPS clone/fetch/pull/push |
+| Git | Status, diffs, history, branch operations, explicit staging, staged commits, patch export, and HTTPS remotes |
 | Android build | Build Android projects using an app-managed Android SDK/JDK/Gradle toolchain |
 | Databases | SQLite, JDBC, Microsoft Access/Jet, MDBTools, and Python ODBC workflows |
 | System | Process listing/management, installed-app inventory, and process termination |
@@ -382,7 +382,6 @@ The following are **proposed enhancements**, not claims about features already s
 ### P1 — Agent quality and control
 
 - Add a visual task-plan panel with cancellation and pause/resume controls (workflow step retries and resume checkpoints are available through agent tools).
-- Add token, latency, and cost tracking for remote providers.
 - Add provider capability detection for vision, tool calling, streaming, context limits, and structured output.
 
 ### P2 — Runtime and developer experience
@@ -390,7 +389,6 @@ The following are **proposed enhancements**, not claims about features already s
 - Add a managed runtime marketplace with versions, ABI metadata, signatures, checksums, dependency declarations, and rollback.
 - Add runtime health checks and self-repair for Python, Java, Node.js, Gradle, Git, database, and reverse-engineering toolchains.
 - Add a terminal-style interactive task console with live output and process controls.
-- Extend Git remote support with branch management, commit creation, and patch export with explicit approval.
 - Add import/export for skills, memory, settings, and workspaces.
 
 ### P3 — Advanced capabilities
