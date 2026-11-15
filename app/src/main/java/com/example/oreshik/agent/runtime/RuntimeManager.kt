@@ -1216,6 +1216,26 @@ class RuntimeManager(private val context: Context) {
         candidate.takeIf { it.path.startsWith(canonicalRoot.path + File.separator) }
     }.getOrNull()
 
+    /** Replace relocatable Termux shebang tokens after the final app-private path is known. */
+    private fun relocateRuntimeShebangs(root: File) {
+        root.walkTopDown().filter { it.isFile && it.length() in 3..(8L * 1024 * 1024) }.forEach { file ->
+            runCatching {
+                java.io.RandomAccessFile(file, "rw").use { raf ->
+                    val firstLine = raf.readLine() ?: return@use
+                    if (!firstLine.startsWith("#!") || !firstLine.contains("@RUNTIME_PREFIX@")) return@use
+                    val remaining = (raf.length() - raf.filePointer).toInt()
+                    val tail = ByteArray(remaining)
+                    raf.readFully(tail)
+                    val relocated = firstLine.replace("@RUNTIME_PREFIX@", root.absolutePath)
+                    raf.seek(0)
+                    raf.setLength(0)
+                    raf.write((relocated + "\\n").toByteArray(Charsets.UTF_8))
+                    raf.write(tail)
+                }
+            }.onFailure { AppLogger.w(TAG, "Could not relocate runtime script ${file.name}: ${it.message}") }
+        }
+    }
+
     /** Install a runtime pack from a user-selected ZIP (must contain runtime.json at root). */
     suspend fun installPack(input: InputStream, expectedPackId: String? = null): RuntimeInfo = withContext(Dispatchers.IO) {
         runtimeMutationMutex.lock()
@@ -1280,6 +1300,7 @@ class RuntimeManager(private val context: Context) {
 
             val stagedManifest = readManifest(staging) ?: error("runtime.json is missing or invalid")
             val stagedPackId = stagedManifest.id
+            relocateRuntimeShebangs(staging)
             if (expectedPackId != null && stagedPackId != expectedPackId) {
                 throw SecurityException("Runtime manifest ID does not match the selected catalogue entry")
             }
