@@ -207,16 +207,16 @@ class SkillsActivity : AppCompatActivity() {
         }
         Toast.makeText(this@SkillsActivity, "Searching community skills…", Toast.LENGTH_SHORT).show()
         marketplace.search(clean).onFailure {
-            AppLogger.w(TAG, "Marketplace search failed: \${it.message}")
-            Toast.makeText(this@SkillsActivity, "Search failed: \${it.message}", Toast.LENGTH_LONG).show()
+            AppLogger.w(TAG, "Marketplace search failed: ${it.message}")
+            Toast.makeText(this@SkillsActivity, "Search failed: ${it.message}", Toast.LENGTH_LONG).show()
         }.onSuccess { found ->
             if (found.isEmpty()) {
                 Toast.makeText(this@SkillsActivity, "No matching community skills found", Toast.LENGTH_SHORT).show()
                 return@onSuccess
             }
-            val labels = found.map { "\${it.name}  •  \${it.source}  •  \${it.installs} installs" }.toTypedArray()
+            val labels = found.map { "${it.name}  •  ${it.source}  •  ${it.installs} installs" }.toTypedArray()
             AlertDialog.Builder(this@SkillsActivity)
-                .setTitle("Found \${found.size} skills")
+                .setTitle("Found ${found.size} skills")
                 .setItems(labels) { _, index -> installMarketplaceSkill(found[index]) }
                 .setNegativeButton("Close", null)
                 .show()
@@ -224,15 +224,15 @@ class SkillsActivity : AppCompatActivity() {
     }
 
     private fun installMarketplaceSkill(remote: SkillMarketplaceRepository.RemoteSkill) = scope.launch {
-        Toast.makeText(this@SkillsActivity, "Downloading \${remote.name}…", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this@SkillsActivity, "Downloading ${remote.name}…", Toast.LENGTH_SHORT).show()
         marketplace.download(remote).onFailure {
-            AppLogger.w(TAG, "Marketplace install failed for \${remote.id}: \${it.message}")
-            Toast.makeText(this@SkillsActivity, "Download failed: \${it.message}", Toast.LENGTH_LONG).show()
+            AppLogger.w(TAG, "Marketplace install failed for ${remote.id}: ${it.message}")
+            Toast.makeText(this@SkillsActivity, "Download failed: ${it.message}", Toast.LENGTH_LONG).show()
         }.onSuccess { skill ->
             val preview = skill.instructions.take(1800)
             AlertDialog.Builder(this@SkillsActivity)
-                .setTitle("Review: \${skill.name}")
-                .setMessage("\${skill.description}\\n\\nSource: \${remote.source}\\n\\n\${preview}\\n\\nThis skill will be added DISABLED. Review it before enabling.")
+                .setTitle("Review: ${skill.name}")
+                .setMessage("${skill.description}\\n\\nSource: ${remote.source}\\n\\n${preview}\\n\\nThis skill will be added DISABLED. Review it before enabling.")
                 .setNegativeButton("Discard", null)
                 .setPositiveButton("Install disabled") { _, _ ->
                     scope.launch(Dispatchers.IO) {
@@ -243,7 +243,7 @@ class SkillsActivity : AppCompatActivity() {
                             }
                         } else {
                             db.skills().put(skill)
-                            AppLogger.i(TAG, "Installed community skill \${skill.id} from \${remote.source} (disabled)")
+                            AppLogger.i(TAG, "Installed community skill ${skill.id} from ${remote.source} (disabled)")
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(this@SkillsActivity, "Installed disabled. Review and enable it in the library.", Toast.LENGTH_LONG).show()
                                 load()
