@@ -203,11 +203,14 @@ object ModelTester {
         val t0 = System.currentTimeMillis()
         val probeEffort = m.thinkingLevels.firstOrNull { !it.equals("off", true) } ?: "low"
         try {
+            val openAiReasoner = Regex("(^|[/_-])o[134]([_-]|$)").containsMatchIn(m.id.lowercase())
             val root = JsonObject().apply {
                 addProperty("model", m.id)
                 add("messages", probeMessages(m.kind))
-                addProperty("max_tokens", if (m.kind == "reasoning") 512 else 16)
-                addProperty("temperature", 0.0)
+                if (openAiReasoner) addProperty("max_completion_tokens", 96)
+                else addProperty("max_tokens", if (m.kind == "reasoning") 96 else 16)
+                // OpenAI o-series models reject temperature; NVIDIA/other reasoners accept it.
+                if (!openAiReasoner) addProperty("temperature", 0.0)
                 // Test the actual reasoning parameter, not just ordinary chat availability.
                 if (m.reasoning) addProperty("reasoning_effort", probeEffort)
             }
