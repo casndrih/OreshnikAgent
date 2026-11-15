@@ -15,12 +15,6 @@ class WorkflowBuilderTool : AgentTool {
     private data class RunState(val workflowId: String, val nextStep: Int, val status: String, val lastError: String = "", val updatedAt: Long = System.currentTimeMillis())
 
     private val gson = GsonBuilder().setPrettyPrinting().create()
-    private val allowed = setOf(
-        "file.list", "file.read", "file.search", "git.status", "git.diff", "git.log",
-        "runtime.info", "skills.list", "memory.stats", "analysis.context",
-        "re.ida.capabilities", "re.ida.analyze", "re.ida.xref",
-        "re.ghidra.capabilities", "re.ghidra.analyze", "re.ghidra.decompile", "re.ghidra.xref",
-    )
 
     override val definition = ToolDefinition(
         name = "workflow.manage",
@@ -69,7 +63,7 @@ class WorkflowBuilderTool : AgentTool {
                 val steps = array.mapIndexed { index, item ->
                     val step = item.asJsonObject
                     val tool = step["tool"]?.asString?.trim().orEmpty()
-                    require(tool in allowed && ToolCollaborationPolicy.canDelegate(tool)) {
+                    require(WorkflowToolPolicy.canRun(tool)) {
                         "Step ${index + 1}: '$tool' is not an approved read-only workflow tool."
                     }
                     val params = step["arguments"]?.takeIf { it.isJsonObject }?.asJsonObject ?: JsonObject()
@@ -115,7 +109,7 @@ class WorkflowBuilderTool : AgentTool {
                     val output = StringBuilder("Workflow: ${workflow.name}\nStarting at step ${next + 1}/${workflow.steps.size}\n")
                     while (next < workflow.steps.size) {
                         val step = workflow.steps[next]
-                        require(step.tool in allowed && ToolCollaborationPolicy.canDelegate(step.tool)) {
+                        require(WorkflowToolPolicy.canRun(step.tool)) {
                             "Workflow contains a tool that is no longer approved: ${step.tool}"
                         }
                         context.onProgress?.invoke("Workflow ${workflow.name}: step ${next + 1}/${workflow.steps.size} · ${step.tool}")
