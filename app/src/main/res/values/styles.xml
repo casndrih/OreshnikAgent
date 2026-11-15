@@ -13,6 +13,10 @@
         <item name="backgroundTint">@android:color/transparent</item>
     </style>
 
+    <style name="Widget.Oreshik.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeWidth">0dp</item>
+    </style>
+
     <style name="Widget.Oreshik.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">0dp</item>
         <item name="cardMaxElevation">0dp</item>
