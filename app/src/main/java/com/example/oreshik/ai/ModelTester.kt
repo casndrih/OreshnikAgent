@@ -193,6 +193,8 @@ object ModelTester {
                 add("messages", probeMessages(m.kind))
                 addProperty("max_tokens", if (m.kind == "reasoning") 512 else 16)
                 addProperty("temperature", 0.0)
+                // Test the actual reasoning parameter, not just ordinary chat availability.
+                if (m.reasoning) addProperty("reasoning_effort", "low")
             }
             val body = gson.toJson(root).toRequestBody("application/json".toMediaType())
             val request = Request.Builder()
@@ -204,6 +206,37 @@ object ModelTester {
                 val text = response.body?.string().orEmpty()
                 val ms = System.currentTimeMillis() - t0
                 if (!response.isSuccessful) {
+                    val lowerBody = text.lowercase()
+                    val reasoningRejected = m.reasoning && response.code in 400..499 &&
+                        (lowerBody.contains("reasoning_effort") || lowerBody.contains("reasoning effort") ||
+                         lowerBody.contains("unknown parameter") || lowerBody.contains("unsupported parameter") ||
+                         lowerBody.contains("unrecognized request argument"))
+                    if (reasoningRejected) {
+                        val plainRoot = root.deepCopy().apply { remove("reasoning_effort") }
+                        val plainRequest = Request.Builder()
+                            .url(baseUrl.trimEnd('/') + "/chat/completions")
+                            .post(gson.toJson(plainRoot).toRequestBody("application/json".toMediaType()))
+                            .apply { if (key.isNotBlank()) header("Authorization", "Bearer $key") }
+                            .build()
+                        http.newCall(plainRequest).execute().use { plainResponse ->
+                            val plainText = plainResponse.body?.string().orEmpty()
+                            val plainHasAnswer = runCatching {
+                                val parsed = gson.fromJson(plainText, JsonObject::class.java)
+                                val msg = parsed?.getAsJsonArray("choices")?.get(0)?.asJsonObject?.getAsJsonObject("message")
+                                val content = msg?.get("content")?.takeUnless { it.isJsonNull }?.asString.orEmpty()
+                                val reasoning = msg?.get("reasoning_content")?.takeUnless { it.isJsonNull }?.asString.orEmpty()
+                                content.isNotBlank() || reasoning.isNotBlank()
+                            }.getOrDefault(false)
+                            if (plainResponse.isSuccessful && plainHasAnswer) {
+                                return m.copy(
+                                    tested = true,
+                                    testNote = "online; reasoning effort unsupported",
+                                    reasoningVerified = false,
+                                    thinkingLevels = listOf("off"),
+                                )
+                            }
+                        }
+                    }
                     val note = prettyError(response.code, text)
                     AppLogger.i("ModelTester", "$providerId ${m.id} → HTTP ${response.code} in ${ms}ms ($note)")
                     return m.copy(tested = false, testNote = note)
@@ -212,14 +245,19 @@ object ModelTester {
                 val hasContent = runCatching {
                     val choice = parsed?.getAsJsonArray("choices")?.get(0)?.asJsonObject
                     val msg = choice?.getAsJsonObject("message")
-                    (msg != null) && !msg["content"].isJsonNull &&
-                            msg["content"].asString.isNotBlank()
+                    val content = msg?.get("content")?.takeUnless { it.isJsonNull }?.asString.orEmpty()
+                    val reasoning = msg?.get("reasoning_content")?.takeUnless { it.isJsonNull }?.asString.orEmpty()
+                    content.isNotBlank() || reasoning.isNotBlank()
                 }.getOrDefault(defaultValue = false)
                 if (!hasContent) {
                     return m.copy(tested = false, testNote = "empty response")
                 }
                 AppLogger.i("ModelTester", "$providerId ${m.id} → OK in ${ms}ms")
-                return m.copy(tested = true, testNote = "")
+                return m.copy(
+                    tested = true,
+                    testNote = "",
+                    reasoningVerified = if (m.reasoning) true else m.reasoningVerified,
+                )
             }
         } catch (t: Throwable) {
             AppLogger.w("ModelTester", "$providerId ${m.id} probe failed: ${t.message}")
@@ -314,7 +352,13 @@ object ModelTester {
         val payload = models.mapNotNull { m ->
             if (m.tested == null) return@mapNotNull null
             gson.toJsonTree(
-                mapOf("id" to m.id, "tested" to m.tested, "note" to m.testNote),
+                mapOf(
+                    "id" to m.id,
+                    "tested" to m.tested,
+                    "note" to m.testNote,
+                    "reasoningVerified" to m.reasoningVerified,
+                    "thinkingLevels" to m.thinkingLevels,
+                ),
             )
         }
         AgentConfig.putRaw("modeltest_$providerId", gson.toJson(payload))
@@ -330,9 +374,16 @@ object ModelTester {
             val list: List<Map<String, Any>> = gson.fromJson(raw, type) ?: return models
             val byId = list.associate { (it["id"] as? String ?: "") to (it["tested"] as? Boolean) }
             val notes = list.associate { (it["id"] as? String ?: "") to (it["note"] as? String ?: "") }
+            val reasoning = list.associate { (it["id"] as? String ?: "") to (it["reasoningVerified"] as? Boolean) }
+            val levels = list.associate { (it["id"] as? String ?: "") to (it["thinkingLevels"] as? List<*>)?.mapNotNull { value -> value as? String } }
             models.map { m ->
                 val tested = byId[m.id]
-                if (tested != null) m.copy(tested = tested, testNote = notes[m.id].orEmpty()) else m
+                if (tested != null) m.copy(
+                    tested = tested,
+                    testNote = notes[m.id].orEmpty(),
+                    reasoningVerified = reasoning[m.id] ?: m.reasoningVerified,
+                    thinkingLevels = levels[m.id]?.takeIf { it.isNotEmpty() } ?: m.thinkingLevels,
+                ) else m
             }
         } catch (_: Exception) {
             models
