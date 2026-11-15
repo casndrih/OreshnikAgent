@@ -1,6 +1,7 @@
 package com.example.oreshik.agent.tools
 
 import com.example.oreshik.agent.core.*
+import com.example.oreshik.agent.security.WorkspaceOwnershipGuard
 import com.google.gson.JsonElement
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -118,8 +119,8 @@ class TerminalSessionTool : AgentTool {
     override val definition = ToolDefinition(
         name = "terminal.session",
         category = ToolCategory.PROCESS,
-        description = "Start, list, write to, read from, and stop persistent line-oriented shell sessions in the app-owned workspace. Requires process execution permission. This is a pipe-based shell, not a full PTY; sessions end when the app process exits.",
-        permissions = setOf(ToolPermission.EXECUTE_PROCESS),
+        description = "Start, list, write to, read from, and stop persistent line-oriented shell sessions in the app-owned workspace. Requires process, workspace-write, and root capability gates because arbitrary shell commands can modify files or invoke su. This is a pipe-based shell, not a full PTY; sessions end when the app process exits.",
+        permissions = setOf(ToolPermission.EXECUTE_PROCESS, ToolPermission.WRITE_WORKSPACE, ToolPermission.DELETE, ToolPermission.ROOT),
         parameters = mapOf(
             "action" to "string (start, list, write, read, stop)",
             "session_id" to "string",
@@ -133,6 +134,7 @@ class TerminalSessionTool : AgentTool {
         when (args["action"]?.asString?.lowercase()?.trim() ?: "list") {
             "start" -> runCatching {
                 require(context.workspace.isDirectory) { "Workspace directory is unavailable." }
+                WorkspaceOwnershipGuard.ensureAppOwned(context.app, context.workspace)
                 val id = TerminalSessions.start(context.workspace, context.app.filesDir)
                 ToolResult.success("Terminal session started: $id\nWorking directory: ${context.workspace.canonicalPath}")
             }.getOrElse { ToolResult.failure("Could not start terminal session: ${it.message}") }
