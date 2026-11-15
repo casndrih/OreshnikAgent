@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="@string/validate_all_keys"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRefreshModels"
@@ -79,7 +79,7 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:text="@string/refresh_models"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/Widget.Oreshik.Button.Outlined" />
     </LinearLayout>
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
