@@ -439,7 +439,7 @@ class ToolsActivity : AppCompatActivity() {
                 ToolAuditLog.readRecent(this@ToolsActivity, 100)
             }
             val body = TextView(this@ToolsActivity).apply {
-                text = if (entries.isEmpty()) "No tool activity has been recorded yet." else entries.joinToString("\\n\\n")
+                text = if (entries.isEmpty()) "No tool activity has been recorded yet." else entries.joinToString("\n\n")
                 textSize = 12f
                 setTextColor(getColor(R.color.text_primary))
                 setPadding(20, 12, 20, 12)
