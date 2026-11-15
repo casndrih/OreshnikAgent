@@ -163,6 +163,10 @@ class OpenAiCompatibleProvider(
             if (!row.isJsonObject) continue
             val item = row.asJsonObject
             if (item.get("id")?.takeUnless { it.isJsonNull }?.asString != model) continue
+            val at = item.get("atMs")?.takeUnless { it.isJsonNull }?.asLong ?: 0L
+            val ok = item.get("tested")?.takeUnless { it.isJsonNull }?.asBoolean ?: false
+            val ttl = if (ok) 5 * 60 * 1000L else 45 * 1000L
+            if (at <= 0L || System.currentTimeMillis() - at !in 0..ttl) return@runCatching null
             return@runCatching item.get("reasoningVerified")?.takeUnless { it.isJsonNull }?.asBoolean
         }
         null
@@ -212,7 +216,7 @@ class OpenAiCompatibleProvider(
             }
             if (model.isBlank()) return@withContext Result.failure(IllegalStateException("Choose a model from this provider's model list first."))
             try {
-                val knownReasoning = reasoningSupport[model] ?: persistedReasoningSupport(model)
+                val knownReasoning = persistedReasoningSupport(model) ?: reasoningSupport[model]
                 val shouldSendReasoning = reasoningEffort.isNotBlank() && !reasoningEffort.equals("off", true) &&
                     (knownReasoning ?: likelyReasoningModel(model))
                 val body = JsonObject().apply {
