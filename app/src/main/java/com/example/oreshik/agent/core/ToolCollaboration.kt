@@ -117,7 +117,7 @@ object ToolCollaborationPolicy {
 object WorkflowToolPolicy {
     private val allowed = setOf(
         "file.list", "file.read", "file.search", "git.status", "git.diff", "git.log",
-        "runtime.info", "skills.list", "memory.stats", "analysis.context",
+        "runtime.info", "skills.list", "memory.stats",
         "re.ida.capabilities", "re.ida.analyze", "re.ida.xref",
         "re.ghidra.capabilities", "re.ghidra.analyze", "re.ghidra.decompile", "re.ghidra.xref",
     )
