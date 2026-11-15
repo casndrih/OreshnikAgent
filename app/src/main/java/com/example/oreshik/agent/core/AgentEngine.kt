@@ -1,11 +1,13 @@
 package com.example.oreshik.agent.core
 
 import android.content.Context
+import android.os.SystemClock
 import com.example.oreshik.agent.runtime.RuntimeManager
 import com.example.oreshik.ChatAttachment
 import com.example.oreshik.ai.AttachmentRequestBuilder
 import com.example.oreshik.agent.security.PermissionBroker
 import com.example.oreshik.agent.security.WorkspaceOwnershipGuard
+import com.example.oreshik.logging.ToolAuditLog
 import com.example.oreshik.data.AgentDatabase
 import com.example.oreshik.data.MemoryStore
 import com.example.oreshik.logging.AppLogger
@@ -134,11 +136,13 @@ class AgentEngine(
                 emit(Event(Event.Type.TOOL_STARTED, name, text = tool.definition.description))
                 if (!permissions.require(name, tool.definition.permissions)) {
                     val denied = ToolResult(ok = false, error = "Permission denied for ${tool.definition.permissions.joinToString()}")
+                    ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
                     history += toolResult(id, gson.toJson(denied), registry.externalName(name))
                     emit(Event(Event.Type.TOOL_COMPLETED, name, result = denied))
                     continue
                 }
                 val toolContext = createToolContext(sessionId, collaboration, emit)
+                val toolStartedAt = SystemClock.elapsedRealtime()
                 val result = runCatching {
                     WorkspaceOwnershipGuard.ensureAppOwned(toolContext.app, toolContext.workspace)
                     tool.execute(toolContext, args)
@@ -147,6 +151,7 @@ class AgentEngine(
                         AppLogger.e(TAG, "tool '$name' threw on provider=${provider.id} model=$model: ${it.javaClass.simpleName}: ${it.message?.take(200)}", it)
                         ToolResult(ok = false, error = it.message)
                     }
+                ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 collaboration.record(tool, args, result)
                 if (!result.ok) {
                     AppLogger.w(TAG, "tool '$name' failed (${result.error?.take(150)}) — provider=${provider.id} model=$model step=${step + 1}")
@@ -497,9 +502,11 @@ class AgentEngine(
                             error = "Permission denied for delegated tool ${tool.definition.permissions.joinToString()}.",
                             metadata = mapOf("authorization_denied" to true),
                         )
+                        ToolAuditLog.record(context, sessionId, name, arguments, "DENIED", denied)
                         emit(Event(Event.Type.TOOL_COMPLETED, name, result = denied))
                         denied
                     } else {
+                        val toolStartedAt = SystemClock.elapsedRealtime()
                         val result = runCatching {
                             WorkspaceOwnershipGuard.ensureAppOwned(sharedContext.app, sharedContext.workspace)
                             tool.execute(sharedContext, arguments)
@@ -507,6 +514,7 @@ class AgentEngine(
                             AppLogger.e(TAG, "delegated tool '$name' threw: ${it.javaClass.simpleName}: ${it.message?.take(200)}", it)
                             ToolResult.failure(it.message ?: "Delegated tool failed.")
                         }
+                        ToolAuditLog.record(context, sessionId, name, arguments, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                         collaboration.record(tool, arguments, result)
                         emit(Event(Event.Type.TOOL_COMPLETED, name, result = result))
                         result
