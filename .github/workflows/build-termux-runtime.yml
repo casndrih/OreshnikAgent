@@ -1,0 +1,137 @@
+name: Build Termux ARM64 runtime pack
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_termux_runtime.py'
+      - '.github/workflows/build-termux-runtime.yml'
+  schedule:
+    - cron: '23 4 1 * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: termux-runtime-pack
+  cancel-in-progress: false
+
+jobs:
+  build-termux-arm64:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out OreshnikAgent
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install packager tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gnupg xz-utils dpkg-dev rsync file
+
+      - name: Fetch official Termux repository signing keys
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 --filter=blob:none --sparse https://github.com/termux/termux-packages.git .termux-packages
+          git -C .termux-packages sparse-checkout set packages/termux-keyring
+          mkdir -p "$HOME/.gnupg"
+          chmod 700 "$HOME/.gnupg"
+          for key in .termux-packages/packages/termux-keyring/*.gpg; do
+            gpg --batch --import "$key"
+          done
+          gpg --batch --export > termux-repository-keys.gpg
+          test -s termux-repository-keys.gpg
+
+      - name: Verify official Termux repository metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://packages.termux.dev/apt/termux-main/dists/stable/InRelease \
+            --output termux-InRelease
+          gpgv --keyring "$GITHUB_WORKSPACE/termux-repository-keys.gpg" termux-InRelease
+
+      - name: Resolve and package current ARM64 tools from Termux
+        run: |
+          python3 scripts/build_termux_runtime.py \
+            --inrelease termux-InRelease \
+            --repo https://packages.termux.dev/apt/termux-main \
+            --output dist/termux-arm64.zip
+
+      - name: Validate runtime archive and entrypoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -t dist/termux-arm64.zip
+          python3 - <<'PY'
+          import json, zipfile
+          with zipfile.ZipFile("dist/termux-arm64.zip") as z:
+              manifest = json.loads(z.read("runtime.json"))
+              assert manifest["id"] == "termux-arm64"
+              assert manifest["architecture"] == "aarch64"
+              assert all(p in z.namelist() for p in manifest["entrypoints"].values())
+              assert len(manifest["packages"]) >= 20
+              print("Validated", len(manifest["packages"]), "Termux packages and", len(manifest["entrypoints"]), "entrypoints")
+          PY
+          sha256sum -c dist/termux-arm64.zip.sha256
+
+      - name: Publish runtime pack release asset
+        env:
+          GH_TOKEN: \${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="termux-runtime-packs"
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$tag" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "OreshnikAgent Termux ARM64 runtime packs" \
+              --notes "Relocatable ARM64 Android/Bionic command-line tools packaged from the official signed Termux main repository. Package versions, source filenames and checksums are embedded in each runtime archive. The app verifies the archive SHA-256 before installation." \
+              --target "$GITHUB_SHA" \
+              --latest=false
+          fi
+          gh release upload "$tag" dist/termux-arm64.zip dist/termux-arm64.zip.sha256 \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Update runtime catalogue
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, zipfile
+          from pathlib import Path
+          catalog_path = Path("runtime-catalog.json")
+          catalog = json.loads(catalog_path.read_text())
+          pack_path = Path("dist/termux-arm64.zip")
+          digest = hashlib.sha256(pack_path.read_bytes()).hexdigest()
+          with zipfile.ZipFile(pack_path) as archive:
+              manifest = json.loads(archive.read("runtime.json"))
+          pack = {
+              "id": "termux-arm64",
+              "name": "Termux ARM64 Developer Tools",
+              "version": manifest["version"],
+              "description": "ARM64 Android/Bionic tools from the signed Termux main repository: Bash, Git, OpenSSH, curl, wget, jq, ripgrep, SQLite, rsync, networking and core utilities.",
+              "url": "https://github.com/casndrih/OreshnikAgent/releases/download/termux-runtime-packs/termux-arm64.zip",
+              "sha256": digest
+          }
+          packs = catalog.setdefault("packs", [])
+          packs[:] = [item for item in packs if item.get("id") != pack["id"]]
+          packs.append(pack)
+          catalog_path.write_text(json.dumps(catalog, indent=2) + "\n")
+          print("Catalogue entry:", json.dumps(pack, indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runtime-catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified Termux ARM64 runtime catalogue"
+            git push origin HEAD:main
+          fi
+
+      - name: Trigger APK build with updated runtime catalogue
+        env:
+          GH_TOKEN: \${{ github.token }}
+        run: gh workflow run extract-and-build.yml --repo "$GITHUB_REPOSITORY" --ref main
