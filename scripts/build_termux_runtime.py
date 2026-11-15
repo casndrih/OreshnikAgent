@@ -104,10 +104,14 @@ def patch_shebangs(root: Path):
                 rest=stream.read()
             line=first.decode("utf-8","strict").rstrip("\r\n")
             if line.startswith("#!/usr/bin/env "):
-                line="#!@RUNTIME_PREFIX@/bin/env "+line[len("#!/usr/bin/env "):]
-            elif line.startswith(("#!/bin/bash","#!/usr/bin/bash")):
+                command=line[len("#!/usr/bin/env "):].split(" ",1)[0]
+                if command == "sh":
+                    line="#!/system/bin/sh"+line[len("#!/usr/bin/env sh"):]
+                else:
+                    line="#!@RUNTIME_PREFIX@/bin/env "+line[len("#!/usr/bin/env "):]
+            elif line.startswith(("#!/bin/bash","#!/usr/bin/bash","#!"+prefix+"/bin/bash")):
                 pos=line.find("bash"); line="#!@RUNTIME_PREFIX@/bin/bash"+line[pos+4:]
-            elif line.startswith(("#!/bin/sh","#!/usr/bin/sh")):
+            elif line.startswith(("#!/bin/sh","#!/usr/bin/sh","#!"+prefix+"/bin/sh")):
                 pos=line.find("sh"); line="#!/system/bin/sh"+line[pos+2:]
             else:
                 line=line.replace(prefix,"@RUNTIME_PREFIX@")
