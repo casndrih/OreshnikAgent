@@ -8,4 +8,4 @@
 
 # JGit's optional repository GC PID lock uses the Java 9 ProcessHandle API,
 # which is not part of Android's runtime API surface. The app never invokes JGit GC.
--dontwarn java.lang.ProcessHandle
+-dontwarn java.lang.ProcessHandle**
