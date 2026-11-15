@@ -39,8 +39,6 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Workspace recovery:** bounded app-private snapshots, snapshot listing, and rollback with an automatic pre-restore safety snapshot.
 - **Reusable workflows:** saved read-only tool workflows with per-step retries, failure checkpoints, resume, and persistent WorkManager schedules.
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
-- **Encrypted configuration backups:** passphrase-protected exports using PBKDF2-HMAC-SHA256 and AES-256-GCM, with legacy JSON restore compatibility.
-- **Tool audit trail:** app-private JSONL records for permission decisions and tool outcomes, with recursive credential redaction.
 - **Advanced technical tooling:** database utilities, network inspection, APK/ELF/IL2CPP analysis, Ghidra/IDA-oriented workflows, and authorized security testing tools.
 
 ## AI providers and models
@@ -103,16 +101,16 @@ The registered tool surface includes the following areas. Availability of indivi
 
 | Area | Representative capabilities |
 |---|---|
-| Files and workspace | List, read, write, search, patch, and delete workspace files |
+| Files and workspace | List, read, write, search, patch, delete, snapshots, listing, and rollback |
 | Python | Execute code and files; manage packages through the app-owned Python runtime |
-| Build and languages | Node.js/npm, Java/javac, Gradle, Kotlin compiler, PHP/Composer, Ruby, Clang, and Make tool adapters |
-| Git | Working-tree status, diffs, and commit history |
+| Build and languages | Node.js/npm, Java/javac, Gradle, Kotlin compiler, PHP/Composer, Ruby, Clang, Make, and offline project templates |
+| Git | Working-tree status, diffs, commit history, HTTPS clone/fetch/pull/push |
 | Android build | Build Android projects using an app-managed Android SDK/JDK/Gradle toolchain |
 | Databases | SQLite, JDBC, Microsoft Access/Jet, MDBTools, and Python ODBC workflows |
 | System | Process listing/management, installed-app inventory, and process termination |
-| Android accessibility | Read screens, click, scroll, focus, and invoke global accessibility actions |
+| Android accessibility | Read screens, click, scroll, focus, invoke global actions, and play bounded UI-test sequences |
 | Web | Search, crawl, and browser interaction |
-| Memory and skills | Search/save/delete memory, inspect memory statistics, list skills, and activate skills |
+| Memory and skills | Search/save/delete memory, inspect memory statistics, list/activate skills, build and schedule read-only workflows |
 | Network and traffic | Port scanning, HTTP capture/history/replay, packet capture, and traffic inspection |
 | Reverse engineering | APK inspection/patch pipeline, ELF utilities, IL2CPP metadata, Ghidra/IDA-oriented analysis |
 | Security research | SQL injection/XSS checks, directory discovery, header checks, sqlmap integration, and exploit-source research |
