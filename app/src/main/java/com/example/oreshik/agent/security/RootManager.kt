@@ -114,6 +114,10 @@ class RootManager(private val context: Context) {
         if (!status(force = true).available) return false to "Root/su required to fix SELinux contexts."
         require(path.isNotBlank() && '\u0000' !in path) { "A valid runtime path is required." }
         val runtimeRoot = File(path).canonicalFile
+        val managedRuntimeRoot = File(context.filesDir, "runtimes").canonicalFile
+        require(runtimeRoot.path.startsWith(managedRuntimeRoot.path + File.separator)) {
+            "SELinux runtime labeling is restricted to app-managed runtime packs."
+        }
         fun quote(value: String): String = "'" + value.replace("'", "'\\''") + "'"
 
         val entrypoints = executablePaths.map { relativePath ->
@@ -131,6 +135,25 @@ class RootManager(private val context: Context) {
             candidate
         }.distinct()
 
+        // Android also needs executable labels on ELF shared libraries and helper
+        // binaries (for example git-remote-https), not only manifest entrypoints.
+        // Include shebang scripts as well, while leaving ordinary config/data files
+        // writable under app_data_file.
+        val discoveredCode = runtimeRoot.walkTopDown().filter { it.isFile }.mapNotNull { file ->
+            runCatching {
+                val canonical = file.canonicalFile
+                if (!canonical.path.startsWith(runtimeRoot.path + File.separator)) return@runCatching null
+                val signature = ByteArray(4)
+                val count = canonical.inputStream().use { it.read(signature) }
+                val shebang = count >= 2 && signature[0] == '#'.code.toByte() && signature[1] == '!'.code.toByte()
+                val elf = count == 4 && signature[0] == 0x7f.toByte() &&
+                    signature[1] == 'E'.code.toByte() && signature[2] == 'L'.code.toByte() &&
+                    signature[3] == 'F'.code.toByte()
+                canonical.takeIf { shebang || elf }
+            }.getOrNull()
+        }.toList()
+        val codeFiles = (entrypoints + discoveredCode).distinct()
+
         val quotedPath = quote(runtimeRoot.absolutePath)
         val contextCommand =
             "(chcon -Rh u:object_r:app_data_file:s0 " + quotedPath + " 2>/dev/null || " +
@@ -138,7 +161,7 @@ class RootManager(private val context: Context) {
         // App data is writable by the app but Android denies executing files with
         // that label. Label only manifest-declared entrypoints as installed app
         // code; mutable runtime files and parent directories stay app-writable.
-        val executableCommands = entrypoints.joinToString(" && ") { executable ->
+        val executableCommands = codeFiles.joinToString(" && ") { executable ->
             "chcon u:object_r:apk_data_file:s0 " + quote(executable.absolutePath) + " 2>/dev/null"
         }
         val cmd = listOf(contextCommand, executableCommands)
