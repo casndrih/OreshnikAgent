@@ -87,6 +87,8 @@ object ToolAuditLog {
         }
     }.getOrDefault(false)
 
+    internal fun redactArgumentsForTesting(value: JsonElement?): JsonElement = redact(value)
+
     private fun redact(value: JsonElement?): JsonElement = when {
         value == null || value is JsonNull -> JsonNull.INSTANCE
         value.isJsonObject -> JsonObject().apply {
