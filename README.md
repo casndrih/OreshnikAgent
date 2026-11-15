@@ -35,6 +35,8 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
+- **Encrypted configuration backups:** passphrase-protected exports using PBKDF2-HMAC-SHA256 and AES-256-GCM, with legacy JSON restore compatibility.
+- **Tool audit trail:** app-private JSONL records for permission decisions and tool outcomes, with recursive credential redaction.
 - **Advanced technical tooling:** database utilities, network inspection, APK/ELF/IL2CPP analysis, Ghidra/IDA-oriented workflows, and authorized security testing tools.
 
 ## AI providers and models
@@ -361,7 +363,7 @@ The following are **proposed enhancements**, not claims about features already s
 - Publish and test signed runtime packs for ARM64, starting with the most frequently used developer tools.
 - Add automated unit tests for tool argument validation, permission checks, runtime installation, archive traversal protection, and provider error handling.
 - Add instrumentation tests for first launch, provider setup, chat, memory, and permission flows.
-- Add a reproducible CI build with APK checksum, dependency report, lint, test results, and release notes.
+- Add automated release notes and signed provenance metadata to the CI build (the pipeline now runs unit tests/lint and uploads an APK checksum plus dependency report).
 - Provide a clear in-app runtime compatibility matrix and per-tool readiness status.
 - Add a safe recovery flow for interrupted downloads, failed runtime upgrades, and corrupted tool installations.
 
@@ -369,7 +371,7 @@ The following are **proposed enhancements**, not claims about features already s
 
 - Add a per-tool approval policy: always allow, ask every time, or deny.
 - Add task plans with visible steps, cancellation, retry, and resumable execution.
-- Add a structured audit log showing tool name, arguments (with secrets redacted), permission decision, result, and timestamp.
+- Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
 - Add workspace snapshots and one-tap rollback for automated file edits.
 - Add token, latency, and cost tracking for remote providers.
 - Add provider capability detection for vision, tool calling, streaming, context limits, and structured output.
@@ -386,7 +388,7 @@ The following are **proposed enhancements**, not claims about features already s
 ### P3 — Advanced capabilities
 
 - Add a multi-agent task board with specialist roles, shared artifacts, and review gates.
-- Add optional encrypted memory and encrypted workspace backups.
+- Extend encrypted configuration backups to include workspace snapshots and optional encrypted memory-at-rest.
 - Add local embedding/index management and configurable retrieval policies.
 - Add a visual workflow builder for reusable automations.
 - Add accessibility test playback and UI regression snapshots.
