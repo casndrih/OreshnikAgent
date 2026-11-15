@@ -110,7 +110,7 @@ class ToolsActivity : AppCompatActivity() {
         val categoryInfo = mapOf(
                 ToolCategory.FILESYSTEM to CategoryDisplayInfo(
                     "File System",
-                    "Read, list, and search workspace files",
+                    "Workspace files, snapshots, rollback, and starter project templates",
                     R.drawable.ic_file,
                 ),
                 ToolCategory.DATABASE to CategoryDisplayInfo(
@@ -135,12 +135,12 @@ class ToolsActivity : AppCompatActivity() {
                 ),
                 ToolCategory.SECURITY to CategoryDisplayInfo(
                     "Accessibility", 
-                    "Screen reading, click, scroll, focus, global actions",
+                    "Screen reading, computer-use actions, and repeatable UI test sequences",
                     R.drawable.ic_accessibility,
                 ),
                 ToolCategory.MEMORY to CategoryDisplayInfo(
                     "Memory & Skills", 
-                    "Search, save, delete persistent memories and list skills",
+                    "Persistent memory, skills, saved workflows, retries, resume, and schedules",
                     R.drawable.ic_memory,
                 ),
                 ToolCategory.RUNTIME to CategoryDisplayInfo(
@@ -150,7 +150,7 @@ class ToolsActivity : AppCompatActivity() {
                 ),
                 ToolCategory.GIT to CategoryDisplayInfo(
                     "Git", 
-                    "Status, diff, log using app-owned Git engine",
+                    "Status, diff, history, and HTTPS remote operations",
                     R.drawable.ic_git,
                 ),
                 ToolCategory.BUILD to CategoryDisplayInfo(
