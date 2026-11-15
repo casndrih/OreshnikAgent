@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oreshik.agent.skills.SkillCatalogSeeder
 import com.example.oreshik.agent.skills.SkillRepository
+import com.example.oreshik.agent.skills.SkillMarketplaceRepository
 import com.example.oreshik.data.AgentDatabase
 import com.example.oreshik.data.SkillEntity
 import com.example.oreshik.logging.AppLogger
@@ -24,6 +25,7 @@ class SkillsActivity : AppCompatActivity() {
     private lateinit var container: LinearLayout
     private val db by lazy { AgentDatabase.get(this) }
     private val gson = Gson()
+    private val marketplace by lazy { SkillMarketplaceRepository() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState); setContentView(R.layout.activity_list_settings)
@@ -121,7 +123,17 @@ class SkillsActivity : AppCompatActivity() {
             setOnClickListener { setAllEnabled(false) }
         }
         row.addView(export); row.addView(import); row.addView(allOn); row.addView(allOff)
-        (findViewById<android.view.View>(R.id.btnRuntimeManager).parent as? LinearLayout)?.addView(row, 1)
+        val parent = findViewById<android.view.View>(R.id.btnRuntimeManager).parent as? LinearLayout
+        parent?.addView(row, 1)
+        val discover = com.google.android.material.button.MaterialButton(this).apply {
+            text = "Discover community skills"
+            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
+                topMargin = 4
+                bottomMargin = 12
+            }
+            setOnClickListener { showMarketplaceSearch() }
+        }
+        parent?.addView(discover, 2)
     }
 
     private fun showSkillMenu(skill: SkillEntity) {
@@ -166,6 +178,81 @@ class SkillsActivity : AppCompatActivity() {
                     load()
                 }
             }.show()
+    }
+
+
+    /**
+     * Search the live Skills.sh index instead of bundling thousands of Markdown files
+     * in the APK. Chosen community skills are imported disabled for review.
+     */
+    private fun showMarketplaceSearch() {
+        val query = EditText(this).apply {
+            hint = "Search Android, Laravel, Kotlin, security…"
+            setSingleLine()
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Community skills marketplace")
+            .setMessage("Search the live Skills.sh ecosystem. Skills are downloaded only when selected and added disabled for review.")
+            .setView(query)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Search") { _, _ -> searchMarketplace(query.text.toString()) }
+            .show()
+    }
+
+    private fun searchMarketplace(term: String) = scope.launch {
+        val clean = term.trim()
+        if (clean.length < 2) {
+            Toast.makeText(this@SkillsActivity, "Enter at least two characters", Toast.LENGTH_SHORT).show()
+            return@launch
+        }
+        Toast.makeText(this@SkillsActivity, "Searching community skills…", Toast.LENGTH_SHORT).show()
+        marketplace.search(clean).onFailure {
+            AppLogger.w(TAG, "Marketplace search failed: \${it.message}")
+            Toast.makeText(this@SkillsActivity, "Search failed: \${it.message}", Toast.LENGTH_LONG).show()
+        }.onSuccess { found ->
+            if (found.isEmpty()) {
+                Toast.makeText(this@SkillsActivity, "No matching community skills found", Toast.LENGTH_SHORT).show()
+                return@onSuccess
+            }
+            val labels = found.map { "\${it.name}  •  \${it.source}  •  \${it.installs} installs" }.toTypedArray()
+            AlertDialog.Builder(this@SkillsActivity)
+                .setTitle("Found \${found.size} skills")
+                .setItems(labels) { _, index -> installMarketplaceSkill(found[index]) }
+                .setNegativeButton("Close", null)
+                .show()
+        }
+    }
+
+    private fun installMarketplaceSkill(remote: SkillMarketplaceRepository.RemoteSkill) = scope.launch {
+        Toast.makeText(this@SkillsActivity, "Downloading \${remote.name}…", Toast.LENGTH_SHORT).show()
+        marketplace.download(remote).onFailure {
+            AppLogger.w(TAG, "Marketplace install failed for \${remote.id}: \${it.message}")
+            Toast.makeText(this@SkillsActivity, "Download failed: \${it.message}", Toast.LENGTH_LONG).show()
+        }.onSuccess { skill ->
+            val preview = skill.instructions.take(1800)
+            AlertDialog.Builder(this@SkillsActivity)
+                .setTitle("Review: \${skill.name}")
+                .setMessage("\${skill.description}\\n\\nSource: \${remote.source}\\n\\n\${preview}\\n\\nThis skill will be added DISABLED. Review it before enabling.")
+                .setNegativeButton("Discard", null)
+                .setPositiveButton("Install disabled") { _, _ ->
+                    scope.launch(Dispatchers.IO) {
+                        val existing = db.skills().all().firstOrNull { it.id == skill.id }
+                        if (existing != null) {
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(this@SkillsActivity, "This skill is already installed", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            db.skills().put(skill)
+                            AppLogger.i(TAG, "Installed community skill \${skill.id} from \${remote.source} (disabled)")
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(this@SkillsActivity, "Installed disabled. Review and enable it in the library.", Toast.LENGTH_LONG).show()
+                                load()
+                            }
+                        }
+                    }
+                }
+                .show()
+        }
     }
 
     // ----- Import / export (skills.json in the sandboxed agent workspace) -----
