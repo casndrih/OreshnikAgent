@@ -30,7 +30,7 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Multiple AI backends:** NVIDIA, ChatGPT plan integration, OpenRouter, BlueSmind, NaraRouter, Mistral, and configurable OpenAI-compatible endpoints.
 - **Online and local inference:** switch between remote providers and an on-device GGUF model runtime.
 - **Tool-using agent:** structured tool definitions, a registry, per-tool default/ask/allow/deny policies, hard capability gates, task execution, progress events, and tool collaboration.
-- **Coding tools:** workspace file operations, Python execution, Git inspection and HTTPS remote operations, offline project templates, and Android/Gradle build integration.
+- **Coding tools:** workspace file operations, Python execution, interactive line-oriented shell sessions, Git inspection and HTTPS remote operations, offline project templates, and Android/Gradle build integration.
 - **Android computer use:** screen inspection, accessibility-driven interactions, bounded repeatable UI-test sequences, and app-private UI regression snapshots with pixel-difference comparison.
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
@@ -90,7 +90,7 @@ The source includes:
 - App-private redacted tool audit records (tool, session, permission outcome, execution result, duration, timestamp).
 - Session learning and context retrieval.
 - Workspace snapshots: app-private ZIP snapshots exclude build/dependency caches, cap file count and archive size, validate every restore path, and automatically create a safety snapshot before rollback.
-- Git operations: local branch list/create/switch/delete, explicit path staging, staged-only commits, patch export, plus HTTPS clone/fetch/pull/push. Credentials are supplied per call, never persisted, and force-push is not exposed.
+- Git operations: local branch list/create/switch/delete, explicit path staging, staged-only commits, patch export, plus HTTPS clone/fetch/pull/push. Persistent shell sessions support start/write/read/stop with bounded output; they are pipe-based rather than a full PTY. Credentials are supplied per call, never persisted, and force-push is not exposed.
 - Offline project templates: Android/Kotlin, Kotlin CLI, Python, Node.js, and PHP API starters; creation is workspace-scoped and never overwrites an existing target.
 - Accessibility sequence playback: bounded, step-reported tap, long-press, swipe, text click/input, scroll, focus, global navigation, and wait actions. UI snapshots can be captured, listed, and compared with a bounded pixel-difference report.
 - Saved workflow builder: create/list/delete/run read-only inspection workflows, with up to 12 steps, bounded retries, and saved failure checkpoints for resume.
