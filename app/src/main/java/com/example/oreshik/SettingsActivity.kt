@@ -279,7 +279,7 @@ class SettingsActivity : AppCompatActivity() {
         status.text = getString(R.string.backup_preparing_status)
         lifecycleScope.launch {
             val result = withContext(Dispatchers.IO) { ConfigBackup.writeBackup(this@SettingsActivity, uri, passphrase) }
-            passphrase.fill('\\u0000')
+            passphrase.fill('\u0000')
             result.onSuccess { msg ->
                 status.text = msg
                 Toast.makeText(this@SettingsActivity, "Encrypted backup saved", Toast.LENGTH_SHORT).show()
@@ -306,7 +306,7 @@ class SettingsActivity : AppCompatActivity() {
         status.text = getString(R.string.backup_restoring_status)
         lifecycleScope.launch {
             val result = withContext(Dispatchers.IO) { ConfigBackup.restore(this@SettingsActivity, uri, passphrase) }
-            passphrase?.fill('\\u0000')
+            passphrase?.fill('\u0000')
             result.onSuccess { msg ->
                 status.text = msg
                 Toast.makeText(this@SettingsActivity, "Restore complete", Toast.LENGTH_SHORT).show()
@@ -331,7 +331,7 @@ class SettingsActivity : AppCompatActivity() {
             .setPositiveButton("Continue") { _, _ ->
                 val passphrase = input.text?.toString()?.toCharArray() ?: charArrayOf()
                 if (passphrase.size < 10) {
-                    passphrase.fill('\\u0000')
+                    passphrase.fill('\u0000')
                     Toast.makeText(this, "Use at least 10 characters", Toast.LENGTH_LONG).show()
                 } else onSubmit(passphrase)
             }
