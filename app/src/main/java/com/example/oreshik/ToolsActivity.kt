@@ -9,6 +9,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.ScrollView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -20,6 +22,7 @@ import com.example.oreshik.agent.core.ToolPermission
 import com.example.oreshik.agent.security.PermissionBroker
 import com.example.oreshik.agent.security.PermissionManager
 import com.example.oreshik.agent.security.ToolApprovalPolicy
+import com.example.oreshik.logging.ToolAuditLog
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
@@ -57,6 +60,7 @@ class ToolsActivity : AppCompatActivity() {
         
         findViewById<MaterialButton>(R.id.btnRuntimeManager)
             .setOnClickListener { startActivity(android.content.Intent(this, RuntimeActivity::class.java)) }
+        findViewById<MaterialButton>(R.id.btnToolAuditLog).setOnClickListener { showAuditLog() }
         
         loadTools()
     }
@@ -428,6 +432,46 @@ class ToolsActivity : AppCompatActivity() {
         
     }
     
+
+    private fun showAuditLog() {
+        lifecycleScope.launch {
+            val entries = withContext(Dispatchers.IO) {
+                ToolAuditLog.readRecent(this@ToolsActivity, 100)
+            }
+            val body = TextView(this@ToolsActivity).apply {
+                text = if (entries.isEmpty()) "No tool activity has been recorded yet." else entries.joinToString("\\n\\n")
+                textSize = 12f
+                setTextColor(getColor(R.color.text_primary))
+                setPadding(20, 12, 20, 12)
+            }
+            val scroll = ScrollView(this@ToolsActivity).apply { addView(body) }
+            AlertDialog.Builder(this@ToolsActivity)
+                .setTitle("Recent tool audit log")
+                .setView(scroll)
+                .setPositiveButton(android.R.string.ok, null)
+                .setNeutralButton("Clear log") { _, _ ->
+                    AlertDialog.Builder(this@ToolsActivity)
+                        .setTitle("Clear audit log?")
+                        .setMessage("This removes the app-private tool audit history.")
+                        .setPositiveButton("Clear") { _, _ ->
+                            lifecycleScope.launch {
+                                val cleared = withContext(Dispatchers.IO) {
+                                    ToolAuditLog.clear(this@ToolsActivity)
+                                }
+                                Toast.makeText(
+                                    this@ToolsActivity,
+                                    if (cleared) "Audit log cleared" else "Could not clear audit log",
+                                    Toast.LENGTH_SHORT,
+                                ).show()
+                            }
+                        }
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show()
+                }
+                .show()
+        }
+    }
+
     private fun approvalPolicyLabel(policy: ToolApprovalPolicy): String = when (policy) {
         ToolApprovalPolicy.DEFAULT -> "Approval policy: Default"
         ToolApprovalPolicy.ASK -> "Approval policy: Ask every time"
