@@ -1561,6 +1561,9 @@ class RuntimeManager(private val context: Context) {
         var redirects = 0
         while (redirects < 10) {
             val url = java.net.URL(currentUrl)
+            require(url.protocol.equals("https", ignoreCase = true)) {
+                "Runtime downloads may not redirect to an insecure HTTP URL"
+            }
             val conn = url.openConnection() as java.net.HttpURLConnection
             conn.connectTimeout = 15000
             conn.readTimeout = 60000
@@ -1569,6 +1572,9 @@ class RuntimeManager(private val context: Context) {
             conn.setRequestProperty("Accept", "*/*")
 
             val code = conn.responseCode
+            require(conn.url.protocol.equals("https", ignoreCase = true)) {
+                "Runtime download redirected to an insecure URL"
+            }
             if ((code == java.net.HttpURLConnection.HTTP_MOVED_PERM) ||
                 (code == java.net.HttpURLConnection.HTTP_MOVED_TEMP) ||
                 (code == java.net.HttpURLConnection.HTTP_SEE_OTHER) ||
@@ -1594,6 +1600,9 @@ class RuntimeManager(private val context: Context) {
             }
 
             val contentLength = conn.contentLengthLong
+            require(contentLength <= MAX_RUNTIME_ARCHIVE_BYTES) {
+                "Runtime archive exceeds the 2 GB download limit"
+            }
             var downloaded = 0L
 
             conn.inputStream.use { input ->
@@ -1603,6 +1612,9 @@ class RuntimeManager(private val context: Context) {
                     while (input.read(buffer).also { bytesRead = it } != -1) {
                         output.write(buffer, 0, bytesRead)
                         downloaded += bytesRead
+                        require(downloaded <= MAX_RUNTIME_ARCHIVE_BYTES) {
+                            "Runtime archive exceeds the 2 GB download limit"
+                        }
                         onProgress(downloaded, if (contentLength > 0) contentLength else -1L)
                     }
                 }
