@@ -83,7 +83,12 @@ object ToolAuditLog {
 
     fun clear(context: Context): Boolean = runCatching {
         synchronized(lock) {
-            File(context.applicationContext.filesDir, FILE_NAME).let { !it.exists() || it.delete() }
+            val root = context.applicationContext.filesDir
+            val current = File(root, FILE_NAME)
+            val rotated = File(root, "$FILE_NAME.1")
+            val currentOk = !current.exists() || current.delete()
+            val rotatedOk = !rotated.exists() || rotated.delete()
+            currentOk && rotatedOk
         }
     }.getOrDefault(false)
 
