@@ -1,5 +1,7 @@
 package com.example.oreshik.agent.tools
 
+import android.security.keystore.KeyGenParameterSpec
+import android.security.keystore.KeyProperties
 import com.example.oreshik.agent.core.*
 import com.google.gson.JsonElement
 import kotlinx.coroutines.Dispatchers
@@ -7,16 +9,26 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import java.io.InputStream
+import java.security.KeyStore
 import java.util.UUID
+import javax.crypto.Cipher
+import javax.crypto.CipherInputStream
+import javax.crypto.CipherOutputStream
+import javax.crypto.KeyGenerator
+import javax.crypto.SecretKey
+import javax.crypto.spec.GCMParameterSpec
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 
-/** Bounded, app-private workspace snapshots with traversal-safe restore. */
+/** Bounded, device-bound AES-GCM encrypted workspace snapshots with traversal-safe restore. */
 private object WorkspaceSnapshots {
     private const val MAX_ENTRIES = 20_000
     private const val MAX_TOTAL_BYTES = 512L * 1024L * 1024L
     private const val MAX_FILE_BYTES = 64L * 1024L * 1024L
+    private const val KEY_ALIAS = "oreshnik.workspace.snapshots.aesgcm.v1"
+    private val MAGIC = byteArrayOf(0x4f, 0x57, 0x53, 0x31) // OWS1
     private val ignored = setOf(".git", "node_modules", "build", ".gradle", ".cache", ".python-packages", "__pycache__", "dist")
 
     private fun root(context: ToolContext): File = context.workspace.canonicalFile.also {
@@ -33,20 +45,111 @@ private object WorkspaceSnapshots {
         return parts.joinToString("/")
     }
 
+    private fun encryptionKey(): SecretKey {
+        val keyStore = KeyStore.getInstance("AndroidKeyStore").apply { load(null) }
+        (keyStore.getKey(KEY_ALIAS, null) as? SecretKey)?.let { return it }
+        val generator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore")
+        generator.init(
+            KeyGenParameterSpec.Builder(
+                KEY_ALIAS,
+                KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT,
+            )
+                .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
+                .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
+                .setKeySize(256)
+                .setRandomizedEncryptionRequired(true)
+                .build(),
+        )
+        return generator.generateKey()
+    }
+
+    private fun encryptFile(source: File, destination: File) {
+        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+        cipher.init(Cipher.ENCRYPT_MODE, encryptionKey())
+        val iv = cipher.iv
+        require(iv.size in 12..16) { "Android Keystore returned an invalid AES-GCM IV." }
+        destination.parentFile?.mkdirs()
+        FileOutputStream(destination).use { raw ->
+            raw.write(MAGIC)
+            raw.write(iv.size)
+            raw.write(iv)
+            CipherOutputStream(raw, cipher).use { encrypted ->
+                FileInputStream(source).use { input -> input.copyTo(encrypted, 64 * 1024) }
+            }
+        }
+    }
+
+    private fun readExactly(input: InputStream, target: ByteArray) {
+        var offset = 0
+        while (offset < target.size) {
+            val count = input.read(target, offset, target.size - offset)
+            if (count < 0) throw java.io.EOFException("Encrypted snapshot header is truncated.")
+            offset += count
+        }
+    }
+
+    /** Decrypt to a temporary ZIP first so the GCM authentication tag is checked before restore. */
+    private fun decryptFile(source: File, destination: File) {
+        destination.delete()
+        try {
+            FileInputStream(source).use { raw ->
+                val magic = ByteArray(MAGIC.size)
+                readExactly(raw, magic)
+                require(magic.contentEquals(MAGIC)) { "Snapshot format is invalid or unsupported." }
+                val ivLength = raw.read()
+                require(ivLength in 12..16) { "Snapshot encryption header is invalid." }
+                val iv = ByteArray(ivLength)
+                readExactly(raw, iv)
+                val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+                cipher.init(Cipher.DECRYPT_MODE, encryptionKey(), GCMParameterSpec(128, iv))
+                CipherInputStream(raw, cipher).use { encrypted ->
+                    FileOutputStream(destination).use { output -> encrypted.copyTo(output, 64 * 1024) }
+                }
+            }
+            require(destination.isFile && destination.length() > 0L) { "Decrypted snapshot is empty." }
+        } catch (error: Exception) {
+            destination.delete()
+            throw error
+        }
+    }
+
+    /** Convert snapshots created by older app versions from plaintext ZIP to encrypted OWS1. */
+    @Synchronized
+    private fun migrateLegacySnapshots(context: ToolContext) {
+        val directory = store(context)
+        directory.listFiles()?.filter { it.isFile && it.extension == "zip" }?.forEach { legacy ->
+            val encrypted = File(directory, "${legacy.nameWithoutExtension}.wss")
+            if (encrypted.isFile) {
+                legacy.delete()
+                return@forEach
+            }
+            val temporary = File(directory, ".${legacy.nameWithoutExtension}.migrate.tmp")
+            try {
+                encryptFile(legacy, temporary)
+                check(temporary.renameTo(encrypted)) { "Could not activate encrypted snapshot migration." }
+                check(legacy.delete()) { "Could not remove the legacy plaintext snapshot." }
+            } finally {
+                temporary.delete()
+            }
+        }
+    }
+
     @Synchronized
     fun create(context: ToolContext, label: String = "manual"): String {
-        val root = root(context)
+        val workspace = root(context)
+        val directory = store(context)
         val id = "ws_" + System.currentTimeMillis().toString() + "_" + UUID.randomUUID().toString().take(8)
-        val destination = File(store(context), "$id.zip")
+        val plaintext = File(directory, ".${id}.tmp.zip")
+        val destination = File(directory, "${id}.wss")
         var count = 0
         var total = 0L
         try {
-            ZipOutputStream(FileOutputStream(destination)).use { zip ->
-                root.walkTopDown().onEnter { dir -> dir == root || dir.name !in ignored }.forEach { file ->
+            ZipOutputStream(FileOutputStream(plaintext)).use { zip ->
+                workspace.walkTopDown().onEnter { dir -> dir == workspace || dir.name !in ignored }.forEach { file ->
                     if (!file.isFile) return@forEach
                     val canonical = file.canonicalFile
-                    require(canonical.path.startsWith(root.path + File.separator)) { "Workspace path escaped root." }
-                    val relative = safeRelative(canonical.relativeTo(root).invariantSeparatorsPath)
+                    require(canonical.path.startsWith(workspace.path + File.separator)) { "Workspace path escaped root." }
+                    val relative = safeRelative(canonical.relativeTo(workspace).invariantSeparatorsPath)
                     val length = canonical.length()
                     require(length <= MAX_FILE_BYTES) { "File too large for snapshot: $relative" }
                     total += length
@@ -57,38 +160,52 @@ private object WorkspaceSnapshots {
                     zip.closeEntry()
                 }
             }
+            encryptFile(plaintext, destination)
         } catch (error: Exception) {
             destination.delete()
             throw error
+        } finally {
+            plaintext.delete()
         }
-        // Keep the newest 20 snapshots; never remove the snapshot just created.
-        store(context).listFiles()?.filter { it.isFile && it.extension == "zip" && it.name != destination.name }
+        // Keep the newest 20 encrypted snapshots; never remove the snapshot just created.
+        directory.listFiles()?.filter { it.isFile && it.extension == "wss" && it.name != destination.name }
             ?.sortedByDescending { it.lastModified() }?.drop(19)?.forEach { it.delete() }
-        return "$id|$label|$count|$total"
+        return "${id}|${label}|${count}|${total}"
     }
 
-    fun list(context: ToolContext): List<String> =
-        store(context).listFiles()?.filter { it.isFile && it.extension == "zip" }
+    @Synchronized
+    fun list(context: ToolContext): List<String> {
+        migrateLegacySnapshots(context)
+        return store(context).listFiles()?.filter { it.isFile && it.extension == "wss" }
             ?.sortedByDescending { it.lastModified() }
-            ?.map { file -> "${file.nameWithoutExtension} · ${file.length()} bytes · ${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.US).format(java.util.Date(file.lastModified()))}" }
+            ?.map { file ->
+                "${file.nameWithoutExtension} · AES-256-GCM encrypted · ${file.length()} bytes · " +
+                    java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.US).format(java.util.Date(file.lastModified()))
+            }
             .orEmpty()
+    }
 
     @Synchronized
     fun restore(context: ToolContext, id: String): String {
         require(id.matches(Regex("^ws_[0-9]{10,}_[A-Fa-f0-9]{8}$"))) { "Invalid snapshot ID." }
-        val archive = File(store(context), "$id.zip").canonicalFile
-        require(archive.parentFile == store(context).canonicalFile && archive.isFile) { "Snapshot not found." }
+        migrateLegacySnapshots(context)
+        val directory = store(context)
+        val archive = File(directory, "${id}.wss").canonicalFile
+        require(archive.parentFile == directory.canonicalFile && archive.isFile) { "Snapshot not found." }
         val workspace = root(context)
-        // Automatic safety point before changing any workspace content.
-        val safety = create(context, "pre-restore")
-        val stage = File(context.app.cacheDir, "workspace-restore-$id").apply {
+        val decryptedArchive = File(context.app.cacheDir, "workspace-restore-${id}.zip")
+        val stage = File(context.app.cacheDir, "workspace-restore-${id}").apply {
             deleteRecursively()
             mkdirs()
         }
-        var entries = 0
-        var total = 0L
         try {
-            ZipInputStream(FileInputStream(archive)).use { zip ->
+            // Authenticate the entire encrypted payload before touching workspace files.
+            decryptFile(archive, decryptedArchive)
+            // Automatic encrypted safety point before changing any workspace content.
+            val safety = create(context, "pre-restore")
+            var entries = 0
+            var total = 0L
+            ZipInputStream(FileInputStream(decryptedArchive)).use { zip ->
                 while (true) {
                     val entry = zip.nextEntry ?: break
                     if (entry.isDirectory) { zip.closeEntry(); continue }
@@ -122,9 +239,10 @@ private object WorkspaceSnapshots {
                 target.parentFile?.mkdirs()
                 staged.copyTo(target, overwrite = true)
             }
-            return "Restored $entries files from $id. Automatic safety snapshot: ${safety.substringBefore('|')}."
+            return "Restored ${entries} files from ${id}. Automatic safety snapshot: ${safety.substringBefore('|')}."
         } finally {
             stage.deleteRecursively()
+            decryptedArchive.delete()
         }
     }
 }
@@ -133,7 +251,7 @@ class WorkspaceSnapshotCreateTool : AgentTool {
     override val definition = ToolDefinition(
         name = "workspace.snapshot",
         category = ToolCategory.FILESYSTEM,
-        description = "Create a bounded app-private snapshot of the current workspace, excluding dependency/build caches.",
+        description = "Create an AES-256-GCM encrypted, bounded app-private snapshot of the current workspace, excluding dependency/build caches.",
         permissions = setOf(ToolPermission.READ_WORKSPACE),
         parameters = mapOf("label" to "string"),
     )
@@ -141,7 +259,7 @@ class WorkspaceSnapshotCreateTool : AgentTool {
         runCatching {
             val label = arguments.asJsonObject["label"]?.asString?.take(80)?.ifBlank { "manual" } ?: "manual"
             val result = WorkspaceSnapshots.create(context, label).split('|')
-            ToolResult.success("Snapshot created: ${result[0]} · ${result[2]} files · ${result[3]} bytes")
+            ToolResult.success("Encrypted snapshot created: ${result[0]} · ${result[2]} files · ${result[3]} bytes")
         }.getOrElse { ToolResult.failure("Snapshot failed: ${it.message}") }
     }
 }
@@ -150,7 +268,7 @@ class WorkspaceSnapshotListTool : AgentTool {
     override val definition = ToolDefinition(
         name = "workspace.snapshots",
         category = ToolCategory.FILESYSTEM,
-        description = "List available app-private workspace snapshots.",
+        description = "List AES-256-GCM encrypted app-private workspace snapshots.",
         permissions = setOf(ToolPermission.READ_WORKSPACE),
         parameters = emptyMap(),
     )
@@ -164,7 +282,7 @@ class WorkspaceSnapshotRestoreTool : AgentTool {
     override val definition = ToolDefinition(
         name = "workspace.rollback",
         category = ToolCategory.FILESYSTEM,
-        description = "Restore a workspace snapshot. Creates an automatic pre-restore safety snapshot first. This replaces regular workspace files but preserves ignored build/dependency directories.",
+        description = "Restore an AES-256-GCM encrypted workspace snapshot. Authenticates the archive and creates an automatic encrypted pre-restore safety snapshot first. This replaces regular workspace files but preserves ignored build/dependency directories.",
         permissions = setOf(ToolPermission.WRITE_WORKSPACE, ToolPermission.DELETE),
         parameters = mapOf("snapshot_id" to "string"),
     )
