@@ -30,20 +30,25 @@ jobs:
         run: |
           set -euo pipefail
           archive="OreshnikAgent-patched-source.zip"
-          test -f "$archive"
-          unzip -t "$archive"
-          rm -rf .source-extract
-          mkdir .source-extract
-          unzip -q "$archive" -d .source-extract
-          project_file="$(find .source-extract -mindepth 1 -maxdepth 3 -type f -name settings.gradle.kts -print -quit)"
-          if [ -z "$project_file" ]; then
-            echo "Could not locate settings.gradle.kts in uploaded archive"
+          if [ -f "$archive" ]; then
+            unzip -t "$archive"
+            rm -rf .source-extract
+            mkdir .source-extract
+            unzip -q "$archive" -d .source-extract
+            project_file="$(find .source-extract -mindepth 1 -maxdepth 3 -type f -name settings.gradle.kts -print -quit)"
+            if [ -z "$project_file" ]; then
+              echo "Could not locate settings.gradle.kts in uploaded archive"
+              exit 1
+            fi
+            project_dir="$(dirname "$project_file")"
+            rsync -a --exclude='.git/' --exclude='.github/' "$project_dir/" ./
+            rm -rf .source-extract "$archive"
+          elif [ -f settings.gradle.kts ] && [ -f gradlew ]; then
+            echo "Source already extracted; continuing with build."
+          else
+            echo "Neither source archive nor extracted Gradle project is present."
             exit 1
           fi
-          project_dir="$(dirname "$project_file")"
-          # Keep workflows managed separately; GITHUB_TOKEN cannot push workflow files.
-          rsync -a --exclude='.git/' --exclude='.github/' "$project_dir/" ./
-          rm -rf .source-extract "$archive"
           test -f settings.gradle.kts
           test -f gradlew
           chmod +x gradlew
