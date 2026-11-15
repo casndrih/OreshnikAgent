@@ -278,6 +278,19 @@ class AgentApiClient(
                 Result.failure(t)
             }
             
+            val usage = result.getOrNull()?.getAsJsonObject("usage")
+            val promptTokens = usage?.get("prompt_tokens")?.asLong
+                ?: usage?.get("input_tokens")?.asLong ?: 0L
+            val completionTokens = usage?.get("completion_tokens")?.asLong
+                ?: usage?.get("output_tokens")?.asLong ?: 0L
+            ProviderMetrics.record(
+                baseUrl = baseUrl,
+                model = model,
+                latencyMs = System.currentTimeMillis() - attemptStart,
+                success = result.isSuccess,
+                promptTokens = promptTokens,
+                completionTokens = completionTokens,
+            )
             if (result.isSuccess) {
                 return result
             }
