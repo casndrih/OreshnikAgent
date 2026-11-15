@@ -73,9 +73,9 @@ private object TerminalSessions {
         val session = sessions[id] ?: error("Terminal session not found.")
         synchronized(session.lock) {
             val count = maxChars.coerceIn(1000, 12_000).coerceAtMost(session.output.length)
-            val start = session.output.length - count
-            val result = session.output.substring(start)
-            session.output.delete(start, session.output.length)
+            val result = session.output.substring(0, count)
+            session.output.delete(0, count)
+            if (!session.process.isAlive && session.output.isEmpty()) sessions.remove(id, session)
             return result.ifBlank { if (session.process.isAlive) "No new output yet." else "Process exited; no unread output." }
         }
     }
@@ -100,7 +100,10 @@ private object TerminalSessions {
     }
 
     private fun cleanupDead() {
-        sessions.entries.removeIf { !it.value.process.isAlive }
+        sessions.entries.removeIf { entry ->
+            val session = entry.value
+            !session.process.isAlive && synchronized(session.lock) { session.output.isEmpty() }
+        }
     }
 
     private fun OutputStreamWriter.useCommandWrite(command: String) {
