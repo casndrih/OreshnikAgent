@@ -104,8 +104,8 @@ object ToolAuditLog {
         else -> value.deepCopy()
     }
 
-    private fun redactText(value: String): String = bearer.replace(
-        inlineSecret.replace(value) { match -> "${match.groupValues[1]}${match.groupValues[2]}[REDACTED]" },
-        "Bearer [REDACTED]",
-    ).replace(Regex("(?i)\\bsk-[A-Za-z0-9_-]{12,}"), "[REDACTED_KEY]")
+    private fun redactText(value: String): String = inlineSecret.replace(
+        bearer.replace(value, "Bearer [REDACTED]"),
+    ) { match -> "${match.groupValues[1]}${match.groupValues[2]}[REDACTED]" }
+        .replace(Regex("(?i)\\bsk-[A-Za-z0-9_-]{12,}"), "[REDACTED_KEY]")
 }
