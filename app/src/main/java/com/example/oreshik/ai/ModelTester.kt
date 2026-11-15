@@ -58,6 +58,8 @@ object ModelTester {
         val note: String,
         val latencyMs: Long,
         val atMs: Long = System.currentTimeMillis(),
+        val reasoningVerified: Boolean? = null,
+        val thinkingLevels: List<String> = emptyList(),
     )
 
     private val http: OkHttpClient = OkHttpClient.Builder()
@@ -159,7 +161,12 @@ object ModelTester {
         val cached = results[cacheKey]
         if (cached != null) {
             AppLogger.d("ModelTester", "probe cache hit for $cacheKey")
-            return m.copy(tested = cached.ok, testNote = cached.note)
+            return m.copy(
+                tested = cached.ok,
+                testNote = cached.note,
+                reasoningVerified = cached.reasoningVerified ?: m.reasoningVerified,
+                thinkingLevels = cached.thinkingLevels.takeIf { it.isNotEmpty() } ?: m.thinkingLevels,
+            )
         }
         val out = runProbe(providerId, m, baseUrl, key)
         results[cacheKey] = ProbeResult(
@@ -167,6 +174,8 @@ object ModelTester {
             note = out.testNote,
             latencyMs = 0,
             atMs = System.currentTimeMillis(),
+            reasoningVerified = out.reasoningVerified,
+            thinkingLevels = out.thinkingLevels,
         )
         return out
     }
