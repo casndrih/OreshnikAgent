@@ -11,6 +11,8 @@
     <style name="Widget.Oreshik.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
         <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="Widget.Oreshik.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
