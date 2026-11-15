@@ -21,6 +21,7 @@ private object TerminalSessions {
         val startedAt: Long,
         val output: StringBuilder = StringBuilder(),
         val lock: Any = Any(),
+        @Volatile var readerDone: Boolean = false,
     )
     private val sessions = ConcurrentHashMap<String, Session>()
 
@@ -55,7 +56,7 @@ private object TerminalSessions {
                         }
                     }
                 }
-            }
+            }.also { synchronized(session.lock) { session.readerDone = true } }
         }, "oreshik-terminal-$id").apply { isDaemon = true; start() }
         return id
     }
@@ -75,7 +76,7 @@ private object TerminalSessions {
             val count = maxChars.coerceIn(1000, 12_000).coerceAtMost(session.output.length)
             val result = session.output.substring(0, count)
             session.output.delete(0, count)
-            if (!session.process.isAlive && session.output.isEmpty()) sessions.remove(id, session)
+            if (!session.process.isAlive && session.readerDone && session.output.isEmpty()) sessions.remove(id, session)
             return result.ifBlank { if (session.process.isAlive) "No new output yet." else "Process exited; no unread output." }
         }
     }
@@ -102,7 +103,7 @@ private object TerminalSessions {
     private fun cleanupDead() {
         sessions.entries.removeIf { entry ->
             val session = entry.value
-            !session.process.isAlive && synchronized(session.lock) { session.output.isEmpty() }
+            !session.process.isAlive && session.readerDone && synchronized(session.lock) { session.output.isEmpty() }
         }
     }
 
