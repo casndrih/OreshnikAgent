@@ -224,7 +224,7 @@ object ModelTester {
                     if (reasoningRejected) {
                         val plainRoot = root.deepCopy().apply { remove("reasoning_effort") }
                         val plainRequest = Request.Builder()
-                            .url(baseUrl.trimEnd('/') + "/chat/completions")
+                            .url(completionUrl(baseUrl))
                             .post(gson.toJson(plainRoot).toRequestBody("application/json".toMediaType()))
                             .apply { if (key.isNotBlank()) header("Authorization", "Bearer $key") }
                             .build()
