@@ -204,9 +204,14 @@ object ModelTester {
         val probeEffort = m.thinkingLevels.firstOrNull { !it.equals("off", true) } ?: "low"
         try {
             val openAiReasoner = Regex("(^|[/_-])o[134]([_-]|$)").containsMatchIn(m.id.lowercase())
+            val probeMessages = probeMessages(m.kind).apply {
+                if (openAiReasoner && size() > 0) {
+                    get(0).takeIf { it.isJsonObject }?.asJsonObject?.addProperty("role", "developer")
+                }
+            }
             val root = JsonObject().apply {
                 addProperty("model", m.id)
-                add("messages", probeMessages(m.kind))
+                add("messages", probeMessages)
                 if (openAiReasoner) addProperty("max_completion_tokens", 96)
                 else addProperty("max_tokens", if (m.kind == "reasoning") 96 else 16)
                 // OpenAI o-series models reject temperature; NVIDIA/other reasoners accept it.
