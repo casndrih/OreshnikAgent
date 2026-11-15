@@ -1,6 +1,15 @@
 {
   "schemaVersion": 1,
-  "packs": [],
+  "packs": [
+    {
+      "id": "termux-arm64",
+      "name": "Termux ARM64 Developer Tools",
+      "version": "Sun--15-Nov-2026-06-51-54-UTC-5568d644662e",
+      "description": "ARM64 Android/Bionic tools from the signed Termux main repository: Bash, Git, OpenSSH, curl, wget, jq, ripgrep, SQLite, rsync, networking and core utilities.",
+      "url": "https://github.com/casndrih/OreshnikAgent/releases/download/termux-runtime-packs/termux-arm64.zip",
+      "sha256": "88916cd26a1541442160607fb989c254e47d6448c4ec589a038e9cb910a0c5bc"
+    }
+  ],
   "format": {
     "description": "Publish a runtime ZIP as a GitHub release asset, then add its HTTPS asset URL and SHA-256 checksum to packs.",
     "archive": "ZIP containing runtime.json at its root and all manifest entrypoint files.",
