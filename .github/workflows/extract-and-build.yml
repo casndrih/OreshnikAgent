@@ -21,12 +21,13 @@ permissions:
   actions: read
 
 concurrency:
-  group: extract-build-main
-  cancel-in-progress: false
+  group: oreshik-main-build-v2
+  cancel-in-progress: true
 
 jobs:
   extract-and-build:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Check out main
         uses: actions/checkout@v4
@@ -104,12 +105,15 @@ jobs:
             "ndk;30.0.16248370" \
             "cmake;4.1.2"
 
-      - name: Run unit tests and generate dependency report
+      - name: Run unit tests
+        run: ./gradlew :app:testDebugUnitTest --stacktrace
+
+      - name: Run release lint
+        run: ./gradlew :app:lintRelease --stacktrace
+
+      - name: Generate dependency report
         shell: bash
-        run: |
-          set -euo pipefail
-          ./gradlew :app:testDebugUnitTest :app:lintRelease --stacktrace
-          ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > dependency-report.txt
+        run: ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > dependency-report.txt
 
       - name: Build release APK
         run: ./gradlew :app:assembleRelease --stacktrace
