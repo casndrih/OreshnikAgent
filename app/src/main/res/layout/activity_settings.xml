@@ -292,7 +292,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnScreenCapture"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -308,7 +308,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnMiuiFix"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -358,7 +358,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnTestProxy"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -602,7 +602,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRestoreConfig"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Oreshik.Button.Outlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
