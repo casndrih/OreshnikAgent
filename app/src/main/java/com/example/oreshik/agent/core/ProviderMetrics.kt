@@ -16,6 +16,7 @@ object ProviderMetrics {
         val failures: Long,
         val promptTokens: Long,
         val completionTokens: Long,
+        val usageReports: Long,
         val totalLatencyMs: Long,
         val lastLatencyMs: Long,
         val updatedAt: Long,
@@ -31,6 +32,7 @@ object ProviderMetrics {
         var failures: Long = 0,
         var promptTokens: Long = 0,
         var completionTokens: Long = 0,
+        var usageReports: Long = 0,
         var totalLatencyMs: Long = 0,
         var lastLatencyMs: Long = 0,
         var updatedAt: Long = System.currentTimeMillis(),
@@ -57,7 +59,7 @@ object ProviderMetrics {
         preferences?.edit()?.putString(KEY_STATS, gson.toJson(stats.values.toList()))?.apply()
     }
 
-    fun record(baseUrl: String, model: String, latencyMs: Long, success: Boolean, promptTokens: Long, completionTokens: Long) {
+    fun record(baseUrl: String, model: String, latencyMs: Long, success: Boolean, promptTokens: Long, completionTokens: Long, usageReported: Boolean = promptTokens > 0 || completionTokens > 0) {
         val host = runCatching { URI(baseUrl).host?.lowercase().orEmpty() }.getOrDefault("")
             .ifBlank { "unknown-provider" }.take(120)
         val safeModel = model.take(160)
@@ -68,6 +70,7 @@ object ProviderMetrics {
             if (success) item.successes++ else item.failures++
             item.promptTokens += promptTokens.coerceAtLeast(0)
             item.completionTokens += completionTokens.coerceAtLeast(0)
+            if (usageReported) item.usageReports++
             item.lastLatencyMs = latencyMs.coerceAtLeast(0)
             item.totalLatencyMs += item.lastLatencyMs
             item.updatedAt = System.currentTimeMillis()
@@ -79,7 +82,7 @@ object ProviderMetrics {
     fun snapshot(): List<Snapshot> = synchronized(lock) {
         stats.values.map {
             Snapshot(it.host, it.model, it.requests, it.successes, it.failures, it.promptTokens,
-                it.completionTokens, it.totalLatencyMs, it.lastLatencyMs, it.updatedAt)
+                it.completionTokens, it.usageReports, it.totalLatencyMs, it.lastLatencyMs, it.updatedAt)
         }.sortedByDescending { it.updatedAt }
     }
 
@@ -97,6 +100,7 @@ object ProviderMetrics {
     }
 
     fun estimatedCostUsd(context: Context, item: Snapshot): Double? {
+        if (item.usageReports == 0L) return null
         val prefs = context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         val key = pricingKey(item.host, item.model)
         val input = prefs.getLong("$key.input", Long.MIN_VALUE)
