@@ -5,8 +5,8 @@ import argparse, hashlib, json, lzma, re, shutil, subprocess, tempfile, urllib.r
 from pathlib import Path
 
 PREFIX = "data/data/com.termux/files/usr"
-PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curl","wget","jq","ripgrep","sqlite","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","file","diffutils","tar","gzip","xz-utils","zip","unzip","tree"]
-ENTRYPOINTS = ["bash","busybox","sh","env","git","ssh","scp","sftp","curl","wget","jq","rg","sqlite3","openssl","rsync","nmap","ping","traceroute","dig","nslookup","ifconfig","netstat","ip","ss","tar","gzip","gunzip","xz","unxz","zip","unzip","find","grep","sed","awk","gawk","diff","cmp","tree","file","head","tail","sort","uniq","cut","tr","wc","make"]
+PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curl","wget","jq","ripgrep","sqlite","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","file","diffutils","tar","gzip","zip","unzip","tree"]
+ENTRYPOINTS = ["bash","busybox","sh","env","git","ssh","scp","sftp","curlie","wget","jq","rg","sqlite3","openssl","rsync","nmap","ping","traceroute","dig","nslookup","ifconfig","netstat","ip","ss","tar","gzip","gunzip","zip","unzip","find","grep","sed","awk","gawk","diff","cmp","tree","file","head","tail","sort","uniq","cut","tr","wc","make"]
 UA = "OreshnikAgent-TermuxRuntimeBuilder/1.0"
 
 def download(url: str, target: Path) -> None:
@@ -142,6 +142,8 @@ def main():
         subprocess.run(["rsync","-aL","--safe-links",str(source)+"/",str(stage)+"/"],check=True)
         patch_shebangs(stage)
         entrypoints={name:f"bin/{name}" for name in ENTRYPOINTS if (stage/"bin"/name).is_file()}
+        if "curl" not in entrypoints and "curlie" in entrypoints:
+            entrypoints["curl"] = entrypoints["curlie"]
         if not all(x in entrypoints for x in ("bash","git","curl")):
             raise RuntimeError("Missing core tools after extraction: "+repr(sorted(entrypoints)))
         date=re.search(r"(?m)^Date:\s*(.+)$",release_text)
