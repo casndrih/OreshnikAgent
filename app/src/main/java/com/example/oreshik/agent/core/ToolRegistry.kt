@@ -66,6 +66,7 @@ class ToolRegistry(context: Context, runtime: RuntimeManager) {
         "git.patch.export" to GitPatchExportTool(),
         "workflow.manage" to WorkflowBuilderTool(),
         "workflow.schedule" to WorkflowScheduleTool(),
+        "provider.metrics" to ProviderMetricsTool(),
         "workspace.snapshot" to WorkspaceSnapshotCreateTool(),
         "workspace.snapshots" to WorkspaceSnapshotListTool(),
         "workspace.rollback" to WorkspaceSnapshotRestoreTool(),
