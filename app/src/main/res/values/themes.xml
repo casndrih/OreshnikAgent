@@ -11,6 +11,7 @@
         <item name="colorOnSurface">@color/colorOnSurface</item>
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Oreshik.BottomSheetDialog</item>
         <item name="materialCardViewStyle">@style/Widget.Oreshik.CardView</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Oreshik.Button.Outlined</item>
         <!-- Backgrounds -->
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="android:textColorPrimary">@color/colorOnBackground</item>
