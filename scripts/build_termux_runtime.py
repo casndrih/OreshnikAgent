@@ -5,8 +5,8 @@ import argparse, hashlib, json, lzma, re, shutil, subprocess, tempfile, urllib.r
 from pathlib import Path
 
 PREFIX = "data/data/com.termux/files/usr"
-PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curlie","libcurl","wget","jq","ripgrep","libsqlite","libmagic","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","diffutils","tar","gzip","zip","unzip","tree","make"]
-ENTRYPOINTS = ["bash","busybox","sh","env","git","ssh","scp","sftp","curl","curlie","wget","jq","rg","sqlite3","openssl","rsync","nmap","ping","traceroute","dig","nslookup","ifconfig","netstat","ip","ss","tar","gzip","gunzip","zip","unzip","find","grep","sed","awk","gawk","diff","cmp","tree","file","head","tail","sort","uniq","cut","tr","wc","make"]
+PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curlie","libcurl","wget","jq","ripgrep","libsqlite","libmagic","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","diffutils","tar","gzip","zip","unzip","tree"]
+ENTRYPOINTS = ["bash","busybox","sh","env","git","ssh","scp","sftp","curl","curlie","wget","jq","rg","sqlite3","openssl","rsync","nmap","ping","traceroute","dig","nslookup","ifconfig","netstat","ip","ss","tar","gzip","gunzip","zip","unzip","find","grep","sed","awk","gawk","diff","cmp","tree","file","head","tail","sort","uniq","cut","tr","wc"]
 UA = "OreshnikAgent-TermuxRuntimeBuilder/1.0"
 
 def download(url: str, target: Path) -> None:
@@ -144,15 +144,49 @@ def main():
             metadata.append({"name":name,"version":item.get("Version",""),"architecture":item.get("Architecture",""),"filename":filename,"sha256":digest})
         source=extract/PREFIX
         if not source.is_dir(): raise RuntimeError("Expected Termux prefix absent: "+str(source))
-        # Some Termux packages ship dangling optional service/doc symlinks. Drop only
-        # links whose targets are absent from this dependency-closed extraction; all
-        # resolvable links are dereferenced into ordinary files by rsync below.
-        dangling=0
+        # Resolve absolute symlinks that point back into the extracted Termux prefix,
+        # then remove only genuinely dangling optional links.
         for link in source.rglob("*"):
-            if link.is_symlink() and not link.exists():
-                link.unlink(); dangling+=1
-        print(f"Removed {dangling} dangling package symlinks before relocation",flush=True)
-        subprocess.run(["rsync","-aL","--safe-links",str(source)+"/",str(stage)+"/"],check=True)
+            if not link.is_symlink(): continue
+            target=os.readlink(link)
+            if target.startswith("/"+PREFIX+"/"):
+                mapped=source/target[len("/"+PREFIX+"/"):]
+                if mapped.exists():
+                    link.unlink()
+                    link.symlink_to(os.path.relpath(mapped,link.parent))
+                else:
+                    link.unlink()
+            elif not link.exists():
+                link.unlink()
+        # Keep runtime payloads, not build headers, manuals, or large developer docs.
+        # This is a command-line execution pack; compiler toolchains are separate packs.
+        for directory in ("bin","lib","libexec","etc"):
+            src=source/directory
+            if src.is_dir():
+                dst=stage/directory
+                dst.mkdir(parents=True,exist_ok=True)
+                subprocess.run(["rsync","-aL","--safe-links",str(src)+"/",str(dst)+"/"],check=True)
+        share=source/"share"
+        for directory in ("nmap","misc","git-core","terminfo","zoneinfo"):
+            src=share/directory
+            if src.is_dir():
+                dst=stage/"share"/directory
+                dst.mkdir(parents=True,exist_ok=True)
+                subprocess.run(["rsync","-aL","--safe-links",str(src)+"/",str(dst)+"/"],check=True)
+        # Retain regular per-package copyright/license texts when supplied.
+        docs=share/"doc"
+        if docs.is_dir():
+            for notice in docs.rglob("*"):
+                if notice.is_file() and not notice.is_symlink() and notice.name.lower() in ("copyright","license","copying"):
+                    target=stage/"share"/"doc"/notice.relative_to(docs)
+                    target.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copy2(notice,target)
+        # Static archives and pkg-config metadata are not required at runtime.
+        for path in list(stage.rglob("*")):
+            if path.is_file() and (path.suffix in (".a",".la") or "pkgconfig" in path.parts):
+                path.unlink()
+        for path in sorted(stage.rglob("pkgconfig"),reverse=True):
+            if path.is_dir(): shutil.rmtree(path,ignore_errors=True)
         patch_shebangs(stage)
         entrypoints={name:f"bin/{name}" for name in ENTRYPOINTS if (stage/"bin"/name).is_file()}
         if "curl" not in entrypoints and "curlie" in entrypoints:
