@@ -51,6 +51,7 @@ class ToolRegistry(context: Context, runtime: RuntimeManager) {
         "db.odbc.python" to DbOdbcPythonTool(runtime),
         "db.tools.status" to DbToolsStatusTool(runtime),
         "process.exec" to ProcessExecTool(),
+        "terminal.session" to TerminalSessionTool(),
         "system.process_list" to ProcessListTool(),
         "system.app_list" to AppListTool(),
         "system.process_kill" to ProcessKillTool(),
