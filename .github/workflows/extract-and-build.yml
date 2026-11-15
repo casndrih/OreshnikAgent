@@ -35,12 +35,14 @@ jobs:
           rm -rf .source-extract
           mkdir .source-extract
           unzip -q "$archive" -d .source-extract
-          project_dir="$(find .source-extract -mindepth 1 -maxdepth 3 -type f -name settings.gradle.kts -printf '%h\n' | head -n 1)"
+          project_dir="$(find .source-extract -mindepth 1 -maxdepth 3 -type f -name settings.gradle.kts -printf '%h\\n' | head -n 1)"
           if [ -z "$project_dir" ]; then
             echo "Could not locate settings.gradle.kts in uploaded archive"
             exit 1
           fi
-          rsync -a --exclude='.git/' "$project_dir/" ./
+          # Keep repository workflows managed separately: GITHUB_TOKEN cannot
+          # push changes under .github/workflows without the workflow scope.
+          rsync -a --exclude='.git/' --exclude='.github/' "$project_dir/" ./
           rm -rf .source-extract "$archive"
           test -f settings.gradle.kts
           test -f gradlew
