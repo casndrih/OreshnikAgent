@@ -91,7 +91,7 @@ jobs:
           yes | "$SDKMANAGER" --licenses >/dev/null || true
           "$SDKMANAGER" --install \
             "platform-tools" \
-            "platforms;android-37" \
+            "platforms;android-36" \
             "build-tools;36.0.0" \
             "ndk;30.0.16248370" \
             "cmake;4.1.2"
