@@ -192,7 +192,7 @@ class SkillsActivity : AppCompatActivity() {
         }
         AlertDialog.Builder(this)
             .setTitle("Community skills marketplace")
-            .setMessage("Search the live Skills.sh ecosystem. Skills are downloaded only when selected and added disabled for review.")
+            .setMessage("Search the live Skills.sh directory, which reported more than one million skills in 2026. Search for relevant matches; only a selected SKILL.md is downloaded and added disabled for review.")
             .setView(query)
             .setNegativeButton("Cancel", null)
             .setPositiveButton("Search") { _, _ -> searchMarketplace(query.text.toString()) }
