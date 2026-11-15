@@ -65,7 +65,7 @@ object SkillRepository {
         val instructionTokens = HashSet(tokenize(skill.instructions.take(6000)))
         var score = 0
         for (token in queryTokens) {
-            if (metadataTokens.contains(token)) score += 3
+            if (metadataTokens.contains(token)) score += 1
             else if (instructionTokens.contains(token)) score += 1
         }
         // Bonus when two or more tokens of the skill NAME appear verbatim — strong intent signal.
