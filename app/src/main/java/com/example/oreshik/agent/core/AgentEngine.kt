@@ -137,7 +137,6 @@ class AgentEngine(
                 if (!permissions.require(name, tool.definition.permissions)) {
                     val denied = ToolResult(ok = false, error = "Permission denied for ${tool.definition.permissions.joinToString()}")
                     ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
-                    ToolAuditLog.record(context, sessionId, name, args, "DENIED", denied)
                     history += toolResult(id, gson.toJson(denied), registry.externalName(name))
                     emit(Event(Event.Type.TOOL_COMPLETED, name, result = denied))
                     continue
@@ -152,7 +151,6 @@ class AgentEngine(
                         AppLogger.e(TAG, "tool '$name' threw on provider=${provider.id} model=$model: ${it.javaClass.simpleName}: ${it.message?.take(200)}", it)
                         ToolResult(ok = false, error = it.message)
                     }
-                ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 ToolAuditLog.record(context, sessionId, name, args, "EXECUTED", result, SystemClock.elapsedRealtime() - toolStartedAt)
                 collaboration.record(tool, args, result)
                 if (!result.ok) {
