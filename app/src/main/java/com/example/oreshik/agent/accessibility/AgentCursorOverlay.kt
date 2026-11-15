@@ -7,8 +7,6 @@ import android.graphics.ColorFilter
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PixelFormat
-import android.graphics.RadialGradient
-import android.graphics.Shader
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Handler
@@ -32,7 +30,7 @@ import android.widget.ImageView
 @SuppressLint("StaticFieldLeak")
 object AgentCursorOverlay {
     private const val CURSOR_SIZE = 48
-    private const val CURSOR_GLOW_PADDING = 16
+    private const val CURSOR_GLOW_PADDING = 0
     private const val CURSOR_VIEW_SIZE = CURSOR_SIZE + CURSOR_GLOW_PADDING * 2
     private const val CURSOR_TAP_SIZE = 76
     private const val FADE_MS = 500L
@@ -227,7 +225,7 @@ object AgentCursorOverlay {
     }
 
     /**
-     * Cyan mouse arrow with a soft cyan halo and a dark outline for contrast.
+     * Flat cyan mouse arrow with a dark outline and white highlight for contrast.
      */
     private class ArrowCursorDrawable(private val density: Float) : Drawable() {
         private val fill = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -244,25 +242,9 @@ object AgentCursorOverlay {
             style = Paint.Style.STROKE
             strokeWidth = density
         }
-        private val glow = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            val viewSize = CURSOR_VIEW_SIZE * density
-            shader = RadialGradient(
-                viewSize * 0.5f,
-                viewSize * 0.5f,
-                viewSize * 0.47f,
-                intArrayOf(0xC000E5FF.toInt(), 0x7700D9FF, 0x0000D9FF),
-                floatArrayOf(0f, 0.48f, 1f),
-                Shader.TileMode.CLAMP,
-            )
-        }
-
         override fun draw(canvas: Canvas) {
             val w = bounds.width().toFloat()
             val h = bounds.height().toFloat()
-            // Keep the halo circular and inside the padded transparent view,
-            // so the glow fades out without being clipped into a square.
-            canvas.drawCircle(w * 0.5f, h * 0.5f, minOf(w, h) * 0.47f, glow)
-
             // Draw a 48dp arrow centered in the larger halo view.
             val arrowSize = minOf(CURSOR_SIZE * density, w, h)
             val left = (w - arrowSize) * 0.5f
@@ -285,13 +267,11 @@ object AgentCursorOverlay {
             fill.alpha = alpha
             outline.alpha = alpha
             highlight.alpha = alpha
-            glow.alpha = alpha
         }
         override fun setColorFilter(colorFilter: ColorFilter?) {
             fill.colorFilter = colorFilter
             outline.colorFilter = colorFilter
             highlight.colorFilter = colorFilter
-            glow.colorFilter = colorFilter
         }
         @Deprecated("Deprecated in Java", ReplaceWith("PixelFormat.TRANSLUCENT"))
         override fun getOpacity(): Int = PixelFormat.TRANSLUCENT
