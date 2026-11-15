@@ -397,7 +397,6 @@ The following are **proposed enhancements**, not claims about features already s
 - Extend encrypted configuration backups to include workspace snapshots and optional encrypted memory-at-rest.
 - Add local embedding/index management and configurable retrieval policies.
 - Add a visual workflow editor (the agent-driven read-only workflow builder, retries, resume checkpoints, and persistent schedules are implemented).
-- Add UI regression snapshot comparison (bounded accessibility sequence playback is implemented).
 
 - Add a plugin/extension API with signed packages and strict capability permissions.
 
