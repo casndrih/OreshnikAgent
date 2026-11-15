@@ -100,7 +100,8 @@ class AgentApiClient(
         reasoningEffort: String = "high",
     ): Result<JsonObject> = withContext(Dispatchers.IO) {
         val key = capabilityKey(baseUrl, model)
-        val requestedReasoning = if (reasoningSupport[key] == false) "off" else reasoningEffort
+        val detectedReasoning = reasoningSupport[key] ?: persistedReasoningSupport(model)?.also { reasoningSupport[key] = it }
+        val requestedReasoning = if (detectedReasoning == false) "off" else reasoningEffort
 
         // If this model has already failed tool calling, don't keep sending a request
         // that NVIDIA/NIM may route into a missing server-side Function UUID.
