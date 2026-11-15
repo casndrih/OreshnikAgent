@@ -10,6 +10,8 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlin.concurrent.thread
 
+enum class ToolApprovalPolicy { DEFAULT, ASK, ALLOW, DENY }
+
 class PermissionManager(private val context: Context) {
 
     private companion object {
@@ -25,21 +27,19 @@ class PermissionManager(private val context: Context) {
     ): Boolean = mutex.withLock {
         if (permissions.isEmpty()) return@withLock true
 
-        // 1. Hard capability gates - reject if capability is disabled in settings
-        if ((permissions.contains(ToolPermission.EXECUTE_PROCESS) ||
-             permissions.contains(ToolPermission.EXECUTE_PYTHON) ||
-             permissions.contains(ToolPermission.GIT) ||
-             permissions.contains(ToolPermission.BUILD)) && !AgentConfig.allowProcess) return@withLock false
+        // Hard capability gates are absolute: a per-tool grant must never bypass them.
+        if (isHardDenied(permissions)) return@withLock false
 
-        if (permissions.contains(ToolPermission.NETWORK) && !AgentConfig.allowNetwork) return@withLock false
+        val policy = getToolPolicy(tool)
+        val mustAskForWrite = AgentConfig.askBeforeWrite &&
+            permissions.any { it == ToolPermission.WRITE_WORKSPACE || it == ToolPermission.DELETE }
+        when (policy) {
+            ToolApprovalPolicy.DENY, ToolApprovalPolicy.ASK -> return@withLock false
+            ToolApprovalPolicy.ALLOW -> if (!mustAskForWrite) return@withLock true
+            ToolApprovalPolicy.DEFAULT -> Unit
+        }
 
-        if (permissions.contains(ToolPermission.ACCESSIBILITY) && !AgentConfig.accessibilityEnabled) return@withLock false
-
-        if (permissions.contains(ToolPermission.ROOT) && !AgentConfig.allowRoot) return@withLock false
-
-        if (permissions.contains(ToolPermission.MEMORY) && !AgentConfig.memoryEnabled) return@withLock false
-
-        // 2. Auto-allows for workspace file management and top-level enabled features
+        // Auto-allows for workspace file management and top-level enabled features
         var satisfiesAll = true
         for (p in permissions) {
             val allowed = when (p) {
@@ -74,6 +74,46 @@ class PermissionManager(private val context: Context) {
         }
         if (!approved) AppLogger.d(TAG, "check: tool=$tool DENIED (needs ${permissions.joinToString()})")
         approved
+    }
+
+
+    /** Returns true when a disabled top-level capability forbids this tool outright. */
+    fun isHardDenied(permissions: Set<ToolPermission>): Boolean {
+        if ((permissions.contains(ToolPermission.EXECUTE_PROCESS) ||
+             permissions.contains(ToolPermission.EXECUTE_PYTHON) ||
+             permissions.contains(ToolPermission.GIT) ||
+             permissions.contains(ToolPermission.BUILD) ||
+             permissions.contains(ToolPermission.DATABASE) ||
+             permissions.contains(ToolPermission.REVERSE_ENGINEERING)) && !AgentConfig.allowProcess) return true
+        if ((permissions.contains(ToolPermission.NETWORK) ||
+             permissions.contains(ToolPermission.TRAFFIC_CAPTURE) ||
+             permissions.contains(ToolPermission.TRAFFIC_MODIFY)) && !AgentConfig.allowNetwork) return true
+        if (permissions.contains(ToolPermission.ACCESSIBILITY) && !AgentConfig.accessibilityEnabled) return true
+        if ((permissions.contains(ToolPermission.ROOT) ||
+             permissions.contains(ToolPermission.MEMORY_SCAN) ||
+             permissions.contains(ToolPermission.MEMORY_WRITE) ||
+             permissions.contains(ToolPermission.PROCESS_MEMORY)) && !AgentConfig.allowRoot) return true
+        if (permissions.contains(ToolPermission.MEMORY) && !AgentConfig.memoryEnabled) return true
+        return false
+    }
+
+    fun getToolPolicy(tool: String): ToolApprovalPolicy {
+        val key = "tool-policy:$tool"
+        return runCatching {
+            db.settings().get(key)?.value?.let { ToolApprovalPolicy.valueOf(it.uppercase()) }
+        }.getOrNull() ?: ToolApprovalPolicy.DEFAULT
+    }
+
+    fun isDenied(tool: String): Boolean = getToolPolicy(tool) == ToolApprovalPolicy.DENY
+
+    /** Persist a per-tool default/ask/allow/deny policy without changing global capability gates. */
+    fun setToolPolicy(tool: String, policy: ToolApprovalPolicy) {
+        thread(name = "agent-tool-policy-write") {
+            val key = "tool-policy:$tool"
+            if (policy == ToolApprovalPolicy.DEFAULT) db.settings().remove(key)
+            else db.settings().put(SettingEntity(key, policy.name))
+            AppLogger.i(TAG, "tool policy updated: $tool -> $policy")
+        }
     }
 
     private fun isApprovedInDb(tool: String, permission: ToolPermission): Boolean {
