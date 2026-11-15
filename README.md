@@ -30,12 +30,14 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Multiple AI backends:** NVIDIA, ChatGPT plan integration, OpenRouter, BlueSmind, NaraRouter, Mistral, and configurable OpenAI-compatible endpoints.
 - **Online and local inference:** switch between remote providers and an on-device GGUF model runtime.
 - **Tool-using agent:** structured tool definitions, a registry, per-tool default/ask/allow/deny policies, hard capability gates, task execution, progress events, and tool collaboration.
-- **Coding tools:** workspace file operations, Python execution, Git inspection, and Android/Gradle build integration.
-- **Android computer use:** screen inspection and accessibility-driven interactions, subject to Android's accessibility controls.
+- **Coding tools:** workspace file operations, Python execution, Git inspection and HTTPS remote operations, offline project templates, and Android/Gradle build integration.
+- **Android computer use:** screen inspection, accessibility-driven interactions, and bounded repeatable UI-test sequences, subject to Android's accessibility controls.
 - **Voice interaction:** speech UI and an optional always-on wake-word service.
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
 - **Encrypted backups:** passphrase-protected settings/provider/chat/memory/skills exports using PBKDF2-HMAC-SHA256 and AES-256-GCM.
 - **Redacted audit trail:** view and clear app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
+- **Workspace recovery:** bounded app-private snapshots, snapshot listing, and rollback with an automatic pre-restore safety snapshot.
+- **Reusable workflows:** saved read-only tool workflows with per-step retries, failure checkpoints, resume, and persistent WorkManager schedules.
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
 - **Encrypted configuration backups:** passphrase-protected exports using PBKDF2-HMAC-SHA256 and AES-256-GCM, with legacy JSON restore compatibility.
 - **Tool audit trail:** app-private JSONL records for permission decisions and tool outcomes, with recursive credential redaction.
@@ -88,6 +90,12 @@ The source includes:
 - Permission approval, per-tool approval policies, hard capability gates, and workspace-ownership components.
 - App-private redacted tool audit records (tool, session, permission outcome, execution result, duration, timestamp).
 - Session learning and context retrieval.
+- Workspace snapshots: app-private ZIP snapshots exclude build/dependency caches, cap file count and archive size, validate every restore path, and automatically create a safety snapshot before rollback.
+- Git remote operations: HTTPS clone, fetch, pull, and branch-scoped push. Credentials are supplied per call, never persisted, and force-push is not exposed.
+- Offline project templates: Android/Kotlin, Kotlin CLI, Python, Node.js, and PHP API starters; creation is workspace-scoped and never overwrites an existing target.
+- Accessibility sequence playback: bounded, step-reported tap, long-press, swipe, text click/input, scroll, focus, global navigation, and wait actions.
+- Saved workflow builder: create/list/delete/run read-only inspection workflows, with up to 12 steps, bounded retries, and saved failure checkpoints for resume.
+- Persistent workflow scheduling: WorkManager schedules read-only workflows from 15 minutes upward. Background execution requires every tool permission to be pre-approved; network-dependent workflows automatically require a network connection.
 
 ### Tool categories represented in the code
 
@@ -386,7 +394,7 @@ The following are **proposed enhancements**, not claims about features already s
 - Add a managed runtime marketplace with versions, ABI metadata, signatures, checksums, dependency declarations, and rollback.
 - Add runtime health checks and self-repair for Python, Java, Node.js, Gradle, Git, database, and reverse-engineering toolchains.
 - Add a terminal-style interactive task console with live output and process controls.
-- Add Git remote operations, branch management, commits, and patch export with explicit approval.
+- Extend Git remote support with branch management, commit creation, and patch export with explicit approval.
 - Add project templates and guided Android, Kotlin, Python, and web project setup.
 - Add import/export for skills, memory, settings, and workspaces.
 
