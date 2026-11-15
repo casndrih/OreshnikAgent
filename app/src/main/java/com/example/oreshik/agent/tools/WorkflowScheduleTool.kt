@@ -48,14 +48,18 @@ class WorkflowScheduleTool : AgentTool {
                 val root = com.google.gson.JsonParser.parseString(workflow.readText()).asJsonObject
                 val steps = root.getAsJsonArray("steps") ?: error("Workflow steps are missing.")
                 require(steps.size() in 1..12) { "Workflow must contain 1–12 steps." }
+                var needsNetwork = false
+                val registry = ToolRegistry(context.app, context.runtime)
                 steps.forEachIndexed { index, item ->
                     val name = item.asJsonObject.get("tool")?.asString.orEmpty()
                     require(ToolCollaborationPolicy.canDelegate(name)) {
                         "Step ${index + 1} is not approved for background read-only execution: $name"
                     }
+                    val tool = registry.get(name) ?: error("Workflow tool is unavailable: $name")
+                    if (ToolPermission.NETWORK in tool.definition.permissions) needsNetwork = true
                 }
                 val interval = (args["interval_minutes"]?.asLong ?: 60L).coerceIn(15L, 43_200L)
-                val network = args["network_required"]?.asBoolean ?: false
+                val network = (args["network_required"]?.asBoolean ?: false) || needsNetwork
                 val constraints = Constraints.Builder()
                     .setRequiredNetworkType(if (network) NetworkType.CONNECTED else NetworkType.NOT_REQUIRED)
                     .build()
@@ -71,7 +75,7 @@ class WorkflowScheduleTool : AgentTool {
             "list" -> runCatching {
                 val infos = if (id.isBlank()) {
                     val directory = File(context.app.filesDir, "agent-workflows")
-                    directory.listFiles()?.filter { it.isFile && it.extension == "json" }?.flatMap { file ->
+                    directory.listFiles()?.filter { it.isFile && it.name.endsWith(".json") && !it.name.endsWith(".run.json") && !it.name.endsWith(".last-run.json") }?.flatMap { file ->
                         manager.getWorkInfosForUniqueWork("oreshik-workflow-${file.nameWithoutExtension}").get()
                             .map { info -> "${file.nameWithoutExtension}: ${info.state}" }
                     }.orEmpty()
