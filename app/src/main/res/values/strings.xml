@@ -223,6 +223,8 @@
     <string name="model_status_offline">Offline</string>
     <string name="model_status_timeout">Timeout / rate-limited</string>
     <string name="model_status_probing">Checking…</string>
+    <string name="model_status_restricted">Authentication / access required</string>
+    <string name="model_status_unavailable">Model not available</string>
     <string name="selinux_mode_fmt">SELinux mode: %1$s</string>
     <string name="android_permissions_status_fmt">Camera: %1$s • Microphone: %2$s • Notifications: %3$s • Battery unrestricted: %4$s</string>
     <string name="provider_header_fmt">%1$s (%2$s)</string>
