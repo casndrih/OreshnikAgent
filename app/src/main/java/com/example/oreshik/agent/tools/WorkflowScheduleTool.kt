@@ -52,7 +52,7 @@ class WorkflowScheduleTool : AgentTool {
                 val registry = ToolRegistry(context.app, context.runtime)
                 steps.forEachIndexed { index, item ->
                     val name = item.asJsonObject.get("tool")?.asString.orEmpty()
-                    require(ToolCollaborationPolicy.canDelegate(name)) {
+                    require(WorkflowToolPolicy.canRun(name)) {
                         "Step ${index + 1} is not approved for background read-only execution: $name"
                     }
                     val tool = registry.get(name) ?: error("Workflow tool is unavailable: $name")
