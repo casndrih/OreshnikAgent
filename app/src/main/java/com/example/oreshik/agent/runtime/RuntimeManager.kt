@@ -1157,26 +1157,37 @@ class RuntimeManager(private val context: Context) {
         val results = mutableListOf<RuntimeInfo>()
         for (id in known.keys) {
             val dest = runtimePath(id)
-            val installed = when (id) {
-                "sqlmap" -> isSqlmapPackReady(dest)
-                        else -> File(dest, ".pack-version").isFile
-            }
             val manifest = readManifest(dest)
-            results.add(
-                RuntimeInfo(
-                    id = id,
-                    version = manifest?.version ?: if (installed) packVersion(id) else "—",
-                    description = knownDescription(id),
-                    entrypoints = manifest?.entrypoints ?: emptyMap(),
-                    ready = installed,
-                    root = dest,
-                ),
+            // A marker alone is not proof that a runtime is usable. Verify its
+            // manifest, every declared entrypoint and pack-specific required files.
+            val ready = if (id == "sqlmap") isSqlmapPackReady(dest)
+                else isBundledPackReady(id, dest)
+            results += RuntimeInfo(
+                id = id,
+                version = manifest?.version ?: if (ready) packVersion(id) else "—",
+                description = knownDescription(id),
+                entrypoints = manifest?.entrypoints ?: emptyMap(),
+                ready = ready,
+                root = dest,
             )
         }
-        runtimes.listFiles().orEmpty().filter { it.isDirectory && !it.name.startsWith(".") && it.name !in known.keys && it.name != "sqlmap" }.forEach { dir ->
-            val manifest = readManifest(dir) ?: return@forEach
-            results += RuntimeInfo(manifest.id, manifest.version, knownDescription(manifest.id), manifest.entrypoints, true, dir)
-        }
+        runtimes.listFiles().orEmpty()
+            .filter { it.isDirectory && !it.name.startsWith(".") && it.name !in known.keys }
+            .forEach { dir ->
+                val manifest = readManifest(dir) ?: return@forEach
+                val ready = File(dir, ".pack-version").isFile &&
+                    manifest.entrypoints.values.all { relative ->
+                        safeChildFile(dir, relative)?.let { it.isFile && it.canExecute() } == true
+                    }
+                results += RuntimeInfo(
+                    manifest.id,
+                    if (ready) manifest.version else "—",
+                    knownDescription(manifest.id),
+                    manifest.entrypoints,
+                    ready,
+                    dir,
+                )
+            }
         return results
     }
 
@@ -1417,33 +1428,102 @@ class RuntimeManager(private val context: Context) {
         val sha256: String,
     )
 
-    /** Fetch the public runtime catalogue. Entries must use HTTPS and SHA-256. */
-    suspend fun fetchRemotePacks(): List<RemoteRuntimePack> = withContext(Dispatchers.IO) {
-        val url = java.net.URL(RUNTIME_CATALOG_URL)
-        val connection = url.openConnection() as java.net.HttpURLConnection
-        connection.connectTimeout = 12000
-        connection.readTimeout = 20000
-        connection.setRequestProperty("Accept", "application/json")
-        try {
-            check(connection.responseCode == 200) { "Runtime catalogue HTTP ${connection.responseCode}" }
-            val root = gson.fromJson(connection.inputStream.bufferedReader().use { it.readText() }, JsonObject::class.java)
-            val packs = root.getAsJsonArray("packs") ?: return@withContext emptyList()
-            packs.mapNotNull { element ->
-                runCatching {
-                    val item = element.asJsonObject
-                    val id = item["id"].asString
-                    val urlText = item["url"].asString
-                    val checksum = item["sha256"].asString.lowercase()
-                    require(packIdPattern.matches(id) && id !in known.keys && id != "sqlmap")
-                    require(urlText.startsWith("https://")) { "Runtime pack URLs must use HTTPS" }
-                    require(checksum.matches(Regex("^[a-f0-9]{64}$"))) { "Invalid SHA-256 for $id" }
-                    RemoteRuntimePack(
-                        id, item["name"]?.asString ?: id, item["version"]?.asString ?: "unknown",
-                        item["description"]?.asString ?: "Optional runtime tools", urlText, checksum,
-                    )
-                }.getOrNull()
+    private fun parseRuntimeCatalogue(raw: String): List<RemoteRuntimePack> {
+        require(raw.length <= 1_000_000) { "Runtime catalogue exceeds the 1 MB safety limit" }
+        val root = gson.fromJson(raw, JsonObject::class.java)
+            ?: throw IllegalStateException("Runtime catalogue is empty or invalid JSON")
+        val schema = root["schemaVersion"]?.asInt ?: 1
+        require(schema == 1) { "Unsupported runtime catalogue schema: $schema" }
+        val packs = root.getAsJsonArray("packs")
+            ?: throw IllegalStateException("Runtime catalogue is missing its packs array")
+        val parsed = packs.mapIndexed { index, element ->
+            val item = element.asJsonObject
+            val id = item["id"]?.asString?.trim().orEmpty()
+            val name = item["name"]?.asString?.trim().orEmpty()
+            val version = item["version"]?.asString?.trim().orEmpty()
+            val urlText = item["url"]?.asString?.trim().orEmpty()
+            val checksum = item["sha256"]?.asString?.trim()?.lowercase().orEmpty()
+            require(packIdPattern.matches(id) && id !in known.keys && id != "sqlmap") {
+                "Invalid or reserved runtime pack ID at catalogue item ${index + 1}: $id"
             }
-        } finally { connection.disconnect() }
+            require(name.isNotBlank() && version.isNotBlank()) {
+                "Runtime catalogue item $id is missing its name or version"
+            }
+            val packUrl = java.net.URL(urlText)
+            require(packUrl.protocol.equals("https", ignoreCase = true) && !packUrl.host.isNullOrBlank()) {
+                "Runtime pack $id must use a valid HTTPS download URL"
+            }
+            require(checksum.matches(Regex("^[a-f0-9]{64}$"))) {
+                "Runtime pack $id has an invalid SHA-256 checksum"
+            }
+            RemoteRuntimePack(
+                id, name, version,
+                item["description"]?.asString?.takeIf { it.isNotBlank() } ?: "Optional runtime tools",
+                urlText, checksum,
+            )
+        }
+        require(parsed.isNotEmpty()) { "The runtime catalogue contains no valid runtime packs" }
+        require(parsed.map { it.id }.distinct().size == parsed.size) {
+            "The runtime catalogue contains duplicate pack IDs"
+        }
+        return parsed
+    }
+
+    /** Fetch the catalogue with bounded timeouts and an app-private offline cache. */
+    suspend fun fetchRemotePacks(): List<RemoteRuntimePack> = withContext(Dispatchers.IO) {
+        val cache = File(context.filesDir, "runtime-catalog-cache.json")
+        var networkFailure: Exception? = null
+        val downloaded = runCatching {
+            val connection = (java.net.URL(RUNTIME_CATALOG_URL).openConnection() as java.net.HttpURLConnection).apply {
+                connectTimeout = 10_000
+                readTimeout = 12_000
+                requestMethod = "GET"
+                useCaches = false
+                setRequestProperty("Accept", "application/json")
+                setRequestProperty("User-Agent", "OreshnikAgent-Android/1.1")
+                setRequestProperty("Cache-Control", "no-cache")
+            }
+            try {
+                val code = connection.responseCode
+                check(code == java.net.HttpURLConnection.HTTP_OK) {
+                    "Runtime catalogue HTTP $code ${connection.responseMessage ?: ""}".trim()
+                }
+                val raw = connection.inputStream.bufferedReader(Charsets.UTF_8).use { it.readText() }
+                parseRuntimeCatalogue(raw).also {
+                    val temp = File(context.filesDir, "runtime-catalog-cache.tmp")
+                    temp.writeText(raw)
+                    if (!temp.renameTo(cache)) {
+                        cache.writeText(raw)
+                        temp.delete()
+                    }
+                }
+            } finally {
+                connection.disconnect()
+            }
+        }.onFailure { failure ->
+            if (failure is CancellationException) throw failure
+            networkFailure = failure as? Exception ?: IllegalStateException(failure)
+            AppLogger.w(TAG, "Runtime catalogue network request failed; checking offline cache: ${failure.message}")
+        }.getOrNull()
+        if (downloaded != null) return@withContext downloaded
+
+        if (cache.isFile) {
+            try {
+                return@withContext parseRuntimeCatalogue(cache.readText())
+            } catch (cacheFailure: Exception) {
+                AppLogger.e(TAG, "Cached runtime catalogue is invalid", cacheFailure)
+                throw IllegalStateException(
+                    "Could not load the online runtime catalogue (${networkFailure?.message ?: "network error"}) " +
+                        "and the saved catalogue is invalid (${cacheFailure.message})",
+                    cacheFailure,
+                )
+            }
+        }
+        throw IllegalStateException(
+            "Could not reach the runtime catalogue: ${networkFailure?.message ?: "unknown network error"}. " +
+                "Check your internet connection and retry.",
+            networkFailure,
+        )
     }
 
     /** Download, verify and install an optional runtime ZIP without bundling it in the APK. */
@@ -1482,6 +1562,9 @@ class RuntimeManager(private val context: Context) {
         var redirects = 0
         while (redirects < 10) {
             val url = java.net.URL(currentUrl)
+            require(url.protocol.equals("https", ignoreCase = true)) {
+                "Runtime downloads may not redirect to an insecure HTTP URL"
+            }
             val conn = url.openConnection() as java.net.HttpURLConnection
             conn.connectTimeout = 15000
             conn.readTimeout = 60000
@@ -1490,6 +1573,9 @@ class RuntimeManager(private val context: Context) {
             conn.setRequestProperty("Accept", "*/*")
 
             val code = conn.responseCode
+            require(conn.url.protocol.equals("https", ignoreCase = true)) {
+                "Runtime download redirected to an insecure URL"
+            }
             if ((code == java.net.HttpURLConnection.HTTP_MOVED_PERM) ||
                 (code == java.net.HttpURLConnection.HTTP_MOVED_TEMP) ||
                 (code == java.net.HttpURLConnection.HTTP_SEE_OTHER) ||
@@ -1515,6 +1601,9 @@ class RuntimeManager(private val context: Context) {
             }
 
             val contentLength = conn.contentLengthLong
+            require(contentLength <= MAX_RUNTIME_ARCHIVE_BYTES) {
+                "Runtime archive exceeds the 2 GB download limit"
+            }
             var downloaded = 0L
 
             conn.inputStream.use { input ->
@@ -1524,6 +1613,9 @@ class RuntimeManager(private val context: Context) {
                     while (input.read(buffer).also { bytesRead = it } != -1) {
                         output.write(buffer, 0, bytesRead)
                         downloaded += bytesRead
+                        require(downloaded <= MAX_RUNTIME_ARCHIVE_BYTES) {
+                            "Runtime archive exceeds the 2 GB download limit"
+                        }
                         onProgress(downloaded, if (contentLength > 0) contentLength else -1L)
                     }
                 }
