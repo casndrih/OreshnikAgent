@@ -61,6 +61,7 @@ class ToolRegistry(context: Context, runtime: RuntimeManager) {
         "git.log" to GitLogTool(),
         "git.remote" to GitRemoteTool(),
         "workflow.manage" to WorkflowBuilderTool(),
+        "workflow.schedule" to WorkflowScheduleTool(),
         "workspace.snapshot" to WorkspaceSnapshotCreateTool(),
         "workspace.snapshots" to WorkspaceSnapshotListTool(),
         "workspace.rollback" to WorkspaceSnapshotRestoreTool(),
