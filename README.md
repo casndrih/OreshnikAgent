@@ -36,7 +36,7 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Persistent context:** session memory, searchable saved memory, and reusable agent skills.
 - **Encrypted backups:** passphrase-protected settings/provider/chat/memory/skills exports using PBKDF2-HMAC-SHA256 and AES-256-GCM.
 - **Redacted audit trail:** view and clear app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
-- **Workspace recovery:** bounded app-private snapshots, snapshot listing, and rollback with an automatic pre-restore safety snapshot.
+- **Workspace recovery:** bounded AES-256-GCM encrypted app-private snapshots using an Android Keystore key, authenticated restore, legacy plaintext ZIP migration, and an automatic encrypted pre-restore safety snapshot.
 - **Reusable workflows:** saved read-only tool workflows with per-step retries, failure checkpoints, resume, and persistent WorkManager schedules.
 - **Provider telemetry:** request counts, token usage, latency, and cost estimates using user-configured per-model rates (no vendor prices are assumed).
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
