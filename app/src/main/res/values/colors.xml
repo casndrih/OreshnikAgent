@@ -78,6 +78,8 @@
     <color name="status_offline">#EF4444</color>
     <color name="status_timeout">#F59E0B</color>
     <color name="status_probing">#9C9A90</color>
+    <color name="status_restricted">#A78BFA</color>
+    <color name="status_unavailable">#64748B</color>
 
     <!-- MaterialComponents mappings (kept for widgets that expect these) -->
     <color name="colorBackground">@color/bg_root</color>
