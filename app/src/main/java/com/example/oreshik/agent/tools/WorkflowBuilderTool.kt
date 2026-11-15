@@ -53,7 +53,7 @@ class WorkflowBuilderTool : AgentTool {
         val args = arguments.asJsonObject
         when (args["action"]?.asString?.lowercase()?.trim() ?: "list") {
             "list" -> runCatching {
-                val entries = directory(context).listFiles()?.filter { it.isFile && it.extension == "json" }.orEmpty()
+                val entries = directory(context).listFiles()?.filter { it.isFile && it.name.endsWith(".json") && !it.name.endsWith(".run.json") && !it.name.endsWith(".last-run.json") }.orEmpty()
                 ToolResult.success(entries.sortedBy { it.name }.joinToString("\n") { entry ->
                     val workflow = gson.fromJson(entry.readText(), Workflow::class.java)
                     "${workflow.id} · ${workflow.name} · ${workflow.steps.size} steps"
@@ -80,7 +80,7 @@ class WorkflowBuilderTool : AgentTool {
                 val workflow = Workflow(id, name, steps, System.currentTimeMillis())
                 val destination = file(context, id)
                 require(!destination.exists()) { "Workflow already exists. Delete it before replacing." }
-                require(directory(context).listFiles()?.count { it.extension == "json" }?.let { it < 30 } != false) {
+                require(directory(context).listFiles()?.count { it.isFile && it.name.endsWith(".json") && !it.name.endsWith(".run.json") && !it.name.endsWith(".last-run.json") }?.let { it < 30 } != false) {
                     "Workflow limit reached (30)."
                 }
                 val serialized = gson.toJson(workflow)
@@ -108,7 +108,7 @@ class WorkflowBuilderTool : AgentTool {
                     var next = if (args["action"]?.asString?.equals("resume", ignoreCase = true) == true) {
                         require(statePath.isFile) { "No saved run state exists. Run the workflow first." }
                         val state = gson.fromJson(statePath.readText(), RunState::class.java)
-                        require(state.workflowId == id && state.status == "failed") { "Only a failed workflow can be resumed." }
+                        require(state.workflowId == id && state.status in setOf("failed", "paused")) { "Only a failed or paused workflow can be resumed." }
                         state.nextStep.coerceIn(0, workflow.steps.size)
                     } else 0
                     require(next < workflow.steps.size) { "Workflow has no remaining steps." }
