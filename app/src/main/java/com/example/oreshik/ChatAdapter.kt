@@ -327,7 +327,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.VH>() {
             }
             holder.assistantText != null -> {
                 // Markdown rendering (ChatGPT-style): bold, lists, code blocks, tables, links.
-                if (msg.content.length > 180_000) {
+                if (msg.content.length > 50_000) {
                     holder.assistantText!!.text = msg.content
                 } else {
                     try {
