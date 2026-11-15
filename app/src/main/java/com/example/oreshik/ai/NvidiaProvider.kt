@@ -135,7 +135,9 @@ class NvidiaProvider(
                     val reasoning = reasoningCapability.supported
                     val vision = listOf("vl", "vision", "vila", "llava").any { s -> id.lowercase().contains(s) }
                     val audio = ModelCapabilities.hasInputModality(o, "audio")
-                    val thinkingLevels = reasoningCapability.levels
+                    val thinkingLevels = if (reasoning && !reasoningCapability.levelsAdvertised) {
+                        listOf("low", "high", "max")
+                    } else reasoningCapability.levels
                     parsedModels.add(
                         Model(
                             id = id,
