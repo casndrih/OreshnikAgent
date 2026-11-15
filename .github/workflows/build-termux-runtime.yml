@@ -69,14 +69,21 @@ jobs:
           set -euo pipefail
           unzip -t dist/termux-arm64.zip
           python3 - <<'PY'
-          import json, zipfile
+          import json, posixpath, zipfile
           with zipfile.ZipFile("dist/termux-arm64.zip") as z:
               manifest = json.loads(z.read("runtime.json"))
+              names = set(z.namelist())
+              links = manifest.get("symlinks", {})
               assert manifest["id"] == "termux-arm64"
               assert manifest["architecture"] == "aarch64"
-              assert all(p in z.namelist() for p in manifest["entrypoints"].values())
+              assert all(p in names or p in links for p in manifest["entrypoints"].values())
+              for link, target in links.items():
+                  assert not link.startswith("/") and "\\" not in link
+                  resolved = posixpath.normpath(posixpath.join(posixpath.dirname(link), target))
+                  assert resolved not in ("", ".", "..") and not resolved.startswith("../")
+                  assert resolved in names or resolved in links or any(n.startswith(resolved + "/") for n in names)
               assert len(manifest["packages"]) >= 20
-              print("Validated", len(manifest["packages"]), "Termux packages and", len(manifest["entrypoints"]), "entrypoints")
+              print("Validated", len(manifest["packages"]), "Termux packages,", len(manifest["entrypoints"]), "entrypoints and", len(links), "safe symlinks")
           PY
           (cd dist && sha256sum -c termux-arm64.zip.sha256)
           test "$(stat -c%s dist/termux-arm64.zip)" -lt 200000000
