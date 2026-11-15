@@ -111,7 +111,7 @@ class GitCommitTool : AgentTool {
             openWorkspaceGit(context.workspace).use { repo ->
                 Git(repo).use { git ->
                     val status = git.status().call()
-                    require(status.hasUncommittedChanges()) { "There are no staged changes to commit." }
+                    require(status.added.isNotEmpty() || status.changed.isNotEmpty() || status.removed.isNotEmpty()) { "There are no staged changes to commit. Use git.stage first." }
                     val commit = git.commit().setMessage(message).setAllowEmpty(false).call()
                     ToolResult.success("Created commit ${commit.name} — ${commit.shortMessage}")
                 }
