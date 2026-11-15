@@ -85,7 +85,7 @@ private object TerminalSessions {
     fun list(): String {
         cleanupDead()
         return sessions.values.sortedBy { it.startedAt }.joinToString("\n") {
-            "${it.id} · pid=${it.process.pid()} · ${if (it.process.isAlive) "running" else "exited"} · started=${it.startedAt}"
+            "${it.id} · ${if (it.process.isAlive) "running" else "exited"} · started=${it.startedAt}"
         }.ifBlank { "No active terminal sessions." }
     }
 
