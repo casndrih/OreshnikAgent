@@ -1020,9 +1020,8 @@ class MainActivity : AppCompatActivity(), ModelSelectionListener {
         chatAdapter.onSelectionModeChanged = { active ->
             topBar.isVisible = !active
             selectionBar.isVisible = active
-            // Lift the active toolbar (with its background) above the messages
-            // list so it casts a soft shadow over the scrolling content.
-            topBarsContainer.translationZ = if (active) 12f else 0f
+            // Keep the selection toolbar at the same flat elevation as the rest of the screen.
+            topBarsContainer.translationZ = 0f
         }
 
         chatAdapter.onSelectionCountChanged = { count ->
