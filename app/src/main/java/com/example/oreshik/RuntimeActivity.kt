@@ -17,9 +17,11 @@ import com.example.oreshik.agent.runtime.RuntimeManager
 import com.example.oreshik.logging.AppLogger
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.withContext
 
 class RuntimeActivity : AppCompatActivity() {
@@ -92,6 +94,8 @@ class RuntimeActivity : AppCompatActivity() {
         }
         runtime.addProvisionListener(provisionListener)
         findViewById<MaterialButton>(R.id.btnProvisionPacks).isEnabled = !runtime.provisioning
+        findViewById<TextView>(R.id.tvProvisionStatus).text =
+            "Runtime inventory loaded. Download optional packs or repair bundled APK toolpacks."
         render()
     }
 
@@ -102,55 +106,123 @@ class RuntimeActivity : AppCompatActivity() {
     }
 
     private fun provisionPacks() {
-        if (runtime.provisioning) {
-            findViewById<MaterialButton>(R.id.btnProvisionPacks).isEnabled = false
-            return
-        }
+        if (runtime.provisioning) return
         val status = findViewById<TextView>(R.id.tvProvisionStatus)
-        status.text = getString(R.string.provisioning_packs)
-        findViewById<MaterialButton>(R.id.btnProvisionPacks).isEnabled = false
+        val button = findViewById<MaterialButton>(R.id.btnProvisionPacks)
+        val progress = findViewById<android.widget.ProgressBar>(R.id.runtimeProgress)
+        status.text = "Checking bundled APK toolpacks…"
+        button.isEnabled = false
+        progress.visibility = View.VISIBLE
+        progress.isIndeterminate = true
         lifecycleScope.launch {
-            val ok = runtime.ensureProvisioned()
-            status.text = if (ok) "All bundled packs installed ✓"
-            else "Provisioning issue: ${runtime.lastProvisionError ?: "unknown"}"
-            findViewById<MaterialButton>(R.id.btnProvisionPacks).isEnabled = !runtime.provisioning
-            render()
-            Toast.makeText(
-                this@RuntimeActivity,
-                if (ok) "Bundled packs installed" else "Provisioning failed — see status",
-                Toast.LENGTH_LONG,
-            ).show()
+            try {
+                val ok = runtime.ensureProvisioned()
+                status.text = if (ok) "All bundled APK toolpacks are installed and verified ✓"
+                else "Bundled setup incomplete: ${runtime.lastProvisionError ?: "see diagnostic log"}"
+                Toast.makeText(
+                    this@RuntimeActivity,
+                    if (ok) "Bundled toolpacks are ready" else "Some toolpacks could not be installed",
+                    Toast.LENGTH_LONG,
+                ).show()
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (failure: Exception) {
+                AppLogger.e(TAG, "Bundled runtime repair failed", failure)
+                status.text = "Repair failed: ${failure.message ?: failure.javaClass.simpleName}"
+            } finally {
+                if (!isFinishing && !isDestroyed) {
+                    button.isEnabled = !runtime.provisioning
+                    progress.visibility = View.GONE
+                    render()
+                }
+            }
         }
     }
 
     private fun downloadAvailableRuntime() {
         val status = findViewById<TextView>(R.id.tvProvisionStatus)
-        status.text = "Loading available runtime packs…"
+        val button = findViewById<MaterialButton>(R.id.btnDownloadRuntime)
+        val progress = findViewById<android.widget.ProgressBar>(R.id.runtimeProgress)
+        if (!button.isEnabled) return
+        button.isEnabled = false
+        progress.visibility = View.VISIBLE
+        progress.isIndeterminate = true
+        status.text = "Connecting to the Oreshnik runtime catalogue…"
         lifecycleScope.launch {
             try {
-                val packs = withContext(Dispatchers.IO) { runtime.fetchRemotePacks() }
+                val packs = withTimeout(25_000L) {
+                    withContext(Dispatchers.IO) { runtime.fetchRemotePacks() }
+                }
                 if (packs.isEmpty()) {
-                    status.text = "No optional runtime packs are published yet. Add ZIP assets and SHA-256 entries to runtime-catalog.json."
+                    status.text = "The runtime catalogue is reachable, but it contains no downloadable packs."
                     return@launch
                 }
+                val installedIds = withContext(Dispatchers.IO) {
+                    runtime.inventory().filter { it.ready }.map { it.id }.toSet()
+                }
+                status.text = "Loaded ${packs.size} optional runtime pack(s). Select a pack to install."
+                progress.visibility = View.GONE
+                val labels = packs.map { pack ->
+                    "${pack.name} · ${pack.version}" +
+                        if (pack.id in installedIds) "  ✓ INSTALLED (tap to reinstall)" else "  · NOT INSTALLED"
+                }.toTypedArray()
                 com.google.android.material.dialog.MaterialAlertDialogBuilder(this@RuntimeActivity)
                     .setTitle("Available runtime packs")
-                    .setItems(packs.map { "${it.name} · ${it.version}" }.toTypedArray()) { _, index ->
-                        val selected = packs[index]
-                        lifecycleScope.launch {
-                            try {
-                                val installed = runtime.downloadRuntimePack(selected) { step, percent ->
-                                    runOnUiThread { status.text = if (percent >= 0) "$step ($percent%)" else step }
-                                }
-                                status.text = "${installed.id} installed successfully"
-                                render()
-                            } catch (failure: Exception) {
-                                status.text = "Download failed: ${failure.message}"
-                            }
-                        }
-                    }.setNegativeButton("Cancel", null).show()
+                    .setItems(labels) { _, index -> installOptionalRuntimePack(packs[index]) }
+                    .setNegativeButton("Close", null)
+                    .show()
+            } catch (cancelled: CancellationException) {
+                throw cancelled
             } catch (failure: Exception) {
-                status.text = "Could not load runtime catalogue: ${failure.message}"
+                AppLogger.e(TAG, "Runtime catalogue load failed", failure)
+                status.text = "Catalogue unavailable: ${failure.message ?: failure.javaClass.simpleName}"
+                Toast.makeText(
+                    this@RuntimeActivity,
+                    "Could not load runtime packs. Check connection and retry.",
+                    Toast.LENGTH_LONG,
+                ).show()
+            } finally {
+                if (!isFinishing && !isDestroyed) {
+                    button.isEnabled = true
+                    progress.visibility = View.GONE
+                }
+            }
+        }
+    }
+
+    private fun installOptionalRuntimePack(pack: RuntimeManager.RemoteRuntimePack) {
+        val status = findViewById<TextView>(R.id.tvProvisionStatus)
+        val progress = findViewById<android.widget.ProgressBar>(R.id.runtimeProgress)
+        val downloadButton = findViewById<MaterialButton>(R.id.btnDownloadRuntime)
+        downloadButton.isEnabled = false
+        progress.visibility = View.VISIBLE
+        progress.isIndeterminate = true
+        status.text = "Preparing ${pack.name}…"
+        lifecycleScope.launch {
+            try {
+                val installed = runtime.downloadRuntimePack(pack) { step, percent ->
+                    withContext(Dispatchers.Main) {
+                        if (!isFinishing && !isDestroyed) {
+                            status.text = if (percent >= 0) "$step ($percent%)" else step
+                            progress.isIndeterminate = percent < 0
+                            if (percent >= 0) progress.progress = percent
+                        }
+                    }
+                }
+                status.text = "${pack.name} installed and verified ✓"
+                Toast.makeText(this@RuntimeActivity, "${pack.name} installed", Toast.LENGTH_LONG).show()
+                render()
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (failure: Exception) {
+                AppLogger.e(TAG, "Optional runtime install failed: ${pack.id}", failure)
+                status.text = "Install failed (${pack.id}): ${failure.message ?: failure.javaClass.simpleName}"
+                Toast.makeText(this@RuntimeActivity, "Runtime install failed", Toast.LENGTH_LONG).show()
+            } finally {
+                if (!isFinishing && !isDestroyed) {
+                    downloadButton.isEnabled = true
+                    progress.visibility = View.GONE
+                }
             }
         }
     }
@@ -208,9 +280,13 @@ private class RuntimeAdapter(
             val info = row.info
             name.text = info.id.replace('-', ' ').uppercase()
             version.text = if (info.version == "—") "Not installed" else "Version ${info.version}"
-            status.text = if (info.ready) "READY" else "NOT READY"
+            status.text = when {
+                info.ready -> "READY ✓"
+                row.rootExists -> "INCOMPLETE — repair required"
+                else -> "NOT INSTALLED"
+            }
             description.text = info.description
-            remove.visibility = if (row.rootExists) View.VISIBLE else View.GONE
+            remove.visibility = if (row.rootExists && info.id != "sqlmap") View.VISIBLE else View.GONE
             remove.setOnClickListener { onRemove(info) }
         }
     }
