@@ -31,6 +31,10 @@ class AgentEngine(
     private val api = AgentApiClient()
     private val gson = Gson()
 
+    init {
+        ProviderMetrics.initialize(context.applicationContext)
+    }
+
     suspend fun runWithProvider(
         userText: String,
         history: MutableList<JsonObject>,
