@@ -96,9 +96,9 @@ object ModelCapabilities {
 
     fun hasInputModality(entry: com.google.gson.JsonObject, modality: String): Boolean {
         val arrays = listOfNotNull(
-            entry.getAsJsonObject("architecture")?.getAsJsonArray("input_modalities"),
+            entry.get("architecture")?.takeIf { it.isJsonObject }?.asJsonObject?.getAsJsonArray("input_modalities"),
             entry.getAsJsonArray("input_modalities"),
-            entry.getAsJsonObject("capabilities")?.getAsJsonArray("input_modalities"),
+            entry.get("capabilities")?.takeIf { it.isJsonObject }?.asJsonObject?.getAsJsonArray("input_modalities"),
         )
         if (arrays.isNotEmpty()) {
             return arrays.any { values -> values.any { it.isJsonPrimitive && it.asString.equals(modality, ignoreCase = true) } }
