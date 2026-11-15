@@ -16,3 +16,16 @@
 -dontwarn javax.management.**
 -dontwarn org.ietf.jgss.**
 -dontwarn org.slf4j.impl.StaticLoggerBinder
+
+# Keep chat rendering types readable in release crash traces. These classes are
+# involved in RecyclerView binding and persisted message deserialization.
+-keep class com.example.oreshik.ChatAdapter { *; }
+-keep class com.example.oreshik.ChatAdapter$* { *; }
+-keep class com.example.oreshik.ChatMessage { *; }
+-keep class com.example.oreshik.ChatActivityItem { *; }
+-keep class com.example.oreshik.ChatFileChange { *; }
+-keep class com.example.oreshik.ChatDiffLine { *; }
+-keep class com.example.oreshik.MediaPreview$* { *; }
+-keep class com.example.oreshik.ShimmerTextView { *; }
+-keep class com.example.oreshik.MainActivity { *; }
+-keep class com.example.oreshik.agent.events.AgentEvent$* { *; }

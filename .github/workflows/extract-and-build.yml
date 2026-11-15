@@ -157,5 +157,6 @@ jobs:
             OreshnikAgent-release.apk
             OreshnikAgent-release.apk.sha256
             dependency-report.txt
+            app/build/outputs/mapping/release/mapping.txt
           if-no-files-found: error
           retention-days: 14
