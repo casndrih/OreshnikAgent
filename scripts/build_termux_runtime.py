@@ -99,8 +99,9 @@ def patch_shebangs(root: Path):
         if not path.is_file(): continue
         try:
             with path.open("rb") as stream:
-                first=stream.readline(8192); rest=stream.read()
-            if not first.startswith(b"#!") or b"\0" in first: continue
+                first=stream.readline(8192)
+                if not first.startswith(b"#!") or b"\\0" in first: continue
+                rest=stream.read()
             line=first.decode("utf-8","strict").rstrip("\r\n")
             if line.startswith("#!/usr/bin/env "):
                 line="#!@RUNTIME_PREFIX@/bin/env "+line[len("#!/usr/bin/env "):]
