@@ -292,6 +292,7 @@ class AgentApiClient(
                 success = result.isSuccess,
                 promptTokens = promptTokens,
                 completionTokens = completionTokens,
+                usageReported = usage != null,
             )
             if (result.isSuccess) {
                 return result
