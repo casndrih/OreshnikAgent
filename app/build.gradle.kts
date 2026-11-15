@@ -150,7 +150,7 @@ chaquopy {
             ?.map { it.resolve("dependencies/python/python.exe") }
             ?.firstOrNull { it.isFile }
         val actionsPython = System.getenv("pythonLocation")
-            ?.let { file("$it/bin/python").takeIf(File::isFile)?.absolutePath }
+            ?.let { root -> file("$root/bin/python").takeIf { candidate -> candidate.isFile }?.absolutePath }
         val buildPythonPath = System.getenv("PYTHON")?.takeIf { file(it).isFile }
             ?: actionsPython
             ?: cachePython?.absolutePath
