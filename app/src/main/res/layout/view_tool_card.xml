@@ -87,12 +87,6 @@
             android:visibility="gone"
             android:paddingTop="12dp">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/outline_variant"
-                android:layout_marginBottom="12dp" />
-
             <TextView
                 android:id="@+id/toolFullDescription"
                 android:layout_width="match_parent"
@@ -134,6 +128,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="start" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToolApprovalPolicy"
+                style="@style/Widget.Oreshik.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Approval policy: Default" />
 
         </LinearLayout>
 
