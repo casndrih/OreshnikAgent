@@ -63,6 +63,25 @@ private object WorkspaceSnapshots {
         return generator.generateKey()
     }
 
+    private fun encryptedOutput(destination: File): CipherOutputStream {
+        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+        cipher.init(Cipher.ENCRYPT_MODE, encryptionKey())
+        val iv = cipher.iv
+        require(iv.size in 12..16) { "Android Keystore returned an invalid AES-GCM IV." }
+        destination.parentFile?.mkdirs()
+        val raw = FileOutputStream(destination)
+        try {
+            raw.write(MAGIC)
+            raw.write(iv.size)
+            raw.write(iv)
+            return CipherOutputStream(raw, cipher)
+        } catch (error: Exception) {
+            raw.close()
+            destination.delete()
+            throw error
+        }
+    }
+
     private fun encryptFile(source: File, destination: File) {
         val cipher = Cipher.getInstance("AES/GCM/NoPadding")
         cipher.init(Cipher.ENCRYPT_MODE, encryptionKey())
@@ -140,12 +159,11 @@ private object WorkspaceSnapshots {
         val workspace = root(context)
         val directory = store(context)
         val id = "ws_" + System.currentTimeMillis().toString() + "_" + UUID.randomUUID().toString().take(8)
-        val plaintext = File(directory, ".${id}.tmp.zip")
         val destination = File(directory, "${id}.wss")
         var count = 0
         var total = 0L
         try {
-            ZipOutputStream(FileOutputStream(plaintext)).use { zip ->
+            ZipOutputStream(encryptedOutput(destination)).use { zip ->
                 workspace.walkTopDown().onEnter { dir -> dir == workspace || dir.name !in ignored }.forEach { file ->
                     if (!file.isFile) return@forEach
                     val canonical = file.canonicalFile
@@ -161,12 +179,9 @@ private object WorkspaceSnapshots {
                     zip.closeEntry()
                 }
             }
-            encryptFile(plaintext, destination)
         } catch (error: Exception) {
             destination.delete()
             throw error
-        } finally {
-            plaintext.delete()
         }
         // Keep the newest 20 encrypted snapshots; never remove the snapshot just created.
         directory.listFiles()?.filter { it.isFile && it.extension == "wss" && it.name != destination.name }
