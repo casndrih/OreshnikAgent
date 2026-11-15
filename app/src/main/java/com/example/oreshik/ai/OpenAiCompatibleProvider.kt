@@ -18,6 +18,7 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.util.concurrent.TimeUnit
 import java.util.UUID
+import java.util.concurrent.ConcurrentHashMap
 
 /** Provider for OpenAI Chat Completions compatible services (cloud and local). */
 class OpenAiCompatibleProvider(
@@ -43,6 +44,7 @@ class OpenAiCompatibleProvider(
         .retryOnConnectionFailure(true)
         .build()
     private val gson = Gson()
+    private val reasoningSupport = ConcurrentHashMap<String, Boolean>()
 
     override fun getApiKeys(): List<String> = readKeys()
 
@@ -130,6 +132,7 @@ class OpenAiCompatibleProvider(
                     val audio = ModelCapabilities.supportsChatAudio(modelId, item.get("description")?.takeUnless { it.isJsonNull }?.asString.orEmpty())
                     val reasoningCapability = ModelCapabilities.reasoningCapability(item, modelId, item.get("description")?.takeUnless { it.isJsonNull }?.asString.orEmpty())
                     val reasoning = reasoningCapability.supported
+                    reasoningSupport[modelId] = reasoning
                     models.putIfAbsent(modelId, Model(
                         id = modelId,
                         description = "${item.get("owned_by")?.takeUnless { it.isJsonNull }?.asString?.takeIf { it.isNotBlank() } ?: displayName} • $modelId",
@@ -152,6 +155,18 @@ class OpenAiCompatibleProvider(
 
     override fun createApiClient(): AiApiClient = OpenAiCompatibleApiClient()
 
+    private fun likelyReasoningModel(model: String): Boolean {
+        val id = model.lowercase()
+        return listOf("deepseek-r", "deepseek-v3.2", "deepseek-v4", "qwq", "qwen3", "reason", "thinking", "o1", "o3", "o4", "r1").any { it in id }
+    }
+
+    private fun normalizeReasoningEffort(value: String): String = when (value.lowercase()) {
+        "off", "none" -> "off"
+        "minimal", "low", "medium", "high", "xhigh", "max" -> value.lowercase()
+        "ultra" -> "max"
+        else -> "high"
+    }
+
     private fun readKeys(): List<String> = runCatching {
         val raw = config.getRaw(keysKey)
         if (raw.isBlank()) emptyList() else gson.fromJson(raw, Array<String>::class.java).orEmpty().filter { it.isNotBlank() }
@@ -170,20 +185,22 @@ class OpenAiCompatibleProvider(
             messages: JsonObject,
             tools: JsonObject?,
             reasoningEffort: String,
-        ): Result<JsonObject> = send(model, messages, tools)
+        ): Result<JsonObject> = send(model, messages, tools, reasoningEffort)
 
         override suspend fun completeText(
             model: String,
             messages: JsonObject,
             reasoningEffort: String,
-        ): Result<JsonObject> = send(model, messages, null)
+        ): Result<JsonObject> = send(model, messages, null, reasoningEffort)
 
-        private suspend fun send(model: String, messages: JsonObject, tools: JsonObject?): Result<JsonObject> = withContext(Dispatchers.IO) {
+        private suspend fun send(model: String, messages: JsonObject, tools: JsonObject?, reasoningEffort: String): Result<JsonObject> = withContext(Dispatchers.IO) {
             ProviderEndpointPolicy.error(baseUrl)?.let {
                 return@withContext Result.failure(IllegalArgumentException(it))
             }
             if (model.isBlank()) return@withContext Result.failure(IllegalStateException("Choose a model from this provider's model list first."))
             try {
+                val shouldSendReasoning = reasoningEffort.isNotBlank() && !reasoningEffort.equals("off", true) &&
+                    (reasoningSupport[model] ?: likelyReasoningModel(model))
                 val body = JsonObject().apply {
                     addProperty("model", model)
                     add("messages", messages.getAsJsonArray("messages") ?: JsonArray())
@@ -192,6 +209,7 @@ class OpenAiCompatibleProvider(
                         add("tools", toolArray)
                         addProperty("tool_choice", "auto")
                     }
+                    if (shouldSendReasoning) addProperty("reasoning_effort", normalizeReasoningEffort(reasoningEffort))
                 }
                 val request = Request.Builder().url("$baseUrl/chat/completions").apply {
                     activeRequestKey()?.takeIf { it.isNotBlank() }?.let { header("Authorization", "Bearer $it") }
@@ -199,9 +217,32 @@ class OpenAiCompatibleProvider(
                 httpClient.newCall(request).execute().use { response ->
                     val responseBody = response.body?.string().orEmpty()
                     if (!response.isSuccessful) {
-                        AppLogger.w(TAG, "chat $model failed with HTTP ${response.code}: ${responseBody.take(300)}")
-                        Result.failure(IllegalStateException("HTTP ${response.code}: ${responseBody.take(1500)}"))
+                        val lower = responseBody.lowercase()
+                        val rejectedReasoning = shouldSendReasoning && response.code in 400..499 &&
+                            (lower.contains("reasoning_effort") || lower.contains("reasoning effort") ||
+                             lower.contains("unknown parameter") || lower.contains("unsupported parameter") ||
+                             lower.contains("unrecognized request argument"))
+                        if (rejectedReasoning) {
+                            val fallbackBody = body.deepCopy().apply { remove("reasoning_effort") }
+                            val fallbackRequest = Request.Builder().url("$baseUrl/chat/completions")
+                                .post(gson.toJson(fallbackBody).toRequestBody("application/json".toMediaType()))
+                                .apply { activeRequestKey()?.takeIf { it.isNotBlank() }?.let { header("Authorization", "Bearer $it") } }
+                                .build()
+                            httpClient.newCall(fallbackRequest).execute().use { fallback ->
+                                val fallbackText = fallback.body?.string().orEmpty()
+                                if (fallback.isSuccessful) {
+                                    reasoningSupport[model] = false
+                                    val parsed = gson.fromJson(fallbackText, JsonObject::class.java)
+                                    return@withContext if (parsed == null) Result.failure(IllegalStateException("Provider returned an empty response."))
+                                    else Result.success(parsed)
+                                }
+                            }
+                            reasoningSupport[model] = false
+                        }
+                        AppLogger.w(TAG, "chat $model failed with HTTP \${response.code}: \${responseBody.take(300)}")
+                        Result.failure(IllegalStateException("HTTP \${response.code}: \${responseBody.take(1500)}"))
                     } else {
+                        if (shouldSendReasoning) reasoningSupport[model] = true
                         val parsed = gson.fromJson(responseBody, JsonObject::class.java)
                         if (parsed == null) Result.failure(IllegalStateException("Provider returned an empty response."))
                         else Result.success(parsed)
