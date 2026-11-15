@@ -53,7 +53,9 @@ class NvidiaModelRepository {
                         ownedBy = owned,
                         reasoning = reasoning,
                         vision = listOf("vl", "vision", "vila", "llava").any { marker -> id.lowercase().contains(marker) },
-                        thinkingLevels = reasoningCapability.levels,
+                        thinkingLevels = if (reasoning && !reasoningCapability.levelsAdvertised) {
+                            listOf("low", "high", "max")
+                        } else reasoningCapability.levels,
                         reasoningVerified = reasoningCapability.verified,
                     )
                     collected.putIfAbsent(model.id, model)
