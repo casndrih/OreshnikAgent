@@ -38,6 +38,7 @@ OreshnikAgent brings AI model providers, agent orchestration, developer tools, m
 - **Redacted audit trail:** view and clear app-private JSONL records for tool decisions, outcomes, and durations, with credential redaction.
 - **Workspace recovery:** bounded app-private snapshots, snapshot listing, and rollback with an automatic pre-restore safety snapshot.
 - **Reusable workflows:** saved read-only tool workflows with per-step retries, failure checkpoints, resume, and persistent WorkManager schedules.
+- **Provider telemetry:** request counts, token usage, latency, and cost estimates using user-configured per-model rates (no vendor prices are assumed).
 - **Extensible runtimes:** app-managed Python and a verified-download mechanism for optional runtime packs.
 - **Advanced technical tooling:** database utilities, network inspection, APK/ELF/IL2CPP analysis, Ghidra/IDA-oriented workflows, and authorized security testing tools.
 
@@ -89,7 +90,7 @@ The source includes:
 - App-private redacted tool audit records (tool, session, permission outcome, execution result, duration, timestamp).
 - Session learning and context retrieval.
 - Workspace snapshots: app-private ZIP snapshots exclude build/dependency caches, cap file count and archive size, validate every restore path, and automatically create a safety snapshot before rollback.
-- Git remote operations: HTTPS clone, fetch, pull, and branch-scoped push. Credentials are supplied per call, never persisted, and force-push is not exposed.
+- Git operations: local branch list/create/switch/delete, explicit path staging, staged-only commits, patch export, plus HTTPS clone/fetch/pull/push. Credentials are supplied per call, never persisted, and force-push is not exposed.
 - Offline project templates: Android/Kotlin, Kotlin CLI, Python, Node.js, and PHP API starters; creation is workspace-scoped and never overwrites an existing target.
 - Accessibility sequence playback: bounded, step-reported tap, long-press, swipe, text click/input, scroll, focus, global navigation, and wait actions.
 - Saved workflow builder: create/list/delete/run read-only inspection workflows, with up to 12 steps, bounded retries, and saved failure checkpoints for resume.
