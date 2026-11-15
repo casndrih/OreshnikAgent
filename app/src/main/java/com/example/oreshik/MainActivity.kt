@@ -202,6 +202,8 @@ class MainActivity : AppCompatActivity(), ModelSelectionListener {
     private val permissionApprovalDialogs = mutableMapOf<String, android.app.AlertDialog>()
 
     private fun handleAgentEvent(event: AgentEvent) {
+        // Lifecycle trace only: never write prompts, API keys or model response bodies.
+        AppLogger.d("ChatLifecycle", "event=${event.javaClass.simpleName} session=${event.sessionId} model=${AgentConfig.model} provider=${AgentConfig.getRaw("active_provider_id").ifBlank { "nvidia" }}")
         when (event) {
             is AgentEvent.Thinking -> chatAdapter.showProcessing(event.text)
             is AgentEvent.ToolStarted -> {

@@ -14,15 +14,15 @@
     <color name="colorAccent">@color/brand_500</color>
 
     <!-- Canvas / surfaces -->
-    <color name="bg_root">#FFFFFF</color>
-    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_root">#F4F4F4</color>
+    <color name="bg_surface">#F7F7F7</color>
     <color name="bg_card">#FFFFFF</color>
     <color name="bg_dialog">@color/bg_card</color>
     <color name="bg_pill">#D5D5D5</color>
     <color name="bg_pill_dark">#33302A</color>
     <color name="bg_assistant_bubble">#FFFFFF</color>
-    <color name="canvas_bg">#FFFFFF</color>
-    <color name="divider">#E4E0D3</color>
+    <color name="canvas_bg">#F4F4F4</color>
+    <color name="divider">#E5E5E5</color>
 
     <!-- Composer icon-button background. Light mode: same cream pill as
          before. Dark mode overrides this (see values-night) to the

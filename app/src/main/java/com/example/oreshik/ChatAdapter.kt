@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.oreshik.logging.AppLogger
 import io.noties.markwon.Markwon
 import io.noties.markwon.core.CorePlugin
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
@@ -326,7 +327,16 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.VH>() {
             }
             holder.assistantText != null -> {
                 // Markdown rendering (ChatGPT-style): bold, lists, code blocks, tables, links.
-                markwonFor(holder.itemView).setMarkdown(holder.assistantText!!, msg.content)
+                if (msg.content.length > 50_000) {
+                    holder.assistantText!!.text = msg.content
+                } else {
+                    try {
+                        markwonFor(holder.itemView).setMarkdown(holder.assistantText!!, msg.content)
+                    } catch (failure: RuntimeException) {
+                        AppLogger.e("ChatAdapter", "Markdown rendering failed; showing plain text (chars=${msg.content.length})", failure)
+                        holder.assistantText!!.text = msg.content
+                    }
+                }
                 val metaParts = mutableListOf(timeStr)
                 msg.model?.let { metaParts.add(it) }
                 holder.assistantMeta?.text = metaParts.joinToString(" · ")
