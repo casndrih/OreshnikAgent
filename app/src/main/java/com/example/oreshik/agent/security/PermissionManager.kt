@@ -145,7 +145,7 @@ class PermissionManager(private val context: Context) {
         val all = db.settings().all()
         var removed = 0
         for (i in all.indices) {
-            if (all[i].key.startsWith("permission:")) {
+            if (all[i].key.startsWith("permission:") || all[i].key.startsWith("tool-policy:")) {
                 db.settings().remove(all[i].key)
                 removed++
             }
