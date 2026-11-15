@@ -279,10 +279,12 @@ class AgentApiClient(
             }
             
             val usage = result.getOrNull()?.getAsJsonObject("usage")
-            val promptTokens = usage?.get("prompt_tokens")?.asLong
-                ?: usage?.get("input_tokens")?.asLong ?: 0L
-            val completionTokens = usage?.get("completion_tokens")?.asLong
-                ?: usage?.get("output_tokens")?.asLong ?: 0L
+            val promptTokens = runCatching {
+                usage?.get("prompt_tokens")?.asLong ?: usage?.get("input_tokens")?.asLong ?: 0L
+            }.getOrDefault(0L)
+            val completionTokens = runCatching {
+                usage?.get("completion_tokens")?.asLong ?: usage?.get("output_tokens")?.asLong ?: 0L
+            }.getOrDefault(0L)
             ProviderMetrics.record(
                 baseUrl = baseUrl,
                 model = model,
