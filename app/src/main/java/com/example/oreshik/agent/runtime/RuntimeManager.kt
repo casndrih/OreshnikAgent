@@ -962,6 +962,7 @@ class RuntimeManager(private val context: Context) {
         addBinDir("gradle9")
         addBinDir("clang")
         addBinDir("cli-tools")
+        addBinDir("termux-arm64")
         addBinDir("apktool")
         addBinDir("jadx")
         addBinDir("radare2")
@@ -1004,6 +1005,7 @@ class RuntimeManager(private val context: Context) {
         val certFile = listOf(
             File(runtimes, "libs/etc/tls/cert.pem"),
             File(runtimes, "cli-tools/etc/tls/cert.pem"),
+            File(runtimes, "termux-arm64/etc/tls/cert.pem"),
         ).firstOrNull { it.isFile }
         certFile?.let { env["SSL_CERT_FILE"] = it.absolutePath }
         val bundledLdPaths = listOf(
@@ -1012,6 +1014,7 @@ class RuntimeManager(private val context: Context) {
             File(runtimes, "jdk/lib"),
             File(runtimes, "jadx/lib"),
             File(runtimes, "databases/lib"),
+            File(runtimes, "termux-arm64/lib"),
         ).asSequence().filter { it.isDirectory }.map { it.absolutePath }
         // Keep Android's inherited linker paths as well: replacing them with only
         // tool-pack directories can hide app/system native libraries from children.
@@ -1036,6 +1039,14 @@ class RuntimeManager(private val context: Context) {
             env["LDFLAGS"] = if (inherited.isBlank()) flag else "$flag $inherited"
         }
         env["HOME"] = workspace.absolutePath
+        val termuxPrefix = runtimePath("termux-arm64")
+        if (termuxPrefix.isDirectory) {
+            env["PREFIX"] = termuxPrefix.absolutePath
+            env["TERMUX_PREFIX"] = termuxPrefix.absolutePath
+            env["TERMUX_HOME"] = termuxPrefix.parentFile?.absolutePath ?: termuxPrefix.absolutePath
+            val termuxTmp = File(context.cacheDir, "termux-tmp").apply { mkdirs() }
+            env["TMPDIR"] = termuxTmp.absolutePath
+        }
         val gradleUserHome = gradleUserHome()
         if (!gradleUserHome.isDirectory && !gradleUserHome.mkdirs() && !gradleUserHome.isDirectory) {
             throw IllegalStateException("Could not create Gradle user home: ${gradleUserHome.absolutePath}")
