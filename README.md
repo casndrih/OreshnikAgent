@@ -244,9 +244,9 @@ OreshnikAgent is designed as a **standalone Android application**. It does not r
 
 ### Optional runtime downloads
 
-The app has infrastructure to fetch a remote runtime catalogue and install optional packs on demand. Downloads are intended to be HTTPS-only and verified using SHA-256 before installation, with manifest and archive-path validation.
+The app fetches a remote runtime catalogue and installs optional packs on demand. Downloads are HTTPS-only and verified using SHA-256 before installation, with manifest and archive-path validation. The repository now includes an automated ARM64 pack builder that queries the official Termux main APT repository, verifies its signed InRelease metadata and package-index hash, resolves package dependencies, verifies each downloaded .deb checksum, and records package versions and source checksums in the runtime manifest. The pack is relocated into the app-owned runtime directory and its Termux interpreter prefix is rewritten at install time.
 
-**Important current limitation:** the repository's runtime catalogue currently contains an empty packs array. The download/install mechanism is present, but no optional runtime packs are published in the catalogue yet. Therefore, tool adapters that need external binaries may report that their runtime is unavailable until compatible packs are released.
+The first published Termux pack is intended to provide Bash, Git, OpenSSH, curl-compatible CLI, jq, ripgrep, SQLite, rsync, networking utilities and core tools. Availability is not assumed until the Termux pack workflow succeeds and publishes its release asset and catalogue checksum. Tool adapters that need unavailable binaries continue to report the runtime as missing rather than pretending they are installed.
 
 Runtime archives must contain Android/Bionic-compatible binaries for the target ABI. A normal Linux/glibc executable cannot simply be copied onto Android and expected to run.
 
@@ -324,6 +324,8 @@ Generated APKs are normally written to:
 app/build/outputs/apk/debug/
 app/build/outputs/apk/release/
 ~~~
+
+The CI release workflow also publishes the installable APK in the repository root as `OreshnikAgent-release.apk`, alongside `OreshnikAgent-release.apk.sha256`. The root APK is updated only after unit tests, release lint and release packaging succeed.
 
 ### Release signing
 
