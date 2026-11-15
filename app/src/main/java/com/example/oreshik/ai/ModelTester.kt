@@ -158,16 +158,20 @@ object ModelTester {
 
     /** Probe with a cache short-circuit: returns the cached outcome when present. */
     private fun probeCached(providerId: String, m: Model, baseUrl: String, key: String): Model {
-        val cacheKey = "$providerId::${m.id}"
+        val cacheKey = "$providerId::${baseUrl.trimEnd('/')}::${m.id}::${key.hashCode()}"
         val cached = results[cacheKey]
         if (cached != null) {
-            AppLogger.d("ModelTester", "probe cache hit for $cacheKey")
-            return m.copy(
-                tested = cached.ok,
-                testNote = cached.note,
-                reasoningVerified = cached.reasoningVerified ?: m.reasoningVerified,
-                thinkingLevels = cached.thinkingLevels.takeIf { it.isNotEmpty() } ?: m.thinkingLevels,
-            )
+            val ttl = if (cached.ok) ONLINE_CACHE_TTL_MS else FAILURE_CACHE_TTL_MS
+            if (System.currentTimeMillis() - cached.atMs < ttl) {
+                AppLogger.d("ModelTester", "probe cache hit for $providerId/${m.id}")
+                return m.copy(
+                    tested = cached.ok,
+                    testNote = cached.note,
+                    reasoningVerified = cached.reasoningVerified ?: m.reasoningVerified,
+                    thinkingLevels = cached.thinkingLevels.takeIf { it.isNotEmpty() } ?: m.thinkingLevels,
+                )
+            }
+            results.remove(cacheKey, cached)
         }
         val out = runProbe(providerId, m, baseUrl, key)
         results[cacheKey] = ProbeResult(
@@ -276,6 +280,9 @@ object ModelTester {
         }
     }
 
+    private const val ONLINE_CACHE_TTL_MS = 5 * 60 * 1000L
+    private const val FAILURE_CACHE_TTL_MS = 45 * 1000L
+
     private fun completionUrl(baseUrl: String): String {
         val base = baseUrl.trimEnd('/')
         return when {
@@ -378,6 +385,7 @@ object ModelTester {
                     "note" to m.testNote,
                     "reasoningVerified" to m.reasoningVerified,
                     "thinkingLevels" to m.thinkingLevels,
+                    "atMs" to System.currentTimeMillis(),
                 ),
             )
         }
@@ -392,10 +400,17 @@ object ModelTester {
         return try {
             val type = object : com.google.gson.reflect.TypeToken<List<Map<String, Any>>>() {}.type
             val list: List<Map<String, Any>> = gson.fromJson(raw, type) ?: return models
-            val byId = list.associate { (it["id"] as? String ?: "") to (it["tested"] as? Boolean) }
-            val notes = list.associate { (it["id"] as? String ?: "") to (it["note"] as? String ?: "") }
-            val reasoning = list.associate { (it["id"] as? String ?: "") to (it["reasoningVerified"] as? Boolean) }
-            val levels = list.associate { (it["id"] as? String ?: "") to (it["thinkingLevels"] as? List<*>)?.mapNotNull { value -> value as? String } }
+            val now = System.currentTimeMillis()
+            val fresh = list.filter { item ->
+                val at = (item["atMs"] as? Number)?.toLong() ?: 0L
+                val ok = item["tested"] as? Boolean ?: false
+                val ttl = if (ok) ONLINE_CACHE_TTL_MS else FAILURE_CACHE_TTL_MS
+                at > 0L && now - at in 0..ttl
+            }
+            val byId = fresh.associate { (it["id"] as? String ?: "") to (it["tested"] as? Boolean) }
+            val notes = fresh.associate { (it["id"] as? String ?: "") to (it["note"] as? String ?: "") }
+            val reasoning = fresh.associate { (it["id"] as? String ?: "") to (it["reasoningVerified"] as? Boolean) }
+            val levels = fresh.associate { (it["id"] as? String ?: "") to (it["thinkingLevels"] as? List<*>)?.mapNotNull { value -> value as? String } }
             models.map { m ->
                 val tested = byId[m.id]
                 if (tested != null) m.copy(
