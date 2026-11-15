@@ -3,7 +3,7 @@ package com.example.oreshik.agent.workflow
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.example.oreshik.agent.core.ToolCollaborationPolicy
+import com.example.oreshik.agent.core.WorkflowToolPolicy
 import com.example.oreshik.agent.core.ToolContext
 import com.example.oreshik.agent.core.ToolRegistry
 import com.example.oreshik.agent.runtime.RuntimeManager
@@ -44,7 +44,7 @@ class ScheduledWorkflowWorker(
             for ((index, item) in steps.withIndex()) {
                 val step = item.asJsonObject
                 val name = step.get("tool")?.asString.orEmpty()
-                if (!ToolCollaborationPolicy.canDelegate(name)) {
+                if (!WorkflowToolPolicy.canRun(name)) {
                     report.append("Step ${index + 1}: rejected non-allow-listed tool $name")
                     saveReport(directory, id, "blocked", report.toString())
                     return Result.failure()
