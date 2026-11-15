@@ -111,3 +111,16 @@ object ToolCollaborationPolicy {
 
     fun canDelegate(name: String): Boolean = name in allowed
 }
+
+
+/** Narrower allow-list for reusable/scheduled workflows: no network probes or device actions. */
+object WorkflowToolPolicy {
+    private val allowed = setOf(
+        "file.list", "file.read", "file.search", "git.status", "git.diff", "git.log",
+        "runtime.info", "skills.list", "memory.stats", "analysis.context",
+        "re.ida.capabilities", "re.ida.analyze", "re.ida.xref",
+        "re.ghidra.capabilities", "re.ghidra.analyze", "re.ghidra.decompile", "re.ghidra.xref",
+    )
+
+    fun canRun(name: String): Boolean = name in allowed && ToolCollaborationPolicy.canDelegate(name)
+}
