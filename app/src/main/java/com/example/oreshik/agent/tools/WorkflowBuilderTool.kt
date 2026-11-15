@@ -4,15 +4,15 @@ import com.example.oreshik.agent.core.*
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import com.google.gson.JsonParser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 
 /** User-defined, persisted read-only tool workflows with a strict delegation allow-list. */
 class WorkflowBuilderTool : AgentTool {
-    private data class Step(val tool: String, val arguments: JsonObject)
+    private data class Step(val tool: String, val arguments: JsonObject, val retries: Int = 0)
     private data class Workflow(val id: String, val name: String, val steps: List<Step>, val createdAt: Long)
+    private data class RunState(val workflowId: String, val nextStep: Int, val status: String, val lastError: String = "", val updatedAt: Long = System.currentTimeMillis())
 
     private val gson = GsonBuilder().setPrettyPrinting().create()
     private val allowed = setOf(
@@ -29,10 +29,10 @@ class WorkflowBuilderTool : AgentTool {
         description = "Build, list, delete and run saved read-only tool workflows. Workflow steps are limited to inspection and analysis tools; writes, shell execution, device actions and credential-bearing tools are not allowed.",
         permissions = setOf(ToolPermission.READ_WORKSPACE),
         parameters = mapOf(
-            "action" to "string (list, create, delete, run)",
+            "action" to "string (list, create, delete, run, resume)",
             "id" to "string",
             "name" to "string",
-            "steps" to "array of {tool, arguments} objects",
+            "steps" to "array of {tool, arguments, retries} objects (retries 0–2)",
         ),
     )
 
@@ -43,6 +43,10 @@ class WorkflowBuilderTool : AgentTool {
         return File(directory(context), "$id.json").canonicalFile.also {
             require(it.parentFile == directory(context).canonicalFile) { "Workflow path escaped storage." }
         }
+    }
+
+    private fun stateFile(context: ToolContext, id: String): File = File(directory(context), "$id.run.json").canonicalFile.also {
+        require(it.parentFile == directory(context).canonicalFile) { "Workflow state path escaped storage." }
     }
 
     override suspend fun execute(context: ToolContext, arguments: JsonElement): ToolResult = withContext(Dispatchers.IO) {
@@ -70,7 +74,8 @@ class WorkflowBuilderTool : AgentTool {
                         "Step ${index + 1}: '$tool' is not an approved read-only workflow tool."
                     }
                     val params = step["arguments"]?.takeIf { it.isJsonObject }?.asJsonObject ?: JsonObject()
-                    Step(tool, params.deepCopy())
+                    val retries = (step["retries"]?.asInt ?: 0).coerceIn(0, 2)
+                    Step(tool, params.deepCopy(), retries)
                 }
                 val workflow = Workflow(id, name, steps, System.currentTimeMillis())
                 val destination = file(context, id)
@@ -88,36 +93,58 @@ class WorkflowBuilderTool : AgentTool {
                 val id = args["id"]?.asString.orEmpty()
                 val target = file(context, id)
                 require(target.isFile && target.delete()) { "Workflow not found or could not be deleted." }
+                stateFile(context, id).delete()
                 ToolResult.success("Deleted workflow $id.")
             }.getOrElse { ToolResult.failure("Workflow deletion failed: ${it.message}") }
 
-            "run" -> {
+            "run", "resume" -> {
                 val invoker = context.invokeCollaborativeTool
                     ?: return@withContext ToolResult.failure("Workflow execution is available only during an active agent run.")
                 runCatching {
                     val id = args["id"]?.asString.orEmpty()
                     val workflow = gson.fromJson(file(context, id).readText(), Workflow::class.java)
                     require(workflow.steps.size in 1..12) { "Workflow step count is invalid." }
-                    val output = StringBuilder("Workflow: ${workflow.name}\n")
-                    for ((index, step) in workflow.steps.withIndex()) {
+                    val statePath = stateFile(context, id)
+                    var next = if (args["action"]?.asString?.equals("resume", ignoreCase = true) == true) {
+                        require(statePath.isFile) { "No saved run state exists. Run the workflow first." }
+                        val state = gson.fromJson(statePath.readText(), RunState::class.java)
+                        require(state.workflowId == id && state.status == "failed") { "Only a failed workflow can be resumed." }
+                        state.nextStep.coerceIn(0, workflow.steps.size)
+                    } else 0
+                    require(next < workflow.steps.size) { "Workflow has no remaining steps." }
+                    statePath.writeText(gson.toJson(RunState(id, next, "running")), Charsets.UTF_8)
+                    val output = StringBuilder("Workflow: ${workflow.name}\nStarting at step ${next + 1}/${workflow.steps.size}\n")
+                    while (next < workflow.steps.size) {
+                        val step = workflow.steps[next]
                         require(step.tool in allowed && ToolCollaborationPolicy.canDelegate(step.tool)) {
                             "Workflow contains a tool that is no longer approved: ${step.tool}"
                         }
-                        context.onProgress?.invoke("Workflow ${workflow.name}: step ${index + 1}/${workflow.steps.size} · ${step.tool}")
-                        val result = invoker(step.tool, step.arguments)
-                        output.append("\n").append(index + 1).append(". ").append(step.tool)
-                        if (result.ok) {
-                            output.append(" — OK\n").append(result.output.take(5000))
-                        } else {
-                            output.append(" — FAILED: ").append(result.error.orEmpty().take(1000))
-                            return@withContext ToolResult.failure(output.toString())
+                        context.onProgress?.invoke("Workflow ${workflow.name}: step ${next + 1}/${workflow.steps.size} · ${step.tool}")
+                        var result: ToolResult? = null
+                        for (attempt in 0..step.retries.coerceIn(0, 2)) {
+                            result = invoker(step.tool, step.arguments)
+                            if (result?.ok == true) break
+                            if (attempt < step.retries) context.onProgress?.invoke("Retrying ${step.tool} (${attempt + 1}/${step.retries})")
                         }
+                        val completed = result ?: ToolResult.failure("No result returned.")
+                        output.append("\n").append(next + 1).append(". ").append(step.tool)
+                        if (!completed.ok) {
+                            val error = completed.error.orEmpty().take(1000)
+                            output.append(" — FAILED: ").append(error)
+                            statePath.writeText(gson.toJson(RunState(id, next, "failed", error)), Charsets.UTF_8)
+                            return@withContext ToolResult.failure(output.toString() + "\nResume with action=resume.")
+                        }
+                        output.append(" — OK\n").append(completed.output.take(5000))
+                        next++
+                        statePath.writeText(gson.toJson(RunState(id, next, "running")), Charsets.UTF_8)
                         if (output.length > 24_000) break
                     }
-                    ToolResult.success(output.toString())
+                    val status = if (next >= workflow.steps.size) "completed" else "paused"
+                    statePath.writeText(gson.toJson(RunState(id, next, status)), Charsets.UTF_8)
+                    ToolResult.success(output.append("\nStatus: ").append(status).toString())
                 }.getOrElse { ToolResult.failure("Workflow run failed: ${it.message}") }
             }
-            else -> ToolResult.failure("Supported actions: list, create, delete, run.")
+            else -> ToolResult.failure("Supported actions: list, create, delete, run, resume.")
         }
     }
 }
