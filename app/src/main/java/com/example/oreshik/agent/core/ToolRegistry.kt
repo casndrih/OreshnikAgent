@@ -78,6 +78,7 @@ class ToolRegistry(context: Context, runtime: RuntimeManager) {
         "accessibility.focus" to AccessibilityFocusTool(),
         "accessibility.global" to AccessibilityGlobalTool(),
         "accessibility.sequence" to AccessibilitySequenceTool(),
+        "accessibility.snapshot" to AccessibilitySnapshotTool(),
         "memory.search" to MemorySearchTool(context),
         "memory.save" to MemorySaveTool(context),
         "memory.delete" to MemoryDeleteTool(context),
