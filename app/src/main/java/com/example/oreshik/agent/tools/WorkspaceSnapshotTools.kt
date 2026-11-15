@@ -136,6 +136,7 @@ private object WorkspaceSnapshots {
 
     @Synchronized
     fun create(context: ToolContext, label: String = "manual"): String {
+        migrateLegacySnapshots(context)
         val workspace = root(context)
         val directory = store(context)
         val id = "ws_" + System.currentTimeMillis().toString() + "_" + UUID.randomUUID().toString().take(8)
