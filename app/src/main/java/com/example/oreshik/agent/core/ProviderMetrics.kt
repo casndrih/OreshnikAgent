@@ -1,6 +1,8 @@
 package com.example.oreshik.agent.core
 
 import android.content.Context
+import android.content.SharedPreferences
+import com.google.gson.Gson
 import java.net.URI
 import java.util.concurrent.ConcurrentHashMap
 
@@ -36,6 +38,24 @@ object ProviderMetrics {
 
     private val lock = Any()
     private val stats = LinkedHashMap<String, MutableStats>()
+    private val gson = Gson()
+    @Volatile private var preferences: SharedPreferences? = null
+
+    fun initialize(context: Context) {
+        synchronized(lock) {
+            if (preferences != null) return
+            val prefs = context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            preferences = prefs
+            val saved = prefs.getString(KEY_STATS, null).orEmpty()
+            if (saved.isNotBlank()) runCatching {
+                gson.fromJson(saved, Array<MutableStats>::class.java).orEmpty().forEach { stats["${it.host}|${it.model}"] = it }
+            }
+        }
+    }
+
+    private fun persistLocked() {
+        preferences?.edit()?.putString(KEY_STATS, gson.toJson(stats.values.toList()))?.apply()
+    }
 
     fun record(baseUrl: String, model: String, latencyMs: Long, success: Boolean, promptTokens: Long, completionTokens: Long) {
         val host = runCatching { URI(baseUrl).host?.lowercase().orEmpty() }.getOrDefault("")
@@ -52,6 +72,7 @@ object ProviderMetrics {
             item.totalLatencyMs += item.lastLatencyMs
             item.updatedAt = System.currentTimeMillis()
             while (stats.size > 100) stats.remove(stats.keys.first())
+            persistLocked()
         }
     }
 
@@ -62,7 +83,7 @@ object ProviderMetrics {
         }.sortedByDescending { it.updatedAt }
     }
 
-    fun reset() = synchronized(lock) { stats.clear() }
+    fun reset() = synchronized(lock) { stats.clear(); persistLocked() }
 
     fun setPricing(context: Context, host: String, model: String, inputUsdPerMillion: Double, outputUsdPerMillion: Double) {
         require(inputUsdPerMillion.isFinite() && outputUsdPerMillion.isFinite() &&
@@ -92,5 +113,6 @@ object ProviderMetrics {
         return "price:$safeHost:$safeModel"
     }
 
-    private const val PREFS = "provider_pricing"
+    private const val PREFS = "provider_metrics"
+    private const val KEY_STATS = "request_stats"
 }
