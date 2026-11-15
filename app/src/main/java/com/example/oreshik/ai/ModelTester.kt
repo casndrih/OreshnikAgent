@@ -225,7 +225,8 @@ object ModelTester {
                     val reasoningRejected = m.reasoning && response.code in 400..499 &&
                         (lowerBody.contains("reasoning_effort") || lowerBody.contains("reasoning effort") ||
                          lowerBody.contains("unknown parameter") || lowerBody.contains("unsupported parameter") ||
-                         lowerBody.contains("unrecognized request argument"))
+                         lowerBody.contains("unrecognized request argument") ||
+                         (lowerBody.contains("unknown variant") && (lowerBody.contains("effort") || lowerBody.contains("low") || lowerBody.contains("high"))))
                     if (reasoningRejected) {
                         val plainRoot = root.deepCopy().apply { remove("reasoning_effort") }
                         val plainRequest = Request.Builder()
