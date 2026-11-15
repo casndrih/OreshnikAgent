@@ -1189,6 +1189,47 @@ class RuntimeManager(private val context: Context) {
             File(root, "sqlmap/lib/core/settings.py").isFile
     }.getOrDefault(false)
 
+    /** Restore only manifest-declared, relative symlinks that remain inside this pack. */
+    private fun restoreRuntimeSymlinks(root: File) {
+        val manifestFile = File(root, "runtime.json")
+        require(manifestFile.isFile) { "Runtime manifest is missing." }
+        val manifest = gson.fromJson(manifestFile.readText(), JsonObject::class.java)
+        val links = manifest.getAsJsonObject("symlinks") ?: return
+        val rootPath = root.canonicalFile.toPath()
+        val validated = links.entrySet().map { (relative, targetElement) ->
+            val normalized = relative.replace('\\', '/')
+            require(
+                normalized.isNotBlank() && !normalized.startsWith('/') &&
+                    !Regex("^[A-Za-z]:").containsMatchIn(normalized) &&
+                    normalized.split('/').none { it.isBlank() || it == "." || it == ".." },
+            ) { "Unsafe runtime symlink path: $relative" }
+            val target = targetElement.asString
+            val targetPath = java.nio.file.Paths.get(target)
+            require(!targetPath.isAbsolute && '\u0000' !in target) { "Unsafe runtime symlink target: $target" }
+            val linkPath = rootPath.resolve(normalized).normalize()
+            require(linkPath.startsWith(rootPath) && linkPath != rootPath) { "Runtime symlink path escaped the pack." }
+            val resolvedTarget = linkPath.parent.resolve(targetPath).normalize()
+            require(resolvedTarget.startsWith(rootPath) && resolvedTarget != rootPath) {
+                "Runtime symlink target escaped the pack: $relative"
+            }
+            linkPath to targetPath
+        }.sortedBy { it.first.nameCount }
+
+        validated.forEach { (linkPath, targetPath) ->
+            val parent = linkPath.parent
+            java.nio.file.Files.createDirectories(parent)
+            require(parent.toRealPath().startsWith(rootPath)) { "Runtime symlink parent escaped the pack." }
+            require(!java.nio.file.Files.exists(linkPath, java.nio.file.LinkOption.NOFOLLOW_LINKS)) {
+                "Runtime symlink would overwrite an existing file: $linkPath"
+            }
+            java.nio.file.Files.createSymbolicLink(linkPath, targetPath)
+        }
+        validated.forEach { (linkPath, _) ->
+            val resolved = linkPath.toRealPath()
+            require(resolved.startsWith(rootPath)) { "Runtime symlink resolved outside the pack: $linkPath" }
+        }
+    }
+
     private fun readManifest(root: File): ManifestData? = runCatching {
         val f = File(root, "runtime.json")
         if (!f.isFile) return null
@@ -1298,6 +1339,7 @@ class RuntimeManager(private val context: Context) {
                 }
             }
 
+            restoreRuntimeSymlinks(staging)
             val stagedManifest = readManifest(staging) ?: error("runtime.json is missing or invalid")
             val stagedPackId = stagedManifest.id
             relocateRuntimeShebangs(staging)
