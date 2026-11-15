@@ -100,6 +100,8 @@ class ToolCollaborationSession(val id: String) {
  * excluded; each delegated tool still goes through its own permission broker. */
 object ToolCollaborationPolicy {
     private val allowed = setOf(
+        "file.list", "file.read", "file.search", "git.status", "git.diff", "git.log",
+        "runtime.info", "skills.list", "memory.stats", "analysis.context",
         "re.ida.capabilities", "re.ida.analyze", "re.ida.xref", "re.r2.analyze", "re.rabin2",
         "re.ghidra.capabilities", "re.ghidra.analyze", "re.ghidra.decompile", "re.ghidra.xref",
         "re.mem.ida_correlate", "mem.regions", "mem.scan", "mem.visual.verify", "mem.inject.verify",
