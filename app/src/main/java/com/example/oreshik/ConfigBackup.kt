@@ -56,7 +56,7 @@ object ConfigBackup {
     fun suggestedFileName(): String =
         "oreshik_agent_backup_" +
             SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) +
-            ".json"
+            ".oreshik.enc"
 
     /** One-line summary of what a backup would contain (shown in the Settings status line). */
     fun buildSummaryLine(db: AgentDatabase): String = buildString {
@@ -79,7 +79,7 @@ object ConfigBackup {
     }
 
     /**
-     * Builds the full backup JSON on a worker thread and streams it to the SAF uri.
+     * Builds the full backup payload on a worker thread and streams it to the SAF uri.
      * Returns a human-readable success line (row counts) for the status view.
      */
     suspend fun writeBackup(context: Context, uri: Uri, passphrase: CharArray? = null): Result<String> = withContext(Dispatchers.IO) {
