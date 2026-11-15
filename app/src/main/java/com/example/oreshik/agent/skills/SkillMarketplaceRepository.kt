@@ -29,7 +29,7 @@ class SkillMarketplaceRepository {
         .followRedirects(true)
         .build()
 
-    suspend fun search(query: String, limit: Int = 40): Result<List<RemoteSkill>> = withContext(Dispatchers.IO) {
+    suspend fun search(query: String, limit: Int = 100): Result<List<RemoteSkill>> = withContext(Dispatchers.IO) {
         val clean = query.trim()
         if (clean.length < 2) return@withContext Result.failure(IllegalArgumentException("Enter at least two search characters."))
         runCatching {
