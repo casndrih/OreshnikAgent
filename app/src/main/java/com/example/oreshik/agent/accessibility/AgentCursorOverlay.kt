@@ -31,7 +31,7 @@ import android.widget.ImageView
 object AgentCursorOverlay {
     private const val CURSOR_SIZE = 48
     private const val CURSOR_PADDING = 0
-    private const val CURSOR_VIEW_SIZE = CURSOR_SIZE + CURSOR_GLOW_PADDING * 2
+    private const val CURSOR_VIEW_SIZE = CURSOR_SIZE + CURSOR_PADDING * 2
     private const val CURSOR_TAP_SIZE = 76
     private const val FADE_MS = 500L
     private const val IDLE_MS = 1500L
@@ -178,7 +178,7 @@ object AgentCursorOverlay {
             // The arrow is centered inside its cursor view. Align its tip
             // (28% x / 12% y of the arrow) with the real screen coordinate.
             val density = cursor.resources.displayMetrics.density
-            val arrowOrigin = CURSOR_GLOW_PADDING * density
+            val arrowOrigin = CURSOR_PADDING * density
             val arrowSize = CURSOR_SIZE * density
             lp.x = (x - arrowOrigin - arrowSize * 0.28f).toInt()
             lp.y = (y - arrowOrigin - arrowSize * 0.12f).toInt()
