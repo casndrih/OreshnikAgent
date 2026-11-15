@@ -16,6 +16,12 @@ class PermissionBroker(private val manager: PermissionManager) {
     enum class Decision { ALLOW_ONCE, ALWAYS_ALLOW, DENY }
 
     suspend fun require(tool: String, permissions: Set<ToolPermission>): Boolean {
+        // Explicit denies and disabled top-level capabilities are not overridable
+        // by a transient "Allow once" dialog.
+        if (manager.isDenied(tool) || manager.isHardDenied(permissions)) {
+            AppLogger.w(TAG, "require: hard denied tool=$tool")
+            return false
+        }
         return manager.check(tool, permissions) || mutex.withLock {
             if (manager.check(tool, permissions)) return@withLock true
             val decision = onApprovalRequired?.invoke(tool, permissions) ?: Decision.DENY
