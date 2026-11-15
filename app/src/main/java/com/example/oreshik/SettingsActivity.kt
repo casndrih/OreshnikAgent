@@ -35,10 +35,8 @@ class SettingsActivity : AppCompatActivity() {
      * suggested file name; on confirmation the JSON is written on a worker thread.
      */
     private val backupLauncher =
-        registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
-            if (uri != null) {
-                writeBackupTo(uri)
-            }
+        registerForActivityResult(ActivityResultContracts.CreateDocument("application/octet-stream")) { uri ->
+            if (uri != null) promptBackupPassphrase { passphrase -> writeBackupTo(uri, passphrase) }
         }
 
     /** SAF "open file" launcher for restoring a previously saved config backup. */
@@ -276,14 +274,15 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     /** Writes the full config backup JSON to the chosen SAF uri (worker thread). */
-    private fun writeBackupTo(uri: Uri) {
+    private fun writeBackupTo(uri: Uri, passphrase: CharArray) {
         val status = findViewById<TextView>(R.id.tvBackupStatus)
         status.text = getString(R.string.backup_preparing_status)
         lifecycleScope.launch {
-            val result = withContext(Dispatchers.IO) { ConfigBackup.writeBackup(this@SettingsActivity, uri) }
+            val result = withContext(Dispatchers.IO) { ConfigBackup.writeBackup(this@SettingsActivity, uri, passphrase) }
+            passphrase.fill('\\u0000')
             result.onSuccess { msg ->
                 status.text = msg
-                Toast.makeText(this@SettingsActivity, "Backup saved", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SettingsActivity, "Encrypted backup saved", Toast.LENGTH_SHORT).show()
             }.onFailure { e ->
                 status.text = getString(R.string.backup_write_failed_fmt, e.message ?: "unknown error")
                 Toast.makeText(this@SettingsActivity, "Backup failed", Toast.LENGTH_LONG).show()
@@ -296,17 +295,18 @@ class SettingsActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle(R.string.backup_confirm_overwrite_title)
             .setMessage(R.string.backup_confirm_overwrite)
-            .setPositiveButton(R.string.restore_button) { _, _ -> restoreFrom(uri) }
+            .setPositiveButton(R.string.restore_button) { _, _ -> promptRestorePassphrase { passphrase -> restoreFrom(uri, passphrase) } }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
     /** Restores the full config from the chosen backup file (worker thread). */
-    private fun restoreFrom(uri: Uri) {
+    private fun restoreFrom(uri: Uri, passphrase: CharArray?) {
         val status = findViewById<TextView>(R.id.tvBackupStatus)
         status.text = getString(R.string.backup_restoring_status)
         lifecycleScope.launch {
-            val result = withContext(Dispatchers.IO) { ConfigBackup.restore(this@SettingsActivity, uri) }
+            val result = withContext(Dispatchers.IO) { ConfigBackup.restore(this@SettingsActivity, uri, passphrase) }
+            passphrase?.fill('\\u0000')
             result.onSuccess { msg ->
                 status.text = msg
                 Toast.makeText(this@SettingsActivity, "Restore complete", Toast.LENGTH_SHORT).show()
@@ -316,6 +316,48 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
     }
+
+    /** Collects a passphrase without adding a new screen or changing the Settings layout. */
+    private fun promptBackupPassphrase(onSubmit: (CharArray) -> Unit) {
+        val input = EditText(this).apply {
+            inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+            hint = "At least 10 characters"
+            setSingleLine(true)
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Encrypt configuration backup")
+            .setMessage("The backup includes provider credentials, chats, memories and settings. Keep this passphrase safe; it cannot be recovered.")
+            .setView(input)
+            .setPositiveButton("Continue") { _, _ ->
+                val passphrase = input.text?.toString()?.toCharArray() ?: charArrayOf()
+                if (passphrase.size < 10) {
+                    passphrase.fill('\\u0000')
+                    Toast.makeText(this, "Use at least 10 characters", Toast.LENGTH_LONG).show()
+                } else onSubmit(passphrase)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    /** Blank is accepted only to retain compatibility with older plain JSON backups. */
+    private fun promptRestorePassphrase(onSubmit: (CharArray?) -> Unit) {
+        val input = EditText(this).apply {
+            inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+            hint = "Backup passphrase (blank for legacy JSON)"
+            setSingleLine(true)
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Restore configuration backup")
+            .setMessage("Enter the passphrase used when the backup was created. Legacy unencrypted JSON backups can be restored with an empty value.")
+            .setView(input)
+            .setPositiveButton("Restore") { _, _ ->
+                val value = input.text?.toString().orEmpty()
+                onSubmit(value.takeIf(String::isNotEmpty)?.toCharArray())
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
     private fun bindSwitch(id:Int, checked:Boolean, action:(Boolean)->Unit){ findViewById<SwitchMaterial>(id).apply { isChecked=checked; setOnCheckedChangeListener{_,v->action(v)} } }
     private fun updateAccessibility(){
         val manager = getSystemService(AccessibilityManager::class.java)
