@@ -120,8 +120,11 @@ object ConfigBackup {
             }
 
             val json = gson.toJson(root)
+            val plainBytes = json.toByteArray(Charsets.UTF_8)
+            val payload = if (passphrase != null) encryptBackup(plainBytes, passphrase) else plainBytes
             context.contentResolver.openOutputStream(uri, "wt")?.use { out ->
-                out.write(json.toByteArray(Charsets.UTF_8))
+                out.write(payload)
+                out.flush()
             } ?: error("Could not open the selected file for writing")
 
             AppLogger.i(TAG, "backup written: settings=${settings.size} sessions=${sessions.size} " +
@@ -148,8 +151,15 @@ object ConfigBackup {
      */
     suspend fun restore(context: Context, uri: Uri, passphrase: CharArray? = null): Result<String> = withContext(Dispatchers.IO) {
         runCatching {
-            val raw = context.contentResolver.openInputStream(uri)?.use { readBounded(it) }
-                ?.toString(Charsets.UTF_8) ?: error("Could not read the selected file")
+            val encoded = context.contentResolver.openInputStream(uri)?.use { readBounded(it) }
+                ?: error("Could not read the selected file")
+            val plain = if (isEncryptedBackup(encoded)) {
+                require(passphrase != null && passphrase.isNotEmpty()) {
+                    "This backup is encrypted. Enter its passphrase to restore it."
+                }
+                decryptBackup(encoded, passphrase)
+            } else encoded
+            val raw = plain.toString(Charsets.UTF_8)
             val root = Gson().fromJson(raw, JsonObject::class.java)
                 ?: error("Not a Oreshik Agent backup file")
             // The wrapper marker is written as a boolean primitive (schema metadata then
