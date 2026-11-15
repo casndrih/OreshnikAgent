@@ -165,14 +165,14 @@ def main():
             if src.is_dir():
                 dst=stage/directory
                 dst.mkdir(parents=True,exist_ok=True)
-                subprocess.run(["rsync","-aL","--safe-links",str(src)+"/",str(dst)+"/"],check=True)
+                subprocess.run(["rsync","-a",str(src)+"/",str(dst)+"/"],check=True)
         share=source/"share"
         for directory in ("nmap","misc","git-core","terminfo","zoneinfo"):
             src=share/directory
             if src.is_dir():
                 dst=stage/"share"/directory
                 dst.mkdir(parents=True,exist_ok=True)
-                subprocess.run(["rsync","-aL","--safe-links",str(src)+"/",str(dst)+"/"],check=True)
+                subprocess.run(["rsync","-a",str(src)+"/",str(dst)+"/"],check=True)
         # Retain regular per-package copyright/license texts when supplied.
         docs=share/"doc"
         if docs.is_dir():
@@ -196,6 +196,17 @@ def main():
                 print(f"Payload directory {child.name}: {total} bytes",flush=True)
         for path in sorted(all_files,key=lambda p:p.stat().st_size,reverse=True)[:25]:
             print(f"Largest payload file: {path.relative_to(stage)} {path.stat().st_size} bytes",flush=True)
+        # Recreate safe, relative package symlinks at install time instead of
+        # dereferencing them into duplicate multi-megabyte binaries.
+        symlinks={}
+        for link in list(stage.rglob("*")):
+            if not link.is_symlink(): continue
+            target=os.readlink(link)
+            resolved=(link.parent/target).resolve(strict=False)
+            if os.path.isabs(target) or not str(resolved).startswith(str(stage.resolve())+os.sep) or not resolved.exists():
+                link.unlink()
+                continue
+            symlinks[link.relative_to(stage).as_posix()]=target
         patch_shebangs(stage)
         entrypoints={name:f"bin/{name}" for name in ENTRYPOINTS if (stage/"bin"/name).is_file()}
         if "curl" not in entrypoints and "curlie" in entrypoints:
@@ -205,12 +216,13 @@ def main():
         date=re.search(r"(?m)^Date:\s*(.+)$",release_text)
         date_label=re.sub(r"[^0-9A-Za-z.-]","-",date.group(1).strip()) if date else "rolling"
         version=f"{date_label}-{index_sha[:12]}"
-        manifest={"id":"termux-arm64","version":version,"entrypoints":entrypoints,"source":"https://packages.termux.dev/apt/termux-main","architecture":"aarch64","packageIndexSha256":index_sha,"packages":metadata}
+        manifest={"id":"termux-arm64","version":version,"entrypoints":entrypoints,"source":"https://packages.termux.dev/apt/termux-main","architecture":"aarch64","packageIndexSha256":index_sha,"packages":metadata,"symlinks":symlinks}
         (stage/"runtime.json").write_text(json.dumps(manifest,indent=2)+"\n")
         (stage/"PACKAGE-METADATA.json").write_text(json.dumps(metadata,indent=2)+"\n")
         args.output.parent.mkdir(parents=True,exist_ok=True)
         with zipfile.ZipFile(args.output,"w",zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as archive:
             for path in sorted(stage.rglob("*")):
+                if path.is_symlink(): continue
                 if path.is_file(): archive.write(path,path.relative_to(stage).as_posix())
         digest=hashlib.sha256(args.output.read_bytes()).hexdigest()
         args.output.with_suffix(args.output.suffix+".sha256").write_text(f"{digest}  {args.output.name}\n")
