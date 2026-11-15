@@ -73,9 +73,7 @@ jobs:
             git commit -m "Extract patched Android source into main"
             git fetch origin main
             git rebase origin/main
-            git fetch origin main
-git rebase origin/main
-git push origin HEAD:main
+            git push origin HEAD:main
           else
             echo "No source changes to commit"
           fi
@@ -147,9 +145,7 @@ git push origin HEAD:main
             git commit -m "Publish verified release APK in repository root"
             git fetch origin main
             git rebase origin/main
-            git fetch origin main
-git rebase origin/main
-git push origin HEAD:main
+            git push origin HEAD:main
           fi
 
       - name: Upload release APK
