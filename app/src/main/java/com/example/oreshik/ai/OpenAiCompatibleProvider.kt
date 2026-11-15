@@ -155,6 +155,19 @@ class OpenAiCompatibleProvider(
 
     override fun createApiClient(): AiApiClient = OpenAiCompatibleApiClient()
 
+    private fun persistedReasoningSupport(model: String): Boolean? = runCatching {
+        val raw = config.getRaw("modeltest_$id")
+        if (raw.isBlank()) return@runCatching null
+        val rows = JsonParser.parseString(raw).asJsonArray
+        for (row in rows) {
+            if (!row.isJsonObject) continue
+            val item = row.asJsonObject
+            if (item.get("id")?.takeUnless { it.isJsonNull }?.asString != model) continue
+            return@runCatching item.get("reasoningVerified")?.takeUnless { it.isJsonNull }?.asBoolean
+        }
+        null
+    }.getOrNull()
+
     private fun likelyReasoningModel(model: String): Boolean {
         val id = model.lowercase()
         return listOf("deepseek-r", "deepseek-v3.2", "deepseek-v4", "qwq", "qwen3", "reason", "thinking", "o1", "o3", "o4", "r1").any { it in id }
@@ -199,8 +212,9 @@ class OpenAiCompatibleProvider(
             }
             if (model.isBlank()) return@withContext Result.failure(IllegalStateException("Choose a model from this provider's model list first."))
             try {
+                val knownReasoning = reasoningSupport[model] ?: persistedReasoningSupport(model)
                 val shouldSendReasoning = reasoningEffort.isNotBlank() && !reasoningEffort.equals("off", true) &&
-                    (reasoningSupport[model] ?: likelyReasoningModel(model))
+                    (knownReasoning ?: likelyReasoningModel(model))
                 val body = JsonObject().apply {
                     addProperty("model", model)
                     add("messages", messages.getAsJsonArray("messages") ?: JsonArray())
