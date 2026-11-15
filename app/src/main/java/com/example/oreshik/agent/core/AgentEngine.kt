@@ -485,6 +485,7 @@ class AgentEngine(
             result.isSuccess,
             promptTokens,
             completionTokens,
+            usageReported = usage != null,
         )
     }
 
