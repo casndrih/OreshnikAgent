@@ -20,13 +20,12 @@ class WorkflowBuilderTool : AgentTool {
         "runtime.info", "skills.list", "memory.stats", "analysis.context",
         "re.ida.capabilities", "re.ida.analyze", "re.ida.xref",
         "re.ghidra.capabilities", "re.ghidra.analyze", "re.ghidra.decompile", "re.ghidra.xref",
-        "web.sqli.passive", "web.xssscan", "web.headervuln", "net.portscan",
     )
 
     override val definition = ToolDefinition(
         name = "workflow.manage",
         category = ToolCategory.SKILLS,
-        description = "Build, list, delete and run saved read-only tool workflows. Workflow steps are limited to inspection and analysis tools; writes, shell execution, device actions and credential-bearing tools are not allowed.",
+        description = "Build, list, delete and run saved read-only tool workflows. Workflow steps are limited to local inspection and static analysis; network probes, writes, shell execution, device actions and credential-bearing tools are not allowed.",
         permissions = setOf(ToolPermission.READ_WORKSPACE),
         parameters = mapOf(
             "action" to "string (list, create, delete, run, resume)",
