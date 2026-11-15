@@ -382,10 +382,7 @@ The following are **proposed enhancements**, not claims about features already s
 
 ### P1 — Agent quality and control
 
-- Add audit-log retention controls, configurable filtering, and export for the existing redacted tool audit trail.
-- Add task plans with visible steps, cancellation, retry, and resumable execution.
-- Add an in-app audit-log viewer, retention controls, and export for the existing redacted tool audit trail.
-- Add workspace snapshots and one-tap rollback for automated file edits.
+- Add a visual task-plan panel with cancellation and pause/resume controls (workflow step retries and resume checkpoints are available through agent tools).
 - Add token, latency, and cost tracking for remote providers.
 - Add provider capability detection for vision, tool calling, streaming, context limits, and structured output.
 
@@ -395,7 +392,6 @@ The following are **proposed enhancements**, not claims about features already s
 - Add runtime health checks and self-repair for Python, Java, Node.js, Gradle, Git, database, and reverse-engineering toolchains.
 - Add a terminal-style interactive task console with live output and process controls.
 - Extend Git remote support with branch management, commit creation, and patch export with explicit approval.
-- Add project templates and guided Android, Kotlin, Python, and web project setup.
 - Add import/export for skills, memory, settings, and workspaces.
 
 ### P3 — Advanced capabilities
@@ -403,9 +399,9 @@ The following are **proposed enhancements**, not claims about features already s
 - Add a multi-agent task board with specialist roles, shared artifacts, and review gates.
 - Extend encrypted configuration backups to include workspace snapshots and optional encrypted memory-at-rest.
 - Add local embedding/index management and configurable retrieval policies.
-- Add a visual workflow builder for reusable automations.
-- Add accessibility test playback and UI regression snapshots.
-- Add scheduled tasks with clear battery, network, and background-execution controls.
+- Add a visual workflow editor (the agent-driven read-only workflow builder, retries, resume checkpoints, and persistent schedules are implemented).
+- Add UI regression snapshot comparison (bounded accessibility sequence playback is implemented).
+
 - Add a plugin/extension API with signed packages and strict capability permissions.
 
 Community feedback and contributions can help prioritize this roadmap.
