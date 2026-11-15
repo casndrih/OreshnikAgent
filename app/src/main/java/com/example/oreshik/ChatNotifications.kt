@@ -1,14 +1,18 @@
 package com.example.oreshik
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.content.pm.PackageManager
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.edit
+import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 
 /** Keeps the background chat notification and per-session response notices in sync. */
@@ -60,9 +64,10 @@ internal object ChatNotifications {
     fun isCurrentSession(context: Context, sessionId: String): Boolean =
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getString(KEY_CURRENT_SESSION, null) == sessionId
 
+    @SuppressLint("MissingPermission")
     fun postCurrentChat(context: Context, sessionId: String, title: String, preview: String) {
         val app = context.applicationContext
-        if (isDeleted(app, sessionId) || !isCurrentSession(app, sessionId)) return
+        if (!canPostNotifications(app) || isDeleted(app, sessionId) || !isCurrentSession(app, sessionId)) return
         cancelResponse(app, sessionId)
         ensureCurrentChannel(app)
         NotificationManagerCompat.from(app).notify(
@@ -72,9 +77,10 @@ internal object ChatNotifications {
         )
     }
 
+    @SuppressLint("MissingPermission")
     fun postResponse(context: Context, sessionId: String, title: String, body: String) {
         val app = context.applicationContext
-        if (isDeleted(app, sessionId)) return
+        if (!canPostNotifications(app) || isDeleted(app, sessionId)) return
         if (isAppBackgrounded(app) && isCurrentSession(app, sessionId)) {
             postCurrentChat(app, sessionId, title, body)
             return
@@ -105,6 +111,11 @@ internal object ChatNotifications {
     fun cancelCurrent(context: Context) {
         runCatching { NotificationManagerCompat.from(context).cancel(CURRENT_TAG, CURRENT_ID) }
     }
+
+    private fun canPostNotifications(context: Context): Boolean =
+        Build.VERSION.SDK_INT < 33 ||
+            ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) ==
+            PackageManager.PERMISSION_GRANTED
 
     private fun isDeleted(context: Context, sessionId: String): Boolean =
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
