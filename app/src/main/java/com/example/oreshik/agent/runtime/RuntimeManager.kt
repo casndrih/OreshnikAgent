@@ -1229,10 +1229,10 @@ class RuntimeManager(private val context: Context) {
                     val relocated = firstLine.replace("@RUNTIME_PREFIX@", root.absolutePath)
                     raf.seek(0)
                     raf.setLength(0)
-                    raf.write((relocated + "\\n").toByteArray(Charsets.UTF_8))
+                    raf.write((relocated + "\n").toByteArray(Charsets.UTF_8))
                     raf.write(tail)
                 }
-            }.onFailure { AppLogger.w(TAG, "Could not relocate runtime script ${file.name}: ${it.message}") }
+            }.getOrElse { throw IllegalStateException("Could not relocate runtime script ${file.name}", it) }
         }
     }
 
