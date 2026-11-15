@@ -21,8 +21,8 @@ permissions:
   actions: read
 
 concurrency:
-  group: oreshik-main-build-v4
-  cancel-in-progress: false
+  group: oreshik-main-build-v5
+  cancel-in-progress: true
 
 jobs:
   extract-and-build:
