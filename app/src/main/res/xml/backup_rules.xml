@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- API keys and conversation data live in Room; export them only through the
+         app's explicit backup flow, which warns that its JSON file contains keys. -->
+    <exclude domain="database" path="." />
+    <!-- Spoken conversation history is stored in this preference file. -->
+    <exclude domain="sharedpref" path="voice_conversation.xml" />
+    <!-- ChatGPT OAuth tokens are Keystore-encrypted and must be reacquired after restore. -->
+    <exclude domain="sharedpref" path="chatgpt_plan_credentials.xml" />
+</full-backup-content>

@@ -1,0 +1,22 @@
+# Local Android/Gradle state
+.gradle/
+**/build/
+local.properties
+**/local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Local app databases and credentials
+**/*.db
+**/*.db-shm
+**/*.db-wal
+keystore.properties
+*.jks
+*.keystore
+
+# Python/build caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/

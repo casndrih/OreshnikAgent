@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_net_port_recon",
+   "name": "Port discovery",
+   "description": "Map open ports on a target host.",
+   "instructions": "Workflow:\n1. net.portscan on the target with a sensible port range.\n2. Note each open port and probable service.\n3. Cross-check with http.capture when the port serves web content.\n4. Report the map with service guesses.",
+   "enabled": true
+  },
+  {
+   "id": "cat_net_diag_run",
+   "name": "Network diagnostics",
+   "description": "Run connectivity checks before blaming the app.",
+   "instructions": "Workflow:\n1. process.exec ping/curl checks against the target host.\n2. Compare DNS resolution vs direct IP.\n3. Classify: DNS, routing, TLS, or application-layer failure.\n4. Report with concrete numbers (latency, status codes).",
+   "enabled": true
+  },
+  {
+   "id": "cat_http_capture_start",
+   "name": "HTTP capture session",
+   "description": "Capture app traffic for inspection.",
+   "instructions": "Workflow:\n1. http.capture to start the session.\n2. Exercise the app flow on device (androidclickelement etc).\n3. http.history to review captured requests.\n4. Stop capture; summarize interesting endpoints.",
+   "enabled": true
+  },
+  {
+   "id": "cat_http_history_read",
+   "name": "Traffic history analysis",
+   "description": "Mine captured traffic for API behavior.",
+   "instructions": "Workflow:\n1. http.history to list requests.\n2. Group by endpoint; note verbs and status codes.\n3. file.write an annotated summary for the session.\n4. Flag auth headers and tokens (report presence, never values).",
+   "enabled": false
+  },
+  {
+   "id": "cat_http_replay_req",
+   "name": "Request replay",
+   "description": "Re-send a captured request with changes.",
+   "instructions": "Workflow:\n1. Pick the request from http.history.\n2. http.replay with the intended modification.\n3. Compare the response to the original.\n4. Document what the change caused; stop at any auth error.",
+   "enabled": false
+  },
+  {
+   "id": "cat_http_repeat_load",
+   "name": "Request repetition",
+   "description": "Repeat a request to test consistency.",
+   "instructions": "Workflow:\n1. http.capture.repeat with the target request and count.\n2. Keep counts modest; do not load services.\n3. Analyze response variance (latency, status, body deltas).\n4. Summarize stability findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_http_modify_test",
+   "name": "Traffic modification testing",
+   "description": "Modify requests in flight to test server trust.",
+   "instructions": "Workflow:\n1. http.capture.modify to set the interception rule.\n2. Trigger the flow in the app.\n3. Review modified vs original responses.\n4. Restore the rule afterwards; note any state corruption.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tcpdump_capture",
+   "name": "Packet capture analysis",
+   "description": "Deep packet inspection with tcpdump.",
+   "instructions": "Workflow:\n1. tcpdump.capture with a tight filter (host or port).\n2. Reproduce the network action.\n3. packet.capture.stop to end collection.\n4. Analyze the pcap; summarize protocols and anomalies.",
+   "enabled": false
+  },
+  {
+   "id": "cat_traffic_env_info",
+   "name": "Traffic environment status",
+   "description": "Know the capture environment before analysis.",
+   "instructions": "Workflow:\n1. traffic.capture.info for VPN/capture readiness.\n2. Resolve any missing prerequisites before starting.\n3. Confirm capture works with a test request.\n4. Only then run the real session.",
+   "enabled": false
+  },
+  {
+   "id": "cat_https_insight",
+   "name": "HTTPS traffic insight",
+   "description": "Understand what is visible under TLS.",
+   "instructions": "Workflow:\n1. Note that raw tcpdump shows SNI/IP only for HTTPS.\n2. Use http.capture (VPN-layer) for app-level visibility.\n3. If nothing is visible, the app may pin certificates; say so.\n4. Report what layer each observation came from.",
+   "enabled": false
+  },
+  {
+   "id": "cat_proxy_chain_test",
+   "name": "Proxy chain testing",
+   "description": "Validate proxies before relying on them.",
+   "instructions": "Workflow:\n1. Test connectivity through each proxy with process.exec curl.\n2. Note latency and failure modes.\n3. Discard dead or leaking proxies.\n4. Report the working set with speeds.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dns_checks",
+   "name": "DNS problem isolation",
+   "description": "Diagnose DNS failures precisely.",
+   "instructions": "Workflow:\n1. process.exec nslookup/getent against the failing host.\n2. Compare with a known-good resolver.\n3. Test IP-direct access to separate DNS from routing.\n4. Recommend the fix (resolver change, hosts entry, VPN).",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_discovery",
+   "name": "API surface discovery",
+   "description": "Enumerate an app API from traffic.",
+   "instructions": "Workflow:\n1. Capture a broad app walkthrough with http.capture.\n2. Collect unique endpoints from http.history.\n3. Order by importance (auth, data, config).\n4. Document request/response shapes for key endpoints.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_auth_flow",
+   "name": "Auth flow analysis",
+   "description": "Understand how an app authenticates.",
+   "instructions": "Workflow:\n1. Capture login from start to token issuance.\n2. Identify token type (bearer, cookie, custom header).\n3. Note refresh mechanisms in the traffic.\n4. Summarize the flow with a sequence sketch.",
+   "enabled": false
+  },
+  {
+   "id": "cat_webhook_probe",
+   "name": "Webhook behavior probe",
+   "description": "Test webhook receivers safely.",
+   "instructions": "Workflow:\n1. Send minimal test payloads with http.replay.\n2. Verify receipt in the target system.\n3. Test rejection paths (bad signature) deliberately.\n4. Report observed validation behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rate_limit_probe",
+   "name": "Rate limit detection",
+   "description": "Find an API rate limits without abuse.",
+   "instructions": "Workflow:\n1. Send a small, increasing sequence with http.capture.repeat.\n2. Watch for 429s or throttling signals.\n3. Stop at the first limit signal.\n4. Document the observed thresholds.",
+   "enabled": false
+  },
+  {
+   "id": "cat_error_response_map",
+   "name": "Error response mapping",
+   "description": "Catalog API error behavior.",
+   "instructions": "Workflow:\n1. Replay requests with deliberately invalid fields (http.replay).\n2. Collect error shapes and codes.\n3. Group into client vs server error classes.\n4. Summarize the error contract for the API.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ssl_diag",
+   "name": "TLS handshake diagnostics",
+   "description": "Debug certificate and handshake failures.",
+   "instructions": "Workflow:\n1. process.exec openssl s_client or curl -v against the host.\n2. Read the certificate chain and verify dates.\n3. Classify: expired, untrusted, pinned, or protocol mismatch.\n4. Recommend the precise fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_bandwidth_measure",
+   "name": "Bandwidth measurement",
+   "description": "Quantify transfer speeds to a host.",
+   "instructions": "Workflow:\n1. Download a known-size object via process.exec curl -o with timing.\n2. Compute throughput.\n3. Repeat at different times if variance matters.\n4. Report a small table of runs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_websocket_trace",
+   "name": "WebSocket session tracing",
+   "description": "Observe WS frame flows.",
+   "instructions": "Workflow:\n1. Capture the session with tcpdump.capture or app-level tools.\n2. Note handshake upgrade and frame patterns.\n3. Identify control vs data frames.\n4. Summarize the protocol rhythm.",
+   "enabled": false
+  },
+  {
+   "id": "cat_header_audit",
+   "name": "HTTP header audit",
+   "description": "Assess security headers of a web target.",
+   "instructions": "Workflow:\n1. Fetch headers with process.exec curl -I.\n2. Check HSTS, CSP, X-Frame-Options, cookie flags.\n3. Note missing protections with impact notes.\n4. Use web.headervuln for the automated pass and merge results.",
+   "enabled": false
+  },
+  {
+   "id": "cat_vpn_autotune",
+   "name": "VPN auto-tuning",
+   "description": "Let the network tuner pick a working path.",
+   "instructions": "Workflow:\n1. Confirm auto-VPN is enabled in settings.\n2. Trigger a connectivity check; observe tuner decisions.\n3. Validate the chosen path with a real request.\n4. Report the outcome; disable if it degrades performance.",
+   "enabled": false
+  },
+  {
+   "id": "cat_packet_filter_design",
+   "name": "Packet filter design",
+   "description": "Write precise tcpdump filters.",
+   "instructions": "Workflow:\n1. Decide exactly what traffic matters (host, port, protocol).\n2. Draft a narrow BPF filter.\n3. Test briefly with tcpdump.capture; adjust.\n4. Capture the real session with the final filter.",
+   "enabled": false
+  },
+  {
+   "id": "cat_capture_privacy",
+   "name": "Capture data hygiene",
+   "description": "Handle captured traffic responsibly.",
+   "instructions": "Workflow:\n1. Treat captured tokens and cookies as sensitive.\n2. In reports, show header names, never values.\n3. Clear history when done (http.history.clear).\n4. Note retention expectations to the user.",
+   "enabled": false
+  },
+  {
+   "id": "cat_replay_guardrails",
+   "name": "Replay safety guardrails",
+   "description": "Avoid harmful replay behavior.",
+   "instructions": "Workflow:\n1. Never replay state-changing requests (POST/DELETE) against production without approval.\n2. Prefer read-only endpoints for testing.\n3. Use tiny counts with http.capture.repeat.\n4. Confirm targets are the user's own systems.",
+   "enabled": false
+  },
+  {
+   "id": "cat_latency_breakdown",
+   "name": "Latency breakdown",
+   "description": "Find where time goes in a slow request.",
+   "instructions": "Workflow:\n1. curl -w timing breakdown via process.exec (DNS, connect, TLS, TTFB).\n2. Repeat 3 times; note variance.\n3. Identify the dominant phase.\n4. Recommend the targeted fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_capture_replay_pair",
+   "name": "Capture-replay pair testing",
+   "description": "Prove a modification works end to end.",
+   "instructions": "Workflow:\n1. Capture the original with http.capture.\n2. Craft the modified variant with http.replay.\n3. Compare responses side by side.\n4. Document the exact change that produced the difference.",
+   "enabled": false
+  },
+  {
+   "id": "cat_multi_endpoint_sweep",
+   "name": "Multi-endpoint health sweep",
+   "description": "Check many endpoints quickly.",
+   "instructions": "Workflow:\n1. List endpoints from http.history or user input.\n2. Sweep with small curl checks via process.exec.\n3. Record status and latency per endpoint.\n4. Summarize a health table.",
+   "enabled": false
+  },
+  {
+   "id": "cat_proxy_rotation",
+   "name": "Proxy rotation usage",
+   "description": "Use the proxy pool effectively.",
+   "instructions": "Workflow:\n1. ProxyRotator state check via process.exec or app settings.\n2. Rotate on failure, not preemptively.\n3. Track which proxies serve which requests.\n4. Report proxy performance stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_network_baseline",
+   "name": "Network baseline profile",
+   "description": "Establish a device network baseline.",
+   "instructions": "Workflow:\n1. Run diagnostics (cat_net_diag_run flow) against 3 reference hosts.\n2. Record latency and loss.\n3. Store the baseline with file.write.\n4. Compare future issues against it.",
+   "enabled": false
+  }
+ ]
+}

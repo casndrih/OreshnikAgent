@@ -1,0 +1,292 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ctf_ctf_methodology",
+   "name": "CTF methodology",
+   "description": "Approach challenges systematically.",
+   "instructions": "Workflow:\n1. Read the description twice; list given artifacts (file.list).\n2. Classify the challenge type (web/crypto/pwn/forensics/reversing).\n3. Pick the matching playbook.\n4. Time-box attempts; switch when stuck.\n5. Write up the solution.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_web_recon",
+   "name": "CTF web recon",
+   "description": "Recon challenge web apps.",
+   "instructions": "Workflow:\n1. Fetch the app (web.browser).\n2. Enumerate endpoints (web.dirbrute small).\n3. Read JS for hidden hints (process.exec curl + python.run_file).\n4. Note tech stack from headers (web.headervuln).\n5. Plan attacks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_flag_format",
+   "name": "Flag format discipline",
+   "description": "Hunt flags correctly.",
+   "instructions": "Workflow:\n1. Confirm the flag format from the rules.\n2. Search artifacts for the pattern (python.run_file).\n3. Verify against the platform before submitting.\n4. Track attempts.\n5. Record the solve.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_crypto_basics",
+   "name": "Crypto challenge basics",
+   "description": "Attack classical/weak crypto.",
+   "instructions": "Workflow:\n1. Identify the cipher from ciphertext properties (python.run_file analysis).\n2. Try known attacks for the family (frequency, XOR reuse).\n3. Use python.run_file implementations.\n4. Verify plaintext sanity.\n5. Document the path.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_encoding_chain",
+   "name": "Encoding chain solving",
+   "description": "Decode layered encodings.",
+   "instructions": "Workflow:\n1. Detect layer (base64/hex/gzip) via magic/charset (python.run_file).\n2. Peel layers iteratively.\n3. Stop when flag format appears.\n4. Record the chain.\n5. Save artifacts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_forensics_file",
+   "name": "File forensics basics",
+   "description": "Extract hidden data from files.",
+   "instructions": "Workflow:\n1. Identify type/metadata (re.hex.identify).\n2. carve embedded payloads (python.run_file).\n3. Check stego basics if image (comments/LSB quick check).\n4. Verify findings.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_pcap_analysis",
+   "name": "PCAP challenges",
+   "description": "Analyze packet captures.",
+   "instructions": "Workflow:\n1. Load the pcap (python.run_file scapy if available).\n2. Follow streams; extract payloads (python.run_file).\n3. Filter by protocol/port.\n4. Hunt flag patterns.\n5. Record evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_reversing_static",
+   "name": "Reversing static basics",
+   "description": "Solve static reversing challenges.",
+   "instructions": "Workflow:\n1. re.hex.identify the binary.\n2. re.r2.analyze / re.ghidra.analyze for logic.\n3. Identify the check; extract the condition.\n4. Solve constraints with python.run_file (e.g., z3-style manual).\n5. Verify the flag.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_reversing_dynamic",
+   "name": "Reversing dynamic basics",
+   "description": "Observe running challenges.",
+   "instructions": "Workflow:\n1. Run in your lab (process.exec).\n2. Trace syscalls/strings (process.exec strace/strings).\n3. Patch trivial checks (re.ghidra.analyze-guided, local binary patch).\n4. Capture the revealed secret.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_pwn_intro",
+   "name": "Pwning basics (lab)",
+   "description": "Start binary exploitation safely.",
+   "instructions": "Workflow:\n1. Check protections (process.exec checksec-like).\n2. re.ghidra.analyze for the vulnerable function.\n3. Craft overflow input with pattern (python.run_file).\n4. Find offset; control PC (lab only).\n5. Escalate to shell locally.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_rop_notes",
+   "name": "ROP chain notes",
+   "description": "Build ROP chains in labs.",
+   "instructions": "Workflow:\n1. List gadgets (process.exec ROPgadget if available).\n2. Plan the chain for the goal (execve).\n3. Assemble with python.run_file (struct packing).\n4. Test locally with ASLR off first.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_web_ssti",
+   "name": "SSTI in CTFs",
+   "description": "Solve template injection challenges.",
+   "instructions": "Workflow:\n1. Confirm SSTI with math probes (http.replay).\n2. Fingerprint engine (error-driven).\n3. Use engine-specific payloads (python.run_file list).\n4. Read the flag via allowed primitives.\n5. Write-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_sqlisqli",
+   "name": "SQLi in CTFs",
+   "description": "Solve SQLi challenges fast.",
+   "instructions": "Workflow:\n1. Detect injection point (http.replay errors).\n2. Pick technique per DB (web.sqlmap or manual).\n3. Extract the flag table (limited dumps).\n4. Verify the flag.\n5. Document payload chain.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_jwt_challenges",
+   "name": "JWT challenges",
+   "description": "Solve JWT-based challenges.",
+   "instructions": "Workflow:\n1. Decode the token (python.run_file).\n2. Test alg pitfalls (none/HS-RS confusion) on the challenge.\n3. Forge with the recovered secret.\n4. Access the protected flag endpoint.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_misc_stego",
+   "name": "Steganography quick wins",
+   "description": "Try fast stego checks.",
+   "instructions": "Workflow:\n1. Check metadata/comments (re.hex.identify).\n2. Run LSB/LSB-plane quick views (python.run_file PIL).\n3. Test common passphrases with steghide-like tools if available (process.exec).\n4. Escalate to deeper tools only if promising.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_writeup_style",
+   "name": "CTF write-up style",
+   "description": "Write clean write-ups.",
+   "instructions": "Workflow:\n1. Structure: challenge, path, solution, artifacts (file.write).\n2. Include key commands and snippets.\n3. Redact flags if the event requires.\n4. Publish per event rules.\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_team_notes",
+   "name": "Team CTF coordination",
+   "description": "Coordinate during events.",
+   "instructions": "Workflow:\n1. Shared notes file per challenge (file.write).\n2. Record owners and status.\n3. Hand off with context.\n4. Time-box stuck challenges.\n5. Post-event review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_ctf_practice_plan",
+   "name": "CTF practice plan",
+   "description": "Train deliberately.",
+   "instructions": "Workflow:\n1. Pick a platform (web.search).\n2. Schedule per-category practice.\n3. Review write-ups after attempts.\n4. Track solved categories (file.write).\n5. Adjust focus.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_disclosure_policy_read",
+   "name": "Disclosure policy navigation",
+   "description": "Follow responsible disclosure.",
+   "instructions": "Workflow:\n1. Read the vendor policy (web.crawl).\n2. Use the official channel.\n3. Provide repro steps + impact.\n4. Honor embargo.\n5. Record communications.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_bounty_report_style",
+   "name": "Bounty report style",
+   "description": "Write accepted reports.",
+   "instructions": "Workflow:\n1. Clear title with type+location.\n2. Steps to reproduce from scratch.\n3. Impact with realistic scenario.\n4. Supporting evidence (redacted).\n5. Suggested fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_remediation_advice_lib",
+   "name": "Remediation advice library",
+   "description": "Give precise fixes.",
+   "instructions": "Workflow:\n1. Maintain per-vuln-class fix snippets (file.write).\n2. Cite standards (OWASP) via web.search.\n3. Tailor to the stack.\n4. Include test suggestions.\n5. Keep versioned.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_exec_summary_style",
+   "name": "Executive summaries",
+   "description": "Write for leadership.",
+   "instructions": "Workflow:\n1. One-paragraph risk statement.\n2. Business impact in plain language.\n3. Top 3 actions with owners.\n4. No jargon in the summary.\n5. Detail in appendix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_scan_findings_prioritizer",
+   "name": "Findings prioritizer",
+   "description": "Order work by risk.",
+   "instructions": "Workflow:\n1. Score by (severity x exposure x exploitability) (python.run_file).\n2. Group by system owner.\n3. Propose sprint-sized batches.\n4. Track completion.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_vuln_trend_analysis",
+   "name": "Vulnerability trend analysis",
+   "description": "Analyze trends over time.",
+   "instructions": "Workflow:\n1. Load history (file.read).\n2. Compute trends (python.run_file).\n3. Identify systemic causes.\n4. Propose structural fixes.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_security_champion_notes",
+   "name": "Security champion enablement",
+   "description": "Help teams self-serve.",
+   "instructions": "Workflow:\n1. Prepare per-team checklists (file.write).\n2. Host short walkthroughs (chat/scripts).\n3. Provide tool recipes.\n4. Track adoption.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_red_report_style",
+   "name": "Red team report style",
+   "description": "Write engagement reports.",
+   "instructions": "Workflow:\n1. Structure: scope, methodology, findings, chain narrative.\n2. Attach evidence per finding.\n3. Include detection gaps.\n4. Redact sensitive data.\n5. Deliver with debrief notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_blue_feed_red",
+   "name": "Blue feedback loop",
+   "description": "Improve defenses from red findings.",
+   "instructions": "Workflow:\n1. Map each finding to a control gap.\n2. Propose detections (cat_res_detection_guidance).\n3. Validate alerts in lab.\n4. Track closure.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_threat_model_basics",
+   "name": "Threat modeling basics",
+   "description": "Model a feature's threats.",
+   "instructions": "Workflow:\n1. Diagram data flows in text (file.write).\n2. Apply STRIDE per element.\n3. List mitigations per threat.\n4. Prioritize by risk.\n5. Review with the team.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_secure_code_review_gate",
+   "name": "Secure review gate",
+   "description": "Gate merges on security checks.",
+   "instructions": "Workflow:\n1. Define gate checklist (file.write).\n2. Run static scans (python.run_file patterns).\n3. Review authz changes manually.\n4. Block on high findings.\n5. Record decisions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_incident_timeline",
+   "name": "Incident timeline building",
+   "description": "Build accurate timelines.",
+   "instructions": "Workflow:\n1. Collect logs across sources (process.exec/logcat).\n2. Normalize timestamps (python.run_file).\n3. Order events; mark confidence.\n4. Identify root cause candidates.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_containment_playbook",
+   "name": "Containment playbook",
+   "description": "Respond to active incidents.",
+   "instructions": "Workflow:\n1. Isolate affected systems (user-approved actions).\n2. Revoke exposed credentials (checklist).\n3. Preserve evidence read-only.\n4. Communicate status.\n5. Document everything.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_eradication_steps",
+   "name": "Eradication planning",
+   "description": "Plan removal of attacker access.",
+   "instructions": "Workflow:\n1. Inventory persistence mechanisms (root.exec reviews).\n2. Remove each with verification.\n3. Rotate all credentials.\n4. Validate with scans.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_lessons_learned_doc",
+   "name": "Lessons learned doc",
+   "description": "Convert incidents into improvements.",
+   "instructions": "Workflow:\n1. Timeline recap (file.write).\n2. What worked/what failed.\n3. Action items with owners/dates.\n4. Feed into playbooks.\n5. Review completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_tabletop_facilitation",
+   "name": "Tabletop exercises",
+   "description": "Facilitate incident drills.",
+   "instructions": "Workflow:\n1. Draft a scenario (file.write).\n2. Walk roles through decisions.\n3. Record gaps.\n4. Update playbooks.\n5. Summarize outcomes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_risk_register",
+   "name": "Risk register upkeep",
+   "description": "Maintain the risk register.",
+   "instructions": "Workflow:\n1. Record risks with owner/likelihood/impact (file.write).\n2. Review monthly.\n3. Update mitigations.\n4. Escalate changes.\n5. Summarize top risks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_policy_template_pack",
+   "name": "Policy template pack",
+   "description": "Draft security policies.",
+   "instructions": "Workflow:\n1. Templates: acceptable use, access control, incident response (file.write).\n2. Tailor to the org.\n3. Review cycle annually.\n4. Track versions.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_awareness_content",
+   "name": "Security awareness content",
+   "description": "Create training content.",
+   "instructions": "Workflow:\n1. Short modules per topic (file.write).\n2. Real examples from your findings (redacted).\n3. Quiz questions.\n4. Track completion (team).\n5. Refresh quarterly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_vendor_risk_note",
+   "name": "Vendor risk assessment",
+   "description": "Assess third-party risk.",
+   "instructions": "Workflow:\n1. Collect security posture signals (web.search).\n2. Review data access needs.\n3. Score risk (python.run_file rubric).\n4. Recommend contract terms.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_asset_inventory_mgmt",
+   "name": "Asset inventory management",
+   "description": "Keep inventory current.",
+   "instructions": "Workflow:\n1. Merge sources: cloud, LAN scan, DNS (python.run_file).\n2. Flag unknowns.\n3. Assign owners.\n4. Review monthly.\n5. Summarize coverage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_patch_management_loop",
+   "name": "Patch management loop",
+   "description": "Operate patching.",
+   "instructions": "Workflow:\n1. Track advisories for your stack (cat_res_cve_monitoring_setup).\n2. Schedule windows.\n3. Verify post-patch (cat_web_vuln_retest flow).\n4. Report compliance.\n5. Adjust cadence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf_hardening_baseline",
+   "name": "Hardening baselines",
+   "description": "Maintain baselines.",
+   "instructions": "Workflow:\n1. CIS-inspired baselines per platform (file.write).\n2. Audit against them (python.run_file checks).\n3. Fix drift.\n4. Version baselines.\n5. Summarize.",
+   "enabled": false
+  }
+ ]
+}

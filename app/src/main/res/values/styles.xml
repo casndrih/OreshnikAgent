@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Keep the Material dialog shell transparent; the sheet content supplies its own rounded surface. -->
+    <style name="ThemeOverlay.Oreshik.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundFloating">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.Oreshik.BottomSheet.Modal</item>
+    </style>
+
+    <style name="Widget.Oreshik.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <!-- Nav drawer row label -->
+    <style name="NavItemTextAppearance" parent="android:TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/nav_item_color</item>
+    </style>
+
+    <!-- Attachment sheet grid tile -->
+    <style name="AttachTile" parent="android:Widget">
+        <item name="android:layout_width">76dp</item>
+        <item name="android:layout_height">84dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Circular icon chip inside an attachment tile -->
+    <style name="AttachIcon" parent="android:Widget">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:background">@drawable/bg_circle_gray</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <!-- Label under an attachment tile icon -->
+    <style name="AttachLabel" parent="android:TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="AppWindowAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+</resources>

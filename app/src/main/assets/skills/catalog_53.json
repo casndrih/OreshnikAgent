@@ -1,0 +1,299 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_gradws_canon_layout",
+   "name": "Canonical cache layout",
+   "description": "Standard workspace artifact cache structure.",
+   "instructions": "Workflow:\n1. All dependency artifacts live under <workspace>/gradle-artifacts/ using Maven layout: gradle-artifacts/<group-path>/<module>/<version>/<artifact>-<version>.<ext>.\n2. Example: gradle-artifacts/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.jar (group dots become slashes).\n3. Each version folder also stores the matching .pom and .module (gradle metadata) when downloadable.\n4. A manifest file gradle-artifacts/index.json lists every cached artifact with group:module:version, ext, sha256, and download date.\n5. Never deviate from this layout: tooling (skills and repo wiring) depends on it.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_scan_first",
+   "name": "Scan-before-download rule",
+   "description": "Check the workspace cache BEFORE any gradle download.",
+   "instructions": "Workflow:\n1. Before adding any dependency or running a build that may fetch, list the cache: file.list gradle-artifacts/<group-path>/<module>/ and check whether the needed version folder exists.\n2. For a broader check, file.search for '<module>-<version>.jar' under gradle-artifacts/ and read index.json for exact matches.\n3. If found: use it — wire the workspace repo (cat_gradws_repo_wire) or copy the artifact into the project libs; never re-download.\n4. If missing: proceed to download (network fetch via process.exec curl or a normal gradle run), then cache it into the canonical layout immediately.\n5. This rule is absolute for on-device work: downloads are slow and metered; the cache is the first and last stop.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_repo_wire",
+   "name": "Workspace maven repo wiring",
+   "description": "Make Gradle resolve from the workspace cache.",
+   "instructions": "Workflow:\n1. In the project's build.gradle.kts (project level), add a file-based maven repo FIRST in dependencyResolutionManagement repositories: maven { url = uri(\"file://<workspace>/gradle-artifacts\") }.\n2. Keep the standard repos (google(), mavenCentral()) AFTER the workspace repo so Gradle prefers local hits.\n3. The agent workspace is always the app-private filesDir/workspace directory; check file.list of the workspace root before using it.\n4. Verify wiring: run gradle.exec with a dependency you know is cached and confirm the log shows no download for it.\n5. For settings.gradle.kts-based repos, add the same maven block in dependencyResolutionManagement.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_user_home",
+   "name": "GRADLE_USER_HOME redirect",
+   "description": "Persist Gradle's own caches inside the workspace.",
+   "instructions": "Workflow:\n1. Gradle defaults to ~/.gradle which is ephemeral on-device; redirect it: export GRADLE_USER_HOME=<workspace>/gradle-home before gradle.exec runs (prefix the command: GRADLE_USER_HOME=<path> gradle <task>).\n2. This makes caches/modules/metadata persist across sessions in the workspace and survive app-data wipes of HOME.\n3. First build after redirect re-populates the cache; subsequent builds are fast and can go offline.\n4. Keep GRADLE_USER_HOME on the same filesystem as the project to avoid cross-FS copy penalties.\n5. Document the redirect in the project's README so builds reproduce it.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_offline_build",
+   "name": "Offline-first builds",
+   "description": "Build without network once artifacts are cached.",
+   "instructions": "Workflow:\n1. After the first successful dependency-resolving build with GRADLE_USER_HOME redirected, run subsequent builds with --offline: gradle.exec assembleDebug --offline.\n2. --offline forces resolution strictly from the redirected cache; any missing artifact fails fast with a clear name — cache it (cat_gradws_stage_manual) then retry.\n3. Combine with --no-daemon on-device to bound memory.\n4. Track which builds succeeded offline in project notes; treat a passing offline build as the reproducibility bar.\n5. If --offline fails for a new dependency, that is the signal to run the cache-first flow for it.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_stage_manual",
+   "name": "Manual artifact staging",
+   "description": "Cache an artifact deliberately.",
+   "instructions": "Workflow:\n1. Identify the exact coordinates: group:module:version plus the packaging (aar/jar) and the matching pom.\n2. Download with process.exec curl -L -o <workspace>/gradle-artifacts/<group-path>/<module>/<version>/<file> https://repo1.maven.org/maven2/<group-path>/<module>/<version>/<file> (google() artifacts come from dl.google.com/dl/android/maven2/<group-path>/...).\n3. Fetch the .pom and, when present, .module metadata alongside.\n4. Compute sha256 with python.run_file hashlib; append the entry to gradle-artifacts/index.json.\n5. Verify the artifact loads: point the project repo at the workspace and resolve it with gradle.exec --offline.",
+   "enabled": true
+  },
+  {
+   "id": "cat_gradws_cache_missing_deps",
+   "name": "Cache-missing dependency loop",
+   "description": "Handle a build failing on a new dependency.",
+   "instructions": "Workflow:\n1. Read the gradle.exec failure; it names the missing group:module:version.\n2. Check the cache (cat_gradws_scan_first) to confirm it is truly absent, not just mis-resolved.\n3. Download into the canonical layout (cat_gradws_stage_manual) including pom.\n4. Re-run the build with --offline; repeat for each next missing artifact.\n5. Stop and reconsider versions if the list of missing artifacts keeps growing (transitive drift) — pin instead (cat_gradws_pin_versions).",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_pin_versions",
+   "name": "Version pinning",
+   "description": "Keep builds reproducible.",
+   "instructions": "Workflow:\n1. Pin every dependency to exact versions in build.gradle.kts (no +, no dynamic latest.release).\n2. Record resolved versions after a successful build: gradle.exec dependencies --configuration debugRuntimeClasspath, save output to workspace.\n3. When caching, cache exactly the pinned set; avoid re-resolving transitive ranges.\n4. For BOMs, pin the BOM version and let it govern (document which BOM governs what).\n5. Review pins quarterly against advisories (cat_dep_vuln_watch).",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_inventory",
+   "name": "Cache inventory & audit",
+   "description": "Know what is in the cache.",
+   "instructions": "Workflow:\n1. Regenerate gradle-artifacts/index.json by walking the layout (python.run_file walk: group-path/module/version/artifact files).\n2. Verify sha256 of each cached file periodically (python.run_file).\n3. Flag cache entries with no pom (unverifiable coordinates) for cleanup.\n4. Report cache size (du via process.exec) and prune stale versions (keep latest 2 per module by default, with user approval).\n5. Use the inventory as the dependency SBOM for the built app.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_gradle_props",
+   "name": "gradle.properties hygiene",
+   "description": "Keep build properties clean and portable.",
+   "instructions": "Workflow:\n1. file.read gradle.properties of the project; note absolute paths that break portability.\n2. Prefer relative paths and env indirection (systemProp entries) over hardcoded device paths.\n3. Set org.gradle.jvmargs to a bounded heap (e.g. -Xmx1536m) for on-device builds.\n4. Record which properties the project requires; provide defaults in the repo.\n5. Never store secrets in gradle.properties; document where they belong (env/local only).",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_flaky_network",
+   "name": "Flaky-network build strategy",
+   "description": "Build reliably on bad connections.",
+   "instructions": "Workflow:\n1. Order of preference: 1) fully offline from cache (--offline), 2) cache + single-artifact fetches, 3) full online resolution (last resort).\n2. Never let gradle re-resolve dynamic versions on flaky networks; pin first (cat_gradws_pin_versions).\n3. For single-artifact fetches, use curl with --retry 3 -C - (resume) directly into the cache layout.\n4. After any online fetch, immediately run the offline build to verify completeness.\n5. Log every network fetch in the session notes; the goal is a shrinking online surface.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_multi_project",
+   "name": "Multi-module caching",
+   "description": "Cache across settings.gradle.kts projects.",
+   "instructions": "Workflow:\n1. One shared cache for all projects: the same gradle-artifacts repo + GRADLE_USER_HOME serve every project on the device.\n2. Verify per project: each must list the workspace repo first.\n3. Deduplicate artifacts across projects via the index.json (same GAV should exist once).\n4. Report which projects consume which cached artifacts (python.run_file cross-reference).\n5. Prune only artifacts not referenced by any active project (user approval first).",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_verify_integrity",
+   "name": "Artifact integrity checks",
+   "description": "Trust but verify cached artifacts.",
+   "instructions": "Workflow:\n1. After staging any artifact, verify: sha256 recorded, pom present, and (when published) the .module metadata matches the pom coordinates.\n2. Reject zero-byte or HTML-error-page downloads (check magic: jars start with PK).\n3. Spot-check jar contents: process.exec unzip -l to confirm expected packages/classes exist.\n4. Record verification results in index.json (verified: true).\n5. A cache that fails verification is worse than no cache; prune bad entries immediately.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_agp_alignment",
+   "name": "AGP/Gradle/Kotlin alignment",
+   "description": "Keep the toolchain trio consistent.",
+   "instructions": "Workflow:\n1. Check the project's AGP version (plugins block), Gradle version (gradle pack 8.13 on-device; wrapper may demand another), and Kotlin version.\n2. If the wrapper demands a different Gradle than the pack, either provision that Gradle or edit gradle-wrapper.properties to the available one (document the change).\n3. AGP 8.5 requires Gradle >= 8.7 and JDK 17+; the bundled JDK 21 satisfies it.\n4. Record the trio in the project README; cache the AGP artifact too (it resolves through google() into the redirected cache).\n5. Never mix Kotlin compiler and stdlib major versions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_first_run_plan",
+   "name": "First build on-device plan",
+   "description": "Sequence the very first build correctly.",
+   "instructions": "Workflow:\n1. Pre-flight: runtime.info (jdk, gradle packs ready), workspace writable, project present under the workspace.\n2. Wire the workspace repo + GRADLE_USER_HOME redirect before the first gradle.exec run.\n3. First run: gradle.exec help (fast sanity), then assembleDebug WITHOUT --offline to populate caches once.\n4. Then verify: assembleDebug --offline must now succeed; cache anything it reports missing.\n5. Record total artifacts cached and the offline proof in project notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_ci_parity",
+   "name": "Host/device parity",
+   "description": "Keep device builds consistent with host builds.",
+   "instructions": "Workflow:\n1. Same versions everywhere: document Gradle/AGP/Kotlin/JDK used on-device; mirror on the host when it also builds the project.\n2. Prefer the workspace repo pattern on hosts too (file:// maven repo) so both environments share the artifact set.\n3. Compare dependency trees host vs device after major changes; investigate divergence.\n4. Use the same pin set (one source of truth in the repo).\n5. Differences get logged, not silently accepted.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_shared_libs",
+   "name": "libs/ folder pattern",
+   "description": "Simple projects: flat lib caching alternative.",
+   "instructions": "Workflow:\n1. For tiny projects, an alternative to the maven layout: project libs/ folder with the jars/aars plus implementation files(\"libs/x.aar\") declarations.\n2. Still check the workspace cache first; copy from cache into libs/ instead of downloading.\n3. Record provenance (source repo, sha256) in a libs/PROVENANCE.md.\n4. Prefer the maven repo pattern for anything with transitive dependencies (flat libs do not resolve transitively).\n5. Choose one pattern per project; do not mix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_cleanup_policy",
+   "name": "Cache cleanup policy",
+   "description": "Keep the cache healthy over time.",
+   "instructions": "Workflow:\n1. Default retention: newest 2 versions per module; never delete without listing targets and getting approval.\n2. Prune candidates: superseded versions, entries failing sha256, artifacts not referenced by any project (cross-reference index.json).\n3. Before pruning, export the current index to a dated backup file (file.write).\n4. After pruning, run the offline build of active projects to prove nothing needed was removed.\n5. Record the pruning policy in gradle-artifacts/POLICY.md.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_troubleshoot",
+   "name": "Gradle cache troubleshooting",
+   "description": "Diagnose resolution problems fast.",
+   "instructions": "Workflow:\n1. Symptom: build re-downloads everything. Cause: GRADLE_USER_HOME not set for this run; check the command prefix.\n2. Symptom: unresolved <g:m:v> despite cache hit. Cause: layout mismatch (group path wrong) or missing pom; verify the path against the canonical layout.\n3. Symptom: --offline fails but the file exists. Cause: pom/module missing or corrupted; re-verify integrity.\n4. Symptom: dependency shows a different version than pinned. Cause: transitive override; check resolution strategy and force the pin.\n5. Keep a troubleshooting log per project; patterns repeat.",
+   "enabled": false
+  },
+  {
+   "id": "cat_gradws_metered_safety",
+   "name": "Metered-network safety",
+   "description": "Respect data caps while building.",
+   "instructions": "Workflow:\n1. Estimate before fetching: sum expected artifact sizes from the index or pom sizes; report the estimate to the user before large batches.\n2. Prefer --offline whenever the cache can satisfy resolution.\n3. Batch downloads: collect all missing artifacts first, then fetch in one bounded session with retries.\n4. Never stream the same artifact twice; always land it in the cache layout.\n5. Report total bytes downloaded per session in the summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_ethics",
+   "name": "Authorization precondition",
+   "description": "Re-clone work is for owned/authorized apps.",
+   "instructions": "Workflow:\n1. Confirm the app is yours, your organization's, or you have written permission before starting any decompilation/re-cloning work.\n2. If the provenance is unclear, ask and wait; store the answer in the engagement notes.\n3. This skill pack documents complete techniques for legitimate rebuild/recovery work (lost source recovery, security review, compatibility fixes).\n4. Record the authorization statement at the top of the project notes file.\n5. Everything else in this pack assumes this precondition is satisfied.",
+   "enabled": true
+  },
+  {
+   "id": "cat_declone_triage",
+   "name": "APK triage",
+   "description": "Understand the target before extraction.",
+   "instructions": "Workflow:\n1. re.apk.manifest (badging) for package, version, min/target SDK, permissions, components.\n2. Archive listing (process.exec unzip -l) to size up: dex count, native libs, assets, resources.arsc.\n3. Framework detection: assets carry Flutter/RN/Unity markers; native libs hint at engines (cat_apk_flutter_bundle etc.).\n4. Record everything in a target-triage.md (file.write): this becomes the re-clone project brief.\n5. Estimate complexity: number of classes (from dex), resources count, native components.",
+   "enabled": true
+  },
+  {
+   "id": "cat_declone_parallel_extract",
+   "name": "Parallel extraction",
+   "description": "Extract all views of the APK in one pass.",
+   "instructions": "Workflow:\n1. Create a project folder structure: reclone/<app>/ with subfolders apktool/, jadx/, assets-raw/, notes/.\n2. Run re.apktool.decode into apktool/ (smali + resources + readable manifest).\n3. Run jadx (process.exec jadx -d jadx/ <apk> --deobf-min 3 --deobf-use-sourcename) for Java sources; jadx is in the heavy packs — check runtime.info.\n4. Optionally dump raw assets via process.exec unzip for byte-exact copies.\n5. Verify each output exists and record file counts per folder (python.run_file).",
+   "enabled": true
+  },
+  {
+   "id": "cat_declone_manifest_rebuild",
+   "name": "Manifest reconstruction",
+   "description": "Rebuild a buildable AndroidManifest from the extracted one.",
+   "instructions": "Workflow:\n1. Start from apktool/AndroidManifest.xml (readable already).\n2. Map to source-build form: package attr moves to namespace+applicationId in gradle; remove instrumentation leftovers if any.\n3. Preserve: permissions, features, application attrs (theme, networkSecurityConfig, allowBackup), component declarations, intent filters.\n4. Note exported components and authorities — they matter for install compatibility.\n5. Record all manual fixes in notes so the process is repeatable.",
+   "enabled": true
+  },
+  {
+   "id": "cat_declone_resource_relink",
+   "name": "Resource re-linking",
+   "description": "Restore R-class references for a source build.",
+   "instructions": "Workflow:\n1. apktool gives you public.xml: resource name -> id mapping (apktool/res/values/public.xml).\n2. In a source rebuild, R ids regenerate — code must reference R by name, not literal ids.\n3. For smali-derived code, literal const resource ids must be replaced with R references during the smali->java port; keep public.xml as the lookup table.\n4. For a buildable re-clone started from jadx sources, references are already symbolic — verify none resolve to wrong resources after rebuild (compare public.xml names).\n5. Keep original ids stable where possible by preserving resource names exactly (no renaming during port).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_smali_to_java",
+   "name": "Smali to Java strategy",
+   "description": "Turn smali into maintainable Java/Kotlin.",
+   "instructions": "Workflow:\n1. Prefer jadx output as the base; treat smali as ground truth where jadx output is ambiguous.\n2. Map patterns: invoke-virtual->method calls, sget->field reads, const->literals, iget-wide->long fields.\n3. Watch for jadx artifacts: synthetic accessors, lambda desugar remains, generated classes (keep as-is initially).\n4. Port in slices: one package at a time; keep a checklist file per package with status.\n5. Where jadx fails (exception handlers, switch-on-string), hand-port from smali with care (register discipline).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_pkg_structure",
+   "name": "Package structure derivation",
+   "description": "Rebuild the source tree layout.",
+   "instructions": "Workflow:\n1. Derive the package tree from the smali/jadx folder structure: smali<->java path equivalence (com/foo/bar -> app/src/main/java/com/foo/bar).\n2. Separate clearly third-party packages (androidx, kotlin, sdk packages) — exclude from your source port; they come back via dependencies.\n3. Identify app-authored packages (the applicationId namespace and its children) as the port scope.\n4. Record the scope list: packages to port, packages excluded (replaced by gradle deps).\n5. Create the gradle skeleton (next skill) matching this structure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_gradle_skeleton",
+   "name": "Gradle skeleton assembly",
+   "description": "Create a buildable project shell.",
+   "instructions": "Workflow:\n1. settings.gradle.kts + app module build.gradle.kts: namespace/applicationId from the manifest, min/target SDK from badging.\n2. Add the workspace-first repo wiring (cat_gradws_repo_wire) and redirect GRADLE_USER_HOME (cat_gradws_user_home).\n3. Dependency inference: scan jadx sources for imports (python.run_file unique non-sdk imports) — map to maven coordinates (cat_declone_dep_infer).\n4. Create src/main with manifest, res/ from apktool output, assets/ byte-exact.\n5. First milestone: empty Application shell that compiles (gradle.exec assembleDebug).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_dep_infer",
+   "name": "Dependency inference",
+   "description": "Figure out which libraries the app used.",
+   "instructions": "Workflow:\n1. Jadx imports census (python.run_file) — cluster by root package (retrofit2, com.google.gson, io.reactivex, kotlin, androidx...).\n2. Native libs give more hints: libsqlite (requery/greenbot?), libjsc/hermes (JS engine), libunity (Unity).\n3. Mapping table (maintain in notes): import root -> likely maven artifact + version guess from method signatures.\n4. Version guessing: check for embedded version strings via izz in the dex/native libs.\n5. Prefer broad compat: pick stable versions that provide the referenced APIs; record every guess as a guess.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_code_port",
+   "name": "Code port loop",
+   "description": "Port sources package by package.",
+   "instructions": "Workflow:\n1. Order: leaf packages first (no app-internal deps), then upward.\n2. Copy jadx output into the source tree; fix compile errors iteratively (gradle.exec assembleDebug -> read errors -> file.patch).\n3. Replace resource-id literals with R references using public.xml (cat_declone_resource_relink).\n4. Track progress in a port-checklist.md; never leave a package half-ported between sessions (checkpoint notes).\n5. Commit-worthy state: each package compiles + unit passes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_native_handling",
+   "name": "Native components",
+   "description": "Handle JNI libraries in the re-clone.",
+   "instructions": "Workflow:\n1. Copy lib/<abi>/*.so byte-exact into app/src/main/jniLibs/<abi>/.\n2. JNI function names (Java_pkg_Class_method) must match the Java package path — if you keep original package names, the .so files link without changes.\n3. If you must rename packages, JNI names break: either keep originals for those classes or rebuild the native lib from source (only if you own it).\n4. Verify JNI bindings at runtime; logcat UnsatisfiedLinkError means name mismatch.\n5. Record each .so with sha256 in the project notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_assets_copy",
+   "name": "Assets & resources fidelity",
+   "description": "Keep non-code assets byte-exact.",
+   "instructions": "Workflow:\n1. Copy assets/ as-is (process.exec cp -r) — these are not decompiled, they are data.\n2. Resources: start from apktool/res; fix only what breaks the build (malformed XML from decode).\n3. Media/fonts/databases in assets: verify with checksums against the APK originals.\n4. Watch for split-APK assets: merge all config splits into the single-APK re-clone.\n5. Record any asset that could not be recovered (and why).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_sign_install",
+   "name": "Sign and install the re-clone",
+   "description": "Get the rebuilt app on-device.",
+   "instructions": "Workflow:\n1. re.apktool.build the re-clone project output if working at APK level, or gradle.exec assembleDebug for the source-level re-clone.\n2. Sign with re.apk.sign (debug keystore).\n3. Install: signature differs from the original — uninstall the original first or install side-by-side with a changed applicationId (record which you chose).\n4. Verify launch (androidopenapp) and read logcat for the first crash signals.\n5. Record install state and version in the project notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_parity_check",
+   "name": "Behavior parity verification",
+   "description": "Prove the re-clone behaves like the original.",
+   "instructions": "Workflow:\n1. Drive identical flows on original vs re-clone with device automation (androidopenapp, androidclickelement, androidreadscreen).\n2. Compare screens visually (android_screenshot pairs) and functionally (same data shown, same navigation).\n3. Check logcat for missing features (silent failures surface as exceptions).\n4. Track parity per flow in a matrix file; only claim re-clone complete when the agreed critical flows pass.\n5. Diffs become the next port tasks (cat_declone_code_port).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_kotlin_mix",
+   "name": "Kotlin/Java mix handling",
+   "description": "Port to the right language per module.",
+   "instructions": "Workflow:\n1. Kotlin metadata in dex (@Metadata annotations) marks original Kotlin code — jadx approximates it as Java; keep Java initially for fidelity, then idiomatic-ize later.\n2. New code you add: use Kotlin (project has kotlin plugin).\n3. Do not rewrite decompiled Java to idiomatic Kotlin during the port phase; that is a later, separate pass.\n4. Record which packages are original Kotlin (metadata) vs Java for later polish.\n5. Build must stay green at every step.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_obfuscated_targets",
+   "name": "Obfuscated app handling",
+   "description": "Port obfuscated apps honestly.",
+   "instructions": "Workflow:\n1. If ProGuard/R8 names remain (a.b.c classes), jadx --deobf gives readable aliases; keep the mapping file for traceability.\n2. Do not trust deobf names as original names; label them as aliases in code comments where it matters.\n3. Resource names may be shrunk too (public.xml shows short names); keep them as-is for build stability.\n4. The re-clone of an obfuscated app aims for behavior parity, not source fidelity — state this in the project brief.\n5. Preserve the original mapping.txt if the app is yours (enables retrace instead of deobf guessing).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_dynamic_features",
+   "name": "Dynamic features & splits",
+   "description": "Handle split APK re-clones.",
+   "instructions": "Workflow:\n1. List splits (base + config.* + feature modules) via archive listings of each APK.\n2. Base re-clone covers the base APK; feature modules become dynamic-feature gradle modules (or merged if simpler).\n3. Config splits (density/locale) collapse into the single re-clone res/ tree — verify resource merge correctness.\n4. Manifest merge: feature manifests (from apktool per split) port into their module manifests.\n5. Record the split->module mapping.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_source_recovery",
+   "name": "Lost-source recovery workflow",
+   "description": "Recover your own app when sources are gone.",
+   "instructions": "Workflow:\n1. Ideal case: you have the signing keystore + build outputs but no sources — full re-clone applies (this pack).\n2. Better first check: VCS tags/CI artifacts, Gradle build caches (GRADLE_USER_HOME redirected into workspace may hold the last sources-derived state), CI logs (file.search).\n3. If any teammate/backup exists, reconcile those sources before decompiling anything.\n4. Decompiled port gets you behavior parity; document that it is a reconstruction (code comments at package level).\n5. After recovery, immediately commit the ported sources to a fresh repo (process.exec git).",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_arsc_notes",
+   "name": "resources.arsc considerations",
+   "description": "Understand compiled resources during re-cloning.",
+   "instructions": "Workflow:\n1. apktool decodes arsc into res/ XML + values; rebuild re-encodes it (small id shifts possible).\n2. If the app or its code depends on exact ids (rare, but reflection-based resource lookup exists), keep public.xml ids stable where apktool allows.\n3. AAPT2 during source builds may assign different ids than arsc — behavior parity testing catches regressions.\n4. Check for id-dependent code: file.search smali for suspicious const resource ids used in logic.\n5. Record any id-sensitive findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_verification_matrix",
+   "name": "Verification matrix design",
+   "description": "Structure the parity work.",
+   "instructions": "Workflow:\n1. List every user-visible flow from the triage (launch, login, main features, settings).\n2. For each: steps, expected screens, data used — into a matrix file (file.write).\n3. Run the matrix on the original first (baseline evidence: screenshots), then on the re-clone.\n4. Score each cell: pass/partial/fail with notes.\n5. Convert failures into port tasks; re-run only failed cells after fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_keep_original_untouched",
+   "name": "Original APK preservation",
+   "description": "Never damage the evidence.",
+   "instructions": "Workflow:\n1. Keep the original APK read-only in a pristine folder with its sha256 recorded.\n2. All extraction writes into separate output folders; never in-place.\n3. Re-installs during testing use the signed re-clone, not the original (avoid overwrite confusion).\n4. Keep a copy of the original's manifest badging output for later reference.\n5. If anything goes wrong, the original is always recoverable from the pristine copy.",
+   "enabled": false
+  },
+  {
+   "id": "cat_declone_doc_standards",
+   "name": "Re-clone documentation",
+   "description": "Document the reconstruction professionally.",
+   "instructions": "Workflow:\n1. Project brief: provenance, authorization, triage summary, complexity estimate.\n2. Methodology: extraction tools + versions, port strategy, dependency guesses table.\n3. Deviations log: every place the re-clone differs from the original (ids, aliases, versions).\n4. Verification matrix results.\n5. Final artifact inventory with hashes.",
+   "enabled": false
+  }
+ ]
+}

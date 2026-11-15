@@ -1,0 +1,285 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_swe_arch_mvvm_intro",
+   "name": "MVVM structure",
+   "description": "Organize code as Model-View-ViewModel.",
+   "instructions": "Workflow:\n1. Identify the UI layer (file.read activities/fragments/composables).\n2. Extract state into ViewModel classes (file.write).\n3. Expose state via StateFlow/LiveData.\n4. Move business logic out of views (file.patch).\n5. Build to verify (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_mvi_intro",
+   "name": "MVI unidirectional flow",
+   "description": "Model UI as intent->state.",
+   "instructions": "Workflow:\n1. Define UI state and events as sealed types (file.write).\n2. Single reducer function updates state.\n3. View renders state; dispatches intents.\n4. Keep side effects explicit (events channel).\n5. Build and reason about loops.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_clean_arch_layers",
+   "name": "Clean architecture layers",
+   "description": "Separate domain/data/presentation.",
+   "instructions": "Workflow:\n1. Map current dependencies (file.search imports across layers).\n2. Introduce repository interfaces in domain (file.write).\n3. Implement data-layer mappers (file.write).\n4. Rewire presentation via use cases (file.patch).\n5. Build and run tests (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_repository_pattern",
+   "name": "Repository pattern",
+   "description": "Centralize data access decisions.",
+   "instructions": "Workflow:\n1. Define a repository interface per feature (file.write).\n2. Implement remote/local data sources behind it.\n3. Route all reads/writes through repositories (file.patch call sites).\n4. Cache policy lives here only.\n5. Test with fakes (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_use_case_pattern",
+   "name": "Use case (interactor) pattern",
+   "description": "Name business actions explicitly.",
+   "instructions": "Workflow:\n1. Extract one business action per class (file.write).\n2. Single invoke() with clear params/returns.\n3. Compose repositories, not UI logic.\n4. Wire into ViewModels (file.patch).\n5. Unit test each use case.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_di_manual_injection",
+   "name": "Manual DI container",
+   "description": "Wire dependencies without frameworks.",
+   "instructions": "Workflow:\n1. Create an AppContainer class (file.write).\n2. Lazily construct singletons there.\n3. Pass dependencies into ViewModels via factories.\n4. No context leaks: app context only.\n5. Build to verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_di_hilt_basics",
+   "name": "Hilt basics",
+   "description": "Use Hilt annotations correctly.",
+   "instructions": "Workflow:\n1. file.search existing Hilt usage to match style.\n2. @HiltAndroidApp, @AndroidEntryPoint wiring.\n3. @Module/@Provides for third-party types.\n4. Scope carefully (@Singleton vs @ViewModelScoped).\n5. Build (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_module_boundaries",
+   "name": "Module boundaries",
+   "description": "Split a monolith into modules.",
+   "instructions": "Workflow:\n1. Map package coupling (python.run_file import graph).\n2. Propose :core, :feature-* modules (file.write build files).\n3. Expose narrow APIs (public interfaces only).\n4. Migrate one feature at a time.\n5. Build after each (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_interface_segregation",
+   "name": "Interface segregation",
+   "description": "Keep interfaces small and purposeful.",
+   "instructions": "Workflow:\n1. Find fat interfaces (file.search for many-method interfaces).\n2. Split by consumer needs (file.patch).\n3. Update implementations.\n4. Remove unused methods.\n5. Build + tests.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_feature_flag_arch",
+   "name": "Feature flag architecture",
+   "description": "Structure flags cleanly.",
+   "instructions": "Workflow:\n1. Central flag provider (file.write).\n2. Typed accessors, not raw strings.\n3. Defaults in code; overrides via config.\n4. Cleanup checklist per flag.\n5. Test both paths.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_event_bus_vs_flow",
+   "name": "Events: bus vs Flow",
+   "description": "Choose the right event mechanism.",
+   "instructions": "Workflow:\n1. Inventory current event usage (file.search EventBus/SharedFlow).\n2. Prefer SharedFlow with clear scope.\n3. Kill global buses (migrate call sites, file.patch).\n4. Test delivery guarantees.\n5. Document the decision.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_state_holder_split",
+   "name": "Screen vs app state holders",
+   "description": "Split state ownership.",
+   "instructions": "Workflow:\n1. Classify state: screen-local vs app-wide (file.read).\n2. Screen state in ViewModel; app state in a repository-backed holder.\n3. Wire via flows only.\n4. Remove duplicated caches (file.patch).\n5. Build.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_coil_image_loading",
+   "name": "Image loading with Coil",
+   "description": "Load images correctly.",
+   "instructions": "Workflow:\n1. file.search ImageView loads.\n2. Use AsyncImage/ImageView extension with models (file.patch).\n3. Set crossfade and size hints.\n4. Handle placeholders/errors.\n5. Verify visually (android_screenshot).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_navigation_single_activity",
+   "name": "Single-activity navigation",
+   "description": "Migrate to Navigation paths.",
+   "instructions": "Workflow:\n1. Map activities to screens (re.apk.manifest of own app).\n2. Introduce nav graph (file.write).\n3. Route intents via deep links.\n4. Migrate one flow at a time (file.patch).\n5. Build + UI test (androidopenapp).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_background_work_policy",
+   "name": "Background work policy",
+   "description": "Pick WorkManager vs services.",
+   "instructions": "Workflow:\n1. Classify each job: deferrable? constrained? (file.read).\n2. Deferrable -> WorkManager with constraints.\n3. User-facing immediate -> foreground service.\n4. Remove ad-hoc threads (file.patch).\n5. Verify scheduling in logs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_error_handling_arch",
+   "name": "App-wide error strategy",
+   "description": "Design error handling once.",
+   "instructions": "Workflow:\n1. Define error types (file.write): recoverable, fatal, network.\n2. Central handler maps to UI states.\n3. Log with context (no secrets).\n4. Migrate catch sites (file.patch).\n5. Test paths.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_analytics_arch",
+   "name": "Analytics architecture",
+   "description": "Instrument cleanly.",
+   "instructions": "Workflow:\n1. Define an analytics facade (file.write).\n2. Typed event names/params.\n3. Route to providers in one place.\n4. Verify events in logs/debug view.\n5. Document schema.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_remote_config_pattern",
+   "name": "Remote config pattern",
+   "description": "Gate behavior remotely.",
+   "instructions": "Workflow:\n1. Facade for config reads (file.write).\n2. Defaults for offline.\n3. Refresh policy and cache.\n4. Feature-gate via config keys.\n5. Test fallbacks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_offline_first_design",
+   "name": "Offline-first design",
+   "description": "Make the app work offline.",
+   "instructions": "Workflow:\n1. Local source of truth (Room) (file.write DAO).\n2. Sync via WorkManager with backoff.\n3. Conflict policy: last-write-wins or merge (document).\n4. UI reads local only.\n5. Test airplane mode (android_* tools).",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_arch_caching_layers",
+   "name": "Caching layer design",
+   "description": "Layer caches sensibly.",
+   "instructions": "Workflow:\n1. Map current caching (file.search cache/okhttp Cache).\n2. HTTP cache for network; memory for hot data; DB for durable.\n3. TTLs per layer documented (file.write).\n4. Invalidate on user actions explicitly.\n5. Verify with traffic capture.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_test_pyramid",
+   "name": "Test pyramid planning",
+   "description": "Balance test types.",
+   "instructions": "Workflow:\n1. Count current tests by type (python.run_file).\n2. Push coverage down the pyramid (unit > integration > UI).\n3. Convert brittle UI tests to unit (file.write).\n4. Track ratio over time.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_test_naming",
+   "name": "Test naming discipline",
+   "description": "Name tests as specs.",
+   "instructions": "Workflow:\n1. Standard: given/when/then in the name.\n2. Rename existing tests (file.patch).\n3. Keep one behavior per test.\n4. Read like documentation.\n5. Run suite.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_fixture_management",
+   "name": "Fixture management",
+   "description": "Manage test data.",
+   "instructions": "Workflow:\n1. Builders over literals (file.write factories).\n2. Central fixtures folder.\n3. Seeded randomness.\n4. Cleanup after suites.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_integration_test_slices",
+   "name": "Integration slices",
+   "description": "Test layers in isolation pairs.",
+   "instructions": "Workflow:\n1. Pick a boundary (repo<->db).\n2. Write focused integration tests (file.write).\n3. Use in-memory deps where possible.\n4. Run via gradle.exec.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_ui_test_basics",
+   "name": "UI test basics",
+   "description": "Automate critical flows.",
+   "instructions": "Workflow:\n1. Compose test APIs or Espresso per project (file.list).\n2. Test 3 core flows only.\n3. Idempotent setup/teardown.\n4. Run on emulator via gradle.exec connected task (if device).\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_screenshot_testing",
+   "name": "Screenshot testing",
+   "description": "Catch visual regressions.",
+   "instructions": "Workflow:\n1. Capture baseline via web/browser or device (android_screenshot).\n2. Compare post-change (python.run_file pixel diff).\n3. Flag deltas for review.\n4. Store baselines in repo.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_flaky_test_hunt",
+   "name": "Flaky test hunting",
+   "description": "Stabilize the suite.",
+   "instructions": "Workflow:\n1. Run suite 5x (gradle.exec).\n2. Collect failures (python.run_file parse).\n3. Fix order/time dependencies.\n4. Quarantine unfixable with tickets.\n5. Track flake rate.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_coverage_gaps",
+   "name": "Coverage gap analysis",
+   "description": "Find untested critical paths.",
+   "instructions": "Workflow:\n1. Run coverage (gradle.exec jacoco-style task).\n2. List low-coverage core classes (python.run_file).\n3. Write targeted tests.\n4. Re-measure.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_mutation_testing_note",
+   "name": "Mutation testing intro",
+   "description": "Assess test strength.",
+   "instructions": "Workflow:\n1. web.search mutation tools for the stack.\n2. Run a sample module (process.exec).\n3. Review surviving mutants (file.read).\n4. Add tests for real gaps.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_contract_test_pairing",
+   "name": "Consumer-contract tests",
+   "description": "Pin cross-service contracts.",
+   "instructions": "Workflow:\n1. Define expected request/response per consumer (file.write).\n2. Assert against provider stubs.\n3. Run in CI.\n4. Flag drift loudly.\n5. Version contracts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_e2e_smoke_pack",
+   "name": "E2E smoke pack",
+   "description": "Keep a tiny reliable E2E set.",
+   "instructions": "Workflow:\n1. Pick 5 critical journeys (file.write list).\n2. Automate each once.\n3. Run pre-release only.\n4. Fix flake immediately.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_test_data_privacy",
+   "name": "Test data privacy",
+   "description": "Keep fake data fake.",
+   "instructions": "Workflow:\n1. Audit fixtures for real PII (python.run_file patterns).\n2. Replace with generators (file.write).\n3. Verify no prod dumps in repo.\n4. Document policy.\n5. Enforce in review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_boundary_value_tests",
+   "name": "Boundary value testing",
+   "description": "Test edges deliberately.",
+   "instructions": "Workflow:\n1. List numeric/range boundaries per feature (file.read).\n2. Write min/max/±1 cases (file.write).\n3. Include zero and negative where valid.\n4. Run suite.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_property_based_intro",
+   "name": "Property-based testing",
+   "description": "Test invariants, not examples.",
+   "instructions": "Workflow:\n1. Identify invariants (encode/decode round-trip).\n2. Add property tests (python.run_file hypothesis-style or libs).\n3. Shrink failures to minimal cases.\n4. Fix root causes.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_mock_boundaries",
+   "name": "Mock boundary rules",
+   "description": "Mock at architectural seams.",
+   "instructions": "Workflow:\n1. Audit mocks for overuse (file.search mock).\n2. Prefer fakes over mocks for state.\n3. Mock only I/O edges.\n4. Refactor over-mocked tests (file.patch).\n5. Run suite.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_test_containers_note",
+   "name": "Containerized deps in tests",
+   "description": "Run real deps in tests.",
+   "instructions": "Workflow:\n1. Spin DB/broker via containers (process.exec docker).\n2. Point tests at them (config).\n3. Tear down cleanly.\n4. Keep runtimes pinned.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_soak_tests",
+   "name": "Soak testing",
+   "description": "Catch leaks over time.",
+   "instructions": "Workflow:\n1. Run the app for N hours (device automation).\n2. Track memory/objects via dumpsys (process.exec).\n3. Flag growth curves (python.run_file).\n4. Fix leaks found.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_accessibility_tests",
+   "name": "Accessibility test passes",
+   "description": "Verify a11y basics.",
+   "instructions": "Workflow:\n1. Run a11y scanners on key screens.\n2. Fix labels/focus issues (file.patch).\n3. Verify with talkback-style reads (androidreadscreen).\n4. Track score.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_perf_test_basics",
+   "name": "Performance test basics",
+   "description": "Measure before optimizing.",
+   "instructions": "Workflow:\n1. Define metrics: startup, jank, memory (file.write).\n2. Measure with macrobenchmark-style runs (gradle.exec if configured).\n3. Record baselines.\n4. Flag regressions in CI.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_swe_test_chaos_drills",
+   "name": "Failure drills",
+   "description": "Break dependencies on purpose.",
+   "instructions": "Workflow:\n1. Kill network/db in the test env (process.exec).\n2. Observe recovery behaviors (logs).\n3. Fix missing backoff/timeouts.\n4. Repeat.\n5. Document.",
+   "enabled": false
+  }
+ ]
+}

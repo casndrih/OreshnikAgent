@@ -1,0 +1,467 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_tst2_test-strategy-doc",
+   "name": "Testing topic: test strategy doc",
+   "description": "Practical guide for test strategy doc in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test strategy doc' applies in this project (file.search/file.read).\n2. Review the standard practice for test strategy doc (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_risk-based-testing",
+   "name": "Testing topic: risk based testing",
+   "description": "Practical guide for risk based testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'risk based testing' applies in this project (file.search/file.read).\n2. Review the standard practice for risk based testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_exploratory-charters",
+   "name": "Testing topic: exploratory charters",
+   "description": "Practical guide for exploratory charters in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exploratory charters' applies in this project (file.search/file.read).\n2. Review the standard practice for exploratory charters (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_session-based-test-mgmt",
+   "name": "Testing topic: session based test mgmt",
+   "description": "Practical guide for session based test mgmt in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'session based test mgmt' applies in this project (file.search/file.read).\n2. Review the standard practice for session based test mgmt (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_heuristic-testing-sfdipot",
+   "name": "Testing topic: heuristic testing SFDIPOT",
+   "description": "Practical guide for heuristic testing SFDIPOT in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'heuristic testing SFDIPOT' applies in this project (file.search/file.read).\n2. Review the standard practice for heuristic testing SFDIPOT (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_regression-suite-curation",
+   "name": "Testing topic: regression suite curation",
+   "description": "Practical guide for regression suite curation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'regression suite curation' applies in this project (file.search/file.read).\n2. Review the standard practice for regression suite curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_smoke-vs-sanity",
+   "name": "Testing topic: smoke vs sanity",
+   "description": "Practical guide for smoke vs sanity in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'smoke vs sanity' applies in this project (file.search/file.read).\n2. Review the standard practice for smoke vs sanity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_test-env-matrix",
+   "name": "Testing topic: test env matrix",
+   "description": "Practical guide for test env matrix in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test env matrix' applies in this project (file.search/file.read).\n2. Review the standard practice for test env matrix (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_test-data-factories",
+   "name": "Testing topic: test data factories",
+   "description": "Practical guide for test data factories in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test data factories' applies in this project (file.search/file.read).\n2. Review the standard practice for test data factories (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_synthetic-data-gen",
+   "name": "Testing topic: synthetic data gen",
+   "description": "Practical guide for synthetic data gen in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'synthetic data gen' applies in this project (file.search/file.read).\n2. Review the standard practice for synthetic data gen (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_pii-masking-in-tests",
+   "name": "Testing topic: pii masking in tests",
+   "description": "Practical guide for pii masking in tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pii masking in tests' applies in this project (file.search/file.read).\n2. Review the standard practice for pii masking in tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_visual-regression-baselines",
+   "name": "Testing topic: visual regression baselines",
+   "description": "Practical guide for visual regression baselines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'visual regression baselines' applies in this project (file.search/file.read).\n2. Review the standard practice for visual regression baselines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_applitools-style-checks",
+   "name": "Testing topic: applitools-style checks",
+   "description": "Practical guide for applitools-style checks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'applitools-style checks' applies in this project (file.search/file.read).\n2. Review the standard practice for applitools-style checks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_contract-testing-pact",
+   "name": "Testing topic: contract testing pact",
+   "description": "Practical guide for contract testing pact in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'contract testing pact' applies in this project (file.search/file.read).\n2. Review the standard practice for contract testing pact (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_consumer-driven-contracts",
+   "name": "Testing topic: consumer driven contracts",
+   "description": "Practical guide for consumer driven contracts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'consumer driven contracts' applies in this project (file.search/file.read).\n2. Review the standard practice for consumer driven contracts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_provider-verification",
+   "name": "Testing topic: provider verification",
+   "description": "Practical guide for provider verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'provider verification' applies in this project (file.search/file.read).\n2. Review the standard practice for provider verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_schema-registry-tests",
+   "name": "Testing topic: schema registry tests",
+   "description": "Practical guide for schema registry tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'schema registry tests' applies in this project (file.search/file.read).\n2. Review the standard practice for schema registry tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_async-messaging-tests",
+   "name": "Testing topic: async messaging tests",
+   "description": "Practical guide for async messaging tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'async messaging tests' applies in this project (file.search/file.read).\n2. Review the standard practice for async messaging tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_db-state-assertions",
+   "name": "Testing topic: db state assertions",
+   "description": "Practical guide for db state assertions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'db state assertions' applies in this project (file.search/file.read).\n2. Review the standard practice for db state assertions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_api-test-pyramids",
+   "name": "Testing topic: api test pyramids",
+   "description": "Practical guide for api test pyramids in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api test pyramids' applies in this project (file.search/file.read).\n2. Review the standard practice for api test pyramids (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_rest-assured-style",
+   "name": "Testing topic: rest assured style",
+   "description": "Practical guide for rest assured style in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rest assured style' applies in this project (file.search/file.read).\n2. Review the standard practice for rest assured style (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_postman-newman-runs",
+   "name": "Testing topic: postman newman runs",
+   "description": "Practical guide for postman newman runs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'postman newman runs' applies in this project (file.search/file.read).\n2. Review the standard practice for postman newman runs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_karate-dsl-basics",
+   "name": "Testing topic: karate dsl basics",
+   "description": "Practical guide for karate dsl basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'karate dsl basics' applies in this project (file.search/file.read).\n2. Review the standard practice for karate dsl basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_wiremock-stubbing",
+   "name": "Testing topic: wiremock stubbing",
+   "description": "Practical guide for wiremock stubbing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wiremock stubbing' applies in this project (file.search/file.read).\n2. Review the standard practice for wiremock stubbing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_mountebank-basics",
+   "name": "Testing topic: mountebank basics",
+   "description": "Practical guide for mountebank basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mountebank basics' applies in this project (file.search/file.read).\n2. Review the standard practice for mountebank basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_testcontainers-deep",
+   "name": "Testing topic: testcontainers deep",
+   "description": "Practical guide for testcontainers deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'testcontainers deep' applies in this project (file.search/file.read).\n2. Review the standard practice for testcontainers deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_localstack-aws-tests",
+   "name": "Testing topic: localstack aws tests",
+   "description": "Practical guide for localstack aws tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'localstack aws tests' applies in this project (file.search/file.read).\n2. Review the standard practice for localstack aws tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_minio-s3-testing",
+   "name": "Testing topic: minio s3 testing",
+   "description": "Practical guide for minio s3 testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'minio s3 testing' applies in this project (file.search/file.read).\n2. Review the standard practice for minio s3 testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_toxiproxy-chaos",
+   "name": "Testing topic: toxiproxy chaos",
+   "description": "Practical guide for toxiproxy chaos in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'toxiproxy chaos' applies in this project (file.search/file.read).\n2. Review the standard practice for toxiproxy chaos (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_pact-broker-flows",
+   "name": "Testing topic: pact broker flows",
+   "description": "Practical guide for pact broker flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pact broker flows' applies in this project (file.search/file.read).\n2. Review the standard practice for pact broker flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_flaky-root-causes",
+   "name": "Testing topic: flaky root causes",
+   "description": "Practical guide for flaky root causes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flaky root causes' applies in this project (file.search/file.read).\n2. Review the standard practice for flaky root causes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_test-parallel-isolation",
+   "name": "Testing topic: test parallel isolation",
+   "description": "Practical guide for test parallel isolation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test parallel isolation' applies in this project (file.search/file.read).\n2. Review the standard practice for test parallel isolation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_fixture-factory-patterns",
+   "name": "Testing topic: fixture factory patterns",
+   "description": "Practical guide for fixture factory patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fixture factory patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for fixture factory patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_builder-pattern-tests",
+   "name": "Testing topic: builder pattern tests",
+   "description": "Practical guide for builder pattern tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'builder pattern tests' applies in this project (file.search/file.read).\n2. Review the standard practice for builder pattern tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_object-mother-pattern",
+   "name": "Testing topic: object mother pattern",
+   "description": "Practical guide for object mother pattern in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'object mother pattern' applies in this project (file.search/file.read).\n2. Review the standard practice for object mother pattern (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_data-builder-kotlin",
+   "name": "Testing topic: data builder kotlin",
+   "description": "Practical guide for data builder kotlin in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data builder kotlin' applies in this project (file.search/file.read).\n2. Review the standard practice for data builder kotlin (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_test-doubles-taxonomy",
+   "name": "Testing topic: test doubles taxonomy",
+   "description": "Practical guide for test doubles taxonomy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test doubles taxonomy' applies in this project (file.search/file.read).\n2. Review the standard practice for test doubles taxonomy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_spy-vs-mock-vs-stub",
+   "name": "Testing topic: spy vs mock vs stub",
+   "description": "Practical guide for spy vs mock vs stub in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'spy vs mock vs stub' applies in this project (file.search/file.read).\n2. Review the standard practice for spy vs mock vs stub (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_captive-fake-services",
+   "name": "Testing topic: captive fake services",
+   "description": "Practical guide for captive fake services in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'captive fake services' applies in this project (file.search/file.read).\n2. Review the standard practice for captive fake services (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_golden-master-testing",
+   "name": "Testing topic: golden master testing",
+   "description": "Practical guide for golden master testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'golden master testing' applies in this project (file.search/file.read).\n2. Review the standard practice for golden master testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_approval-tests",
+   "name": "Testing topic: approval tests",
+   "description": "Practical guide for approval tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'approval tests' applies in this project (file.search/file.read).\n2. Review the standard practice for approval tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_characterization-tests",
+   "name": "Testing topic: characterization tests",
+   "description": "Practical guide for characterization tests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'characterization tests' applies in this project (file.search/file.read).\n2. Review the standard practice for characterization tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_seams-extraction",
+   "name": "Testing topic: seams extraction",
+   "description": "Practical guide for seams extraction in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'seams extraction' applies in this project (file.search/file.read).\n2. Review the standard practice for seams extraction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_sprout-method-refactoring",
+   "name": "Testing topic: sprout method refactoring",
+   "description": "Practical guide for sprout method refactoring in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sprout method refactoring' applies in this project (file.search/file.read).\n2. Review the standard practice for sprout method refactoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_test-indepotence",
+   "name": "Testing topic: test indepotence",
+   "description": "Practical guide for test indepotence in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test indepotence' applies in this project (file.search/file.read).\n2. Review the standard practice for test indepotence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_order-independence",
+   "name": "Testing topic: order independence",
+   "description": "Practical guide for order independence in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'order independence' applies in this project (file.search/file.read).\n2. Review the standard practice for order independence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_random-seed-reproducibility",
+   "name": "Testing topic: random seed reproducibility",
+   "description": "Practical guide for random seed reproducibility in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'random seed reproducibility' applies in this project (file.search/file.read).\n2. Review the standard practice for random seed reproducibility (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_property-shrinking",
+   "name": "Testing topic: property shrinking",
+   "description": "Practical guide for property shrinking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'property shrinking' applies in this project (file.search/file.read).\n2. Review the standard practice for property shrinking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_stateful-property-testing",
+   "name": "Testing topic: stateful property testing",
+   "description": "Practical guide for stateful property testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'stateful property testing' applies in this project (file.search/file.read).\n2. Review the standard practice for stateful property testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_model-based-testing",
+   "name": "Testing topic: model based testing",
+   "description": "Practical guide for model based testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'model based testing' applies in this project (file.search/file.read).\n2. Review the standard practice for model based testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_combinatorial-testing",
+   "name": "Testing topic: combinatorial testing",
+   "description": "Practical guide for combinatorial testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'combinatorial testing' applies in this project (file.search/file.read).\n2. Review the standard practice for combinatorial testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_pairwise-testing",
+   "name": "Testing topic: pairwise testing",
+   "description": "Practical guide for pairwise testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pairwise testing' applies in this project (file.search/file.read).\n2. Review the standard practice for pairwise testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_orthogonal-arrays",
+   "name": "Testing topic: orthogonal arrays",
+   "description": "Practical guide for orthogonal arrays in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'orthogonal arrays' applies in this project (file.search/file.read).\n2. Review the standard practice for orthogonal arrays (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_allpairs-tooling",
+   "name": "Testing topic: allpairs tooling",
+   "description": "Practical guide for allpairs tooling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'allpairs tooling' applies in this project (file.search/file.read).\n2. Review the standard practice for allpairs tooling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_decision-tables",
+   "name": "Testing topic: decision tables",
+   "description": "Practical guide for decision tables in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'decision tables' applies in this project (file.search/file.read).\n2. Review the standard practice for decision tables (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_state-transition-testing",
+   "name": "Testing topic: state transition testing",
+   "description": "Practical guide for state transition testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'state transition testing' applies in this project (file.search/file.read).\n2. Review the standard practice for state transition testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_use-case-testing",
+   "name": "Testing topic: use case testing",
+   "description": "Practical guide for use case testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'use case testing' applies in this project (file.search/file.read).\n2. Review the standard practice for use case testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_domain-testing",
+   "name": "Testing topic: domain testing",
+   "description": "Practical guide for domain testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'domain testing' applies in this project (file.search/file.read).\n2. Review the standard practice for domain testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_boundary-analysis-deep",
+   "name": "Testing topic: boundary analysis deep",
+   "description": "Practical guide for boundary analysis deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'boundary analysis deep' applies in this project (file.search/file.read).\n2. Review the standard practice for boundary analysis deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_equivalence-partitioning",
+   "name": "Testing topic: equivalence partitioning",
+   "description": "Practical guide for equivalence partitioning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'equivalence partitioning' applies in this project (file.search/file.read).\n2. Review the standard practice for equivalence partitioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_error-guessing",
+   "name": "Testing topic: error guessing",
+   "description": "Practical guide for error guessing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error guessing' applies in this project (file.search/file.read).\n2. Review the standard practice for error guessing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_checklist-testing",
+   "name": "Testing topic: checklist testing",
+   "description": "Practical guide for checklist testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'checklist testing' applies in this project (file.search/file.read).\n2. Review the standard practice for checklist testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_touring-heuristics",
+   "name": "Testing topic: touring heuristics",
+   "description": "Practical guide for touring heuristics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'touring heuristics' applies in this project (file.search/file.read).\n2. Review the standard practice for touring heuristics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_supermodel-tour",
+   "name": "Testing topic: supermodel tour",
+   "description": "Practical guide for supermodel tour in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'supermodel tour' applies in this project (file.search/file.read).\n2. Review the standard practice for supermodel tour (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_landmark-tour",
+   "name": "Testing topic: landmark tour",
+   "description": "Practical guide for landmark tour in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'landmark tour' applies in this project (file.search/file.read).\n2. Review the standard practice for landmark tour (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tst2_garbage-collector-tour",
+   "name": "Testing topic: garbage collector tour",
+   "description": "Practical guide for garbage collector tour in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'garbage collector tour' applies in this project (file.search/file.read).\n2. Review the standard practice for garbage collector tour (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

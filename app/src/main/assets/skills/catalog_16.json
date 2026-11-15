@@ -1,0 +1,320 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_exp_poc_skeleton",
+   "name": "PoC script skeleton",
+   "description": "Start every exploit PoC from a safe template.",
+   "instructions": "Workflow:\n1. Write the skeleton with file.write: docstring, argparse (target, --dry-run, --consent), logging.\n2. Default to dry-run: no network action without explicit flags.\n3. Centralize request sending in one function with try/except.\n4. Log request/response pairs to a run log file.\n5. Test the skeleton runs with python.run_file --help.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_http_request_crafting",
+   "name": "Raw HTTP request crafting",
+   "description": "Build precise requests in Python.",
+   "instructions": "Workflow:\n1. Use requests or raw sockets deliberately (python.run_file).\n2. Control every header; document unusual ones.\n3. Handle redirects and cookies explicitly.\n4. Verify against http.capture ground truth.\n5. Keep a request-recipe note file.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_payload_encoder",
+   "name": "Payload encoding toolkit",
+   "description": "Encode payloads correctly per context.",
+   "instructions": "Workflow:\n1. Implement URL/base64/hex/unicode escapes with python.run_file.\n2. Encode on demand, never double-encode blindly.\n3. Round-trip test each encoder.\n4. Wire the encoder into your PoC CLI.\n5. Document per-context choices.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_response_diffing",
+   "name": "Response diffing engine",
+   "description": "Detect subtle response differences.",
+   "instructions": "Workflow:\n1. Fetch baseline and probe responses in python.run_file.\n2. Normalize (whitespace, dynamic tokens) before compare.\n3. Diff with difflib; report similarity score.\n4. Calibrate against known-true and known-false probes.\n5. Persist the diff tool for reuse.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_blind_extraction_bot",
+   "name": "Blind extraction automation",
+   "description": "Automate character-by-character extraction.",
+   "instructions": "Workflow:\n1. Implement the oracle check function (boolean or timing).\n2. Binary-search character sets in python.run_file.\n3. Throttle: small sleep, capped requests.\n4. Checkpoint progress to a file for resume.\n5. Stop at defined length or confidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_timing_oracle",
+   "name": "Timing oracle utilities",
+   "description": "Measure and use timing reliably.",
+   "instructions": "Workflow:\n1. Collect N baseline samples in python.run_file.\n2. Compute mean/stdev; define the threshold.\n3. Validate the oracle with known-true/false conditions.\n4. Only then run the real extraction.\n5. Report measurement statistics.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_exploit_chain_builder",
+   "name": "Exploit chain composition",
+   "description": "Chain multiple steps safely.",
+   "instructions": "Workflow:\n1. Model each stage as a function returning state.\n2. Pass state explicitly between stages.\n3. Abort cleanly on any stage failure.\n4. Log the full chain trace.\n5. Test stages individually first.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_fuzz_request_gen",
+   "name": "Request fuzzer writing",
+   "description": "Generate structured request mutations.",
+   "instructions": "Workflow:\n1. Define a grammar of mutable fields in python.run_file.\n2. Generate mutations: swap, encode, boundary values.\n3. Send with strict rate limiting.\n4. Cluster responses by signature.\n5. Save interesting mutations for review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_wordlist_builder",
+   "name": "Wordlist generation",
+   "description": "Build targeted wordlists.",
+   "instructions": "Workflow:\n1. Derive candidates from the target's language/brand (http.history terms).\n2. Combine with generic lists via python.run_file.\n3. Dedupe and case-normalize.\n4. Size-cap for politeness.\n5. Save with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_result_aggregator",
+   "name": "Scanner output aggregation",
+   "description": "Merge results across tools.",
+   "instructions": "Workflow:\n1. Parse web.sqlmap/xssscan/dirbrute outputs with python.run_file.\n2. Normalize to one JSON schema.\n3. Merge by (host, param, type).\n4. Rank by severity.\n5. file.write the combined report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_report_generator",
+   "name": "Automated report generation",
+   "description": "Generate findings reports from data.",
+   "instructions": "Workflow:\n1. Read the findings JSON (file.read).\n2. Render markdown with sections per finding via python.run_file.\n3. Include evidence file references.\n4. Redact secrets automatically.\n5. Output the final report path.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_http_client_pool",
+   "name": "Polite HTTP client pooling",
+   "description": "Control concurrency and rate.",
+   "instructions": "Workflow:\n1. Implement a token-bucket rate limiter in python.run_file.\n2. Pool connections per host.\n3. Honor Retry-After headers.\n4. Cap total requests per run.\n5. Log rate stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_target_config_loader",
+   "name": "Target config loading",
+   "description": "Load engagement config safely.",
+   "instructions": "Workflow:\n1. Define a JSON target file: hosts, scope, auth notes (no secrets inline).\n2. Validate with python.run_file.\n3. Refuse to run when scope is missing.\n4. Log the loaded scope at start.\n5. Keep per-engagement configs separate.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_auth_session_helper",
+   "name": "Authenticated session helper",
+   "description": "Maintain login state in PoCs.",
+   "instructions": "Workflow:\n1. Implement login -> cookie/token capture in python.run_file.\n2. Refresh on 401 transparently.\n3. Never log credentials or tokens.\n4. Verify session validity with a harmless request.\n5. Store session state in memory only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_payload_unicode_safety",
+   "name": "Unicode-safe payload handling",
+   "description": "Avoid encoding bugs in payloads.",
+   "instructions": "Workflow:\n1. Normalize payloads to NFC in python.run_file.\n2. Round-trip via the transport encoding.\n3. Verify server-side interpretation via reflection.\n4. Keep byte-level logs when needed.\n5. Document gotchas.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_proxy_aware_poc",
+   "name": "Proxy-aware PoC design",
+   "description": "Route PoC traffic for inspection.",
+   "instructions": "Workflow:\n1. Support HTTP(S)_PROXY env or flag in python.run_file.\n2. Verify the proxy path with a canary request.\n3. Capture through http.capture when needed.\n4. Compare direct vs proxied behavior.\n5. Document the setup.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_retries_backoff",
+   "name": "Retry with backoff",
+   "description": "Handle transient failures gracefully.",
+   "instructions": "Workflow:\n1. Implement exponential backoff with jitter in python.run_file.\n2. Cap retries; fail loudly after.\n3. Never retry non-idempotent destructive calls.\n4. Log each retry with reason.\n5. Summarize retry stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_safe_defaults_cli",
+   "name": "Safe CLI defaults",
+   "description": "Make PoCs safe by default.",
+   "instructions": "Workflow:\n1. Require --target plus --consent to act.\n2. Default --dry-run true.\n3. Print the plan before acting when dry-run.\n4. Exit non-zero on refused actions.\n5. Test all flag paths with python.run_file.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_log_artifact_manager",
+   "name": "Run artifact management",
+   "description": "Keep PoC runs auditable.",
+   "instructions": "Workflow:\n1. Create a run folder per execution (file.write).\n2. Save requests, responses, and a timeline.\n3. Hash artifacts at end.\n4. Reference the folder in reports.\n5. Clean old runs on request.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_vuln_verify_double",
+   "name": "Double-verification rule",
+   "description": "Confirm findings twice before reporting.",
+   "instructions": "Workflow:\n1. Reproduce with two independent methods (tool + custom script).\n2. Compare evidence.\n3. Only report when both agree.\n4. Note the verification method in the report.\n5. Keep both evidence sets.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_exploit_idempotency",
+   "name": "Idempotent exploitation",
+   "description": "Make re-runs safe.",
+   "instructions": "Workflow:\n1. Detect prior exploitation markers before acting.\n2. Skip completed stages.\n3. Summarize state at start.\n4. Enable safe resume after interruption.\n5. Test resume behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_session_state_snapshots",
+   "name": "Session state snapshots",
+   "description": "Snapshot exploit state for analysis.",
+   "instructions": "Workflow:\n1. Persist cookies/tokens hashes (not values) to a state file.\n2. Reload state on resume in python.run_file.\n3. Verify state validity on load.\n4. Rotate snapshots per run.\n5. Keep values out of logs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_error_oracle_design",
+   "name": "Error oracle design",
+   "description": "Use server errors as information.",
+   "instructions": "Workflow:\n1. Catalog error signatures from probes (http.replay).\n2. Map signature -> meaning in a table (python.run_file).\n3. Use the oracle in extraction flows.\n4. Watch for WAF-injected fake errors.\n5. Document the catalog.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_rate_limit_aware_bot",
+   "name": "Rate-limit aware automation",
+   "description": "Respect and detect limits.",
+   "instructions": "Workflow:\n1. Watch for 429/throttle patterns in python.run_file loops.\n2. Back off immediately on signal.\n3. Persist progress before backing off.\n4. Resume politely after the window.\n5. Report limit observations.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_payload_minimization",
+   "name": "Payload minimization",
+   "description": "Use the smallest working payload.",
+   "instructions": "Workflow:\n1. Start minimal; add only on failure.\n2. Verify each addition changes behavior.\n3. Keep a minimal-vs-full comparison log.\n4. Prefer readable payloads for reports.\n5. Document the minimal set.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_multi_target_runner",
+   "name": "Multi-target orchestration",
+   "description": "Run authorized scans across hosts.",
+   "instructions": "Workflow:\n1. Load the scoped target list (target config).\n2. Serialize per-host work; cap global concurrency in python.run_file.\n3. Aggregate per-host summaries.\n4. Preserve per-host evidence folders.\n5. Produce a combined matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_poc_dockerize_note",
+   "name": "PoC environment isolation",
+   "description": "Isolate risky execution.",
+   "instructions": "Workflow:\n1. Prefer running PoCs in an isolated container/VM.\n2. Document the isolation boundary (file.write).\n3. Verify no host mounts are writable.\n4. Monitor egress during runs (tcpdump.capture).\n5. Record the setup in engagement notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_screenshot_evidence",
+   "name": "Visual evidence capture",
+   "description": "Attach visual proof to findings.",
+   "instructions": "Workflow:\n1. Reproduce in web.browser; capture via web.browser screenshot action.\n2. Name files by finding id.\n3. Reference them in the report.\n4. Keep images free of sensitive data.\n5. Verify the image shows the claimed state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_http_signature_normalize",
+   "name": "Traffic signature normalization",
+   "description": "Dedupe scanner noise.",
+   "instructions": "Workflow:\n1. Extract stable signatures (method+path+param) in python.run_file.\n2. Cluster responses by signature+status.\n3. Drop redundant hits.\n4. Report unique findings only.\n5. Keep the raw set archived.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_bounty_repro_pack",
+   "name": "Bounty reproduction pack",
+   "description": "Package findings for submission.",
+   "instructions": "Workflow:\n1. Assemble: summary, steps, PoC, impact, environment.\n2. Include sanitized evidence files.\n3. Verify the PoC runs from a clean state.\n4. Remove anything out-of-scope per program policy.\n5. file.write the pack manifest.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_cmd_output_parser",
+   "name": "Command output parsing",
+   "description": "Parse tool outputs reliably.",
+   "instructions": "Workflow:\n1. Read raw outputs with file.read.\n2. Write parsers per tool with python.run_file (regex/line state).\n3. Round-trip test on saved samples.\n4. Normalize to JSON.\n5. Wire parsers into the aggregator.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_nuclei_style_templates",
+   "name": "Check template authoring",
+   "description": "Write reusable check templates.",
+   "instructions": "Workflow:\n1. Define metadata: id, severity, matchers.\n2. Implement matchers against captured responses (python.run_file).\n3. Test true and false positives.\n4. Version the template file.\n5. Share within your notes library.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_exploit_logging_std",
+   "name": "Standard exploit logging",
+   "description": "Log like a professional.",
+   "instructions": "Workflow:\n1. Structured lines: ts, stage, request id, outcome.\n2. One file per run (file.write).\n3. Never log secrets.\n4. Rotate per session.\n5. Summarize at end.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_payload_dictionary_mgmt",
+   "name": "Payload dictionary management",
+   "description": "Curate payload sets.",
+   "instructions": "Workflow:\n1. Maintain per-class payload files (SSTI, SQLi, XSS) with file.write.\n2. Version and date them.\n3. Prune after filter learnings.\n4. Load them in PoCs via CLI flag.\n5. Review quarterly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_api_recon_scripting",
+   "name": "API recon scripting",
+   "description": "Automate API surface discovery.",
+   "instructions": "Workflow:\n1. Crawl docs/specs (web.crawl).\n2. Enumerate endpoints from OpenAPI if present via python.run_file.\n3. Probe each with harmless methods.\n4. Record auth requirements.\n5. file.write the endpoint inventory.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_response_header_analysis",
+   "name": "Response header intelligence",
+   "description": "Mine headers for stack info.",
+   "instructions": "Workflow:\n1. Collect headers across endpoints (http.capture).\n2. Parse server/x-powered-by/cookies with python.run_file.\n3. Map to stack hypotheses.\n4. Verify with behavior probes.\n5. Record in engagement notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_custom_scanner_pipeline",
+   "name": "Custom scanner pipeline",
+   "description": "Compose tools into a pipeline.",
+   "instructions": "Workflow:\n1. Define stages: recon, enumerate, probe, verify.\n2. Implement stage runner in python.run_file.\n3. Pass state via files between stages.\n4. Keep each stage restartable.\n5. Report pipeline stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_poc_code_review",
+   "name": "PoC code review",
+   "description": "Review PoCs like production code.",
+   "instructions": "Workflow:\n1. file.read the whole script.\n2. Check: input validation, error paths, logging.\n3. Confirm safe defaults.\n4. Test dry-run first.\n5. Approve only after a lab run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_exploit_regression_suite",
+   "name": "Exploit regression suite",
+   "description": "Keep working PoCs working.",
+   "instructions": "Workflow:\n1. Maintain a lab target per PoC (workspace notes).\n2. Run the suite after lab updates via python.run_file.\n3. Flag broken PoCs for fixing.\n4. Track pass rate over time.\n5. Save the trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_network_safe_defaults",
+   "name": "Network safety defaults",
+   "description": "Prevent accidental wide scans.",
+   "instructions": "Workflow:\n1. Default to single-host runs.\n2. Require explicit flag for ranges.\n3. Cap ports/paths per run.\n4. Log scope at start.\n5. Refuse unscoped ranges in helpers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_waf_aware_probing",
+   "name": "WAF-aware probing",
+   "description": "Probe politely behind WAFs.",
+   "instructions": "Workflow:\n1. Fingerprint the WAF from response diffs (python.run_file).\n2. Slow probes below threshold.\n3. Rotate benign encodings where needed.\n4. Stop on block patterns.\n5. Record WAF behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_data_exfil_minimize",
+   "name": "Data minimization in PoCs",
+   "description": "Prove impact without mass extraction.",
+   "instructions": "Workflow:\n1. Extract minimal proof (row 1, one file head).\n2. Never bulk-dump on production.\n3. Summarize what full access would mean.\n4. Redact any real data shown.\n5. State the boundary in the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_exploit_cleanup",
+   "name": "Exploit cleanup discipline",
+   "description": "Leave targets as found.",
+   "instructions": "Workflow:\n1. List artifacts created (accounts, files) during the run.\n2. Remove them via documented reverse steps.\n3. Verify removal.\n4. Record cleanup in the report.\n5. Confirm with the owner when unsure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_poc_readme",
+   "name": "PoC README standards",
+   "description": "Document PoCs for reuse.",
+   "instructions": "Workflow:\n1. Write README with file.write: purpose, usage, safety, author, license.\n2. Include example safe invocation.\n3. State supported versions.\n4. Link the advisory/CVE.\n5. Review with cat_exp_poc_code_review flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp_second_order_checks",
+   "name": "Second-order effect checks",
+   "description": "Catch delayed injection effects.",
+   "instructions": "Workflow:\n1. Submit payloads; then re-fetch affected stored views later (http.replay).\n2. Correlate render-time execution.\n3. Automate the wait-and-check loop with python.run_file.\n4. Document the delay pattern.\n5. Report second-order findings.",
+   "enabled": false
+  }
+ ]
+}

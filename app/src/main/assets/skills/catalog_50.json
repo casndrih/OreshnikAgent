@@ -1,0 +1,2266 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_sw2_technical-debt-register",
+   "name": "Craft topic: technical debt register",
+   "description": "Practical guide for technical debt register in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'technical debt register' applies in this project (file.search/file.read).\n2. Review the standard practice for technical debt register (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_debt-burn-down-plans",
+   "name": "Craft topic: debt burn-down plans",
+   "description": "Practical guide for debt burn-down plans in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'debt burn-down plans' applies in this project (file.search/file.read).\n2. Review the standard practice for debt burn-down plans (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_refactoring-windows",
+   "name": "Craft topic: refactoring windows",
+   "description": "Practical guide for refactoring windows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'refactoring windows' applies in this project (file.search/file.read).\n2. Review the standard practice for refactoring windows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_boy-scout-rule-limits",
+   "name": "Craft topic: boy scout rule limits",
+   "description": "Practical guide for boy scout rule limits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'boy scout rule limits' applies in this project (file.search/file.read).\n2. Review the standard practice for boy scout rule limits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_code-freeze-etiquette",
+   "name": "Craft topic: code freeze etiquette",
+   "description": "Practical guide for code freeze etiquette in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'code freeze etiquette' applies in this project (file.search/file.read).\n2. Review the standard practice for code freeze etiquette (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_review-turnaround-slas",
+   "name": "Craft topic: review turnaround slas",
+   "description": "Practical guide for review turnaround slas in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'review turnaround slas' applies in this project (file.search/file.read).\n2. Review the standard practice for review turnaround slas (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pair-programming-remote",
+   "name": "Craft topic: pair programming remote",
+   "description": "Practical guide for pair programming remote in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pair programming remote' applies in this project (file.search/file.read).\n2. Review the standard practice for pair programming remote (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_mob-programming-sessions",
+   "name": "Craft topic: mob programming sessions",
+   "description": "Practical guide for mob programming sessions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mob programming sessions' applies in this project (file.search/file.read).\n2. Review the standard practice for mob programming sessions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_code-read-sessions",
+   "name": "Craft topic: code read sessions",
+   "description": "Practical guide for code read sessions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'code read sessions' applies in this project (file.search/file.read).\n2. Review the standard practice for code read sessions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_brownbag-talks",
+   "name": "Craft topic: brownbag talks",
+   "description": "Practical guide for brownbag talks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'brownbag talks' applies in this project (file.search/file.read).\n2. Review the standard practice for brownbag talks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_lunch-and-learns",
+   "name": "Craft topic: lunch and learns",
+   "description": "Practical guide for lunch and learns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lunch and learns' applies in this project (file.search/file.read).\n2. Review the standard practice for lunch and learns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_conference-talk-prep",
+   "name": "Craft topic: conference talk prep",
+   "description": "Practical guide for conference talk prep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'conference talk prep' applies in this project (file.search/file.read).\n2. Review the standard practice for conference talk prep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_blog-post-workflow",
+   "name": "Craft topic: blog post workflow",
+   "description": "Practical guide for blog post workflow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'blog post workflow' applies in this project (file.search/file.read).\n2. Review the standard practice for blog post workflow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_open-source-contribution-flow",
+   "name": "Craft topic: open source contribution flow",
+   "description": "Practical guide for open source contribution flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'open source contribution flow' applies in this project (file.search/file.read).\n2. Review the standard practice for open source contribution flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_licensing-for-oss",
+   "name": "Craft topic: licensing for oss",
+   "description": "Practical guide for licensing for oss in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'licensing for oss' applies in this project (file.search/file.read).\n2. Review the standard practice for licensing for oss (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cla-dco-handling",
+   "name": "Craft topic: cla/dco handling",
+   "description": "Practical guide for cla/dco handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cla/dco handling' applies in this project (file.search/file.read).\n2. Review the standard practice for cla/dco handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_release-stewardship",
+   "name": "Craft topic: release stewardship",
+   "description": "Practical guide for release stewardship in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'release stewardship' applies in this project (file.search/file.read).\n2. Review the standard practice for release stewardship (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_maintainer-burnout-notes",
+   "name": "Craft topic: maintainer burnout notes",
+   "description": "Practical guide for maintainer burnout notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'maintainer burnout notes' applies in this project (file.search/file.read).\n2. Review the standard practice for maintainer burnout notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_issue-triage-rota",
+   "name": "Craft topic: issue triage rota",
+   "description": "Practical guide for issue triage rota in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'issue triage rota' applies in this project (file.search/file.read).\n2. Review the standard practice for issue triage rota (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_good-first-issue-curation",
+   "name": "Craft topic: good first issue curation",
+   "description": "Practical guide for good first issue curation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'good first issue curation' applies in this project (file.search/file.read).\n2. Review the standard practice for good first issue curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_roadmap-communication",
+   "name": "Craft topic: roadmap communication",
+   "description": "Practical guide for roadmap communication in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'roadmap communication' applies in this project (file.search/file.read).\n2. Review the standard practice for roadmap communication (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_status-page-writing",
+   "name": "Craft topic: status page writing",
+   "description": "Practical guide for status page writing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'status page writing' applies in this project (file.search/file.read).\n2. Review the standard practice for status page writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_customer-escalation-empathy",
+   "name": "Craft topic: customer escalation empathy",
+   "description": "Practical guide for customer escalation empathy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'customer escalation empathy' applies in this project (file.search/file.read).\n2. Review the standard practice for customer escalation empathy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_support-handoff-docs",
+   "name": "Craft topic: support handoff docs",
+   "description": "Practical guide for support handoff docs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'support handoff docs' applies in this project (file.search/file.read).\n2. Review the standard practice for support handoff docs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_incident-follow-up-emails",
+   "name": "Craft topic: incident follow-up emails",
+   "description": "Practical guide for incident follow-up emails in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'incident follow-up emails' applies in this project (file.search/file.read).\n2. Review the standard practice for incident follow-up emails (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_postmortem-action-owners",
+   "name": "Craft topic: postmortem action owners",
+   "description": "Practical guide for postmortem action owners in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'postmortem action owners' applies in this project (file.search/file.read).\n2. Review the standard practice for postmortem action owners (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_oncall-wellbeing",
+   "name": "Craft topic: oncall wellbeing",
+   "description": "Practical guide for oncall wellbeing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'oncall wellbeing' applies in this project (file.search/file.read).\n2. Review the standard practice for oncall wellbeing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cognitive-load-review",
+   "name": "Craft topic: cognitive load review",
+   "description": "Practical guide for cognitive load review in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cognitive load review' applies in this project (file.search/file.read).\n2. Review the standard practice for cognitive load review (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_wip-limits",
+   "name": "Craft topic: wip limits",
+   "description": "Practical guide for wip limits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wip limits' applies in this project (file.search/file.read).\n2. Review the standard practice for wip limits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_flow-efficiency",
+   "name": "Craft topic: flow efficiency",
+   "description": "Practical guide for flow efficiency in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flow efficiency' applies in this project (file.search/file.read).\n2. Review the standard practice for flow efficiency (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_lead-time-tracking",
+   "name": "Craft topic: lead time tracking",
+   "description": "Practical guide for lead time tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lead time tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for lead time tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cycle-time-tracking",
+   "name": "Craft topic: cycle time tracking",
+   "description": "Practical guide for cycle time tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cycle time tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for cycle time tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cumulative-flow-diagrams",
+   "name": "Craft topic: cumulative flow diagrams",
+   "description": "Practical guide for cumulative flow diagrams in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cumulative flow diagrams' applies in this project (file.search/file.read).\n2. Review the standard practice for cumulative flow diagrams (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_kvjs-neither;-skip",
+   "name": "Craft topic: kvjs neither; skip",
+   "description": "Practical guide for kvjs neither; skip in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kvjs neither; skip' applies in this project (file.search/file.read).\n2. Review the standard practice for kvjs neither; skip (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_sprint-planning-prep",
+   "name": "Craft topic: sprint planning prep",
+   "description": "Practical guide for sprint planning prep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sprint planning prep' applies in this project (file.search/file.read).\n2. Review the standard practice for sprint planning prep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_backlog-refinement",
+   "name": "Craft topic: backlog refinement",
+   "description": "Practical guide for backlog refinement in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backlog refinement' applies in this project (file.search/file.read).\n2. Review the standard practice for backlog refinement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_story-slicing-thin",
+   "name": "Craft topic: story slicing thin",
+   "description": "Practical guide for story slicing thin in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'story slicing thin' applies in this project (file.search/file.read).\n2. Review the standard practice for story slicing thin (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_vertical-slice-walking-skeleton",
+   "name": "Craft topic: vertical slice walking skeleton",
+   "description": "Practical guide for vertical slice walking skeleton in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vertical slice walking skeleton' applies in this project (file.search/file.read).\n2. Review the standard practice for vertical slice walking skeleton (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_story-points-vs-days",
+   "name": "Craft topic: story points vs days",
+   "description": "Practical guide for story points vs days in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'story points vs days' applies in this project (file.search/file.read).\n2. Review the standard practice for story points vs days (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_velocity-misuse-notes",
+   "name": "Craft topic: velocity misuse notes",
+   "description": "Practical guide for velocity misuse notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'velocity misuse notes' applies in this project (file.search/file.read).\n2. Review the standard practice for velocity misuse notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_forecasting-with-monte-carlo",
+   "name": "Craft topic: forecasting with monte carlo",
+   "description": "Practical guide for forecasting with monte carlo in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'forecasting with monte carlo' applies in this project (file.search/file.read).\n2. Review the standard practice for forecasting with monte carlo (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dependency-mapping-boards",
+   "name": "Craft topic: dependency mapping boards",
+   "description": "Practical guide for dependency mapping boards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dependency mapping boards' applies in this project (file.search/file.read).\n2. Review the standard practice for dependency mapping boards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_risks-in-standups",
+   "name": "Craft topic: risks in standups",
+   "description": "Practical guide for risks in standups in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'risks in standups' applies in this project (file.search/file.read).\n2. Review the standard practice for risks in standups (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_definition-of-ready",
+   "name": "Craft topic: definition of ready",
+   "description": "Practical guide for definition of ready in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'definition of ready' applies in this project (file.search/file.read).\n2. Review the standard practice for definition of ready (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_definition-of-done",
+   "name": "Craft topic: definition of done",
+   "description": "Practical guide for definition of done in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'definition of done' applies in this project (file.search/file.read).\n2. Review the standard practice for definition of done (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_acceptance-criteria-quality",
+   "name": "Craft topic: acceptance criteria quality",
+   "description": "Practical guide for acceptance criteria quality in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'acceptance criteria quality' applies in this project (file.search/file.read).\n2. Review the standard practice for acceptance criteria quality (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_example-mapping",
+   "name": "Craft topic: example mapping",
+   "description": "Practical guide for example mapping in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'example mapping' applies in this project (file.search/file.read).\n2. Review the standard practice for example mapping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_event-storming-basics",
+   "name": "Craft topic: event storming basics",
+   "description": "Practical guide for event storming basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'event storming basics' applies in this project (file.search/file.read).\n2. Review the standard practice for event storming basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_domain-storytelling",
+   "name": "Craft topic: domain storytelling",
+   "description": "Practical guide for domain storytelling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'domain storytelling' applies in this project (file.search/file.read).\n2. Review the standard practice for domain storytelling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ubiquitous-language-curation",
+   "name": "Craft topic: ubiquitous language curation",
+   "description": "Practical guide for ubiquitous language curation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ubiquitous language curation' applies in this project (file.search/file.read).\n2. Review the standard practice for ubiquitous language curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_bounded-context-discovery",
+   "name": "Craft topic: bounded context discovery",
+   "description": "Practical guide for bounded context discovery in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bounded context discovery' applies in this project (file.search/file.read).\n2. Review the standard practice for bounded context discovery (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_context-mapping-patterns",
+   "name": "Craft topic: context mapping patterns",
+   "description": "Practical guide for context mapping patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'context mapping patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for context mapping patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_anti-corruption-at-boundaries",
+   "name": "Craft topic: anti corruption at boundaries",
+   "description": "Practical guide for anti corruption at boundaries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'anti corruption at boundaries' applies in this project (file.search/file.read).\n2. Review the standard practice for anti corruption at boundaries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_domain-events-naming",
+   "name": "Craft topic: domain events naming",
+   "description": "Practical guide for domain events naming in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'domain events naming' applies in this project (file.search/file.read).\n2. Review the standard practice for domain events naming (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_aggregates-consistency-rules",
+   "name": "Craft topic: aggregates consistency rules",
+   "description": "Practical guide for aggregates consistency rules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aggregates consistency rules' applies in this project (file.search/file.read).\n2. Review the standard practice for aggregates consistency rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_repository-per-aggregate",
+   "name": "Craft topic: repository per aggregate",
+   "description": "Practical guide for repository per aggregate in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'repository per aggregate' applies in this project (file.search/file.read).\n2. Review the standard practice for repository per aggregate (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_value-object-design",
+   "name": "Craft topic: value object design",
+   "description": "Practical guide for value object design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'value object design' applies in this project (file.search/file.read).\n2. Review the standard practice for value object design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_entity-identity-choices",
+   "name": "Craft topic: entity identity choices",
+   "description": "Practical guide for entity identity choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'entity identity choices' applies in this project (file.search/file.read).\n2. Review the standard practice for entity identity choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_factory-intent",
+   "name": "Craft topic: factory intent",
+   "description": "Practical guide for factory intent in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'factory intent' applies in this project (file.search/file.read).\n2. Review the standard practice for factory intent (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_service-layer-thinness",
+   "name": "Craft topic: service layer thinness",
+   "description": "Practical guide for service layer thinness in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'service layer thinness' applies in this project (file.search/file.read).\n2. Review the standard practice for service layer thinness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_policy-objects",
+   "name": "Craft topic: policy objects",
+   "description": "Practical guide for policy objects in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'policy objects' applies in this project (file.search/file.read).\n2. Review the standard practice for policy objects (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_specification-pattern",
+   "name": "Craft topic: specification pattern",
+   "description": "Practical guide for specification pattern in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'specification pattern' applies in this project (file.search/file.read).\n2. Review the standard practice for specification pattern (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_strategy-selection",
+   "name": "Craft topic: strategy selection",
+   "description": "Practical guide for strategy selection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'strategy selection' applies in this project (file.search/file.read).\n2. Review the standard practice for strategy selection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_template-method-tradeoffs",
+   "name": "Craft topic: template method tradeoffs",
+   "description": "Practical guide for template method tradeoffs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'template method tradeoffs' applies in this project (file.search/file.read).\n2. Review the standard practice for template method tradeoffs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_observer-overuse-notes",
+   "name": "Craft topic: observer overuse notes",
+   "description": "Practical guide for observer overuse notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'observer overuse notes' applies in this project (file.search/file.read).\n2. Review the standard practice for observer overuse notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_command-bus-basics",
+   "name": "Craft topic: command bus basics",
+   "description": "Practical guide for command bus basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'command bus basics' applies in this project (file.search/file.read).\n2. Review the standard practice for command bus basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_memento-for-undo",
+   "name": "Craft topic: memento for undo",
+   "description": "Practical guide for memento for undo in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'memento for undo' applies in this project (file.search/file.read).\n2. Review the standard practice for memento for undo (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_visitor-applicability",
+   "name": "Craft topic: visitor applicability",
+   "description": "Practical guide for visitor applicability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'visitor applicability' applies in this project (file.search/file.read).\n2. Review the standard practice for visitor applicability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_facade-subsystems",
+   "name": "Craft topic: facade subsystems",
+   "description": "Practical guide for facade subsystems in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'facade subsystems' applies in this project (file.search/file.read).\n2. Review the standard practice for facade subsystems (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_adapter-anti-corruption",
+   "name": "Craft topic: adapter anti corruption",
+   "description": "Practical guide for adapter anti corruption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'adapter anti corruption' applies in this project (file.search/file.read).\n2. Review the standard practice for adapter anti corruption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_bridge-abstraction-split",
+   "name": "Craft topic: bridge abstraction split",
+   "description": "Practical guide for bridge abstraction split in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bridge abstraction split' applies in this project (file.search/file.read).\n2. Review the standard practice for bridge abstraction split (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_composite-trees",
+   "name": "Craft topic: composite trees",
+   "description": "Practical guide for composite trees in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'composite trees' applies in this project (file.search/file.read).\n2. Review the standard practice for composite trees (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_decorator-pipelines",
+   "name": "Craft topic: decorator pipelines",
+   "description": "Practical guide for decorator pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'decorator pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for decorator pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_proxy-access-control",
+   "name": "Craft topic: proxy access control",
+   "description": "Practical guide for proxy access control in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'proxy access control' applies in this project (file.search/file.read).\n2. Review the standard practice for proxy access control (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_flyweight-sharing",
+   "name": "Craft topic: flyweight sharing",
+   "description": "Practical guide for flyweight sharing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flyweight sharing' applies in this project (file.search/file.read).\n2. Review the standard practice for flyweight sharing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_prototype-cloning",
+   "name": "Craft topic: prototype cloning",
+   "description": "Practical guide for prototype cloning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'prototype cloning' applies in this project (file.search/file.read).\n2. Review the standard practice for prototype cloning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_singleton-limits",
+   "name": "Craft topic: singleton limits",
+   "description": "Practical guide for singleton limits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'singleton limits' applies in this project (file.search/file.read).\n2. Review the standard practice for singleton limits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_builder-complexity",
+   "name": "Craft topic: builder complexity",
+   "description": "Practical guide for builder complexity in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'builder complexity' applies in this project (file.search/file.read).\n2. Review the standard practice for builder complexity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_immutable-builders",
+   "name": "Craft topic: immutable builders",
+   "description": "Practical guide for immutable builders in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'immutable builders' applies in this project (file.search/file.read).\n2. Review the standard practice for immutable builders (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_functional-core-imperative-shell",
+   "name": "Craft topic: functional core imperative shell",
+   "description": "Practical guide for functional core imperative shell in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'functional core imperative shell' applies in this project (file.search/file.read).\n2. Review the standard practice for functional core imperative shell (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_parse-dont-validate",
+   "name": "Craft topic: parse don't validate",
+   "description": "Practical guide for parse don't validate in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'parse don't validate' applies in this project (file.search/file.read).\n2. Review the standard practice for parse don't validate (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_make-illegal-states-unrepresentable",
+   "name": "Craft topic: make illegal states unrepresentable",
+   "description": "Practical guide for make illegal states unrepresentable in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'make illegal states unrepresentable' applies in this project (file.search/file.read).\n2. Review the standard practice for make illegal states unrepresentable (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_total-functions",
+   "name": "Craft topic: total functions",
+   "description": "Practical guide for total functions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'total functions' applies in this project (file.search/file.read).\n2. Review the standard practice for total functions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_total-error-handling",
+   "name": "Craft topic: total error handling",
+   "description": "Practical guide for total error handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'total error handling' applies in this project (file.search/file.read).\n2. Review the standard practice for total error handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_railway-oriented-results",
+   "name": "Craft topic: railway oriented results",
+   "description": "Practical guide for railway oriented results in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'railway oriented results' applies in this project (file.search/file.read).\n2. Review the standard practice for railway oriented results (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_either-types-usage",
+   "name": "Craft topic: either types usage",
+   "description": "Practical guide for either types usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'either types usage' applies in this project (file.search/file.read).\n2. Review the standard practice for either types usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_option-chains-vs-nulls",
+   "name": "Craft topic: option chains vs nulls",
+   "description": "Practical guide for option chains vs nulls in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'option chains vs nulls' applies in this project (file.search/file.read).\n2. Review the standard practice for option chains vs nulls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_sealed-hierarchies-exhaustive",
+   "name": "Craft topic: sealed hierarchies exhaustive",
+   "description": "Practical guide for sealed hierarchies exhaustive in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sealed hierarchies exhaustive' applies in this project (file.search/file.read).\n2. Review the standard practice for sealed hierarchies exhaustive (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_smart-constructors",
+   "name": "Craft topic: smart constructors",
+   "description": "Practical guide for smart constructors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'smart constructors' applies in this project (file.search/file.read).\n2. Review the standard practice for smart constructors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_newtype-discipline",
+   "name": "Craft topic: newtype discipline",
+   "description": "Practical guide for newtype discipline in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'newtype discipline' applies in this project (file.search/file.read).\n2. Review the standard practice for newtype discipline (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_avoid-primitive-obsession",
+   "name": "Craft topic: avoid primitive obsession",
+   "description": "Practical guide for avoid primitive obsession in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'avoid primitive obsession' applies in this project (file.search/file.read).\n2. Review the standard practice for avoid primitive obsession (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_avoid-stringly-typed",
+   "name": "Craft topic: avoid stringly typed",
+   "description": "Practical guide for avoid stringly typed in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'avoid stringly typed' applies in this project (file.search/file.read).\n2. Review the standard practice for avoid stringly typed (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_avoid-boolean-traps",
+   "name": "Craft topic: avoid boolean traps",
+   "description": "Practical guide for avoid boolean traps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'avoid boolean traps' applies in this project (file.search/file.read).\n2. Review the standard practice for avoid boolean traps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_naming-things-well",
+   "name": "Craft topic: naming things well",
+   "description": "Practical guide for naming things well in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'naming things well' applies in this project (file.search/file.read).\n2. Review the standard practice for naming things well (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_comment-why-not-what",
+   "name": "Craft topic: comment why not what",
+   "description": "Practical guide for comment why not what in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'comment why not what' applies in this project (file.search/file.read).\n2. Review the standard practice for comment why not what (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_self-documenting-code",
+   "name": "Craft topic: self documenting code",
+   "description": "Practical guide for self documenting code in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'self documenting code' applies in this project (file.search/file.read).\n2. Review the standard practice for self documenting code (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_code-spacing-readability",
+   "name": "Craft topic: code spacing readability",
+   "description": "Practical guide for code spacing readability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'code spacing readability' applies in this project (file.search/file.read).\n2. Review the standard practice for code spacing readability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_vertical-density",
+   "name": "Craft topic: vertical density",
+   "description": "Practical guide for vertical density in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vertical density' applies in this project (file.search/file.read).\n2. Review the standard practice for vertical density (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_expression-complexity-limits",
+   "name": "Craft topic: expression complexity limits",
+   "description": "Practical guide for expression complexity limits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'expression complexity limits' applies in this project (file.search/file.read).\n2. Review the standard practice for expression complexity limits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_early-returns",
+   "name": "Craft topic: early returns",
+   "description": "Practical guide for early returns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'early returns' applies in this project (file.search/file.read).\n2. Review the standard practice for early returns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_guard-clauses",
+   "name": "Craft topic: guard clauses",
+   "description": "Practical guide for guard clauses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'guard clauses' applies in this project (file.search/file.read).\n2. Review the standard practice for guard clauses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_single-level-indentation",
+   "name": "Craft topic: single level indentation",
+   "description": "Practical guide for single level indentation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'single level indentation' applies in this project (file.search/file.read).\n2. Review the standard practice for single level indentation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_extract-function-thresholds",
+   "name": "Craft topic: extract function thresholds",
+   "description": "Practical guide for extract function thresholds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'extract function thresholds' applies in this project (file.search/file.read).\n2. Review the standard practice for extract function thresholds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_inline-variable-benefits",
+   "name": "Craft topic: inline variable benefits",
+   "description": "Practical guide for inline variable benefits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'inline variable benefits' applies in this project (file.search/file.read).\n2. Review the standard practice for inline variable benefits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_explaining-variables",
+   "name": "Craft topic: explaining variables",
+   "description": "Practical guide for explaining variables in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'explaining variables' applies in this project (file.search/file.read).\n2. Review the standard practice for explaining variables (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_introduce-parameter-object",
+   "name": "Craft topic: introduce parameter object",
+   "description": "Practical guide for introduce parameter object in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'introduce parameter object' applies in this project (file.search/file.read).\n2. Review the standard practice for introduce parameter object (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_replace-magic-numbers",
+   "name": "Craft topic: replace magic numbers",
+   "description": "Practical guide for replace magic numbers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'replace magic numbers' applies in this project (file.search/file.read).\n2. Review the standard practice for replace magic numbers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_avoid-feature-envy",
+   "name": "Craft topic: avoid feature envy",
+   "description": "Practical guide for avoid feature envy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'avoid feature envy' applies in this project (file.search/file.read).\n2. Review the standard practice for avoid feature envy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_law-of-demeter-pragmatics",
+   "name": "Craft topic: law of demeter pragmatics",
+   "description": "Practical guide for law of demeter pragmatics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'law of demeter pragmatics' applies in this project (file.search/file.read).\n2. Review the standard practice for law of demeter pragmatics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_composition-over-inheritance-cases",
+   "name": "Craft topic: composition over inheritance cases",
+   "description": "Practical guide for composition over inheritance cases in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'composition over inheritance cases' applies in this project (file.search/file.read).\n2. Review the standard practice for composition over inheritance cases (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_favor-data-over-logic",
+   "name": "Craft topic: favor data over logic",
+   "description": "Practical guide for favor data over logic in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'favor data over logic' applies in this project (file.search/file.read).\n2. Review the standard practice for favor data over logic (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_avoid-anemic-models-balance",
+   "name": "Craft topic: avoid anemic models balance",
+   "description": "Practical guide for avoid anemic models balance in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'avoid anemic models balance' applies in this project (file.search/file.read).\n2. Review the standard practice for avoid anemic models balance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_tell-dont-ask",
+   "name": "Craft topic: tell don't ask",
+   "description": "Practical guide for tell don't ask in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tell don't ask' applies in this project (file.search/file.read).\n2. Review the standard practice for tell don't ask (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_command-query-separation",
+   "name": "Craft topic: command query separation",
+   "description": "Practical guide for command query separation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'command query separation' applies in this project (file.search/file.read).\n2. Review the standard practice for command query separation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_side-effect-boundaries",
+   "name": "Craft topic: side effect boundaries",
+   "description": "Practical guide for side effect boundaries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'side effect boundaries' applies in this project (file.search/file.read).\n2. Review the standard practice for side effect boundaries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pure-function-adoption",
+   "name": "Craft topic: pure function adoption",
+   "description": "Practical guide for pure function adoption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pure function adoption' applies in this project (file.search/file.read).\n2. Review the standard practice for pure function adoption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_immutability-defaults",
+   "name": "Craft topic: immutability defaults",
+   "description": "Practical guide for immutability defaults in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'immutability defaults' applies in this project (file.search/file.read).\n2. Review the standard practice for immutability defaults (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_defensive-copies",
+   "name": "Craft topic: defensive copies",
+   "description": "Practical guide for defensive copies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'defensive copies' applies in this project (file.search/file.read).\n2. Review the standard practice for defensive copies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_aliasing-bugs",
+   "name": "Craft topic: aliasing bugs",
+   "description": "Practical guide for aliasing bugs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aliasing bugs' applies in this project (file.search/file.read).\n2. Review the standard practice for aliasing bugs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ownership-clarity",
+   "name": "Craft topic: ownership clarity",
+   "description": "Practical guide for ownership clarity in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ownership clarity' applies in this project (file.search/file.read).\n2. Review the standard practice for ownership clarity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_resource-acquisition-patterns",
+   "name": "Craft topic: resource acquisition patterns",
+   "description": "Practical guide for resource acquisition patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'resource acquisition patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for resource acquisition patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dispose-scopes",
+   "name": "Craft topic: dispose scopes",
+   "description": "Practical guide for dispose scopes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dispose scopes' applies in this project (file.search/file.read).\n2. Review the standard practice for dispose scopes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_using-statements",
+   "name": "Craft topic: using statements",
+   "description": "Practical guide for using statements in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'using statements' applies in this project (file.search/file.read).\n2. Review the standard practice for using statements (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_try-with-resources",
+   "name": "Craft topic: try with resources",
+   "description": "Practical guide for try with resources in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'try with resources' applies in this project (file.search/file.read).\n2. Review the standard practice for try with resources (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_finally-discipline",
+   "name": "Craft topic: finally discipline",
+   "description": "Practical guide for finally discipline in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'finally discipline' applies in this project (file.search/file.read).\n2. Review the standard practice for finally discipline (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cleanup-on-error-paths",
+   "name": "Craft topic: cleanup on error paths",
+   "description": "Practical guide for cleanup on error paths in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cleanup on error paths' applies in this project (file.search/file.read).\n2. Review the standard practice for cleanup on error paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_signal-vs-exception-styles",
+   "name": "Craft topic: signal vs exception styles",
+   "description": "Practical guide for signal vs exception styles in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'signal vs exception styles' applies in this project (file.search/file.read).\n2. Review the standard practice for signal vs exception styles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_error-codes-vs-exceptions",
+   "name": "Craft topic: error codes vs exceptions",
+   "description": "Practical guide for error codes vs exceptions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error codes vs exceptions' applies in this project (file.search/file.read).\n2. Review the standard practice for error codes vs exceptions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_exception-hierarchies",
+   "name": "Craft topic: exception hierarchies",
+   "description": "Practical guide for exception hierarchies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exception hierarchies' applies in this project (file.search/file.read).\n2. Review the standard practice for exception hierarchies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_wrapping-low-level-errors",
+   "name": "Craft topic: wrapping low level errors",
+   "description": "Practical guide for wrapping low level errors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wrapping low level errors' applies in this project (file.search/file.read).\n2. Review the standard practice for wrapping low level errors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_error-context-enrichment",
+   "name": "Craft topic: error context enrichment",
+   "description": "Practical guide for error context enrichment in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error context enrichment' applies in this project (file.search/file.read).\n2. Review the standard practice for error context enrichment (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_user-safe-messages",
+   "name": "Craft topic: user safe messages",
+   "description": "Practical guide for user safe messages in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'user safe messages' applies in this project (file.search/file.read).\n2. Review the standard practice for user safe messages (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_log-and-rethrow-anti-pattern",
+   "name": "Craft topic: log and rethrow anti pattern",
+   "description": "Practical guide for log and rethrow anti pattern in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'log and rethrow anti pattern' applies in this project (file.search/file.read).\n2. Review the standard practice for log and rethrow anti pattern (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_fail-fast-limits",
+   "name": "Craft topic: fail fast limits",
+   "description": "Practical guide for fail fast limits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fail fast limits' applies in this project (file.search/file.read).\n2. Review the standard practice for fail fast limits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_circuit-breakers-library-level",
+   "name": "Craft topic: circuit breakers library level",
+   "description": "Practical guide for circuit breakers library level in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'circuit breakers library level' applies in this project (file.search/file.read).\n2. Review the standard practice for circuit breakers library level (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_timeout-everywhere",
+   "name": "Craft topic: timeout everywhere",
+   "description": "Practical guide for timeout everywhere in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'timeout everywhere' applies in this project (file.search/file.read).\n2. Review the standard practice for timeout everywhere (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_retry-storm-prevention",
+   "name": "Craft topic: retry storm prevention",
+   "description": "Practical guide for retry storm prevention in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'retry storm prevention' applies in this project (file.search/file.read).\n2. Review the standard practice for retry storm prevention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_backpressure-propagation",
+   "name": "Craft topic: backpressure propagation",
+   "description": "Practical guide for backpressure propagation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backpressure propagation' applies in this project (file.search/file.read).\n2. Review the standard practice for backpressure propagation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_buffer-sizing",
+   "name": "Craft topic: buffer sizing",
+   "description": "Practical guide for buffer sizing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'buffer sizing' applies in this project (file.search/file.read).\n2. Review the standard practice for buffer sizing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_batching-thresholds",
+   "name": "Craft topic: batching thresholds",
+   "description": "Practical guide for batching thresholds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'batching thresholds' applies in this project (file.search/file.read).\n2. Review the standard practice for batching thresholds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pipelining-stages",
+   "name": "Craft topic: pipelining stages",
+   "description": "Practical guide for pipelining stages in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pipelining stages' applies in this project (file.search/file.read).\n2. Review the standard practice for pipelining stages (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_work-stealing-basics",
+   "name": "Craft topic: work stealing basics",
+   "description": "Practical guide for work stealing basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'work stealing basics' applies in this project (file.search/file.read).\n2. Review the standard practice for work stealing basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_false-sharing-notes",
+   "name": "Craft topic: false sharing notes",
+   "description": "Practical guide for false sharing notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'false sharing notes' applies in this project (file.search/file.read).\n2. Review the standard practice for false sharing notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_memory-fences-intuition",
+   "name": "Craft topic: memory fences intuition",
+   "description": "Practical guide for memory fences intuition in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'memory fences intuition' applies in this project (file.search/file.read).\n2. Review the standard practice for memory fences intuition (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_atomics-use-cases",
+   "name": "Craft topic: atomics use cases",
+   "description": "Practical guide for atomics use cases in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'atomics use cases' applies in this project (file.search/file.read).\n2. Review the standard practice for atomics use cases (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_lock-free-caution",
+   "name": "Craft topic: lock free caution",
+   "description": "Practical guide for lock free caution in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lock free caution' applies in this project (file.search/file.read).\n2. Review the standard practice for lock free caution (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_mutex-discipline",
+   "name": "Craft topic: mutex discipline",
+   "description": "Practical guide for mutex discipline in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mutex discipline' applies in this project (file.search/file.read).\n2. Review the standard practice for mutex discipline (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_lock-ordering",
+   "name": "Craft topic: lock ordering",
+   "description": "Practical guide for lock ordering in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lock ordering' applies in this project (file.search/file.read).\n2. Review the standard practice for lock ordering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_deadlock-avoidance",
+   "name": "Craft topic: deadlock avoidance",
+   "description": "Practical guide for deadlock avoidance in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'deadlock avoidance' applies in this project (file.search/file.read).\n2. Review the standard practice for deadlock avoidance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_rw-locks-usage",
+   "name": "Craft topic: rw locks usage",
+   "description": "Practical guide for rw locks usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rw locks usage' applies in this project (file.search/file.read).\n2. Review the standard practice for rw locks usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_condition-variables",
+   "name": "Craft topic: condition variables",
+   "description": "Practical guide for condition variables in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'condition variables' applies in this project (file.search/file.read).\n2. Review the standard practice for condition variables (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_semaphore-throttling",
+   "name": "Craft topic: semaphore throttling",
+   "description": "Practical guide for semaphore throttling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'semaphore throttling' applies in this project (file.search/file.read).\n2. Review the standard practice for semaphore throttling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_barrier-sync",
+   "name": "Craft topic: barrier sync",
+   "description": "Practical guide for barrier sync in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'barrier sync' applies in this project (file.search/file.read).\n2. Review the standard practice for barrier sync (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_thread-pool-sizing",
+   "name": "Craft topic: thread pool sizing",
+   "description": "Practical guide for thread pool sizing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'thread pool sizing' applies in this project (file.search/file.read).\n2. Review the standard practice for thread pool sizing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_virtual-threads-adoption",
+   "name": "Craft topic: virtual threads adoption",
+   "description": "Practical guide for virtual threads adoption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'virtual threads adoption' applies in this project (file.search/file.read).\n2. Review the standard practice for virtual threads adoption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_structured-concurrency",
+   "name": "Craft topic: structured concurrency",
+   "description": "Practical guide for structured concurrency in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'structured concurrency' applies in this project (file.search/file.read).\n2. Review the standard practice for structured concurrency (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cancellation-propagation",
+   "name": "Craft topic: cancellation propagation",
+   "description": "Practical guide for cancellation propagation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cancellation propagation' applies in this project (file.search/file.read).\n2. Review the standard practice for cancellation propagation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_interrupt-handling",
+   "name": "Craft topic: interrupt handling",
+   "description": "Practical guide for interrupt handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'interrupt handling' applies in this project (file.search/file.read).\n2. Review the standard practice for interrupt handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_graceful-degradation-tiers",
+   "name": "Craft topic: graceful degradation tiers",
+   "description": "Practical guide for graceful degradation tiers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'graceful degradation tiers' applies in this project (file.search/file.read).\n2. Review the standard practice for graceful degradation tiers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_load-shedding",
+   "name": "Craft topic: load shedding",
+   "description": "Practical guide for load shedding in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'load shedding' applies in this project (file.search/file.read).\n2. Review the standard practice for load shedding (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_priority-queues-under-load",
+   "name": "Craft topic: priority queues under load",
+   "description": "Practical guide for priority queues under load in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'priority queues under load' applies in this project (file.search/file.read).\n2. Review the standard practice for priority queues under load (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_fairness-starvation",
+   "name": "Craft topic: fairness starvation",
+   "description": "Practical guide for fairness starvation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fairness starvation' applies in this project (file.search/file.read).\n2. Review the standard practice for fairness starvation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_latency-vs-throughput",
+   "name": "Craft topic: latency vs throughput",
+   "description": "Practical guide for latency vs throughput in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'latency vs throughput' applies in this project (file.search/file.read).\n2. Review the standard practice for latency vs throughput (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_percentiles-over-averages",
+   "name": "Craft topic: percentiles over averages",
+   "description": "Practical guide for percentiles over averages in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'percentiles over averages' applies in this project (file.search/file.read).\n2. Review the standard practice for percentiles over averages (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_p99-tuning",
+   "name": "Craft topic: p99 tuning",
+   "description": "Practical guide for p99 tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'p99 tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for p99 tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_tail-latency-cases",
+   "name": "Craft topic: tail latency cases",
+   "description": "Practical guide for tail latency cases in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tail latency cases' applies in this project (file.search/file.read).\n2. Review the standard practice for tail latency cases (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_caching-layers-review",
+   "name": "Craft topic: caching layers review",
+   "description": "Practical guide for caching layers review in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'caching layers review' applies in this project (file.search/file.read).\n2. Review the standard practice for caching layers review (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_cache-stampede-prevention",
+   "name": "Craft topic: cache stampede prevention",
+   "description": "Practical guide for cache stampede prevention in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cache stampede prevention' applies in this project (file.search/file.read).\n2. Review the standard practice for cache stampede prevention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_jitter-in-expirations",
+   "name": "Craft topic: jitter in expirations",
+   "description": "Practical guide for jitter in expirations in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jitter in expirations' applies in this project (file.search/file.read).\n2. Review the standard practice for jitter in expirations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_warm-caches",
+   "name": "Craft topic: warm caches",
+   "description": "Practical guide for warm caches in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'warm caches' applies in this project (file.search/file.read).\n2. Review the standard practice for warm caches (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_negative-caching",
+   "name": "Craft topic: negative caching",
+   "description": "Practical guide for negative caching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'negative caching' applies in this project (file.search/file.read).\n2. Review the standard practice for negative caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_single-flight-dedupe",
+   "name": "Craft topic: single flight dedupe",
+   "description": "Practical guide for single flight dedupe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'single flight dedupe' applies in this project (file.search/file.read).\n2. Review the standard practice for single flight dedupe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_request-coalescing",
+   "name": "Craft topic: request coalescing",
+   "description": "Practical guide for request coalescing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'request coalescing' applies in this project (file.search/file.read).\n2. Review the standard practice for request coalescing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_async-request-handling",
+   "name": "Craft topic: async request handling",
+   "description": "Practical guide for async request handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'async request handling' applies in this project (file.search/file.read).\n2. Review the standard practice for async request handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_streaming-responses",
+   "name": "Craft topic: streaming responses",
+   "description": "Practical guide for streaming responses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'streaming responses' applies in this project (file.search/file.read).\n2. Review the standard practice for streaming responses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_chunked-transfer",
+   "name": "Craft topic: chunked transfer",
+   "description": "Practical guide for chunked transfer in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'chunked transfer' applies in this project (file.search/file.read).\n2. Review the standard practice for chunked transfer (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_connection-reuse",
+   "name": "Craft topic: connection reuse",
+   "description": "Practical guide for connection reuse in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'connection reuse' applies in this project (file.search/file.read).\n2. Review the standard practice for connection reuse (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_keepalive-tuning",
+   "name": "Craft topic: keepalive tuning",
+   "description": "Practical guide for keepalive tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'keepalive tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for keepalive tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_head-of-line-blocking",
+   "name": "Craft topic: head of line blocking",
+   "description": "Practical guide for head of line blocking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'head of line blocking' applies in this project (file.search/file.read).\n2. Review the standard practice for head of line blocking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_http2-multiplexing-notes",
+   "name": "Craft topic: http2 multiplexing notes",
+   "description": "Practical guide for http2 multiplexing notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'http2 multiplexing notes' applies in this project (file.search/file.read).\n2. Review the standard practice for http2 multiplexing notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_http3-quic-intro",
+   "name": "Craft topic: http3 quic intro",
+   "description": "Practical guide for http3 quic intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'http3 quic intro' applies in this project (file.search/file.read).\n2. Review the standard practice for http3 quic intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dns-prefetching",
+   "name": "Craft topic: dns prefetching",
+   "description": "Practical guide for dns prefetching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dns prefetching' applies in this project (file.search/file.read).\n2. Review the standard practice for dns prefetching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_connection-pooling-be",
+   "name": "Craft topic: connection pooling be",
+   "description": "Practical guide for connection pooling be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'connection pooling be' applies in this project (file.search/file.read).\n2. Review the standard practice for connection pooling be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pool-exhaustion-alerts",
+   "name": "Craft topic: pool exhaustion alerts",
+   "description": "Practical guide for pool exhaustion alerts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pool exhaustion alerts' applies in this project (file.search/file.read).\n2. Review the standard practice for pool exhaustion alerts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_slowloris-defenses",
+   "name": "Craft topic: slowloris defenses",
+   "description": "Practical guide for slowloris defenses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'slowloris defenses' applies in this project (file.search/file.read).\n2. Review the standard practice for slowloris defenses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_request-size-caps",
+   "name": "Craft topic: request size caps",
+   "description": "Practical guide for request size caps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'request size caps' applies in this project (file.search/file.read).\n2. Review the standard practice for request size caps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_multipart-streaming",
+   "name": "Craft topic: multipart streaming",
+   "description": "Practical guide for multipart streaming in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'multipart streaming' applies in this project (file.search/file.read).\n2. Review the standard practice for multipart streaming (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_file-scan-pipelines",
+   "name": "Craft topic: file scan pipelines",
+   "description": "Practical guide for file scan pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'file scan pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for file scan pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_async-virus-scanning",
+   "name": "Craft topic: async virus scanning",
+   "description": "Practical guide for async virus scanning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'async virus scanning' applies in this project (file.search/file.read).\n2. Review the standard practice for async virus scanning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_presigned-upload-flows",
+   "name": "Craft topic: presigned upload flows",
+   "description": "Practical guide for presigned upload flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'presigned upload flows' applies in this project (file.search/file.read).\n2. Review the standard practice for presigned upload flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_presigned-download-flows",
+   "name": "Craft topic: presigned download flows",
+   "description": "Practical guide for presigned download flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'presigned download flows' applies in this project (file.search/file.read).\n2. Review the standard practice for presigned download flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_bucket-lifecycle-policies",
+   "name": "Craft topic: bucket lifecycle policies",
+   "description": "Practical guide for bucket lifecycle policies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bucket lifecycle policies' applies in this project (file.search/file.read).\n2. Review the standard practice for bucket lifecycle policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_storage-class-tiering",
+   "name": "Craft topic: storage class tiering",
+   "description": "Practical guide for storage class tiering in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'storage class tiering' applies in this project (file.search/file.read).\n2. Review the standard practice for storage class tiering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_object-versioning",
+   "name": "Craft topic: object versioning",
+   "description": "Practical guide for object versioning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'object versioning' applies in this project (file.search/file.read).\n2. Review the standard practice for object versioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_soft-delete-patterns",
+   "name": "Craft topic: soft delete patterns",
+   "description": "Practical guide for soft delete patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'soft delete patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for soft delete patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_hard-delete-flows",
+   "name": "Craft topic: hard delete flows",
+   "description": "Practical guide for hard delete flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hard delete flows' applies in this project (file.search/file.read).\n2. Review the standard practice for hard delete flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_gdpr-erasure-flows",
+   "name": "Craft topic: gdpr erasure flows",
+   "description": "Practical guide for gdpr erasure flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gdpr erasure flows' applies in this project (file.search/file.read).\n2. Review the standard practice for gdpr erasure flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_data-portability-exports",
+   "name": "Craft topic: data portability exports",
+   "description": "Practical guide for data portability exports in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data portability exports' applies in this project (file.search/file.read).\n2. Review the standard practice for data portability exports (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_audit-trail-immutability",
+   "name": "Craft topic: audit trail immutability",
+   "description": "Practical guide for audit trail immutability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'audit trail immutability' applies in this project (file.search/file.read).\n2. Review the standard practice for audit trail immutability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_legal-hold-integration",
+   "name": "Craft topic: legal hold integration",
+   "description": "Practical guide for legal hold integration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'legal hold integration' applies in this project (file.search/file.read).\n2. Review the standard practice for legal hold integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_chain-of-custody",
+   "name": "Craft topic: chain of custody",
+   "description": "Practical guide for chain of custody in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'chain of custody' applies in this project (file.search/file.read).\n2. Review the standard practice for chain of custody (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_evidence-retention",
+   "name": "Craft topic: evidence retention",
+   "description": "Practical guide for evidence retention in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'evidence retention' applies in this project (file.search/file.read).\n2. Review the standard practice for evidence retention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_security-review-cadence",
+   "name": "Craft topic: security review cadence",
+   "description": "Practical guide for security review cadence in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'security review cadence' applies in this project (file.search/file.read).\n2. Review the standard practice for security review cadence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pen-test-scope-writing",
+   "name": "Craft topic: pen test scope writing",
+   "description": "Practical guide for pen test scope writing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pen test scope writing' applies in this project (file.search/file.read).\n2. Review the standard practice for pen test scope writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_red-purple-blue-loop",
+   "name": "Craft topic: red purple blue loop",
+   "description": "Practical guide for red purple blue loop in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'red purple blue loop' applies in this project (file.search/file.read).\n2. Review the standard practice for red purple blue loop (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_control-validation",
+   "name": "Craft topic: control validation",
+   "description": "Practical guide for control validation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'control validation' applies in this project (file.search/file.read).\n2. Review the standard practice for control validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_detection-engineering-basics",
+   "name": "Craft topic: detection engineering basics",
+   "description": "Practical guide for detection engineering basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'detection engineering basics' applies in this project (file.search/file.read).\n2. Review the standard practice for detection engineering basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_alert-quality-review",
+   "name": "Craft topic: alert quality review",
+   "description": "Practical guide for alert quality review in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'alert quality review' applies in this project (file.search/file.read).\n2. Review the standard practice for alert quality review (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_false-positive-budgets",
+   "name": "Craft topic: false positive budgets",
+   "description": "Practical guide for false positive budgets in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'false positive budgets' applies in this project (file.search/file.read).\n2. Review the standard practice for false positive budgets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_threat-hunting-cadence",
+   "name": "Craft topic: threat hunting cadence",
+   "description": "Practical guide for threat hunting cadence in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'threat hunting cadence' applies in this project (file.search/file.read).\n2. Review the standard practice for threat hunting cadence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_intel-source-curation",
+   "name": "Craft topic: intel source curation",
+   "description": "Practical guide for intel source curation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'intel source curation' applies in this project (file.search/file.read).\n2. Review the standard practice for intel source curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_campaign-tracking",
+   "name": "Craft topic: campaign tracking",
+   "description": "Practical guide for campaign tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'campaign tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for campaign tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ioc-lifecycle",
+   "name": "Craft topic: ioc lifecycle",
+   "description": "Practical guide for ioc lifecycle in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ioc lifecycle' applies in this project (file.search/file.read).\n2. Review the standard practice for ioc lifecycle (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_blocking-vs-monitoring",
+   "name": "Craft topic: blocking vs monitoring",
+   "description": "Practical guide for blocking vs monitoring in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'blocking vs monitoring' applies in this project (file.search/file.read).\n2. Review the standard practice for blocking vs monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_kill-chain-mapping",
+   "name": "Craft topic: kill chain mapping",
+   "description": "Practical guide for kill chain mapping in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kill chain mapping' applies in this project (file.search/file.read).\n2. Review the standard practice for kill chain mapping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_mitre-attck-mapping",
+   "name": "Craft topic: mitre attck mapping",
+   "description": "Practical guide for mitre attck mapping in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mitre attck mapping' applies in this project (file.search/file.read).\n2. Review the standard practice for mitre attck mapping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_detection-as-code",
+   "name": "Craft topic: detection as code",
+   "description": "Practical guide for detection as code in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'detection as code' applies in this project (file.search/file.read).\n2. Review the standard practice for detection as code (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_purple-team-drills",
+   "name": "Craft topic: purple team drills",
+   "description": "Practical guide for purple team drills in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'purple team drills' applies in this project (file.search/file.read).\n2. Review the standard practice for purple team drills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_tabletop-scenarios",
+   "name": "Craft topic: tabletop scenarios",
+   "description": "Practical guide for tabletop scenarios in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tabletop scenarios' applies in this project (file.search/file.read).\n2. Review the standard practice for tabletop scenarios (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_incident-severity-rubric",
+   "name": "Craft topic: incident severity rubric",
+   "description": "Practical guide for incident severity rubric in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'incident severity rubric' applies in this project (file.search/file.read).\n2. Review the standard practice for incident severity rubric (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_comms-during-incidents",
+   "name": "Craft topic: comms during incidents",
+   "description": "Practical guide for comms during incidents in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'comms during incidents' applies in this project (file.search/file.read).\n2. Review the standard practice for comms during incidents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_customer-trust-repair",
+   "name": "Craft topic: customer trust repair",
+   "description": "Practical guide for customer trust repair in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'customer trust repair' applies in this project (file.search/file.read).\n2. Review the standard practice for customer trust repair (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_regulator-notification-paths",
+   "name": "Craft topic: regulator notification paths",
+   "description": "Practical guide for regulator notification paths in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'regulator notification paths' applies in this project (file.search/file.read).\n2. Review the standard practice for regulator notification paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_breach-counsel-notes",
+   "name": "Craft topic: breach counsel notes",
+   "description": "Practical guide for breach counsel notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'breach counsel notes' applies in this project (file.search/file.read).\n2. Review the standard practice for breach counsel notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_insurance-reporting",
+   "name": "Craft topic: insurance reporting",
+   "description": "Practical guide for insurance reporting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'insurance reporting' applies in this project (file.search/file.read).\n2. Review the standard practice for insurance reporting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_law-enforcement-liaison",
+   "name": "Craft topic: law enforcement liaison",
+   "description": "Practical guide for law enforcement liaison in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'law enforcement liaison' applies in this project (file.search/file.read).\n2. Review the standard practice for law enforcement liaison (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_evidence-preservation",
+   "name": "Craft topic: evidence preservation",
+   "description": "Practical guide for evidence preservation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'evidence preservation' applies in this project (file.search/file.read).\n2. Review the standard practice for evidence preservation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_forensic-imaging",
+   "name": "Craft topic: forensic imaging",
+   "description": "Practical guide for forensic imaging in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'forensic imaging' applies in this project (file.search/file.read).\n2. Review the standard practice for forensic imaging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_write-blockers-notes",
+   "name": "Craft topic: write blockers notes",
+   "description": "Practical guide for write blockers notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'write blockers notes' applies in this project (file.search/file.read).\n2. Review the standard practice for write blockers notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_artifact-acquisition",
+   "name": "Craft topic: artifact acquisition",
+   "description": "Practical guide for artifact acquisition in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'artifact acquisition' applies in this project (file.search/file.read).\n2. Review the standard practice for artifact acquisition (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_timeline-reconstruction",
+   "name": "Craft topic: timeline reconstruction",
+   "description": "Practical guide for timeline reconstruction in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'timeline reconstruction' applies in this project (file.search/file.read).\n2. Review the standard practice for timeline reconstruction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_root-cause-vs-trigger",
+   "name": "Craft topic: root cause vs trigger",
+   "description": "Practical guide for root cause vs trigger in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'root cause vs trigger' applies in this project (file.search/file.read).\n2. Review the standard practice for root cause vs trigger (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_contributing-factors",
+   "name": "Craft topic: contributing factors",
+   "description": "Practical guide for contributing factors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'contributing factors' applies in this project (file.search/file.read).\n2. Review the standard practice for contributing factors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_systemic-fixes",
+   "name": "Craft topic: systemic fixes",
+   "description": "Practical guide for systemic fixes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'systemic fixes' applies in this project (file.search/file.read).\n2. Review the standard practice for systemic fixes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_follow-up-verification",
+   "name": "Craft topic: follow-up verification",
+   "description": "Practical guide for follow-up verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'follow-up verification' applies in this project (file.search/file.read).\n2. Review the standard practice for follow-up verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_learning-reviews",
+   "name": "Craft topic: learning reviews",
+   "description": "Practical guide for learning reviews in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'learning reviews' applies in this project (file.search/file.read).\n2. Review the standard practice for learning reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_blameless-language",
+   "name": "Craft topic: blameless language",
+   "description": "Practical guide for blameless language in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'blameless language' applies in this project (file.search/file.read).\n2. Review the standard practice for blameless language (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_safety-culture",
+   "name": "Craft topic: safety culture",
+   "description": "Practical guide for safety culture in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'safety culture' applies in this project (file.search/file.read).\n2. Review the standard practice for safety culture (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_just-culture-principles",
+   "name": "Craft topic: just culture principles",
+   "description": "Practical guide for just culture principles in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'just culture principles' applies in this project (file.search/file.read).\n2. Review the standard practice for just culture principles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_operational-tension",
+   "name": "Craft topic: operational tension",
+   "description": "Practical guide for operational tension in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'operational tension' applies in this project (file.search/file.read).\n2. Review the standard practice for operational tension (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_normalization-of-deviance",
+   "name": "Craft topic: normalization of deviance",
+   "description": "Practical guide for normalization of deviance in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'normalization of deviance' applies in this project (file.search/file.read).\n2. Review the standard practice for normalization of deviance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_drift-into-failure",
+   "name": "Craft topic: drift into failure",
+   "description": "Practical guide for drift into failure in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'drift into failure' applies in this project (file.search/file.read).\n2. Review the standard practice for drift into failure (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_resilience-engineering-notes",
+   "name": "Craft topic: resilience engineering notes",
+   "description": "Practical guide for resilience engineering notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'resilience engineering notes' applies in this project (file.search/file.read).\n2. Review the standard practice for resilience engineering notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_anticipation-vs-reaction",
+   "name": "Craft topic: anticipation vs reaction",
+   "description": "Practical guide for anticipation vs reaction in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'anticipation vs reaction' applies in this project (file.search/file.read).\n2. Review the standard practice for anticipation vs reaction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_graceful-extensibility",
+   "name": "Craft topic: graceful extensibility",
+   "description": "Practical guide for graceful extensibility in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'graceful extensibility' applies in this project (file.search/file.read).\n2. Review the standard practice for graceful extensibility (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_capacity-for-action",
+   "name": "Craft topic: capacity for action",
+   "description": "Practical guide for capacity for action in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'capacity for action' applies in this project (file.search/file.read).\n2. Review the standard practice for capacity for action (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_emergency-modes",
+   "name": "Craft topic: emergency modes",
+   "description": "Practical guide for emergency modes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'emergency modes' applies in this project (file.search/file.read).\n2. Review the standard practice for emergency modes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_degraded-modes-design",
+   "name": "Craft topic: degraded modes design",
+   "description": "Practical guide for degraded modes design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'degraded modes design' applies in this project (file.search/file.read).\n2. Review the standard practice for degraded modes design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dark-launch",
+   "name": "Craft topic: dark launch",
+   "description": "Practical guide for dark launch in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dark launch' applies in this project (file.search/file.read).\n2. Review the standard practice for dark launch (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_shadow-traffic",
+   "name": "Craft topic: shadow traffic",
+   "description": "Practical guide for shadow traffic in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'shadow traffic' applies in this project (file.search/file.read).\n2. Review the standard practice for shadow traffic (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_mirror-deployments",
+   "name": "Craft topic: mirror deployments",
+   "description": "Practical guide for mirror deployments in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mirror deployments' applies in this project (file.search/file.read).\n2. Review the standard practice for mirror deployments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_backfill-vs-rollforward",
+   "name": "Craft topic: backfill vs rollforward",
+   "description": "Practical guide for backfill vs rollforward in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backfill vs rollforward' applies in this project (file.search/file.read).\n2. Review the standard practice for backfill vs rollforward (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_feature-removal-safety",
+   "name": "Craft topic: feature removal safety",
+   "description": "Practical guide for feature removal safety in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature removal safety' applies in this project (file.search/file.read).\n2. Review the standard practice for feature removal safety (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dead-code-flags",
+   "name": "Craft topic: dead code flags",
+   "description": "Practical guide for dead code flags in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dead code flags' applies in this project (file.search/file.read).\n2. Review the standard practice for dead code flags (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_sunset-checklists",
+   "name": "Craft topic: sunset checklists",
+   "description": "Practical guide for sunset checklists in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sunset checklists' applies in this project (file.search/file.read).\n2. Review the standard practice for sunset checklists (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_eol-planning",
+   "name": "Craft topic: eol planning",
+   "description": "Practical guide for eol planning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'eol planning' applies in this project (file.search/file.read).\n2. Review the standard practice for eol planning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_upgrade-rails",
+   "name": "Craft topic: upgrade rails",
+   "description": "Practical guide for upgrade rails in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'upgrade rails' applies in this project (file.search/file.read).\n2. Review the standard practice for upgrade rails (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_paved-roads",
+   "name": "Craft topic: paved roads",
+   "description": "Practical guide for paved roads in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'paved roads' applies in this project (file.search/file.read).\n2. Review the standard practice for paved roads (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_golden-paths",
+   "name": "Craft topic: golden paths",
+   "description": "Practical guide for golden paths in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'golden paths' applies in this project (file.search/file.read).\n2. Review the standard practice for golden paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_platform-teams",
+   "name": "Craft topic: platform teams",
+   "description": "Practical guide for platform teams in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'platform teams' applies in this project (file.search/file.read).\n2. Review the standard practice for platform teams (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_idp-maturity",
+   "name": "Craft topic: idp maturity",
+   "description": "Practical guide for idp maturity in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'idp maturity' applies in this project (file.search/file.read).\n2. Review the standard practice for idp maturity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_self-service-infra",
+   "name": "Craft topic: self service infra",
+   "description": "Practical guide for self service infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'self service infra' applies in this project (file.search/file.read).\n2. Review the standard practice for self service infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_templates-scaffolding",
+   "name": "Craft topic: templates scaffolding",
+   "description": "Practical guide for templates scaffolding in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'templates scaffolding' applies in this project (file.search/file.read).\n2. Review the standard practice for templates scaffolding (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_internal-tooling-roi",
+   "name": "Craft topic: internal tooling roi",
+   "description": "Practical guide for internal tooling roi in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'internal tooling roi' applies in this project (file.search/file.read).\n2. Review the standard practice for internal tooling roi (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_build-vs-buy-analysis",
+   "name": "Craft topic: build vs buy analysis",
+   "description": "Practical guide for build vs buy analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'build vs buy analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for build vs buy analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_vendor-management",
+   "name": "Craft topic: vendor management",
+   "description": "Practical guide for vendor management in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vendor management' applies in this project (file.search/file.read).\n2. Review the standard practice for vendor management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_contract-review-tech",
+   "name": "Craft topic: contract review tech",
+   "description": "Practical guide for contract review tech in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'contract review tech' applies in this project (file.search/file.read).\n2. Review the standard practice for contract review tech (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_sla-negotiation",
+   "name": "Craft topic: sla negotiation",
+   "description": "Practical guide for sla negotiation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sla negotiation' applies in this project (file.search/file.read).\n2. Review the standard practice for sla negotiation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_exit-strategies",
+   "name": "Craft topic: exit strategies",
+   "description": "Practical guide for exit strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exit strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for exit strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_lock-in-assessment",
+   "name": "Craft topic: lock-in assessment",
+   "description": "Practical guide for lock-in assessment in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lock-in assessment' applies in this project (file.search/file.read).\n2. Review the standard practice for lock-in assessment (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_open-standards-preference",
+   "name": "Craft topic: open standards preference",
+   "description": "Practical guide for open standards preference in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'open standards preference' applies in this project (file.search/file.read).\n2. Review the standard practice for open standards preference (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_interop-testing",
+   "name": "Craft topic: interop testing",
+   "description": "Practical guide for interop testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'interop testing' applies in this project (file.search/file.read).\n2. Review the standard practice for interop testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_compliance-frameworks-overview",
+   "name": "Craft topic: compliance frameworks overview",
+   "description": "Practical guide for compliance frameworks overview in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compliance frameworks overview' applies in this project (file.search/file.read).\n2. Review the standard practice for compliance frameworks overview (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_soc2-readiness",
+   "name": "Craft topic: soc2 readiness",
+   "description": "Practical guide for soc2 readiness in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'soc2 readiness' applies in this project (file.search/file.read).\n2. Review the standard practice for soc2 readiness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_iso27001-notes",
+   "name": "Craft topic: iso27001 notes",
+   "description": "Practical guide for iso27001 notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'iso27001 notes' applies in this project (file.search/file.read).\n2. Review the standard practice for iso27001 notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_hipaa-basics-note",
+   "name": "Craft topic: hipaa basics note",
+   "description": "Practical guide for hipaa basics note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hipaa basics note' applies in this project (file.search/file.read).\n2. Review the standard practice for hipaa basics note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_gdpr-principles",
+   "name": "Craft topic: gdpr principles",
+   "description": "Practical guide for gdpr principles in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gdpr principles' applies in this project (file.search/file.read).\n2. Review the standard practice for gdpr principles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ccpa-notes",
+   "name": "Craft topic: ccpa notes",
+   "description": "Practical guide for ccpa notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ccpa notes' applies in this project (file.search/file.read).\n2. Review the standard practice for ccpa notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_data-residency-eu",
+   "name": "Craft topic: data residency eu",
+   "description": "Practical guide for data residency eu in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data residency eu' applies in this project (file.search/file.read).\n2. Review the standard practice for data residency eu (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_transfer-mechanisms",
+   "name": "Craft topic: transfer mechanisms",
+   "description": "Practical guide for transfer mechanisms in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'transfer mechanisms' applies in this project (file.search/file.read).\n2. Review the standard practice for transfer mechanisms (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_privacy-by-design",
+   "name": "Craft topic: privacy by design",
+   "description": "Practical guide for privacy by design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'privacy by design' applies in this project (file.search/file.read).\n2. Review the standard practice for privacy by design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dpo-coordination",
+   "name": "Craft topic: dpo coordination",
+   "description": "Practical guide for dpo coordination in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dpo coordination' applies in this project (file.search/file.read).\n2. Review the standard practice for dpo coordination (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_privacy-reviews",
+   "name": "Craft topic: privacy reviews",
+   "description": "Practical guide for privacy reviews in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'privacy reviews' applies in this project (file.search/file.read).\n2. Review the standard practice for privacy reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dpia-templates",
+   "name": "Craft topic: dpia templates",
+   "description": "Practical guide for dpia templates in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dpia templates' applies in this project (file.search/file.read).\n2. Review the standard practice for dpia templates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_data-minimization-practice",
+   "name": "Craft topic: data minimization practice",
+   "description": "Practical guide for data minimization practice in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data minimization practice' applies in this project (file.search/file.read).\n2. Review the standard practice for data minimization practice (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_anonymization-techniques",
+   "name": "Craft topic: anonymization techniques",
+   "description": "Practical guide for anonymization techniques in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'anonymization techniques' applies in this project (file.search/file.read).\n2. Review the standard practice for anonymization techniques (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_pseudonymization-notes",
+   "name": "Craft topic: pseudonymization notes",
+   "description": "Practical guide for pseudonymization notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pseudonymization notes' applies in this project (file.search/file.read).\n2. Review the standard practice for pseudonymization notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_k-anonymity-intro",
+   "name": "Craft topic: k-anonymity intro",
+   "description": "Practical guide for k-anonymity intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'k-anonymity intro' applies in this project (file.search/file.read).\n2. Review the standard practice for k-anonymity intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_differential-privacy-intro",
+   "name": "Craft topic: differential privacy intro",
+   "description": "Practical guide for differential privacy intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'differential privacy intro' applies in this project (file.search/file.read).\n2. Review the standard practice for differential privacy intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_synthetic-data-generation",
+   "name": "Craft topic: synthetic data generation",
+   "description": "Practical guide for synthetic data generation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'synthetic data generation' applies in this project (file.search/file.read).\n2. Review the standard practice for synthetic data generation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_fairness-metrics-basics",
+   "name": "Craft topic: fairness metrics basics",
+   "description": "Practical guide for fairness metrics basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fairness metrics basics' applies in this project (file.search/file.read).\n2. Review the standard practice for fairness metrics basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_bias-testing-flows",
+   "name": "Craft topic: bias testing flows",
+   "description": "Practical guide for bias testing flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bias testing flows' applies in this project (file.search/file.read).\n2. Review the standard practice for bias testing flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_model-cards",
+   "name": "Craft topic: model cards",
+   "description": "Practical guide for model cards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'model cards' applies in this project (file.search/file.read).\n2. Review the standard practice for model cards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_dataset-documentation",
+   "name": "Craft topic: dataset documentation",
+   "description": "Practical guide for dataset documentation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dataset documentation' applies in this project (file.search/file.read).\n2. Review the standard practice for dataset documentation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ml-ops-basics",
+   "name": "Craft topic: ml ops basics",
+   "description": "Practical guide for ml ops basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ml ops basics' applies in this project (file.search/file.read).\n2. Review the standard practice for ml ops basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_experiment-tracking",
+   "name": "Craft topic: experiment tracking",
+   "description": "Practical guide for experiment tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'experiment tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for experiment tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_model-registries",
+   "name": "Craft topic: model registries",
+   "description": "Practical guide for model registries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'model registries' applies in this project (file.search/file.read).\n2. Review the standard practice for model registries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_drift-detection",
+   "name": "Craft topic: drift detection",
+   "description": "Practical guide for drift detection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'drift detection' applies in this project (file.search/file.read).\n2. Review the standard practice for drift detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_champion-challenger",
+   "name": "Craft topic: champion challenger",
+   "description": "Practical guide for champion challenger in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'champion challenger' applies in this project (file.search/file.read).\n2. Review the standard practice for champion challenger (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_shadow-scoring",
+   "name": "Craft topic: shadow scoring",
+   "description": "Practical guide for shadow scoring in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'shadow scoring' applies in this project (file.search/file.read).\n2. Review the standard practice for shadow scoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_rollback-models",
+   "name": "Craft topic: rollback models",
+   "description": "Practical guide for rollback models in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rollback models' applies in this project (file.search/file.read).\n2. Review the standard practice for rollback models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ai-safety-reviews",
+   "name": "Craft topic: ai safety reviews",
+   "description": "Practical guide for ai safety reviews in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ai safety reviews' applies in this project (file.search/file.read).\n2. Review the standard practice for ai safety reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_prompt-injection-notes",
+   "name": "Craft topic: prompt injection notes",
+   "description": "Practical guide for prompt injection notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'prompt injection notes' applies in this project (file.search/file.read).\n2. Review the standard practice for prompt injection notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_llm-output-filtering",
+   "name": "Craft topic: llm output filtering",
+   "description": "Practical guide for llm output filtering in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'llm output filtering' applies in this project (file.search/file.read).\n2. Review the standard practice for llm output filtering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_human-in-the-loop-design",
+   "name": "Craft topic: human in the loop design",
+   "description": "Practical guide for human in the loop design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'human in the loop design' applies in this project (file.search/file.read).\n2. Review the standard practice for human in the loop design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_escalation-to-humans",
+   "name": "Craft topic: escalation to humans",
+   "description": "Practical guide for escalation to humans in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'escalation to humans' applies in this project (file.search/file.read).\n2. Review the standard practice for escalation to humans (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_feedback-loops-ml",
+   "name": "Craft topic: feedback loops ml",
+   "description": "Practical guide for feedback loops ml in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feedback loops ml' applies in this project (file.search/file.read).\n2. Review the standard practice for feedback loops ml (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_labeling-workflows",
+   "name": "Craft topic: labeling workflows",
+   "description": "Practical guide for labeling workflows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'labeling workflows' applies in this project (file.search/file.read).\n2. Review the standard practice for labeling workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_annotation-quality",
+   "name": "Craft topic: annotation quality",
+   "description": "Practical guide for annotation quality in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'annotation quality' applies in this project (file.search/file.read).\n2. Review the standard practice for annotation quality (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_inter-rater-reliability",
+   "name": "Craft topic: inter rater reliability",
+   "description": "Practical guide for inter rater reliability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'inter rater reliability' applies in this project (file.search/file.read).\n2. Review the standard practice for inter rater reliability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_eval-set-curation",
+   "name": "Craft topic: eval set curation",
+   "description": "Practical guide for eval set curation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'eval set curation' applies in this project (file.search/file.read).\n2. Review the standard practice for eval set curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_regression-evals",
+   "name": "Craft topic: regression evals",
+   "description": "Practical guide for regression evals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'regression evals' applies in this project (file.search/file.read).\n2. Review the standard practice for regression evals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_llm-cost-controls",
+   "name": "Craft topic: llm cost controls",
+   "description": "Practical guide for llm cost controls in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'llm cost controls' applies in this project (file.search/file.read).\n2. Review the standard practice for llm cost controls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_token-budgeting",
+   "name": "Craft topic: token budgeting",
+   "description": "Practical guide for token budgeting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'token budgeting' applies in this project (file.search/file.read).\n2. Review the standard practice for token budgeting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_caching-llm-responses",
+   "name": "Craft topic: caching llm responses",
+   "description": "Practical guide for caching llm responses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'caching llm responses' applies in this project (file.search/file.read).\n2. Review the standard practice for caching llm responses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_streaming-ux-llm",
+   "name": "Craft topic: streaming ux llm",
+   "description": "Practical guide for streaming ux llm in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'streaming ux llm' applies in this project (file.search/file.read).\n2. Review the standard practice for streaming ux llm (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_safety-classifiers",
+   "name": "Craft topic: safety classifiers",
+   "description": "Practical guide for safety classifiers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'safety classifiers' applies in this project (file.search/file.read).\n2. Review the standard practice for safety classifiers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_content-policies",
+   "name": "Craft topic: content policies",
+   "description": "Practical guide for content policies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'content policies' applies in this project (file.search/file.read).\n2. Review the standard practice for content policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_red-teaming-llms",
+   "name": "Craft topic: red teaming llms",
+   "description": "Practical guide for red teaming llms in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'red teaming llms' applies in this project (file.search/file.read).\n2. Review the standard practice for red teaming llms (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_incident-response-ai",
+   "name": "Craft topic: incident response ai",
+   "description": "Practical guide for incident response ai in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'incident response ai' applies in this project (file.search/file.read).\n2. Review the standard practice for incident response ai (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_ai-governance-boards",
+   "name": "Craft topic: ai governance boards",
+   "description": "Practical guide for ai governance boards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ai governance boards' applies in this project (file.search/file.read).\n2. Review the standard practice for ai governance boards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_policy-for-ai-usage",
+   "name": "Craft topic: policy for ai usage",
+   "description": "Practical guide for policy for ai usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'policy for ai usage' applies in this project (file.search/file.read).\n2. Review the standard practice for policy for ai usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sw2_training-for-ai-tools",
+   "name": "Craft topic: training for ai tools",
+   "description": "Practical guide for training for ai tools in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'training for ai tools' applies in this project (file.search/file.read).\n2. Review the standard practice for training for ai tools (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_011",
+      "name": "SQLMap app tools: Choose web.sqlmap for scans",
+      "description": "Route authorized HTTP assessments through the app interface designed for SQLMap.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Use `web.sqlmap` for target checks; its schema validates URL, requires authorization, applies conservative defaults, and confines output to workspace.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_012",
+      "name": "SQLMap app tools: Satisfy the authorization field",
+      "description": "Use the required confirmation field correctly in a structured call.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Set `authorized_target=true` only after owner and scope are confirmed; never bypass the requirement with raw process arguments.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_013",
+      "name": "SQLMap app tools: Set up before a scan",
+      "description": "Ensure runtime is ready before spending a network request.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Call `runtime.sqlmap.status`; if not ready, call `runtime.sqlmap.install`, then proceed only after setup succeeds.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_014",
+      "name": "SQLMap app tools: Use the status tool",
+      "description": "Check install state without starting a target scan.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Use returned `installed`, `version`, and `path` fields to distinguish package readiness from target reachability.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_015",
+      "name": "SQLMap app tools: Use runtime.info",
+      "description": "Separate SQLMap readiness from the rest of the app toolchain.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Call `runtime.info` for summary, then `runtime.sqlmap.status` for SQLMap-specific version and path.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_016",
+      "name": "SQLMap app tools: Inspect harmless CLI help",
+      "description": "Inspect CLI version or help without turning raw execution into a scan.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Use only informational arguments such as `sqlmap --version` or `sqlmap -hh`; use `web.sqlmap` for scans and never pass extraction or takeover flags.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_017",
+      "name": "SQLMap app tools: Respect permission gates",
+      "description": "Diagnose why a structured scan cannot start without weakening app controls.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Check Python/process and network capabilities in Settings; grant only those required for the authorized scan.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_018",
+      "name": "SQLMap app tools: Read progress events",
+      "description": "Distinguish runtime unpacking from active target requests.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Wait for the runtime-ready event before interpreting scan progress; if setup fails, stop before retrying the target.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_019",
+      "name": "SQLMap app tools: Separate setup and scan outcomes",
+      "description": "Report whether a failure occurred during package setup or HTTP testing.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Use the install error separately from SQLMap console output returned by `web.sqlmap`.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_020",
+      "name": "SQLMap app tools: Prefer named parameters",
+      "description": "Keep URL, request shape, intensity, and output visible in the app call.",
+      "category": "SQLMap / App tool selection",
+      "instructions": "Workflow:\n1. Choose the narrowest app tool that matches the task; use the structured web tool for scans.\n2. For a scan, supply the required URL and explicit `authorized_target=true`; check runtime status if setup is uncertain.\n3. Use `web.sqlmap` named fields instead of constructing a shell string for a scan.\n4. Limit permissions to the approved call, then report setup errors separately from target results.\n\nSafety: use only owner-authorized targets. Keep app defaults, and do not dump records, open shells, read/write server files, use tamper/evasion, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

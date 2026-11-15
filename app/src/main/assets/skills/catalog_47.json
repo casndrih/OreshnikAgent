@@ -1,0 +1,810 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_fe_component-design-principles",
+   "name": "Frontend topic: component design principles",
+   "description": "Practical guide for component design principles in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'component design principles' applies in this project (file.search/file.read).\n2. Review the standard practice for component design principles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_state-colocation",
+   "name": "Frontend topic: state colocation",
+   "description": "Practical guide for state colocation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'state colocation' applies in this project (file.search/file.read).\n2. Review the standard practice for state colocation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_controlled-vs-uncontrolled-inputs",
+   "name": "Frontend topic: controlled vs uncontrolled inputs",
+   "description": "Practical guide for controlled vs uncontrolled inputs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'controlled vs uncontrolled inputs' applies in this project (file.search/file.read).\n2. Review the standard practice for controlled vs uncontrolled inputs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_form-validation-patterns",
+   "name": "Frontend topic: form validation patterns",
+   "description": "Practical guide for form validation patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'form validation patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for form validation patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_accessibility-semantics",
+   "name": "Frontend topic: accessibility semantics",
+   "description": "Practical guide for accessibility semantics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'accessibility semantics' applies in this project (file.search/file.read).\n2. Review the standard practice for accessibility semantics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_aria-live-regions",
+   "name": "Frontend topic: aria live regions",
+   "description": "Practical guide for aria live regions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aria live regions' applies in this project (file.search/file.read).\n2. Review the standard practice for aria live regions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_keyboard-navigation",
+   "name": "Frontend topic: keyboard navigation",
+   "description": "Practical guide for keyboard navigation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'keyboard navigation' applies in this project (file.search/file.read).\n2. Review the standard practice for keyboard navigation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_focus-management-modals",
+   "name": "Frontend topic: focus management modals",
+   "description": "Practical guide for focus management modals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'focus management modals' applies in this project (file.search/file.read).\n2. Review the standard practice for focus management modals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_design-tokens",
+   "name": "Frontend topic: design tokens",
+   "description": "Practical guide for design tokens in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'design tokens' applies in this project (file.search/file.read).\n2. Review the standard practice for design tokens (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_theming-systems",
+   "name": "Frontend topic: theming systems",
+   "description": "Practical guide for theming systems in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'theming systems' applies in this project (file.search/file.read).\n2. Review the standard practice for theming systems (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_responsive-breakpoints",
+   "name": "Frontend topic: responsive breakpoints",
+   "description": "Practical guide for responsive breakpoints in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'responsive breakpoints' applies in this project (file.search/file.read).\n2. Review the standard practice for responsive breakpoints (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_fluid-typography",
+   "name": "Frontend topic: fluid typography",
+   "description": "Practical guide for fluid typography in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fluid typography' applies in this project (file.search/file.read).\n2. Review the standard practice for fluid typography (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_layout-stability-cls",
+   "name": "Frontend topic: layout stability cls",
+   "description": "Practical guide for layout stability cls in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'layout stability cls' applies in this project (file.search/file.read).\n2. Review the standard practice for layout stability cls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_lazy-loading-images",
+   "name": "Frontend topic: lazy loading images",
+   "description": "Practical guide for lazy loading images in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lazy loading images' applies in this project (file.search/file.read).\n2. Review the standard practice for lazy loading images (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_srcset-and-sizes",
+   "name": "Frontend topic: srcset and sizes",
+   "description": "Practical guide for srcset and sizes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'srcset and sizes' applies in this project (file.search/file.read).\n2. Review the standard practice for srcset and sizes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_critical-css",
+   "name": "Frontend topic: critical css",
+   "description": "Practical guide for critical css in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'critical css' applies in this project (file.search/file.read).\n2. Review the standard practice for critical css (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_css-scoping-strategies",
+   "name": "Frontend topic: css scoping strategies",
+   "description": "Practical guide for css scoping strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'css scoping strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for css scoping strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_css-modules-vs-tailwind",
+   "name": "Frontend topic: css modules vs tailwind",
+   "description": "Practical guide for css modules vs tailwind in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'css modules vs tailwind' applies in this project (file.search/file.read).\n2. Review the standard practice for css modules vs tailwind (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_style-isolation-web-components",
+   "name": "Frontend topic: style isolation web components",
+   "description": "Practical guide for style isolation web components in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'style isolation web components' applies in this project (file.search/file.read).\n2. Review the standard practice for style isolation web components (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_shadow-dom-basics",
+   "name": "Frontend topic: shadow dom basics",
+   "description": "Practical guide for shadow dom basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'shadow dom basics' applies in this project (file.search/file.read).\n2. Review the standard practice for shadow dom basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_custom-events",
+   "name": "Frontend topic: custom events",
+   "description": "Practical guide for custom events in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'custom events' applies in this project (file.search/file.read).\n2. Review the standard practice for custom events (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_portals-and-overlays",
+   "name": "Frontend topic: portals and overlays",
+   "description": "Practical guide for portals and overlays in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'portals and overlays' applies in this project (file.search/file.read).\n2. Review the standard practice for portals and overlays (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_virtualized-lists",
+   "name": "Frontend topic: virtualized lists",
+   "description": "Practical guide for virtualized lists in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'virtualized lists' applies in this project (file.search/file.read).\n2. Review the standard practice for virtualized lists (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_infinite-scroll-patterns",
+   "name": "Frontend topic: infinite scroll patterns",
+   "description": "Practical guide for infinite scroll patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'infinite scroll patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for infinite scroll patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_pull-to-refresh",
+   "name": "Frontend topic: pull to refresh",
+   "description": "Practical guide for pull to refresh in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pull to refresh' applies in this project (file.search/file.read).\n2. Review the standard practice for pull to refresh (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_optimistic-updates",
+   "name": "Frontend topic: optimistic updates",
+   "description": "Practical guide for optimistic updates in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'optimistic updates' applies in this project (file.search/file.read).\n2. Review the standard practice for optimistic updates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_cache-invalidation-strategies",
+   "name": "Frontend topic: cache invalidation strategies",
+   "description": "Practical guide for cache invalidation strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cache invalidation strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for cache invalidation strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_swr-and-react-query",
+   "name": "Frontend topic: swr and react query",
+   "description": "Practical guide for swr and react query in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swr and react query' applies in this project (file.search/file.read).\n2. Review the standard practice for swr and react query (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_suspense-boundaries",
+   "name": "Frontend topic: suspense boundaries",
+   "description": "Practical guide for suspense boundaries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'suspense boundaries' applies in this project (file.search/file.read).\n2. Review the standard practice for suspense boundaries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_error-boundaries",
+   "name": "Frontend topic: error boundaries",
+   "description": "Practical guide for error boundaries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error boundaries' applies in this project (file.search/file.read).\n2. Review the standard practice for error boundaries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_route-based-code-splitting",
+   "name": "Frontend topic: route based code splitting",
+   "description": "Practical guide for route based code splitting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'route based code splitting' applies in this project (file.search/file.read).\n2. Review the standard practice for route based code splitting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_prefetching-strategies",
+   "name": "Frontend topic: prefetching strategies",
+   "description": "Practical guide for prefetching strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'prefetching strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for prefetching strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_service-worker-caching",
+   "name": "Frontend topic: service worker caching",
+   "description": "Practical guide for service worker caching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'service worker caching' applies in this project (file.search/file.read).\n2. Review the standard practice for service worker caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_pwa-install-flows",
+   "name": "Frontend topic: pwa install flows",
+   "description": "Practical guide for pwa install flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pwa install flows' applies in this project (file.search/file.read).\n2. Review the standard practice for pwa install flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_push-subscription-handling",
+   "name": "Frontend topic: push subscription handling",
+   "description": "Practical guide for push subscription handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'push subscription handling' applies in this project (file.search/file.read).\n2. Review the standard practice for push subscription handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_web-app-manifests",
+   "name": "Frontend topic: web app manifests",
+   "description": "Practical guide for web app manifests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'web app manifests' applies in this project (file.search/file.read).\n2. Review the standard practice for web app manifests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_performance-budgets-fe",
+   "name": "Frontend topic: performance budgets fe",
+   "description": "Practical guide for performance budgets fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'performance budgets fe' applies in this project (file.search/file.read).\n2. Review the standard practice for performance budgets fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_lighthouse-audits",
+   "name": "Frontend topic: lighthouse audits",
+   "description": "Practical guide for lighthouse audits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lighthouse audits' applies in this project (file.search/file.read).\n2. Review the standard practice for lighthouse audits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_web-vitals-tuning",
+   "name": "Frontend topic: web vitals tuning",
+   "description": "Practical guide for web vitals tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'web vitals tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for web vitals tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_bundle-analysis",
+   "name": "Frontend topic: bundle analysis",
+   "description": "Practical guide for bundle analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bundle analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for bundle analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_tree-shaking-verification",
+   "name": "Frontend topic: tree shaking verification",
+   "description": "Practical guide for tree shaking verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tree shaking verification' applies in this project (file.search/file.read).\n2. Review the standard practice for tree shaking verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_module-federation-basics",
+   "name": "Frontend topic: module federation basics",
+   "description": "Practical guide for module federation basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'module federation basics' applies in this project (file.search/file.read).\n2. Review the standard practice for module federation basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_micro-frontends-composition",
+   "name": "Frontend topic: micro frontends composition",
+   "description": "Practical guide for micro frontends composition in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'micro frontends composition' applies in this project (file.search/file.read).\n2. Review the standard practice for micro frontends composition (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_iframe-embedding-pitfalls",
+   "name": "Frontend topic: iframe embedding pitfalls",
+   "description": "Practical guide for iframe embedding pitfalls in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'iframe embedding pitfalls' applies in this project (file.search/file.read).\n2. Review the standard practice for iframe embedding pitfalls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_postmessage-security",
+   "name": "Frontend topic: postmessage security",
+   "description": "Practical guide for postmessage security in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'postmessage security' applies in this project (file.search/file.read).\n2. Review the standard practice for postmessage security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_xss-prevention-fe",
+   "name": "Frontend topic: xss prevention fe",
+   "description": "Practical guide for xss prevention fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'xss prevention fe' applies in this project (file.search/file.read).\n2. Review the standard practice for xss prevention fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_csp-nonce-patterns",
+   "name": "Frontend topic: csp nonce patterns",
+   "description": "Practical guide for csp nonce patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csp nonce patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for csp nonce patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_trusted-types-intro",
+   "name": "Frontend topic: trusted types intro",
+   "description": "Practical guide for trusted types intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'trusted types intro' applies in this project (file.search/file.read).\n2. Review the standard practice for trusted types intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_sri-for-scripts",
+   "name": "Frontend topic: sri for scripts",
+   "description": "Practical guide for sri for scripts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sri for scripts' applies in this project (file.search/file.read).\n2. Review the standard practice for sri for scripts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_cookie-handling-fe",
+   "name": "Frontend topic: cookie handling fe",
+   "description": "Practical guide for cookie handling fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cookie handling fe' applies in this project (file.search/file.read).\n2. Review the standard practice for cookie handling fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_csrf-patterns-fe",
+   "name": "Frontend topic: csrf patterns fe",
+   "description": "Practical guide for csrf patterns fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csrf patterns fe' applies in this project (file.search/file.read).\n2. Review the standard practice for csrf patterns fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_auth-token-storage-fe",
+   "name": "Frontend topic: auth token storage fe",
+   "description": "Practical guide for auth token storage fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'auth token storage fe' applies in this project (file.search/file.read).\n2. Review the standard practice for auth token storage fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_oauth-implicit-removal",
+   "name": "Frontend topic: oauth implicit removal",
+   "description": "Practical guide for oauth implicit removal in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'oauth implicit removal' applies in this project (file.search/file.read).\n2. Review the standard practice for oauth implicit removal (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_silent-token-renewal",
+   "name": "Frontend topic: silent token renewal",
+   "description": "Practical guide for silent token renewal in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'silent token renewal' applies in this project (file.search/file.read).\n2. Review the standard practice for silent token renewal (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_logout-everywhere",
+   "name": "Frontend topic: logout everywhere",
+   "description": "Practical guide for logout everywhere in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'logout everywhere' applies in this project (file.search/file.read).\n2. Review the standard practice for logout everywhere (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_feature-flag-clients",
+   "name": "Frontend topic: feature flag clients",
+   "description": "Practical guide for feature flag clients in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature flag clients' applies in this project (file.search/file.read).\n2. Review the standard practice for feature flag clients (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_experiment-exposure-events",
+   "name": "Frontend topic: experiment exposure events",
+   "description": "Practical guide for experiment exposure events in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'experiment exposure events' applies in this project (file.search/file.read).\n2. Review the standard practice for experiment exposure events (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_analytics-event-schema",
+   "name": "Frontend topic: analytics event schema",
+   "description": "Practical guide for analytics event schema in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'analytics event schema' applies in this project (file.search/file.read).\n2. Review the standard practice for analytics event schema (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_error-tracking-fe",
+   "name": "Frontend topic: error tracking fe",
+   "description": "Practical guide for error tracking fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error tracking fe' applies in this project (file.search/file.read).\n2. Review the standard practice for error tracking fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_source-maps-handling",
+   "name": "Frontend topic: source maps handling",
+   "description": "Practical guide for source maps handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'source maps handling' applies in this project (file.search/file.read).\n2. Review the standard practice for source maps handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_minification-pitfalls",
+   "name": "Frontend topic: minification pitfalls",
+   "description": "Practical guide for minification pitfalls in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'minification pitfalls' applies in this project (file.search/file.read).\n2. Review the standard practice for minification pitfalls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_legacy-browser-support",
+   "name": "Frontend topic: legacy browser support",
+   "description": "Practical guide for legacy browser support in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'legacy browser support' applies in this project (file.search/file.read).\n2. Review the standard practice for legacy browser support (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_transpilation-settings",
+   "name": "Frontend topic: transpilation settings",
+   "description": "Practical guide for transpilation settings in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'transpilation settings' applies in this project (file.search/file.read).\n2. Review the standard practice for transpilation settings (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_polyfill-strategy",
+   "name": "Frontend topic: polyfill strategy",
+   "description": "Practical guide for polyfill strategy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'polyfill strategy' applies in this project (file.search/file.read).\n2. Review the standard practice for polyfill strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_date-handling-fe",
+   "name": "Frontend topic: date handling fe",
+   "description": "Practical guide for date handling fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'date handling fe' applies in this project (file.search/file.read).\n2. Review the standard practice for date handling fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_timezone-pickers",
+   "name": "Frontend topic: timezone pickers",
+   "description": "Practical guide for timezone pickers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'timezone pickers' applies in this project (file.search/file.read).\n2. Review the standard practice for timezone pickers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_i18n-message-catalogs",
+   "name": "Frontend topic: i18n message catalogs",
+   "description": "Practical guide for i18n message catalogs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'i18n message catalogs' applies in this project (file.search/file.read).\n2. Review the standard practice for i18n message catalogs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_rtl-layout-support",
+   "name": "Frontend topic: rtl layout support",
+   "description": "Practical guide for rtl layout support in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rtl layout support' applies in this project (file.search/file.read).\n2. Review the standard practice for rtl layout support (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_file-upload-ux",
+   "name": "Frontend topic: file upload ux",
+   "description": "Practical guide for file upload ux in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'file upload ux' applies in this project (file.search/file.read).\n2. Review the standard practice for file upload ux (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_drag-and-drop-uploads",
+   "name": "Frontend topic: drag and drop uploads",
+   "description": "Practical guide for drag and drop uploads in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'drag and drop uploads' applies in this project (file.search/file.read).\n2. Review the standard practice for drag and drop uploads (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_image-cropping",
+   "name": "Frontend topic: image cropping",
+   "description": "Practical guide for image cropping in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'image cropping' applies in this project (file.search/file.read).\n2. Review the standard practice for image cropping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_rich-text-editors",
+   "name": "Frontend topic: rich text editors",
+   "description": "Practical guide for rich text editors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rich text editors' applies in this project (file.search/file.read).\n2. Review the standard practice for rich text editors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_markdown-editors",
+   "name": "Frontend topic: markdown editors",
+   "description": "Practical guide for markdown editors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'markdown editors' applies in this project (file.search/file.read).\n2. Review the standard practice for markdown editors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_tables-and-data-grids",
+   "name": "Frontend topic: tables and data grids",
+   "description": "Practical guide for tables and data grids in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tables and data grids' applies in this project (file.search/file.read).\n2. Review the standard practice for tables and data grids (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_export-to-csv-fe",
+   "name": "Frontend topic: export to csv fe",
+   "description": "Practical guide for export to csv fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'export to csv fe' applies in this project (file.search/file.read).\n2. Review the standard practice for export to csv fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_print-stylesheets",
+   "name": "Frontend topic: print stylesheets",
+   "description": "Practical guide for print stylesheets in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'print stylesheets' applies in this project (file.search/file.read).\n2. Review the standard practice for print stylesheets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_pdf-preview-fe",
+   "name": "Frontend topic: pdf preview fe",
+   "description": "Practical guide for pdf preview fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pdf preview fe' applies in this project (file.search/file.read).\n2. Review the standard practice for pdf preview fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_signature-capture",
+   "name": "Frontend topic: signature capture",
+   "description": "Practical guide for signature capture in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'signature capture' applies in this project (file.search/file.read).\n2. Review the standard practice for signature capture (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_camera-capture-web",
+   "name": "Frontend topic: camera capture web",
+   "description": "Practical guide for camera capture web in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'camera capture web' applies in this project (file.search/file.read).\n2. Review the standard practice for camera capture web (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_barcode-scanning-web",
+   "name": "Frontend topic: barcode scanning web",
+   "description": "Practical guide for barcode scanning web in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'barcode scanning web' applies in this project (file.search/file.read).\n2. Review the standard practice for barcode scanning web (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_geolocation-patterns",
+   "name": "Frontend topic: geolocation patterns",
+   "description": "Practical guide for geolocation patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'geolocation patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for geolocation patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_maps-integration",
+   "name": "Frontend topic: maps integration",
+   "description": "Practical guide for maps integration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'maps integration' applies in this project (file.search/file.read).\n2. Review the standard practice for maps integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_websockets-fe",
+   "name": "Frontend topic: websockets fe",
+   "description": "Practical guide for websockets fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'websockets fe' applies in this project (file.search/file.read).\n2. Review the standard practice for websockets fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_sse-streams",
+   "name": "Frontend topic: sse streams",
+   "description": "Practical guide for sse streams in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sse streams' applies in this project (file.search/file.read).\n2. Review the standard practice for sse streams (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_web-workers-offloading",
+   "name": "Frontend topic: web workers offloading",
+   "description": "Practical guide for web workers offloading in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'web workers offloading' applies in this project (file.search/file.read).\n2. Review the standard practice for web workers offloading (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_wasm-integration-fe",
+   "name": "Frontend topic: wasm integration fe",
+   "description": "Practical guide for wasm integration fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wasm integration fe' applies in this project (file.search/file.read).\n2. Review the standard practice for wasm integration fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_webgpu-intro",
+   "name": "Frontend topic: webgpu intro",
+   "description": "Practical guide for webgpu intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'webgpu intro' applies in this project (file.search/file.read).\n2. Review the standard practice for webgpu intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_canvas-animations",
+   "name": "Frontend topic: canvas animations",
+   "description": "Practical guide for canvas animations in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'canvas animations' applies in this project (file.search/file.read).\n2. Review the standard practice for canvas animations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_svg-icons-systems",
+   "name": "Frontend topic: svg icons systems",
+   "description": "Practical guide for svg icons systems in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'svg icons systems' applies in this project (file.search/file.read).\n2. Review the standard practice for svg icons systems (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_svg-animation",
+   "name": "Frontend topic: svg animation",
+   "description": "Practical guide for svg animation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'svg animation' applies in this project (file.search/file.read).\n2. Review the standard practice for svg animation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_web-animations-api",
+   "name": "Frontend topic: web animations api",
+   "description": "Practical guide for web animations api in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'web animations api' applies in this project (file.search/file.read).\n2. Review the standard practice for web animations api (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_motion-design-basics",
+   "name": "Frontend topic: motion design basics",
+   "description": "Practical guide for motion design basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'motion design basics' applies in this project (file.search/file.read).\n2. Review the standard practice for motion design basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_skeleton-loading-states",
+   "name": "Frontend topic: skeleton loading states",
+   "description": "Practical guide for skeleton loading states in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'skeleton loading states' applies in this project (file.search/file.read).\n2. Review the standard practice for skeleton loading states (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_empty-states-design",
+   "name": "Frontend topic: empty states design",
+   "description": "Practical guide for empty states design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'empty states design' applies in this project (file.search/file.read).\n2. Review the standard practice for empty states design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_error-states-design",
+   "name": "Frontend topic: error states design",
+   "description": "Practical guide for error states design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error states design' applies in this project (file.search/file.read).\n2. Review the standard practice for error states design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_onboarding-flows-fe",
+   "name": "Frontend topic: onboarding flows fe",
+   "description": "Practical guide for onboarding flows fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'onboarding flows fe' applies in this project (file.search/file.read).\n2. Review the standard practice for onboarding flows fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_settings-pages-fe",
+   "name": "Frontend topic: settings pages fe",
+   "description": "Practical guide for settings pages fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'settings pages fe' applies in this project (file.search/file.read).\n2. Review the standard practice for settings pages fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_search-ux-patterns",
+   "name": "Frontend topic: search ux patterns",
+   "description": "Practical guide for search ux patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'search ux patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for search ux patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_filters-and-faceting",
+   "name": "Frontend topic: filters and faceting",
+   "description": "Practical guide for filters and faceting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'filters and faceting' applies in this project (file.search/file.read).\n2. Review the standard practice for filters and faceting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_pagination-vs-infinite-scroll",
+   "name": "Frontend topic: pagination vs infinite scroll",
+   "description": "Practical guide for pagination vs infinite scroll in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pagination vs infinite scroll' applies in this project (file.search/file.read).\n2. Review the standard practice for pagination vs infinite scroll (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_undo-redo-patterns",
+   "name": "Frontend topic: undo redo patterns",
+   "description": "Practical guide for undo redo patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'undo redo patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for undo redo patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_multi-step-forms",
+   "name": "Frontend topic: multi step forms",
+   "description": "Practical guide for multi step forms in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'multi step forms' applies in this project (file.search/file.read).\n2. Review the standard practice for multi step forms (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_save-state-drafts",
+   "name": "Frontend topic: save state drafts",
+   "description": "Practical guide for save state drafts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'save state drafts' applies in this project (file.search/file.read).\n2. Review the standard practice for save state drafts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_autosave-strategies",
+   "name": "Frontend topic: autosave strategies",
+   "description": "Practical guide for autosave strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'autosave strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for autosave strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_conflict-resolution-fe",
+   "name": "Frontend topic: conflict resolution fe",
+   "description": "Practical guide for conflict resolution fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'conflict resolution fe' applies in this project (file.search/file.read).\n2. Review the standard practice for conflict resolution fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_offline-queues-fe",
+   "name": "Frontend topic: offline queues fe",
+   "description": "Practical guide for offline queues fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'offline queues fe' applies in this project (file.search/file.read).\n2. Review the standard practice for offline queues fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_background-sync-fe",
+   "name": "Frontend topic: background sync fe",
+   "description": "Practical guide for background sync fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'background sync fe' applies in this project (file.search/file.read).\n2. Review the standard practice for background sync fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_install-prompts-timing",
+   "name": "Frontend topic: install prompts timing",
+   "description": "Practical guide for install prompts timing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'install prompts timing' applies in this project (file.search/file.read).\n2. Review the standard practice for install prompts timing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_update-prompts-fe",
+   "name": "Frontend topic: update prompts fe",
+   "description": "Practical guide for update prompts fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'update prompts fe' applies in this project (file.search/file.read).\n2. Review the standard practice for update prompts fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_rate-limit-ux",
+   "name": "Frontend topic: rate limit ux",
+   "description": "Practical guide for rate limit ux in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rate limit ux' applies in this project (file.search/file.read).\n2. Review the standard practice for rate limit ux (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_graceful-degradation-fe",
+   "name": "Frontend topic: graceful degradation fe",
+   "description": "Practical guide for graceful degradation fe in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'graceful degradation fe' applies in this project (file.search/file.read).\n2. Review the standard practice for graceful degradation fe (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_browser-storage-quotas",
+   "name": "Frontend topic: browser storage quotas",
+   "description": "Practical guide for browser storage quotas in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'browser storage quotas' applies in this project (file.search/file.read).\n2. Review the standard practice for browser storage quotas (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_storage-eviction-handling",
+   "name": "Frontend topic: storage eviction handling",
+   "description": "Practical guide for storage eviction handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'storage eviction handling' applies in this project (file.search/file.read).\n2. Review the standard practice for storage eviction handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_debugging-fe-in-prod",
+   "name": "Frontend topic: debugging fe in prod",
+   "description": "Practical guide for debugging fe in prod in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'debugging fe in prod' applies in this project (file.search/file.read).\n2. Review the standard practice for debugging fe in prod (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fe_feature-flags-fe-cleanup",
+   "name": "Frontend topic: feature flags fe cleanup",
+   "description": "Practical guide for feature flags fe cleanup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature flags fe cleanup' applies in this project (file.search/file.read).\n2. Review the standard practice for feature flags fe cleanup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

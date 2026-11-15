@@ -1,0 +1,145 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_perf_cpu-profiling-basics",
+   "name": "Performance: cpu profiling basics",
+   "description": "Apply cpu profiling basics to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for cpu profiling basics.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_memory-profiling-basics",
+   "name": "Performance: memory profiling basics",
+   "description": "Apply memory profiling basics to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for memory profiling basics.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_io-profiling",
+   "name": "Performance: io profiling",
+   "description": "Apply io profiling to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for io profiling.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_startup-optimization",
+   "name": "Performance: startup optimization",
+   "description": "Apply startup optimization to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for startup optimization.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_jank-elimination",
+   "name": "Performance: jank elimination",
+   "description": "Apply jank elimination to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for jank elimination.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_battery-optimization",
+   "name": "Performance: battery optimization",
+   "description": "Apply battery optimization to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for battery optimization.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_network-batching",
+   "name": "Performance: network batching",
+   "description": "Apply network batching to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for network batching.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_image-pipeline-tuning",
+   "name": "Performance: image pipeline tuning",
+   "description": "Apply image pipeline tuning to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for image pipeline tuning.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_db-access-tuning",
+   "name": "Performance: db access tuning",
+   "description": "Apply db access tuning to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for db access tuning.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_gc-tuning-notes",
+   "name": "Performance: gc tuning notes",
+   "description": "Apply gc tuning notes to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for gc tuning notes.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_cache-hit-optimization",
+   "name": "Performance: cache hit optimization",
+   "description": "Apply cache hit optimization to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for cache hit optimization.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_concurrency-tuning",
+   "name": "Performance: concurrency tuning",
+   "description": "Apply concurrency tuning to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for concurrency tuning.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_allocation-reduction",
+   "name": "Performance: allocation reduction",
+   "description": "Apply allocation reduction to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for allocation reduction.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_lazy-loading-strategies",
+   "name": "Performance: lazy loading strategies",
+   "description": "Apply lazy loading strategies to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for lazy loading strategies.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_prefetch-strategies",
+   "name": "Performance: prefetch strategies",
+   "description": "Apply prefetch strategies to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for prefetch strategies.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_payload-compression",
+   "name": "Performance: payload compression",
+   "description": "Apply payload compression to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for payload compression.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_tree-shaking-notes",
+   "name": "Performance: tree shaking notes",
+   "description": "Apply tree shaking notes to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for tree shaking notes.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_app-size-reduction",
+   "name": "Performance: app size reduction",
+   "description": "Apply app size reduction to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for app size reduction.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_render-pass-analysis",
+   "name": "Performance: render pass analysis",
+   "description": "Apply render pass analysis to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for render pass analysis.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_perf_baseline-profiles",
+   "name": "Performance: baseline profiles",
+   "description": "Apply baseline profiles to this project.",
+   "instructions": "Workflow:\n1. Measure current state (timing harness via python.run_file or gradle.exec).\n2. web.search technique details for baseline profiles.\n3. Apply the smallest effective change (file.patch).\n4. Re-measure; keep if better.\n5. Record numbers.",
+   "enabled": false
+  }
+ ]
+}

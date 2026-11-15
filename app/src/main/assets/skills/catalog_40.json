@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_doc_readme-structure",
+   "name": "Docs practice: readme structure",
+   "description": "Create or improve readme structure.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for readme structure.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_contributing-guide",
+   "name": "Docs practice: contributing guide",
+   "description": "Create or improve contributing guide.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for contributing guide.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_code-of-conduct",
+   "name": "Docs practice: code of conduct",
+   "description": "Create or improve code of conduct.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for code of conduct.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_architecture-decision-records",
+   "name": "Docs practice: architecture decision records",
+   "description": "Create or improve architecture decision records.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for architecture decision records.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_api-reference-style",
+   "name": "Docs practice: api reference style",
+   "description": "Create or improve api reference style.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for api reference style.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_changelog-standards",
+   "name": "Docs practice: changelog standards",
+   "description": "Create or improve changelog standards.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for changelog standards.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_onboarding-checklist",
+   "name": "Docs practice: onboarding checklist",
+   "description": "Create or improve onboarding checklist.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for onboarding checklist.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_dev-env-script",
+   "name": "Docs practice: dev env script",
+   "description": "Create or improve dev env script.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for dev env script.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_troubleshooting-guide",
+   "name": "Docs practice: troubleshooting guide",
+   "description": "Create or improve troubleshooting guide.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for troubleshooting guide.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_faq-curation",
+   "name": "Docs practice: faq curation",
+   "description": "Create or improve faq curation.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for faq curation.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_glossary",
+   "name": "Docs practice: glossary",
+   "description": "Create or improve glossary.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for glossary.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_diagrams-as-code",
+   "name": "Docs practice: diagrams as code",
+   "description": "Create or improve diagrams as code.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for diagrams as code.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_doc-linting",
+   "name": "Docs practice: doc linting",
+   "description": "Create or improve doc linting.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for doc linting.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_versioned-docs",
+   "name": "Docs practice: versioned docs",
+   "description": "Create or improve versioned docs.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for versioned docs.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_search-optimization-docs",
+   "name": "Docs practice: search optimization docs",
+   "description": "Create or improve search optimization docs.",
+   "instructions": "Workflow:\n1. Audit current docs (file.list docs folder).\n2. web.search best-practice template for search optimization docs.\n3. Draft/update the doc (file.write).\n4. Verify instructions by executing them.\n5. Link from README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_one-command-setup",
+   "name": "Developer experience: one command setup",
+   "description": "Improve one command setup for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for one command setup.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_make-targets-curate",
+   "name": "Developer experience: make targets curate",
+   "description": "Improve make targets curate for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for make targets curate.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_pre-commit-hooks",
+   "name": "Developer experience: pre commit hooks",
+   "description": "Improve pre commit hooks for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for pre commit hooks.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_commit-template",
+   "name": "Developer experience: commit template",
+   "description": "Improve commit template for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for commit template.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_issue-templates",
+   "name": "Developer experience: issue templates",
+   "description": "Improve issue templates for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for issue templates.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_pr-template",
+   "name": "Developer experience: pr template",
+   "description": "Improve pr template for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for pr template.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_ci-local-parity",
+   "name": "Developer experience: ci local parity",
+   "description": "Improve ci local parity for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for ci local parity.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_mock-server-for-dev",
+   "name": "Developer experience: mock server for dev",
+   "description": "Improve mock server for dev for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for mock server for dev.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_seed-data-scripts",
+   "name": "Developer experience: seed data scripts",
+   "description": "Improve seed data scripts for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for seed data scripts.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_dev-proxy-config",
+   "name": "Developer experience: dev proxy config",
+   "description": "Improve dev proxy config for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for dev proxy config.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_feature-scaffold-templates",
+   "name": "Developer experience: feature scaffold templates",
+   "description": "Improve feature scaffold templates for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for feature scaffold templates.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dx_error-message-standards",
+   "name": "Developer experience: error message standards",
+   "description": "Improve error message standards for this repo.",
+   "instructions": "Workflow:\n1. Assess current flow (file.read).\n2. web.search examples for error message standards.\n3. Implement (file.write/patch).\n4. Test the new flow end-to-end.\n5. Announce in README.",
+   "enabled": false
+  }
+ ]
+}

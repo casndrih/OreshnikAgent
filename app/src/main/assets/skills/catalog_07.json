@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_web_scope_confirm",
+   "name": "Authorization scope check",
+   "description": "Confirm written permission before testing.",
+   "instructions": "Workflow:\n1. Ask who owns the target and what is permitted.\n2. Refuse testing of third-party systems without proof of authorization.\n3. Keep to the agreed scope and methods.\n4. Record the scope in the session notes.",
+   "enabled": true
+  },
+  {
+   "id": "cat_web_headervuln",
+   "name": "Header security scan",
+   "description": "Check security headers of a target.",
+   "instructions": "Workflow:\n1. web.headervuln on the target URL.\n2. Review missing CSP, HSTS, frame options, cookie flags.\n3. Rate each gap by real impact.\n4. Recommend concrete header additions.",
+   "enabled": true
+  },
+  {
+   "id": "cat_web_dirbrute",
+   "name": "Directory enumeration",
+   "description": "Discover hidden paths on a web server.",
+   "instructions": "Workflow:\n1. web.dirbrute with a moderate wordlist.\n2. Review found paths; ignore noise (404 loops).\n3. Investigate promising findings with targeted requests.\n4. Stop at signs of rate limiting; report the method used.",
+   "enabled": true
+  },
+  {
+   "id": "cat_web_xss_scan",
+   "name": "Reflected XSS probing",
+   "description": "Test reflection points for XSS.",
+   "instructions": "Workflow:\n1. Identify input reflection in responses (http.capture).\n2. web.xssscan with harmless probe payloads.\n3. Verify any hit manually before reporting.\n4. Never test on systems without authorization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_sqli_basics",
+   "name": "SQL injection checks",
+   "description": "Test parameters for SQLi responsibly.",
+   "instructions": "Workflow:\n1. Identify parameterized endpoints via http.capture.\n2. web.sqlmap with a low-risk, read-only level on YOUR OWN test target.\n3. Confirm findings manually; avoid destructive options.\n4. Report parameter, payload class and evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_port_profile",
+   "name": "Service exposure profile",
+   "description": "Profile exposed services on a host.",
+   "instructions": "Workflow:\n1. net.portscan to enumerate open ports.\n2. For web ports, run web.headervuln.\n3. For admin-looking ports, note only; do not brute.\n4. Summarize exposure with priorities.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_crawl_map",
+   "name": "Site crawl mapping",
+   "description": "Map a site's link structure.",
+   "instructions": "Workflow:\n1. web.crawl with a bounded depth.\n2. Collect unique URLs and their titles.\n3. Note forms and query parameters as input surface.\n4. Present the map as a compact tree.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_login_flow_test",
+   "name": "Login flow assessment",
+   "description": "Assess login endpoint behavior.",
+   "instructions": "Workflow:\n1. Capture a real login on the user's own app (http.capture).\n2. Note credential transport (body vs query) and responses.\n3. Test error message differences (user enum risk).\n4. Recommend fixes; never store credentials.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_session_flags",
+   "name": "Session cookie audit",
+   "description": "Evaluate session handling security.",
+   "instructions": "Workflow:\n1. Capture authenticated traffic (http.capture).\n2. Inspect Set-Cookie flags: Secure, HttpOnly, SameSite.\n3. Note session lifetime behavior.\n4. Report gaps with impact.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_cors_check",
+   "name": "CORS policy review",
+   "description": "Test cross-origin policy configuration.",
+   "instructions": "Workflow:\n1. Send preflight-less requests with arbitrary Origin via process.exec curl.\n2. Observe Access-Control-Allow-Origin behavior.\n3. Test reflecting user origins.\n4. Classify: permissive, echoing, or strict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_api_enum",
+   "name": "API endpoint enumeration",
+   "description": "Find undocumented endpoints.",
+   "instructions": "Workflow:\n1. Crawl with web.crawl; capture app traffic with http.capture.\n2. Merge URL sets from both.\n3. Probe candidates lightly with read-only methods.\n4. Document found endpoints with method and auth needs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_idor_probe",
+   "name": "IDOR access checks",
+   "description": "Test object-level authorization on your own app.",
+   "instructions": "Workflow:\n1. Capture requests containing object IDs (http.capture).\n2. Replay with a different ID via http.replay.\n3. Observe authorization outcomes.\n4. Report exact evidence; stop after confirming the pattern.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_upload_check",
+   "name": "Upload handling checks",
+   "description": "Probe file upload validation.",
+   "instructions": "Workflow:\n1. Locate upload endpoints via crawl/capture.\n2. Send benign files with mismatched extensions (http.replay).\n3. Observe validation responses.\n4. Summarize the validation model; never upload malware.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_rate_headers",
+   "name": "Rate limit signal reading",
+   "description": "Detect throttling from responses.",
+   "instructions": "Workflow:\n1. Send a short request series (http.capture.repeat).\n2. Watch for 429s, Retry-After, and latency shifts.\n3. Stop at first signal.\n4. Document thresholds and headers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_tls_best",
+   "name": "TLS configuration grading",
+   "description": "Grade TLS settings of a host.",
+   "instructions": "Workflow:\n1. process.exec openssl s_client for protocol and cipher info.\n2. Check cert chain validity and SANs.\n3. Grade against modern baselines.\n4. Recommend concrete upgrades.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_recon_passive",
+   "name": "Passive recon discipline",
+   "description": "Collect target info without touching it.",
+   "instructions": "Workflow:\n1. web.search for public info about the target.\n2. Note exposed docs, repos, subdomains from public pages.\n3. Never probe during passive recon.\n4. Present findings with sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_findings_report",
+   "name": "Security findings report",
+   "description": "Write an actionable security report.",
+   "instructions": "Workflow:\n1. Order findings by severity (critical to informational).\n2. Each: description, evidence (request/response pair), impact, fix.\n3. Redact tokens and secrets from evidence.\n4. End with a prioritized remediation list.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_scanner_hygiene",
+   "name": "Scanner safety hygiene",
+   "description": "Run scanners without collateral damage.",
+   "instructions": "Workflow:\n1. Prefer low-intensity settings.\n2. Exclude destructive endpoints from wordlists.\n3. Monitor for WAF blocking; back off when detected.\n4. Stop and report when the target shows stress.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_waf_detect",
+   "name": "WAF fingerprinting",
+   "description": "Identify protective layers.",
+   "instructions": "Workflow:\n1. Send a benign probe payload via process.exec curl.\n2. Compare blocked vs allowed response signatures.\n3. Fingerprint the WAF from headers and bodies.\n4. Note implications for further testing.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_subdomain_check",
+   "name": "Subdomain takeover checks",
+   "description": "Check dangling DNS records on your own domain.",
+   "instructions": "Workflow:\n1. Enumerate subdomains from public data (web.search).\n2. Resolve each; note NXDOMAIN/CNAMEs to dead services.\n3. Verify service claim signatures carefully.\n4. Report only confirmed issues.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_robots_insight",
+   "name": "Robots and metadata insight",
+   "description": "Mine robots.txt and metadata.",
+   "instructions": "Workflow:\n1. Fetch robots.txt and sitemap.xml via process.exec curl.\n2. Note disallowed paths as interesting surface.\n3. Check generator meta tags for versions.\n4. Summarize as recon notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_auth_bypass_basic",
+   "name": "Auth bypass sanity checks",
+   "description": "Test authentication enforcement on your own app.",
+   "instructions": "Workflow:\n1. Capture an authenticated request (http.capture).\n2. Replay without auth headers (http.replay).\n3. Compare responses for missing enforcement.\n4. Document endpoints lacking checks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_param_tamper",
+   "name": "Parameter tamper testing",
+   "description": "Test server-side trust of client data.",
+   "instructions": "Workflow:\n1. Identify price/role/quantity fields in captured requests.\n2. Replay with modified values (http.replay).\n3. Observe acceptance/rejection.\n4. Report trust issues with evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_redirect_check",
+   "name": "Open redirect probing",
+   "description": "Test redirect validation.",
+   "instructions": "Workflow:\n1. Find redirect parameters via crawl (web.crawl).\n2. Test with external URLs via http.replay.\n3. Observe whether the redirect honors arbitrary targets.\n4. Report with exact URLs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_error_leak",
+   "name": "Error information leakage",
+   "description": "Check verbose error exposure.",
+   "instructions": "Workflow:\n1. Trigger errors with malformed input (http.replay).\n2. Inspect stack traces and versions in responses.\n3. Note leaked paths and library versions.\n4. Recommend generic error pages.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_clickjack_probe",
+   "name": "Clickjacking exposure",
+   "description": "Check framing protections.",
+   "instructions": "Workflow:\n1. web.headervuln for X-Frame-Options/CSP frame-ancestors.\n2. Attempt a local framing test page (file.write + browser).\n3. Confirm whether framing succeeds.\n4. Report with the header fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_mixed_content",
+   "name": "Mixed content scan",
+   "description": "Find insecure resources on HTTPS pages.",
+   "instructions": "Workflow:\n1. Fetch the page (web.browser or curl).\n2. Scan for http:// resource references.\n3. Note which load and which are blocked.\n4. List fixes per resource.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_cookie_scope",
+   "name": "Cookie scope review",
+   "description": "Assess cookie domain/path scoping.",
+   "instructions": "Workflow:\n1. Capture Set-Cookie headers (http.capture).\n2. Review Domain and Path attributes for over-broad scoping.\n3. Note cross-subdomain exposure.\n4. Recommend tighter scoping.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_secret_scan",
+   "name": "Client-side secret exposure",
+   "description": "Find leaked keys in web assets.",
+   "instructions": "Workflow:\n1. Fetch JS bundles from the target (process.exec curl).\n2. Scan for key-like patterns (python.run_file regex pass).\n3. Verify hits are real secrets, not test values.\n4. Report file and line; never publish the secret.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_vuln_retest",
+   "name": "Remediation retest",
+   "description": "Verify fixes after remediation.",
+   "instructions": "Workflow:\n1. Re-run the original probe for each finding.\n2. Compare old vs new responses.\n3. Mark fixed/partially fixed/unfixed.\n4. Update the findings report accordingly.",
+   "enabled": false
+  }
+ ]
+}

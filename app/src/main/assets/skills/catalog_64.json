@@ -1,0 +1,523 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_car_resume-craft",
+   "name": "Career topic: resume craft",
+   "description": "Practical guide for resume craft.",
+   "instructions": "Workflow:\n1. Locate where 'resume craft' applies in this project or task (file.search/file.read).\n2. Review the standard practice for resume craft (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_resume-formats",
+   "name": "Career topic: resume formats",
+   "description": "Practical guide for resume formats.",
+   "instructions": "Workflow:\n1. Locate where 'resume formats' applies in this project or task (file.search/file.read).\n2. Review the standard practice for resume formats (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_ats-optimization",
+   "name": "Career topic: ats optimization",
+   "description": "Practical guide for ats optimization.",
+   "instructions": "Workflow:\n1. Locate where 'ats optimization' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ats optimization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_resume-tailoring",
+   "name": "Career topic: resume tailoring",
+   "description": "Practical guide for resume tailoring.",
+   "instructions": "Workflow:\n1. Locate where 'resume tailoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for resume tailoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_cover-letters-modern",
+   "name": "Career topic: cover letters modern",
+   "description": "Practical guide for cover letters modern.",
+   "instructions": "Workflow:\n1. Locate where 'cover letters modern' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cover letters modern (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_linkedin-profiles",
+   "name": "Career topic: linkedin profiles",
+   "description": "Practical guide for linkedin profiles.",
+   "instructions": "Workflow:\n1. Locate where 'linkedin profiles' applies in this project or task (file.search/file.read).\n2. Review the standard practice for linkedin profiles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_linkedin-headlines",
+   "name": "Career topic: linkedin headlines",
+   "description": "Practical guide for linkedin headlines.",
+   "instructions": "Workflow:\n1. Locate where 'linkedin headlines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for linkedin headlines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_portfolio-sites",
+   "name": "Career topic: portfolio sites",
+   "description": "Practical guide for portfolio sites.",
+   "instructions": "Workflow:\n1. Locate where 'portfolio sites' applies in this project or task (file.search/file.read).\n2. Review the standard practice for portfolio sites (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_github-profile-readmes",
+   "name": "Career topic: github profile READMEs",
+   "description": "Practical guide for github profile READMEs.",
+   "instructions": "Workflow:\n1. Locate where 'github profile READMEs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for github profile READMEs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_personal-branding",
+   "name": "Career topic: personal branding",
+   "description": "Practical guide for personal branding.",
+   "instructions": "Workflow:\n1. Locate where 'personal branding' applies in this project or task (file.search/file.read).\n2. Review the standard practice for personal branding (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_thought-leadership",
+   "name": "Career topic: thought leadership",
+   "description": "Practical guide for thought leadership.",
+   "instructions": "Workflow:\n1. Locate where 'thought leadership' applies in this project or task (file.search/file.read).\n2. Review the standard practice for thought leadership (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_blogging-career-benefits",
+   "name": "Career topic: blogging career benefits",
+   "description": "Practical guide for blogging career benefits.",
+   "instructions": "Workflow:\n1. Locate where 'blogging career benefits' applies in this project or task (file.search/file.read).\n2. Review the standard practice for blogging career benefits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_conference-speaking-careers",
+   "name": "Career topic: conference speaking careers",
+   "description": "Practical guide for conference speaking careers.",
+   "instructions": "Workflow:\n1. Locate where 'conference speaking careers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for conference speaking careers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_meetup-talks",
+   "name": "Career topic: meetup talks",
+   "description": "Practical guide for meetup talks.",
+   "instructions": "Workflow:\n1. Locate where 'meetup talks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for meetup talks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_podcasting-careers",
+   "name": "Career topic: podcasting careers",
+   "description": "Practical guide for podcasting careers.",
+   "instructions": "Workflow:\n1. Locate where 'podcasting careers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for podcasting careers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_newsletters-careers",
+   "name": "Career topic: newsletters careers",
+   "description": "Practical guide for newsletters careers.",
+   "instructions": "Workflow:\n1. Locate where 'newsletters careers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for newsletters careers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_networking-strategies",
+   "name": "Career topic: networking strategies",
+   "description": "Practical guide for networking strategies.",
+   "instructions": "Workflow:\n1. Locate where 'networking strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for networking strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_informational-interviews",
+   "name": "Career topic: informational interviews",
+   "description": "Practical guide for informational interviews.",
+   "instructions": "Workflow:\n1. Locate where 'informational interviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for informational interviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_coffee-chats",
+   "name": "Career topic: coffee chats",
+   "description": "Practical guide for coffee chats.",
+   "instructions": "Workflow:\n1. Locate where 'coffee chats' applies in this project or task (file.search/file.read).\n2. Review the standard practice for coffee chats (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_cold-outreach",
+   "name": "Career topic: cold outreach",
+   "description": "Practical guide for cold outreach.",
+   "instructions": "Workflow:\n1. Locate where 'cold outreach' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cold outreach (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_warm-introductions",
+   "name": "Career topic: warm introductions",
+   "description": "Practical guide for warm introductions.",
+   "instructions": "Workflow:\n1. Locate where 'warm introductions' applies in this project or task (file.search/file.read).\n2. Review the standard practice for warm introductions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_recruiter-relationships",
+   "name": "Career topic: recruiter relationships",
+   "description": "Practical guide for recruiter relationships.",
+   "instructions": "Workflow:\n1. Locate where 'recruiter relationships' applies in this project or task (file.search/file.read).\n2. Review the standard practice for recruiter relationships (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_recruiter-screening-calls",
+   "name": "Career topic: recruiter screening calls",
+   "description": "Practical guide for recruiter screening calls.",
+   "instructions": "Workflow:\n1. Locate where 'recruiter screening calls' applies in this project or task (file.search/file.read).\n2. Review the standard practice for recruiter screening calls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_salary-research-levelsfyi",
+   "name": "Career topic: salary research levels.fyi",
+   "description": "Practical guide for salary research levels.fyi.",
+   "instructions": "Workflow:\n1. Locate where 'salary research levels.fyi' applies in this project or task (file.search/file.read).\n2. Review the standard practice for salary research levels.fyi (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_salary-negotiation-scripts",
+   "name": "Career topic: salary negotiation scripts",
+   "description": "Practical guide for salary negotiation scripts.",
+   "instructions": "Workflow:\n1. Locate where 'salary negotiation scripts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for salary negotiation scripts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_competing-offers-handling",
+   "name": "Career topic: competing offers handling",
+   "description": "Practical guide for competing offers handling.",
+   "instructions": "Workflow:\n1. Locate where 'competing offers handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for competing offers handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_counteroffers-debates",
+   "name": "Career topic: counteroffers debates",
+   "description": "Practical guide for counteroffers debates.",
+   "instructions": "Workflow:\n1. Locate where 'counteroffers debates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for counteroffers debates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_relocation-packages-negotiating",
+   "name": "Career topic: relocation packages negotiating",
+   "description": "Practical guide for relocation packages negotiating.",
+   "instructions": "Workflow:\n1. Locate where 'relocation packages negotiating' applies in this project or task (file.search/file.read).\n2. Review the standard practice for relocation packages negotiating (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_remote-salary-bands",
+   "name": "Career topic: remote salary bands",
+   "description": "Practical guide for remote salary bands.",
+   "instructions": "Workflow:\n1. Locate where 'remote salary bands' applies in this project or task (file.search/file.read).\n2. Review the standard practice for remote salary bands (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_geo-arbitrage-debates",
+   "name": "Career topic: geo arbitrage debates",
+   "description": "Practical guide for geo arbitrage debates.",
+   "instructions": "Workflow:\n1. Locate where 'geo arbitrage debates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for geo arbitrage debates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_comp-transparency-laws",
+   "name": "Career topic: comp transparency laws",
+   "description": "Practical guide for comp transparency laws.",
+   "instructions": "Workflow:\n1. Locate where 'comp transparency laws' applies in this project or task (file.search/file.read).\n2. Review the standard practice for comp transparency laws (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_pay-equity-audits",
+   "name": "Career topic: pay equity audits",
+   "description": "Practical guide for pay equity audits.",
+   "instructions": "Workflow:\n1. Locate where 'pay equity audits' applies in this project or task (file.search/file.read).\n2. Review the standard practice for pay equity audits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_promotion-readiness",
+   "name": "Career topic: promotion readiness",
+   "description": "Practical guide for promotion readiness.",
+   "instructions": "Workflow:\n1. Locate where 'promotion readiness' applies in this project or task (file.search/file.read).\n2. Review the standard practice for promotion readiness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_promotion-packets-writing",
+   "name": "Career topic: promotion packets writing",
+   "description": "Practical guide for promotion packets writing.",
+   "instructions": "Workflow:\n1. Locate where 'promotion packets writing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for promotion packets writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_impact-narratives-crafting",
+   "name": "Career topic: impact narratives crafting",
+   "description": "Practical guide for impact narratives crafting.",
+   "instructions": "Workflow:\n1. Locate where 'impact narratives crafting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for impact narratives crafting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_brag-docs-maintenance",
+   "name": "Career topic: brag docs maintenance",
+   "description": "Practical guide for brag docs maintenance.",
+   "instructions": "Workflow:\n1. Locate where 'brag docs maintenance' applies in this project or task (file.search/file.read).\n2. Review the standard practice for brag docs maintenance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_self-reviews-honest",
+   "name": "Career topic: self reviews honest",
+   "description": "Practical guide for self reviews honest.",
+   "instructions": "Workflow:\n1. Locate where 'self reviews honest' applies in this project or task (file.search/file.read).\n2. Review the standard practice for self reviews honest (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_peer-feedback-requesting",
+   "name": "Career topic: peer feedback requesting",
+   "description": "Practical guide for peer feedback requesting.",
+   "instructions": "Workflow:\n1. Locate where 'peer feedback requesting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for peer feedback requesting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_manager-relationships",
+   "name": "Career topic: manager relationships",
+   "description": "Practical guide for manager relationships.",
+   "instructions": "Workflow:\n1. Locate where 'manager relationships' applies in this project or task (file.search/file.read).\n2. Review the standard practice for manager relationships (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_managing-up",
+   "name": "Career topic: managing up",
+   "description": "Practical guide for managing up.",
+   "instructions": "Workflow:\n1. Locate where 'managing up' applies in this project or task (file.search/file.read).\n2. Review the standard practice for managing up (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_managing-across",
+   "name": "Career topic: managing across",
+   "description": "Practical guide for managing across.",
+   "instructions": "Workflow:\n1. Locate where 'managing across' applies in this project or task (file.search/file.read).\n2. Review the standard practice for managing across (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_expectation-setting",
+   "name": "Career topic: expectation setting",
+   "description": "Practical guide for expectation setting.",
+   "instructions": "Workflow:\n1. Locate where 'expectation setting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for expectation setting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_one-on-ones-effective",
+   "name": "Career topic: one on ones effective",
+   "description": "Practical guide for one on ones effective.",
+   "instructions": "Workflow:\n1. Locate where 'one on ones effective' applies in this project or task (file.search/file.read).\n2. Review the standard practice for one on ones effective (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_one-on-one-agendas",
+   "name": "Career topic: one on one agendas",
+   "description": "Practical guide for one on one agendas.",
+   "instructions": "Workflow:\n1. Locate where 'one on one agendas' applies in this project or task (file.search/file.read).\n2. Review the standard practice for one on one agendas (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_feedback-receiving",
+   "name": "Career topic: feedback receiving",
+   "description": "Practical guide for feedback receiving.",
+   "instructions": "Workflow:\n1. Locate where 'feedback receiving' applies in this project or task (file.search/file.read).\n2. Review the standard practice for feedback receiving (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_feedback-frameworks-sbi",
+   "name": "Career topic: feedback frameworks sbi",
+   "description": "Practical guide for feedback frameworks sbi.",
+   "instructions": "Workflow:\n1. Locate where 'feedback frameworks sbi' applies in this project or task (file.search/file.read).\n2. Review the standard practice for feedback frameworks sbi (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_difficult-feedback-delivering",
+   "name": "Career topic: difficult feedback delivering",
+   "description": "Practical guide for difficult feedback delivering.",
+   "instructions": "Workflow:\n1. Locate where 'difficult feedback delivering' applies in this project or task (file.search/file.read).\n2. Review the standard practice for difficult feedback delivering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_performance-reviews-preparing",
+   "name": "Career topic: performance reviews preparing",
+   "description": "Practical guide for performance reviews preparing.",
+   "instructions": "Workflow:\n1. Locate where 'performance reviews preparing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for performance reviews preparing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_calibration-participation",
+   "name": "Career topic: calibration participation",
+   "description": "Practical guide for calibration participation.",
+   "instructions": "Workflow:\n1. Locate where 'calibration participation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for calibration participation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_promotion-committees",
+   "name": "Career topic: promotion committees",
+   "description": "Practical guide for promotion committees.",
+   "instructions": "Workflow:\n1. Locate where 'promotion committees' applies in this project or task (file.search/file.read).\n2. Review the standard practice for promotion committees (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_promotion-denials-handling",
+   "name": "Career topic: promotion denials handling",
+   "description": "Practical guide for promotion denials handling.",
+   "instructions": "Workflow:\n1. Locate where 'promotion denials handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for promotion denials handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_pip-survival-honest",
+   "name": "Career topic: pip survival honest",
+   "description": "Practical guide for pip survival honest.",
+   "instructions": "Workflow:\n1. Locate where 'pip survival honest' applies in this project or task (file.search/file.read).\n2. Review the standard practice for pip survival honest (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_pips-ethics-debates",
+   "name": "Career topic: pips ethics debates",
+   "description": "Practical guide for pips ethics debates.",
+   "instructions": "Workflow:\n1. Locate where 'pips ethics debates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for pips ethics debates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_firing-with-dignity",
+   "name": "Career topic: firing with dignity",
+   "description": "Practical guide for firing with dignity.",
+   "instructions": "Workflow:\n1. Locate where 'firing with dignity' applies in this project or task (file.search/file.read).\n2. Review the standard practice for firing with dignity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_layoff-survivor-guilt",
+   "name": "Career topic: layoff survivor guilt",
+   "description": "Practical guide for layoff survivor guilt.",
+   "instructions": "Workflow:\n1. Locate where 'layoff survivor guilt' applies in this project or task (file.search/file.read).\n2. Review the standard practice for layoff survivor guilt (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_layoff-comms-receiving",
+   "name": "Career topic: layoff comms receiving",
+   "description": "Practical guide for layoff comms receiving.",
+   "instructions": "Workflow:\n1. Locate where 'layoff comms receiving' applies in this project or task (file.search/file.read).\n2. Review the standard practice for layoff comms receiving (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_severance-negotiating",
+   "name": "Career topic: severance negotiating",
+   "description": "Practical guide for severance negotiating.",
+   "instructions": "Workflow:\n1. Locate where 'severance negotiating' applies in this project or task (file.search/file.read).\n2. Review the standard practice for severance negotiating (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_noncompete-navigating",
+   "name": "Career topic: noncompete navigating",
+   "description": "Practical guide for noncompete navigating.",
+   "instructions": "Workflow:\n1. Locate where 'noncompete navigating' applies in this project or task (file.search/file.read).\n2. Review the standard practice for noncompete navigating (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-navigating",
+   "name": "Career topic: garden leave navigating",
+   "description": "Practical guide for garden leave navigating.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave navigating' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave navigating (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-debates",
+   "name": "Career topic: garden leave debates",
+   "description": "Practical guide for garden leave debates.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave debates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave debates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-tax",
+   "name": "Career topic: garden leave tax",
+   "description": "Practical guide for garden leave tax.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave tax' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave tax (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-uk-basics",
+   "name": "Career topic: garden leave uk basics",
+   "description": "Practical guide for garden leave uk basics.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave uk basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave uk basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-history",
+   "name": "Career topic: garden leave history",
+   "description": "Practical guide for garden leave history.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave history' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave history (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-vs-notice",
+   "name": "Career topic: garden leave vs notice",
+   "description": "Practical guide for garden leave vs notice.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave vs notice' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave vs notice (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-risks",
+   "name": "Career topic: garden leave risks",
+   "description": "Practical guide for garden leave risks.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave risks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave risks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-compensation",
+   "name": "Career topic: garden leave compensation",
+   "description": "Practical guide for garden leave compensation.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave compensation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave compensation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-legal-notes",
+   "name": "Career topic: garden leave legal notes",
+   "description": "Practical guide for garden leave legal notes.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave legal notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave legal notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-policy-design",
+   "name": "Career topic: garden leave policy design",
+   "description": "Practical guide for garden leave policy design.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave policy design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave policy design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-enforcement",
+   "name": "Career topic: garden leave enforcement",
+   "description": "Practical guide for garden leave enforcement.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave enforcement' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave enforcement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-alternatives",
+   "name": "Career topic: garden leave alternatives",
+   "description": "Practical guide for garden leave alternatives.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave alternatives' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave alternatives (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-cliff-notes",
+   "name": "Career topic: garden leave cliff notes",
+   "description": "Practical guide for garden leave cliff notes.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave cliff notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave cliff notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-garden-design",
+   "name": "Career topic: garden leave garden design",
+   "description": "Practical guide for garden leave garden design.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave garden design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave garden design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-whitespace",
+   "name": "Career topic: garden leave whitespace",
+   "description": "Practical guide for garden leave whitespace.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave whitespace' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave whitespace (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_car_garden-leave-notfound",
+   "name": "Career topic: garden leave notfound",
+   "description": "Practical guide for garden leave notfound.",
+   "instructions": "Workflow:\n1. Locate where 'garden leave notfound' applies in this project or task (file.search/file.read).\n2. Review the standard practice for garden leave notfound (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

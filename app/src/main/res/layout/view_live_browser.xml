@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <!-- URL / navigation bar -->
+    <LinearLayout
+        android:id="@+id/liveBrowserBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp">
+
+            <ImageButton
+                android:id="@+id/btnLiveBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/live_navigate_back"
+                app:tint="@color/text_primary" />
+
+            <ImageButton
+                android:id="@+id/btnLiveForward"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_forward"
+                android:contentDescription="@string/live_navigate_forward"
+                app:tint="@color/text_primary" />
+
+            <ImageButton
+                android:id="@+id/btnLiveReload"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_refresh"
+                android:contentDescription="@string/live_reload"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvLiveUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_pill"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                tools:text="https://example.com" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/liveProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Live web page container -->
+    <FrameLayout
+        android:id="@+id/liveBrowserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:background="@color/white" />
+
+    <!-- Shown when this bubble is not hosting the live WebView -->
+    <TextView
+        android:id="@+id/btnLiveReattach"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:gravity="center"
+        android:background="@color/bg_card"
+        android:text="@string/live_reattach_hint"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</merge>

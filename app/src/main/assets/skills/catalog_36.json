@@ -1,0 +1,145 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ops2_sli-definition",
+   "name": "Ops practice: sli definition",
+   "description": "Implement sli definition.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_slo-setting",
+   "name": "Ops practice: slo setting",
+   "description": "Implement slo setting.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_error-budget-policy",
+   "name": "Ops practice: error budget policy",
+   "description": "Implement error budget policy.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_alert-tuning",
+   "name": "Ops practice: alert tuning",
+   "description": "Implement alert tuning.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_dashboard-design",
+   "name": "Ops practice: dashboard design",
+   "description": "Implement dashboard design.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_trace-instrumentation",
+   "name": "Ops practice: trace instrumentation",
+   "description": "Implement trace instrumentation.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_metric-naming-standards",
+   "name": "Ops practice: metric naming standards",
+   "description": "Implement metric naming standards.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_log-correlation-ids",
+   "name": "Ops practice: log correlation ids",
+   "description": "Implement log correlation ids.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_runbook-authoring",
+   "name": "Ops practice: runbook authoring",
+   "description": "Implement runbook authoring.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_oncall-handoff",
+   "name": "Ops practice: oncall handoff",
+   "description": "Implement oncall handoff.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_capacity-planning-basics",
+   "name": "Ops practice: capacity planning basics",
+   "description": "Implement capacity planning basics.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_cost-review",
+   "name": "Ops practice: cost review",
+   "description": "Implement cost review.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_dependency-latency-map",
+   "name": "Ops practice: dependency latency map",
+   "description": "Implement dependency latency map.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_rollback-drill",
+   "name": "Ops practice: rollback drill",
+   "description": "Implement rollback drill.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_chaos-experiment-plan",
+   "name": "Ops practice: chaos experiment plan",
+   "description": "Implement chaos experiment plan.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_incident-review-facilitation",
+   "name": "Ops practice: incident review facilitation",
+   "description": "Implement incident review facilitation.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_postmortem-action-tracking",
+   "name": "Ops practice: postmortem action tracking",
+   "description": "Implement postmortem action tracking.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_status-page-flow",
+   "name": "Ops practice: status page flow",
+   "description": "Implement status page flow.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_maintenance-window-plan",
+   "name": "Ops practice: maintenance window plan",
+   "description": "Implement maintenance window plan.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ops2_audit-log-review",
+   "name": "Ops practice: audit log review",
+   "description": "Implement audit log review.",
+   "instructions": "Workflow:\n1. Gather current state (file.read configs/logs).\n2. web.search the practice's reference implementation.\n3. Draft the artifact (file.write).\n4. Validate with the team.\n5. Schedule the follow-up.",
+   "enabled": false
+  }
+ ]
+}

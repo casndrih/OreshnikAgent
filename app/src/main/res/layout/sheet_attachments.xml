@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@color/divider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attach_title"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnCount="4"
+        android:rowCount="1"
+        android:useDefaultMargins="false">
+
+        <!-- Keep icon views separate so their 48dp circular backgrounds remain independent of tile text. -->
+        <LinearLayout
+            android:id="@+id/attachCamera"
+            style="@style/AttachTile"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                style="@style/AttachIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_camera"
+                app:tint="@color/text_secondary" />
+            <TextView
+                style="@style/AttachLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attach_camera" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attachFiles"
+            style="@style/AttachTile"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                style="@style/AttachIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_upload"
+                app:tint="@color/text_secondary" />
+            <TextView
+                style="@style/AttachLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attach_files" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attachGallery"
+            style="@style/AttachTile"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                style="@style/AttachIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_history"
+                app:tint="@color/text_secondary" />
+            <TextView
+                style="@style/AttachLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attach_gallery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attachDocs"
+            style="@style/AttachTile"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                style="@style/AttachIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_context"
+                app:tint="@color/text_secondary" />
+            <TextView
+                style="@style/AttachLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attach_docs" />
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>

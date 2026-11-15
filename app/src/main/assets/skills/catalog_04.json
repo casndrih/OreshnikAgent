@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_re_binary_id",
+   "name": "Binary identification",
+   "description": "Classify an unknown binary before deeper analysis.",
+   "instructions": "Workflow:\n1. re.hex.identify to read magic bytes and header structure.\n2. re.rabin2 for format, architecture, libraries and entry point.\n3. Classify: ELF, DEX, SO, PE, or raw data.\n4. Route to the matching deeper workflow (re.ghidra.analyze, re.ida.analyze, dex tools).",
+   "enabled": true
+  },
+  {
+   "id": "cat_re_r2_static",
+   "name": "radare2 static analysis",
+   "description": "Quick function-level recon of a binary.",
+   "instructions": "Workflow:\n1. re.r2.analyze with the auto-analysis action.\n2. List functions; identify the interesting ones by size and xrefs.\n3. Drill into targets; note strings and calls.\n4. Summarize findings with addresses for later correlation.",
+   "enabled": true
+  },
+  {
+   "id": "cat_re_rabin2_info",
+   "name": "Library and import recon",
+   "description": "Understand what a binary links against.",
+   "instructions": "Workflow:\n1. re.rabin2 with the info action: libs, imports, symbols, sections.\n2. Note native libs that hint at frameworks (il2cpp, unity, flutter).\n3. Flag exported functions relevant to the task.\n4. Keep the symbol list for xref work later.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_ghidra_flow",
+   "name": "Ghidra-style deep analysis",
+   "description": "Full headless decompilation of a binary.",
+   "instructions": "Workflow:\n1. re.ghidra.analyze with the target path; wait for the analysis pass.\n2. Extract decompiled functions of interest.\n3. Cross-reference callers with re.ida.xref where available.\n4. Write a narrative: what the function does, in plain language.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_ida_capabilities",
+   "name": "IDA availability check",
+   "description": "Know which IDA-style analyses are possible first.",
+   "instructions": "Workflow:\n1. re.ida.capabilities before any IDA-based work.\n2. Map requested analysis to available capabilities.\n3. Fall back to re.ghidra.analyze or re.r2.analyze where IDA is unavailable.\n4. State explicitly which engine produced which finding.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_il2cpp_metadata",
+   "name": "Unity IL2CPP metadata dump",
+   "description": "Recover Unity game class structure.",
+   "instructions": "Workflow:\n1. re.il2cpp.metadata on the target libil2cpp.so with global-metadata.dat.\n2. Note class count, assembly names, and dump sanity.\n3. Resolve specific classes with re.il2cpp.resolve.\n4. Keep the class-to-address mapping for gameplay memory work.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_il2cpp_vtable",
+   "name": "IL2CPP vtable analysis",
+   "description": "Resolve virtual method addresses in Unity games.",
+   "instructions": "Workflow:\n1. re.il2cpp.vtable for the target class.\n2. Identify the method of interest by signature.\n3. Record its address for hooks or memory correlation.\n4. Validate with re.mem.ida_correlate against runtime data.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_xref_trace",
+   "name": "Cross-reference tracing",
+   "description": "Find who calls what and why it matters.",
+   "instructions": "Workflow:\n1. Start from the symbol or address of interest.\n2. re.ida.xref to list callers and callees.\n3. Read each caller briefly; classify security-relevant vs benign.\n4. Report the call chain in compact form.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_offset_math",
+   "name": "Address offset calculation",
+   "description": "Convert between file offsets and virtual addresses.",
+   "instructions": "Workflow:\n1. Identify the section containing the address (re.rabin2 sections).\n2. re.ida.offset for the conversion with the correct base.\n3. Double-check with a second section if results look odd.\n4. Report both representations with the base used.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_hex_pattern",
+   "name": "Byte pattern identification",
+   "description": "Identify file formats and embedded structures.",
+   "instructions": "Workflow:\n1. re.hex.identify on the header region.\n2. Match against known magics (ELF, ZIP, PNG, OBB).\n3. For embedded payloads, find the inner offset and re-run identification there.\n4. Summarize the container structure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_unity_dump",
+   "name": "Unity runtime dump",
+   "description": "Dump live Unity game state for analysis.",
+   "instructions": "Workflow:\n1. Confirm the game is running (mem.process.list).\n2. re.unity.runtime_dump to capture current class state.\n3. Correlate static addresses with re.mem.ida_correlate.\n4. Report player-relevant fields with addresses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_smali_logic",
+   "name": "Smali logic reconstruction",
+   "description": "Understand protection logic from smali.",
+   "instructions": "Workflow:\n1. re.apktool.decode; locate the guard class with file.search.\n2. Read the checks (signature, debug flag, root detection).\n3. Map the decision flow in pseudocode.\n4. Propose the minimal smali patch; rebuild with re.apktool.build to verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_elf_symbols",
+   "name": "ELF symbol exploration",
+   "description": "Mine symbols for reversing entry points.",
+   "instructions": "Workflow:\n1. re.rabin2 symbols on the ELF.\n2. Filter to exported, non-system symbols.\n3. Group by probable purpose (JNI bridge, game logic, anti-cheat).\n4. Hand the shortlist to deeper analysis workflows.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_dex_overview",
+   "name": "DEX overview",
+   "description": "Survey a DEX file before deep dives.",
+   "instructions": "Workflow:\n1. re.hex.identify to confirm DEX magic and version.\n2. re.rabin2 for string and class counts.\n3. re.apktool.decode if smali-level detail is needed.\n4. Note obfuscation signs (short names, string encryption).",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_native_bridge",
+   "name": "JNI bridge analysis",
+   "description": "Map Java-to-native call surfaces.",
+   "instructions": "Workflow:\n1. file.search smali for native method declarations.\n2. re.rabin2 exports to find the corresponding JNI symbols.\n3. Pair them; note unregistered natives.\n4. Target these pairs for decompilation with re.ghidra.analyze.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_str_decoding",
+   "name": "Obfuscated string handling",
+   "description": "Decode encrypted or encoded strings found in binaries.",
+   "instructions": "Workflow:\n1. Collect suspicious strings via re.rabin2 or decoded resources.\n2. Identify the decode routine (often a small function or XOR loop).\n3. Reimplement the decoder with python.run_file; verify on samples.\n4. Apply the decoder to the full set; report meaningful finds.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_diff_versions",
+   "name": "Binary version diffing",
+   "description": "Compare two versions of the same library.",
+   "instructions": "Workflow:\n1. re.rabin2 info on both; compare sizes and exported symbols.\n2. Identify new and removed exports.\n3. For changed hot functions, diff decompilation from re.ghidra.analyze.\n4. Summarize behavioral deltas likely relevant to the user.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_fridaless_hook_plan",
+   "name": "Hook planning without Frida",
+   "description": "Plan native interception using available tools only.",
+   "instructions": "Workflow:\n1. Identify the target function address via re.ghidra.analyze or re.il2cpp.resolve.\n2. Decide the interception layer: memory patch (mem.write) or smali patch.\n3. Write the patch bytes with file.write; verify with re.hex.identify.\n4. Apply with mem.write or rebuild via re.apktool.build; verify behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_report_writing",
+   "name": "RE report structure",
+   "description": "Write a professional reverse-engineering summary.",
+   "instructions": "Workflow:\n1. State target, hash and tool versions used.\n2. Findings ordered by importance with addresses as evidence.\n3. Include the reproduction path for each claim.\n4. Mark speculation explicitly; never present guesses as facts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_obb_inspect",
+   "name": "OBB expansion inspection",
+   "description": "Analyze Android expansion files.",
+   "instructions": "Workflow:\n1. re.hex.identify the OBB (often ZIP-based).\n2. List contents via process.exec (unzip -l) or file tools.\n3. Extract only needed assets into the workspace.\n4. Summarize structure and notable payloads.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_so_deps",
+   "name": "Shared object dependency map",
+   "description": "Map .so dependencies for an APK.",
+   "instructions": "Workflow:\n1. List native libs via archive listing or re.apktool.decode output.\n2. re.rabin2 libs for each to build the dependency graph.\n3. Flag missing or unexpected dependencies.\n4. Report per-ABI coverage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_function_naming",
+   "name": "Function naming pass",
+   "description": "Turn stripped binaries into navigable maps.",
+   "instructions": "Workflow:\n1. Analyze with re.r2.analyze; export function list.\n2. Name functions by behavior (string usage, call patterns, imports referenced).\n3. Save the naming map into the workspace as a reference file.\n4. Use consistent prefixes (sub_check_, sub_crypto_, and so on).",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_cert_check",
+   "name": "APK certificate review",
+   "description": "Inspect signing certificates of APKs.",
+   "instructions": "Workflow:\n1. Extract cert info via process.exec (keytool or apksigner if available).\n2. Note issuer, validity, and algorithm.\n3. Compare across APK versions when relevant.\n4. Flag self-signed debug certs on production targets.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_packer_detect",
+   "name": "Packer and protector detection",
+   "description": "Identify commercial protections in an APK.",
+   "instructions": "Workflow:\n1. re.apk.manifest for the entry application class.\n2. file.search decoded smali for known packer signatures.\n3. re.rabin2 on native libs for protector names.\n4. Report the protection type and what that implies for analysis strategy.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re_anti_debug_map",
+   "name": "Anti-debug and anti-root mapping",
+   "description": "Locate self-protection checks in a target.",
+   "instructions": "Workflow:\n1. file.search decoded smali for root and debug checks.\n2. re.ghidra.analyze native libs for ptrace and proc-status probes.\n3. Map each check to a bypass layer (smali patch vs memory patch).\n4. Present the map; patch only with user approval.",
+   "enabled": false
+  }
+ ]
+}

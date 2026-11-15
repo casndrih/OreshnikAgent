@@ -1,0 +1,411 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_re2_elf_sections",
+   "name": "ELF section surgery",
+   "description": "Read and patch section metadata safely.",
+   "instructions": "Workflow:\n1. re.rabin2 sections to map the layout.\n2. Compute patch offsets with re.ida.offset.\n3. Apply byte edits via mem.write (runtime) or file tools (static).\n4. Verify with re.hex.identify reads.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_inline_hooks",
+   "name": "Inline code patching",
+   "description": "Replace instructions at computed addresses.",
+   "instructions": "Workflow:\n1. Decompile the target with re.ghidra.analyze.\n2. Decide the patch (NOP sled, constant load, early return).\n3. Assemble the exact bytes; document them.\n4. Apply at runtime with mem.write; verify with mem.read.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_string_xref",
+   "name": "String cross-referencing",
+   "description": "Find code through its strings.",
+   "instructions": "Workflow:\n1. Extract strings with re.rabin2.\n2. Pick the distinctive one; find its address.\n3. re.ida.xref from the string address to code.\n4. Analyze the referencing functions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_crypto_detect",
+   "name": "Crypto routine spotting",
+   "description": "Recognize cryptographic constants in code.",
+   "instructions": "Workflow:\n1. Scan binaries for known constants (AES tables, SHA init) with python.run_file.\n2. Map hits to functions via re.ida.xref.\n3. Label the algorithm and mode.\n4. Note key derivation call sites.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_license_check",
+   "name": "License logic analysis",
+   "description": "Understand trial/license validation flows.",
+   "instructions": "Workflow:\n1. Locate validation entry points via string xrefs.\n2. Decompile with re.ghidra.analyze; map the decision tree.\n3. Identify stored state (prefs, files, registry-equivalents).\n4. Document; modification only on owned software.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_game_value_structure",
+   "name": "Game object layout mapping",
+   "description": "Map structures around known values.",
+   "instructions": "Workflow:\n1. Start from a known value address (mem.scan).\n2. mem.read surrounding memory; identify adjacent fields.\n3. Track the base pointer with mem.regions.\n4. Document the layout diagram.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_vtable_walk",
+   "name": "C++ vtable walking",
+   "description": "Recover virtual dispatch structure.",
+   "instructions": "Workflow:\n1. Locate the vtable pointer in an object (mem.read).\n2. Read consecutive function pointers.\n3. Correlate each with re.ghidra.analyze output.\n4. Name methods by behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jni_string_ops",
+   "name": "JNI string handling analysis",
+   "description": "Analyze native string conversions.",
+   "instructions": "Workflow:\n1. Find JNI string functions in exports (re.rabin2).\n2. Decompile usage sites with re.ghidra.analyze.\n3. Note encodings (UTF-8 vs UTF-16).\n4. Document conversion points for hooks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_dex_method_hook",
+   "name": "Smali method redirection",
+   "description": "Redirect method calls in smali.",
+   "instructions": "Workflow:\n1. re.apktool.decode; find the method with file.search.\n2. Rewrite invoke targets to your helper class.\n3. Add the helper smali class in the same patch.\n4. re.apktool.build and re.apk.sign; install and verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_resource_leak_scan",
+   "name": "Asset secret scanning",
+   "description": "Find secrets hidden in app resources.",
+   "instructions": "Workflow:\n1. re.apktool.decode to expose assets and res.\n2. file.search for key-like patterns (AKIA, AIza, BEGIN PRIVATE).\n3. Validate hits are live (not test fixtures).\\n4. Report to the owner; never exploit.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_manifest_risk",
+   "name": "Manifest risk scoring",
+   "description": "Score attack surface from the manifest.",
+   "instructions": "Workflow:\n1. re.apk.manifest for components and permissions.\n2. Count exported components without permission guards.\n3. Note debuggable/backup flags.\n4. Produce a risk table.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_binary_similarity",
+   "name": "Binary similarity check",
+   "description": "Estimate similarity of two binaries.",
+   "instructions": "Workflow:\n1. re.rabin2 exports of both.\n2. Compare symbol sets with python.run_file (Jaccard).\n3. Sample-compare functions with re.ghidra.analyze.\n4. Report a similarity verdict with evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_patching_safety",
+   "name": "Patch safety checklist",
+   "description": "Patch binaries without bricking them.",
+   "instructions": "Workflow:\n1. Backup the original (file.write copy).\n2. Patch one thing at a time.\n3. Verify after each step (build, sign, install, launch).\n4. Keep a rollback path documented.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_runtime_tracing",
+   "name": "Runtime call tracing",
+   "description": "Observe live function behavior.",
+   "instructions": "Workflow:\n1. Compute the function address (re.il2cpp.resolve / re.ghidra.analyze + base).\n2. Plan a logging patch at the entry (mem.write).\n3. Trigger the path in-app.\n4. Read the log via logcat; revert the patch after.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_native_lib_diff",
+   "name": "Native library diffing",
+   "description": "Diff two .so builds precisely.",
+   "instructions": "Workflow:\n1. re.rabin2 symbols for both.\n2. Align common symbols; list added/removed.\n3. Decompile 3-5 changed functions with re.ghidra.analyze.\n4. Summarize functional drift.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_obfuscation_map",
+   "name": "Obfuscation technique map",
+   "description": "Catalog obfuscation layers in a target.",
+   "instructions": "Workflow:\n1. Note name obfuscation from smali (file.search class names).\n2. Note string encryption via re.rabin2 strings.\n3. Note control-flow flattening signs in decompiled code.\n4. Rank layers by analysis cost.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_symbol_recovery",
+   "name": "Stripped symbol recovery",
+   "description": "Rebuild meaningful names for stripped code.",
+   "instructions": "Workflow:\n1. Correlate JNI exports (re.rabin2) with Java declarations (file.search smali).\n2. Name functions from their callers and strings.\n3. Persist the map with file.write.\n4. Incrementally refine during analysis.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_anti_frída_check",
+   "name": "Anti-instrumentation survey",
+   "description": "Find anti-hooking logic.",
+   "instructions": "Workflow:\n1. file.search smali for Frida/Xposed strings.\n2. re.ghidra.analyze for /proc/self/maps scanning patterns.\n3. Map checks to their enforcement points.\n4. Document; bypass only with user authorization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_elf_hook_table",
+   "name": "GOT/PLT hooking plan",
+   "description": "Plan import-table interception.",
+   "instructions": "Workflow:\n1. re.rabin2 for relocations and PLT layout.\n2. Compute the GOT entry address for the target import.\n3. Plan the runtime write (mem.write) with correct pointer size.\n4. Verify resolution after patching.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_memory_layout_scan",
+   "name": "Structure discovery by walking",
+   "description": "Discover layouts without symbols.",
+   "instructions": "Workflow:\n1. Anchor on a known value; mem.read a window around it.\n2. Tag probable fields by type patterns.\n3. Validate by observing field changes during gameplay.\n4. Record the layout with offsets.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_static_patch_build",
+   "name": "Static patch to signed APK",
+   "description": "Ship a patched APK end to end.",
+   "instructions": "Workflow:\n1. Apply smali/native edits per plan.\n2. re.apktool.build.\n3. re.apk.sign with debug key.\n4. re.apk.install; verify the patched behavior on device.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_debug_symbol_request",
+   "name": "Symbol server awareness",
+   "description": "Know when symbols exist upstream.",
+   "instructions": "Workflow:\n1. Note the module name/version from re.rabin2.\n2. Advise fetching official symbols if available.\n3. Explain the analysis speedup.\n4. Fall back to recovery workflows otherwise.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_protected_app_strategy",
+   "name": "Strategy for hardened targets",
+   "description": "Plan analysis of well-protected apps.",
+   "instructions": "Workflow:\n1. recon: re.apk.manifest, packer detection.\n2. Choose the softest layer (resources, smali, or runtime memory).\n3. Time-box attempts; report blockers honestly.\n4. Never claim bypasses that did not happen.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_cryptolocker_note",
+   "name": "Ransomware behavior awareness",
+   "description": "Recognize malicious encryption behavior.",
+   "instructions": "Workflow:\n1. Watch for mass file renames/encryption in workspace ops.\n2. Halt and alert immediately if observed.\n3. Preserve evidence read-only.\n4. Advise isolation and professional response.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_legal_guard",
+   "name": "RE legal boundaries",
+   "description": "Keep reverse engineering lawful.",
+   "instructions": "Workflow:\n1. Confirm ownership or research authorization.\n2. Refuse DRM circumvention for piracy.\n3. Prefer interop/security research framing.\n4. State the boundary when declining.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_tls_fingerprint",
+   "name": "TLS stack fingerprinting",
+   "description": "Identify client TLS libraries.",
+   "instructions": "Workflow:\n1. Capture a handshake (tcpdump.capture).\n2. Compare cipher ordering to known stacks.\n3. Note ClientHello extensions anomalies.\n4. Fingerprint the client library.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_dns_tunnel_detect",
+   "name": "DNS tunneling detection",
+   "description": "Spot covert DNS channels.",
+   "instructions": "Workflow:\n1. Capture DNS with tcpdump.capture (port 53).\n2. Look for long, high-entropy subdomains.\n3. Measure query rates to single domains.\n4. Report anomalies with samples.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_arp_watch",
+   "name": "LAN ARP monitoring",
+   "description": "Watch local address resolution.",
+   "instructions": "Workflow:\n1. tcpdump.capture with ARP filter on the LAN.\n2. Note duplicate IP claims.\n3. Flag potential spoofing.\n4. Recommend static entries or switches security.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_firewall_probe",
+   "name": "Firewall rule probing",
+   "description": "Map reachable services politely.",
+   "instructions": "Workflow:\n1. net.portscan with slow timing on your own host.\n2. Compare results from inside vs outside.\n3. Infer rule structure.\n4. Document open paths.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_capture_to_pcap",
+   "name": "Capture lifecycle management",
+   "description": "Manage pcap files properly.",
+   "instructions": "Workflow:\n1. tcpdump.capture to file with rotation.\n2. Keep captures small via filters.\n3. Analyze offline; extract IOCs.\n4. Delete captures with sensitive data after use.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_bandwidth_shaping_test",
+   "name": "QoS behavior test",
+   "description": "Test traffic prioritization.",
+   "instructions": "Workflow:\n1. Generate marked test flows with python.run_file sockets.\n2. Measure latency under load (http.capture.repeat).\n3. Compare classes.\n4. Report shaping effectiveness.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_ipv6_checks",
+   "name": "IPv6 reachability checks",
+   "description": "Verify IPv6 connectivity.",
+   "instructions": "Workflow:\n1. process.exec ping6/curl -6 to test hosts.\n2. Compare v4 vs v6 paths.\n3. Note DNS AAAA behavior.\n4. Summarize dual-stack health.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_mtu_probe",
+   "name": "MTU discovery",
+   "description": "Find path MTU issues.",
+   "instructions": "Workflow:\n1. ping with DF and increasing sizes (process.exec).\n2. Find the fragmentation threshold.\n3. Relate to observed stalls.\n4. Recommend MSS clamps if needed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_capture_diff",
+   "name": "Before/after traffic diff",
+   "description": "Compare traffic across app versions.",
+   "instructions": "Workflow:\n1. Capture session A (http.capture).\n2. Update the app; capture session B.\n3. Diff endpoints and payloads (python.run_file).\n4. Report API changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_websocket_replay",
+   "name": "WebSocket message replay",
+   "description": "Replay WS messages safely.",
+   "instructions": "Workflow:\n1. Capture the session; extract frames.\n2. Replay selected frames with a python.run_file client.\n3. Observe server reactions.\n4. Stay within authorization; stop on errors.",
+   "enabled": false
+  },
+  {
+   "id": "cat_net2_push_diag",
+   "name": "Push notification diagnostics",
+   "description": "Diagnose missing push messages.",
+   "instructions": "Workflow:\n1. Check app notification settings (android.app_settings).\n2. Capture registration traffic (http.capture).\n3. Verify token issuance.\n4. Report where the chain breaks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_recycler_scroll",
+   "name": "RecyclerView navigation",
+   "description": "Scroll lists reliably.",
+   "instructions": "Workflow:\n1. androidreadscreen to identify list items.\n2. android_scroll in half-screen steps.\n3. Detect item repeats to avoid double-processing.\n4. Collect targets as found.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_chip_row_nav",
+   "name": "Horizontal chip navigation",
+   "description": "Handle horizontal control rows.",
+   "instructions": "Workflow:\n1. androidreadscreen the chip row.\n2. android_swipe horizontally within it.\n3. Verify the selected chip changed.\n4. Proceed with the selected state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_dialog_chains",
+   "name": "Chained dialogs",
+   "description": "Walk multi-step dialogs.",
+   "instructions": "Workflow:\n1. androidreadscreen per dialog.\n2. Choose the correct action each step (androidclickelement).\n3. Verify progression.\n4. Back out cleanly if the flow is wrong (androidpressback).",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_bottom_sheet",
+   "name": "Bottom sheet handling",
+   "description": "Operate bottom sheets.",
+   "instructions": "Workflow:\n1. Trigger the sheet (androidclickelement).\n2. androidreadscreen its options.\n3. Select; verify dismissal.\n4. Handle drag-to-dismiss via android_swipe when needed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_webview_inside",
+   "name": "In-app WebView handling",
+   "description": "Drive web content inside apps.",
+   "instructions": "Workflow:\n1. androidreadscreen detects WebView content.\n2. Use androidclickelement on rendered links.\n3. For complex pages, web.browser may serve better; compare.\n4. Return with androidpressback.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_pin_entry",
+   "name": "PIN entry automation",
+   "description": "Enter PINs securely.",
+   "instructions": "Workflow:\n1. Confirm the user wants the PIN entered now.\n2. androidreadscreen the keypad layout.\n3. androidclickelement digits in order; verify masked field.\n4. Confirm submission once.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_date_picker",
+   "name": "Date picker operation",
+   "description": "Set dates in pickers.",
+   "instructions": "Workflow:\n1. androidreadscreen the picker layout.\n2. Navigate month/year with taps.\n3. androidclickelement the day.\n4. Verify the field shows the chosen date.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_slider_tune",
+   "name": "Slider precision",
+   "description": "Set sliders accurately.",
+   "instructions": "Workflow:\n1. androidreadscreen the slider bounds.\n2. Compute the target x from desired value.\n3. android_swipe along the track.\n4. Verify with the value label.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_drag_drop",
+   "name": "Drag and drop",
+   "description": "Perform drag operations.",
+   "instructions": "Workflow:\n1. androidreadscreen source and target.\n2. androidlongpress to lift the item.\n3. android_swipe slowly to the target.\n4. Verify placement.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_keyboard_dismiss",
+   "name": "Keyboard dismissal",
+   "description": "Close the IME deterministically.",
+   "instructions": "Workflow:\n1. androidpressback once to dismiss the keyboard.\n2. androidreadscreen to confirm the form is intact.\n3. Avoid double-back (exits screens).\n4. Proceed with the next action.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_multi_account",
+   "name": "Account switching",
+   "description": "Switch accounts in apps.",
+   "instructions": "Workflow:\n1. Open account/settings via androidclickelement.\n2. androidreadscreen the account list.\n3. Select the target account.\n4. Verify the switched state before acting.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_deep_settings",
+   "name": "Deep settings navigation",
+   "description": "Reach nested settings pages.",
+   "instructions": "Workflow:\n1. Compose the path from known settings screens.\n2. androidclickelement step by step; verify each level.\n3. Use android.app_settings shortcut for app pages.\n4. Report the final path taken.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_widget_ops",
+   "name": "Home screen widgets",
+   "description": "Manage widgets.",
+   "instructions": "Workflow:\n1. Long-press home (androidlongpress) to open options.\n2. androidclickelement Widgets.\n3. Place the widget (android_swipe to home).\n4. Verify it renders.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev2_wallpaper_set",
+   "name": "Wallpaper changes",
+   "description": "Set the wallpaper.",
+   "instructions": "Workflow:\n1. Long-press home (androidlongpress).\n2. androidclickelement Wallpapers.\n3. Pick source and image; confirm.\n4. Verify with android_screenshot.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_screencap_root",
+   "name": "Root screen capture",
+   "description": "Capture screens via root when UI fails.",
+   "instructions": "Workflow:\n1. root.exec screencap to a file.\n2. Verify the file exists (file.list).\n3. Analyze with vision tools.\n4. Clean up temp images.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_logcat_root",
+   "name": "Root log access",
+   "description": "Read system logs via root.",
+   "instructions": "Workflow:\n1. root.exec logcat with buffers/filters.\n2. Cap output; grep to the interest area.\n3. Correlate timestamps with actions.\n4. Summarize findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_sysprops",
+   "name": "System property reads",
+   "description": "Inspect system properties.",
+   "instructions": "Workflow:\n1. root.exec getprop (or filtered).\n2. Note build/security patch levels.\n3. Flag developer/unsafe props.\n4. Report a compact table.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_mount_info",
+   "name": "Mount inspection",
+   "description": "Understand storage mounts.",
+   "instructions": "Workflow:\n1. root.exec mount / df.\n2. Note RO/RW states.\n3. Flag unusual mounts.\n4. Explain implications for file work.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_battery_unplug",
+   "name": "Battery optimization exemptions",
+   "description": "Exempt the app from doze.",
+   "instructions": "Workflow:\n1. root.exec dumpsys deviceidle whitelist +package.\n2. Verify with dumpsys readback.\n3. Explain battery tradeoff.\n4. Confirm background work now survives.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_permissive_note",
+   "name": "SELinux mode awareness",
+   "description": "Understand SELinux constraints.",
+   "instructions": "Workflow:\n1. root.exec getenforce.\n2. Never switch to permissive without user consent.\n3. Explain what enforcing blocks (common with mem tools).\n4. Suggest targeted alternatives first.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_boot_services",
+   "name": "Boot service review",
+   "description": "Review services started at boot.",
+   "instructions": "Workflow:\n1. root.exec list init services or pm dump receivers.\n2. Flag BOOT_COMPLETED receivers (file.search in decoded apps).\n3. Report autonomy risks.\n4. Recommend disabling via UI only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys2_net_policy",
+   "name": "Network policy audit",
+   "description": "Check per-app network rules.",
+   "instructions": "Workflow:\n1. root.exec dumpsys netpolicy.\n2. Note restricted UIDs.\n3. Relate to app connectivity complaints.\n4. Recommend policy changes via settings.",
+   "enabled": false
+  }
+ ]
+}

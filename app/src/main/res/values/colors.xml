@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================
+         Claude-inspired warm palette (light)
+         ============================================================ -->
+
+    <!-- Brand / accent (cyan) -->
+    <color name="brand_500">#00B8D4</color>
+    <color name="brand_600">#00838F</color>
+    <color name="brand_100">#D0F4FA</color>
+    <color name="colorPrimary">@color/brand_500</color>
+    <color name="colorPrimaryVariant">@color/brand_600</color>
+    <color name="colorOnPrimary">#002025</color>
+    <color name="colorAccent">@color/brand_500</color>
+
+    <!-- Canvas / surfaces -->
+    <color name="bg_root">#FFFFFF</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_dialog">@color/bg_card</color>
+    <color name="bg_pill">#D5D5D5</color>
+    <color name="bg_pill_dark">#33302A</color>
+    <color name="bg_assistant_bubble">#FFFFFF</color>
+    <color name="canvas_bg">#FFFFFF</color>
+    <color name="divider">#E4E0D3</color>
+
+    <!-- Hairline for the composer card, so the floating shadow reads
+         cleanly against the white canvas in light mode -->
+    <color name="composer_stroke">#14000000</color>
+
+    <!-- Composer icon-button background. Light mode: same cream pill as
+         before. Dark mode overrides this (see values-night) to the
+         near-black bg_pill_dark tone instead, to match the "Get more
+         with Claude Pro" chip. -->
+    <color name="composer_icon_bg">@color/bg_pill</color>
+
+    <!-- Touch-feedback ripple tints for the composer's icon buttons -->
+    <color name="ripple_on_light">#3300838F</color>
+    <color name="ripple_on_brand">#40FFFFFF</color>
+
+    <!-- Fixed light-on-dark text, for content sitting on bg_pill_dark
+         (which stays dark in both light and night mode) -->
+    <color name="text_on_dark_pill">#C9C6BB</color>
+
+    <!-- Fixed white text for content sitting on the dark user-message
+         gradient bubble (bg_message_bubble), in both light and night mode. -->
+    <color name="text_on_bubble">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#2B2A27</color>
+    <color name="text_secondary">#6B6963</color>
+    <color name="text_tertiary">#9C9A90</color>
+
+    <color name="error">#B00020</color>
+    <!-- Hairline stroke for tool chips + thinking bubble -->
+    <color name="chip_stroke">#E4E2DC</color>
+    <!-- Tool-chip state tints -->
+    <color name="chip_running_bg">#F2F8E6</color>
+    <color name="chip_error_fg">#B3261E</color>
+    <color name="chip_error_bg">#FCE8E6</color>
+
+    <!-- Base -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- App launcher icon -->
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="ic_launcher_tint">#000000</color>
+
+    <!-- Icon tint: black on both light and dark themes -->
+    <color name="icon_tint_on_surface">#000000</color>
+
+    <!-- Tool Card Colors -->
+    <color name="surface_variant">@color/bg_card</color>
+    <color name="outline_variant">@color/divider</color>
+
+    <!-- Chip colors -->
+    <color name="chip_neutral">#E0E0E0</color>
+    <color name="chip_success">#C8E6C9</color>
+    <color name="chip_error">#FFCDD2</color>
+    <color name="chip_warning">#FFF9C4</color>
+
+    <!-- Model status dots (model-picker bottom sheet): online / offline /
+         timeout-or-rate-limited / still-probing. Night overrides below. -->
+    <color name="status_online">#22C55E</color>
+    <color name="status_offline">#EF4444</color>
+    <color name="status_timeout">#F59E0B</color>
+    <color name="status_probing">#9C9A90</color>
+
+    <!-- MaterialComponents mappings (kept for widgets that expect these) -->
+    <color name="colorBackground">@color/bg_root</color>
+    <color name="colorSurface">@color/bg_card</color>
+    <color name="colorOnBackground">@color/text_primary</color>
+    <color name="colorOnSurface">@color/text_primary</color>
+
+    <!-- Dark theme equivalents (referenced directly by values-night/themes.xml) -->
+    <color name="colorBackgroundDark">#262624</color>
+    <color name="colorSurfaceDark">#30302E</color>
+    <color name="colorOnBackgroundDark">#F2F0E9</color>
+    <color name="colorOnSurfaceDark">#F2F0E9</color>
+</resources>

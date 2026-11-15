@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_021",
+      "name": "SQLMap authorization: Verify written authorization",
+      "description": "Establish permission before a SQLMap request leaves the device.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Record who authorized the test, included assets, and approved dates; `authorized_target=true` is not a substitute for permission.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_022",
+      "name": "SQLMap authorization: Define exact host scope",
+      "description": "Prevent a broad domain from silently authorizing unrelated services.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Write down scheme, hostname, port, and allowed paths; compare the full URL passed to the app against that list.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_023",
+      "name": "SQLMap authorization: Limit path scope",
+      "description": "Keep testing on the endpoint the owner named.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Select one approved URL and parameter; do not infer that sibling paths, admin panels, or APIs are included.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_024",
+      "name": "SQLMap authorization: Plan redirect boundaries",
+      "description": "Avoid following a redirect into an unapproved host or tenant.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Check expected redirects before testing; if the destination is outside scope, use an approved endpoint or stop.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_025",
+      "name": "SQLMap authorization: Schedule production testing",
+      "description": "Coordinate low-impact checks with service owners.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Agree a window, one-thread limit, monitoring contact, and stop conditions; halt on latency, errors, or rate limits.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_026",
+      "name": "SQLMap authorization: Prefer staging targets",
+      "description": "Choose a representative test environment with controlled data.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Verify the staging host is in scope and use seeded records; public reachability does not imply permission.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_027",
+      "name": "SQLMap authorization: Set request-rate boundaries",
+      "description": "Translate owner limits into conservative settings.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Keep `threads=1`, `risk=1`, and default retries; stop on 429/503 rather than pushing through.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_028",
+      "name": "SQLMap authorization: Protect tenant boundaries",
+      "description": "Limit a multi-tenant assessment to the named tenant and account.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Use a designated test tenant and stop if evidence exposes another tenant’s records.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_029",
+      "name": "SQLMap authorization: Define a stop rule",
+      "description": "Make abort conditions clear before starting.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Stop on scope ambiguity, unexpected data, instability, service degradation, or owner request; report without further probing.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_030",
+      "name": "SQLMap authorization: Maintain authorization trail",
+      "description": "Make the check reproducible without retaining secrets.",
+      "category": "SQLMap / Authorization and scope",
+      "instructions": "Workflow:\n1. Record authorization, owner, allowed hostnames/paths/parameters, and test window.\n2. Compare the requested URL and account with the approved scope before calling the app.\n3. Record approval reference, redacted URL, date/time, selected parameter, profile, and result summary.\n4. Use `web.sqlmap` with `authorized_target=true` only for the approved target; stop on scope drift or owner request.\n\nSafety: retain app defaults and use the structured scan interface. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

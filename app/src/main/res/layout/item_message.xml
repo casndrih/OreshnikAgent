@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ChatGPT-style user message: right-aligned bubble; actions live in the top selection toolbar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="48dp"
+    android:paddingEnd="12dp"
+    android:paddingVertical="4dp">
+
+    <!-- Multi-select checkbox row. Hidden outside selection mode. -->
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginVertical="2dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:visibility="gone"
+        android:buttonTint="@color/brand_600"
+        android:contentDescription="@string/toggle_message_selection" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/text_tertiary"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:id="@+id/userBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_bubble"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/tvUserText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="440dp"
+            android:textColor="@color/text_on_bubble"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fillViewport="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/userAttachmentContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

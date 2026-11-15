@@ -1,0 +1,131 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_wx_scope_gate",
+   "name": "Authorization gate for exploitation",
+   "description": "Confirm written authorization before any exploitation.",
+   "instructions": "Workflow:\n1. Ask who owns the target and request written permission or scope doc.\n2. Refuse third-party targets without proof of authorization.\n3. Record scope: hosts, methods, time window.\n4. Keep all activity inside the recorded scope.\n5. True",
+   "enabled": true
+  },
+  {
+   "id": "cat_wx_sqli_mysql",
+   "name": "MySQL injection assessment",
+   "description": "Test and characterize MySQL injection on an authorized target.",
+   "instructions": "Workflow:\n1. Map injectable params with http.capture traffic.\n2. Probe types with web.sqlmap at low risk on your own instance.\n3. Classify: error-based, union, boolean, time-based.\n4. Extract version/database names as proof.\n5. Report parameter, class, and evidence pair.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_postgres",
+   "name": "PostgreSQL injection assessment",
+   "description": "Characterize Postgres-specific injection.",
+   "instructions": "Workflow:\n1. Fingerprint Postgres via error messages (http.replay probes).\n2. Test cast errors and dollar-quoting behavior with crafted requests.\n3. Use web.sqlmap dbms=PostgreSQL for confirmation on owned systems.\n4. Extract current_user/database as benign proof.\n5. Document payloads and responses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_mssql",
+   "name": "MSSQL injection assessment",
+   "description": "Assess SQL Server injection behavior.",
+   "instructions": "Workflow:\n1. Detect MSSQL via error strings (http.replay).\n2. Probe stack queries and WAITFOR delay (time-based) on your target.\n3. Confirm with web.sqlmap dbms=MSSQL where authorized.\n4. Show proof with version() equivalent (@@version).\n5. Record everything in the findings file.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_sqlite",
+   "name": "SQLite injection assessment",
+   "description": "Assess SQLite-backed endpoints.",
+   "instructions": "Workflow:\n1. Identify SQLite errors via malformed input (http.replay).\n2. Test pragma-dependent behaviors (no stacked queries).\n3. Extract schema via sqlite_master where authorized.\n4. Use web.sqlmap dbms=SQLite to confirm.\n5. Report with schema excerpt as evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_blind_time",
+   "name": "Time-based blind extraction",
+   "description": "Extract data through time-based channels.",
+   "instructions": "Workflow:\n1. Establish baseline response time (http.capture.repeat small series).\n2. Inject conditional delay payloads via web.sqlmap technique=T.\n3. Verify delay only when condition is true.\n4. Extract one character per round; keep counts low.\n5. Report throughput and reliability honestly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_blind_bool",
+   "name": "Boolean-blind extraction",
+   "description": "Infer data from response differences.",
+   "instructions": "Workflow:\n1. Find a stable true/false signal in responses (http.capture).\n2. Craft condition probes via http.replay.\n3. Automate extraction with a python.run_file bit-per-request script.\n4. Cap request counts; document rates.\n5. Report extracted proof fragment.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_sqli_out_of_band",
+   "name": "Out-of-band (OOB) confirmation",
+   "description": "Confirm injection via callback channels.",
+   "instructions": "Workflow:\n1. Set up a listener you control (webhook or your DNS).\n2. Inject OOB payloads via web.sqlmap or http.replay.\n3. Await callback; record its arrival.\n4. Treat OOB as confirmation, not exfiltration.\n5. Document the technique for the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_nosql_mongo",
+   "name": "NoSQL injection (Mongo syntax)",
+   "description": "Test MongoDB operator injection.",
+   "instructions": "Workflow:\n1. Identify JSON bodies consumed by the app (http.capture).\n2. Inject operator objects ($ne, $regex) via http.replay.\n3. Observe auth/bypass differences.\n4. Automate field-by-field checks with python.run_file.\n5. Report endpoint and operator used.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_nosql_ldap",
+   "name": "LDAP and template injection basics",
+   "description": "Probe non-SQL injection families.",
+   "instructions": "Workflow:\n1. Inject LDAP metacharacters into auth parameters (http.replay).\n2. Note filter behavior changes.\n3. Probe template engines with {{7*7}}-style expressions.\n4. Confirm SSTI by arithmetic evaluation.\n5. Classify the engine; report findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_ssti_jinja",
+   "name": "SSTI exploitation (Jinja2 family)",
+   "description": "Demonstrate template injection impact safely.",
+   "instructions": "Workflow:\n1. Confirm SSTI with harmless math probes via http.replay.\n2. Fingerprint the engine (Jinja2/Twig/Freemarker) via engine-specific probes.\n3. Demonstrate read-only proof (config values, no destructive calls).\n4. Never exfiltrate secrets; show a masked proof.\n5. Report the engine and proof expression.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_cmd_injection",
+   "name": "Command injection assessment",
+   "description": "Test OS command injection on authorized targets.",
+   "instructions": "Workflow:\n1. Identify inputs that reach shell contexts (file.upload names, params).\n2. Probe with harmless separators (echo markers) via http.replay.\n3. Confirm execution via time delay or marker reflection.\n4. Escalate proof to a simple id/whoami marker only.\n5. Never chain destructive commands; document evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_cmd_blind",
+   "name": "Blind command injection",
+   "description": "Confirm command execution without output.",
+   "instructions": "Workflow:\n1. Use DNS/HTTP callback markers to your listener.\n2. Probe with time delays as secondary signal.\n3. Automate marker generation with python.run_file.\n4. Record callback timing as evidence.\n5. Report the injection point and channel.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_xss_dom",
+   "name": "DOM XSS analysis",
+   "description": "Find client-side injection sinks.",
+   "instructions": "Workflow:\n1. Fetch the page JS (process.exec curl).\n2. Trace source-to-sink flows (location.hash into innerHTML/eval) with python.run_file grep.\n3. Craft a benign probe payload via web.xssscan.\n4. Verify execution with web.browser and a marker alert.\n5. Report the vulnerable flow file:line.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_xss_stored",
+   "name": "Stored XSS demonstration",
+   "description": "Show stored XSS impact with a contained proof.",
+   "instructions": "Workflow:\n1. Identify stored input surfaces (comments, profiles) via http.capture.\n2. Submit a benign marker payload via http.replay.\n3. Verify execution from another session (web.browser).\n4. Use marker alerts only; no session theft demos.\n5. Report storage location and render context.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_xss_context_aware",
+   "name": "Context-aware payload crafting",
+   "description": "Build payloads that fit the injection context.",
+   "instructions": "Workflow:\n1. Determine the context (HTML body, attribute, JS string) from reflection analysis.\n2. Craft context-correct breakouts via python.run_file helpers.\n3. Test with web.xssscan and manual verification.\n4. Keep payloads minimal and reversible.\n5. Document the context rules discovered.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_xss_filter_evasion",
+   "name": "Filter evasion methodology",
+   "description": "Systematically probe filters.",
+   "instructions": "Workflow:\n1. Catalog the filter behavior from repeated probes (http.replay).\n2. Test case/encoding/alternative-tag variants with python.run_file generation.\n3. Verify which variants execute (web.browser).\n4. Report the weakest allowed syntax.\n5. Keep a payload matrix as evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx_injection_report",
+   "name": "Injection findings report",
+   "description": "Write complete injection vulnerability reports.",
+   "instructions": "Workflow:\n1. For each finding: endpoint, parameter, class, impact.\n2. Include request/response evidence pairs (redacted tokens).\n3. State a concrete remediation (parameterization, ORM, CSP).\n4. Rank by severity with rationale.\n5. Deliver as a file (file.write) and a chat summary.",
+   "enabled": false
+  }
+ ]
+}

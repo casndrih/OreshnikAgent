@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ida_caps_first",
+   "name": "Capabilities-first rule",
+   "description": "Always detect the analysis engine before starting RE work.",
+   "instructions": "Workflow:\n1. Call re.ida.capabilities before any binary work to learn: local IDA (idat64) availability, radare2 availability, SSH remote availability, and which built-in Kotlin analyzers exist.\n2. Note the status field: READY (IDA present) vs BUILT_IN_READY (built-in parsers only).\n3. Plan the workflow around the strongest available engine; never assume semantic xrefs exist without IDA/r2.\n4. Record the capability snapshot in your session notes for later steps.\n5. If remote IDA is configured, verify with check_remote=true and a valid user@host (no spaces or shell characters).",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_engine_fallback",
+   "name": "Engine fallback ladder",
+   "description": "Pick the right analyzer for each sub-task.",
+   "instructions": "Workflow:\n1. Semantic code xrefs and decompilation: IDA (idat64) if present, else radare2 via re.ida.xref auto-escalation.\n2. ELF structure (headers/sections/symbols/strings): built-in analyzer in re.ida.analyze always works.\n3. IL2CPP managed metadata: built-in re.il2cpp.metadata always works (no IDA needed).\n4. Raw pointer-byte references: built-in re.ida.xref approximateXrefs.\n5. State which engine produced each finding in your report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_remote_setup",
+   "name": "Remote IDA host usage",
+   "description": "Run idat64 on a remote host over SSH when local IDA is absent.",
+   "instructions": "Workflow:\n1. Confirm ssh availability via re.ida.capabilities.\n2. Pass use_remote=true, remote_host=user@host, and remote_idat_path (default /opt/ida/idat64).\n3. Validate the host string: no spaces or shell characters; tool rejects invalid hosts.\n4. Expect a JSON result with remote stdout; check exit status before trusting output.\n5. Use output_json to capture large analyses into the workspace.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_script_tasks",
+   "name": "Built-in task catalog",
+   "description": "Know the 8 built-in re.ida.analyze tasks.",
+   "instructions": "Workflow:\n1. elf_analyze: headers, sections, symbols, dynamic strings.\n2. analysis_pipeline: full inventory + Unity/IL2CPP indicators + next-step recommendations (start here for unknown binaries).\n3. il2cpp_dump: native ELF il2cpp/CodeGen symbol indicators (pair with re.il2cpp.metadata).\n4. struct_recovery: static heuristics for vtable/typeinfo/rgctx symbols.\n5. hex_pattern: pattern and numeric value identification.\n6. unity_mono: Unity/IL2CPP native symbols and strings.\n7. offset_calc: address/RVA helpers (reports ELF VA; runtime bias needs maps).\n8. string_xref: approximate xrefs with --address and --max args.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_args_syntax",
+   "name": "Analyze task arguments",
+   "description": "Use script_args correctly.",
+   "instructions": "Workflow:\n1. Address args: --address 0x1A2B3C (hex or decimal accepted).\n2. Symbol query: --symbol NAME (exact or contains match, up to 256 hits).\n3. Section query: --section NAME (up to 128 hits with address, file_offset, size, flags).\n4. Pattern values: --values \"11 22 ?? 44\" or comma-separated hex values (max 256).\n5. Xref cap: --max N (clamped 1..1000).",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_triage_elf",
+   "name": "ELF triage flow",
+   "description": "Triage an unknown ELF with the built-in analyzer.",
+   "instructions": "Workflow:\n1. re.ida.analyze with script=analysis_pipeline for the full inventory (pipeline_steps and analysis_recommendations are returned).\n2. Read summary: architecture, entry point, sections, symbol count.\n3. Run elf_analyze with --section .text and --section .rodata to map code vs constants.\n4. Extract dynamic strings to find version markers, endpoints, and framework hints.\n5. Decide next steps: native-only analysis vs IL2CPP metadata path.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_triage_formats",
+   "name": "Format recognition",
+   "description": "Identify ELF vs DEX vs Mach-O vs PE before deep analysis.",
+   "instructions": "Workflow:\n1. re.hex.identify on the header bytes to classify the file.\n2. ELF: proceed with re.ida.analyze (built-in supports ELF fully).\n3. DEX: use re.apktool.decode / jadx-style flows; built-in ELF analyzer does not parse DEX structure.\n4. Mach-O/PE: limited support; note honestly which analyzer produced which finding.\n5. Record format, size, and hash in session notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_symbols_query",
+   "name": "Symbol mining",
+   "description": "Resolve symbols by name and find near-symbols.",
+   "instructions": "Workflow:\n1. re.ida.analyze script=elf_analyze with --symbol NAME for exact/contains matches.\n2. Results include name, address, size, defined flag, and table (static vs dynamic).\n3. For defined functions only, filter by defined=true in your notes.\n4. Use re.hex.identify with a candidate address to find symbols at that exact address.\n5. Chain: symbol found -> address -> re.ida.offset for runtime mapping.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_sections_map",
+   "name": "Section mapping",
+   "description": "Map ELF sections to file offsets and VAs.",
+   "instructions": "Workflow:\n1. re.ida.analyze elf_analyze --section .text gives address, file_offset, size, flags.\n2. Convert VA to file offset: file_offset = section.offset + (VA - section.address).\n3. Executable sections (X flag) hold code; read-only data lives in .rodata; GOT/PLT live in .got/.plt.\n4. Use re.hex.identify to confirm which section contains a candidate address.\n5. Record the section map for all later offset math.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_strings_pipeline",
+   "name": "String-led recon",
+   "description": "Use dynamic strings as analysis entry points.",
+   "instructions": "Workflow:\n1. Run analysis_pipeline (includes dynamic strings extraction).\n2. Grep the output for URLs, file paths, framework markers (python.run_file patterns on the saved JSON).\n3. Pick distinctive strings and pivot: re.ida.xref with --address <string VA> to find pointer references.\n4. Caveat: raw pointer matches are not proof of code usage; confirm with r2 axt when available.\n5. Record the string-to-code hypothesis chain.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_struct_recovery",
+   "name": "Struct recovery heuristics",
+   "description": "Start structure recovery from known symbol families.",
+   "instructions": "Workflow:\n1. re.ida.analyze script=struct_recovery returns candidate vtable/typeinfo/rgctx symbols (up to 500).\n2. vtable symbols mark C++ polymorphic types; typeinfo marks RTTI presence.\n3. rgdx/rgctx symbols indicate generic method structures (IL2CPP).\n4. Correlate candidates with re.il2cpp.metadata class data when analyzing Unity games.\n5. Full C++ type recovery still needs IDA/r2; state this honestly in outputs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_hex_identify",
+   "name": "Hex value identification",
+   "description": "Identify what a magic number or pattern is.",
+   "instructions": "Workflow:\n1. re.hex.identify with values array (up to 256 items; mix hex numbers and IDA-style patterns like \"11 22 ?? 44\").\n2. Results classify each value: address in executable section, address in ELF section X, ELF symbol, byte pattern, or unrecognized.\n3. Add pid to verify whether the value is runtime-mapped and with which permissions.\n4. search_strings=true (default) checks string literals at that address.\n5. Set context_type to code/data/heap/stack/vtable/got/string to refine classification.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_xref_semantics",
+   "name": "Xref honesty rules",
+   "description": "Interpret xref results correctly.",
+   "instructions": "Workflow:\n1. re.ida.xref returns: symbols_at_address, raw_pointer_xrefs_to, and (for xrefs_from) section/file-offset context.\n2. The tool explicitly reports that semantic code xrefs require IDA/r2; never present raw byte matches as call sites.\n3. When r2 is installed the tool auto-runs axt/axf; check radare2_status=completed before trusting r2_xrefs.\n4. direction=xrefs_from shows where the target address lives (section + file offset), not code flow.\n5. Report both layers: raw matches + semantic xrefs (when available).",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_xref_strategy",
+   "name": "Xref traversal strategy",
+   "description": "Explore call chains efficiently.",
+   "instructions": "Workflow:\n1. Start from a named function (re.ida.analyze --symbol) and get its address.\n2. re.ida.xref direction=xrefs_to to find callers; cap max_results at 100-200 to keep output bounded.\n3. For each caller, read the function briefly and classify intent.\n4. Use direction=both to map one hop in each direction for hub functions.\n5. Loop outward only as deep as the question requires; note the traversal depth.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_offset_runtime",
+   "name": "VA to runtime address",
+   "description": "Convert IDA addresses to live process addresses.",
+   "instructions": "Workflow:\n1. Get the PID (mem.process.list) and confirm the module is loaded (mem.regions).\n2. Call re.ida.offset with ida_database (ELF path), ida_address, pid, and module_name (default libil2cpp.so).\n3. Set is_rva=true for IDA RVAs; for absolute VAs the tool subtracts the image base from ELF sections.\n4. Output gives: rva, module_base, runtime_address, mapping permissions, and a verified_bytes 16-byte read when readable.\n5. verified=false means unmapped or read-denied; do not proceed with mem writes on unverified addresses.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_offset_pitfalls",
+   "name": "Offset math pitfalls",
+   "description": "Avoid classic rebasing mistakes.",
+   "instructions": "Workflow:\n1. ASLR: module_base changes every launch; re-run re.ida.offset per session, never cache runtime addresses.\n2. Image base subtraction: is_rva=false subtracts the minimum section address, which differs from the PE-style ImageBase concept.\n3. Pie vs non-PIE: non-PIE binaries may have base 0; verify module_base from maps output.\n4. rva<0 means the address was below the image base; your is_rva flag is likely wrong.\n5. Always sanity-check runtime_address against mapping permissions (expect r-x for text).",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_correlate_scans",
+   "name": "Memory scan correlation",
+   "description": "Bridge mem.scan hits back to static analysis.",
+   "instructions": "Workflow:\n1. Save mem.scan results (one hex address per line or a JSON array).\n2. Call re.mem.ida_correlate with ida_database, scan_results, and optional pid (max 10000 addresses, 2000 correlated).\n3. Each correlation returns: module_rva_candidate, mapping info, containing section, and up to 8 near_symbols with distances.\n4. near_symbols within 0x1000 give the likely owning function/structure; nearest symbol wins as hypothesis.\n5. Verify the top hypothesis with re.ida.offset or a targeted mem.read.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_il2cpp_metadata",
+   "name": "IL2CPP metadata dump",
+   "description": "Parse global-metadata.dat for the full managed view.",
+   "instructions": "Workflow:\n1. Locate global-metadata.dat beside libil2cpp.so (auto-detected) or pass metadata_path explicitly.\n2. Call re.il2cpp.metadata with libil2cpp_path, include_methods/include_fields as needed, and filter_namespace to narrow output.\n3. Output includes metadata_version, images (v24+ 40-byte records), classes, methods, fields, string literals, and record sizes.\n4. The tool correlates native symbols per method (native_symbol_candidates) and marks single-candidate RVAs for PIE (.so) builds.\n5. Output is size-capped; if it errors on size, narrow filter_namespace or drop fields before retrying.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_il2cpp_resolve",
+   "name": "IL2CPP class resolution",
+   "description": "Resolve a live class instance address from metadata.",
+   "instructions": "Workflow:\n1. Prerequisite: metadata JSON from re.il2cpp.metadata and a running target (pid).\n2. Call re.il2cpp.resolve with the class name; it scans executable mappings for the class pattern and verifies via process memory.\n3. Treat resolved addresses as session-scoped (ASLR); re-resolve after every relaunch.\n4. Combine with re.ida.offset to cross-check against static RVAs from metadata.\n5. Record both static (metadata) and dynamic (runtime) addresses side by side.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_il2cpp_vtable",
+   "name": "IL2CPP vtable analysis",
+   "description": "Recover virtual dispatch structure.",
+   "instructions": "Workflow:\n1. Prerequisites: libil2cpp_path, metadata_json, class_name.\n2. Output: method_start, vtable_start, vtable_count from metadata; per-virtual-method slots with slot/method_index/token.\n3. Virtual method pointers are UNRESOLVED by design: metadata holds slots, not runtime pointers. Never fake them.\n4. native_symbol_hints lists ELF symbols matching the class short-name with vtable/method patterns (up to 300).\n5. To get real pointers, combine re.ida.offset (base+rva) with mem.read at computed vtable addresses.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_unity_runtime_dump",
+   "name": "Unity runtime dump",
+   "description": "Capture live Unity process state.",
+   "instructions": "Workflow:\n1. Prerequisites: pid (mem.process.list) and metadata_json.\n2. Call re.unity.runtime_dump; returns il2cpp_base, il2cpp/unity mappings (up to 1000 each), thread summaries (tid/comm/stat), and metadata counts.\n3. process_memory_readable tells you whether /proc/pid/mem is accessible; reads rely on kernel permissions and no auto-root is attempted.\n4. dump_heap=true is honestly reported as NOT_PERFORMED (no GC walker); do not expect a managed heap dump.\n5. Large output is saved to workspace unity_dump_<ts>/unity_runtime_dump.json with an inline summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_unity_static_dynamic",
+   "name": "Static-to-dynamic Unity bridge",
+   "description": "Unite metadata, static ELF, and live memory.",
+   "instructions": "Workflow:\n1. Static: re.il2cpp.metadata gives class/method records and candidate RVAs.\n2. Symbols: elf_analyze --symbol to find il2cpp_* / CodeGenModule / CodeRegistration / MetadataRegistration candidates.\n3. Runtime: re.ida.offset computes base+RVA and verifies with a 16-byte read.\n4. Cross-check: re.unity.runtime_dump reports the live il2cpp_base; confirm it matches the offset tool output.\n5. Document the three-layer mapping table (metadata RVA -> symbol -> runtime address) per class of interest.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_codegen_indicators",
+   "name": "CodeGeneration module discovery",
+   "description": "Find IL2CPP registration structures.",
+   "instructions": "Workflow:\n1. analysis_pipeline and il2cpp_dump list native_registration_candidates: symbols containing CodeGenModule, CodeRegistration, MetadataRegistration, il2cpp_codegen_register, g_CodeGenModules.\n2. Module names also appear as .dll strings (Assembly-CSharp.dll etc.) in read-only data.\n3. These addresses are the roots for enumerating all managed methods from the native side.\n4. Record each candidate with its kind (symbol vs string indicator) from the tool output.\n5. Feed the CodeRegistration address into deeper static analysis with IDA/r2 when available.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_il2cpp_versions",
+   "name": "IL2CPP version awareness",
+   "description": "Handle metadata version differences.",
+   "instructions": "Workflow:\n1. Check metadata_version in the parser output before interpreting record layouts.\n2. ImageDefinition records are typically 40 bytes in v24+; the parser auto-detects 40/32/36/28 via divisibility.\n3. Older versions may lack exported-type and entry-point fields; the parser degrades gracefully.\n4. If parse results look misaligned, verify the metadata file actually matches the libil2cpp.so build (same APK).\n5. Record the version in reports; tooling assumptions differ across versions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_il2cpp_filtering",
+   "name": "Metadata output management",
+   "description": "Keep IL2CPP dumps within limits.",
+   "instructions": "Workflow:\n1. Full dumps of large games exceed the bounded output limit; filter first.\n2. filter_namespace accepts namespace or fully-qualified class text (e.g. Game.Player).\n3. Set include_fields=false when only method signatures matter; drop methods for class-level overviews.\n4. Write to output_json and analyze the file with file.search instead of parsing huge inline outputs.\n5. Retry pattern: filter until the tool succeeds, then widen gradually.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_function_loop",
+   "name": "Function analysis loop",
+   "description": "Analyze one function thoroughly.",
+   "instructions": "Workflow:\n1. Locate the function: --symbol query or xref pivot.\n2. Note its address, size, containing section, and callers (re.ida.xref xrefs_to).\n3. Read bytes/structures with re.hex.identify for constants referenced inside.\n4. For IL2CPP methods, pull the metadata signature (class.method, parameter types) for semantic context.\n5. Write a plain-language summary: purpose, inputs, outputs, side effects, and confidence level.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_callgraph_narrative",
+   "name": "Call graph narratives",
+   "description": "Turn xref data into readable call stories.",
+   "instructions": "Workflow:\n1. Pick an entry point (launch, handler, network callback).\n2. One hop at a time: re.ida.xref xrefs_from, then analyze each callee briefly.\n3. Maintain a text tree with addresses at each node (file.write to workspace).\n4. Mark unexplored branches explicitly for later passes.\n5. Summarize the top 3 most important paths for the task at hand.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_pattern_authoring",
+   "name": "IDA pattern authoring",
+   "description": "Write and validate byte patterns.",
+   "instructions": "Workflow:\n1. Format: hex pairs with ?? wildcards, e.g. \"8B 45 ?? 3D 10 27 00 00\" (max 128 bytes; only exact-and-wildcard masks are scanned).\n2. Get candidate bytes from re.hex.identify or a short file.read probe at the target offset.\n3. Validate uniqueness: re.ida.analyze hex_pattern --values; more than a few hits means the pattern is too loose.\n4. Anchor patterns on instruction boundaries when possible to avoid mid-instruction matches.\n5. Store validated patterns in a workspace library file per binary version.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_evidence_chain",
+   "name": "Evidence chaining discipline",
+   "description": "Keep every RE claim reproducible.",
+   "instructions": "Workflow:\n1. Record tool + arguments for every finding (e.g. re.ida.analyze script=elf_analyze --symbol foo).\n2. Save tool JSON outputs to workspace files and reference them by path.\n3. Static claims (metadata RVA), symbol claims, and runtime claims (verified bytes) must be labeled distinctly.\n4. Re-run the exact chain before publishing conclusions.\n5. Mark speculation explicitly; addresses from UNRESOLVED placeholders are never evidence.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_report_format",
+   "name": "RE report format",
+   "description": "Write professional IDA-style reports.",
+   "instructions": "Workflow:\n1. Header: binary name, hash, architecture (from tool output), tool versions, date.\n2. Methodology: which engines (built-in/IDA/r2) produced which findings.\n3. Findings ordered by importance; each with addresses, evidence file paths, and reproduction steps.\n4. Distinguish: verified (runtime read), static-only (ELF/metadata), and speculative.\n5. Appendix: symbol/section maps and pattern library.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_large_binary",
+   "name": "Large binary strategy",
+   "description": "Analyze big binaries without drowning.",
+   "instructions": "Workflow:\n1. Start with analysis_pipeline; never dump everything at once.\n2. Filter symbol queries by plausible prefixes (il2cpp, Java_, namespace fragments).\n3. Use re.hex.identify with targeted values instead of broad pattern sweeps.\n4. Keep all outputs in workspace JSON files; use file.search over them.\n5. Time-box exploration passes; log what was skipped for later.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_game_workflow",
+   "name": "Game RE end-to-end",
+   "description": "Complete Unity game workflow (owned/lab targets).",
+   "instructions": "Workflow:\n1. Identify the game process (mem.process.list) and confirm libil2cpp.so in maps.\n2. Pull metadata: re.il2cpp.metadata (filter to the gameplay namespace).\n3. Resolve the class of interest: re.il2cpp.resolve for the live instance address.\n4. Vtable path: re.il2cpp.vtable for slots, then re.ida.offset + mem.read for real pointers.\n5. Correlate mem.scan hits: re.mem.ida_correlate to name the structures behind values.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ida_native_lib_diff",
+   "name": "Version diffing with tools",
+   "description": "Compare two versions of a native library.",
+   "instructions": "Workflow:\n1. Run analysis_pipeline on both versions; record symbol counts and section layouts.\n2. Diff symbol sets with python.run_file (added/removed/renamed).\n3. For changed functions, compare sizes and near-symbol distances via re.hex.identify.\n4. Re-run metadata parse if IL2CPP: class/method counts per version.\n5. Summarize behavioral deltas likely relevant to the user.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_anti_analyzer",
+   "name": "Anti-analysis detection",
+   "description": "Spot anti-RE techniques honestly.",
+   "instructions": "Workflow:\n1. Strings: look for debugger/Frida/xposed markers via analysis_pipeline string output.\n2. Symbols: stripped binaries show low symbol_count; rely on dynamic strings and patterns.\n3. IL2CPP: encrypted global-metadata.dat fails or parses absurdly; check metadata_version sanity first.\n4. Packing: high-entropy sections and few imports; note rather than unpack automatically.\n5. Record each indicator; escalate to dynamic analysis (mem flows) when static is blocked.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ida_own_binaries",
+   "name": "Analyzing your own builds",
+   "description": "Deep-dive apps you built (no gate friction).",
+   "instructions": "Workflow:\n1. Build a debug variant with symbols; keep mapping.txt (R8) beside the APK.\n2. Decode with re.apktool.decode; analyze native libs with the full IDA skill set above.\n3. Verify findings against your source: file.search the original code for each identified function.\n4. Use re.ida.offset against your own running app for live correlation practice.\n5. This is the recommended environment for learning the toolchain end to end.",
+   "enabled": true
+  }
+ ]
+}

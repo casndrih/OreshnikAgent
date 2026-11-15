@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_qa_rev_api-design",
+   "name": "Review checklist: api design",
+   "description": "Focused review guide for api design.",
+   "instructions": "Workflow:\n1. file.search touchpoints of api design in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_error-handling",
+   "name": "Review checklist: error handling",
+   "description": "Focused review guide for error handling.",
+   "instructions": "Workflow:\n1. file.search touchpoints of error handling in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_concurrency",
+   "name": "Review checklist: concurrency",
+   "description": "Focused review guide for concurrency.",
+   "instructions": "Workflow:\n1. file.search touchpoints of concurrency in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_resource-lifecycle",
+   "name": "Review checklist: resource lifecycle",
+   "description": "Focused review guide for resource lifecycle.",
+   "instructions": "Workflow:\n1. file.search touchpoints of resource lifecycle in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_input-validation",
+   "name": "Review checklist: input validation",
+   "description": "Focused review guide for input validation.",
+   "instructions": "Workflow:\n1. file.search touchpoints of input validation in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_output-encoding",
+   "name": "Review checklist: output encoding",
+   "description": "Focused review guide for output encoding.",
+   "instructions": "Workflow:\n1. file.search touchpoints of output encoding in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_authz-logic",
+   "name": "Review checklist: authz logic",
+   "description": "Focused review guide for authz logic.",
+   "instructions": "Workflow:\n1. file.search touchpoints of authz logic in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_logging-quality",
+   "name": "Review checklist: logging quality",
+   "description": "Focused review guide for logging quality.",
+   "instructions": "Workflow:\n1. file.search touchpoints of logging quality in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_config-management",
+   "name": "Review checklist: config management",
+   "description": "Focused review guide for config management.",
+   "instructions": "Workflow:\n1. file.search touchpoints of config management in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_migration-safety",
+   "name": "Review checklist: migration safety",
+   "description": "Focused review guide for migration safety.",
+   "instructions": "Workflow:\n1. file.search touchpoints of migration safety in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_data-modeling",
+   "name": "Review checklist: data modeling",
+   "description": "Focused review guide for data modeling.",
+   "instructions": "Workflow:\n1. file.search touchpoints of data modeling in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_performance-paths",
+   "name": "Review checklist: performance paths",
+   "description": "Focused review guide for performance paths.",
+   "instructions": "Workflow:\n1. file.search touchpoints of performance paths in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_caching-logic",
+   "name": "Review checklist: caching logic",
+   "description": "Focused review guide for caching logic.",
+   "instructions": "Workflow:\n1. file.search touchpoints of caching logic in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_feature-flags",
+   "name": "Review checklist: feature flags",
+   "description": "Focused review guide for feature flags.",
+   "instructions": "Workflow:\n1. file.search touchpoints of feature flags in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_test-quality",
+   "name": "Review checklist: test quality",
+   "description": "Focused review guide for test quality.",
+   "instructions": "Workflow:\n1. file.search touchpoints of test quality in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_build-health",
+   "name": "Review checklist: build health",
+   "description": "Focused review guide for build health.",
+   "instructions": "Workflow:\n1. file.search touchpoints of build health in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_dependency-hygiene",
+   "name": "Review checklist: dependency hygiene",
+   "description": "Focused review guide for dependency hygiene.",
+   "instructions": "Workflow:\n1. file.search touchpoints of dependency hygiene in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_security-touchpoints",
+   "name": "Review checklist: security touchpoints",
+   "description": "Focused review guide for security touchpoints.",
+   "instructions": "Workflow:\n1. file.search touchpoints of security touchpoints in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_a11y-impact",
+   "name": "Review checklist: a11y impact",
+   "description": "Focused review guide for a11y impact.",
+   "instructions": "Workflow:\n1. file.search touchpoints of a11y impact in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_rev_i18n-impact",
+   "name": "Review checklist: i18n impact",
+   "description": "Focused review guide for i18n impact.",
+   "instructions": "Workflow:\n1. file.search touchpoints of i18n impact in the change.\n2. Apply the checklist items for this area (web.search best practices).\n3. Note findings with file:line.\n4. Suggest fixes inline.\n5. Summarize verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_cyclomatic-complexity",
+   "name": "Code metric: cyclomatic complexity",
+   "description": "Measure and act on cyclomatic complexity.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_coupling-cohesion",
+   "name": "Code metric: coupling cohesion",
+   "description": "Measure and act on coupling cohesion.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_duplicate-code",
+   "name": "Code metric: duplicate code",
+   "description": "Measure and act on duplicate code.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_comment-ratio",
+   "name": "Code metric: comment ratio",
+   "description": "Measure and act on comment ratio.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_test-ratio",
+   "name": "Code metric: test ratio",
+   "description": "Measure and act on test ratio.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_todo-density",
+   "name": "Code metric: todo density",
+   "description": "Measure and act on todo density.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_file-size-distribution",
+   "name": "Code metric: file size distribution",
+   "description": "Measure and act on file size distribution.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_function-length-distribution",
+   "name": "Code metric: function length distribution",
+   "description": "Measure and act on function length distribution.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_public-api-surface",
+   "name": "Code metric: public api surface",
+   "description": "Measure and act on public api surface.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_qa_metric_circular-deps",
+   "name": "Code metric: circular deps",
+   "description": "Measure and act on circular deps.",
+   "instructions": "Workflow:\n1. Compute the metric (python.run_file static scan).\n2. Baseline the current value (file.write).\n3. Define thresholds.\n4. Fix worst offenders (file.patch).\n5. Track trend.",
+   "enabled": false
+  }
+ ]
+}

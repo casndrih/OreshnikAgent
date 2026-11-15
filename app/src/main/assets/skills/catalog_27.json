@@ -1,0 +1,355 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_apk_apk_zip_struct",
+   "name": "APK as a ZIP container",
+   "description": "Understand APK layout at the archive level.",
+   "instructions": "Workflow:\n1. List entries with sizes via process.exec unzip -l on the APK.\n2. Identify: classes.dex, resources.arsc, lib/<abi>, assets/, META-INF.\n3. Note signatures present (v1 MANIFEST, v2 block) via re.hex.identify probes.\n4. Map oversized entries for optimization.\n5. Record the structure summary (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_dex_layers",
+   "name": "Multiple DEX files",
+   "description": "Work with multidex APKs.",
+   "instructions": "Workflow:\n1. List all classes*.dex entries in the archive.\n2. Check main-dex list hints in build files (file.read).\n3. re.hex.identify each dex header for version.\n4. Map class-per-dex distribution from apktool output (python.run_file count).\n5. Summarize the multidex layout.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_arsc_anatomy",
+   "name": "resources.arsc anatomy",
+   "description": "Understand compiled resources.",
+   "instructions": "Workflow:\n1. re.hex.identify the arsc header.\n2. Inspect string pools and package blocks with apktool decode output.\n3. Correlate resource ids (0x7f...) with names (file.search public.xml).\n4. Note configuration splits (locale/density).\n5. Document findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_manifest_binary",
+   "name": "Binary XML manifest parsing",
+   "description": "Read AXML without full decode.",
+   "instructions": "Workflow:\n1. re.hex.identify the binary XML magic.\n2. Use re.apk.manifest for the decoded summary.\n3. Cross-check with apktool decode for exact strings (file.read AndroidManifest.xml).\n4. Note string-pool offsets for surgical edits.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_signature_v1",
+   "name": "v1 (JAR) signing",
+   "description": "Understand and create v1 signatures.",
+   "instructions": "Workflow:\n1. List META-INF entries (process.exec unzip -l).\n2. Inspect MANIFEST.MF digests via extraction + file.read.\n3. Sign with re.apk.sign (scheme coverage per tool output).\n4. Verify with a benign install.\n5. Record which schemes the APK carries.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_signature_v2",
+   "name": "v2/v3 signing blocks",
+   "description": "Handle APK Signature Scheme v2/v3.",
+   "instructions": "Workflow:\n1. Locate the signing block marker before the ZIP central directory (re.hex.identify).\n2. Sign via re.apk.sign; confirm scheme ids in output.\n3. Note min-SDK implications for scheme choice.\n4. Verify installer acceptance.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_alignment_zipalign",
+   "name": "ZIP alignment",
+   "description": "Check and fix entry alignment.",
+   "instructions": "Workflow:\n1. Check unaligned entries via process.exec (zipalign -c if present).\n2. Note resources.arsc mmap requirement for targetSdk 30+.\n3. Align during rebuild flow (re.apktool.build handles as configured).\n4. Verify with re-apk install on device.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_split_bases",
+   "name": "Split APKs and App Bundles",
+   "description": "Work with split delivery.",
+   "instructions": "Workflow:\n1. List split APKs (base, config.*) from the bundle output.\n2. re.apk.manifest each to map split roles.\n3. Install via split-install path (process.exec adb install-multiple).\n4. For single-APK patching, merge strategy notes (file.write).\n5. Record the split map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_abi_selection",
+   "name": "ABI filtering",
+   "description": "Manage native library ABIs.",
+   "instructions": "Workflow:\n1. List lib/<abi> folders from the archive.\n2. Cross-check device ABI via process.exec getprop ro.product.cpu.abilist.\n3. Recommend the minimal set (arm64 + armeabi-v7a typically).\n4. Rebuild with filters (gradle.exec ndk abiFilters).\n5. Verify the slimmed APK.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_version_catalog",
+   "name": "Version extraction",
+   "description": "Extract version metadata reliably.",
+   "instructions": "Workflow:\n1. re.apk.manifest for versionCode/versionName.\n2. Cross-check BuildConfig in decode output (file.search VERSION).\n3. Compare across builds (python.run_file).\n4. Record in engagement notes.\n5. Flag mismatches.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_permission_grants",
+   "name": "Permission grant mapping",
+   "description": "Map declared vs granted permissions.",
+   "instructions": "Workflow:\n1. re.apk.manifest for uses-permission entries.\n2. process.exec dumpsys package <pkg> for granted set.\n3. Diff declared vs granted (python.run_file).\n4. Flag dangerous grants.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_entry_activity",
+   "name": "Launcher discovery",
+   "description": "Find the true entry points.",
+   "instructions": "Workflow:\n1. re.apk.manifest: activities with LAUNCHER intent filters.\n2. Note application class name.\n3. Trace onCreate path in smali (file.search).\n4. Record the launch chain.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_service_map",
+   "name": "Service inventory",
+   "description": "Inventory background components.",
+   "instructions": "Workflow:\n1. List services/receivers/providers from re.apk.manifest.\n2. Classify: exported, permission-guarded, boot-started.\n3. file.search smali for start patterns.\n4. Record the component map.\n5. Summarize surface.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_assets_walk",
+   "name": "Assets inventory",
+   "description": "Catalog packaged assets.",
+   "instructions": "Workflow:\n1. List assets/ tree via archive listing.\n2. Classify: configs, models, fonts, web content.\n3. Inspect configs with file.read after extraction.\n4. Flag sensitive-looking files (keys, endpoints) with python.run_file patterns.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_res_namespaces",
+   "name": "Resource obfuscation detection",
+   "description": "Detect resource name shrinking.",
+   "instructions": "Workflow:\n1. Compare resource names in public.xml (file.search).\n2. Note shortened names (a.b.c patterns).\n3. Correlate code references via R constants.\n4. Recommend readable builds for debugging.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_class_distribution",
+   "name": "Class count analysis",
+   "description": "Profile the DEX contents.",
+   "instructions": "Workflow:\n1. Count classes per package from apktool tree (python.run_file).\n2. Identify fat packages (SDKs) vs app code.\n3. Map third-party SDK signatures (known package names, web.search).\n4. Record the SDK inventory.\n5. Flag outdated components.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_debuggable_flag",
+   "name": "Debuggable and backup flags",
+   "description": "Check debug posture flags.",
+   "instructions": "Workflow:\n1. re.apk.manifest for debuggable/allowBackup/networkSecurityConfig.\n2. Explain implications for each (research entry, data extraction).\n3. Note release hygiene gaps.\n4. Recommend fixes to the owner.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_network_config",
+   "name": "Network security config review",
+   "description": "Review cleartext/pinning policy files.",
+   "instructions": "Workflow:\n1. Extract res/xml/network_security_config if present (apktool decode).\n2. file.read the config; note cleartext domains and pin sets.\n3. Correlate with observed traffic behavior (http.capture).\n4. Recommend tightening.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_deep_link_map",
+   "name": "Deep link surface",
+   "description": "Map link handling.",
+   "instructions": "Workflow:\n1. Extract scheme/host/pathPrefix from manifest (re.apk.manifest).\n2. Match activities handling them (file.search smali).\n3. Construct test links; verify routing (androidopenapp).\n4. Document the surface.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_intent_filters",
+   "name": "Intent filter matrix",
+   "description": "Catalog external entry surface.",
+   "instructions": "Workflow:\n1. List all intent-filters from re.apk.manifest (python.run_file parse).\n2. Classify: browsable, custom scheme, broadcast actions.\n3. Note exported components without filters.\n4. Record the matrix.\n5. Flag surprises.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_dex_header_read",
+   "name": "DEX header deep read",
+   "description": "Read DEX internals.",
+   "instructions": "Workflow:\n1. re.hex.identify the dex header region.\n2. Parse magic/version/checksum/adler (python.run_file).\n3. Relate checksum to file integrity checks.\n4. Note header edits needed for manual dex patching.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_dex_string_pool",
+   "name": "DEX string pool exploration",
+   "description": "Mine strings from dex directly.",
+   "instructions": "Workflow:\n1. Extract strings via re.rabin2 or strings (process.exec).\n2. Filter for URLs, keys, paths (python.run_file patterns).\n3. Correlate with code sites (file.search smali).\n4. Record meaningful strings.\n5. Feed analysis.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_type_ids",
+   "name": "DEX type and proto ids",
+   "description": "Understand dex type tables.",
+   "instructions": "Workflow:\n1. Dump types via apktool tree structure (python.run_file classify).\n2. Map descriptor strings (Lcom/...;) to classes.\n3. Note reflection usage hiding references (file.search forClassName).\n4. Record.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_method_ids_limits",
+   "name": "64K method limit",
+   "description": "Manage dex method counts.",
+   "instructions": "Workflow:\n1. Count methods per dex (python.run_file from apktool output).\n2. Note proximity to 65536 limits.\n3. Recommend multidex config changes (gradle.exec).\n4. Verify build.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_inline_resources",
+   "name": "Inline resource values",
+   "description": "Edit compiled values safely.",
+   "instructions": "Workflow:\n1. Locate the value in apktool output (file.search).\n2. Edit via file.patch in the decoded tree.\n3. re.apktool.build; re.apk.sign; re.apk.install.\n4. Verify the resource change on device (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_drawable_swap",
+   "name": "Drawable replacement",
+   "description": "Swap images in an APK.",
+   "instructions": "Workflow:\n1. Decode (re.apktool.decode).\n2. Replace the drawable file preserving name/format (process.exec cp).\n3. Rebuild/sign/install (re.apktool.build + re.apk.sign + re.apk.install).\n4. Verify visually (android_screenshot).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_string_localization",
+   "name": "String localization edits",
+   "description": "Patch localized strings.",
+   "instructions": "Workflow:\n1. Find the values-<locale> folder (file.list).\n2. Patch the target string (file.patch).\n3. Rebuild/sign/install (standard pipeline).\n4. Verify in-app text (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_menu_ids",
+   "name": "Menu resource edits",
+   "description": "Adjust menus.",
+   "instructions": "Workflow:\n1. Locate menu XML (file.search menu folder).\n2. Patch items/ids (file.patch).\n3. Correlate with code handlers (file.search onOptionsItemSelected).\n4. Rebuild via pipeline; verify UI.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_theme_changes",
+   "name": "Theme/color changes",
+   "description": "Recolor an APK.",
+   "instructions": "Workflow:\n1. Locate colors/themes XML (file.search).\n2. Patch palette values (file.patch).\n3. Rebuild/sign/install (pipeline).\n4. Verify visually (android_screenshot).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_icon_swap",
+   "name": "App icon replacement",
+   "description": "Replace launcher icons.",
+   "instructions": "Workflow:\n1. Decode; locate mipmap-* densities (file.list).\n2. Generate correctly sized replacements (python.run_file PIL if present).\n3. Replace files; rebuild/sign/install (pipeline).\n4. Verify launcher icon (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_xml_compile_check",
+   "name": "AXML edit validation",
+   "description": "Catch binary-XML mistakes early.",
+   "instructions": "Workflow:\n1. After any res edit, re.apktool.build first (fails fast).\n2. Read the exact error line from output.\n3. Fix and retry (file.patch).\n4. Only then sign/install.\n5. Record the loop.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_smali_anchors",
+   "name": "Smali edit anchoring",
+   "description": "Choose safe anchor lines for patches.",
+   "instructions": "Workflow:\n1. Read ±20 lines around the target (file.read).\n2. Prefer unique instruction sequences as anchors.\n3. Note register state at the anchor.\n4. Patch minimally (file.patch).\n5. Rebuild to validate.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_reg_alloc_notes",
+   "name": "Smali register discipline",
+   "description": "Avoid breaking register allocation.",
+   "instructions": "Workflow:\n1. Count pN/vN registers in the method (file.read).\n2. If adding locals, bump .locals or .registers correctly.\n3. Prefer reusing registers over adding.\n4. Verify via re.apktool.build (verifier catches mistakes).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_invoke_kinds",
+   "name": "Invoke kinds semantics",
+   "description": "Master invoke-* differences.",
+   "instructions": "Workflow:\n1. Read invoke-virtual vs invoke-static vs invoke-direct sites (file.read).\n2. Match receiver/nullability expectations.\n3. Patch call targets consistently.\n4. Rebuild to verify.\n5. Record notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_field_ops",
+   "name": "sget/iput patterns",
+   "description": "Edit field access correctly.",
+   "instructions": "Workflow:\n1. Identify static vs instance field ops (file.read).\n2. Match width suffixes (-object, -boolean, -int).\n3. Patch consistently with the field type.\n4. Rebuild to validate.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_const_width",
+   "name": "const width selection",
+   "description": "Pick correct const instructions.",
+   "instructions": "Workflow:\n1. Use const/4 for small values; const/16, const as needed (file.read context).\n2. Never overflow the width.\n3. Prefer literal deduction from neighbors.\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_branch_rewrite",
+   "name": "Branch target discipline",
+   "description": "Patch control flow safely.",
+   "instructions": "Workflow:\n1. Map the method's labels/branches (file.read).\n2. Keep branch targets within the method.\n3. Prefer restructuring via new labels over renumbering.\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_try_catch_edits",
+   "name": "Try/catch edits",
+   "description": "Patch exception regions.",
+   "instructions": "Workflow:\n1. Locate .catch directives (file.read).\n2. Keep handler ranges consistent with edits.\n3. Prefer additive changes.\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_annotation_edits",
+   "name": "Annotation preservation",
+   "description": "Keep annotations intact when editing.",
+   "instructions": "Workflow:\n1. Note .annotation blocks around members (file.read).\n2. Never split annotation blocks when patching.\n3. Preserve runtime-visible annotations for frameworks (Room, Gson).\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_line_numbers",
+   "name": "Debug info preservation",
+   "description": "Keep line numbers when useful.",
+   "instructions": "Workflow:\n1. Preserve .line directives when patching (file.read).\n2. For stack-trace-aligned patches, update or remove consistently.\n3. Rebuild to verify.\n4. Record preference.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_method_add",
+   "name": "Adding methods in smali",
+   "description": "Add new methods safely.",
+   "instructions": "Workflow:\n1. Copy a similar method as template (file.read).\n2. Adjust signature/registers/annotations.\n3. Insert at class level (file.patch).\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_class_add",
+   "name": "Adding classes in smali",
+   "description": "Add new classes.",
+   "instructions": "Workflow:\n1. Create the .smali file matching package path (file.write).\n2. Minimal valid class: .class/.super/constructor.\n3. Reference from an existing patch site.\n4. Rebuild to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_string_pool_growth",
+   "name": "String addition safety",
+   "description": "Add strings without breaking offsets.",
+   "instructions": "Workflow:\n1. Prefer referencing existing strings where possible (file.search).\n2. apktool rebuild handles pool growth; avoid manual hex edits.\n3. Rebuild to validate.\n4. Verify strings resolve (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_manifest_edits",
+   "name": "Manifest edit flow",
+   "description": "Edit the manifest safely.",
+   "instructions": "Workflow:\n1. Patch AndroidManifest.xml in decoded tree (file.patch).\n2. Mind package attribute implications (installer conflicts).\n3. Rebuild (re.apktool.build) to validate AXML.\n4. Sign/install; verify identity (re.apk.manifest).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_pkg_rename_flow",
+   "name": "Package rename in an APK",
+   "description": "Change app identity (research builds).",
+   "instructions": "Workflow:\n1. Patch manifest package (file.patch).\n2. Update provider authorities and any hardcoded pkg strings (file.search).\n3. Rebuild/sign (pipeline).\n4. Install as a separate app; verify (system.app_list).\n5. Record the checklist.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_provider_auth_fix",
+   "name": "Provider authority conflicts",
+   "description": "Fix authority collisions after rename.",
+   "instructions": "Workflow:\n1. file.search android:authorities in decoded manifest.\n2. Suffix authorities with the new package (file.patch).\n3. Update code references to authorities (file.search).\n4. Rebuild/install; verify providers work.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_contentprovider_probe_self",
+   "name": "Provider testing (own app)",
+   "description": "Exercise your own providers.",
+   "instructions": "Workflow:\n1. List providers (re.apk.manifest).\n2. Query via process.exec content commands.\n3. Validate permission guards.\n4. Record behaviors.\n5. Fix gaps found (file.patch in source).",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_broadcast_probe_self",
+   "name": "Receiver testing (own app)",
+   "description": "Exercise your own receivers.",
+   "instructions": "Workflow:\n1. List receivers (re.apk.manifest).\n2. Send crafted broadcasts (process.exec am broadcast).\n3. Observe handling via logcat.\n4. Fix exposure issues in source (file.patch).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_activity_probe_self",
+   "name": "Activity testing (own app)",
+   "description": "Exercise exported activities.",
+   "instructions": "Workflow:\n1. List activities (re.apk.manifest).\n2. Start each with expected/edge extras (process.exec am start).\n3. Watch for crashes (logcat).\n4. Harden source accordingly (file.patch).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apk_apk_service_probe_self",
+   "name": "Service testing (own app)",
+   "description": "Exercise services.",
+   "instructions": "Workflow:\n1. List services (re.apk.manifest).\n2. start/stop via process.exec am startservice variants.\n3. Verify lifecycle in logcat.\n4. Harden as needed.\n5. Record.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,712 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_re2_apktool-internals",
+   "name": "Analysis topic: apktool internals",
+   "description": "Practical guide for apktool internals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'apktool internals' applies in this project (file.search/file.read).\n2. Review the standard practice for apktool internals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_smali-syntax-deep",
+   "name": "Analysis topic: smali syntax deep",
+   "description": "Practical guide for smali syntax deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'smali syntax deep' applies in this project (file.search/file.read).\n2. Review the standard practice for smali syntax deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_baksmali-vs-smali",
+   "name": "Analysis topic: baksmali vs smali",
+   "description": "Practical guide for baksmali vs smali in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'baksmali vs smali' applies in this project (file.search/file.read).\n2. Review the standard practice for baksmali vs smali (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_odex-vs-dex",
+   "name": "Analysis topic: odex vs dex",
+   "description": "Practical guide for odex vs dex in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'odex vs dex' applies in this project (file.search/file.read).\n2. Review the standard practice for odex vs dex (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_vdex-art-notes",
+   "name": "Analysis topic: vdex art notes",
+   "description": "Practical guide for vdex art notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vdex art notes' applies in this project (file.search/file.read).\n2. Review the standard practice for vdex art notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_art-runtime-notes",
+   "name": "Analysis topic: art runtime notes",
+   "description": "Practical guide for art runtime notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'art runtime notes' applies in this project (file.search/file.read).\n2. Review the standard practice for art runtime notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jit-vs-aot-android",
+   "name": "Analysis topic: jit vs aot android",
+   "description": "Practical guide for jit vs aot android in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jit vs aot android' applies in this project (file.search/file.read).\n2. Review the standard practice for jit vs aot android (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_dexopt-flow",
+   "name": "Analysis topic: dexopt flow",
+   "description": "Practical guide for dexopt flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dexopt flow' applies in this project (file.search/file.read).\n2. Review the standard practice for dexopt flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_zygisk-module-design",
+   "name": "Analysis topic: zygisk module design",
+   "description": "Practical guide for zygisk module design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'zygisk module design' applies in this project (file.search/file.read).\n2. Review the standard practice for zygisk module design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_lsposed-notes",
+   "name": "Analysis topic: lsposed notes",
+   "description": "Practical guide for lsposed notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lsposed notes' applies in this project (file.search/file.read).\n2. Review the standard practice for lsposed notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_xposed-bridge-basics",
+   "name": "Analysis topic: xposed bridge basics",
+   "description": "Practical guide for xposed bridge basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'xposed bridge basics' applies in this project (file.search/file.read).\n2. Review the standard practice for xposed bridge basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_magisk-module-structure",
+   "name": "Analysis topic: magisk module structure",
+   "description": "Practical guide for magisk module structure in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'magisk module structure' applies in this project (file.search/file.read).\n2. Review the standard practice for magisk module structure (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_magisk-boot-image-patch",
+   "name": "Analysis topic: magisk boot image patch",
+   "description": "Practical guide for magisk boot image patch in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'magisk boot image patch' applies in this project (file.search/file.read).\n2. Review the standard practice for magisk boot image patch (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_su-daemon-flow",
+   "name": "Analysis topic: su daemon flow",
+   "description": "Practical guide for su daemon flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'su daemon flow' applies in this project (file.search/file.read).\n2. Review the standard practice for su daemon flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_selinux-policy-audit",
+   "name": "Analysis topic: selinux policy audit",
+   "description": "Practical guide for selinux policy audit in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'selinux policy audit' applies in this project (file.search/file.read).\n2. Review the standard practice for selinux policy audit (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_sepolicy-domains",
+   "name": "Analysis topic: sepolicy domains",
+   "description": "Practical guide for sepolicy domains in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sepolicy domains' applies in this project (file.search/file.read).\n2. Review the standard practice for sepolicy domains (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_file-contexts-labels",
+   "name": "Analysis topic: file contexts labels",
+   "description": "Practical guide for file contexts labels in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'file contexts labels' applies in this project (file.search/file.read).\n2. Review the standard practice for file contexts labels (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_property-contexts",
+   "name": "Analysis topic: property contexts",
+   "description": "Practical guide for property contexts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'property contexts' applies in this project (file.search/file.read).\n2. Review the standard practice for property contexts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_init-rc-scripts",
+   "name": "Analysis topic: init rc scripts",
+   "description": "Practical guide for init rc scripts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'init rc scripts' applies in this project (file.search/file.read).\n2. Review the standard practice for init rc scripts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_android-boot-flow",
+   "name": "Analysis topic: android boot flow",
+   "description": "Practical guide for android boot flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'android boot flow' applies in this project (file.search/file.read).\n2. Review the standard practice for android boot flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_fastboot-protocol",
+   "name": "Analysis topic: fastboot protocol",
+   "description": "Practical guide for fastboot protocol in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fastboot protocol' applies in this project (file.search/file.read).\n2. Review the standard practice for fastboot protocol (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_adb-protocol-basics",
+   "name": "Analysis topic: adb protocol basics",
+   "description": "Practical guide for adb protocol basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'adb protocol basics' applies in this project (file.search/file.read).\n2. Review the standard practice for adb protocol basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_adb-pairing-wireless",
+   "name": "Analysis topic: adb pairing wireless",
+   "description": "Practical guide for adb pairing wireless in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'adb pairing wireless' applies in this project (file.search/file.read).\n2. Review the standard practice for adb pairing wireless (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_scrcpy-internals",
+   "name": "Analysis topic: scrcpy internals",
+   "description": "Practical guide for scrcpy internals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scrcpy internals' applies in this project (file.search/file.read).\n2. Review the standard practice for scrcpy internals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_frida-gadget-injection",
+   "name": "Analysis topic: frida gadget injection",
+   "description": "Practical guide for frida gadget injection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'frida gadget injection' applies in this project (file.search/file.read).\n2. Review the standard practice for frida gadget injection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_frida-server-setup",
+   "name": "Analysis topic: frida server setup",
+   "description": "Practical guide for frida server setup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'frida server setup' applies in this project (file.search/file.read).\n2. Review the standard practice for frida server setup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_objection-basics",
+   "name": "Analysis topic: objection basics",
+   "description": "Practical guide for objection basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'objection basics' applies in this project (file.search/file.read).\n2. Review the standard practice for objection basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_drozer-basics",
+   "name": "Analysis topic: drozer basics",
+   "description": "Practical guide for drozer basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'drozer basics' applies in this project (file.search/file.read).\n2. Review the standard practice for drozer basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_inspeckage-note",
+   "name": "Analysis topic: inspeckage note",
+   "description": "Practical guide for inspeckage note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'inspeckage note' applies in this project (file.search/file.read).\n2. Review the standard practice for inspeckage note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_mobsf-scanning",
+   "name": "Analysis topic: mobsf scanning",
+   "description": "Practical guide for mobsf scanning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mobsf scanning' applies in this project (file.search/file.read).\n2. Review the standard practice for mobsf scanning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_quark-engine",
+   "name": "Analysis topic: quark engine",
+   "description": "Practical guide for quark engine in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'quark engine' applies in this project (file.search/file.read).\n2. Review the standard practice for quark engine (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_apkid-features",
+   "name": "Analysis topic: apkid features",
+   "description": "Practical guide for apkid features in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'apkid features' applies in this project (file.search/file.read).\n2. Review the standard practice for apkid features (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_exodus-privacy-trackers",
+   "name": "Analysis topic: exodus privacy trackers",
+   "description": "Practical guide for exodus privacy trackers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exodus privacy trackers' applies in this project (file.search/file.read).\n2. Review the standard practice for exodus privacy trackers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_classyshark-ui",
+   "name": "Analysis topic: classyshark ui",
+   "description": "Practical guide for classyshark ui in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'classyshark ui' applies in this project (file.search/file.read).\n2. Review the standard practice for classyshark ui (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jadx-decompiler-tips",
+   "name": "Analysis topic: jadx decompiler tips",
+   "description": "Practical guide for jadx decompiler tips in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jadx decompiler tips' applies in this project (file.search/file.read).\n2. Review the standard practice for jadx decompiler tips (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jadx-scripting",
+   "name": "Analysis topic: jadx scripting",
+   "description": "Practical guide for jadx scripting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jadx scripting' applies in this project (file.search/file.read).\n2. Review the standard practice for jadx scripting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_ghidra-headless-scripts",
+   "name": "Analysis topic: ghidra headless scripts",
+   "description": "Practical guide for ghidra headless scripts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ghidra headless scripts' applies in this project (file.search/file.read).\n2. Review the standard practice for ghidra headless scripts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_ghidra-program-api",
+   "name": "Analysis topic: ghidra program api",
+   "description": "Practical guide for ghidra program api in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ghidra program api' applies in this project (file.search/file.read).\n2. Review the standard practice for ghidra program api (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_ida-idc-basics",
+   "name": "Analysis topic: ida idc basics",
+   "description": "Practical guide for ida idc basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ida idc basics' applies in this project (file.search/file.read).\n2. Review the standard practice for ida idc basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_ida-python-idaapi",
+   "name": "Analysis topic: ida python idaapi",
+   "description": "Practical guide for ida python idaapi in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ida python idaapi' applies in this project (file.search/file.read).\n2. Review the standard practice for ida python idaapi (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_binary-ninja-basics",
+   "name": "Analysis topic: binary ninja basics",
+   "description": "Practical guide for binary ninja basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'binary ninja basics' applies in this project (file.search/file.read).\n2. Review the standard practice for binary ninja basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_radare2-commands",
+   "name": "Analysis topic: radare2 commands",
+   "description": "Practical guide for radare2 commands in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'radare2 commands' applies in this project (file.search/file.read).\n2. Review the standard practice for radare2 commands (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_rizin-basics",
+   "name": "Analysis topic: rizin basics",
+   "description": "Practical guide for rizin basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rizin basics' applies in this project (file.search/file.read).\n2. Review the standard practice for rizin basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_r2pipe-scripting",
+   "name": "Analysis topic: r2pipe scripting",
+   "description": "Practical guide for r2pipe scripting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'r2pipe scripting' applies in this project (file.search/file.read).\n2. Review the standard practice for r2pipe scripting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_r2-frida-bridge",
+   "name": "Analysis topic: r2 frida bridge",
+   "description": "Practical guide for r2 frida bridge in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'r2 frida bridge' applies in this project (file.search/file.read).\n2. Review the standard practice for r2 frida bridge (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_unicorn-engine-emulation",
+   "name": "Analysis topic: unicorn engine emulation",
+   "description": "Practical guide for unicorn engine emulation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'unicorn engine emulation' applies in this project (file.search/file.read).\n2. Review the standard practice for unicorn engine emulation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_qemu-user-emulation",
+   "name": "Analysis topic: qemu user emulation",
+   "description": "Practical guide for qemu user emulation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'qemu user emulation' applies in this project (file.search/file.read).\n2. Review the standard practice for qemu user emulation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_gdb-remote-debugging",
+   "name": "Analysis topic: gdb remote debugging",
+   "description": "Practical guide for gdb remote debugging in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gdb remote debugging' applies in this project (file.search/file.read).\n2. Review the standard practice for gdb remote debugging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_lldb-basics",
+   "name": "Analysis topic: lldb basics",
+   "description": "Practical guide for lldb basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lldb basics' applies in this project (file.search/file.read).\n2. Review the standard practice for lldb basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_lldb-python-scripting",
+   "name": "Analysis topic: lldb python scripting",
+   "description": "Practical guide for lldb python scripting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lldb python scripting' applies in this project (file.search/file.read).\n2. Review the standard practice for lldb python scripting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_core-dump-analysis-elf",
+   "name": "Analysis topic: core dump analysis elf",
+   "description": "Practical guide for core dump analysis elf in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'core dump analysis elf' applies in this project (file.search/file.read).\n2. Review the standard practice for core dump analysis elf (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_macho-format-notes",
+   "name": "Analysis topic: macho format notes",
+   "description": "Practical guide for macho format notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'macho format notes' applies in this project (file.search/file.read).\n2. Review the standard practice for macho format notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_pe-format-notes",
+   "name": "Analysis topic: pe format notes",
+   "description": "Practical guide for pe format notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pe format notes' applies in this project (file.search/file.read).\n2. Review the standard practice for pe format notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_pesecurity-mitigations",
+   "name": "Analysis topic: pesecurity mitigations",
+   "description": "Practical guide for pesecurity mitigations in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pesecurity mitigations' applies in this project (file.search/file.read).\n2. Review the standard practice for pesecurity mitigations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_aslr-mechanics",
+   "name": "Analysis topic: aslr mechanics",
+   "description": "Practical guide for aslr mechanics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aslr mechanics' applies in this project (file.search/file.read).\n2. Review the standard practice for aslr mechanics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_dep-mechanics",
+   "name": "Analysis topic: dep mechanics",
+   "description": "Practical guide for dep mechanics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dep mechanics' applies in this project (file.search/file.read).\n2. Review the standard practice for dep mechanics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_cfi-notes",
+   "name": "Analysis topic: cfi notes",
+   "description": "Practical guide for cfi notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cfi notes' applies in this project (file.search/file.read).\n2. Review the standard practice for cfi notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_relro-notes",
+   "name": "Analysis topic: relro notes",
+   "description": "Practical guide for relro notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'relro notes' applies in this project (file.search/file.read).\n2. Review the standard practice for relro notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_stack-canaries",
+   "name": "Analysis topic: stack canaries",
+   "description": "Practical guide for stack canaries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'stack canaries' applies in this project (file.search/file.read).\n2. Review the standard practice for stack canaries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_heap-allocator-internals",
+   "name": "Analysis topic: heap allocator internals",
+   "description": "Practical guide for heap allocator internals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'heap allocator internals' applies in this project (file.search/file.read).\n2. Review the standard practice for heap allocator internals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_tcmalloc-basics",
+   "name": "Analysis topic: tcmalloc basics",
+   "description": "Practical guide for tcmalloc basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tcmalloc basics' applies in this project (file.search/file.read).\n2. Review the standard practice for tcmalloc basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jemalloc-basics",
+   "name": "Analysis topic: jemalloc basics",
+   "description": "Practical guide for jemalloc basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jemalloc basics' applies in this project (file.search/file.read).\n2. Review the standard practice for jemalloc basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_java-heap-dumps",
+   "name": "Analysis topic: java heap dumps",
+   "description": "Practical guide for java heap dumps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java heap dumps' applies in this project (file.search/file.read).\n2. Review the standard practice for java heap dumps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_mat-analyzer",
+   "name": "Analysis topic: mat analyzer",
+   "description": "Practical guide for mat analyzer in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mat analyzer' applies in this project (file.search/file.read).\n2. Review the standard practice for mat analyzer (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_visualvm-profiling",
+   "name": "Analysis topic: visualvm profiling",
+   "description": "Practical guide for visualvm profiling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'visualvm profiling' applies in this project (file.search/file.read).\n2. Review the standard practice for visualvm profiling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jfr-recording",
+   "name": "Analysis topic: jfr recording",
+   "description": "Practical guide for jfr recording in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jfr recording' applies in this project (file.search/file.read).\n2. Review the standard practice for jfr recording (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_async-profiler",
+   "name": "Analysis topic: async profiler",
+   "description": "Practical guide for async profiler in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'async profiler' applies in this project (file.search/file.read).\n2. Review the standard practice for async profiler (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_perf-events",
+   "name": "Analysis topic: perf events",
+   "description": "Practical guide for perf events in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'perf events' applies in this project (file.search/file.read).\n2. Review the standard practice for perf events (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_ftrace-basics",
+   "name": "Analysis topic: ftrace basics",
+   "description": "Practical guide for ftrace basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ftrace basics' applies in this project (file.search/file.read).\n2. Review the standard practice for ftrace basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_bpftrace-intro",
+   "name": "Analysis topic: bpftrace intro",
+   "description": "Practical guide for bpftrace intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bpftrace intro' applies in this project (file.search/file.read).\n2. Review the standard practice for bpftrace intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_dtrace-note",
+   "name": "Analysis topic: dtrace note",
+   "description": "Practical guide for dtrace note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dtrace note' applies in this project (file.search/file.read).\n2. Review the standard practice for dtrace note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_etw-tracing-windows",
+   "name": "Analysis topic: etw tracing windows",
+   "description": "Practical guide for etw tracing windows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'etw tracing windows' applies in this project (file.search/file.read).\n2. Review the standard practice for etw tracing windows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_sysmon-telemetry",
+   "name": "Analysis topic: sysmon telemetry",
+   "description": "Practical guide for sysmon telemetry in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sysmon telemetry' applies in this project (file.search/file.read).\n2. Review the standard practice for sysmon telemetry (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_procmon-analysis",
+   "name": "Analysis topic: procmon analysis",
+   "description": "Practical guide for procmon analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'procmon analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for procmon analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_wireshark-display-filters",
+   "name": "Analysis topic: wireshark display filters",
+   "description": "Practical guide for wireshark display filters in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wireshark display filters' applies in this project (file.search/file.read).\n2. Review the standard practice for wireshark display filters (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_tshark-scripting",
+   "name": "Analysis topic: tshark scripting",
+   "description": "Practical guide for tshark scripting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tshark scripting' applies in this project (file.search/file.read).\n2. Review the standard practice for tshark scripting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_capinfos-stats",
+   "name": "Analysis topic: capinfos stats",
+   "description": "Practical guide for capinfos stats in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'capinfos stats' applies in this project (file.search/file.read).\n2. Review the standard practice for capinfos stats (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_editcap-slicing",
+   "name": "Analysis topic: editcap slicing",
+   "description": "Practical guide for editcap slicing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'editcap slicing' applies in this project (file.search/file.read).\n2. Review the standard practice for editcap slicing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_mergecap-flows",
+   "name": "Analysis topic: mergecap flows",
+   "description": "Practical guide for mergecap flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mergecap flows' applies in this project (file.search/file.read).\n2. Review the standard practice for mergecap flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_networkx-graph-analysis",
+   "name": "Analysis topic: networkx graph analysis",
+   "description": "Practical guide for networkx graph analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'networkx graph analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for networkx graph analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_yara-rules-writing",
+   "name": "Analysis topic: yara rules writing",
+   "description": "Practical guide for yara rules writing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'yara rules writing' applies in this project (file.search/file.read).\n2. Review the standard practice for yara rules writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_sigma-rules",
+   "name": "Analysis topic: sigma rules",
+   "description": "Practical guide for sigma rules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sigma rules' applies in this project (file.search/file.read).\n2. Review the standard practice for sigma rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_osquery-queries",
+   "name": "Analysis topic: osquery queries",
+   "description": "Practical guide for osquery queries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'osquery queries' applies in this project (file.search/file.read).\n2. Review the standard practice for osquery queries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_-velociraptor-basics",
+   "name": "Analysis topic:  Velociraptor basics",
+   "description": "Practical guide for  Velociraptor basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where ' Velociraptor basics' applies in this project (file.search/file.read).\n2. Review the standard practice for  Velociraptor basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_timesketch-note",
+   "name": "Analysis topic: timesketch note",
+   "description": "Practical guide for timesketch note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'timesketch note' applies in this project (file.search/file.read).\n2. Review the standard practice for timesketch note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_autopsy-basics",
+   "name": "Analysis topic: autopsy basics",
+   "description": "Practical guide for autopsy basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'autopsy basics' applies in this project (file.search/file.read).\n2. Review the standard practice for autopsy basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_volatility-basics",
+   "name": "Analysis topic: volatility basics",
+   "description": "Practical guide for volatility basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'volatility basics' applies in this project (file.search/file.read).\n2. Review the standard practice for volatility basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_volatility-plugins",
+   "name": "Analysis topic: volatility plugins",
+   "description": "Practical guide for volatility plugins in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'volatility plugins' applies in this project (file.search/file.read).\n2. Review the standard practice for volatility plugins (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_mem-proc-dumping",
+   "name": "Analysis topic: mem proc dumping",
+   "description": "Practical guide for mem proc dumping in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mem proc dumping' applies in this project (file.search/file.read).\n2. Review the standard practice for mem proc dumping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_hollow-process-notes",
+   "name": "Analysis topic: hollow process notes",
+   "description": "Practical guide for hollow process notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hollow process notes' applies in this project (file.search/file.read).\n2. Review the standard practice for hollow process notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_dll-injection-analysis",
+   "name": "Analysis topic: dll injection analysis",
+   "description": "Practical guide for dll injection analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dll injection analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for dll injection analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_反射-injection-note",
+   "name": "Analysis topic: 反射 injection note",
+   "description": "Practical guide for 反射 injection note in software projects.",
+   "instructions": "Workflow:\n1. Locate where '反射 injection note' applies in this project (file.search/file.read).\n2. Review the standard practice for 反射 injection note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_code-signing-windows",
+   "name": "Analysis topic: code signing windows",
+   "description": "Practical guide for code signing windows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'code signing windows' applies in this project (file.search/file.read).\n2. Review the standard practice for code signing windows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_authenticode-verify",
+   "name": "Analysis topic: authenticode verify",
+   "description": "Practical guide for authenticode verify in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'authenticode verify' applies in this project (file.search/file.read).\n2. Review the standard practice for authenticode verify (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_jar-signing-verify",
+   "name": "Analysis topic: jar signing verify",
+   "description": "Practical guide for jar signing verify in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jar signing verify' applies in this project (file.search/file.read).\n2. Review the standard practice for jar signing verify (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_codesign-mac-verify",
+   "name": "Analysis topic: codesign mac verify",
+   "description": "Practical guide for codesign mac verify in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'codesign mac verify' applies in this project (file.search/file.read).\n2. Review the standard practice for codesign mac verify (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_notarization-check",
+   "name": "Analysis topic: notarization check",
+   "description": "Practical guide for notarization check in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notarization check' applies in this project (file.search/file.read).\n2. Review the standard practice for notarization check (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_sigstore-basics",
+   "name": "Analysis topic: sigstore basics",
+   "description": "Practical guide for sigstore basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sigstore basics' applies in this project (file.search/file.read).\n2. Review the standard practice for sigstore basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_cosign-verify",
+   "name": "Analysis topic: cosign verify",
+   "description": "Practical guide for cosign verify in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cosign verify' applies in this project (file.search/file.read).\n2. Review the standard practice for cosign verify (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_slsa-provenance",
+   "name": "Analysis topic: slsa provenance",
+   "description": "Practical guide for slsa provenance in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'slsa provenance' applies in this project (file.search/file.read).\n2. Review the standard practice for slsa provenance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_re2_in-toto-attestation",
+   "name": "Analysis topic: in-toto attestation",
+   "description": "Practical guide for in-toto attestation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'in-toto attestation' applies in this project (file.search/file.read).\n2. Review the standard practice for in-toto attestation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

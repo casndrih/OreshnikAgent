@@ -1,0 +1,572 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_x_fs_grep_ctx",
+   "name": "Context-aware grep",
+   "description": "Search with context lines for faster comprehension.",
+   "instructions": "Workflow:\n1. Use file.search with narrow patterns.\n2. Open hits with file.read around the line.\n3. Prefer unique strings over generic ones.\n4. Stop at the first definitive answer.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_fs_tmp_files",
+   "name": "Temp file management",
+   "description": "Use scratch space properly.",
+   "instructions": "Workflow:\n1. Prefix scratch files with tmp_.\n2. Keep them inside the workspace.\n3. Delete with file.delete when done.\n4. Never leave tmp_ files in summaries.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_fs_read_only_audit",
+   "name": "Read-only audit mode",
+   "description": "Audit without modifying anything.",
+   "instructions": "Workflow:\n1. Use only file.list, file.read, file.search.\n2. Report findings; change nothing.\n3. Offer a fix plan at the end.\n4. Confirm before any write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_fs_watch_diffs",
+   "name": "Incremental diff watching",
+   "description": "Track file changes across steps.",
+   "instructions": "Workflow:\n1. Snapshot relevant files with file.read hashes mentally.\n2. After actions, re-read and compare.\n3. Report precise deltas.\n4. Avoid full-file dumps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_fs_seed_data",
+   "name": "Test data generation",
+   "description": "Create realistic test fixtures.",
+   "instructions": "Workflow:\n1. Derive shapes from real samples (file.read).\n2. Generate with python.run_file and fixed seeds.\n3. Save under a fixtures folder.\n4. Validate against the real parser.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_todo_driver",
+   "name": "TODO-driven development",
+   "description": "Work the backlog systematically.",
+   "instructions": "Workflow:\n1. Find TODOs with file.search.\n2. Pick by impact; confirm with the user.\n3. Implement with file.patch; remove the marker.\n4. Test before moving on.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_pair_explain",
+   "name": "Pair-programming mode",
+   "description": "Explain while you modify.",
+   "instructions": "Workflow:\n1. Before each edit, say what and why in one line.\n2. Apply with file.patch.\n3. Show the diff region after.\n4. Invite correction at decision points.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_skeleton",
+   "name": "Project skeleton generation",
+   "description": "Bootstrap a new project fast.",
+   "instructions": "Workflow:\n1. Confirm language and build tool (runtime.info).\n2. Write manifests and entry points with file.write.\n3. Build once to prove green (gradle.exec/make.exec/node.exec).\n4. Add a README next.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_contract_tests",
+   "name": "Contract test writing",
+   "description": "Pin down module boundaries.",
+   "instructions": "Workflow:\n1. Read the interface (file.read).\n2. Test the contract, not the implementation.\n3. Include failure contracts (what throws).\n4. Run with gradle.exec/node.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_mocking",
+   "name": "Mock strategy",
+   "description": "Isolate external systems in tests.",
+   "instructions": "Workflow:\n1. Identify external edges (network, FS, clock).\n2. Inject fakes at the boundary.\n3. Keep fakes tiny and explicit.\n4. Verify tests fail without the real thing wired.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_coverage_focus",
+   "name": "Coverage-guided fixes",
+   "description": "Let coverage show untested paths.",
+   "instructions": "Workflow:\n1. Run the test suite (gradle.exec).\n2. List uncovered critical branches from the report.\n3. Write targeted tests first there.\n4. Re-run and compare.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_lint_baseline",
+   "name": "Lint baseline strategy",
+   "description": "Stop new debt, pay old debt gradually.",
+   "instructions": "Workflow:\n1. Run the linter once; capture the current issue set.\n2. Enforce new code only.\n3. Fix old issues opportunistically.\n4. Track the shrinking baseline.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_dep_upgrade",
+   "name": "Dependency upgrade path",
+   "description": "Upgrade libraries safely.",
+   "instructions": "Workflow:\n1. file.read current versions.\n2. Check breaking changes via web.search.\n3. Upgrade one major at a time.\n4. Build + tests after each (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_api_backcompat",
+   "name": "Backward compatibility care",
+   "description": "Change APIs without breaking callers.",
+   "instructions": "Workflow:\n1. Enumerate callers (file.search).\n2. Add, do not mutate; deprecate loudly.\n3. Keep old behavior behind a flag if needed.\n4. Test both paths.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_code_utf8_everywhere",
+   "name": "UTF-8 discipline",
+   "description": "Keep text processing encoding-safe.",
+   "instructions": "Workflow:\n1. Declare utf-8 at every file open (python.run_file).\n2. Normalize at boundaries only.\n3. Test with emoji and accents.\n4. Verify output bytes when in doubt.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_kt_data_class_use",
+   "name": "Data class modeling",
+   "description": "Model domain data with data classes.",
+   "instructions": "Workflow:\n1. Identify repeated Map usage (file.search).\n2. Introduce data classes with clear fields.\n3. Patch call sites incrementally.\n4. Build to verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_kt_sealed_states",
+   "name": "Sealed state modeling",
+   "description": "Represent UI state exhaustively.",
+   "instructions": "Workflow:\n1. Define a sealed hierarchy for states.\n2. Handle all branches at usage sites.\n3. Avoid nullable state combos.\n4. Compile-verify with gradle.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_kt_di_light",
+   "name": "Lightweight DI",
+   "description": "Wire dependencies simply.",
+   "instructions": "Workflow:\n1. Map current construction sites (file.search for constructors).\n2. Centralize creation in one factory.\n3. Pass dependencies explicitly.\n4. Keep testability by interfaces.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_kt_gradle_kts",
+   "name": "Gradle KTS tips",
+   "description": "Maintain .kts build scripts cleanly.",
+   "instructions": "Workflow:\n1. file.read the script; note syntax pitfalls.\n2. Prefer version catalogs for coordinates.\n3. Small incremental changes.\n4. Validate with gradle.exec after each edit.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_java_record_use",
+   "name": "Records and immutability",
+   "description": "Prefer immutable data carriers in Java.",
+   "instructions": "Workflow:\n1. Find mutable DTOs (file.search).\n2. Convert to records where syntax allows.\n3. Patch accessors usage.\n4. Compile with javac.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_js_module_hygiene",
+   "name": "Module hygiene in JS",
+   "description": "Keep module graphs clean.",
+   "instructions": "Workflow:\n1. file.search for circular import suspects.\n2. Break cycles via interfaces/events.\n3. Prefer default-free exports.\n4. Verify with node.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_c_integer_safety",
+   "name": "Integer safety in C",
+   "description": "Avoid overflow and UB.",
+   "instructions": "Workflow:\n1. Audit arithmetic on sizes (file.read).\n2. Use checked/width-specific types.\n3. Compile with sanitizers via clang.exec.\n4. Fix at the first overflow site.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_c_buffer_bounds",
+   "name": "Buffer bounds discipline",
+   "description": "Prevent overflows by construction.",
+   "instructions": "Workflow:\n1. Find fixed-size buffers (file.search).\n2. Pair every write with a bound check.\n3. Prefer length-aware APIs.\n4. Test edge sizes via a clang.exec-built harness.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_cpp_iterator_safety",
+   "name": "Iterator invalidation safety",
+   "description": "Avoid dangling iterators.",
+   "instructions": "Workflow:\n1. Locate container mutations in loops (file.read).\n2. Re-acquire iterators after mutations.\n3. Prefer algorithms over manual loops.\n4. Build with clang.exec warnings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_php_security_basics",
+   "name": "PHP security basics",
+   "description": "Avoid classic PHP pitfalls.",
+   "instructions": "Workflow:\n1. file.read input handling.\n2. Escape output contextually.\n3. Use prepared statements; no string SQL.\n4. Test with php.exec harness.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_ruby_gems_sanity",
+   "name": "Gem hygiene",
+   "description": "Keep Ruby dependencies sane.",
+   "instructions": "Workflow:\n1. file.read Gemfile.\n2. Pin versions; note native extensions.\n3. Update one gem at a time.\n4. Smoke-run with ruby.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sh_quoting",
+   "name": "Shell quoting mastery",
+   "description": "Quote variables correctly.",
+   "instructions": "Workflow:\n1. Find unquoted expansions (file.search).\n2. Quote all variable uses.\n3. Prefer arrays over string splitting.\n4. Test with process.exec echo rounds.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sh_idempotent",
+   "name": "Idempotent scripts",
+   "description": "Make scripts safe to re-run.",
+   "instructions": "Workflow:\n1. Guard each mutation with a condition.\n2. Prefer create-if-missing over overwrite.\n3. Log what was skipped.\n4. Dry-run first with process.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_view_binding",
+   "name": "View binding adoption",
+   "description": "Replace findViewById safely.",
+   "instructions": "Workflow:\n1. Enable binding in gradle (file.patch).\n2. Convert one layout at a time.\n3. Patch usages; null-check per config.\n4. Build with gradle.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_immersive",
+   "name": "Immersive mode handling",
+   "description": "Manage fullscreen states.",
+   "instructions": "Workflow:\n1. Locate systemUiVisibility/WindowInsets usage (file.search).\n2. Use WindowInsetsController APIs.\n3. Handle cutouts.\n4. Verify visually via android_screenshot.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_haptics",
+   "name": "Haptic feedback wiring",
+   "description": "Add tactility correctly.",
+   "instructions": "Workflow:\n1. Check Vibrator usage patterns (file.search).\n2. Use appropriate effect constants.\n3. Respect system haptic settings.\n4. Verify on device by feel/report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_edge_insets",
+   "name": "Edge-to-edge insets",
+   "description": "Handle display cutouts properly.",
+   "instructions": "Workflow:\n1. file.read window setup code.\n2. Apply insets listeners to root views.\n3. Pad content, not chrome.\n4. Verify on notched devices via android_screenshot.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_start_state",
+   "name": "Cold start optimization",
+   "description": "Trim startup work.",
+   "instructions": "Workflow:\n1. Trace Application.onCreate (file.read).\n2. Move non-critical init off the main path.\n3. Lazy-initialize heavy components.\n4. Measure with startup logs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_config_change",
+   "name": "Configuration change resilience",
+   "description": "Survive rotation and locale changes.",
+   "instructions": "Workflow:\n1. List retained state (file.search for statics).\n2. Move to ViewModel/SavedStateHandle.\n3. Test rotation via device automation.\n4. Fix leaks found.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_intent_extra_safety",
+   "name": "Intent extras hardening",
+   "description": "Parse extras defensively.",
+   "instructions": "Workflow:\n1. Locate intent consumers (file.search).\n2. Null-check and type-check every extra.\n3. Fail closed with clear errors.\n4. Test malformed intents.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_android_exported_audit",
+   "name": "Exported component audit",
+   "description": "Minimize component exposure.",
+   "instructions": "Workflow:\n1. re.apk.manifest to list exported components.\n2. For each, ask if external access is required.\n3. Tighten with android:exported=false or permissions.\n4. Build and re-audit.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_net_conn_pooling",
+   "name": "Connection reuse basics",
+   "description": "Reduce connection churn.",
+   "instructions": "Workflow:\n1. Observe handshakes in http.capture.\n2. Enable keep-alive/pooling in the client.\n3. Re-measure latency.\n4. Report improvement.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_net_timeout_matrix",
+   "name": "Timeout tuning",
+   "description": "Set sane timeouts per operation.",
+   "instructions": "Workflow:\n1. List network calls (file.search).\n2. Classify interactive vs batch.\n3. Set connect/read/write timeouts accordingly.\n4. Verify retry behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_net_offline_mode",
+   "name": "Offline-first checks",
+   "description": "Test behavior without network.",
+   "instructions": "Workflow:\n1. Toggle airplane mode via device automation.\n2. Exercise the app (androidclickelement).\n3. Observe error handling (androidreadscreen).\n4. Restore connectivity; verify recovery.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_web_robots_respect",
+   "name": "Crawl etiquette",
+   "description": "Crawl politely.",
+   "instructions": "Workflow:\n1. Check robots.txt before web.crawl.\n2. Cap depth and rate.\n3. Identify yourself honestly if asked.\n4. Stop on any block signal.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_web_cache_headers",
+   "name": "Cache header design",
+   "description": "Make caching correct.",
+   "instructions": "Workflow:\n1. Inspect current Cache-Control (http.capture).\n2. Classify resources by mutability.\n3. Set max-age and validators accordingly.\n4. Verify with repeat captures.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_web_api_versioning",
+   "name": "API versioning checks",
+   "description": "Keep API clients working.",
+   "instructions": "Workflow:\n1. Note version markers in captured traffic (http.history).\n2. Check deprecation headers.\n3. Test old-version behavior with http.replay.\n4. Document the support window.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_web_form_edge_cases",
+   "name": "Form edge testing",
+   "description": "Test forms beyond happy path.",
+   "instructions": "Workflow:\n1. Enumerate fields (web.browser).\n2. Submit boundary values via http.replay.\n3. Observe validation messages.\n4. Report gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_web_pagination_logic",
+   "name": "Pagination testing",
+   "description": "Verify pagination correctness.",
+   "instructions": "Workflow:\n1. Capture page requests (http.capture).\n2. Replay with off-by-one and huge offsets.\n3. Check for duplicates/skips in data.\n4. Report findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_data_encoding_pipeline",
+   "name": "Encoding pipeline design",
+   "description": "Standardize data serialization.",
+   "instructions": "Workflow:\n1. Choose one serialization per layer (file.read).\n2. Write adapters at boundaries.\n3. Test round-trips with python.run_file.\n4. Document the pipeline.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_data_time_series",
+   "name": "Time series handling",
+   "description": "Process time data correctly.",
+   "instructions": "Workflow:\n1. Normalize timestamps to UTC (python.run_file).\n2. Sort and de-dupe by key.\n3. Aggregate with explicit windows.\n4. Report gaps in coverage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_data_geospatial_basics",
+   "name": "Geospatial basics",
+   "description": "Handle coordinates correctly.",
+   "instructions": "Workflow:\n1. Validate lat/lon ranges (python.run_file).\n2. Mind datum/CRS differences.\n3. Compute distances with the right formula.\n4. Spot-check against known pairs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev_ci_cache",
+   "name": "CI cache tuning",
+   "description": "Speed up pipelines with caches.",
+   "instructions": "Workflow:\n1. file.read CI config cache blocks.\n2. Cache dependencies, not artifacts of code.\n3. Key caches precisely.\n4. Verify via a second run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev_secrets_mgmt",
+   "name": "Secrets in pipelines",
+   "description": "Keep CI secrets safe.",
+   "instructions": "Workflow:\n1. file.search configs for inline secrets.\n2. Move to secret managers/vars.\n3. Rotate anything exposed.\n4. Verify logs redact them.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev_env_docs",
+   "name": "Environment documentation",
+   "description": "Document setup honestly.",
+   "instructions": "Workflow:\n1. Capture actual versions (runtime.info).\n2. Write setup steps that match reality.\n3. Include verification commands.\n4. Test the doc on a clean path mentally.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev_incident_notes",
+   "name": "Incident note-taking",
+   "description": "Record incidents usefully.",
+   "instructions": "Workflow:\n1. Timeline with timestamps from logs.\n2. Impact statement without speculation.\n3. Evidence links (file paths).\n4. Follow-ups with owners.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev_rollback_plan",
+   "name": "Rollback planning",
+   "description": "Always have a way back.",
+   "instructions": "Workflow:\n1. Identify the previous good state (git.log).\n2. Document revert steps.\n3. Test rollback on a copy where possible.\n4. Store the plan with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_re2_apktool_assets",
+   "name": "Repacking assets",
+   "description": "Swap resources in an APK.",
+   "instructions": "Workflow:\n1. re.apktool.decode.\n2. Replace asset files (file.write).\n3. re.apktool.build; re.apk.sign.\n4. Install via re.apk.install; verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_re2_manifest_tools",
+   "name": "Manifest tooling",
+   "description": "Read binary manifests fast.",
+   "instructions": "Workflow:\n1. re.apk.manifest for a summary.\n2. Cross-check with re.apktool.decode output.\n3. Note discrepancies.\n4. Report the merged truth.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_re2_benchmark_ops",
+   "name": "Analysis performance",
+   "description": "Keep RE sessions efficient.",
+   "instructions": "Workflow:\n1. Prefer targeted queries over full dumps.\n2. Cache analysis outputs in the workspace.\n3. Re-run only on binary changes.\n4. Note timings to tune approach.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_re2_evidence_chain",
+   "name": "Evidence chaining",
+   "description": "Keep RE claims reproducible.",
+   "instructions": "Workflow:\n1. Record tool+args for every finding.\n2. Keep raw outputs in files (file.write).\n3. Reference them in the report.\n4. Re-run the chain before publishing.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_mem2_scan_hygiene",
+   "name": "Scan session hygiene",
+   "description": "Keep memory sessions clean.",
+   "instructions": "Workflow:\n1. Limit region scope via mem.regions.\n2. Stop scans at convergence.\n3. Clear stale candidates between rounds.\n4. Document final addresses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_mem2_watch_values",
+   "name": "Value watching",
+   "description": "Observe a value over time.",
+   "instructions": "Workflow:\n1. mem.read the address periodically.\n2. Record a small series.\n3. Correlate with game events.\n4. Summarize behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_mem2_float_vs_int",
+   "name": "Type disambiguation",
+   "description": "Determine the true storage type.",
+   "instructions": "Workflow:\n1. Scan as dword; scan as float.\n2. Compare refinement speeds.\n3. Verify with targeted mem.read.\n4. Adopt the type that converges.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_mem2_group_edits",
+   "name": "Grouped edits",
+   "description": "Edit related values together.",
+   "instructions": "Workflow:\n1. Map related addresses first.\n2. Apply edits in one pass (mem.write).\n3. Verify all took effect.\n4. Roll back as a group if needed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_mem2_process_stability",
+   "name": "Target stability checks",
+   "description": "Ensure the target stays alive.",
+   "instructions": "Workflow:\n1. system.process_list before each write batch.\n2. Detect pid changes (restarts).\n3. Re-derive addresses after restarts.\n4. Abort on instability.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_log_rotation",
+   "name": "Log file rotation",
+   "description": "Manage app logs on device.",
+   "instructions": "Workflow:\n1. Check log size (file.list).\n2. Archive old logs with process.exec mv.\n3. Compress if useful.\n4. Keep the live log small.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_battery_drain_hunt",
+   "name": "Battery drain investigation",
+   "description": "Find what drains battery.",
+   "instructions": "Workflow:\n1. dumpsys batterystats via process.exec.\n2. Identify top wakelock holders.\n3. Correlate with app usage.\n4. Recommend fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_storage_hogs",
+   "name": "Storage hog identification",
+   "description": "Find what fills storage.",
+   "instructions": "Workflow:\n1. df and du via process.exec (root where needed).\n2. Rank consumers.\n3. Relate to apps/caches.\n4. Propose safe cleanups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_anr_analysis",
+   "name": "ANR analysis",
+   "description": "Diagnose unresponsive apps.",
+   "instructions": "Workflow:\n1. Pull traces via root.exec (data/anr).\n2. Identify the blocked thread.\n3. Map to code with file.search.\n4. Propose the fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_wakelock_audit",
+   "name": "Wakelock audit",
+   "description": "Find excessive wakeups.",
+   "instructions": "Workflow:\n1. dumpsys power via process.exec.\n2. Note long-held wakeups.\n3. Map to features.\n4. Recommend batching.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_sync_adapters",
+   "name": "Sync diagnostics",
+   "description": "Diagnose sync failures.",
+   "instructions": "Workflow:\n1. dumpsys content via process.exec.\n2. Check sync status per authority.\n3. Capture sync traffic (http.capture).\n4. Locate the failing step.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_cert_pinning_note",
+   "name": "Certificate pinning awareness",
+   "description": "Recognize pinning effects.",
+   "instructions": "Workflow:\n1. Note TLS failures under capture (http.capture).\n2. Conclude pinning when handshakes fail only under MITM.\n3. Do not bypass without authorization.\n4. Document the finding.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_feature_discovery",
+   "name": "Feature discovery in apps",
+   "description": "Map hidden features via UI.",
+   "instructions": "Workflow:\n1. androidreadscreen systematically.\n2. Open every menu (androidclickelement).\n3. Note hidden/advanced toggles.\n4. Summarize the feature map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_dev2_app_compare",
+   "name": "App version comparison",
+   "description": "Compare two app versions by use.",
+   "instructions": "Workflow:\n1. Note versions (system.app_list).\n2. Drive identical flows on both (androidclickelement).\n3. Compare behavior and screens.\n4. Report deltas.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sys2_boot_time",
+   "name": "Boot time analysis",
+   "description": "Measure boot performance.",
+   "instructions": "Workflow:\n1. root.exec dumpsys with boot events.\n2. Extract timing checkpoints.\n3. Identify slow services.\n4. Report with numbers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sys2_thermal_note",
+   "name": "Thermal state awareness",
+   "description": "Watch device thermals.",
+   "instructions": "Workflow:\n1. dumpsys thermals via process.exec.\n2. Note throttle levels during heavy work.\n3. Pace long tasks.\n4. Report thermal status with results.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sys2_per_app_lang",
+   "name": "Per-app language",
+   "description": "Set app-specific language.",
+   "instructions": "Workflow:\n1. android.app_settings for the target app.\n2. androidclickelement Language.\n3. Pick the language; verify.\n4. Note app restart behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sys2_work_profile",
+   "name": "Work profile awareness",
+   "description": "Understand profile separation.",
+   "instructions": "Workflow:\n1. system.app_list shows profile badges.\n2. Note which side an app lives on.\n3. Use the right context for automation.\n4. Explain separation to the user.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_sys2_guest_mode",
+   "name": "Guest mode handling",
+   "description": "Switch profiles safely.",
+   "instructions": "Workflow:\n1. Open quick settings user tile (androidclickelement).\n2. Switch to guest on request.\n3. Note data separation.\n4. Switch back when done.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_checklist_run",
+   "name": "Checklist execution",
+   "description": "Run long checklists without drift.",
+   "instructions": "Workflow:\n1. Render the checklist in chat.\n2. Execute items in order; tick as done.\n3. Report exceptions immediately.\n4. Close with the final state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_double_check",
+   "name": "Double-check pass",
+   "description": "Verify before declaring success.",
+   "instructions": "Workflow:\n1. Re-run the core verification command.\n2. Re-read the critical file sections.\n3. Compare against the acceptance criteria.\n4. Only then report success.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_failure_postmortem",
+   "name": "Failure postmortem",
+   "description": "Learn from failed attempts.",
+   "instructions": "Workflow:\n1. Describe what was attempted.\n2. State the exact failure evidence.\n3. Propose the next hypothesis.\n4. Record durable lessons via memory.save.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_user_updates",
+   "name": "Update cadence",
+   "description": "Keep the user informed at the right rate.",
+   "instructions": "Workflow:\n1. Update on phase changes and blockers, not every tool call.\n2. Keep updates one line.\n3. Include current step / total.\n4. Finish with a clear status.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_artifact_index",
+   "name": "Artifact indexing",
+   "description": "Make outputs findable.",
+   "instructions": "Workflow:\n1. Collect produced file paths (file.list).\n2. file.write an index with descriptions.\n3. Reference the index in the summary.\n4. Keep it updated on changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_x_meta2_tool_cheatsheet",
+   "name": "Personal cheatsheets",
+   "description": "Maintain tool usage notes.",
+   "instructions": "Workflow:\n1. Record successful tool invocations in a notes file.\n2. Group by task type.\n3. Reuse patterns next time.\n4. Prune stale entries.",
+   "enabled": false
+  }
+ ]
+}

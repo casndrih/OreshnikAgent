@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_tool_scan_orchestration",
+   "name": "Scan orchestration",
+   "description": "Coordinate multi-tool scans.",
+   "instructions": "Workflow:\n1. Define the scan plan: order, dependencies, limits (file.write).\n2. Run stages with process.exec/python.run_file.\n3. Persist intermediate outputs per stage.\n4. Aggregate at the end (python.run_file).\n5. Report with stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_output_normalizer",
+   "name": "Tool output normalization",
+   "description": "Make outputs uniform.",
+   "instructions": "Workflow:\n1. Collect sample outputs from each tool (http.history/files).\n2. Write per-tool parsers (python.run_file).\n3. Emit one JSON schema.\n4. Round-trip test parsers.\n5. Save the normalizer.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_finding_deduplicator",
+   "name": "Finding deduplication",
+   "description": "Merge duplicate findings.",
+   "instructions": "Workflow:\n1. Key findings by (host,path,param,type) (python.run_file).\n2. Merge evidence, keep highest severity.\n3. Track sources per finding.\n4. Report unique set.\n5. Archive raws.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_severity_matrix",
+   "name": "Severity calibration",
+   "description": "Keep severity consistent.",
+   "instructions": "Workflow:\n1. Define your matrix (file.write): impact x exploitability.\n2. Map findings to cells.\n3. Review outliers manually.\n4. Keep the matrix versioned.\n5. Use everywhere.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_scan_report_md",
+   "name": "Markdown report builder",
+   "description": "Render reports from JSON.",
+   "instructions": "Workflow:\n1. Read findings JSON (file.read).\n2. Render per-finding sections via python.run_file.\n3. Embed evidence links.\n4. Redact secrets automatically.\n5. Output the md file.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_artifact_store",
+   "name": "Evidence artifact store",
+   "description": "Organize evidence files.",
+   "instructions": "Workflow:\n1. Create per-finding folders (file.write).\n2. Move evidence in with process.exec mv.\n3. Write an index.json (python.run_file).\n4. Hash files for integrity.\n5. Reference in reports.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_target_state_tracker",
+   "name": "Target state tracker",
+   "description": "Track what was tested.",
+   "instructions": "Workflow:\n1. Maintain state.json per target (python.run_file).\n2. Record tested endpoints and results.\n3. Resume incomplete scans.\n4. Summarize coverage %.\n5. Report gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_tool_health_check",
+   "name": "Tool health checks",
+   "description": "Verify the toolkit before work.",
+   "instructions": "Workflow:\n1. runtime.info for runtimes.\n2. Probe key tools with harmless runs (process.exec/python.run_file).\n3. Record versions.\n4. Flag missing pieces.\n5. Proceed only when green.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_credential_vault_notes",
+   "name": "Credential handling notes",
+   "description": "Keep secrets out of scripts.",
+   "instructions": "Workflow:\n1. Load secrets from env/files at runtime (python.run_file).\n2. Never hard-code; scan with python.run_file patterns.\n3. Rotate after engagements.\n4. Document the pattern.\n5. Enforce in review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_workspace_layout_std",
+   "name": "Workspace layout standard",
+   "description": "Keep engagements tidy.",
+   "instructions": "Workflow:\n1. Standard folders: recon, evidence, reports, notes (file.write).\n2. Name by date + target.\n3. Clean tmp weekly.\n4. Index with a manifest.\n5. Summarize layout.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_recon_pipeline",
+   "name": "Recon pipeline",
+   "description": "Standardize recon runs.",
+   "instructions": "Workflow:\n1. Stage 1 passive (web.search).\n2. Stage 2 active within scope (net.portscan, web.crawl).\n3. Normalize outputs (python.run_file).\n4. Update the attack surface map.\n5. Report deltas.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_diff_engine",
+   "name": "Finding diff engine",
+   "description": "Compare scans over time.",
+   "instructions": "Workflow:\n1. Load previous findings (file.read).\n2. Diff with new set (python.run_file).\n3. Classify: new, fixed, persistent.\n4. Alert on regressions.\n5. Save the diff.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_notify_digest",
+   "name": "Digest notifications",
+   "description": "Summarize runs for humans.",
+   "instructions": "Workflow:\n1. Compose short digests after runs (python.run_file).\n2. Top findings + stats only.\n3. Send via chat summary.\n4. Archive digests.\n5. Review cadence weekly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_chart_maker",
+   "name": "Simple charts for reports",
+   "description": "Visualize scan data.",
+   "instructions": "Workflow:\n1. Generate PNG charts via python.run_file (matplotlib if present).\n2. Severity counts, trend lines.\n3. Embed paths in reports.\n4. Keep charts readable.\n5. Save under evidence.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_cron_like_scheduler",
+   "name": "Local scheduler notes",
+   "description": "Plan recurring local jobs.",
+   "instructions": "Workflow:\n1. Document jobs and intervals (file.write).\n2. Use device alarms via app features (user setup).\n3. Log runs to files.\n4. Review outputs weekly.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_cli_tool_wrappers",
+   "name": "CLI tool wrappers",
+   "description": "Wrap tools for repeatable use.",
+   "instructions": "Workflow:\n1. Write wrapper scripts with sane defaults (file.write).\n2. Validate inputs; refuse unscoped targets.\n3. Log invocations.\n4. Version the wrappers.\n5. Test each once.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_config_templates",
+   "name": "Engagement config templates",
+   "description": "Start engagements fast.",
+   "instructions": "Workflow:\n1. Template configs for target/scope/limits (file.write).\n2. Copy per engagement.\n3. Fill and review.\n4. Track changes in git.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_review_checklists",
+   "name": "Review checklists",
+   "description": "Standardize reviews.",
+   "instructions": "Workflow:\n1. Maintain per-type checklists (file.write): web, api, mobile.\n2. Run through them during work.\n3. Record checked items with dates.\n4. Feed gaps into backlog.\n5. Summarize compliance.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_knowledge_base_notes",
+   "name": "Team knowledge base",
+   "description": "Capture durable lessons.",
+   "instructions": "Workflow:\n1. One note per lesson (file.write).\n2. Tag by technology.\n3. Link evidence.\n4. Review monthly.\n5. Prune stale.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_playbook_versioning",
+   "name": "Playbook versioning",
+   "description": "Keep playbooks current.",
+   "instructions": "Workflow:\n1. Version playbooks in files (file.write).\n2. Changelog each update.\n3. Deprecate old versions explicitly.\n4. Link from runbooks.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_repro_video_notes",
+   "name": "Repro documentation",
+   "description": "Document reproductions well.",
+   "instructions": "Workflow:\n1. Step-by-step text with exact inputs (file.write).\n2. Attach screenshots (web.browser capture).\n3. Note environment specifics.\n4. Verify from clean state.\n5. Attach to findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_scan_scheduling_policy",
+   "name": "Scan scheduling policy",
+   "description": "Define when scans run.",
+   "instructions": "Workflow:\n1. Policy file: windows, blackout times (file.write).\n2. Honor production change freezes.\n3. Log deviations.\n4. Review quarterly.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_quota_tracker",
+   "name": "Quota tracking",
+   "description": "Track tool/API usage.",
+   "instructions": "Workflow:\n1. Log usage per run (python.run_file).\n2. Compare against quotas (web.search provider docs).\n3. Alert at 80%.\n4. Adjust plans.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_triage_queue",
+   "name": "Finding triage queue",
+   "description": "Manage incoming findings.",
+   "instructions": "Workflow:\n1. Queue file with status fields (file.write).\n2. Triage daily: valid/dup/wontfix.\n3. Assign owners.\n4. Track SLA.\n5. Summarize queue.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_retro_notes",
+   "name": "Engagement retrospectives",
+   "description": "Learn from each engagement.",
+   "instructions": "Workflow:\n1. Collect what worked/pain points (file.write).\n2. Actions with owners.\n3. Feed into playbooks.\n4. Archive after review.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_integration_matrix",
+   "name": "Tool integration matrix",
+   "description": "Know how tools connect.",
+   "instructions": "Workflow:\n1. Map outputs-to-inputs between tools (file.write).\n2. Test each integration once.\n3. Document failures.\n4. Plan replacements.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_backup_engagement_data",
+   "name": "Engagement data backup",
+   "description": "Protect your work.",
+   "instructions": "Workflow:\n1. Archive workspace to shared storage (process.exec cp).\n2. Encrypt sensitive archives.\n3. Verify restore of one archive.\n4. Rotate old archives.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_legal_hold_notes",
+   "name": "Legal hold awareness",
+   "description": "Handle data under hold.",
+   "instructions": "Workflow:\n1. Identify hold scope with the owner.\n2. Freeze deletion for in-scope files (documented list).\n3. Log access.\n4. Release only in writing.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_sla_tracker",
+   "name": "SLA tracking",
+   "description": "Track remediation SLAs.",
+   "instructions": "Workflow:\n1. Compute ages from finding dates (python.run_file).\n2. Compare to policy SLAs.\n3. Escalate breaches.\n4. Report weekly.\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool_metrics_dashboard",
+   "name": "Metrics dashboard (files)",
+   "description": "Track program metrics.",
+   "instructions": "Workflow:\n1. Maintain metrics.json (python.run_file).\n2. Render a summary table (python.run_file).\n3. Review trends monthly.\n4. Feed planning.\n5. Summarize.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,805 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "ui_android_java_views_001",
+      "name": "Login and recovery — Activity and Fragment lifecycle",
+      "description": "Create a polished login and recovery with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_java_views_002",
+      "name": "Login and recovery — View Binding conventions",
+      "description": "Create a polished login and recovery with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_java_views_003",
+      "name": "Login and recovery — RecyclerView adapters",
+      "description": "Create a polished login and recovery with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_java_views_004",
+      "name": "Login and recovery — XML constraints",
+      "description": "Create a polished login and recovery with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_005",
+      "name": "Login and recovery — styles and resources",
+      "description": "Create a polished login and recovery with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_006",
+      "name": "Login and recovery — listener safety",
+      "description": "Create a polished login and recovery with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_007",
+      "name": "Login and recovery — state rendering",
+      "description": "Create a polished login and recovery with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_008",
+      "name": "Login and recovery — configuration changes",
+      "description": "Create a polished login and recovery with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_009",
+      "name": "Login and recovery — navigation and back behavior",
+      "description": "Create a polished login and recovery with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_010",
+      "name": "Login and recovery — testable UI boundaries",
+      "description": "Create a polished login and recovery with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the login and recovery; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered login and recovery at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_011",
+      "name": "Onboarding steps — Activity and Fragment lifecycle",
+      "description": "Create a polished onboarding steps with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_012",
+      "name": "Onboarding steps — View Binding conventions",
+      "description": "Create a polished onboarding steps with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_013",
+      "name": "Onboarding steps — RecyclerView adapters",
+      "description": "Create a polished onboarding steps with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_014",
+      "name": "Onboarding steps — XML constraints",
+      "description": "Create a polished onboarding steps with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_015",
+      "name": "Onboarding steps — styles and resources",
+      "description": "Create a polished onboarding steps with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_016",
+      "name": "Onboarding steps — listener safety",
+      "description": "Create a polished onboarding steps with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_017",
+      "name": "Onboarding steps — state rendering",
+      "description": "Create a polished onboarding steps with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_018",
+      "name": "Onboarding steps — configuration changes",
+      "description": "Create a polished onboarding steps with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_019",
+      "name": "Onboarding steps — navigation and back behavior",
+      "description": "Create a polished onboarding steps with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_020",
+      "name": "Onboarding steps — testable UI boundaries",
+      "description": "Create a polished onboarding steps with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the onboarding steps; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered onboarding steps at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_021",
+      "name": "Main dashboard — Activity and Fragment lifecycle",
+      "description": "Create a polished main dashboard with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_022",
+      "name": "Main dashboard — View Binding conventions",
+      "description": "Create a polished main dashboard with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_023",
+      "name": "Main dashboard — RecyclerView adapters",
+      "description": "Create a polished main dashboard with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_024",
+      "name": "Main dashboard — XML constraints",
+      "description": "Create a polished main dashboard with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_025",
+      "name": "Main dashboard — styles and resources",
+      "description": "Create a polished main dashboard with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_026",
+      "name": "Main dashboard — listener safety",
+      "description": "Create a polished main dashboard with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_027",
+      "name": "Main dashboard — state rendering",
+      "description": "Create a polished main dashboard with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_028",
+      "name": "Main dashboard — configuration changes",
+      "description": "Create a polished main dashboard with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_029",
+      "name": "Main dashboard — navigation and back behavior",
+      "description": "Create a polished main dashboard with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_030",
+      "name": "Main dashboard — testable UI boundaries",
+      "description": "Create a polished main dashboard with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the main dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered main dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_031",
+      "name": "Product list and details — Activity and Fragment lifecycle",
+      "description": "Create a polished product list and details with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_032",
+      "name": "Product list and details — View Binding conventions",
+      "description": "Create a polished product list and details with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_033",
+      "name": "Product list and details — RecyclerView adapters",
+      "description": "Create a polished product list and details with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_034",
+      "name": "Product list and details — XML constraints",
+      "description": "Create a polished product list and details with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_035",
+      "name": "Product list and details — styles and resources",
+      "description": "Create a polished product list and details with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_036",
+      "name": "Product list and details — listener safety",
+      "description": "Create a polished product list and details with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_037",
+      "name": "Product list and details — state rendering",
+      "description": "Create a polished product list and details with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_038",
+      "name": "Product list and details — configuration changes",
+      "description": "Create a polished product list and details with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_039",
+      "name": "Product list and details — navigation and back behavior",
+      "description": "Create a polished product list and details with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_040",
+      "name": "Product list and details — testable UI boundaries",
+      "description": "Create a polished product list and details with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the product list and details; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered product list and details at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_041",
+      "name": "Settings screen — Activity and Fragment lifecycle",
+      "description": "Create a polished settings screen with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_042",
+      "name": "Settings screen — View Binding conventions",
+      "description": "Create a polished settings screen with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_043",
+      "name": "Settings screen — RecyclerView adapters",
+      "description": "Create a polished settings screen with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_044",
+      "name": "Settings screen — XML constraints",
+      "description": "Create a polished settings screen with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_045",
+      "name": "Settings screen — styles and resources",
+      "description": "Create a polished settings screen with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_046",
+      "name": "Settings screen — listener safety",
+      "description": "Create a polished settings screen with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_047",
+      "name": "Settings screen — state rendering",
+      "description": "Create a polished settings screen with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_048",
+      "name": "Settings screen — configuration changes",
+      "description": "Create a polished settings screen with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_049",
+      "name": "Settings screen — navigation and back behavior",
+      "description": "Create a polished settings screen with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_050",
+      "name": "Settings screen — testable UI boundaries",
+      "description": "Create a polished settings screen with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the settings screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered settings screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_051",
+      "name": "Profile screen — Activity and Fragment lifecycle",
+      "description": "Create a polished profile screen with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_052",
+      "name": "Profile screen — View Binding conventions",
+      "description": "Create a polished profile screen with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_053",
+      "name": "Profile screen — RecyclerView adapters",
+      "description": "Create a polished profile screen with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_054",
+      "name": "Profile screen — XML constraints",
+      "description": "Create a polished profile screen with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_055",
+      "name": "Profile screen — styles and resources",
+      "description": "Create a polished profile screen with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_056",
+      "name": "Profile screen — listener safety",
+      "description": "Create a polished profile screen with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_057",
+      "name": "Profile screen — state rendering",
+      "description": "Create a polished profile screen with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_058",
+      "name": "Profile screen — configuration changes",
+      "description": "Create a polished profile screen with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_059",
+      "name": "Profile screen — navigation and back behavior",
+      "description": "Create a polished profile screen with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_060",
+      "name": "Profile screen — testable UI boundaries",
+      "description": "Create a polished profile screen with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the profile screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered profile screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_061",
+      "name": "Cart and checkout — Activity and Fragment lifecycle",
+      "description": "Create a polished cart and checkout with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_062",
+      "name": "Cart and checkout — View Binding conventions",
+      "description": "Create a polished cart and checkout with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_063",
+      "name": "Cart and checkout — RecyclerView adapters",
+      "description": "Create a polished cart and checkout with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_064",
+      "name": "Cart and checkout — XML constraints",
+      "description": "Create a polished cart and checkout with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_065",
+      "name": "Cart and checkout — styles and resources",
+      "description": "Create a polished cart and checkout with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_066",
+      "name": "Cart and checkout — listener safety",
+      "description": "Create a polished cart and checkout with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_067",
+      "name": "Cart and checkout — state rendering",
+      "description": "Create a polished cart and checkout with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_068",
+      "name": "Cart and checkout — configuration changes",
+      "description": "Create a polished cart and checkout with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_069",
+      "name": "Cart and checkout — navigation and back behavior",
+      "description": "Create a polished cart and checkout with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_070",
+      "name": "Cart and checkout — testable UI boundaries",
+      "description": "Create a polished cart and checkout with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the cart and checkout; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered cart and checkout at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_071",
+      "name": "Conversation list — Activity and Fragment lifecycle",
+      "description": "Create a polished conversation list with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_072",
+      "name": "Conversation list — View Binding conventions",
+      "description": "Create a polished conversation list with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_073",
+      "name": "Conversation list — RecyclerView adapters",
+      "description": "Create a polished conversation list with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_074",
+      "name": "Conversation list — XML constraints",
+      "description": "Create a polished conversation list with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_075",
+      "name": "Conversation list — styles and resources",
+      "description": "Create a polished conversation list with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_076",
+      "name": "Conversation list — listener safety",
+      "description": "Create a polished conversation list with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_077",
+      "name": "Conversation list — state rendering",
+      "description": "Create a polished conversation list with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_078",
+      "name": "Conversation list — configuration changes",
+      "description": "Create a polished conversation list with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_079",
+      "name": "Conversation list — navigation and back behavior",
+      "description": "Create a polished conversation list with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_080",
+      "name": "Conversation list — testable UI boundaries",
+      "description": "Create a polished conversation list with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the conversation list; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered conversation list at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_081",
+      "name": "Report summary — Activity and Fragment lifecycle",
+      "description": "Create a polished report summary with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_082",
+      "name": "Report summary — View Binding conventions",
+      "description": "Create a polished report summary with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_083",
+      "name": "Report summary — RecyclerView adapters",
+      "description": "Create a polished report summary with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_084",
+      "name": "Report summary — XML constraints",
+      "description": "Create a polished report summary with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_085",
+      "name": "Report summary — styles and resources",
+      "description": "Create a polished report summary with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_086",
+      "name": "Report summary — listener safety",
+      "description": "Create a polished report summary with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_087",
+      "name": "Report summary — state rendering",
+      "description": "Create a polished report summary with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_088",
+      "name": "Report summary — configuration changes",
+      "description": "Create a polished report summary with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_089",
+      "name": "Report summary — navigation and back behavior",
+      "description": "Create a polished report summary with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_090",
+      "name": "Report summary — testable UI boundaries",
+      "description": "Create a polished report summary with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the report summary; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered report summary at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_091",
+      "name": "Confirmation and empty states — Activity and Fragment lifecycle",
+      "description": "Create a polished confirmation and empty states with deliberate Activity and Fragment lifecycle using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply Activity and Fragment lifecycle: Bind rendering to the correct lifecycle owner and release observers, listeners, and view references at teardown. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_092",
+      "name": "Confirmation and empty states — View Binding conventions",
+      "description": "Create a polished confirmation and empty states with deliberate View Binding conventions using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply View Binding conventions: Follow the module’s generated binding convention and avoid repeated findViewById chains in event handlers. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_093",
+      "name": "Confirmation and empty states — RecyclerView adapters",
+      "description": "Create a polished confirmation and empty states with deliberate RecyclerView adapters using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply RecyclerView adapters: Use a typed ViewHolder and stable identity; keep row rendering deterministic when items are recycled. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_094",
+      "name": "Confirmation and empty states — XML constraints",
+      "description": "Create a polished confirmation and empty states with deliberate XML constraints using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply XML constraints: Prefer clear ConstraintLayout relationships over nested weighted layouts that remeasure large hierarchies. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_095",
+      "name": "Confirmation and empty states — styles and resources",
+      "description": "Create a polished confirmation and empty states with deliberate styles and resources using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply styles and resources: Use shared styles, dimensions, strings, and theme attributes; avoid embedding user-visible text and colors in Java. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_096",
+      "name": "Confirmation and empty states — listener safety",
+      "description": "Create a polished confirmation and empty states with deliberate listener safety using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply listener safety: Keep listeners small, avoid retaining an Activity in long-lived callbacks, and detach subscriptions with lifecycle changes. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_097",
+      "name": "Confirmation and empty states — state rendering",
+      "description": "Create a polished confirmation and empty states with deliberate state rendering using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state rendering: Represent loading, content, empty, and error states explicitly rather than accumulating conditional view mutations. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_098",
+      "name": "Confirmation and empty states — configuration changes",
+      "description": "Create a polished confirmation and empty states with deliberate configuration changes using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply configuration changes: Preserve the intended screen state across rotation, night mode, and process recreation without storing large objects in Bundles. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_099",
+      "name": "Confirmation and empty states — navigation and back behavior",
+      "description": "Create a polished confirmation and empty states with deliberate navigation and back behavior using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply navigation and back behavior: Route actions through the app’s navigation convention and define predictable back behavior for transient screens. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_java_views_100",
+      "name": "Confirmation and empty states — testable UI boundaries",
+      "description": "Create a polished confirmation and empty states with deliberate testable UI boundaries using Java with Android Views and XML layouts.",
+      "category": "Android / Java / Views UI",
+      "instructions": "Inspect source language, minimum SDK, XML binding setup, and installed Material libraries first. Keep the implementation in Java and Views; do not introduce Kotlin or Compose during a focused UI task.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the confirmation and empty states; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply testable UI boundaries: Keep formatting and state decisions out of click listeners so behavior can be tested without launching every screen. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered confirmation and empty states at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_131",
+      "name": "SQLMap engagement operations: Tie run to change ticket",
+      "description": "Make a low-impact SQLMap check auditable within the owner process.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Record ticket, approved asset, parameter, schedule, and operator before using the app scan tool.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_132",
+      "name": "SQLMap engagement operations: Coordinate monitoring",
+      "description": "Help service owners distinguish test traffic from incidents.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Notify the agreed contact of the short window and one-thread profile; stop if they report unexpected impact.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_133",
+      "name": "SQLMap engagement operations: Name escalation contact",
+      "description": "Avoid continuing when target behavior becomes unstable.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Obtain reachable owner contact and escalation path before production checks; know the stop signal/channel.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_134",
+      "name": "SQLMap engagement operations: Run preflight checklist",
+      "description": "Catch scope and app setup mistakes before network traffic starts.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Verify authorization, exact URL, test account, runtime status, required confirmation, output workspace, and default profile.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_135",
+      "name": "SQLMap engagement operations: Coordinate shared ownership",
+      "description": "Prevent overlapping team tests against the same service.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Ask who else is testing, assign one window, and avoid parallel scans even when multiple endpoints are approved.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_136",
+      "name": "SQLMap engagement operations: Manage third-party dependencies",
+      "description": "Confirm authorization when an app calls services outside owner control.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Do not test a vendor-hosted redirect or API without separate written approval from that service owner.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_137",
+      "name": "SQLMap engagement operations: Respond to incident signal",
+      "description": "Prioritize service recovery over assessment completion.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Stop scanning, preserve timestamp and minimal logs, notify the owner, and do not resume without approval.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_138",
+      "name": "SQLMap engagement operations: Use seeded test records",
+      "description": "Keep validation data isolated from live customer records.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Ask the owner to provision non-sensitive rows and avoid changing application state during the check.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_139",
+      "name": "SQLMap engagement operations: Respect change freezes",
+      "description": "Avoid traffic during deployments or incident response.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Confirm a stable window and postpone if the owner declares a freeze or active incident.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_140",
+      "name": "SQLMap engagement operations: Close the assessment",
+      "description": "Ensure credentials, artifacts, and findings are handed off correctly.",
+      "category": "SQLMap / Engagement operations",
+      "instructions": "Workflow:\n1. Coordinate with the system owner and record approval/change reference.\n2. Confirm test account, host, path, time window, monitoring contact, and stop criteria.\n3. Notify the owner, revoke temporary credentials, deliver the sanitized report, and follow retention requirements.\n4. Run one app-scoped check at a time and close the loop with sanitized evidence.\n\nSafety: target only owner-authorized scope via web.sqlmap with \u0007uthorized_target=true; keep defaults and stop on instability. Never dump data, use shells/file access, evade controls, or take destructive actions.",
+      "enabled": false
+    }
+  ]
+}

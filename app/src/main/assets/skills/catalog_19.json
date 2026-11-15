@@ -1,0 +1,327 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_api_openapi_ingest",
+   "name": "OpenAPI spec ingestion",
+   "description": "Turn specs into test plans.",
+   "instructions": "Workflow:\n1. Fetch the spec (process.exec curl).\n2. Parse paths/methods/params with python.run_file.\n3. Generate a test matrix (auth/no-auth, params).\n4. Prioritize sensitive operations.\n5. Save the plan.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_auth_matrix",
+   "name": "API auth matrix testing",
+   "description": "Test endpoint authorization systematically.",
+   "instructions": "Workflow:\n1. Collect endpoints from spec/traffic (http.history).\n2. Replay each as anonymous and low-priv user (http.replay).\n3. Record expected vs actual (python.run_file matrix).\n4. Flag endpoints missing enforcement.\n5. Report the matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_jwt_none_alg",
+   "name": "JWT alg=none testing",
+   "description": "Test unsigned token acceptance.",
+   "instructions": "Workflow:\n1. Obtain a valid JWT for your account (http.capture).\n2. Craft an alg=none variant with python.run_file.\n3. Replay via http.replay against your instance.\n4. Observe acceptance.\n5. Report with remediation (pin algorithms).",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_jwt_key_confusion",
+   "name": "JWT key confusion testing",
+   "description": "Test RS/HS confusion safely.",
+   "instructions": "Workflow:\n1. Fetch the public key (if published).\n2. Craft HS256 token signed with the public key as secret (python.run_file).\n3. Replay against your lab instance.\n4. Record acceptance.\n5. Report the verification flaw.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_jwt_kid_injection",
+   "name": "JWT kid parameter testing",
+   "description": "Probe kid handling.",
+   "instructions": "Workflow:\n1. Decode header (python.run_file).\n2. Test kid traversal/path payloads on your instance (http.replay).\n3. Observe errors that reveal file access.\n4. Confirm with harmless proof paths.\n5. Report input validation gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_mass_assignment",
+   "name": "Mass assignment testing",
+   "description": "Test over-posting at scale.",
+   "instructions": "Workflow:\n1. Capture object update payloads (http.capture).\n2. Extend with privileged fields (role, owner) via python.run_file.\n3. Replay via http.replay.\n4. Verify effect with read-back.\n5. Report DTO allowlisting need.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_bola_sweep",
+   "name": "BOLA sweep automation",
+   "description": "Sweep object endpoints for IDOR.",
+   "instructions": "Workflow:\n1. Enumerate object ids from http.history.\n2. Substitute ids across users (your test accounts) via python.run_file+http.replay.\n3. Record cross-access results.\n4. Chain into impact statements.\n5. Report per-endpoint.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_graphql_batch_abuse",
+   "name": "GraphQL batching abuse",
+   "description": "Test batch/alias abuse lightly.",
+   "instructions": "Workflow:\n1. Send aliased duplicate queries via http.replay.\n2. Measure amplification (response size).\n3. Check rate limiting behavior.\n4. Keep counts tiny.\n5. Recommend query cost limits.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_graphql_authz_field",
+   "name": "GraphQL field authz",
+   "description": "Test field-level authorization.",
+   "instructions": "Workflow:\n1. Introspect schema (your instance).\n2. Query sensitive fields as low-priv user via http.replay.\n3. Record leaks.\n4. Automate the field list (python.run_file).\n5. Report field guards.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_rest_version_probing",
+   "name": "API version probing",
+   "description": "Find deprecated/unsecured versions.",
+   "instructions": "Workflow:\n1. Probe /v1,/v2,/v3 paths via http.replay.\n2. Compare auth enforcement across versions.\n3. Note old versions with weaker checks.\n4. Verify with benign requests.\n5. Report version hygiene.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_rate_limit_map",
+   "name": "API rate limit mapping",
+   "description": "Map per-endpoint limits politely.",
+   "instructions": "Workflow:\n1. Small bursts per endpoint (http.capture.repeat).\n2. Record 429 thresholds (python.run_file).\n3. Note headers exposing limits.\n4. Stop early everywhere.\n5. Publish the limit table internally.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_webhook_signature_test",
+   "name": "Webhook signature testing",
+   "description": "Verify webhook validation.",
+   "instructions": "Workflow:\n1. Capture a webhook delivery (http.capture).\n2. Replay with invalid/missing signature via http.replay.\n3. Observe acceptance.\n4. Confirm the signing scheme from docs (web.search).\n5. Report validation gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_key_scope_test",
+   "name": "API key scope testing",
+   "description": "Test key permission scopes.",
+   "instructions": "Workflow:\n1. Generate keys with minimal scope on your account.\n2. Attempt higher-privilege calls via http.replay.\n3. Record enforcement.\n4. Automate the scope matrix (python.run_file).\n5. Report gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_file_api_abuse",
+   "name": "File API abuse testing",
+   "description": "Test file endpoints' authorization.",
+   "instructions": "Workflow:\n1. Locate upload/download endpoints (http.history).\n2. Cross-account access attempts on test data (http.replay).\n3. Path traversal probes (benign).\n4. Record results.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_response_shaping",
+   "name": "Response shaping tests",
+   "description": "Test verbose responses.",
+   "instructions": "Workflow:\n1. Replay with fields[] / include params (http.replay).\n2. Observe extra data exposure.\n3. Automate param candidate list (python.run_file).\n4. Report over-sharing.\n5. Recommend response models.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_hateoas_recon",
+   "name": "HATEOAS link mining",
+   "description": "Mine API links for hidden routes.",
+   "instructions": "Workflow:\n1. Parse _links/rels from responses (python.run_file).\n2. Queue discovered routes for testing.\n3. Verify each exists (benign GET).\n4. Update the endpoint inventory.\n5. Save the graph.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_deprecation_fuzz",
+   "name": "Deprecation behavior testing",
+   "description": "Test sunset behavior.",
+   "instructions": "Workflow:\n1. Read Sunset/Deprecation headers (http.capture).\n2. Probe behavior after sunset dates (simulated).\n3. Check for silent removal vs errors.\n4. Document client impact.\n5. Report lifecycle gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_error_fingerprint",
+   "name": "API error fingerprinting",
+   "description": "Fingerprint backend from errors.",
+   "instructions": "Workflow:\n1. Trigger structured errors via malformed JSON (http.replay).\n2. Collect stack/version signatures.\n3. Map to frameworks (python.run_file).\n4. Verify with docs (web.search).\n5. Record in notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_pagination_abuse",
+   "name": "Pagination abuse testing",
+   "description": "Test pagination limits.",
+   "instructions": "Workflow:\n1. Request huge offsets/limits via http.replay.\n2. Observe performance and data exposure.\n3. Test negative/zero sizes.\n4. Automate boundary cases (python.run_file).\n5. Recommend caps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_object_tree_walk",
+   "name": "Object graph walking",
+   "description": "Walk accessible object graphs.",
+   "instructions": "Workflow:\n1. From one object, follow relation fields (python.run_file).\n2. Check authz at each hop (your test data).\n3. Map reachable sensitive objects.\n4. Report chain exposure.\n5. Suggest per-hop checks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_concurrency_abuse",
+   "name": "Concurrency abuse tests",
+   "description": "Test concurrent mutations.",
+   "instructions": "Workflow:\n1. Issue concurrent identical mutations via http.capture.repeat (tiny N).\n2. Observe double-effects on test data.\n3. Automate timing with python.run_file threads.\n4. Document idempotency gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_webhook_ssrf",
+   "name": "Webhook SSRF testing",
+   "description": "Test webhook URL fetchers.",
+   "instructions": "Workflow:\n1. Register webhook to your listener on your instance.\n2. Try internal URL schemes via http.replay.\n3. Confirm internal reachability signals.\n4. Keep payloads harmless.\n5. Report SSRF fix (allowlists).",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_token_entropy",
+   "name": "Token entropy review",
+   "description": "Assess token randomness.",
+   "instructions": "Workflow:\n1. Collect a token sample (your account) (http.capture).\n2. Analyze entropy/structure with python.run_file.\n3. Flag sequential/short tokens.\n4. Recommend CSPRNG + length.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_multi_tenant_isolation",
+   "name": "Tenant isolation testing",
+   "description": "Verify tenant boundaries.",
+   "instructions": "Workflow:\n1. Create two tenants (your instance).\n2. Cross-access object ids between tenants via http.replay.\n3. Automate the check set (python.run_file).\n4. Record leaks.\n5. Report with tenant-scoping fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_doc_drift",
+   "name": "Docs vs reality drift",
+   "description": "Compare docs to behavior.",
+   "instructions": "Workflow:\n1. Pull documented endpoints (web.crawl).\n2. Probe undocumented-but-live paths (http.replay).\n3. Flag undocumented sensitive routes.\n4. Verify each manually.\n5. Report drift.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_rate_bypass_headers",
+   "name": "Rate limit header tests",
+   "description": "Test limit bypass vectors.",
+   "instructions": "Workflow:\n1. Replay with X-Forwarded-For variants (http.replay).\n2. Observe limit bucket changes.\n3. Test header case/spaces (python.run_file).\n4. Document trust-boundary flaws.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_schema_validation",
+   "name": "Schema validation testing",
+   "description": "Test strictness of validators.",
+   "instructions": "Workflow:\n1. Send type-confused fields (strings for ints, arrays) via http.replay.\n2. Observe acceptance and coercion.\n3. Automate type matrix (python.run_file).\n4. Document coercion risks.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_account_enum",
+   "name": "Account enumeration via API",
+   "description": "Test enumeration vectors.",
+   "instructions": "Workflow:\n1. Compare register/reset error messages (http.replay).\n2. Measure timing differences (python.run_file).\n3. Automate a small probe set.\n4. Document uniformity gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_logout_invalidation",
+   "name": "Logout invalidation testing",
+   "description": "Verify token death on logout.",
+   "instructions": "Workflow:\n1. Logout; replay the old token (http.replay).\n2. Observe acceptance.\n3. Test across devices (your accounts).\n4. Record invalidation gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_audit_log_check",
+   "name": "Audit logging verification",
+   "description": "Verify security events are logged.",
+   "instructions": "Workflow:\n1. Perform notable actions (login fail, perm change) on your instance.\n2. Fetch logs (if exposed to you).\n3. Confirm entries exist (python.run_file).\n4. Report logging gaps.\n5. Recommend event coverage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_payload_size_abuse",
+   "name": "Payload size abuse tests",
+   "description": "Test size limits.",
+   "instructions": "Workflow:\n1. Send growing payloads via http.replay (capped).\n2. Observe 413 vs processing.\n3. Check decompression bombs awareness (do not send).\n4. Document limits.\n5. Recommend explicit caps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_pagination_id_scan",
+   "name": "Sequential id scan (owned data)",
+   "description": "Test id predictability.",
+   "instructions": "Workflow:\n1. Sample ids from your objects (http.capture).\n2. Analyze sequence with python.run_file.\n3. Test predictability with benign requests.\n4. Report exposure of id patterns.\n5. Recommend opaque ids where needed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_version_skew_exploit",
+   "name": "Version skew exploitation (authorized)",
+   "description": "Exploit weaker old versions on your stack.",
+   "instructions": "Workflow:\n1. Map versions present (cat_api_rest_version_probing).\n2. Test known weaknesses only on old versions you own.\n3. Document a working chain.\n4. Recommend deprecation enforcement.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_test_data_mgmt",
+   "name": "API test data management",
+   "description": "Keep test data clean.",
+   "instructions": "Workflow:\n1. Tag all created objects in names.\n2. Enumerate and delete test data at session end (API calls).\n3. Verify cleanup.\n4. Log leftovers.\n5. Report hygiene.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_contract_tests",
+   "name": "API contract tests",
+   "description": "Pin API behavior with tests.",
+   "instructions": "Workflow:\n1. Write request/response assertions in python.run_file.\n2. Cover auth, validation, errors.\n3. Run in CI-like fashion from the workspace.\n4. Flag drift on failure.\n5. Save the suite.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_webauth_flow_test",
+   "name": "WebAuthn flow testing",
+   "description": "Test WebAuthn integration.",
+   "instructions": "Workflow:\n1. Register a credential on your instance (UI-driven).\n2. Test challenge replay/signature checks conceptually.\n3. Verify fallback paths are not weaker.\n4. Document gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_oauth_pkce_check",
+   "name": "OAuth PKCE enforcement",
+   "description": "Verify PKCE usage.",
+   "instructions": "Workflow:\n1. Capture authorize requests (http.capture).\n2. Check code_challenge presence.\n3. Replay without PKCE on your client (http.replay).\n4. Record enforcement.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_oauth_token_replay",
+   "name": "OAuth code replay",
+   "description": "Test authorization code reuse.",
+   "instructions": "Workflow:\n1. Complete a flow on your instance; capture the code (http.capture).\n2. Replay the code exchange (http.replay).\n3. Observe acceptance.\n4. Document one-time-use gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_saml_assertion_note",
+   "name": "SAML basics review",
+   "description": "Review SAML integration posture.",
+   "instructions": "Workflow:\n1. Collect metadata (web.crawl).\n2. Check signing requirements (docs).\n3. Test signature enforcement conceptually on your SP.\n4. Document gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_graphql_cost_limit",
+   "name": "GraphQL cost limiting",
+   "description": "Assess query cost controls.",
+   "instructions": "Workflow:\n1. Compose deep queries on your instance (http.replay).\n2. Measure server tolerance.\n3. Note timeout/error behavior.\n4. Automate depth/width matrix (python.run_file).\n5. Recommend cost analysis.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_mtls_check",
+   "name": "mTLS verification",
+   "description": "Test client-cert enforcement.",
+   "instructions": "Workflow:\n1. Probe endpoint without cert (http.replay).\n2. Note rejection behavior.\n3. Review cert requirements in docs.\n4. Document gaps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_cors_preflight",
+   "name": "CORS preflight testing",
+   "description": "Test preflight handling.",
+   "instructions": "Workflow:\n1. Send OPTIONS with varied origins via http.replay.\n2. Observe ACAO behavior.\n3. Test credential flows.\n4. Automate origin matrix (python.run_file).\n5. Report misconfig.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_logging_redaction",
+   "name": "Log redaction verification",
+   "description": "Verify secrets stay out of logs.",
+   "instructions": "Workflow:\n1. Trigger errors with secret-like fields (your fake secrets).\n2. Fetch logs you can see.\n3. Scan for leakage (python.run_file).\n4. Report gaps.\n5. Recommend redaction.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_perf_timing_leak",
+   "name": "Timing side-channel basics",
+   "description": "Assess timing leaks.",
+   "instructions": "Workflow:\n1. Measure comparison-sensitive endpoints (python.run_file stats).\n2. Correlate with validity.\n3. Repeat for confidence.\n4. Document findings.\n5. Recommend constant-time patterns.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_feature_flag_abuse",
+   "name": "Feature flag abuse",
+   "description": "Test flag enforcement.",
+   "instructions": "Workflow:\n1. Enumerate flags from responses (python.run_file).\n2. Attempt enabling via request params (http.replay).\n3. Observe server acceptance.\n4. Document client-trust issues.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_api_download_control",
+   "name": "Download control testing",
+   "description": "Test download auth/paths.",
+   "instructions": "Workflow:\n1. Capture download URLs (http.capture).\n2. Test signature expiry and reuse (http.replay).\n3. Probe path traversal in params (benign).\n4. Record results.\n5. Report.",
+   "enabled": false
+  }
+ ]
+}

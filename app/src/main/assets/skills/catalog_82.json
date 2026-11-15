@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_121",
+      "name": "SQLMap reporting: Write executive summary",
+      "description": "Explain the result to service owners without excess SQLMap jargon.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. State scope, whether an issue was confirmed, high-level impact, and immediate owner action; omit raw data.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_122",
+      "name": "SQLMap reporting: Write technical evidence",
+      "description": "Give engineers sanitized evidence to locate the affected input.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Include method, route, parameter, versions, safe profile, signal, and artifact path; redact tokens and response data.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_123",
+      "name": "SQLMap reporting: Bound impact language",
+      "description": "Avoid claiming compromise from a scanner signal alone.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Describe only what the authorized low-impact test demonstrated; label unverified access paths unknown.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_124",
+      "name": "SQLMap reporting: Recommend parameterized queries",
+      "description": "Translate SQL injection evidence into a durable code fix.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Recommend prepared statements or parameter binding at the data-access boundary; do not treat input filtering or WAF rules as primary repair.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_125",
+      "name": "SQLMap reporting: Review ORM construction",
+      "description": "Check unsafe raw SQL paths even when an ORM is present.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Trace the named input into raw-query APIs and replace string concatenation with bound parameters.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_126",
+      "name": "SQLMap reporting: Design a safe retest",
+      "description": "Verify a fix using the same authorized fixture and minimal profile.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Use original endpoint/parameter after the patch, keep baseline settings, and state whether the signal recurs.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_127",
+      "name": "SQLMap reporting: Document limitations",
+      "description": "Make uncovered methods, inputs, and profiles explicit.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. List parameters not tested, token/auth issues, interruptions, and exclusions; do not turn gaps into a clean bill of health.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_128",
+      "name": "SQLMap reporting: Assess severity conservatively",
+      "description": "Base severity on confirmed reachability and business context.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Ask owner to validate sensitivity and preconditions; distinguish potential from demonstrated impact.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_129",
+      "name": "SQLMap reporting: Explain WAF limitations",
+      "description": "Keep compensating controls separate from code correction.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. A WAF may reduce exposure but does not remove unsafe query construction; recommend fixing source and retesting.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_130",
+      "name": "SQLMap reporting: Communicate securely",
+      "description": "Deliver findings only to authorized owners and engineers.",
+      "category": "SQLMap / Reporting and remediation",
+      "instructions": "Workflow:\n1. Report the exact approved endpoint and input with secrets redacted.\n2. Separate observed SQLMap evidence, confidence, impact, and test limitations.\n3. Use the agreed channel, redact artifacts, include owner/action date, and avoid broad distribution.\n4. Recommend owner-side remediation and an authorized minimal retest.\n\nSafety: report only minimum redacted evidence from owner-authorized tests. Never include dumped records, credentials, server files, or out-of-scope data.",
+      "enabled": false
+    }
+  ]
+}

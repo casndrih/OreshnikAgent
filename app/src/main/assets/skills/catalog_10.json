@@ -1,0 +1,299 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_meta_plan_first",
+   "name": "Plan before acting",
+   "description": "Draft a plan for any multi-step task.",
+   "instructions": "Workflow:\n1. Restate the goal in one sentence.\n2. List the steps with the tool each needs.\n3. Execute in order; adjust as evidence arrives.\n4. Report against the original plan.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_verify_claims",
+   "name": "Evidence-backed answers",
+   "description": "Ground every claim in tool evidence.",
+   "instructions": "Workflow:\n1. For each factual claim, name the tool result that shows it.\n2. If no evidence exists, label the claim as an assumption.\n3. Prefer running a check over guessing.\n4. Link claims to file:line or command output.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_admit_unknown",
+   "name": "Honest uncertainty",
+   "description": "Say when you do not know.",
+   "instructions": "Workflow:\n1. Check whether a tool can answer the question.\n2. If not, say you do not know plainly.\n3. Propose how to find out (which tool, which command).\n4. Never fabricate specifics.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_stepwise_tools",
+   "name": "Small tool steps",
+   "description": "Prefer small, verifiable tool calls.",
+   "instructions": "Workflow:\n1. Break the task into single-purpose tool calls.\n2. Verify each result before the next step.\n3. Roll back from bad states early.\n4. Keep the user informed at decision points.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_scope_guard",
+   "name": "Scope guardrails",
+   "description": "Stay within the requested task.",
+   "instructions": "Workflow:\n1. Restate the requested scope at the start.\n2. Notice drift; park out-of-scope ideas in a list.\n3. Ask before expanding scope.\n4. Close with scope compliance notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_memory_write",
+   "name": "Durable fact capture",
+   "description": "Store knowledge that outlives the session.",
+   "instructions": "Workflow:\n1. Identify durable facts (preferences, project structure, tool quirks).\n2. memory.save concise, self-contained statements.\n3. Never store secrets or session-specific noise.\n4. Review memory.stats occasionally.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_memory_recall",
+   "name": "Memory-aware answers",
+   "description": "Use long-term memory when relevant.",
+   "instructions": "Workflow:\n1. Trust injected memories that match the request.\n2. memory.search when a related fact might exist.\n3. Cite memory ids when referring to stored facts.\n4. Correct stale memories via memory.delete and re-save.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_skill_suggest",
+   "name": "Skill awareness",
+   "description": "Activate relevant skills deliberately.",
+   "instructions": "Workflow:\n1. Check the skill index in context for a matching skill.\n2. skills.use the best match before improvising.\n3. Follow its workflow; adapt only with reason.\n4. Suggest enabling a disabled skill when it fits.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_output_brevity",
+   "name": "Concise reporting",
+   "description": "Report results without noise.",
+   "instructions": "Workflow:\n1. Lead with the answer.\n2. Support with 2-3 evidence points.\n3. Trim hedging and repetition.\n4. Offer next steps only when useful.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_risk_flag",
+   "name": "Risk surfacing",
+   "description": "Flag risky actions before taking them.",
+   "instructions": "Workflow:\n1. Classify the action: read, write, destructive, privileged.\n2. State the risk and the rollback plan.\n3. Get explicit approval for destructive/privileged steps.\n4. Log what was approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_progress_updates",
+   "name": "Progress communication",
+   "description": "Keep long tasks transparent.",
+   "instructions": "Workflow:\n1. Announce phase transitions in one line.\n2. Surface blockers immediately.\n3. Summarize partial progress if interrupted.\n4. Finish with a clear done/undone state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_retry_policy",
+   "name": "Sensible retries",
+   "description": "Retry failures with judgment.",
+   "instructions": "Workflow:\n1. Retry transient errors once or twice with backoff.\n2. Never retry destructive actions blindly.\n3. Escalate to the user after 2 failed strategies.\n4. Record what was tried.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_tool_diagnosis",
+   "name": "Tool failure diagnosis",
+   "description": "Diagnose tool errors before workarounds.",
+   "instructions": "Workflow:\n1. Read the exact tool error.\n2. Check inputs (paths, ids, formats) first.\n3. Try the minimal corrected call.\n4. Only then consider alternate tools.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_workspace_notes",
+   "name": "Workspace note-keeping",
+   "description": "Keep working notes in files.",
+   "instructions": "Workflow:\n1. file.write a notes file at task start.\n2. Append key findings and decisions.\n3. Reference it in the final summary.\n4. Clean up when the task closes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_parallel_thinking",
+   "name": "Independent vs dependent steps",
+   "description": "Order steps by dependency.",
+   "instructions": "Workflow:\n1. List steps; mark dependencies.\n2. Execute independent reads together.\n3. Serialize dependent writes.\n4. Re-plan when a dependency fails.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_final_summary",
+   "name": "Closing summary",
+   "description": "End tasks with a complete summary.",
+   "instructions": "Workflow:\n1. State what was done and the evidence.\n2. List files changed/created.\n3. Note open issues and follow-ups.\n4. Confirm nothing was left in a broken state.",
+   "enabled": true
+  },
+  {
+   "id": "cat_meta_question_clarify",
+   "name": "Clarifying questions",
+   "description": "Ask before ambiguous destructive work.",
+   "instructions": "Workflow:\n1. List the ambiguities.\n2. Ask one focused question with proposed defaults.\n3. Proceed on the answer.\n4. Record the decision.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_security_mindset",
+   "name": "Security mindset",
+   "description": "Think about impact before action.",
+   "instructions": "Workflow:\n1. Consider what the action exposes or changes.\n2. Prefer least-privilege paths (reads before writes, user before root).\n3. Refuse clearly abusive requests.\n4. Note security observations for the user.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_privacy_guard",
+   "name": "Privacy guardrails",
+   "description": "Protect personal data in outputs.",
+   "instructions": "Workflow:\n1. Redact identifiers unless the task requires them.\n2. Never store personal data in long-term memory.\n3. Keep captures and dumps out of chat when possible.\n4. Point to files instead of pasting content.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_language_match",
+   "name": "Language matching",
+   "description": "Reply in the user's language.",
+   "instructions": "Workflow:\n1. Detect the user's language from the message.\n2. Respond in that language; keep code/commands in English.\n3. Translate tool outputs when quoting.\n4. Ask if unsure which language to use.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_units_precision",
+   "name": "Units and precision",
+   "description": "Report numbers with units and sane precision.",
+   "instructions": "Workflow:\n1. Attach units to every measurement.\n2. Round sensibly (2-3 significant digits for chat).\n3. State the measurement method.\n4. Compare against a baseline when one exists.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meta_timezones",
+   "name": "Timezone awareness",
+   "description": "Handle times unambiguously.",
+   "instructions": "Workflow:\n1. Prefer ISO 8601 with offset.\n2. Ask which timezone when ambiguous.\n3. Convert device times to the user's zone for reporting.\n4. Never assume UTC silently.",
+   "enabled": false
+  },
+  {
+   "id": "cat_know_app_capabilities",
+   "name": "Know your tools",
+   "description": "Recall what the toolbox offers.",
+   "instructions": "Workflow:\n1. For a task, mentally list candidate tools by category (files, runtimes, RE, memory, net, web, device).\n2. Pick the most direct one.\n3. Combine tools when one is insufficient.\n4. Mention unavailable capabilities honestly.",
+   "enabled": true
+  },
+  {
+   "id": "cat_know_runtime_status",
+   "name": "Runtime availability checks",
+   "description": "Check runtimes before promising language work.",
+   "instructions": "Workflow:\n1. runtime.info to see installed toolchains.\n2. Match the task language to an available runtime.\n3. If missing, say so and offer provisioning.\n4. Then execute with the right exec tool.",
+   "enabled": false
+  },
+  {
+   "id": "cat_know_permission_model",
+   "name": "Permission model awareness",
+   "description": "Know what needs approval.",
+   "instructions": "Workflow:\n1. Recall tool categories that require permissions (write, process, root, network).\n2. Warn the user when a step will prompt.\n3. Batch risky confirmations sensibly.\n4. Never attempt to bypass the permission broker.",
+   "enabled": false
+  },
+  {
+   "id": "cat_know_sandbox_paths",
+   "name": "Sandbox path awareness",
+   "description": "Use the workspace correctly.",
+   "instructions": "Workflow:\n1. Default to the agent workspace for all files.\n2. Note when a task needs shared storage and its restrictions.\n3. Keep outputs where the user can find them.\n4. State full paths in summaries.",
+   "enabled": false
+  },
+  {
+   "id": "cat_know_toolpack_state",
+   "name": "Toolpack provisioning awareness",
+   "description": "Know when heavy tools are ready.",
+   "instructions": "Workflow:\n1. Check provisioning status before using RE or compiler tools.\n2. If provisioning is still running, wait or schedule later.\n3. Use core tools (files, python) meanwhile.\n4. Tell the user what became available.",
+   "enabled": false
+  },
+  {
+   "id": "cat_learn_from_session",
+   "name": "Session learning loop",
+   "description": "Improve from each session.",
+   "instructions": "Workflow:\n1. Note what worked and what failed (with tool names).\n2. memory.save durable lessons only.\n3. Adjust tool choice next time based on lessons.\n4. Keep lessons short and actionable.",
+   "enabled": false
+  },
+  {
+   "id": "cat_session_handoff",
+   "name": "Session handoff",
+   "description": "Prepare continuity for the next session.",
+   "instructions": "Workflow:\n1. Write a handoff note: goal, state, next step (file.write).\n2. memory.save the one-line state.\n3. Leave the workspace tidy.\n4. Reference the note file id in the summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_context_budget",
+   "name": "Context budget discipline",
+   "description": "Keep prompts and outputs efficient.",
+   "instructions": "Workflow:\n1. Prefer file references over pasting content.\n2. Cap quotes to what proves the point.\n3. Use ranged reads for big files.\n4. Summarize instead of enumerating.",
+   "enabled": false
+  },
+  {
+   "id": "cat_multi_task_switching",
+   "name": "Task switching hygiene",
+   "description": "Handle concurrent requests cleanly.",
+   "instructions": "Workflow:\n1. Finish or checkpoint the current task before switching.\n2. Keep per-task notes files separate.\n3. Summarize each on pause.\n4. Resume from the checkpoint, not from memory.",
+   "enabled": false
+  },
+  {
+   "id": "cat_estimation_honesty",
+   "name": "Estimation honesty",
+   "description": "Estimate effort with stated confidence.",
+   "instructions": "Workflow:\n1. Break the task into steps.\n2. Estimate per step; mark confidence.\n3. Revise after the first real data point.\n4. Communicate revisions early.",
+   "enabled": false
+  },
+  {
+   "id": "cat_code_explain_skill",
+   "name": "Code explanation",
+   "description": "Explain code at the right altitude.",
+   "instructions": "Workflow:\n1. file.read the target code.\n2. Explain purpose first, then mechanics.\n3. Use a tiny worked example.\n4. Point to specific lines for each claim.",
+   "enabled": false
+  },
+  {
+   "id": "cat_concept_teach",
+   "name": "Concept teaching",
+   "description": "Teach a concept step by step.",
+   "instructions": "Workflow:\n1. Anchor to what the user already knows.\n2. Build up in small steps with one new idea each.\n3. Include a runnable example (python.run_file to demo).\n4. Check understanding with a mini-question.",
+   "enabled": false
+  },
+  {
+   "id": "cat_doc_write_skill",
+   "name": "Technical writing",
+   "description": "Write clear technical documents.",
+   "instructions": "Workflow:\n1. Define audience and goal in one line each.\n2. Structure: overview, details, examples, gotchas.\n3. Verify every command and claim against reality.\n4. Keep paragraphs short; prefer lists.",
+   "enabled": false
+  },
+  {
+   "id": "cat_change_log_write",
+   "name": "Changelog writing",
+   "description": "Maintain honest changelogs.",
+   "instructions": "Workflow:\n1. Derive entries from actual diffs (git.diff).\n2. Group by type: Added, Changed, Fixed, Removed.\n3. One line per user-visible change.\n4. Date and version each entry.",
+   "enabled": false
+  },
+  {
+   "id": "cat_api_doc_write",
+   "name": "API documentation",
+   "description": "Document APIs from real signatures.",
+   "instructions": "Workflow:\n1. file.read the public surface.\n2. Document parameters, returns, errors per function.\n3. Include one example per major function.\n4. Verify examples by running them.",
+   "enabled": false
+  },
+  {
+   "id": "cat_interview_prep",
+   "name": "Technical interview prep",
+   "description": "Practice with realistic questions.",
+   "instructions": "Workflow:\n1. Ask the target role and level.\n2. Provide 5 questions with evaluation rubrics.\n3. Run a mock: ask, wait, then model an answer.\n4. Grade against the rubric with specifics.",
+   "enabled": false
+  },
+  {
+   "id": "cat_learning_path",
+   "name": "Learning path design",
+   "description": "Build a personalized study plan.",
+   "instructions": "Workflow:\n1. Assess current level from the user's description.\n2. Define a target with milestones.\n3. Order topics with dependencies first.\n4. Attach one resource per topic.",
+   "enabled": false
+  },
+  {
+   "id": "cat_translation_tech",
+   "name": "Technical translation",
+   "description": "Translate technical content accurately.",
+   "instructions": "Workflow:\n1. Translate meaning, not words; keep terms canonical.\n2. Preserve code, commands and identifiers untouched.\n3. Note untranslatable terms with the original in brackets.\n4. Review for terminology consistency.",
+   "enabled": false
+  },
+  {
+   "id": "cat_meeting_notes",
+   "name": "Meeting notes structuring",
+   "description": "Turn raw notes into actions.",
+   "instructions": "Workflow:\n1. Extract decisions, owners, deadlines.\n2. List open questions separately.\n3. Format as a compact table.\n4. Flag missing owners/deadlines.",
+   "enabled": false
+  },
+  {
+   "id": "cat_email_draft",
+   "name": "Professional drafting",
+   "description": "Draft clear professional messages.",
+   "instructions": "Workflow:\n1. One-line purpose at the top.\n2. Context, request, deadline in that order.\n3. Keep under 150 words unless detail is required.\n4. Subject line that survives a inbox scan.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,285 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_git_status_first",
+   "name": "Status before action",
+   "description": "Always inspect repo state before changing anything.",
+   "instructions": "Workflow:\n1. git.status first; note uncommitted work.\n2. If dirty, ask the user how to proceed before touching files.\n3. git.log for recent intent.\n4. Only then start edits.",
+   "enabled": true
+  },
+  {
+   "id": "cat_git_diff_read",
+   "name": "Diff comprehension",
+   "description": "Read diffs as the source of truth.",
+   "instructions": "Workflow:\n1. git.diff for working changes; git.log -p for history when needed.\n2. Summarize per-file intent, not per-line noise.\n3. Flag anything that looks accidental.\n4. Quote only critical hunks in chat.",
+   "enabled": true
+  },
+  {
+   "id": "cat_git_history_search",
+   "name": "History investigation",
+   "description": "Find when and why something changed.",
+   "instructions": "Workflow:\n1. git.log with path filters for the file.\n2. Read commit messages around the change window.\n3. Cross-check with git.diff of the suspect commit if available.\n4. Present a timeline of relevant commits.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_pre_commit_review",
+   "name": "Pre-commit review",
+   "description": "Self-review changes before handing off.",
+   "instructions": "Workflow:\n1. git.diff; read every hunk you caused.\n2. Check for debug leftovers and stray files.\n3. Fix issues with file.patch before commit.\n4. Summarize the final change set.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_branch_thinking",
+   "name": "Branch-safe workflow",
+   "description": "Respect branches and in-flight work.",
+   "instructions": "Workflow:\n1. git.status to detect the current branch and dirty state.\n2. Never mix unrelated changes into the working tree.\n3. Propose branch points for risky work; let the user branch.\n4. Keep the summary branch-aware.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_conflict_analysis",
+   "name": "Conflict analysis",
+   "description": "Understand a merge conflict before resolving.",
+   "instructions": "Workflow:\n1. Read both sides of each conflict hunk.\n2. Determine intent from git.log of each side.\n3. Propose resolutions per hunk; apply with file.patch.\n4. Verify with a build after resolution.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_commit_message",
+   "name": "Commit message writing",
+   "description": "Write clear, honest commit messages.",
+   "instructions": "Workflow:\n1. Review the exact diff (git.diff).\n2. Subject: imperative, specific, under 60 chars.\n3. Body: what and why, no narration of every file.\n4. Never claim tests passed without running them.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_release_prep",
+   "name": "Release preparation",
+   "description": "Assemble a release change set.",
+   "instructions": "Workflow:\n1. git.log since the last release point.\n2. Verify version bumps with file.read of build files.\n3. Draft notes from the real commits.\n4. Confirm the tree is clean before tagging.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_ignore_fix",
+   "name": "Tracking hygiene",
+   "description": "Stop tracking what should be ignored.",
+   "instructions": "Workflow:\n1. git.status for untracked noise.\n2. Update .gitignore with file.patch.\n3. Recommend removal from the index only when safe.\n4. Verify with a fresh git.status.",
+   "enabled": false
+  },
+  {
+   "id": "cat_git_stash_advice",
+   "name": "Work-in-progress safety",
+   "description": "Advise on stashing vs committing.",
+   "instructions": "Workflow:\n1. git.status to size the uncommitted set.\n2. For risky operations, recommend commit or stash first.\n3. Explain what each option preserves.\n4. Never run destructive VCS commands without the user's go-ahead.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_pipeline_read",
+   "name": "CI config reading",
+   "description": "Understand the project's CI pipeline.",
+   "instructions": "Workflow:\n1. file.search for CI configs (workflows, .gitlab-ci, Jenkinsfile).\n2. file.read the relevant pipeline; map stages.\n3. Identify what runs on PRs vs releases.\n4. Summarize gates that affect the current change.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_failure_triage",
+   "name": "CI failure triage",
+   "description": "Turn a red build green.",
+   "instructions": "Workflow:\n1. Collect the failing job log section.\n2. Classify: flaky, environment, or real regression.\n3. For real regressions, fix with file.patch; for env, propose config fixes.\n4. Re-run locally with gradle.exec/node.exec before pushing advice.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dockerfile_review",
+   "name": "Dockerfile review",
+   "description": "Audit container builds.",
+   "instructions": "Workflow:\n1. file.read the Dockerfile.\n2. Check layer ordering, pinning, and secrets in layers.\n3. Suggest minimal, cache-friendly changes.\n4. Verify syntax mentally line by line; propose build test.",
+   "enabled": false
+  },
+  {
+   "id": "cat_env_matrix_check",
+   "name": "Environment parity check",
+   "description": "Compare local vs CI environment assumptions.",
+   "instructions": "Workflow:\n1. file.read build configs and CI env setup.\n2. List version-sensitive components (JDK, Node, Python).\n3. Flag mismatches with the local runtimes (runtime.info).\n4. Recommend alignment steps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_deploy_checklist",
+   "name": "Deployment checklist",
+   "description": "Verify release readiness.",
+   "instructions": "Workflow:\n1. Confirm version bumps and changelog (file.read).\n2. Run the build one final time (gradle.exec/android.build).\n3. Verify artifacts exist with file.list.\n4. Present a go/no-go summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_search_efficient",
+   "name": "Efficient web search",
+   "description": "Search with precision, not volume.",
+   "instructions": "Workflow:\n1. Form 2-3 distinct queries instead of one broad one.\n2. Prefer authoritative domains; note dates.\n3. Cross-check facts across two sources.\n4. Cite the sources you used.",
+   "enabled": true
+  },
+  {
+   "id": "cat_web_crawl_targets",
+   "name": "Targeted crawling",
+   "description": "Crawl only what you need.",
+   "instructions": "Workflow:\n1. Define the target pages and depth before web.crawl.\n2. Cap results; stop early when the answer is found.\n3. Extract only relevant sections.\n4. Summarize with URLs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_doc_lookup",
+   "name": "Documentation lookup",
+   "description": "Find official docs for APIs.",
+   "instructions": "Workflow:\n1. web.search with the exact API/class name plus 'docs'.\n2. Prefer official domains; verify version applicability.\n3. Extract the minimal usage snippet.\n4. Verify the snippet compiles/runs before recommending.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_fact_check",
+   "name": "Fact verification",
+   "description": "Verify claims against multiple sources.",
+   "instructions": "Workflow:\n1. Restate the claim precisely.\n2. web.search for supporting and contradicting evidence.\n3. Prefer primary sources over aggregators.\n4. Report confidence with sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_compare_pages",
+   "name": "Page comparison",
+   "description": "Compare two sources on a topic.",
+   "instructions": "Workflow:\n1. Fetch both with web.crawl or web.browser.\n2. Extract the comparable claims.\n3. Note agreements and contradictions.\n4. Present a side-by-side summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_price_watch",
+   "name": "Price and availability checks",
+   "description": "Look up current pricing data.",
+   "instructions": "Workflow:\n1. web.search the product and store.\n2. Open the store page (web.browser) for the live price.\n3. Note currency and date of observation.\n4. Report without promising real-time accuracy.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_news_digest",
+   "name": "News digest",
+   "description": "Summarize news on a topic.",
+   "instructions": "Workflow:\n1. web.search with topic plus 'news' and a recency hint.\n2. Read the top distinct sources.\n3. Merge into 3-5 neutral bullets.\n4. Attribute each bullet to its source.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_definition_lookup",
+   "name": "Technical definition lookup",
+   "description": "Explain terms precisely.",
+   "instructions": "Workflow:\n1. web.search the term with 'definition' or 'vs'.\n2. Read two authoritative explanations.\n3. Write a one-paragraph definition in your own words.\n4. Link the sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_tutorial_find",
+   "name": "Tutorial discovery",
+   "description": "Find quality learning material.",
+   "instructions": "Workflow:\n1. web.search the topic plus tutorial and skill level.\n2. Prefer docs and reputable educators.\n3. Skim for completeness (setup, examples, exercises).\n4. Recommend the best one with reasons.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_error_search",
+   "name": "Error message research",
+   "description": "Research unfamiliar errors.",
+   "instructions": "Workflow:\n1. Search the exact error string in quotes (web.search).\n2. Filter to recent, matching-environment results.\n3. Collect 2-3 proposed fixes.\n4. Test the most promising locally before advising.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_library_compare",
+   "name": "Library comparison",
+   "description": "Compare libraries for a need.",
+   "instructions": "Workflow:\n1. List candidate libraries from web.search.\n2. Check maintenance status and docs quality.\n3. Compare APIs for the specific use case.\n4. Recommend one with a rationale.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_api_quota_check",
+   "name": "API limits lookup",
+   "description": "Find an API's rate limits and pricing.",
+   "instructions": "Workflow:\n1. web.search the API plus 'rate limits' 'pricing'.\n2. Verify against official docs (web.crawl the docs page).\n3. Note the plan tiers relevant to the user.\n4. Summarize limits with source links.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_screenshot_read",
+   "name": "Web page reading",
+   "description": "Extract structure from a live page.",
+   "instructions": "Workflow:\n1. web.browser to open the page.\n2. Note headings, tables, and interactive elements.\n3. Extract the data the user asked for.\n4. Quote sparingly with section names.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_session_research",
+   "name": "Session-persistent research",
+   "description": "Keep research findings across steps.",
+   "instructions": "Workflow:\n1. Collect findings incrementally in a workspace notes file (file.write).\n2. Append each new fact with its source.\n3. Reference the file in later steps.\n4. Finalize as a structured summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_web_search_translation",
+   "name": "Cross-language search",
+   "description": "Search in other languages when needed.",
+   "instructions": "Workflow:\n1. Translate key terms mentally to the source language.\n2. web.search with the original-language terms.\n3. Summarize results in the user's language.\n4. Cite the original sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_profiling",
+   "name": "Dataset profiling",
+   "description": "Profile a dataset before analysis.",
+   "instructions": "Workflow:\n1. file.read a sample; note columns and types.\n2. python.run_file script for counts, nulls, uniques per column.\n3. Flag anomalies (impossible values, constant columns).\n4. Present a profile table.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_transform_design",
+   "name": "Transform pipeline design",
+   "description": "Design explicit data transformations.",
+   "instructions": "Workflow:\n1. Define input schema and output schema first.\n2. Implement with python.run_file; pure functions per step.\n3. Validate row counts at each step.\n4. Log transformations applied per column.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_join_verify",
+   "name": "Join verification",
+   "description": "Verify joins did not distort data.",
+   "instructions": "Workflow:\n1. Count rows before and after the join (python.run_file).\n2. Check for fan-out (duplicates created).\n3. Validate key coverage both directions.\n4. Report match rates.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_dedup",
+   "name": "Deduplication strategy",
+   "description": "Remove duplicates deterministically.",
+   "instructions": "Workflow:\n1. Define the dedup key precisely.\n2. python.run_file to find duplicate groups first (report, do not delete).\n3. Apply the agreed rule; keep originals as .bak.\n4. Report removed counts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_export_formats",
+   "name": "Export format handling",
+   "description": "Write machine-readable outputs correctly.",
+   "instructions": "Workflow:\n1. Match the requested format exactly (CSV, JSON, NDJSON).\n2. Handle escaping and encodings explicitly.\n3. Validate the output by re-reading a sample (file.read).\n4. Report row/record counts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_viz_plan",
+   "name": "Visualization planning",
+   "description": "Plan charts that answer the question.",
+   "instructions": "Workflow:\n1. Identify the comparison/distribution/trend question.\n2. Pick the chart type that answers it directly.\n3. Generate with python.run_file (matplotlib if available) into an image file.\n4. Describe what the chart shows in text too.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_null_strategy",
+   "name": "Missing value strategy",
+   "description": "Handle nulls explicitly.",
+   "instructions": "Workflow:\n1. Profile null distribution per column (python.run_file).\n2. Decide per column: drop, impute, or flag.\n3. Document the decision; apply with a script.\n4. Report before/after counts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_schema_map",
+   "name": "Schema mapping",
+   "description": "Map source to target schemas.",
+   "instructions": "Workflow:\n1. file.read both schemas (or infer from samples).\n2. Write an explicit field mapping table.\n3. Implement with python.run_file; unknowns become errors, not guesses.\n4. Verify record counts and spot fields.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_sample_extract",
+   "name": "Reproducible sampling",
+   "description": "Extract samples you can reproduce.",
+   "instructions": "Workflow:\n1. Use a fixed seed in python.run_file sampling scripts.\n2. Record the seed and row count.\n3. Save the sample with provenance notes.\n4. Verify stability by re-running once.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data_summary_stats",
+   "name": "Statistical summaries",
+   "description": "Compute honest summary statistics.",
+   "instructions": "Workflow:\n1. python.run_file for mean/median/percentiles per key column.\n2. Prefer median+IQR for skewed data.\n3. Report outliers count, do not silently trim.\n4. Present a compact stats table.",
+   "enabled": false
+  }
+ ]
+}

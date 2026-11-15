@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_111",
+      "name": "SQLMap troubleshooting: Repair missing pack",
+      "description": "Resolve unavailable engine before diagnosing the target.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Run status; if missing, use `runtime.sqlmap.install`, then verify again before attempting a scan.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_112",
+      "name": "SQLMap troubleshooting: Resolve low-storage errors",
+      "description": "Free app-private storage without deleting user evidence.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Check device storage, retain current output, and retry the bundled install; do not manually extract over the live runtime.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_113",
+      "name": "SQLMap troubleshooting: Correct invalid URL",
+      "description": "Fix formatting while preserving target scope.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Provide a valid HTTP(S) URL with a host and approved path; remove fragments/whitespace but do not guess a replacement host.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_114",
+      "name": "SQLMap troubleshooting: Handle missing query input",
+      "description": "Determine whether input is in URL or request body.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Check a normal request; use `data` and method for body input, or report the endpoint has no supported test parameter.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_115",
+      "name": "SQLMap troubleshooting: Resolve permission denial",
+      "description": "Identify the missing app capability instead of retrying blindly.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Check process/Python permission for execution and network permission for target requests; grant only what this call needs.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_116",
+      "name": "SQLMap troubleshooting: Diagnose request timeout",
+      "description": "Separate a slow service from DNS, routing, and TLS failures.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Check endpoint with an approved normal client; change timeout only within 1–30 seconds and with owner approval.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_117",
+      "name": "SQLMap troubleshooting: Handle asset/status mismatch",
+      "description": "Resolve a bundled asset with an absent runtime marker.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Use status and install tools, capture exact error/app version, and avoid creating a duplicate workspace package.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_118",
+      "name": "SQLMap troubleshooting: Fix workspace write failure",
+      "description": "Keep output errors separate from SQLMap detection.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Confirm workspace is writable and has space; use `.sqlmap/output`, never shared or system paths.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_119",
+      "name": "SQLMap troubleshooting: Triage Python bridge error",
+      "description": "Determine whether dispatch failed before SQLMap ran.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Check runtime capability and status, capture the exact error, and do not report a target finding without engine output.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_120",
+      "name": "SQLMap troubleshooting: Recover corrupted marker",
+      "description": "Repair inconsistent runtime through the validated manager path.",
+      "category": "SQLMap / Troubleshooting",
+      "instructions": "Workflow:\n1. Capture exact app tool, error, runtime status, and request shape before changing settings.\n2. Separate package setup, app permission, network, and target-response failures.\n3. Run `runtime.sqlmap.install` to re-unpack the bundled wheel and write a new marker; never hand-edit `.pack-version`.\n4. Make one safe correction and retry only inside the same authorized scope.\n\nSafety: use only owner-authorized targets. Preserve output and secrets; do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

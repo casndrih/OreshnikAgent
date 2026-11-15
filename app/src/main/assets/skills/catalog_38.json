@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_dsk_settings-ui",
+   "name": "Desktop feature: settings ui",
+   "description": "Implement settings ui in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for settings ui.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_auto-start",
+   "name": "Desktop feature: auto start",
+   "description": "Implement auto start in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for auto start.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_single-instance",
+   "name": "Desktop feature: single instance",
+   "description": "Implement single instance in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for single instance.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_file-assoc",
+   "name": "Desktop feature: file assoc",
+   "description": "Implement file assoc in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for file assoc.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_protocol-handler",
+   "name": "Desktop feature: protocol handler",
+   "description": "Implement protocol handler in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for protocol handler.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_tray-icon",
+   "name": "Desktop feature: tray icon",
+   "description": "Implement tray icon in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for tray icon.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_global-hotkeys",
+   "name": "Desktop feature: global hotkeys",
+   "description": "Implement global hotkeys in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for global hotkeys.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_notifications",
+   "name": "Desktop feature: notifications",
+   "description": "Implement notifications in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for notifications.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_clipboard-integration",
+   "name": "Desktop feature: clipboard integration",
+   "description": "Implement clipboard integration in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for clipboard integration.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_drag-drop-files",
+   "name": "Desktop feature: drag drop files",
+   "description": "Implement drag drop files in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for drag drop files.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_print-integration",
+   "name": "Desktop feature: print integration",
+   "description": "Implement print integration in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for print integration.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_pdf-export",
+   "name": "Desktop feature: pdf export",
+   "description": "Implement pdf export in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for pdf export.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_csv-import",
+   "name": "Desktop feature: csv import",
+   "description": "Implement csv import in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for csv import.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_theme-engine",
+   "name": "Desktop feature: theme engine",
+   "description": "Implement theme engine in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for theme engine.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_plugin-system",
+   "name": "Desktop feature: plugin system",
+   "description": "Implement plugin system in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for plugin system.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_ipc-design",
+   "name": "Desktop feature: ipc design",
+   "description": "Implement ipc design in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for ipc design.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_deep-links-desktop",
+   "name": "Desktop feature: deep links desktop",
+   "description": "Implement deep links desktop in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for deep links desktop.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_update-mirror",
+   "name": "Desktop feature: update mirror",
+   "description": "Implement update mirror in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for update mirror.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_telemetry-optout",
+   "name": "Desktop feature: telemetry optout",
+   "description": "Implement telemetry optout in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for telemetry optout.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dsk_portable-mode",
+   "name": "Desktop feature: portable mode",
+   "description": "Implement portable mode in a desktop app.",
+   "instructions": "Workflow:\n1. Locate the app framework (file.read).\n2. web.search implementation guidance for portable mode.\n3. Implement a minimal version (file.write/patch).\n4. Test manually with a checklist.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_push-setup",
+   "name": "Mobile feature: push setup",
+   "description": "Implement push setup in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for push setup.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_deeplink-router",
+   "name": "Mobile feature: deeplink router",
+   "description": "Implement deeplink router in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for deeplink router.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_biometric-auth",
+   "name": "Mobile feature: biometric auth",
+   "description": "Implement biometric auth in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for biometric auth.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_secure-storage",
+   "name": "Mobile feature: secure storage",
+   "description": "Implement secure storage in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for secure storage.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_offline-mode",
+   "name": "Mobile feature: offline mode",
+   "description": "Implement offline mode in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for offline mode.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_background-sync",
+   "name": "Mobile feature: background sync",
+   "description": "Implement background sync in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for background sync.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_widgets",
+   "name": "Mobile feature: widgets",
+   "description": "Implement widgets in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for widgets.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_app-shortcuts",
+   "name": "Mobile feature: app shortcuts",
+   "description": "Implement app shortcuts in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for app shortcuts.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_in-app-review",
+   "name": "Mobile feature: in app review",
+   "description": "Implement in app review in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for in app review.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_share-sheet",
+   "name": "Mobile feature: share sheet",
+   "description": "Implement share sheet in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for share sheet.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_camera-flows",
+   "name": "Mobile feature: camera flows",
+   "description": "Implement camera flows in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for camera flows.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_location-perms",
+   "name": "Mobile feature: location perms",
+   "description": "Implement location perms in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for location perms.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_battery-friendly-sync",
+   "name": "Mobile feature: battery friendly sync",
+   "description": "Implement battery friendly sync in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for battery friendly sync.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_large-screen-support",
+   "name": "Mobile feature: large screen support",
+   "description": "Implement large screen support in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for large screen support.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_feat_foldable-support",
+   "name": "Mobile feature: foldable support",
+   "description": "Implement foldable support in the Android app.",
+   "instructions": "Workflow:\n1. Read current app structure (file.list).\n2. web.search official guidance for foldable support.\n3. Implement (file.write/patch).\n4. Build (gradle.exec) and verify on device (androidopenapp).\n5. Document.",
+   "enabled": false
+  }
+ ]
+}

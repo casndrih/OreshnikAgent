@@ -1,0 +1,733 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_lng2_rust-lifetimes",
+   "name": "Language topic: rust lifetimes",
+   "description": "Practical guide for rust lifetimes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust lifetimes' applies in this project (file.search/file.read).\n2. Review the standard practice for rust lifetimes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rust-traits",
+   "name": "Language topic: rust traits",
+   "description": "Practical guide for rust traits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust traits' applies in this project (file.search/file.read).\n2. Review the standard practice for rust traits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rust-error-handling",
+   "name": "Language topic: rust error handling",
+   "description": "Practical guide for rust error handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust error handling' applies in this project (file.search/file.read).\n2. Review the standard practice for rust error handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rust-async-tokio",
+   "name": "Language topic: rust async tokio",
+   "description": "Practical guide for rust async tokio in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust async tokio' applies in this project (file.search/file.read).\n2. Review the standard practice for rust async tokio (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rust-macros",
+   "name": "Language topic: rust macros",
+   "description": "Practical guide for rust macros in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust macros' applies in this project (file.search/file.read).\n2. Review the standard practice for rust macros (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cargo-workspaces",
+   "name": "Language topic: cargo workspaces",
+   "description": "Practical guide for cargo workspaces in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cargo workspaces' applies in this project (file.search/file.read).\n2. Review the standard practice for cargo workspaces (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rust-ffi",
+   "name": "Language topic: rust FFI",
+   "description": "Practical guide for rust FFI in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rust FFI' applies in this project (file.search/file.read).\n2. Review the standard practice for rust FFI (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-generics",
+   "name": "Language topic: go generics",
+   "description": "Practical guide for go generics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go generics' applies in this project (file.search/file.read).\n2. Review the standard practice for go generics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-interfaces",
+   "name": "Language topic: go interfaces",
+   "description": "Practical guide for go interfaces in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go interfaces' applies in this project (file.search/file.read).\n2. Review the standard practice for go interfaces (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-context",
+   "name": "Language topic: go context",
+   "description": "Practical guide for go context in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go context' applies in this project (file.search/file.read).\n2. Review the standard practice for go context (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-testing",
+   "name": "Language topic: go testing",
+   "description": "Practical guide for go testing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go testing' applies in this project (file.search/file.read).\n2. Review the standard practice for go testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-profiling-pprof",
+   "name": "Language topic: go profiling pprof",
+   "description": "Practical guide for go profiling pprof in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go profiling pprof' applies in this project (file.search/file.read).\n2. Review the standard practice for go profiling pprof (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_go-modules-deep",
+   "name": "Language topic: go modules deep",
+   "description": "Practical guide for go modules deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'go modules deep' applies in this project (file.search/file.read).\n2. Review the standard practice for go modules deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_swift-optionals",
+   "name": "Language topic: swift optionals",
+   "description": "Practical guide for swift optionals in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swift optionals' applies in this project (file.search/file.read).\n2. Review the standard practice for swift optionals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_swift-protocols",
+   "name": "Language topic: swift protocols",
+   "description": "Practical guide for swift protocols in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swift protocols' applies in this project (file.search/file.read).\n2. Review the standard practice for swift protocols (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_swift-concurrency",
+   "name": "Language topic: swift concurrency",
+   "description": "Practical guide for swift concurrency in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swift concurrency' applies in this project (file.search/file.read).\n2. Review the standard practice for swift concurrency (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_swift-combine",
+   "name": "Language topic: swift Combine",
+   "description": "Practical guide for swift Combine in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swift Combine' applies in this project (file.search/file.read).\n2. Review the standard practice for swift Combine (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_swift-ui-data-flow",
+   "name": "Language topic: swift UI data flow",
+   "description": "Practical guide for swift UI data flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'swift UI data flow' applies in this project (file.search/file.read).\n2. Review the standard practice for swift UI data flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_kotlin-delegation",
+   "name": "Language topic: kotlin delegation",
+   "description": "Practical guide for kotlin delegation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin delegation' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin delegation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_kotlin-generics",
+   "name": "Language topic: kotlin generics",
+   "description": "Practical guide for kotlin generics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin generics' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin generics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_kotlin-inline-classes",
+   "name": "Language topic: kotlin inline classes",
+   "description": "Practical guide for kotlin inline classes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin inline classes' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin inline classes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_kotlin-dsl-builders",
+   "name": "Language topic: kotlin DSL builders",
+   "description": "Practical guide for kotlin DSL builders in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin DSL builders' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin DSL builders (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_kotlin-multiplatform-basics",
+   "name": "Language topic: kotlin multiplatform basics",
+   "description": "Practical guide for kotlin multiplatform basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin multiplatform basics' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin multiplatform basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_java-records",
+   "name": "Language topic: java records",
+   "description": "Practical guide for java records in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java records' applies in this project (file.search/file.read).\n2. Review the standard practice for java records (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_java-sealed-classes",
+   "name": "Language topic: java sealed classes",
+   "description": "Practical guide for java sealed classes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java sealed classes' applies in this project (file.search/file.read).\n2. Review the standard practice for java sealed classes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_java-pattern-matching",
+   "name": "Language topic: java pattern matching",
+   "description": "Practical guide for java pattern matching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java pattern matching' applies in this project (file.search/file.read).\n2. Review the standard practice for java pattern matching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_java-virtual-threads",
+   "name": "Language topic: java virtual threads",
+   "description": "Practical guide for java virtual threads in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java virtual threads' applies in this project (file.search/file.read).\n2. Review the standard practice for java virtual threads (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_java-jit-warmup",
+   "name": "Language topic: java JIT warmup",
+   "description": "Practical guide for java JIT warmup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'java JIT warmup' applies in this project (file.search/file.read).\n2. Review the standard practice for java JIT warmup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_csharp-spans",
+   "name": "Language topic: csharp spans",
+   "description": "Practical guide for csharp spans in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csharp spans' applies in this project (file.search/file.read).\n2. Review the standard practice for csharp spans (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_csharp-source-generators",
+   "name": "Language topic: csharp source generators",
+   "description": "Practical guide for csharp source generators in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csharp source generators' applies in this project (file.search/file.read).\n2. Review the standard practice for csharp source generators (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_csharp-ef-core",
+   "name": "Language topic: csharp ef core",
+   "description": "Practical guide for csharp ef core in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csharp ef core' applies in this project (file.search/file.read).\n2. Review the standard practice for csharp ef core (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_csharp-dependency-injection",
+   "name": "Language topic: csharp dependency injection",
+   "description": "Practical guide for csharp dependency injection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csharp dependency injection' applies in this project (file.search/file.read).\n2. Review the standard practice for csharp dependency injection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_typescript-decorators",
+   "name": "Language topic: typescript decorators",
+   "description": "Practical guide for typescript decorators in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'typescript decorators' applies in this project (file.search/file.read).\n2. Review the standard practice for typescript decorators (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_typescript-module-augments",
+   "name": "Language topic: typescript module augments",
+   "description": "Practical guide for typescript module augments in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'typescript module augments' applies in this project (file.search/file.read).\n2. Review the standard practice for typescript module augments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_ts-narrowing",
+   "name": "Language topic: ts narrowing",
+   "description": "Practical guide for ts narrowing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ts narrowing' applies in this project (file.search/file.read).\n2. Review the standard practice for ts narrowing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_ts-zod-validation",
+   "name": "Language topic: ts zod validation",
+   "description": "Practical guide for ts zod validation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ts zod validation' applies in this project (file.search/file.read).\n2. Review the standard practice for ts zod validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-dataclasses",
+   "name": "Language topic: python dataclasses",
+   "description": "Practical guide for python dataclasses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python dataclasses' applies in this project (file.search/file.read).\n2. Review the standard practice for python dataclasses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-descriptors",
+   "name": "Language topic: python descriptors",
+   "description": "Practical guide for python descriptors in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python descriptors' applies in this project (file.search/file.read).\n2. Review the standard practice for python descriptors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-metaclasses",
+   "name": "Language topic: python metaclasses",
+   "description": "Practical guide for python metaclasses in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python metaclasses' applies in this project (file.search/file.read).\n2. Review the standard practice for python metaclasses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-context-managers",
+   "name": "Language topic: python context managers",
+   "description": "Practical guide for python context managers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python context managers' applies in this project (file.search/file.read).\n2. Review the standard practice for python context managers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-generators",
+   "name": "Language topic: python generators",
+   "description": "Practical guide for python generators in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python generators' applies in this project (file.search/file.read).\n2. Review the standard practice for python generators (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-asyncio-tasks",
+   "name": "Language topic: python asyncio tasks",
+   "description": "Practical guide for python asyncio tasks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python asyncio tasks' applies in this project (file.search/file.read).\n2. Review the standard practice for python asyncio tasks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-typing-protocols",
+   "name": "Language topic: python typing protocols",
+   "description": "Practical guide for python typing protocols in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python typing protocols' applies in this project (file.search/file.read).\n2. Review the standard practice for python typing protocols (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-pydantic",
+   "name": "Language topic: python pydantic",
+   "description": "Practical guide for python pydantic in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python pydantic' applies in this project (file.search/file.read).\n2. Review the standard practice for python pydantic (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-multiprocessing",
+   "name": "Language topic: python multiprocessing",
+   "description": "Practical guide for python multiprocessing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python multiprocessing' applies in this project (file.search/file.read).\n2. Review the standard practice for python multiprocessing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_python-cython-basics",
+   "name": "Language topic: python cython basics",
+   "description": "Practical guide for python cython basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'python cython basics' applies in this project (file.search/file.read).\n2. Review the standard practice for python cython basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_c-pointers-deep",
+   "name": "Language topic: c pointers deep",
+   "description": "Practical guide for c pointers deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'c pointers deep' applies in this project (file.search/file.read).\n2. Review the standard practice for c pointers deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_c-memory-arenas",
+   "name": "Language topic: c memory arenas",
+   "description": "Practical guide for c memory arenas in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'c memory arenas' applies in this project (file.search/file.read).\n2. Review the standard practice for c memory arenas (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_c-bit-manipulation",
+   "name": "Language topic: c bit manipulation",
+   "description": "Practical guide for c bit manipulation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'c bit manipulation' applies in this project (file.search/file.read).\n2. Review the standard practice for c bit manipulation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_c-linkage-storage",
+   "name": "Language topic: c linkage storage",
+   "description": "Practical guide for c linkage storage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'c linkage storage' applies in this project (file.search/file.read).\n2. Review the standard practice for c linkage storage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-move-semantics",
+   "name": "Language topic: cpp move semantics",
+   "description": "Practical guide for cpp move semantics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp move semantics' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp move semantics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-templates-sfinae",
+   "name": "Language topic: cpp templates SFINAE",
+   "description": "Practical guide for cpp templates SFINAE in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp templates SFINAE' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp templates SFINAE (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-concepts",
+   "name": "Language topic: cpp concepts",
+   "description": "Practical guide for cpp concepts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp concepts' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp concepts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-coroutines",
+   "name": "Language topic: cpp coroutines",
+   "description": "Practical guide for cpp coroutines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp coroutines' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp coroutines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-ranges",
+   "name": "Language topic: cpp ranges",
+   "description": "Practical guide for cpp ranges in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp ranges' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp ranges (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_cpp-smart-pointer-patterns",
+   "name": "Language topic: cpp smart pointer patterns",
+   "description": "Practical guide for cpp smart pointer patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cpp smart pointer patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for cpp smart pointer patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_php-traits",
+   "name": "Language topic: php traits",
+   "description": "Practical guide for php traits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'php traits' applies in this project (file.search/file.read).\n2. Review the standard practice for php traits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_php-generators",
+   "name": "Language topic: php generators",
+   "description": "Practical guide for php generators in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'php generators' applies in this project (file.search/file.read).\n2. Review the standard practice for php generators (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_php-attributes",
+   "name": "Language topic: php attributes",
+   "description": "Practical guide for php attributes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'php attributes' applies in this project (file.search/file.read).\n2. Review the standard practice for php attributes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_ruby-blocks-procs",
+   "name": "Language topic: ruby blocks procs",
+   "description": "Practical guide for ruby blocks procs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ruby blocks procs' applies in this project (file.search/file.read).\n2. Review the standard practice for ruby blocks procs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_ruby-metaprogramming",
+   "name": "Language topic: ruby metaprogramming",
+   "description": "Practical guide for ruby metaprogramming in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ruby metaprogramming' applies in this project (file.search/file.read).\n2. Review the standard practice for ruby metaprogramming (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_ruby-rake-tasks",
+   "name": "Language topic: ruby rake tasks",
+   "description": "Practical guide for ruby rake tasks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ruby rake tasks' applies in this project (file.search/file.read).\n2. Review the standard practice for ruby rake tasks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_scala-case-classes",
+   "name": "Language topic: scala case classes",
+   "description": "Practical guide for scala case classes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scala case classes' applies in this project (file.search/file.read).\n2. Review the standard practice for scala case classes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_scala-futures",
+   "name": "Language topic: scala futures",
+   "description": "Practical guide for scala futures in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scala futures' applies in this project (file.search/file.read).\n2. Review the standard practice for scala futures (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_haskell-basics-types",
+   "name": "Language topic: haskell basics types",
+   "description": "Practical guide for haskell basics types in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'haskell basics types' applies in this project (file.search/file.read).\n2. Review the standard practice for haskell basics types (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_elixir-processes",
+   "name": "Language topic: elixir processes",
+   "description": "Practical guide for elixir processes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'elixir processes' applies in this project (file.search/file.read).\n2. Review the standard practice for elixir processes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_erlang-supervision",
+   "name": "Language topic: erlang supervision",
+   "description": "Practical guide for erlang supervision in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'erlang supervision' applies in this project (file.search/file.read).\n2. Review the standard practice for erlang supervision (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_clojure-immutability",
+   "name": "Language topic: clojure immutability",
+   "description": "Practical guide for clojure immutability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'clojure immutability' applies in this project (file.search/file.read).\n2. Review the standard practice for clojure immutability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_dart-isolates",
+   "name": "Language topic: dart isolates",
+   "description": "Practical guide for dart isolates in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dart isolates' applies in this project (file.search/file.read).\n2. Review the standard practice for dart isolates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_dart-futures-streams",
+   "name": "Language topic: dart futures streams",
+   "description": "Practical guide for dart futures streams in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dart futures streams' applies in this project (file.search/file.read).\n2. Review the standard practice for dart futures streams (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_lua-scripting",
+   "name": "Language topic: lua scripting",
+   "description": "Practical guide for lua scripting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lua scripting' applies in this project (file.search/file.read).\n2. Review the standard practice for lua scripting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_perl-one-liners",
+   "name": "Language topic: perl one-liners",
+   "description": "Practical guide for perl one-liners in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'perl one-liners' applies in this project (file.search/file.read).\n2. Review the standard practice for perl one-liners (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_bash-arrays-deep",
+   "name": "Language topic: bash arrays deep",
+   "description": "Practical guide for bash arrays deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bash arrays deep' applies in this project (file.search/file.read).\n2. Review the standard practice for bash arrays deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_powershell-pipelines",
+   "name": "Language topic: powershell pipelines",
+   "description": "Practical guide for powershell pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'powershell pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for powershell pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_sql-window-functions",
+   "name": "Language topic: sql window functions",
+   "description": "Practical guide for sql window functions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sql window functions' applies in this project (file.search/file.read).\n2. Review the standard practice for sql window functions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_sql-cte-recursive",
+   "name": "Language topic: sql cte recursive",
+   "description": "Practical guide for sql cte recursive in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sql cte recursive' applies in this project (file.search/file.read).\n2. Review the standard practice for sql cte recursive (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_sql-query-plans",
+   "name": "Language topic: sql query plans",
+   "description": "Practical guide for sql query plans in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sql query plans' applies in this project (file.search/file.read).\n2. Review the standard practice for sql query plans (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_sql-indexing-strategy",
+   "name": "Language topic: sql indexing strategy",
+   "description": "Practical guide for sql indexing strategy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sql indexing strategy' applies in this project (file.search/file.read).\n2. Review the standard practice for sql indexing strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_html-semantics",
+   "name": "Language topic: html semantics",
+   "description": "Practical guide for html semantics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'html semantics' applies in this project (file.search/file.read).\n2. Review the standard practice for html semantics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_css-grid",
+   "name": "Language topic: css grid",
+   "description": "Practical guide for css grid in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'css grid' applies in this project (file.search/file.read).\n2. Review the standard practice for css grid (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_css-flexbox",
+   "name": "Language topic: css flexbox",
+   "description": "Practical guide for css flexbox in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'css flexbox' applies in this project (file.search/file.read).\n2. Review the standard practice for css flexbox (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_css-container-queries",
+   "name": "Language topic: css container queries",
+   "description": "Practical guide for css container queries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'css container queries' applies in this project (file.search/file.read).\n2. Review the standard practice for css container queries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-modules-deep",
+   "name": "Language topic: js modules deep",
+   "description": "Practical guide for js modules deep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js modules deep' applies in this project (file.search/file.read).\n2. Review the standard practice for js modules deep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-event-loop",
+   "name": "Language topic: js event loop",
+   "description": "Practical guide for js event loop in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js event loop' applies in this project (file.search/file.read).\n2. Review the standard practice for js event loop (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-memory-leaks",
+   "name": "Language topic: js memory leaks",
+   "description": "Practical guide for js memory leaks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js memory leaks' applies in this project (file.search/file.read).\n2. Review the standard practice for js memory leaks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-web-workers",
+   "name": "Language topic: js web workers",
+   "description": "Practical guide for js web workers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js web workers' applies in this project (file.search/file.read).\n2. Review the standard practice for js web workers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-service-workers",
+   "name": "Language topic: js service workers",
+   "description": "Practical guide for js service workers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js service workers' applies in this project (file.search/file.read).\n2. Review the standard practice for js service workers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-canvas-basics",
+   "name": "Language topic: js canvas basics",
+   "description": "Practical guide for js canvas basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js canvas basics' applies in this project (file.search/file.read).\n2. Review the standard practice for js canvas basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_js-webgl-intro",
+   "name": "Language topic: js webgl intro",
+   "description": "Practical guide for js webgl intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'js webgl intro' applies in this project (file.search/file.read).\n2. Review the standard practice for js webgl intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_wasm-basics",
+   "name": "Language topic: wasm basics",
+   "description": "Practical guide for wasm basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wasm basics' applies in this project (file.search/file.read).\n2. Review the standard practice for wasm basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_graphql-client-caching",
+   "name": "Language topic: graphql client caching",
+   "description": "Practical guide for graphql client caching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'graphql client caching' applies in this project (file.search/file.read).\n2. Review the standard practice for graphql client caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_grpc-streaming",
+   "name": "Language topic: grpc streaming",
+   "description": "Practical guide for grpc streaming in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'grpc streaming' applies in this project (file.search/file.read).\n2. Review the standard practice for grpc streaming (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_websocket-backpressure",
+   "name": "Language topic: websocket backpressure",
+   "description": "Practical guide for websocket backpressure in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'websocket backpressure' applies in this project (file.search/file.read).\n2. Review the standard practice for websocket backpressure (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_rest-pagination-patterns",
+   "name": "Language topic: rest pagination patterns",
+   "description": "Practical guide for rest pagination patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rest pagination patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for rest pagination patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_json-schema-design",
+   "name": "Language topic: json schema design",
+   "description": "Practical guide for json schema design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'json schema design' applies in this project (file.search/file.read).\n2. Review the standard practice for json schema design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_yaml-gotchas",
+   "name": "Language topic: yaml gotchas",
+   "description": "Practical guide for yaml gotchas in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'yaml gotchas' applies in this project (file.search/file.read).\n2. Review the standard practice for yaml gotchas (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_toml-usage",
+   "name": "Language topic: toml usage",
+   "description": "Practical guide for toml usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'toml usage' applies in this project (file.search/file.read).\n2. Review the standard practice for toml usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_markdown-linting",
+   "name": "Language topic: markdown linting",
+   "description": "Practical guide for markdown linting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'markdown linting' applies in this project (file.search/file.read).\n2. Review the standard practice for markdown linting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_regex-advanced-groups",
+   "name": "Language topic: regex advanced groups",
+   "description": "Practical guide for regex advanced groups in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'regex advanced groups' applies in this project (file.search/file.read).\n2. Review the standard practice for regex advanced groups (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_unicode-normalization-apps",
+   "name": "Language topic: unicode normalization apps",
+   "description": "Practical guide for unicode normalization apps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'unicode normalization apps' applies in this project (file.search/file.read).\n2. Review the standard practice for unicode normalization apps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_datetime-timezone-storage",
+   "name": "Language topic: datetime timezone storage",
+   "description": "Practical guide for datetime timezone storage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'datetime timezone storage' applies in this project (file.search/file.read).\n2. Review the standard practice for datetime timezone storage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_money-decimal-handling",
+   "name": "Language topic: money decimal handling",
+   "description": "Practical guide for money decimal handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'money decimal handling' applies in this project (file.search/file.read).\n2. Review the standard practice for money decimal handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_feature-flag-sdk-design",
+   "name": "Language topic: feature flag sdk design",
+   "description": "Practical guide for feature flag sdk design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature flag sdk design' applies in this project (file.search/file.read).\n2. Review the standard practice for feature flag sdk design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng2_config-schema-validation",
+   "name": "Language topic: config schema validation",
+   "description": "Practical guide for config schema validation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'config schema validation' applies in this project (file.search/file.read).\n2. Review the standard practice for config schema validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

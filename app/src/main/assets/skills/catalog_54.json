@@ -1,0 +1,1160 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ai_core_llm-app-architecture",
+   "name": "LLM app architecture",
+   "description": "Design production LLM applications.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_core_rag-pipeline-build",
+   "name": "RAG pipeline build",
+   "description": "Build retrieval-augmented generation correctly.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_core_agent-tool-loop-design",
+   "name": "Agent tool-loop design",
+   "description": "Build reliable tool-calling agents.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_core_eval-harness-basics",
+   "name": "Eval harness basics",
+   "description": "Measure model changes honestly.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_core_vector-database-choice",
+   "name": "Vector database choice",
+   "description": "Pick and operate a vector store.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_core_prompt-injection-defense",
+   "name": "Prompt injection defense",
+   "description": "Harden LLM apps against injection.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_system-prompt-design",
+   "name": "AI/ML topic: system prompt design",
+   "description": "Practical guide for system prompt design.",
+   "instructions": "Workflow:\n1. Locate where 'system prompt design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for system prompt design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_few-shot-selection",
+   "name": "AI/ML topic: few-shot selection",
+   "description": "Practical guide for few-shot selection.",
+   "instructions": "Workflow:\n1. Locate where 'few-shot selection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for few-shot selection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_temperature-tuning",
+   "name": "AI/ML topic: temperature tuning",
+   "description": "Practical guide for temperature tuning.",
+   "instructions": "Workflow:\n1. Locate where 'temperature tuning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for temperature tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_token-budgeting",
+   "name": "AI/ML topic: token budgeting",
+   "description": "Practical guide for token budgeting.",
+   "instructions": "Workflow:\n1. Locate where 'token budgeting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for token budgeting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_streaming-ux",
+   "name": "AI/ML topic: streaming UX",
+   "description": "Practical guide for streaming UX.",
+   "instructions": "Workflow:\n1. Locate where 'streaming UX' applies in this project or task (file.search/file.read).\n2. Review the standard practice for streaming UX (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_function-calling-patterns",
+   "name": "AI/ML topic: function calling patterns",
+   "description": "Practical guide for function calling patterns.",
+   "instructions": "Workflow:\n1. Locate where 'function calling patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for function calling patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_structured-output-json-mode",
+   "name": "AI/ML topic: structured output JSON mode",
+   "description": "Practical guide for structured output JSON mode.",
+   "instructions": "Workflow:\n1. Locate where 'structured output JSON mode' applies in this project or task (file.search/file.read).\n2. Review the standard practice for structured output JSON mode (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_retrieval-chunking-strategies",
+   "name": "AI/ML topic: retrieval chunking strategies",
+   "description": "Practical guide for retrieval chunking strategies.",
+   "instructions": "Workflow:\n1. Locate where 'retrieval chunking strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for retrieval chunking strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_embedding-model-selection",
+   "name": "AI/ML topic: embedding model selection",
+   "description": "Practical guide for embedding model selection.",
+   "instructions": "Workflow:\n1. Locate where 'embedding model selection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for embedding model selection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_hybrid-search-bm25-vectors",
+   "name": "AI/ML topic: hybrid search BM25 vectors",
+   "description": "Practical guide for hybrid search BM25 vectors.",
+   "instructions": "Workflow:\n1. Locate where 'hybrid search BM25 vectors' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hybrid search BM25 vectors (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_reranking-strategies",
+   "name": "AI/ML topic: reranking strategies",
+   "description": "Practical guide for reranking strategies.",
+   "instructions": "Workflow:\n1. Locate where 'reranking strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reranking strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_query-rewriting",
+   "name": "AI/ML topic: query rewriting",
+   "description": "Practical guide for query rewriting.",
+   "instructions": "Workflow:\n1. Locate where 'query rewriting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for query rewriting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_context-window-management",
+   "name": "AI/ML topic: context window management",
+   "description": "Practical guide for context window management.",
+   "instructions": "Workflow:\n1. Locate where 'context window management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for context window management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_conversation-memory-design",
+   "name": "AI/ML topic: conversation memory design",
+   "description": "Practical guide for conversation memory design.",
+   "instructions": "Workflow:\n1. Locate where 'conversation memory design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for conversation memory design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_summarization-pipelines",
+   "name": "AI/ML topic: summarization pipelines",
+   "description": "Practical guide for summarization pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'summarization pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for summarization pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_classification-with-llms",
+   "name": "AI/ML topic: classification with LLMs",
+   "description": "Practical guide for classification with LLMs.",
+   "instructions": "Workflow:\n1. Locate where 'classification with LLMs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for classification with LLMs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_extraction-pipelines",
+   "name": "AI/ML topic: extraction pipelines",
+   "description": "Practical guide for extraction pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'extraction pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for extraction pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_translation-workflows",
+   "name": "AI/ML topic: translation workflows",
+   "description": "Practical guide for translation workflows.",
+   "instructions": "Workflow:\n1. Locate where 'translation workflows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for translation workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_content-moderation-layers",
+   "name": "AI/ML topic: content moderation layers",
+   "description": "Practical guide for content moderation layers.",
+   "instructions": "Workflow:\n1. Locate where 'content moderation layers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for content moderation layers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_safety-classifiers",
+   "name": "AI/ML topic: safety classifiers",
+   "description": "Practical guide for safety classifiers.",
+   "instructions": "Workflow:\n1. Locate where 'safety classifiers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for safety classifiers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_red-teaming-llm-apps",
+   "name": "AI/ML topic: red teaming LLM apps",
+   "description": "Practical guide for red teaming LLM apps.",
+   "instructions": "Workflow:\n1. Locate where 'red teaming LLM apps' applies in this project or task (file.search/file.read).\n2. Review the standard practice for red teaming LLM apps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_fine-tuning-data-prep",
+   "name": "AI/ML topic: fine-tuning data prep",
+   "description": "Practical guide for fine-tuning data prep.",
+   "instructions": "Workflow:\n1. Locate where 'fine-tuning data prep' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fine-tuning data prep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_lora-basics",
+   "name": "AI/ML topic: LoRA basics",
+   "description": "Practical guide for LoRA basics.",
+   "instructions": "Workflow:\n1. Locate where 'LoRA basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for LoRA basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_qlora-basics",
+   "name": "AI/ML topic: QLoRA basics",
+   "description": "Practical guide for QLoRA basics.",
+   "instructions": "Workflow:\n1. Locate where 'QLoRA basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for QLoRA basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_distillation-approaches",
+   "name": "AI/ML topic: distillation approaches",
+   "description": "Practical guide for distillation approaches.",
+   "instructions": "Workflow:\n1. Locate where 'distillation approaches' applies in this project or task (file.search/file.read).\n2. Review the standard practice for distillation approaches (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_quantization-gguf",
+   "name": "AI/ML topic: quantization GGUF",
+   "description": "Practical guide for quantization GGUF.",
+   "instructions": "Workflow:\n1. Locate where 'quantization GGUF' applies in this project or task (file.search/file.read).\n2. Review the standard practice for quantization GGUF (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_inference-server-basics",
+   "name": "AI/ML topic: inference server basics",
+   "description": "Practical guide for inference server basics.",
+   "instructions": "Workflow:\n1. Locate where 'inference server basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for inference server basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_vllm-deployment-notes",
+   "name": "AI/ML topic: vLLM deployment notes",
+   "description": "Practical guide for vLLM deployment notes.",
+   "instructions": "Workflow:\n1. Locate where 'vLLM deployment notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for vLLM deployment notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_batch-inference",
+   "name": "AI/ML topic: batch inference",
+   "description": "Practical guide for batch inference.",
+   "instructions": "Workflow:\n1. Locate where 'batch inference' applies in this project or task (file.search/file.read).\n2. Review the standard practice for batch inference (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_cost-per-token-optimization",
+   "name": "AI/ML topic: cost per token optimization",
+   "description": "Practical guide for cost per token optimization.",
+   "instructions": "Workflow:\n1. Locate where 'cost per token optimization' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cost per token optimization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_caching-llm-responses",
+   "name": "AI/ML topic: caching LLM responses",
+   "description": "Practical guide for caching LLM responses.",
+   "instructions": "Workflow:\n1. Locate where 'caching LLM responses' applies in this project or task (file.search/file.read).\n2. Review the standard practice for caching LLM responses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_semantic-caching",
+   "name": "AI/ML topic: semantic caching",
+   "description": "Practical guide for semantic caching.",
+   "instructions": "Workflow:\n1. Locate where 'semantic caching' applies in this project or task (file.search/file.read).\n2. Review the standard practice for semantic caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_guardrail-libraries",
+   "name": "AI/ML topic: guardrail libraries",
+   "description": "Practical guide for guardrail libraries.",
+   "instructions": "Workflow:\n1. Locate where 'guardrail libraries' applies in this project or task (file.search/file.read).\n2. Review the standard practice for guardrail libraries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_observability-for-llm-apps",
+   "name": "AI/ML topic: observability for LLM apps",
+   "description": "Practical guide for observability for LLM apps.",
+   "instructions": "Workflow:\n1. Locate where 'observability for LLM apps' applies in this project or task (file.search/file.read).\n2. Review the standard practice for observability for LLM apps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_tracing-llm-calls",
+   "name": "AI/ML topic: tracing LLM calls",
+   "description": "Practical guide for tracing LLM calls.",
+   "instructions": "Workflow:\n1. Locate where 'tracing LLM calls' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tracing LLM calls (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_prompt-versioning",
+   "name": "AI/ML topic: prompt versioning",
+   "description": "Practical guide for prompt versioning.",
+   "instructions": "Workflow:\n1. Locate where 'prompt versioning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for prompt versioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_a-b-testing-prompts",
+   "name": "AI/ML topic: A B testing prompts",
+   "description": "Practical guide for A B testing prompts.",
+   "instructions": "Workflow:\n1. Locate where 'A B testing prompts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for A B testing prompts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_regression-evals",
+   "name": "AI/ML topic: regression evals",
+   "description": "Practical guide for regression evals.",
+   "instructions": "Workflow:\n1. Locate where 'regression evals' applies in this project or task (file.search/file.read).\n2. Review the standard practice for regression evals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_human-review-loops",
+   "name": "AI/ML topic: human review loops",
+   "description": "Practical guide for human review loops.",
+   "instructions": "Workflow:\n1. Locate where 'human review loops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for human review loops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_annotation-guidelines",
+   "name": "AI/ML topic: annotation guidelines",
+   "description": "Practical guide for annotation guidelines.",
+   "instructions": "Workflow:\n1. Locate where 'annotation guidelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for annotation guidelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_dataset-curation",
+   "name": "AI/ML topic: dataset curation",
+   "description": "Practical guide for dataset curation.",
+   "instructions": "Workflow:\n1. Locate where 'dataset curation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dataset curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_synthetic-data-generation",
+   "name": "AI/ML topic: synthetic data generation",
+   "description": "Practical guide for synthetic data generation.",
+   "instructions": "Workflow:\n1. Locate where 'synthetic data generation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for synthetic data generation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_data-dedup-pipelines",
+   "name": "AI/ML topic: data dedup pipelines",
+   "description": "Practical guide for data dedup pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'data dedup pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data dedup pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_labeling-workflows",
+   "name": "AI/ML topic: labeling workflows",
+   "description": "Practical guide for labeling workflows.",
+   "instructions": "Workflow:\n1. Locate where 'labeling workflows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for labeling workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_active-learning-basics",
+   "name": "AI/ML topic: active learning basics",
+   "description": "Practical guide for active learning basics.",
+   "instructions": "Workflow:\n1. Locate where 'active learning basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for active learning basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_model-routing-strategies",
+   "name": "AI/ML topic: model routing strategies",
+   "description": "Practical guide for model routing strategies.",
+   "instructions": "Workflow:\n1. Locate where 'model routing strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for model routing strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_fallback-chains",
+   "name": "AI/ML topic: fallback chains",
+   "description": "Practical guide for fallback chains.",
+   "instructions": "Workflow:\n1. Locate where 'fallback chains' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fallback chains (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_timeout-and-retry-policies",
+   "name": "AI/ML topic: timeout and retry policies",
+   "description": "Practical guide for timeout and retry policies.",
+   "instructions": "Workflow:\n1. Locate where 'timeout and retry policies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for timeout and retry policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_provider-abstraction-layers",
+   "name": "AI/ML topic: provider abstraction layers",
+   "description": "Practical guide for provider abstraction layers.",
+   "instructions": "Workflow:\n1. Locate where 'provider abstraction layers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for provider abstraction layers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_local-model-serving",
+   "name": "AI/ML topic: local model serving",
+   "description": "Practical guide for local model serving.",
+   "instructions": "Workflow:\n1. Locate where 'local model serving' applies in this project or task (file.search/file.read).\n2. Review the standard practice for local model serving (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_ollama-integration",
+   "name": "AI/ML topic: ollama integration",
+   "description": "Practical guide for ollama integration.",
+   "instructions": "Workflow:\n1. Locate where 'ollama integration' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ollama integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_llamafile-notes",
+   "name": "AI/ML topic: llamafile notes",
+   "description": "Practical guide for llamafile notes.",
+   "instructions": "Workflow:\n1. Locate where 'llamafile notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for llamafile notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_whisper-integration",
+   "name": "AI/ML topic: whisper integration",
+   "description": "Practical guide for whisper integration.",
+   "instructions": "Workflow:\n1. Locate where 'whisper integration' applies in this project or task (file.search/file.read).\n2. Review the standard practice for whisper integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_text-to-speech-pipelines",
+   "name": "AI/ML topic: text to speech pipelines",
+   "description": "Practical guide for text to speech pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'text to speech pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for text to speech pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_speech-to-text-tuning",
+   "name": "AI/ML topic: speech to text tuning",
+   "description": "Practical guide for speech to text tuning.",
+   "instructions": "Workflow:\n1. Locate where 'speech to text tuning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for speech to text tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_ocr-pipelines",
+   "name": "AI/ML topic: OCR pipelines",
+   "description": "Practical guide for OCR pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'OCR pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for OCR pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_document-ai",
+   "name": "AI/ML topic: document AI",
+   "description": "Practical guide for document AI.",
+   "instructions": "Workflow:\n1. Locate where 'document AI' applies in this project or task (file.search/file.read).\n2. Review the standard practice for document AI (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_layout-analysis",
+   "name": "AI/ML topic: layout analysis",
+   "description": "Practical guide for layout analysis.",
+   "instructions": "Workflow:\n1. Locate where 'layout analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for layout analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_table-extraction",
+   "name": "AI/ML topic: table extraction",
+   "description": "Practical guide for table extraction.",
+   "instructions": "Workflow:\n1. Locate where 'table extraction' applies in this project or task (file.search/file.read).\n2. Review the standard practice for table extraction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_chat-ux-patterns",
+   "name": "AI/ML topic: chat UX patterns",
+   "description": "Practical guide for chat UX patterns.",
+   "instructions": "Workflow:\n1. Locate where 'chat UX patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for chat UX patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_citation-ui-patterns",
+   "name": "AI/ML topic: citation UI patterns",
+   "description": "Practical guide for citation UI patterns.",
+   "instructions": "Workflow:\n1. Locate where 'citation UI patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for citation UI patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_tool-error-handling",
+   "name": "AI/ML topic: tool error handling",
+   "description": "Practical guide for tool error handling.",
+   "instructions": "Workflow:\n1. Locate where 'tool error handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tool error handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_idempotent-agent-actions",
+   "name": "AI/ML topic: idempotent agent actions",
+   "description": "Practical guide for idempotent agent actions.",
+   "instructions": "Workflow:\n1. Locate where 'idempotent agent actions' applies in this project or task (file.search/file.read).\n2. Review the standard practice for idempotent agent actions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_agent-state-machines",
+   "name": "AI/ML topic: agent state machines",
+   "description": "Practical guide for agent state machines.",
+   "instructions": "Workflow:\n1. Locate where 'agent state machines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for agent state machines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_multi-agent-orchestration",
+   "name": "AI/ML topic: multi-agent orchestration",
+   "description": "Practical guide for multi-agent orchestration.",
+   "instructions": "Workflow:\n1. Locate where 'multi-agent orchestration' applies in this project or task (file.search/file.read).\n2. Review the standard practice for multi-agent orchestration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_planner-executor-split",
+   "name": "AI/ML topic: planner executor split",
+   "description": "Practical guide for planner executor split.",
+   "instructions": "Workflow:\n1. Locate where 'planner executor split' applies in this project or task (file.search/file.read).\n2. Review the standard practice for planner executor split (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_reflection-loops",
+   "name": "AI/ML topic: reflection loops",
+   "description": "Practical guide for reflection loops.",
+   "instructions": "Workflow:\n1. Locate where 'reflection loops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reflection loops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_memory-stores-for-agents",
+   "name": "AI/ML topic: memory stores for agents",
+   "description": "Practical guide for memory stores for agents.",
+   "instructions": "Workflow:\n1. Locate where 'memory stores for agents' applies in this project or task (file.search/file.read).\n2. Review the standard practice for memory stores for agents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_long-term-memory-design",
+   "name": "AI/ML topic: long-term memory design",
+   "description": "Practical guide for long-term memory design.",
+   "instructions": "Workflow:\n1. Locate where 'long-term memory design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for long-term memory design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_personalization-with-privacy",
+   "name": "AI/ML topic: personalization with privacy",
+   "description": "Practical guide for personalization with privacy.",
+   "instructions": "Workflow:\n1. Locate where 'personalization with privacy' applies in this project or task (file.search/file.read).\n2. Review the standard practice for personalization with privacy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_pii-redaction-pipelines",
+   "name": "AI/ML topic: PII redaction pipelines",
+   "description": "Practical guide for PII redaction pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'PII redaction pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for PII redaction pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_audit-logs-for-ai",
+   "name": "AI/ML topic: audit logs for AI",
+   "description": "Practical guide for audit logs for AI.",
+   "instructions": "Workflow:\n1. Locate where 'audit logs for AI' applies in this project or task (file.search/file.read).\n2. Review the standard practice for audit logs for AI (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_model-cards-writing",
+   "name": "AI/ML topic: model cards writing",
+   "description": "Practical guide for model cards writing.",
+   "instructions": "Workflow:\n1. Locate where 'model cards writing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for model cards writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_dataset-documentation",
+   "name": "AI/ML topic: dataset documentation",
+   "description": "Practical guide for dataset documentation.",
+   "instructions": "Workflow:\n1. Locate where 'dataset documentation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dataset documentation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_bias-evaluation-basics",
+   "name": "AI/ML topic: bias evaluation basics",
+   "description": "Practical guide for bias evaluation basics.",
+   "instructions": "Workflow:\n1. Locate where 'bias evaluation basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for bias evaluation basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_fairness-metrics-intro",
+   "name": "AI/ML topic: fairness metrics intro",
+   "description": "Practical guide for fairness metrics intro.",
+   "instructions": "Workflow:\n1. Locate where 'fairness metrics intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fairness metrics intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_robustness-testing",
+   "name": "AI/ML topic: robustness testing",
+   "description": "Practical guide for robustness testing.",
+   "instructions": "Workflow:\n1. Locate where 'robustness testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for robustness testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_adversarial-examples-intro",
+   "name": "AI/ML topic: adversarial examples intro",
+   "description": "Practical guide for adversarial examples intro.",
+   "instructions": "Workflow:\n1. Locate where 'adversarial examples intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for adversarial examples intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_watermarking-notes",
+   "name": "AI/ML topic: watermarking notes",
+   "description": "Practical guide for watermarking notes.",
+   "instructions": "Workflow:\n1. Locate where 'watermarking notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for watermarking notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_provenance-for-ai-content",
+   "name": "AI/ML topic: provenance for AI content",
+   "description": "Practical guide for provenance for AI content.",
+   "instructions": "Workflow:\n1. Locate where 'provenance for AI content' applies in this project or task (file.search/file.read).\n2. Review the standard practice for provenance for AI content (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_licensing-models-data",
+   "name": "AI/ML topic: licensing models data",
+   "description": "Practical guide for licensing models data.",
+   "instructions": "Workflow:\n1. Locate where 'licensing models data' applies in this project or task (file.search/file.read).\n2. Review the standard practice for licensing models data (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_open-weights-licensing",
+   "name": "AI/ML topic: open weights licensing",
+   "description": "Practical guide for open weights licensing.",
+   "instructions": "Workflow:\n1. Locate where 'open weights licensing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for open weights licensing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_deployment-rollback-models",
+   "name": "AI/ML topic: deployment rollback models",
+   "description": "Practical guide for deployment rollback models.",
+   "instructions": "Workflow:\n1. Locate where 'deployment rollback models' applies in this project or task (file.search/file.read).\n2. Review the standard practice for deployment rollback models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_canary-model-releases",
+   "name": "AI/ML topic: canary model releases",
+   "description": "Practical guide for canary model releases.",
+   "instructions": "Workflow:\n1. Locate where 'canary model releases' applies in this project or task (file.search/file.read).\n2. Review the standard practice for canary model releases (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_shadow-scoring",
+   "name": "AI/ML topic: shadow scoring",
+   "description": "Practical guide for shadow scoring.",
+   "instructions": "Workflow:\n1. Locate where 'shadow scoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for shadow scoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_champion-challenger-models",
+   "name": "AI/ML topic: champion challenger models",
+   "description": "Practical guide for champion challenger models.",
+   "instructions": "Workflow:\n1. Locate where 'champion challenger models' applies in this project or task (file.search/file.read).\n2. Review the standard practice for champion challenger models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_feature-stores-for-ml",
+   "name": "AI/ML topic: feature stores for ML",
+   "description": "Practical guide for feature stores for ML.",
+   "instructions": "Workflow:\n1. Locate where 'feature stores for ML' applies in this project or task (file.search/file.read).\n2. Review the standard practice for feature stores for ML (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_training-pipeline-design",
+   "name": "AI/ML topic: training pipeline design",
+   "description": "Practical guide for training pipeline design.",
+   "instructions": "Workflow:\n1. Locate where 'training pipeline design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for training pipeline design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_data-version-control",
+   "name": "AI/ML topic: data version control",
+   "description": "Practical guide for data version control.",
+   "instructions": "Workflow:\n1. Locate where 'data version control' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data version control (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_experiment-tracking",
+   "name": "AI/ML topic: experiment tracking",
+   "description": "Practical guide for experiment tracking.",
+   "instructions": "Workflow:\n1. Locate where 'experiment tracking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for experiment tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_hyperparameter-sweeps",
+   "name": "AI/ML topic: hyperparameter sweeps",
+   "description": "Practical guide for hyperparameter sweeps.",
+   "instructions": "Workflow:\n1. Locate where 'hyperparameter sweeps' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hyperparameter sweeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_early-stopping-strategies",
+   "name": "AI/ML topic: early stopping strategies",
+   "description": "Practical guide for early stopping strategies.",
+   "instructions": "Workflow:\n1. Locate where 'early stopping strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for early stopping strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_learning-rate-schedules",
+   "name": "AI/ML topic: learning rate schedules",
+   "description": "Practical guide for learning rate schedules.",
+   "instructions": "Workflow:\n1. Locate where 'learning rate schedules' applies in this project or task (file.search/file.read).\n2. Review the standard practice for learning rate schedules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_overfitting-detection",
+   "name": "AI/ML topic: overfitting detection",
+   "description": "Practical guide for overfitting detection.",
+   "instructions": "Workflow:\n1. Locate where 'overfitting detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for overfitting detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_class-imbalance-handling",
+   "name": "AI/ML topic: class imbalance handling",
+   "description": "Practical guide for class imbalance handling.",
+   "instructions": "Workflow:\n1. Locate where 'class imbalance handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for class imbalance handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_cross-validation-patterns",
+   "name": "AI/ML topic: cross validation patterns",
+   "description": "Practical guide for cross validation patterns.",
+   "instructions": "Workflow:\n1. Locate where 'cross validation patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cross validation patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_leakage-detection",
+   "name": "AI/ML topic: leakage detection",
+   "description": "Practical guide for leakage detection.",
+   "instructions": "Workflow:\n1. Locate where 'leakage detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for leakage detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_feature-engineering-basics",
+   "name": "AI/ML topic: feature engineering basics",
+   "description": "Practical guide for feature engineering basics.",
+   "instructions": "Workflow:\n1. Locate where 'feature engineering basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for feature engineering basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_feature-selection-methods",
+   "name": "AI/ML topic: feature selection methods",
+   "description": "Practical guide for feature selection methods.",
+   "instructions": "Workflow:\n1. Locate where 'feature selection methods' applies in this project or task (file.search/file.read).\n2. Review the standard practice for feature selection methods (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_dimensionality-reduction",
+   "name": "AI/ML topic: dimensionality reduction",
+   "description": "Practical guide for dimensionality reduction.",
+   "instructions": "Workflow:\n1. Locate where 'dimensionality reduction' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dimensionality reduction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_clustering-workflows",
+   "name": "AI/ML topic: clustering workflows",
+   "description": "Practical guide for clustering workflows.",
+   "instructions": "Workflow:\n1. Locate where 'clustering workflows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for clustering workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_anomaly-detection-basics",
+   "name": "AI/ML topic: anomaly detection basics",
+   "description": "Practical guide for anomaly detection basics.",
+   "instructions": "Workflow:\n1. Locate where 'anomaly detection basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for anomaly detection basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_time-series-forecasting",
+   "name": "AI/ML topic: time series forecasting",
+   "description": "Practical guide for time series forecasting.",
+   "instructions": "Workflow:\n1. Locate where 'time series forecasting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for time series forecasting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_recommendation-basics",
+   "name": "AI/ML topic: recommendation basics",
+   "description": "Practical guide for recommendation basics.",
+   "instructions": "Workflow:\n1. Locate where 'recommendation basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for recommendation basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_ranking-metrics",
+   "name": "AI/ML topic: ranking metrics",
+   "description": "Practical guide for ranking metrics.",
+   "instructions": "Workflow:\n1. Locate where 'ranking metrics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ranking metrics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_offline-vs-online-eval",
+   "name": "AI/ML topic: offline vs online eval",
+   "description": "Practical guide for offline vs online eval.",
+   "instructions": "Workflow:\n1. Locate where 'offline vs online eval' applies in this project or task (file.search/file.read).\n2. Review the standard practice for offline vs online eval (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_drift-detection",
+   "name": "AI/ML topic: drift detection",
+   "description": "Practical guide for drift detection.",
+   "instructions": "Workflow:\n1. Locate where 'drift detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for drift detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_model-monitoring",
+   "name": "AI/ML topic: model monitoring",
+   "description": "Practical guide for model monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'model monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for model monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_inference-latency-budgets",
+   "name": "AI/ML topic: inference latency budgets",
+   "description": "Practical guide for inference latency budgets.",
+   "instructions": "Workflow:\n1. Locate where 'inference latency budgets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for inference latency budgets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_edge-deployment-ml",
+   "name": "AI/ML topic: edge deployment ML",
+   "description": "Practical guide for edge deployment ML.",
+   "instructions": "Workflow:\n1. Locate where 'edge deployment ML' applies in this project or task (file.search/file.read).\n2. Review the standard practice for edge deployment ML (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_mobile-ml-on-device",
+   "name": "AI/ML topic: mobile ML on-device",
+   "description": "Practical guide for mobile ML on-device.",
+   "instructions": "Workflow:\n1. Locate where 'mobile ML on-device' applies in this project or task (file.search/file.read).\n2. Review the standard practice for mobile ML on-device (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_quantized-inference-mobile",
+   "name": "AI/ML topic: quantized inference mobile",
+   "description": "Practical guide for quantized inference mobile.",
+   "instructions": "Workflow:\n1. Locate where 'quantized inference mobile' applies in this project or task (file.search/file.read).\n2. Review the standard practice for quantized inference mobile (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_privacy-preserving-ml-intro",
+   "name": "AI/ML topic: privacy preserving ML intro",
+   "description": "Practical guide for privacy preserving ML intro.",
+   "instructions": "Workflow:\n1. Locate where 'privacy preserving ML intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for privacy preserving ML intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_federated-learning-basics",
+   "name": "AI/ML topic: federated learning basics",
+   "description": "Practical guide for federated learning basics.",
+   "instructions": "Workflow:\n1. Locate where 'federated learning basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for federated learning basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_synthetic-data-ethics",
+   "name": "AI/ML topic: synthetic data ethics",
+   "description": "Practical guide for synthetic data ethics.",
+   "instructions": "Workflow:\n1. Locate where 'synthetic data ethics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for synthetic data ethics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_model-theft-concerns",
+   "name": "AI/ML topic: model theft concerns",
+   "description": "Practical guide for model theft concerns.",
+   "instructions": "Workflow:\n1. Locate where 'model theft concerns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for model theft concerns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_supply-chain-for-models",
+   "name": "AI/ML topic: supply chain for models",
+   "description": "Practical guide for supply chain for models.",
+   "instructions": "Workflow:\n1. Locate where 'supply chain for models' applies in this project or task (file.search/file.read).\n2. Review the standard practice for supply chain for models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_artifact-signing-models",
+   "name": "AI/ML topic: artifact signing models",
+   "description": "Practical guide for artifact signing models.",
+   "instructions": "Workflow:\n1. Locate where 'artifact signing models' applies in this project or task (file.search/file.read).\n2. Review the standard practice for artifact signing models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_reproducible-training",
+   "name": "AI/ML topic: reproducible training",
+   "description": "Practical guide for reproducible training.",
+   "instructions": "Workflow:\n1. Locate where 'reproducible training' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reproducible training (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_seed-management",
+   "name": "AI/ML topic: seed management",
+   "description": "Practical guide for seed management.",
+   "instructions": "Workflow:\n1. Locate where 'seed management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for seed management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_distributed-training-basics",
+   "name": "AI/ML topic: distributed training basics",
+   "description": "Practical guide for distributed training basics.",
+   "instructions": "Workflow:\n1. Locate where 'distributed training basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for distributed training basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_gradient-accumulation",
+   "name": "AI/ML topic: gradient accumulation",
+   "description": "Practical guide for gradient accumulation.",
+   "instructions": "Workflow:\n1. Locate where 'gradient accumulation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for gradient accumulation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_mixed-precision-training",
+   "name": "AI/ML topic: mixed precision training",
+   "description": "Practical guide for mixed precision training.",
+   "instructions": "Workflow:\n1. Locate where 'mixed precision training' applies in this project or task (file.search/file.read).\n2. Review the standard practice for mixed precision training (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_debugging-training-runs",
+   "name": "AI/ML topic: debugging training runs",
+   "description": "Practical guide for debugging training runs.",
+   "instructions": "Workflow:\n1. Locate where 'debugging training runs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for debugging training runs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_loss-curve-reading",
+   "name": "AI/ML topic: loss curve reading",
+   "description": "Practical guide for loss curve reading.",
+   "instructions": "Workflow:\n1. Locate where 'loss curve reading' applies in this project or task (file.search/file.read).\n2. Review the standard practice for loss curve reading (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_checkpoint-management",
+   "name": "AI/ML topic: checkpoint management",
+   "description": "Practical guide for checkpoint management.",
+   "instructions": "Workflow:\n1. Locate where 'checkpoint management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for checkpoint management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_transfer-learning-patterns",
+   "name": "AI/ML topic: transfer learning patterns",
+   "description": "Practical guide for transfer learning patterns.",
+   "instructions": "Workflow:\n1. Locate where 'transfer learning patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for transfer learning patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_domain-adaptation-intro",
+   "name": "AI/ML topic: domain adaptation intro",
+   "description": "Practical guide for domain adaptation intro.",
+   "instructions": "Workflow:\n1. Locate where 'domain adaptation intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for domain adaptation intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_test-time-augmentation",
+   "name": "AI/ML topic: test time augmentation",
+   "description": "Practical guide for test time augmentation.",
+   "instructions": "Workflow:\n1. Locate where 'test time augmentation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for test time augmentation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_ensemble-methods",
+   "name": "AI/ML topic: ensemble methods",
+   "description": "Practical guide for ensemble methods.",
+   "instructions": "Workflow:\n1. Locate where 'ensemble methods' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ensemble methods (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_calibration-of-confidence",
+   "name": "AI/ML topic: calibration of confidence",
+   "description": "Practical guide for calibration of confidence.",
+   "instructions": "Workflow:\n1. Locate where 'calibration of confidence' applies in this project or task (file.search/file.read).\n2. Review the standard practice for calibration of confidence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_uncertainty-quantification",
+   "name": "AI/ML topic: uncertainty quantification",
+   "description": "Practical guide for uncertainty quantification.",
+   "instructions": "Workflow:\n1. Locate where 'uncertainty quantification' applies in this project or task (file.search/file.read).\n2. Review the standard practice for uncertainty quantification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_interpretability-basics",
+   "name": "AI/ML topic: interpretability basics",
+   "description": "Practical guide for interpretability basics.",
+   "instructions": "Workflow:\n1. Locate where 'interpretability basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for interpretability basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_shap-values-intro",
+   "name": "AI/ML topic: SHAP values intro",
+   "description": "Practical guide for SHAP values intro.",
+   "instructions": "Workflow:\n1. Locate where 'SHAP values intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for SHAP values intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_lime-intro",
+   "name": "AI/ML topic: LIME intro",
+   "description": "Practical guide for LIME intro.",
+   "instructions": "Workflow:\n1. Locate where 'LIME intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for LIME intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_attention-visualization",
+   "name": "AI/ML topic: attention visualization",
+   "description": "Practical guide for attention visualization.",
+   "instructions": "Workflow:\n1. Locate where 'attention visualization' applies in this project or task (file.search/file.read).\n2. Review the standard practice for attention visualization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_error-analysis-loops",
+   "name": "AI/ML topic: error analysis loops",
+   "description": "Practical guide for error analysis loops.",
+   "instructions": "Workflow:\n1. Locate where 'error analysis loops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for error analysis loops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_hard-example-mining",
+   "name": "AI/ML topic: hard example mining",
+   "description": "Practical guide for hard example mining.",
+   "instructions": "Workflow:\n1. Locate where 'hard example mining' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hard example mining (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_curriculum-learning-intro",
+   "name": "AI/ML topic: curriculum learning intro",
+   "description": "Practical guide for curriculum learning intro.",
+   "instructions": "Workflow:\n1. Locate where 'curriculum learning intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for curriculum learning intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_multi-task-learning",
+   "name": "AI/ML topic: multi task learning",
+   "description": "Practical guide for multi task learning.",
+   "instructions": "Workflow:\n1. Locate where 'multi task learning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for multi task learning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_transfer-between-domains",
+   "name": "AI/ML topic: transfer between domains",
+   "description": "Practical guide for transfer between domains.",
+   "instructions": "Workflow:\n1. Locate where 'transfer between domains' applies in this project or task (file.search/file.read).\n2. Review the standard practice for transfer between domains (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_small-data-regimes",
+   "name": "AI/ML topic: small data regimes",
+   "description": "Practical guide for small data regimes.",
+   "instructions": "Workflow:\n1. Locate where 'small data regimes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for small data regimes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_data-augmentation-text",
+   "name": "AI/ML topic: data augmentation text",
+   "description": "Practical guide for data augmentation text.",
+   "instructions": "Workflow:\n1. Locate where 'data augmentation text' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data augmentation text (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_data-augmentation-images",
+   "name": "AI/ML topic: data augmentation images",
+   "description": "Practical guide for data augmentation images.",
+   "instructions": "Workflow:\n1. Locate where 'data augmentation images' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data augmentation images (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_label-noise-handling",
+   "name": "AI/ML topic: label noise handling",
+   "description": "Practical guide for label noise handling.",
+   "instructions": "Workflow:\n1. Locate where 'label noise handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for label noise handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_weak-supervision",
+   "name": "AI/ML topic: weak supervision",
+   "description": "Practical guide for weak supervision.",
+   "instructions": "Workflow:\n1. Locate where 'weak supervision' applies in this project or task (file.search/file.read).\n2. Review the standard practice for weak supervision (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_distant-supervision",
+   "name": "AI/ML topic: distant supervision",
+   "description": "Practical guide for distant supervision.",
+   "instructions": "Workflow:\n1. Locate where 'distant supervision' applies in this project or task (file.search/file.read).\n2. Review the standard practice for distant supervision (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_negative-sampling",
+   "name": "AI/ML topic: negative sampling",
+   "description": "Practical guide for negative sampling.",
+   "instructions": "Workflow:\n1. Locate where 'negative sampling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for negative sampling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_embedding-evaluation",
+   "name": "AI/ML topic: embedding evaluation",
+   "description": "Practical guide for embedding evaluation.",
+   "instructions": "Workflow:\n1. Locate where 'embedding evaluation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for embedding evaluation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_retrieval-eval-datasets",
+   "name": "AI/ML topic: retrieval eval datasets",
+   "description": "Practical guide for retrieval eval datasets.",
+   "instructions": "Workflow:\n1. Locate where 'retrieval eval datasets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for retrieval eval datasets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_chunk-size-experiments",
+   "name": "AI/ML topic: chunk size experiments",
+   "description": "Practical guide for chunk size experiments.",
+   "instructions": "Workflow:\n1. Locate where 'chunk size experiments' applies in this project or task (file.search/file.read).\n2. Review the standard practice for chunk size experiments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_overlap-experiments",
+   "name": "AI/ML topic: overlap experiments",
+   "description": "Practical guide for overlap experiments.",
+   "instructions": "Workflow:\n1. Locate where 'overlap experiments' applies in this project or task (file.search/file.read).\n2. Review the standard practice for overlap experiments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_metadata-filters-in-retrieval",
+   "name": "AI/ML topic: metadata filters in retrieval",
+   "description": "Practical guide for metadata filters in retrieval.",
+   "instructions": "Workflow:\n1. Locate where 'metadata filters in retrieval' applies in this project or task (file.search/file.read).\n2. Review the standard practice for metadata filters in retrieval (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_multi-tenant-retrieval",
+   "name": "AI/ML topic: multi tenant retrieval",
+   "description": "Practical guide for multi tenant retrieval.",
+   "instructions": "Workflow:\n1. Locate where 'multi tenant retrieval' applies in this project or task (file.search/file.read).\n2. Review the standard practice for multi tenant retrieval (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_access-control-in-rag",
+   "name": "AI/ML topic: access control in RAG",
+   "description": "Practical guide for access control in RAG.",
+   "instructions": "Workflow:\n1. Locate where 'access control in RAG' applies in this project or task (file.search/file.read).\n2. Review the standard practice for access control in RAG (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_freshness-in-indexes",
+   "name": "AI/ML topic: freshness in indexes",
+   "description": "Practical guide for freshness in indexes.",
+   "instructions": "Workflow:\n1. Locate where 'freshness in indexes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for freshness in indexes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_incremental-indexing",
+   "name": "AI/ML topic: incremental indexing",
+   "description": "Practical guide for incremental indexing.",
+   "instructions": "Workflow:\n1. Locate where 'incremental indexing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for incremental indexing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_deletion-propagation",
+   "name": "AI/ML topic: deletion propagation",
+   "description": "Practical guide for deletion propagation.",
+   "instructions": "Workflow:\n1. Locate where 'deletion propagation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for deletion propagation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ai_reindexing-strategies",
+   "name": "AI/ML topic: reindexing strategies",
+   "description": "Practical guide for reindexing strategies.",
+   "instructions": "Workflow:\n1. Locate where 'reindexing strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reindexing strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,805 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "ui_android_compose_data_001",
+      "name": "Virtualized feed — stable identity",
+      "description": "Create a polished virtualized feed with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_compose_data_002",
+      "name": "Virtualized feed — loading and retry",
+      "description": "Create a polished virtualized feed with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_compose_data_003",
+      "name": "Virtualized feed — empty and error states",
+      "description": "Create a polished virtualized feed with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": true
+    },
+    {
+      "id": "ui_android_compose_data_004",
+      "name": "Virtualized feed — validation feedback",
+      "description": "Create a polished virtualized feed with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_005",
+      "name": "Virtualized feed — pagination and filtering",
+      "description": "Create a polished virtualized feed with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_006",
+      "name": "Virtualized feed — offline resilience",
+      "description": "Create a polished virtualized feed with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_007",
+      "name": "Virtualized feed — state ownership",
+      "description": "Create a polished virtualized feed with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_008",
+      "name": "Virtualized feed — performance boundaries",
+      "description": "Create a polished virtualized feed with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_009",
+      "name": "Virtualized feed — privacy-safe details",
+      "description": "Create a polished virtualized feed with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_010",
+      "name": "Virtualized feed — end-to-end verification",
+      "description": "Create a polished virtualized feed with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the virtualized feed; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered virtualized feed at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_011",
+      "name": "Filter and sort panel — stable identity",
+      "description": "Create a polished filter and sort panel with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_012",
+      "name": "Filter and sort panel — loading and retry",
+      "description": "Create a polished filter and sort panel with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_013",
+      "name": "Filter and sort panel — empty and error states",
+      "description": "Create a polished filter and sort panel with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_014",
+      "name": "Filter and sort panel — validation feedback",
+      "description": "Create a polished filter and sort panel with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_015",
+      "name": "Filter and sort panel — pagination and filtering",
+      "description": "Create a polished filter and sort panel with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_016",
+      "name": "Filter and sort panel — offline resilience",
+      "description": "Create a polished filter and sort panel with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_017",
+      "name": "Filter and sort panel — state ownership",
+      "description": "Create a polished filter and sort panel with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_018",
+      "name": "Filter and sort panel — performance boundaries",
+      "description": "Create a polished filter and sort panel with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_019",
+      "name": "Filter and sort panel — privacy-safe details",
+      "description": "Create a polished filter and sort panel with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_020",
+      "name": "Filter and sort panel — end-to-end verification",
+      "description": "Create a polished filter and sort panel with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the filter and sort panel; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered filter and sort panel at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_021",
+      "name": "Multi-field form — stable identity",
+      "description": "Create a polished multi-field form with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_022",
+      "name": "Multi-field form — loading and retry",
+      "description": "Create a polished multi-field form with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_023",
+      "name": "Multi-field form — empty and error states",
+      "description": "Create a polished multi-field form with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_024",
+      "name": "Multi-field form — validation feedback",
+      "description": "Create a polished multi-field form with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_025",
+      "name": "Multi-field form — pagination and filtering",
+      "description": "Create a polished multi-field form with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_026",
+      "name": "Multi-field form — offline resilience",
+      "description": "Create a polished multi-field form with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_027",
+      "name": "Multi-field form — state ownership",
+      "description": "Create a polished multi-field form with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_028",
+      "name": "Multi-field form — performance boundaries",
+      "description": "Create a polished multi-field form with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_029",
+      "name": "Multi-field form — privacy-safe details",
+      "description": "Create a polished multi-field form with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_030",
+      "name": "Multi-field form — end-to-end verification",
+      "description": "Create a polished multi-field form with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-field form; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-field form at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_031",
+      "name": "Date and time workflow — stable identity",
+      "description": "Create a polished date and time workflow with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_032",
+      "name": "Date and time workflow — loading and retry",
+      "description": "Create a polished date and time workflow with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_033",
+      "name": "Date and time workflow — empty and error states",
+      "description": "Create a polished date and time workflow with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_034",
+      "name": "Date and time workflow — validation feedback",
+      "description": "Create a polished date and time workflow with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_035",
+      "name": "Date and time workflow — pagination and filtering",
+      "description": "Create a polished date and time workflow with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_036",
+      "name": "Date and time workflow — offline resilience",
+      "description": "Create a polished date and time workflow with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_037",
+      "name": "Date and time workflow — state ownership",
+      "description": "Create a polished date and time workflow with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_038",
+      "name": "Date and time workflow — performance boundaries",
+      "description": "Create a polished date and time workflow with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_039",
+      "name": "Date and time workflow — privacy-safe details",
+      "description": "Create a polished date and time workflow with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_040",
+      "name": "Date and time workflow — end-to-end verification",
+      "description": "Create a polished date and time workflow with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the date and time workflow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered date and time workflow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_041",
+      "name": "File upload queue — stable identity",
+      "description": "Create a polished file upload queue with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_042",
+      "name": "File upload queue — loading and retry",
+      "description": "Create a polished file upload queue with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_043",
+      "name": "File upload queue — empty and error states",
+      "description": "Create a polished file upload queue with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_044",
+      "name": "File upload queue — validation feedback",
+      "description": "Create a polished file upload queue with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_045",
+      "name": "File upload queue — pagination and filtering",
+      "description": "Create a polished file upload queue with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_046",
+      "name": "File upload queue — offline resilience",
+      "description": "Create a polished file upload queue with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_047",
+      "name": "File upload queue — state ownership",
+      "description": "Create a polished file upload queue with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_048",
+      "name": "File upload queue — performance boundaries",
+      "description": "Create a polished file upload queue with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_049",
+      "name": "File upload queue — privacy-safe details",
+      "description": "Create a polished file upload queue with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_050",
+      "name": "File upload queue — end-to-end verification",
+      "description": "Create a polished file upload queue with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the file upload queue; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered file upload queue at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_051",
+      "name": "Notification center — stable identity",
+      "description": "Create a polished notification center with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_052",
+      "name": "Notification center — loading and retry",
+      "description": "Create a polished notification center with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_053",
+      "name": "Notification center — empty and error states",
+      "description": "Create a polished notification center with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_054",
+      "name": "Notification center — validation feedback",
+      "description": "Create a polished notification center with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_055",
+      "name": "Notification center — pagination and filtering",
+      "description": "Create a polished notification center with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_056",
+      "name": "Notification center — offline resilience",
+      "description": "Create a polished notification center with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_057",
+      "name": "Notification center — state ownership",
+      "description": "Create a polished notification center with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_058",
+      "name": "Notification center — performance boundaries",
+      "description": "Create a polished notification center with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_059",
+      "name": "Notification center — privacy-safe details",
+      "description": "Create a polished notification center with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_060",
+      "name": "Notification center — end-to-end verification",
+      "description": "Create a polished notification center with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the notification center; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered notification center at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_061",
+      "name": "Live status dashboard — stable identity",
+      "description": "Create a polished live status dashboard with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_062",
+      "name": "Live status dashboard — loading and retry",
+      "description": "Create a polished live status dashboard with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_063",
+      "name": "Live status dashboard — empty and error states",
+      "description": "Create a polished live status dashboard with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_064",
+      "name": "Live status dashboard — validation feedback",
+      "description": "Create a polished live status dashboard with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_065",
+      "name": "Live status dashboard — pagination and filtering",
+      "description": "Create a polished live status dashboard with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_066",
+      "name": "Live status dashboard — offline resilience",
+      "description": "Create a polished live status dashboard with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_067",
+      "name": "Live status dashboard — state ownership",
+      "description": "Create a polished live status dashboard with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_068",
+      "name": "Live status dashboard — performance boundaries",
+      "description": "Create a polished live status dashboard with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_069",
+      "name": "Live status dashboard — privacy-safe details",
+      "description": "Create a polished live status dashboard with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_070",
+      "name": "Live status dashboard — end-to-end verification",
+      "description": "Create a polished live status dashboard with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the live status dashboard; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered live status dashboard at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_071",
+      "name": "Offline content screen — stable identity",
+      "description": "Create a polished offline content screen with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_072",
+      "name": "Offline content screen — loading and retry",
+      "description": "Create a polished offline content screen with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_073",
+      "name": "Offline content screen — empty and error states",
+      "description": "Create a polished offline content screen with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_074",
+      "name": "Offline content screen — validation feedback",
+      "description": "Create a polished offline content screen with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_075",
+      "name": "Offline content screen — pagination and filtering",
+      "description": "Create a polished offline content screen with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_076",
+      "name": "Offline content screen — offline resilience",
+      "description": "Create a polished offline content screen with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_077",
+      "name": "Offline content screen — state ownership",
+      "description": "Create a polished offline content screen with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_078",
+      "name": "Offline content screen — performance boundaries",
+      "description": "Create a polished offline content screen with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_079",
+      "name": "Offline content screen — privacy-safe details",
+      "description": "Create a polished offline content screen with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_080",
+      "name": "Offline content screen — end-to-end verification",
+      "description": "Create a polished offline content screen with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the offline content screen; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered offline content screen at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_081",
+      "name": "Paged results view — stable identity",
+      "description": "Create a polished paged results view with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_082",
+      "name": "Paged results view — loading and retry",
+      "description": "Create a polished paged results view with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_083",
+      "name": "Paged results view — empty and error states",
+      "description": "Create a polished paged results view with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_084",
+      "name": "Paged results view — validation feedback",
+      "description": "Create a polished paged results view with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_085",
+      "name": "Paged results view — pagination and filtering",
+      "description": "Create a polished paged results view with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_086",
+      "name": "Paged results view — offline resilience",
+      "description": "Create a polished paged results view with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_087",
+      "name": "Paged results view — state ownership",
+      "description": "Create a polished paged results view with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_088",
+      "name": "Paged results view — performance boundaries",
+      "description": "Create a polished paged results view with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_089",
+      "name": "Paged results view — privacy-safe details",
+      "description": "Create a polished paged results view with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_090",
+      "name": "Paged results view — end-to-end verification",
+      "description": "Create a polished paged results view with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the paged results view; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered paged results view at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_091",
+      "name": "Multi-step task flow — stable identity",
+      "description": "Create a polished multi-step task flow with deliberate stable identity using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply stable identity: Give repeated rows stable keys or IDs so inserts, updates, and reordering do not scramble item state. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_092",
+      "name": "Multi-step task flow — loading and retry",
+      "description": "Create a polished multi-step task flow with deliberate loading and retry using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply loading and retry: Separate initial loading from refresh; show progress near the affected content and provide a clear retry path after failure. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_093",
+      "name": "Multi-step task flow — empty and error states",
+      "description": "Create a polished multi-step task flow with deliberate empty and error states using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply empty and error states: Explain why the state is empty or unavailable, offer the next useful action, and avoid presenting an error as valid data. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_094",
+      "name": "Multi-step task flow — validation feedback",
+      "description": "Create a polished multi-step task flow with deliberate validation feedback using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply validation feedback: Validate at the appropriate boundary, preserve user input after errors, and identify the field plus a concrete correction. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_095",
+      "name": "Multi-step task flow — pagination and filtering",
+      "description": "Create a polished multi-step task flow with deliberate pagination and filtering using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply pagination and filtering: Keep filters, sort order, and page state explicit; avoid loading an unbounded collection into the UI. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_096",
+      "name": "Multi-step task flow — offline resilience",
+      "description": "Create a polished multi-step task flow with deliberate offline resilience using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply offline resilience: Distinguish cached content from fresh data, expose synchronization status, and make retry safe and repeatable. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_097",
+      "name": "Multi-step task flow — state ownership",
+      "description": "Create a polished multi-step task flow with deliberate state ownership using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply state ownership: Keep durable state in the repository or server and transient presentation state near the screen that owns it. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_098",
+      "name": "Multi-step task flow — performance boundaries",
+      "description": "Create a polished multi-step task flow with deliberate performance boundaries using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply performance boundaries: Measure expensive work, avoid repeated full-list transformations, and keep database or network work off the UI thread. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_099",
+      "name": "Multi-step task flow — privacy-safe details",
+      "description": "Create a polished multi-step task flow with deliberate privacy-safe details using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply privacy-safe details: Show only fields needed for the task, redact sensitive values in previews, and keep authorization checks at the data boundary. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    },
+    {
+      "id": "ui_android_compose_data_100",
+      "name": "Multi-step task flow — end-to-end verification",
+      "description": "Create a polished multi-step task flow with deliberate end-to-end verification using Kotlin and Jetpack Compose.",
+      "category": "Android / Kotlin / Compose data-driven screens",
+      "instructions": "Keep repository and network work outside composables. Collect lifecycle-aware state from the existing ViewModel or state holder, and render immutable UI state with stable list keys.\n\nWorkflow:\n1. Inspect the relevant screen, route, theme tokens, framework versions, and existing component conventions before editing. Preserve the app’s chosen architecture and dependencies.\n2. Define the primary user task for the multi-step task flow; map its content hierarchy and the success, loading, empty, validation, and failure states that apply.\n3. Apply end-to-end verification: Exercise success, no-results, stale-data, slow-network, and failure paths with realistic fixtures and existing project checks. Implement the screen with the project’s existing components and keep presentation separate from data, authorization, and business rules.\n4. Make the primary action clear and cover keyboard or touch use, long content, and narrow-screen behavior. Keep sensitive values out of debug output and visible examples.\n5. Inspect the rendered multi-step task flow at representative sizes and themes, correct clipping and state inconsistencies, and run the project’s relevant existing build or UI checks. Report any verification you could not perform.",
+      "enabled": false
+    }
+  ]
+}

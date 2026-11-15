@@ -1,0 +1,761 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_dom_e-commerce-cart-flows",
+   "name": "Domain topic: e-commerce cart flows",
+   "description": "Practical guide for e-commerce cart flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'e-commerce cart flows' applies in this project (file.search/file.read).\n2. Review the standard practice for e-commerce cart flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_checkout-funnels",
+   "name": "Domain topic: checkout funnels",
+   "description": "Practical guide for checkout funnels in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'checkout funnels' applies in this project (file.search/file.read).\n2. Review the standard practice for checkout funnels (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_payment-gateway-integration",
+   "name": "Domain topic: payment gateway integration",
+   "description": "Practical guide for payment gateway integration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'payment gateway integration' applies in this project (file.search/file.read).\n2. Review the standard practice for payment gateway integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_pci-scope-reduction",
+   "name": "Domain topic: pci scope reduction",
+   "description": "Practical guide for pci scope reduction in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pci scope reduction' applies in this project (file.search/file.read).\n2. Review the standard practice for pci scope reduction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_tokenized-payments",
+   "name": "Domain topic: tokenized payments",
+   "description": "Practical guide for tokenized payments in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tokenized payments' applies in this project (file.search/file.read).\n2. Review the standard practice for tokenized payments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_3ds-flows",
+   "name": "Domain topic: 3ds flows",
+   "description": "Practical guide for 3ds flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where '3ds flows' applies in this project (file.search/file.read).\n2. Review the standard practice for 3ds flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_refunds-and-disputes",
+   "name": "Domain topic: refunds and disputes",
+   "description": "Practical guide for refunds and disputes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'refunds and disputes' applies in this project (file.search/file.read).\n2. Review the standard practice for refunds and disputes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_inventory-reservation",
+   "name": "Domain topic: inventory reservation",
+   "description": "Practical guide for inventory reservation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'inventory reservation' applies in this project (file.search/file.read).\n2. Review the standard practice for inventory reservation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_pricing-engines",
+   "name": "Domain topic: pricing engines",
+   "description": "Practical guide for pricing engines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pricing engines' applies in this project (file.search/file.read).\n2. Review the standard practice for pricing engines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_discount-engines",
+   "name": "Domain topic: discount engines",
+   "description": "Practical guide for discount engines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'discount engines' applies in this project (file.search/file.read).\n2. Review the standard practice for discount engines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_tax-calculation",
+   "name": "Domain topic: tax calculation",
+   "description": "Practical guide for tax calculation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tax calculation' applies in this project (file.search/file.read).\n2. Review the standard practice for tax calculation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_invoicing-systems",
+   "name": "Domain topic: invoicing systems",
+   "description": "Practical guide for invoicing systems in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'invoicing systems' applies in this project (file.search/file.read).\n2. Review the standard practice for invoicing systems (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_ledger-double-entry",
+   "name": "Domain topic: ledger double entry",
+   "description": "Practical guide for ledger double entry in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ledger double entry' applies in this project (file.search/file.read).\n2. Review the standard practice for ledger double entry (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_idempotency-keys",
+   "name": "Domain topic: idempotency keys",
+   "description": "Practical guide for idempotency keys in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'idempotency keys' applies in this project (file.search/file.read).\n2. Review the standard practice for idempotency keys (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_order-state-machines",
+   "name": "Domain topic: order state machines",
+   "description": "Practical guide for order state machines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'order state machines' applies in this project (file.search/file.read).\n2. Review the standard practice for order state machines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_fulfillment-flows",
+   "name": "Domain topic: fulfillment flows",
+   "description": "Practical guide for fulfillment flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fulfillment flows' applies in this project (file.search/file.read).\n2. Review the standard practice for fulfillment flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_shipping-rate-apis",
+   "name": "Domain topic: shipping rate APIs",
+   "description": "Practical guide for shipping rate APIs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'shipping rate APIs' applies in this project (file.search/file.read).\n2. Review the standard practice for shipping rate APIs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_address-validation",
+   "name": "Domain topic: address validation",
+   "description": "Practical guide for address validation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'address validation' applies in this project (file.search/file.read).\n2. Review the standard practice for address validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_subscription-billing",
+   "name": "Domain topic: subscription billing",
+   "description": "Practical guide for subscription billing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'subscription billing' applies in this project (file.search/file.read).\n2. Review the standard practice for subscription billing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_proration-logic",
+   "name": "Domain topic: proration logic",
+   "description": "Practical guide for proration logic in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'proration logic' applies in this project (file.search/file.read).\n2. Review the standard practice for proration logic (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_dunning-flows",
+   "name": "Domain topic: dunning flows",
+   "description": "Practical guide for dunning flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dunning flows' applies in this project (file.search/file.read).\n2. Review the standard practice for dunning flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_usage-based-billing",
+   "name": "Domain topic: usage-based billing",
+   "description": "Practical guide for usage-based billing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'usage-based billing' applies in this project (file.search/file.read).\n2. Review the standard practice for usage-based billing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_metering-pipelines",
+   "name": "Domain topic: metering pipelines",
+   "description": "Practical guide for metering pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'metering pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for metering pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rate-limiting-billing",
+   "name": "Domain topic: rate limiting billing",
+   "description": "Practical guide for rate limiting billing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rate limiting billing' applies in this project (file.search/file.read).\n2. Review the standard practice for rate limiting billing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_ad-networks-basics",
+   "name": "Domain topic: ad networks basics",
+   "description": "Practical guide for ad networks basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ad networks basics' applies in this project (file.search/file.read).\n2. Review the standard practice for ad networks basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_attribution-basics",
+   "name": "Domain topic: attribution basics",
+   "description": "Practical guide for attribution basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'attribution basics' applies in this project (file.search/file.read).\n2. Review the standard practice for attribution basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_app-install-referrers",
+   "name": "Domain topic: app install referrers",
+   "description": "Practical guide for app install referrers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'app install referrers' applies in this project (file.search/file.read).\n2. Review the standard practice for app install referrers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_deep-link-attribution",
+   "name": "Domain topic: deep link attribution",
+   "description": "Practical guide for deep link attribution in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'deep link attribution' applies in this project (file.search/file.read).\n2. Review the standard practice for deep link attribution (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_push-campaign-basics",
+   "name": "Domain topic: push campaign basics",
+   "description": "Practical guide for push campaign basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'push campaign basics' applies in this project (file.search/file.read).\n2. Review the standard practice for push campaign basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_email-sending-infra",
+   "name": "Domain topic: email sending infra",
+   "description": "Practical guide for email sending infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'email sending infra' applies in this project (file.search/file.read).\n2. Review the standard practice for email sending infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_smtp-deliverability",
+   "name": "Domain topic: smtp deliverability",
+   "description": "Practical guide for smtp deliverability in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'smtp deliverability' applies in this project (file.search/file.read).\n2. Review the standard practice for smtp deliverability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_dkim-spf-setup",
+   "name": "Domain topic: dkim spf setup",
+   "description": "Practical guide for dkim spf setup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dkim spf setup' applies in this project (file.search/file.read).\n2. Review the standard practice for dkim spf setup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_mail-merge-templating",
+   "name": "Domain topic: mail merge templating",
+   "description": "Practical guide for mail merge templating in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mail merge templating' applies in this project (file.search/file.read).\n2. Review the standard practice for mail merge templating (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_sms-gateways",
+   "name": "Domain topic: sms gateways",
+   "description": "Practical guide for sms gateways in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sms gateways' applies in this project (file.search/file.read).\n2. Review the standard practice for sms gateways (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_otp-delivery-flows",
+   "name": "Domain topic: otp delivery flows",
+   "description": "Practical guide for otp delivery flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'otp delivery flows' applies in this project (file.search/file.read).\n2. Review the standard practice for otp delivery flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_2fa-totp-flows",
+   "name": "Domain topic: 2fa totp flows",
+   "description": "Practical guide for 2fa totp flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where '2fa totp flows' applies in this project (file.search/file.read).\n2. Review the standard practice for 2fa totp flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_webauthn-registration",
+   "name": "Domain topic: webauthn registration",
+   "description": "Practical guide for webauthn registration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'webauthn registration' applies in this project (file.search/file.read).\n2. Review the standard practice for webauthn registration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_session-management-design",
+   "name": "Domain topic: session management design",
+   "description": "Practical guide for session management design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'session management design' applies in this project (file.search/file.read).\n2. Review the standard practice for session management design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_oauth-client-patterns",
+   "name": "Domain topic: oauth client patterns",
+   "description": "Practical guide for oauth client patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'oauth client patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for oauth client patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_oidc-basics",
+   "name": "Domain topic: oidc basics",
+   "description": "Practical guide for oidc basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'oidc basics' applies in this project (file.search/file.read).\n2. Review the standard practice for oidc basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_jwt-rotation",
+   "name": "Domain topic: jwt rotation",
+   "description": "Practical guide for jwt rotation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jwt rotation' applies in this project (file.search/file.read).\n2. Review the standard practice for jwt rotation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_saml-sp-setup",
+   "name": "Domain topic: saml sp setup",
+   "description": "Practical guide for saml sp setup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'saml sp setup' applies in this project (file.search/file.read).\n2. Review the standard practice for saml sp setup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_scim-provisioning",
+   "name": "Domain topic: scim provisioning",
+   "description": "Practical guide for scim provisioning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scim provisioning' applies in this project (file.search/file.read).\n2. Review the standard practice for scim provisioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rbac-design",
+   "name": "Domain topic: rbac design",
+   "description": "Practical guide for rbac design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rbac design' applies in this project (file.search/file.read).\n2. Review the standard practice for rbac design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_abac-basics",
+   "name": "Domain topic: abac basics",
+   "description": "Practical guide for abac basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'abac basics' applies in this project (file.search/file.read).\n2. Review the standard practice for abac basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_policy-engines-opa",
+   "name": "Domain topic: policy engines opa",
+   "description": "Practical guide for policy engines opa in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'policy engines opa' applies in this project (file.search/file.read).\n2. Review the standard practice for policy engines opa (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_audit-event-design",
+   "name": "Domain topic: audit event design",
+   "description": "Practical guide for audit event design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'audit event design' applies in this project (file.search/file.read).\n2. Review the standard practice for audit event design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_data-lineage-tracking",
+   "name": "Domain topic: data lineage tracking",
+   "description": "Practical guide for data lineage tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data lineage tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for data lineage tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_feature-store-basics",
+   "name": "Domain topic: feature store basics",
+   "description": "Practical guide for feature store basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature store basics' applies in this project (file.search/file.read).\n2. Review the standard practice for feature store basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_recommendation-basics",
+   "name": "Domain topic: recommendation basics",
+   "description": "Practical guide for recommendation basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'recommendation basics' applies in this project (file.search/file.read).\n2. Review the standard practice for recommendation basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_search-relevance-basics",
+   "name": "Domain topic: search relevance basics",
+   "description": "Practical guide for search relevance basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'search relevance basics' applies in this project (file.search/file.read).\n2. Review the standard practice for search relevance basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_elasticsearch-indexing",
+   "name": "Domain topic: elasticsearch indexing",
+   "description": "Practical guide for elasticsearch indexing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'elasticsearch indexing' applies in this project (file.search/file.read).\n2. Review the standard practice for elasticsearch indexing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_vector-search-basics",
+   "name": "Domain topic: vector search basics",
+   "description": "Practical guide for vector search basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vector search basics' applies in this project (file.search/file.read).\n2. Review the standard practice for vector search basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_embedding-storage",
+   "name": "Domain topic: embedding storage",
+   "description": "Practical guide for embedding storage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'embedding storage' applies in this project (file.search/file.read).\n2. Review the standard practice for embedding storage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rag-pipeline-basics",
+   "name": "Domain topic: rag pipeline basics",
+   "description": "Practical guide for rag pipeline basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rag pipeline basics' applies in this project (file.search/file.read).\n2. Review the standard practice for rag pipeline basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_llm-prompt-mgmt",
+   "name": "Domain topic: llm prompt mgmt",
+   "description": "Practical guide for llm prompt mgmt in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'llm prompt mgmt' applies in this project (file.search/file.read).\n2. Review the standard practice for llm prompt mgmt (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_llm-eval-harness",
+   "name": "Domain topic: llm eval harness",
+   "description": "Practical guide for llm eval harness in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'llm eval harness' applies in this project (file.search/file.read).\n2. Review the standard practice for llm eval harness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_model-serving-basics",
+   "name": "Domain topic: model serving basics",
+   "description": "Practical guide for model serving basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'model serving basics' applies in this project (file.search/file.read).\n2. Review the standard practice for model serving basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_feature-flag-rollouts",
+   "name": "Domain topic: feature flag rollouts",
+   "description": "Practical guide for feature flag rollouts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature flag rollouts' applies in this project (file.search/file.read).\n2. Review the standard practice for feature flag rollouts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_a-b-test-design",
+   "name": "Domain topic: a-b test design",
+   "description": "Practical guide for a-b test design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'a-b test design' applies in this project (file.search/file.read).\n2. Review the standard practice for a-b test design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_experiment-analysis",
+   "name": "Domain topic: experiment analysis",
+   "description": "Practical guide for experiment analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'experiment analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for experiment analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_funnel-analytics",
+   "name": "Domain topic: funnel analytics",
+   "description": "Practical guide for funnel analytics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'funnel analytics' applies in this project (file.search/file.read).\n2. Review the standard practice for funnel analytics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_cohort-analysis",
+   "name": "Domain topic: cohort analysis",
+   "description": "Practical guide for cohort analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cohort analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for cohort analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_retention-metrics",
+   "name": "Domain topic: retention metrics",
+   "description": "Practical guide for retention metrics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'retention metrics' applies in this project (file.search/file.read).\n2. Review the standard practice for retention metrics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_churn-prediction-note",
+   "name": "Domain topic: churn prediction note",
+   "description": "Practical guide for churn prediction note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'churn prediction note' applies in this project (file.search/file.read).\n2. Review the standard practice for churn prediction note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_fraud-rules-engines",
+   "name": "Domain topic: fraud rules engines",
+   "description": "Practical guide for fraud rules engines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fraud rules engines' applies in this project (file.search/file.read).\n2. Review the standard practice for fraud rules engines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_device-fingerprint-basics",
+   "name": "Domain topic: device fingerprint basics",
+   "description": "Practical guide for device fingerprint basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'device fingerprint basics' applies in this project (file.search/file.read).\n2. Review the standard practice for device fingerprint basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_risk-scoring-flows",
+   "name": "Domain topic: risk scoring flows",
+   "description": "Practical guide for risk scoring flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'risk scoring flows' applies in this project (file.search/file.read).\n2. Review the standard practice for risk scoring flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_kyc-flow-notes",
+   "name": "Domain topic: kyc flow notes",
+   "description": "Practical guide for kyc flow notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kyc flow notes' applies in this project (file.search/file.read).\n2. Review the standard practice for kyc flow notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_document-verification",
+   "name": "Domain topic: document verification",
+   "description": "Practical guide for document verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'document verification' applies in this project (file.search/file.read).\n2. Review the standard practice for document verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_e-sign-integration",
+   "name": "Domain topic: e-sign integration",
+   "description": "Practical guide for e-sign integration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'e-sign integration' applies in this project (file.search/file.read).\n2. Review the standard practice for e-sign integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_pdf-generation",
+   "name": "Domain topic: pdf generation",
+   "description": "Practical guide for pdf generation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pdf generation' applies in this project (file.search/file.read).\n2. Review the standard practice for pdf generation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_spreadsheet-exports",
+   "name": "Domain topic: spreadsheet exports",
+   "description": "Practical guide for spreadsheet exports in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'spreadsheet exports' applies in this project (file.search/file.read).\n2. Review the standard practice for spreadsheet exports (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_csv-ingestion-hardening",
+   "name": "Domain topic: csv ingestion hardening",
+   "description": "Practical guide for csv ingestion hardening in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'csv ingestion hardening' applies in this project (file.search/file.read).\n2. Review the standard practice for csv ingestion hardening (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_data-migration-playbooks",
+   "name": "Domain topic: data migration playbooks",
+   "description": "Practical guide for data migration playbooks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data migration playbooks' applies in this project (file.search/file.read).\n2. Review the standard practice for data migration playbooks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_dual-writes-patterns",
+   "name": "Domain topic: dual writes patterns",
+   "description": "Practical guide for dual writes patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dual writes patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for dual writes patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_backfill-strategies",
+   "name": "Domain topic: backfill strategies",
+   "description": "Practical guide for backfill strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backfill strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for backfill strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_etl-orchestration",
+   "name": "Domain topic: etl orchestration",
+   "description": "Practical guide for etl orchestration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'etl orchestration' applies in this project (file.search/file.read).\n2. Review the standard practice for etl orchestration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_airflow-basics",
+   "name": "Domain topic: airflow basics",
+   "description": "Practical guide for airflow basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'airflow basics' applies in this project (file.search/file.read).\n2. Review the standard practice for airflow basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_temporal-workflows",
+   "name": "Domain topic: temporal workflows",
+   "description": "Practical guide for temporal workflows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'temporal workflows' applies in this project (file.search/file.read).\n2. Review the standard practice for temporal workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_step-functions-patterns",
+   "name": "Domain topic: step functions patterns",
+   "description": "Practical guide for step functions patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'step functions patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for step functions patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_queue-design-choices",
+   "name": "Domain topic: queue design choices",
+   "description": "Practical guide for queue design choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'queue design choices' applies in this project (file.search/file.read).\n2. Review the standard practice for queue design choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_kafka-consumer-patterns",
+   "name": "Domain topic: kafka consumer patterns",
+   "description": "Practical guide for kafka consumer patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kafka consumer patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for kafka consumer patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rabbitmq-basics",
+   "name": "Domain topic: rabbitmq basics",
+   "description": "Practical guide for rabbitmq basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rabbitmq basics' applies in this project (file.search/file.read).\n2. Review the standard practice for rabbitmq basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_sqs-patterns",
+   "name": "Domain topic: sqs patterns",
+   "description": "Practical guide for sqs patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sqs patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for sqs patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_dead-letter-handling",
+   "name": "Domain topic: dead letter handling",
+   "description": "Practical guide for dead letter handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dead letter handling' applies in this project (file.search/file.read).\n2. Review the standard practice for dead letter handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_exponential-backoff-standards",
+   "name": "Domain topic: exponential backoff standards",
+   "description": "Practical guide for exponential backoff standards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exponential backoff standards' applies in this project (file.search/file.read).\n2. Review the standard practice for exponential backoff standards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_circuit-breaker-tuning",
+   "name": "Domain topic: circuit breaker tuning",
+   "description": "Practical guide for circuit breaker tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'circuit breaker tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for circuit breaker tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_bulkhead-isolation",
+   "name": "Domain topic: bulkhead isolation",
+   "description": "Practical guide for bulkhead isolation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bulkhead isolation' applies in this project (file.search/file.read).\n2. Review the standard practice for bulkhead isolation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rate-limiter-algorithms",
+   "name": "Domain topic: rate limiter algorithms",
+   "description": "Practical guide for rate limiter algorithms in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rate limiter algorithms' applies in this project (file.search/file.read).\n2. Review the standard practice for rate limiter algorithms (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_token-bucket-vs-leaky",
+   "name": "Domain topic: token bucket vs leaky",
+   "description": "Practical guide for token bucket vs leaky in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'token bucket vs leaky' applies in this project (file.search/file.read).\n2. Review the standard practice for token bucket vs leaky (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_idempotent-consumers",
+   "name": "Domain topic: idempotent consumers",
+   "description": "Practical guide for idempotent consumers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'idempotent consumers' applies in this project (file.search/file.read).\n2. Review the standard practice for idempotent consumers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_outbox-pattern-impl",
+   "name": "Domain topic: outbox pattern impl",
+   "description": "Practical guide for outbox pattern impl in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'outbox pattern impl' applies in this project (file.search/file.read).\n2. Review the standard practice for outbox pattern impl (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_cdc-basics",
+   "name": "Domain topic: cdc basics",
+   "description": "Practical guide for cdc basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cdc basics' applies in this project (file.search/file.read).\n2. Review the standard practice for cdc basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_change-data-capture-tools",
+   "name": "Domain topic: change data capture tools",
+   "description": "Practical guide for change data capture tools in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'change data capture tools' applies in this project (file.search/file.read).\n2. Review the standard practice for change data capture tools (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_data-lakehouse-basics",
+   "name": "Domain topic: data lakehouse basics",
+   "description": "Practical guide for data lakehouse basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data lakehouse basics' applies in this project (file.search/file.read).\n2. Review the standard practice for data lakehouse basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_iceberg-tables-note",
+   "name": "Domain topic: iceberg tables note",
+   "description": "Practical guide for iceberg tables note in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'iceberg tables note' applies in this project (file.search/file.read).\n2. Review the standard practice for iceberg tables note (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_spark-job-tuning",
+   "name": "Domain topic: spark job tuning",
+   "description": "Practical guide for spark job tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'spark job tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for spark job tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_dbt-basics",
+   "name": "Domain topic: dbt basics",
+   "description": "Practical guide for dbt basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dbt basics' applies in this project (file.search/file.read).\n2. Review the standard practice for dbt basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_metrics-layer-design",
+   "name": "Domain topic: metrics layer design",
+   "description": "Practical guide for metrics layer design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'metrics layer design' applies in this project (file.search/file.read).\n2. Review the standard practice for metrics layer design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_semantic-layer-basics",
+   "name": "Domain topic: semantic layer basics",
+   "description": "Practical guide for semantic layer basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'semantic layer basics' applies in this project (file.search/file.read).\n2. Review the standard practice for semantic layer basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_olap-vs-oltp-choices",
+   "name": "Domain topic: olap vs oltp choices",
+   "description": "Practical guide for olap vs oltp choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'olap vs oltp choices' applies in this project (file.search/file.read).\n2. Review the standard practice for olap vs oltp choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_time-series-storage",
+   "name": "Domain topic: time series storage",
+   "description": "Practical guide for time series storage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'time series storage' applies in this project (file.search/file.read).\n2. Review the standard practice for time series storage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_retention-tiering",
+   "name": "Domain topic: retention tiering",
+   "description": "Practical guide for retention tiering in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'retention tiering' applies in this project (file.search/file.read).\n2. Review the standard practice for retention tiering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_cold-storage-policies",
+   "name": "Domain topic: cold storage policies",
+   "description": "Practical guide for cold storage policies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cold storage policies' applies in this project (file.search/file.read).\n2. Review the standard practice for cold storage policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_backup-verification-drills",
+   "name": "Domain topic: backup verification drills",
+   "description": "Practical guide for backup verification drills in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backup verification drills' applies in this project (file.search/file.read).\n2. Review the standard practice for backup verification drills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_rto-rpo-planning",
+   "name": "Domain topic: rto rpo planning",
+   "description": "Practical guide for rto rpo planning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rto rpo planning' applies in this project (file.search/file.read).\n2. Review the standard practice for rto rpo planning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dom_disaster-recovery-drills",
+   "name": "Domain topic: disaster recovery drills",
+   "description": "Practical guide for disaster recovery drills in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'disaster recovery drills' applies in this project (file.search/file.read).\n2. Review the standard practice for disaster recovery drills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

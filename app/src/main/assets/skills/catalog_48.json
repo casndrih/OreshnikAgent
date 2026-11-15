@@ -1,0 +1,1125 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_be_api-gateway-patterns",
+   "name": "Backend topic: api gateway patterns",
+   "description": "Practical guide for api gateway patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api gateway patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for api gateway patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_service-mesh-basics",
+   "name": "Backend topic: service mesh basics",
+   "description": "Practical guide for service mesh basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'service mesh basics' applies in this project (file.search/file.read).\n2. Review the standard practice for service mesh basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_sidecar-proxies",
+   "name": "Backend topic: sidecar proxies",
+   "description": "Practical guide for sidecar proxies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sidecar proxies' applies in this project (file.search/file.read).\n2. Review the standard practice for sidecar proxies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_envoy-config-basics",
+   "name": "Backend topic: envoy config basics",
+   "description": "Practical guide for envoy config basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'envoy config basics' applies in this project (file.search/file.read).\n2. Review the standard practice for envoy config basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_nginx-tuning",
+   "name": "Backend topic: nginx tuning",
+   "description": "Practical guide for nginx tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'nginx tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for nginx tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_reverse-proxy-patterns",
+   "name": "Backend topic: reverse proxy patterns",
+   "description": "Practical guide for reverse proxy patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'reverse proxy patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for reverse proxy patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tls-termination-choices",
+   "name": "Backend topic: tls termination choices",
+   "description": "Practical guide for tls termination choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tls termination choices' applies in this project (file.search/file.read).\n2. Review the standard practice for tls termination choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_mtls-between-services",
+   "name": "Backend topic: mtls between services",
+   "description": "Practical guide for mtls between services in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mtls between services' applies in this project (file.search/file.read).\n2. Review the standard practice for mtls between services (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_cert-rotation-automation",
+   "name": "Backend topic: cert rotation automation",
+   "description": "Practical guide for cert rotation automation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cert rotation automation' applies in this project (file.search/file.read).\n2. Review the standard practice for cert rotation automation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_dns-based-routing",
+   "name": "Backend topic: dns based routing",
+   "description": "Practical guide for dns based routing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dns based routing' applies in this project (file.search/file.read).\n2. Review the standard practice for dns based routing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_cdn-cache-rules",
+   "name": "Backend topic: cdn cache rules",
+   "description": "Practical guide for cdn cache rules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cdn cache rules' applies in this project (file.search/file.read).\n2. Review the standard practice for cdn cache rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_edge-functions-basics",
+   "name": "Backend topic: edge functions basics",
+   "description": "Practical guide for edge functions basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'edge functions basics' applies in this project (file.search/file.read).\n2. Review the standard practice for edge functions basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_compute-autoscaling",
+   "name": "Backend topic: compute autoscaling",
+   "description": "Practical guide for compute autoscaling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compute autoscaling' applies in this project (file.search/file.read).\n2. Review the standard practice for compute autoscaling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_hpa-vs-vpa",
+   "name": "Backend topic: hpa vs vpa",
+   "description": "Practical guide for hpa vs vpa in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hpa vs vpa' applies in this project (file.search/file.read).\n2. Review the standard practice for hpa vs vpa (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_keda-event-scaling",
+   "name": "Backend topic: keda event scaling",
+   "description": "Practical guide for keda event scaling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'keda event scaling' applies in this project (file.search/file.read).\n2. Review the standard practice for keda event scaling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_queue-based-autoscaling",
+   "name": "Backend topic: queue based autoscaling",
+   "description": "Practical guide for queue based autoscaling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'queue based autoscaling' applies in this project (file.search/file.read).\n2. Review the standard practice for queue based autoscaling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_db-connection-storms",
+   "name": "Backend topic: db connection storms",
+   "description": "Practical guide for db connection storms in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'db connection storms' applies in this project (file.search/file.read).\n2. Review the standard practice for db connection storms (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_pool-sizing-math",
+   "name": "Backend topic: pool sizing math",
+   "description": "Practical guide for pool sizing math in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pool sizing math' applies in this project (file.search/file.read).\n2. Review the standard practice for pool sizing math (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_graceful-shutdown",
+   "name": "Backend topic: graceful shutdown",
+   "description": "Practical guide for graceful shutdown in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'graceful shutdown' applies in this project (file.search/file.read).\n2. Review the standard practice for graceful shutdown (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_readiness-vs-liveness",
+   "name": "Backend topic: readiness vs liveness",
+   "description": "Practical guide for readiness vs liveness in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'readiness vs liveness' applies in this project (file.search/file.read).\n2. Review the standard practice for readiness vs liveness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_startup-probes-tuning",
+   "name": "Backend topic: startup probes tuning",
+   "description": "Practical guide for startup probes tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'startup probes tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for startup probes tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_zero-downtime-deploys",
+   "name": "Backend topic: zero downtime deploys",
+   "description": "Practical guide for zero downtime deploys in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'zero downtime deploys' applies in this project (file.search/file.read).\n2. Review the standard practice for zero downtime deploys (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_blue-green-deploys",
+   "name": "Backend topic: blue green deploys",
+   "description": "Practical guide for blue green deploys in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'blue green deploys' applies in this project (file.search/file.read).\n2. Review the standard practice for blue green deploys (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_canary-analysis",
+   "name": "Backend topic: canary analysis",
+   "description": "Practical guide for canary analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'canary analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for canary analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_feature-based-deploys",
+   "name": "Backend topic: feature based deploys",
+   "description": "Practical guide for feature based deploys in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature based deploys' applies in this project (file.search/file.read).\n2. Review the standard practice for feature based deploys (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_infra-as-code-terraform",
+   "name": "Backend topic: infra as code terraform",
+   "description": "Practical guide for infra as code terraform in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'infra as code terraform' applies in this project (file.search/file.read).\n2. Review the standard practice for infra as code terraform (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tf-state-management",
+   "name": "Backend topic: tf state management",
+   "description": "Practical guide for tf state management in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tf state management' applies in this project (file.search/file.read).\n2. Review the standard practice for tf state management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tf-module-design",
+   "name": "Backend topic: tf module design",
+   "description": "Practical guide for tf module design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tf module design' applies in this project (file.search/file.read).\n2. Review the standard practice for tf module design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tf-plan-reviews",
+   "name": "Backend topic: tf plan reviews",
+   "description": "Practical guide for tf plan reviews in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tf plan reviews' applies in this project (file.search/file.read).\n2. Review the standard practice for tf plan reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_pulumi-basics",
+   "name": "Backend topic: pulumi basics",
+   "description": "Practical guide for pulumi basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pulumi basics' applies in this project (file.search/file.read).\n2. Review the standard practice for pulumi basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_ansible-playbooks",
+   "name": "Backend topic: ansible playbooks",
+   "description": "Practical guide for ansible playbooks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ansible playbooks' applies in this project (file.search/file.read).\n2. Review the standard practice for ansible playbooks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_config-management-drift",
+   "name": "Backend topic: config management drift",
+   "description": "Practical guide for config management drift in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'config management drift' applies in this project (file.search/file.read).\n2. Review the standard practice for config management drift (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_secret-rotation-infra",
+   "name": "Backend topic: secret rotation infra",
+   "description": "Practical guide for secret rotation infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'secret rotation infra' applies in this project (file.search/file.read).\n2. Review the standard practice for secret rotation infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_vault-patterns",
+   "name": "Backend topic: vault patterns",
+   "description": "Practical guide for vault patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vault patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for vault patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_kms-envelope-encryption",
+   "name": "Backend topic: kms envelope encryption",
+   "description": "Practical guide for kms envelope encryption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kms envelope encryption' applies in this project (file.search/file.read).\n2. Review the standard practice for kms envelope encryption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_image-registries",
+   "name": "Backend topic: image registries",
+   "description": "Practical guide for image registries in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'image registries' applies in this project (file.search/file.read).\n2. Review the standard practice for image registries (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_image-scanning-ci",
+   "name": "Backend topic: image scanning ci",
+   "description": "Practical guide for image scanning ci in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'image scanning ci' applies in this project (file.search/file.read).\n2. Review the standard practice for image scanning ci (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_base-image-hygiene",
+   "name": "Backend topic: base image hygiene",
+   "description": "Practical guide for base image hygiene in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'base image hygiene' applies in this project (file.search/file.read).\n2. Review the standard practice for base image hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_distroless-images",
+   "name": "Backend topic: distroless images",
+   "description": "Practical guide for distroless images in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'distroless images' applies in this project (file.search/file.read).\n2. Review the standard practice for distroless images (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_multi-stage-builds",
+   "name": "Backend topic: multi stage builds",
+   "description": "Practical guide for multi stage builds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'multi stage builds' applies in this project (file.search/file.read).\n2. Review the standard practice for multi stage builds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_docker-layer-caching",
+   "name": "Backend topic: docker layer caching",
+   "description": "Practical guide for docker layer caching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'docker layer caching' applies in this project (file.search/file.read).\n2. Review the standard practice for docker layer caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_compose-for-local-env",
+   "name": "Backend topic: compose for local env",
+   "description": "Practical guide for compose for local env in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compose for local env' applies in this project (file.search/file.read).\n2. Review the standard practice for compose for local env (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_k8s-resource-requests",
+   "name": "Backend topic: k8s resource requests",
+   "description": "Practical guide for k8s resource requests in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'k8s resource requests' applies in this project (file.search/file.read).\n2. Review the standard practice for k8s resource requests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_k8s-limits-tuning",
+   "name": "Backend topic: k8s limits tuning",
+   "description": "Practical guide for k8s limits tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'k8s limits tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for k8s limits tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_k8s-pod-disruption-budgets",
+   "name": "Backend topic: k8s pod disruption budgets",
+   "description": "Practical guide for k8s pod disruption budgets in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'k8s pod disruption budgets' applies in this project (file.search/file.read).\n2. Review the standard practice for k8s pod disruption budgets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_node-draining",
+   "name": "Backend topic: node draining",
+   "description": "Practical guide for node draining in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'node draining' applies in this project (file.search/file.read).\n2. Review the standard practice for node draining (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_statefulsets-basics",
+   "name": "Backend topic: statefulsets basics",
+   "description": "Practical guide for statefulsets basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'statefulsets basics' applies in this project (file.search/file.read).\n2. Review the standard practice for statefulsets basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_operators-basics",
+   "name": "Backend topic: operators basics",
+   "description": "Practical guide for operators basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'operators basics' applies in this project (file.search/file.read).\n2. Review the standard practice for operators basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_helm-charts-design",
+   "name": "Backend topic: helm charts design",
+   "description": "Practical guide for helm charts design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'helm charts design' applies in this project (file.search/file.read).\n2. Review the standard practice for helm charts design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_helm-values-hygiene",
+   "name": "Backend topic: helm values hygiene",
+   "description": "Practical guide for helm values hygiene in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'helm values hygiene' applies in this project (file.search/file.read).\n2. Review the standard practice for helm values hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_kustomize-overlays",
+   "name": "Backend topic: kustomize overlays",
+   "description": "Practical guide for kustomize overlays in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kustomize overlays' applies in this project (file.search/file.read).\n2. Review the standard practice for kustomize overlays (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_gitops-flows",
+   "name": "Backend topic: gitops flows",
+   "description": "Practical guide for gitops flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gitops flows' applies in this project (file.search/file.read).\n2. Review the standard practice for gitops flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_argo-rollouts",
+   "name": "Backend topic: argo rollouts",
+   "description": "Practical guide for argo rollouts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'argo rollouts' applies in this project (file.search/file.read).\n2. Review the standard practice for argo rollouts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_flux-basics",
+   "name": "Backend topic: flux basics",
+   "description": "Practical guide for flux basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flux basics' applies in this project (file.search/file.read).\n2. Review the standard practice for flux basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_service-discovery",
+   "name": "Backend topic: service discovery",
+   "description": "Practical guide for service discovery in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'service discovery' applies in this project (file.search/file.read).\n2. Review the standard practice for service discovery (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_consul-basics",
+   "name": "Backend topic: consul basics",
+   "description": "Practical guide for consul basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'consul basics' applies in this project (file.search/file.read).\n2. Review the standard practice for consul basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_health-endpoints-design",
+   "name": "Backend topic: health endpoints design",
+   "description": "Practical guide for health endpoints design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'health endpoints design' applies in this project (file.search/file.read).\n2. Review the standard practice for health endpoints design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_metrics-endpoints",
+   "name": "Backend topic: metrics endpoints",
+   "description": "Practical guide for metrics endpoints in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'metrics endpoints' applies in this project (file.search/file.read).\n2. Review the standard practice for metrics endpoints (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_prometheus-metric-types",
+   "name": "Backend topic: prometheus metric types",
+   "description": "Practical guide for prometheus metric types in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'prometheus metric types' applies in this project (file.search/file.read).\n2. Review the standard practice for prometheus metric types (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_promql-basics",
+   "name": "Backend topic: promql basics",
+   "description": "Practical guide for promql basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'promql basics' applies in this project (file.search/file.read).\n2. Review the standard practice for promql basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_grafana-dashboards",
+   "name": "Backend topic: grafana dashboards",
+   "description": "Practical guide for grafana dashboards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'grafana dashboards' applies in this project (file.search/file.read).\n2. Review the standard practice for grafana dashboards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_alert-routing",
+   "name": "Backend topic: alert routing",
+   "description": "Practical guide for alert routing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'alert routing' applies in this project (file.search/file.read).\n2. Review the standard practice for alert routing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_oncall-escalation-infra",
+   "name": "Backend topic: oncall escalation infra",
+   "description": "Practical guide for oncall escalation infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'oncall escalation infra' applies in this project (file.search/file.read).\n2. Review the standard practice for oncall escalation infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_pager-policy",
+   "name": "Backend topic: pager policy",
+   "description": "Practical guide for pager policy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pager policy' applies in this project (file.search/file.read).\n2. Review the standard practice for pager policy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_runbook-automation",
+   "name": "Backend topic: runbook automation",
+   "description": "Practical guide for runbook automation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'runbook automation' applies in this project (file.search/file.read).\n2. Review the standard practice for runbook automation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_log-shipping-pipelines",
+   "name": "Backend topic: log shipping pipelines",
+   "description": "Practical guide for log shipping pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'log shipping pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for log shipping pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_log-sampling",
+   "name": "Backend topic: log sampling",
+   "description": "Practical guide for log sampling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'log sampling' applies in this project (file.search/file.read).\n2. Review the standard practice for log sampling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_structured-logging-be",
+   "name": "Backend topic: structured logging be",
+   "description": "Practical guide for structured logging be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'structured logging be' applies in this project (file.search/file.read).\n2. Review the standard practice for structured logging be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_trace-sampling-strategies",
+   "name": "Backend topic: trace sampling strategies",
+   "description": "Practical guide for trace sampling strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'trace sampling strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for trace sampling strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_otel-instrumentation",
+   "name": "Backend topic: otel instrumentation",
+   "description": "Practical guide for otel instrumentation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'otel instrumentation' applies in this project (file.search/file.read).\n2. Review the standard practice for otel instrumentation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_span-attributes-standards",
+   "name": "Backend topic: span attributes standards",
+   "description": "Practical guide for span attributes standards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'span attributes standards' applies in this project (file.search/file.read).\n2. Review the standard practice for span attributes standards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_baggage-propagation",
+   "name": "Backend topic: baggage propagation",
+   "description": "Practical guide for baggage propagation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'baggage propagation' applies in this project (file.search/file.read).\n2. Review the standard practice for baggage propagation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_async-job-dashboards",
+   "name": "Backend topic: async job dashboards",
+   "description": "Practical guide for async job dashboards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'async job dashboards' applies in this project (file.search/file.read).\n2. Review the standard practice for async job dashboards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_cron-in-k8s",
+   "name": "Backend topic: cron in k8s",
+   "description": "Practical guide for cron in k8s in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cron in k8s' applies in this project (file.search/file.read).\n2. Review the standard practice for cron in k8s (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_job-retry-policies",
+   "name": "Backend topic: job retry policies",
+   "description": "Practical guide for job retry policies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'job retry policies' applies in this project (file.search/file.read).\n2. Review the standard practice for job retry policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_workflow-engines",
+   "name": "Backend topic: workflow engines",
+   "description": "Practical guide for workflow engines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'workflow engines' applies in this project (file.search/file.read).\n2. Review the standard practice for workflow engines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_temporal-activity-design",
+   "name": "Backend topic: temporal activity design",
+   "description": "Practical guide for temporal activity design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'temporal activity design' applies in this project (file.search/file.read).\n2. Review the standard practice for temporal activity design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_saga-orchestration",
+   "name": "Backend topic: saga orchestration",
+   "description": "Practical guide for saga orchestration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'saga orchestration' applies in this project (file.search/file.read).\n2. Review the standard practice for saga orchestration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_message-schemas-avro",
+   "name": "Backend topic: message schemas avro",
+   "description": "Practical guide for message schemas avro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'message schemas avro' applies in this project (file.search/file.read).\n2. Review the standard practice for message schemas avro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_schema-registry-flows",
+   "name": "Backend topic: schema registry flows",
+   "description": "Practical guide for schema registry flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'schema registry flows' applies in this project (file.search/file.read).\n2. Review the standard practice for schema registry flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_kafka-exactly-once-notes",
+   "name": "Backend topic: kafka exactly once notes",
+   "description": "Practical guide for kafka exactly once notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kafka exactly once notes' applies in this project (file.search/file.read).\n2. Review the standard practice for kafka exactly once notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_stream-joins-basics",
+   "name": "Backend topic: stream joins basics",
+   "description": "Practical guide for stream joins basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'stream joins basics' applies in this project (file.search/file.read).\n2. Review the standard practice for stream joins basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_watermark-concepts",
+   "name": "Backend topic: watermark concepts",
+   "description": "Practical guide for watermark concepts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'watermark concepts' applies in this project (file.search/file.read).\n2. Review the standard practice for watermark concepts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_late-data-handling",
+   "name": "Backend topic: late data handling",
+   "description": "Practical guide for late data handling in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'late data handling' applies in this project (file.search/file.read).\n2. Review the standard practice for late data handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_reprocessing-pipelines",
+   "name": "Backend topic: reprocessing pipelines",
+   "description": "Practical guide for reprocessing pipelines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'reprocessing pipelines' applies in this project (file.search/file.read).\n2. Review the standard practice for reprocessing pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_data-contracts-be",
+   "name": "Backend topic: data contracts be",
+   "description": "Practical guide for data contracts be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data contracts be' applies in this project (file.search/file.read).\n2. Review the standard practice for data contracts be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_api-versioning-be",
+   "name": "Backend topic: api versioning be",
+   "description": "Practical guide for api versioning be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api versioning be' applies in this project (file.search/file.read).\n2. Review the standard practice for api versioning be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_backward-compat-checks",
+   "name": "Backend topic: backward compat checks",
+   "description": "Practical guide for backward compat checks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backward compat checks' applies in this project (file.search/file.read).\n2. Review the standard practice for backward compat checks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_deprecation-headers",
+   "name": "Backend topic: deprecation headers",
+   "description": "Practical guide for deprecation headers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'deprecation headers' applies in this project (file.search/file.read).\n2. Review the standard practice for deprecation headers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_sunset-enforcement",
+   "name": "Backend topic: sunset enforcement",
+   "description": "Practical guide for sunset enforcement in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sunset enforcement' applies in this project (file.search/file.read).\n2. Review the standard practice for sunset enforcement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_idempotency-keys-be",
+   "name": "Backend topic: idempotency keys be",
+   "description": "Practical guide for idempotency keys be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'idempotency keys be' applies in this project (file.search/file.read).\n2. Review the standard practice for idempotency keys be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_distributed-locks",
+   "name": "Backend topic: distributed locks",
+   "description": "Practical guide for distributed locks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'distributed locks' applies in this project (file.search/file.read).\n2. Review the standard practice for distributed locks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_leader-election",
+   "name": "Backend topic: leader election",
+   "description": "Practical guide for leader election in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'leader election' applies in this project (file.search/file.read).\n2. Review the standard practice for leader election (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_consensus-basics",
+   "name": "Backend topic: consensus basics",
+   "description": "Practical guide for consensus basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'consensus basics' applies in this project (file.search/file.read).\n2. Review the standard practice for consensus basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_raft-intuition",
+   "name": "Backend topic: raft intuition",
+   "description": "Practical guide for raft intuition in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'raft intuition' applies in this project (file.search/file.read).\n2. Review the standard practice for raft intuition (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_gossip-protocols",
+   "name": "Backend topic: gossip protocols",
+   "description": "Practical guide for gossip protocols in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gossip protocols' applies in this project (file.search/file.read).\n2. Review the standard practice for gossip protocols (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_vector-clocks",
+   "name": "Backend topic: vector clocks",
+   "description": "Practical guide for vector clocks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vector clocks' applies in this project (file.search/file.read).\n2. Review the standard practice for vector clocks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_crdt-basics",
+   "name": "Backend topic: crdt basics",
+   "description": "Practical guide for crdt basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'crdt basics' applies in this project (file.search/file.read).\n2. Review the standard practice for crdt basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_eventual-consistency-ux",
+   "name": "Backend topic: eventual consistency ux",
+   "description": "Practical guide for eventual consistency ux in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'eventual consistency ux' applies in this project (file.search/file.read).\n2. Review the standard practice for eventual consistency ux (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_read-repair",
+   "name": "Backend topic: read repair",
+   "description": "Practical guide for read repair in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'read repair' applies in this project (file.search/file.read).\n2. Review the standard practice for read repair (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_anti-entropy",
+   "name": "Backend topic: anti entropy",
+   "description": "Practical guide for anti entropy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'anti entropy' applies in this project (file.search/file.read).\n2. Review the standard practice for anti entropy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_quorum-tuning",
+   "name": "Backend topic: quorum tuning",
+   "description": "Practical guide for quorum tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'quorum tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for quorum tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_replication-lag-monitoring",
+   "name": "Backend topic: replication lag monitoring",
+   "description": "Practical guide for replication lag monitoring in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'replication lag monitoring' applies in this project (file.search/file.read).\n2. Review the standard practice for replication lag monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_sharding-strategies",
+   "name": "Backend topic: sharding strategies",
+   "description": "Practical guide for sharding strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sharding strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for sharding strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_hot-partition-mitigation",
+   "name": "Backend topic: hot partition mitigation",
+   "description": "Practical guide for hot partition mitigation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hot partition mitigation' applies in this project (file.search/file.read).\n2. Review the standard practice for hot partition mitigation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_key-salting",
+   "name": "Backend topic: key salting",
+   "description": "Practical guide for key salting in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'key salting' applies in this project (file.search/file.read).\n2. Review the standard practice for key salting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_denormalization-patterns",
+   "name": "Backend topic: denormalization patterns",
+   "description": "Practical guide for denormalization patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'denormalization patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for denormalization patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_materialized-views",
+   "name": "Backend topic: materialized views",
+   "description": "Practical guide for materialized views in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'materialized views' applies in this project (file.search/file.read).\n2. Review the standard practice for materialized views (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_olap-column-stores",
+   "name": "Backend topic: olap column stores",
+   "description": "Practical guide for olap column stores in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'olap column stores' applies in this project (file.search/file.read).\n2. Review the standard practice for olap column stores (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_columnar-compression",
+   "name": "Backend topic: columnar compression",
+   "description": "Practical guide for columnar compression in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'columnar compression' applies in this project (file.search/file.read).\n2. Review the standard practice for columnar compression (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_compaction-strategies",
+   "name": "Backend topic: compaction strategies",
+   "description": "Practical guide for compaction strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compaction strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for compaction strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tombstone-hygiene",
+   "name": "Backend topic: tombstone hygiene",
+   "description": "Practical guide for tombstone hygiene in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tombstone hygiene' applies in this project (file.search/file.read).\n2. Review the standard practice for tombstone hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_ttl-strategies",
+   "name": "Backend topic: ttl strategies",
+   "description": "Practical guide for ttl strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ttl strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for ttl strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_backup-strategies-be",
+   "name": "Backend topic: backup strategies be",
+   "description": "Practical guide for backup strategies be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'backup strategies be' applies in this project (file.search/file.read).\n2. Review the standard practice for backup strategies be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_restore-drills-be",
+   "name": "Backend topic: restore drills be",
+   "description": "Practical guide for restore drills be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'restore drills be' applies in this project (file.search/file.read).\n2. Review the standard practice for restore drills be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_chaos-engineering-be",
+   "name": "Backend topic: chaos engineering be",
+   "description": "Practical guide for chaos engineering be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'chaos engineering be' applies in this project (file.search/file.read).\n2. Review the standard practice for chaos engineering be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_game-days",
+   "name": "Backend topic: game days",
+   "description": "Practical guide for game days in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'game days' applies in this project (file.search/file.read).\n2. Review the standard practice for game days (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_incident-command-be",
+   "name": "Backend topic: incident command be",
+   "description": "Practical guide for incident command be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'incident command be' applies in this project (file.search/file.read).\n2. Review the standard practice for incident command be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_comms-templates-be",
+   "name": "Backend topic: comms templates be",
+   "description": "Practical guide for comms templates be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'comms templates be' applies in this project (file.search/file.read).\n2. Review the standard practice for comms templates be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_capacity-models",
+   "name": "Backend topic: capacity models",
+   "description": "Practical guide for capacity models in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'capacity models' applies in this project (file.search/file.read).\n2. Review the standard practice for capacity models (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_unit-economics-be",
+   "name": "Backend topic: unit economics be",
+   "description": "Practical guide for unit economics be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'unit economics be' applies in this project (file.search/file.read).\n2. Review the standard practice for unit economics be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_finops-basics",
+   "name": "Backend topic: finops basics",
+   "description": "Practical guide for finops basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'finops basics' applies in this project (file.search/file.read).\n2. Review the standard practice for finops basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_cost-anomaly-detection",
+   "name": "Backend topic: cost anomaly detection",
+   "description": "Practical guide for cost anomaly detection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cost anomaly detection' applies in this project (file.search/file.read).\n2. Review the standard practice for cost anomaly detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_tagging-strategies",
+   "name": "Backend topic: tagging strategies",
+   "description": "Practical guide for tagging strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tagging strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for tagging strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_reserved-capacity-planning",
+   "name": "Backend topic: reserved capacity planning",
+   "description": "Practical guide for reserved capacity planning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'reserved capacity planning' applies in this project (file.search/file.read).\n2. Review the standard practice for reserved capacity planning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_spot-instance-strategies",
+   "name": "Backend topic: spot instance strategies",
+   "description": "Practical guide for spot instance strategies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'spot instance strategies' applies in this project (file.search/file.read).\n2. Review the standard practice for spot instance strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_multi-region-active-passive",
+   "name": "Backend topic: multi region active passive",
+   "description": "Practical guide for multi region active passive in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'multi region active passive' applies in this project (file.search/file.read).\n2. Review the standard practice for multi region active passive (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_rto-rpo-be",
+   "name": "Backend topic: rto rpo be",
+   "description": "Practical guide for rto rpo be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rto rpo be' applies in this project (file.search/file.read).\n2. Review the standard practice for rto rpo be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_failover-drills",
+   "name": "Backend topic: failover drills",
+   "description": "Practical guide for failover drills in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'failover drills' applies in this project (file.search/file.read).\n2. Review the standard practice for failover drills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_data-residency",
+   "name": "Backend topic: data residency",
+   "description": "Practical guide for data residency in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'data residency' applies in this project (file.search/file.read).\n2. Review the standard practice for data residency (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_region-pinning",
+   "name": "Backend topic: region pinning",
+   "description": "Practical guide for region pinning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'region pinning' applies in this project (file.search/file.read).\n2. Review the standard practice for region pinning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_geo-routing",
+   "name": "Backend topic: geo routing",
+   "description": "Practical guide for geo routing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'geo routing' applies in this project (file.search/file.read).\n2. Review the standard practice for geo routing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_latency-based-routing",
+   "name": "Backend topic: latency based routing",
+   "description": "Practical guide for latency based routing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'latency based routing' applies in this project (file.search/file.read).\n2. Review the standard practice for latency based routing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_anycast-basics",
+   "name": "Backend topic: anycast basics",
+   "description": "Practical guide for anycast basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'anycast basics' applies in this project (file.search/file.read).\n2. Review the standard practice for anycast basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_private-link-patterns",
+   "name": "Backend topic: private link patterns",
+   "description": "Practical guide for private link patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'private link patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for private link patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_vpc-design",
+   "name": "Backend topic: vpc design",
+   "description": "Practical guide for vpc design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'vpc design' applies in this project (file.search/file.read).\n2. Review the standard practice for vpc design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_subnet-zoning",
+   "name": "Backend topic: subnet zoning",
+   "description": "Practical guide for subnet zoning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'subnet zoning' applies in this project (file.search/file.read).\n2. Review the standard practice for subnet zoning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_nat-gateways",
+   "name": "Backend topic: nat gateways",
+   "description": "Practical guide for nat gateways in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'nat gateways' applies in this project (file.search/file.read).\n2. Review the standard practice for nat gateways (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_firewall-rules-audit",
+   "name": "Backend topic: firewall rules audit",
+   "description": "Practical guide for firewall rules audit in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'firewall rules audit' applies in this project (file.search/file.read).\n2. Review the standard practice for firewall rules audit (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_waf-tuning",
+   "name": "Backend topic: waf tuning",
+   "description": "Practical guide for waf tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'waf tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for waf tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_ddos-protections",
+   "name": "Backend topic: ddos protections",
+   "description": "Practical guide for ddos protections in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ddos protections' applies in this project (file.search/file.read).\n2. Review the standard practice for ddos protections (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_bot-management",
+   "name": "Backend topic: bot management",
+   "description": "Practical guide for bot management in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bot management' applies in this project (file.search/file.read).\n2. Review the standard practice for bot management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_rate-limiting-infra",
+   "name": "Backend topic: rate limiting infra",
+   "description": "Practical guide for rate limiting infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rate limiting infra' applies in this project (file.search/file.read).\n2. Review the standard practice for rate limiting infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_api-keys-infrastructure",
+   "name": "Backend topic: api keys infrastructure",
+   "description": "Practical guide for api keys infrastructure in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api keys infrastructure' applies in this project (file.search/file.read).\n2. Review the standard practice for api keys infrastructure (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_service-accounts-hygiene",
+   "name": "Backend topic: service accounts hygiene",
+   "description": "Practical guide for service accounts hygiene in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'service accounts hygiene' applies in this project (file.search/file.read).\n2. Review the standard practice for service accounts hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_least-privilege-iam",
+   "name": "Backend topic: least privilege iam",
+   "description": "Practical guide for least privilege iam in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'least privilege iam' applies in this project (file.search/file.read).\n2. Review the standard practice for least privilege iam (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_policy-as-code",
+   "name": "Backend topic: policy as code",
+   "description": "Practical guide for policy as code in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'policy as code' applies in this project (file.search/file.read).\n2. Review the standard practice for policy as code (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_opa-sidecar",
+   "name": "Backend topic: opa sidecar",
+   "description": "Practical guide for opa sidecar in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'opa sidecar' applies in this project (file.search/file.read).\n2. Review the standard practice for opa sidecar (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_admission-controllers",
+   "name": "Backend topic: admission controllers",
+   "description": "Practical guide for admission controllers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'admission controllers' applies in this project (file.search/file.read).\n2. Review the standard practice for admission controllers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_pod-security-standards",
+   "name": "Backend topic: pod security standards",
+   "description": "Practical guide for pod security standards in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pod security standards' applies in this project (file.search/file.read).\n2. Review the standard practice for pod security standards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_network-policies",
+   "name": "Backend topic: network policies",
+   "description": "Practical guide for network policies in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'network policies' applies in this project (file.search/file.read).\n2. Review the standard practice for network policies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_secret-scanning-infra",
+   "name": "Backend topic: secret scanning infra",
+   "description": "Practical guide for secret scanning infra in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'secret scanning infra' applies in this project (file.search/file.read).\n2. Review the standard practice for secret scanning infra (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_supply-chain-security",
+   "name": "Backend topic: supply chain security",
+   "description": "Practical guide for supply chain security in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'supply chain security' applies in this project (file.search/file.read).\n2. Review the standard practice for supply chain security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_sbom-generation-be",
+   "name": "Backend topic: sbom generation be",
+   "description": "Practical guide for sbom generation be in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sbom generation be' applies in this project (file.search/file.read).\n2. Review the standard practice for sbom generation be (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_provenance-attestation",
+   "name": "Backend topic: provenance attestation",
+   "description": "Practical guide for provenance attestation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'provenance attestation' applies in this project (file.search/file.read).\n2. Review the standard practice for provenance attestation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_signed-images-verification",
+   "name": "Backend topic: signed images verification",
+   "description": "Practical guide for signed images verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'signed images verification' applies in this project (file.search/file.read).\n2. Review the standard practice for signed images verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_admission-time-verification",
+   "name": "Backend topic: admission time verification",
+   "description": "Practical guide for admission time verification in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'admission time verification' applies in this project (file.search/file.read).\n2. Review the standard practice for admission time verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_runtime-security-falco",
+   "name": "Backend topic: runtime security falco",
+   "description": "Practical guide for runtime security falco in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'runtime security falco' applies in this project (file.search/file.read).\n2. Review the standard practice for runtime security falco (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_seccomp-profiles",
+   "name": "Backend topic: seccomp profiles",
+   "description": "Practical guide for seccomp profiles in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'seccomp profiles' applies in this project (file.search/file.read).\n2. Review the standard practice for seccomp profiles (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_be_apparmor-basics",
+   "name": "Backend topic: apparmor basics",
+   "description": "Practical guide for apparmor basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'apparmor basics' applies in this project (file.search/file.read).\n2. Review the standard practice for apparmor basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

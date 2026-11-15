@@ -1,0 +1,341 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_dev_screen_read",
+   "name": "Screen state reading",
+   "description": "Read the current screen reliably.",
+   "instructions": "Workflow:\n1. androidreadscreen for the accessibility tree.\n2. If content is graphical, add androidanalyze (vision).\n3. Note interactive elements with their bounds.\n4. Re-read after every action.",
+   "enabled": true
+  },
+  {
+   "id": "cat_dev_tap_element",
+   "name": "Element tapping",
+   "description": "Tap by element rather than coordinates.",
+   "instructions": "Workflow:\n1. androidreadscreen to locate the target element.\n2. androidclickelement with its description/text.\n3. Verify the result with a fresh androidreadscreen.\n4. Fall back to android_tap coordinates only when elements are invisible to a11y.",
+   "enabled": true
+  },
+  {
+   "id": "cat_dev_type_text",
+   "name": "Text entry",
+   "description": "Enter text without losing state.",
+   "instructions": "Workflow:\n1. Focus the field (androidclickelement).\n2. androidtypetext the content.\n3. androidreadscreen to verify what landed.\n4. Correct with backspaces if the IME mangled it.",
+   "enabled": true
+  },
+  {
+   "id": "cat_dev_scroll_nav",
+   "name": "Scrolling navigation",
+   "description": "Move through long content deterministically.",
+   "instructions": "Workflow:\n1. android_scroll in small steps.\n2. androidreadscreen after each step; watch for repeated content (end reached).\n3. Collect the item you are looking for.\n4. Stop as soon as found; do not over-scroll.",
+   "enabled": true
+  },
+  {
+   "id": "cat_dev_swipe_gestures",
+   "name": "Swipe gestures",
+   "description": "Use swipes for drawers and pages.",
+   "instructions": "Workflow:\n1. Identify the swipe target region via androidreadscreen bounds.\n2. android_swipe with start/end points inside the region.\n3. Verify the transition with a fresh read.\n4. Use androidlongpress for context menus when needed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_back_home",
+   "name": "Navigation reset",
+   "description": "Return to a known state when lost.",
+   "instructions": "Workflow:\n1. androidpressback until the app is at its root, or\n2. androidpresshome to exit to launcher entirely.\n3. Re-launch the target with androidopenapp.\n4. Re-read to confirm the starting state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_app_launch",
+   "name": "App launching",
+   "description": "Open apps reliably by package or name.",
+   "instructions": "Workflow:\n1. androidopenapp with the package name (system.app_list to find it).\n2. androidreadscreen to confirm launch.\n3. Handle permission dialogs immediately (androidclickelement).\n4. Proceed with the task on a stable screen.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_screenshot_capture",
+   "name": "Screenshot evidence",
+   "description": "Capture visual proof of device state.",
+   "instructions": "Workflow:\n1. android_screenshot at the current state.\n2. Name the file with state and timestamp.\n3. Compare against the a11y tree when they disagree (overlays hide content).\n4. Store evidence paths in the summary.",
+   "enabled": true
+  },
+  {
+   "id": "cat_dev_vision_analyze",
+   "name": "Vision screen analysis",
+   "description": "Use the VLM for graphical content.",
+   "instructions": "Workflow:\n1. android_screenshot the target screen.\n2. androidanalyze to describe non-textual UI.\n3. Map described elements back to tappable coordinates.\n4. Verify any tap with a follow-up screenshot.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_form_fill",
+   "name": "Form filling",
+   "description": "Complete multi-field forms methodically.",
+   "instructions": "Workflow:\n1. androidreadscreen; enumerate all fields in order.\n2. Fill one field at a time: focus, androidtypetext, verify.\n3. Handle pickers with androidclickelement on options.\n4. Final review read before submit; then submit once.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_permission_dialogs",
+   "name": "Permission dialog handling",
+   "description": "Answer system dialogs correctly.",
+   "instructions": "Workflow:\n1. androidreadscreen detects the dialog.\n2. Read the request text; decide per the user's intent.\n3. androidclickelement the correct button (Allow/Deny).\n4. Verify the dialog cleared.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_otp_read",
+   "name": "OTP and code reading",
+   "description": "Extract one-time codes from notifications.",
+   "instructions": "Workflow:\n1. androidreadscreen on the notification shade (open it with a swipe).\n2. Find the code pattern in the message text.\n3. Read it back to the user; never send codes anywhere unprompted.\n4. Dismiss the notification after use.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_notification_scan",
+   "name": "Notification triage",
+   "description": "Process the notification shade.",
+   "instructions": "Workflow:\n1. Open the shade (android_swipe from top).\n2. androidreadscreen to list notifications.\n3. Summarize by app and subject.\n4. Act only on what the user asked for.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_settings_toggle",
+   "name": "Settings toggling",
+   "description": "Flip system or app settings.",
+   "instructions": "Workflow:\n1. android.app_settings for the app page, or navigate via launcher.\n2. androidreadscreen to find the switch.\n3. androidclickelement the toggle; verify state changed.\n4. Report the before/after state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_wifi_setup",
+   "name": "Wi-Fi guidance",
+   "description": "Walk through Wi-Fi configuration.",
+   "instructions": "Workflow:\n1. Open Settings > Network via androidopenapp/launcher taps.\n2. androidreadscreen to find the network.\n3. androidclickelement; enter the password with androidtypetext when asked.\n4. Verify connection state on the same screen.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_bt_pairing",
+   "name": "Bluetooth pairing flow",
+   "description": "Pair a device step by step.",
+   "instructions": "Workflow:\n1. Open Bluetooth settings via the launcher path.\n2. androidclickelement the new device entry.\n3. Confirm the PIN dialog if shown.\n4. Verify the paired state with a fresh read.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_dialer_call",
+   "name": "Dialer operations",
+   "description": "Place calls safely.",
+   "instructions": "Workflow:\n1. androidopenapp the dialer.\n2. androidtypetext the number into the field.\n3. Confirm the number on screen before pressing call (androidclickelement).\n4. End with androidpressback; note the call was placed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_contact_search",
+   "name": "Contact lookup",
+   "description": "Find and verify a contact.",
+   "instructions": "Workflow:\n1. Open contacts; androidtypetext the name in search.\n2. androidreadscreen the results.\n3. Verify the exact match before acting on it.\n4. Report phone/email found; never auto-message.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_alarm_set",
+   "name": "Alarm setting",
+   "description": "Create an alarm correctly.",
+   "instructions": "Workflow:\n1. Open the clock app (androidopenapp).\n2. androidclickelement the add-alarm control.\n3. Set time via the picker taps; verify digits on screen.\n4. Save once; verify the alarm appears in the list.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_calendar_event",
+   "name": "Calendar entries",
+   "description": "Create events without duplicates.",
+   "instructions": "Workflow:\n1. Open calendar; navigate to the date via taps/swipes.\n2. Create the event; fill title with androidtypetext.\n3. Save; androidreadscreen to verify it exists.\n4. Search first to avoid duplicates.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_app_uninstall",
+   "name": "App removal",
+   "description": "Uninstall apps with confirmation.",
+   "instructions": "Workflow:\n1. system.app_list to confirm the package.\n2. Uninstall via settings (android.app_settings) with androidclickelement.\n3. Confirm the system dialog deliberately.\n4. Verify removal with system.app_list.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_app_update_check",
+   "name": "Update status check",
+   "description": "Check an app update state.",
+   "instructions": "Workflow:\n1. Open the store page via launcher (web.browser fallback).\n2. androidreadscreen for Update/Open button state.\n3. Report the state; update only on request.\n4. Verify post-update version if updated.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_flight_mode",
+   "name": "Airplane mode toggle",
+   "description": "Toggle airplane mode deliberately.",
+   "instructions": "Workflow:\n1. Open quick settings (swipe from top twice).\n2. androidclickelement the airplane tile.\n3. Verify the state icon.\n4. Warn the user radios are off until reverted.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_brightness_set",
+   "name": "Brightness adjustment",
+   "description": "Set screen brightness.",
+   "instructions": "Workflow:\n1. Open quick settings; locate the brightness slider.\n2. android_swipe along the slider track to the target level.\n3. Verify the visual result with android_screenshot.\n4. Report the approximate level set.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_volume_control",
+   "name": "Volume control",
+   "description": "Set media/ringer volume.",
+   "instructions": "Workflow:\n1. Use accessibility.global volume actions or the volume UI.\n2. Adjust stepwise; androidreadscreen the overlay for level.\n3. Verify with a test sound if applicable.\n4. Report the final level.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_keyboard_switch",
+   "name": "Keyboard switching",
+   "description": "Change the active IME.",
+   "instructions": "Workflow:\n1. Focus any text field.\n2. androidreadscreen to find the keyboard selector.\n3. androidclickelement to switch IMEs.\n4. Verify the new keyboard in a fresh read.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_multiwindow",
+   "name": "Split-screen operations",
+   "description": "Work across two apps.",
+   "instructions": "Workflow:\n1. Open the first app (androidopenapp).\n2. Enter split-screen via the recents gesture.\n3. Select the second app from the chooser.\n4. Verify both panes with androidreadscreen.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_recents_manage",
+   "name": "Recent apps management",
+   "description": "Clean up running apps.",
+   "instructions": "Workflow:\n1. Open recents.\n2. android_swipe away targets one by one.\n3. Verify via system.process_list that they exited.\n4. Report what was closed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_default_apps",
+   "name": "Default app review",
+   "description": "Check default app assignments.",
+   "instructions": "Workflow:\n1. Navigate to default apps settings via launcher.\n2. androidreadscreen the current defaults.\n3. Change only what the user requested (androidclickelement).\n4. Verify and report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_accessibility_check",
+   "name": "Accessibility service check",
+   "description": "Verify the agent's accessibility service.",
+   "instructions": "Workflow:\n1. Open accessibility settings via launcher.\n2. androidreadscreen the service list.\n3. Confirm the agent service is enabled.\n4. If disabled, guide the user through enabling it.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_screen_record",
+   "name": "Screen recording setup",
+   "description": "Start and stop screen recording.",
+   "instructions": "Workflow:\n1. Open quick settings; androidclickelement the record tile.\n2. Confirm any audio choice dialog.\n3. Perform the actions to capture.\n4. Stop recording; report the saved path.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_locale_change",
+   "name": "Locale changes",
+   "description": "Switch device language.",
+   "instructions": "Workflow:\n1. Open languages settings via launcher.\n2. androidreadscreen the list; androidclickelement the target language.\n3. Confirm the system dialog.\n4. Verify with a fresh read; expect UI text changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_dark_mode",
+   "name": "Theme switching",
+   "description": "Toggle dark mode.",
+   "instructions": "Workflow:\n1. Open display settings or quick settings tile.\n2. androidclickelement the dark mode control.\n3. Verify with android_screenshot.\n4. Report the change.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_font_size",
+   "name": "Font size adjustment",
+   "description": "Change system font scale.",
+   "instructions": "Workflow:\n1. Open display > font size.\n2. androidclickelement the desired size option.\n3. Verify with androidreadscreen (layout shifts!).\n4. Report the new scale.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_storage_review",
+   "name": "Storage review",
+   "description": "Survey device storage state.",
+   "instructions": "Workflow:\n1. process.exec df for partition usage.\n2. Open storage settings for a user-visible breakdown.\n3. Identify large consumers (media, apps, caches).\n4. Recommend safe cleanups; never auto-delete.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_battery_report",
+   "name": "Battery diagnostics",
+   "description": "Read battery health and usage.",
+   "instructions": "Workflow:\n1. process.exec dumpsys battery for level and status.\n2. Open battery settings for per-app usage.\n3. Identify top consumers.\n4. Recommend mitigation (background restrictions).",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_data_usage",
+   "name": "Data usage audit",
+   "description": "Review mobile data consumption.",
+   "instructions": "Workflow:\n1. Open data usage settings.\n2. androidreadscreen the per-app list.\n3. Identify heavy users in the window.\n4. Recommend restrict-background actions where sensible.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_screenshot_share",
+   "name": "Screenshot sharing",
+   "description": "Share a capture to another app.",
+   "instructions": "Workflow:\n1. android_screenshot to create the capture.\n2. Open the share sheet from the preview.\n3. androidclickelement the destination app.\n4. Verify the share completed in the destination.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_qr_scan",
+   "name": "QR code scanning",
+   "description": "Use the camera/assistant to scan codes.",
+   "instructions": "Workflow:\n1. Open the camera or lens suggestion via launcher.\n2. Point at the code (physical task; guide the user).\n3. androidreadscreen the decoded result.\n4. Confirm before opening any link.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_emergency_info",
+   "name": "Emergency info setup",
+   "description": "Configure emergency information.",
+   "instructions": "Workflow:\n1. Open emergency information settings via launcher.\n2. Fill medical/contact fields with androidtypetext.\n3. Verify each saved field.\n4. Confirm lock-screen visibility setting.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_find_my_device",
+   "name": "Device location check",
+   "description": "Use find-my-device flows.",
+   "instructions": "Workflow:\n1. Open the find-my-device web page (web.browser).\n2. Sign in state per user; never enter credentials yourself.\n3. androidreadscreen the location result.\n4. Report location or lock options available.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_printer_setup",
+   "name": "Printing setup",
+   "description": "Configure a printer service.",
+   "instructions": "Workflow:\n1. Open printing settings via launcher.\n2. androidclickelement add service; pick from the store list.\n3. Complete the setup; verify the printer appears.\n4. Test with a small print job if requested.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_nfc_check",
+   "name": "NFC status check",
+   "description": "Verify NFC availability and state.",
+   "instructions": "Workflow:\n1. Open NFC settings via launcher.\n2. androidreadscreen the toggle state.\n3. Toggle only on request.\n4. Report capability and current state.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_screen_timeout",
+   "name": "Display timeout tuning",
+   "description": "Adjust the screen timeout.",
+   "instructions": "Workflow:\n1. Open display settings.\n2. androidclickelement sleep; pick the duration.\n3. Verify the new setting on screen.\n4. Report the change.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev_accessibility_tuning",
+   "name": "Accessibility tuning",
+   "description": "Adjust accessibility services.",
+   "instructions": "Workflow:\n1. Open accessibility settings.\n2. androidreadscreen the service options.\n3. Toggle the requested service (androidclickelement).\n4. Confirm the service state changed.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sys_root_check",
+   "name": "Root status verification",
+   "description": "Confirm root availability first.",
+   "instructions": "Workflow:\n1. root.info for su binary and manager state.\n2. If absent, root paths are unavailable; say so plainly.\n3. Never fake root results.\n4. Record root state for the session.",
+   "enabled": true
+  },
+  {
+   "id": "cat_sys_root_exec",
+   "name": "Root command execution",
+   "description": "Run privileged commands with care.",
+   "instructions": "Workflow:\n1. root.info to confirm su works.\n2. Prefer read-only commands first (ls, cat, id).\n3. Announce any mutating command before running it.\n4. Verify effects with a follow-up read-only command.",
+   "enabled": true
+  },
+  {
+   "id": "cat_sys_pkg_inspect",
+   "name": "Package deep inspection",
+   "description": "Inspect installed package details.",
+   "instructions": "Workflow:\n1. process.exec pm path/dumpsys package for the target.\n2. Note version, installer, permissions granted.\n3. Check APK path for RE follow-up.\n4. Summarize the package profile.",
+   "enabled": false
+  }
+ ]
+}

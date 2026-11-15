@@ -1,0 +1,929 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_iot_rtos-selection",
+   "name": "Embedded/IoT topic: RTOS selection",
+   "description": "Practical guide for RTOS selection.",
+   "instructions": "Workflow:\n1. Locate where 'RTOS selection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for RTOS selection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_freertos-tasks",
+   "name": "Embedded/IoT topic: freeRTOS tasks",
+   "description": "Practical guide for freeRTOS tasks.",
+   "instructions": "Workflow:\n1. Locate where 'freeRTOS tasks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for freeRTOS tasks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_freertos-queues",
+   "name": "Embedded/IoT topic: freeRTOS queues",
+   "description": "Practical guide for freeRTOS queues.",
+   "instructions": "Workflow:\n1. Locate where 'freeRTOS queues' applies in this project or task (file.search/file.read).\n2. Review the standard practice for freeRTOS queues (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_task-priorities",
+   "name": "Embedded/IoT topic: task priorities",
+   "description": "Practical guide for task priorities.",
+   "instructions": "Workflow:\n1. Locate where 'task priorities' applies in this project or task (file.search/file.read).\n2. Review the standard practice for task priorities (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_watchdog-timers",
+   "name": "Embedded/IoT topic: watchdog timers",
+   "description": "Practical guide for watchdog timers.",
+   "instructions": "Workflow:\n1. Locate where 'watchdog timers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for watchdog timers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_interrupt-handlers",
+   "name": "Embedded/IoT topic: interrupt handlers",
+   "description": "Practical guide for interrupt handlers.",
+   "instructions": "Workflow:\n1. Locate where 'interrupt handlers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for interrupt handlers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_dma-basics",
+   "name": "Embedded/IoT topic: DMA basics",
+   "description": "Practical guide for DMA basics.",
+   "instructions": "Workflow:\n1. Locate where 'DMA basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for DMA basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_memory-constrained-programming",
+   "name": "Embedded/IoT topic: memory constrained programming",
+   "description": "Practical guide for memory constrained programming.",
+   "instructions": "Workflow:\n1. Locate where 'memory constrained programming' applies in this project or task (file.search/file.read).\n2. Review the standard practice for memory constrained programming (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_stack-sizing-tasks",
+   "name": "Embedded/IoT topic: stack sizing tasks",
+   "description": "Practical guide for stack sizing tasks.",
+   "instructions": "Workflow:\n1. Locate where 'stack sizing tasks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for stack sizing tasks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_heap-fragmentation-embedded",
+   "name": "Embedded/IoT topic: heap fragmentation embedded",
+   "description": "Practical guide for heap fragmentation embedded.",
+   "instructions": "Workflow:\n1. Locate where 'heap fragmentation embedded' applies in this project or task (file.search/file.read).\n2. Review the standard practice for heap fragmentation embedded (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_static-allocation-patterns",
+   "name": "Embedded/IoT topic: static allocation patterns",
+   "description": "Practical guide for static allocation patterns.",
+   "instructions": "Workflow:\n1. Locate where 'static allocation patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for static allocation patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_embedded-c-standards-misra",
+   "name": "Embedded/IoT topic: embedded C standards MISRA",
+   "description": "Practical guide for embedded C standards MISRA.",
+   "instructions": "Workflow:\n1. Locate where 'embedded C standards MISRA' applies in this project or task (file.search/file.read).\n2. Review the standard practice for embedded C standards MISRA (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_embedded-unit-testing",
+   "name": "Embedded/IoT topic: embedded unit testing",
+   "description": "Practical guide for embedded unit testing.",
+   "instructions": "Workflow:\n1. Locate where 'embedded unit testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for embedded unit testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_hardware-in-the-loop",
+   "name": "Embedded/IoT topic: hardware in the loop",
+   "description": "Practical guide for hardware in the loop.",
+   "instructions": "Workflow:\n1. Locate where 'hardware in the loop' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hardware in the loop (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_jtag-swd-debugging",
+   "name": "Embedded/IoT topic: JTAG SWD debugging",
+   "description": "Practical guide for JTAG SWD debugging.",
+   "instructions": "Workflow:\n1. Locate where 'JTAG SWD debugging' applies in this project or task (file.search/file.read).\n2. Review the standard practice for JTAG SWD debugging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_openocd-usage",
+   "name": "Embedded/IoT topic: openocd usage",
+   "description": "Practical guide for openocd usage.",
+   "instructions": "Workflow:\n1. Locate where 'openocd usage' applies in this project or task (file.search/file.read).\n2. Review the standard practice for openocd usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_serial-protocols-uart",
+   "name": "Embedded/IoT topic: serial protocols UART",
+   "description": "Practical guide for serial protocols UART.",
+   "instructions": "Workflow:\n1. Locate where 'serial protocols UART' applies in this project or task (file.search/file.read).\n2. Review the standard practice for serial protocols UART (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_spi-transactions",
+   "name": "Embedded/IoT topic: SPI transactions",
+   "description": "Practical guide for SPI transactions.",
+   "instructions": "Workflow:\n1. Locate where 'SPI transactions' applies in this project or task (file.search/file.read).\n2. Review the standard practice for SPI transactions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_i2c-scanning",
+   "name": "Embedded/IoT topic: I2C scanning",
+   "description": "Practical guide for I2C scanning.",
+   "instructions": "Workflow:\n1. Locate where 'I2C scanning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for I2C scanning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_i2c-bus-recovery",
+   "name": "Embedded/IoT topic: I2C bus recovery",
+   "description": "Practical guide for I2C bus recovery.",
+   "instructions": "Workflow:\n1. Locate where 'I2C bus recovery' applies in this project or task (file.search/file.read).\n2. Review the standard practice for I2C bus recovery (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_1-wire-basics",
+   "name": "Embedded/IoT topic: 1-wire basics",
+   "description": "Practical guide for 1-wire basics.",
+   "instructions": "Workflow:\n1. Locate where '1-wire basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for 1-wire basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_can-bus-basics",
+   "name": "Embedded/IoT topic: CAN bus basics",
+   "description": "Practical guide for CAN bus basics.",
+   "instructions": "Workflow:\n1. Locate where 'CAN bus basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for CAN bus basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_can-fd-notes",
+   "name": "Embedded/IoT topic: CAN fd notes",
+   "description": "Practical guide for CAN fd notes.",
+   "instructions": "Workflow:\n1. Locate where 'CAN fd notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for CAN fd notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_modbus-rtu",
+   "name": "Embedded/IoT topic: modbus RTU",
+   "description": "Practical guide for modbus RTU.",
+   "instructions": "Workflow:\n1. Locate where 'modbus RTU' applies in this project or task (file.search/file.read).\n2. Review the standard practice for modbus RTU (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_modbus-tcp",
+   "name": "Embedded/IoT topic: modbus TCP",
+   "description": "Practical guide for modbus TCP.",
+   "instructions": "Workflow:\n1. Locate where 'modbus TCP' applies in this project or task (file.search/file.read).\n2. Review the standard practice for modbus TCP (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_rs485-reliability",
+   "name": "Embedded/IoT topic: RS485 reliability",
+   "description": "Practical guide for RS485 reliability.",
+   "instructions": "Workflow:\n1. Locate where 'RS485 reliability' applies in this project or task (file.search/file.read).\n2. Review the standard practice for RS485 reliability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_gpio-best-practices",
+   "name": "Embedded/IoT topic: GPIO best practices",
+   "description": "Practical guide for GPIO best practices.",
+   "instructions": "Workflow:\n1. Locate where 'GPIO best practices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for GPIO best practices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_debouncing-inputs",
+   "name": "Embedded/IoT topic: debouncing inputs",
+   "description": "Practical guide for debouncing inputs.",
+   "instructions": "Workflow:\n1. Locate where 'debouncing inputs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for debouncing inputs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_pwm-control",
+   "name": "Embedded/IoT topic: PWM control",
+   "description": "Practical guide for PWM control.",
+   "instructions": "Workflow:\n1. Locate where 'PWM control' applies in this project or task (file.search/file.read).\n2. Review the standard practice for PWM control (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_adc-sampling-strategy",
+   "name": "Embedded/IoT topic: ADC sampling strategy",
+   "description": "Practical guide for ADC sampling strategy.",
+   "instructions": "Workflow:\n1. Locate where 'ADC sampling strategy' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ADC sampling strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_sensor-fusion-basics",
+   "name": "Embedded/IoT topic: sensor fusion basics",
+   "description": "Practical guide for sensor fusion basics.",
+   "instructions": "Workflow:\n1. Locate where 'sensor fusion basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for sensor fusion basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_complementary-filter",
+   "name": "Embedded/IoT topic: complementary filter",
+   "description": "Practical guide for complementary filter.",
+   "instructions": "Workflow:\n1. Locate where 'complementary filter' applies in this project or task (file.search/file.read).\n2. Review the standard practice for complementary filter (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_kalman-intro",
+   "name": "Embedded/IoT topic: kalman intro",
+   "description": "Practical guide for kalman intro.",
+   "instructions": "Workflow:\n1. Locate where 'kalman intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for kalman intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_imu-calibration",
+   "name": "Embedded/IoT topic: IMU calibration",
+   "description": "Practical guide for IMU calibration.",
+   "instructions": "Workflow:\n1. Locate where 'IMU calibration' applies in this project or task (file.search/file.read).\n2. Review the standard practice for IMU calibration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_gps-modules",
+   "name": "Embedded/IoT topic: GPS modules",
+   "description": "Practical guide for GPS modules.",
+   "instructions": "Workflow:\n1. Locate where 'GPS modules' applies in this project or task (file.search/file.read).\n2. Review the standard practice for GPS modules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_nmea-parsing",
+   "name": "Embedded/IoT topic: NMEA parsing",
+   "description": "Practical guide for NMEA parsing.",
+   "instructions": "Workflow:\n1. Locate where 'NMEA parsing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for NMEA parsing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_cellular-iot-nb-iot",
+   "name": "Embedded/IoT topic: cellular IoT NB-IoT",
+   "description": "Practical guide for cellular IoT NB-IoT.",
+   "instructions": "Workflow:\n1. Locate where 'cellular IoT NB-IoT' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cellular IoT NB-IoT (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_lte-m-basics",
+   "name": "Embedded/IoT topic: LTE-M basics",
+   "description": "Practical guide for LTE-M basics.",
+   "instructions": "Workflow:\n1. Locate where 'LTE-M basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for LTE-M basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_lorawan-classes",
+   "name": "Embedded/IoT topic: LoRaWAN classes",
+   "description": "Practical guide for LoRaWAN classes.",
+   "instructions": "Workflow:\n1. Locate where 'LoRaWAN classes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for LoRaWAN classes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_lorawan-join-flows",
+   "name": "Embedded/IoT topic: LoRaWAN join flows",
+   "description": "Practical guide for LoRaWAN join flows.",
+   "instructions": "Workflow:\n1. Locate where 'LoRaWAN join flows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for LoRaWAN join flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_zigbee-basics",
+   "name": "Embedded/IoT topic: zigbee basics",
+   "description": "Practical guide for zigbee basics.",
+   "instructions": "Workflow:\n1. Locate where 'zigbee basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for zigbee basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_zigbee-mesh-notes",
+   "name": "Embedded/IoT topic: zigbee mesh notes",
+   "description": "Practical guide for zigbee mesh notes.",
+   "instructions": "Workflow:\n1. Locate where 'zigbee mesh notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for zigbee mesh notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_thread-protocol",
+   "name": "Embedded/IoT topic: thread protocol",
+   "description": "Practical guide for thread protocol.",
+   "instructions": "Workflow:\n1. Locate where 'thread protocol' applies in this project or task (file.search/file.read).\n2. Review the standard practice for thread protocol (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_matter-protocol-intro",
+   "name": "Embedded/IoT topic: matter protocol intro",
+   "description": "Practical guide for matter protocol intro.",
+   "instructions": "Workflow:\n1. Locate where 'matter protocol intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for matter protocol intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ble-advertising",
+   "name": "Embedded/IoT topic: BLE advertising",
+   "description": "Practical guide for BLE advertising.",
+   "instructions": "Workflow:\n1. Locate where 'BLE advertising' applies in this project or task (file.search/file.read).\n2. Review the standard practice for BLE advertising (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ble-gatt-services",
+   "name": "Embedded/IoT topic: BLE GATT services",
+   "description": "Practical guide for BLE GATT services.",
+   "instructions": "Workflow:\n1. Locate where 'BLE GATT services' applies in this project or task (file.search/file.read).\n2. Review the standard practice for BLE GATT services (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ble-pairing-modes",
+   "name": "Embedded/IoT topic: BLE pairing modes",
+   "description": "Practical guide for BLE pairing modes.",
+   "instructions": "Workflow:\n1. Locate where 'BLE pairing modes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for BLE pairing modes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_esp32-wifi-provisioning",
+   "name": "Embedded/IoT topic: esp32 wifi provisioning",
+   "description": "Practical guide for esp32 wifi provisioning.",
+   "instructions": "Workflow:\n1. Locate where 'esp32 wifi provisioning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for esp32 wifi provisioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_esp32-ota-flow",
+   "name": "Embedded/IoT topic: esp32 OTA flow",
+   "description": "Practical guide for esp32 OTA flow.",
+   "instructions": "Workflow:\n1. Locate where 'esp32 OTA flow' applies in this project or task (file.search/file.read).\n2. Review the standard practice for esp32 OTA flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_esp-idf-basics",
+   "name": "Embedded/IoT topic: esp-idf basics",
+   "description": "Practical guide for esp-idf basics.",
+   "instructions": "Workflow:\n1. Locate where 'esp-idf basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for esp-idf basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_stm32-hal-basics",
+   "name": "Embedded/IoT topic: stm32 hal basics",
+   "description": "Practical guide for stm32 hal basics.",
+   "instructions": "Workflow:\n1. Locate where 'stm32 hal basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for stm32 hal basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_linker-scripts-basics",
+   "name": "Embedded/IoT topic: linker scripts basics",
+   "description": "Practical guide for linker scripts basics.",
+   "instructions": "Workflow:\n1. Locate where 'linker scripts basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for linker scripts basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_bootloader-design",
+   "name": "Embedded/IoT topic: bootloader design",
+   "description": "Practical guide for bootloader design.",
+   "instructions": "Workflow:\n1. Locate where 'bootloader design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for bootloader design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_secure-boot-chain",
+   "name": "Embedded/IoT topic: secure boot chain",
+   "description": "Practical guide for secure boot chain.",
+   "instructions": "Workflow:\n1. Locate where 'secure boot chain' applies in this project or task (file.search/file.read).\n2. Review the standard practice for secure boot chain (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_flash-wear-leveling",
+   "name": "Embedded/IoT topic: flash wear leveling",
+   "description": "Practical guide for flash wear leveling.",
+   "instructions": "Workflow:\n1. Locate where 'flash wear leveling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for flash wear leveling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_littlefs-usage",
+   "name": "Embedded/IoT topic: littlefs usage",
+   "description": "Practical guide for littlefs usage.",
+   "instructions": "Workflow:\n1. Locate where 'littlefs usage' applies in this project or task (file.search/file.read).\n2. Review the standard practice for littlefs usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_embedded-logging-strategy",
+   "name": "Embedded/IoT topic: embedded logging strategy",
+   "description": "Practical guide for embedded logging strategy.",
+   "instructions": "Workflow:\n1. Locate where 'embedded logging strategy' applies in this project or task (file.search/file.read).\n2. Review the standard practice for embedded logging strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ring-buffers",
+   "name": "Embedded/IoT topic: ring buffers",
+   "description": "Practical guide for ring buffers.",
+   "instructions": "Workflow:\n1. Locate where 'ring buffers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ring buffers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_circular-buffer-interrupts",
+   "name": "Embedded/IoT topic: circular buffer interrupts",
+   "description": "Practical guide for circular buffer interrupts.",
+   "instructions": "Workflow:\n1. Locate where 'circular buffer interrupts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for circular buffer interrupts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_power-modes",
+   "name": "Embedded/IoT topic: power modes",
+   "description": "Practical guide for power modes.",
+   "instructions": "Workflow:\n1. Locate where 'power modes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for power modes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_deep-sleep-currents",
+   "name": "Embedded/IoT topic: deep sleep currents",
+   "description": "Practical guide for deep sleep currents.",
+   "instructions": "Workflow:\n1. Locate where 'deep sleep currents' applies in this project or task (file.search/file.read).\n2. Review the standard practice for deep sleep currents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_battery-estimation",
+   "name": "Embedded/IoT topic: battery estimation",
+   "description": "Practical guide for battery estimation.",
+   "instructions": "Workflow:\n1. Locate where 'battery estimation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for battery estimation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_solar-powered-nodes",
+   "name": "Embedded/IoT topic: solar powered nodes",
+   "description": "Practical guide for solar powered nodes.",
+   "instructions": "Workflow:\n1. Locate where 'solar powered nodes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for solar powered nodes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_power-budget-spreadsheets",
+   "name": "Embedded/IoT topic: power budget spreadsheets",
+   "description": "Practical guide for power budget spreadsheets.",
+   "instructions": "Workflow:\n1. Locate where 'power budget spreadsheets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for power budget spreadsheets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_device-provisioning-flow",
+   "name": "Embedded/IoT topic: device provisioning flow",
+   "description": "Practical guide for device provisioning flow.",
+   "instructions": "Workflow:\n1. Locate where 'device provisioning flow' applies in this project or task (file.search/file.read).\n2. Review the standard practice for device provisioning flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_device-identity-keys",
+   "name": "Embedded/IoT topic: device identity keys",
+   "description": "Practical guide for device identity keys.",
+   "instructions": "Workflow:\n1. Locate where 'device identity keys' applies in this project or task (file.search/file.read).\n2. Review the standard practice for device identity keys (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_x509-for-devices",
+   "name": "Embedded/IoT topic: x509 for devices",
+   "description": "Practical guide for x509 for devices.",
+   "instructions": "Workflow:\n1. Locate where 'x509 for devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for x509 for devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_fleet-management-design",
+   "name": "Embedded/IoT topic: fleet management design",
+   "description": "Practical guide for fleet management design.",
+   "instructions": "Workflow:\n1. Locate where 'fleet management design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fleet management design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_device-shadows-twins",
+   "name": "Embedded/IoT topic: device shadows twins",
+   "description": "Practical guide for device shadows twins.",
+   "instructions": "Workflow:\n1. Locate where 'device shadows twins' applies in this project or task (file.search/file.read).\n2. Review the standard practice for device shadows twins (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_remote-debug-devices",
+   "name": "Embedded/IoT topic: remote debug devices",
+   "description": "Practical guide for remote debug devices.",
+   "instructions": "Workflow:\n1. Locate where 'remote debug devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for remote debug devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_telemetry-schema-design",
+   "name": "Embedded/IoT topic: telemetry schema design",
+   "description": "Practical guide for telemetry schema design.",
+   "instructions": "Workflow:\n1. Locate where 'telemetry schema design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for telemetry schema design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_edge-preprocessing",
+   "name": "Embedded/IoT topic: edge preprocessing",
+   "description": "Practical guide for edge preprocessing.",
+   "instructions": "Workflow:\n1. Locate where 'edge preprocessing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for edge preprocessing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_tinyml-intro",
+   "name": "Embedded/IoT topic: tinyml intro",
+   "description": "Practical guide for tinyml intro.",
+   "instructions": "Workflow:\n1. Locate where 'tinyml intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tinyml intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_tensorflow-lite-micro",
+   "name": "Embedded/IoT topic: tensorflow lite micro",
+   "description": "Practical guide for tensorflow lite micro.",
+   "instructions": "Workflow:\n1. Locate where 'tensorflow lite micro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tensorflow lite micro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_vision-on-edge-devices",
+   "name": "Embedded/IoT topic: vision on edge devices",
+   "description": "Practical guide for vision on edge devices.",
+   "instructions": "Workflow:\n1. Locate where 'vision on edge devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for vision on edge devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ota-a-b-partitions",
+   "name": "Embedded/IoT topic: OTA A B partitions",
+   "description": "Practical guide for OTA A B partitions.",
+   "instructions": "Workflow:\n1. Locate where 'OTA A B partitions' applies in this project or task (file.search/file.read).\n2. Review the standard practice for OTA A B partitions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_delta-updates",
+   "name": "Embedded/IoT topic: delta updates",
+   "description": "Practical guide for delta updates.",
+   "instructions": "Workflow:\n1. Locate where 'delta updates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for delta updates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_signed-images-verification",
+   "name": "Embedded/IoT topic: signed images verification",
+   "description": "Practical guide for signed images verification.",
+   "instructions": "Workflow:\n1. Locate where 'signed images verification' applies in this project or task (file.search/file.read).\n2. Review the standard practice for signed images verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_rollback-counters",
+   "name": "Embedded/IoT topic: rollback counters",
+   "description": "Practical guide for rollback counters.",
+   "instructions": "Workflow:\n1. Locate where 'rollback counters' applies in this project or task (file.search/file.read).\n2. Review the standard practice for rollback counters (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_fleet-canary-rollouts",
+   "name": "Embedded/IoT topic: fleet canary rollouts",
+   "description": "Practical guide for fleet canary rollouts.",
+   "instructions": "Workflow:\n1. Locate where 'fleet canary rollouts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fleet canary rollouts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_crash-dumps-embedded",
+   "name": "Embedded/IoT topic: crash dumps embedded",
+   "description": "Practical guide for crash dumps embedded.",
+   "instructions": "Workflow:\n1. Locate where 'crash dumps embedded' applies in this project or task (file.search/file.read).\n2. Review the standard practice for crash dumps embedded (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_hard-fault-analysis",
+   "name": "Embedded/IoT topic: hard fault analysis",
+   "description": "Practical guide for hard fault analysis.",
+   "instructions": "Workflow:\n1. Locate where 'hard fault analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hard fault analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_brownout-detection",
+   "name": "Embedded/IoT topic: brownout detection",
+   "description": "Practical guide for brownout detection.",
+   "instructions": "Workflow:\n1. Locate where 'brownout detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for brownout detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_reliability-testing-halt",
+   "name": "Embedded/IoT topic: reliability testing HALT",
+   "description": "Practical guide for reliability testing HALT.",
+   "instructions": "Workflow:\n1. Locate where 'reliability testing HALT' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reliability testing HALT (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_fail-safe-design",
+   "name": "Embedded/IoT topic: fail safe design",
+   "description": "Practical guide for fail safe design.",
+   "instructions": "Workflow:\n1. Locate where 'fail safe design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for fail safe design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_real-time-constraints",
+   "name": "Embedded/IoT topic: real time constraints",
+   "description": "Practical guide for real time constraints.",
+   "instructions": "Workflow:\n1. Locate where 'real time constraints' applies in this project or task (file.search/file.read).\n2. Review the standard practice for real time constraints (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_rtos-scheduling-analysis",
+   "name": "Embedded/IoT topic: RTOS scheduling analysis",
+   "description": "Practical guide for RTOS scheduling analysis.",
+   "instructions": "Workflow:\n1. Locate where 'RTOS scheduling analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for RTOS scheduling analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_priority-inversion",
+   "name": "Embedded/IoT topic: priority inversion",
+   "description": "Practical guide for priority inversion.",
+   "instructions": "Workflow:\n1. Locate where 'priority inversion' applies in this project or task (file.search/file.read).\n2. Review the standard practice for priority inversion (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_priority-inheritance",
+   "name": "Embedded/IoT topic: priority inheritance",
+   "description": "Practical guide for priority inheritance.",
+   "instructions": "Workflow:\n1. Locate where 'priority inheritance' applies in this project or task (file.search/file.read).\n2. Review the standard practice for priority inheritance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_race-conditions-embedded",
+   "name": "Embedded/IoT topic: race conditions embedded",
+   "description": "Practical guide for race conditions embedded.",
+   "instructions": "Workflow:\n1. Locate where 'race conditions embedded' applies in this project or task (file.search/file.read).\n2. Review the standard practice for race conditions embedded (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_volatile-keyword-discipline",
+   "name": "Embedded/IoT topic: volatile keyword discipline",
+   "description": "Practical guide for volatile keyword discipline.",
+   "instructions": "Workflow:\n1. Locate where 'volatile keyword discipline' applies in this project or task (file.search/file.read).\n2. Review the standard practice for volatile keyword discipline (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_memory-barriers-embedded",
+   "name": "Embedded/IoT topic: memory barriers embedded",
+   "description": "Practical guide for memory barriers embedded.",
+   "instructions": "Workflow:\n1. Locate where 'memory barriers embedded' applies in this project or task (file.search/file.read).\n2. Review the standard practice for memory barriers embedded (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_firmware-size-budgets",
+   "name": "Embedded/IoT topic: firmware size budgets",
+   "description": "Practical guide for firmware size budgets.",
+   "instructions": "Workflow:\n1. Locate where 'firmware size budgets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for firmware size budgets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_map-file-analysis",
+   "name": "Embedded/IoT topic: map file analysis",
+   "description": "Practical guide for map file analysis.",
+   "instructions": "Workflow:\n1. Locate where 'map file analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for map file analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_static-stack-analysis",
+   "name": "Embedded/IoT topic: static stack analysis",
+   "description": "Practical guide for static stack analysis.",
+   "instructions": "Workflow:\n1. Locate where 'static stack analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for static stack analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ci-for-firmware",
+   "name": "Embedded/IoT topic: CI for firmware",
+   "description": "Practical guide for CI for firmware.",
+   "instructions": "Workflow:\n1. Locate where 'CI for firmware' applies in this project or task (file.search/file.read).\n2. Review the standard practice for CI for firmware (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_device-farm-testing",
+   "name": "Embedded/IoT topic: device farm testing",
+   "description": "Practical guide for device farm testing.",
+   "instructions": "Workflow:\n1. Locate where 'device farm testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for device farm testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_environmental-chambers",
+   "name": "Embedded/IoT topic: environmental chambers",
+   "description": "Practical guide for environmental chambers.",
+   "instructions": "Workflow:\n1. Locate where 'environmental chambers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for environmental chambers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_data-privacy-devices",
+   "name": "Embedded/IoT topic: data privacy devices",
+   "description": "Practical guide for data privacy devices.",
+   "instructions": "Workflow:\n1. Locate where 'data privacy devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data privacy devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_consent-dashboards",
+   "name": "Embedded/IoT topic: consent dashboards",
+   "description": "Practical guide for consent dashboards.",
+   "instructions": "Workflow:\n1. Locate where 'consent dashboards' applies in this project or task (file.search/file.read).\n2. Review the standard practice for consent dashboards (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_delete-my-data-flows",
+   "name": "Embedded/IoT topic: delete my data flows",
+   "description": "Practical guide for delete my data flows.",
+   "instructions": "Workflow:\n1. Locate where 'delete my data flows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for delete my data flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_secure-debug-unlocks",
+   "name": "Embedded/IoT topic: secure debug unlocks",
+   "description": "Practical guide for secure debug unlocks.",
+   "instructions": "Workflow:\n1. Locate where 'secure debug unlocks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for secure debug unlocks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_key-rotation-devices",
+   "name": "Embedded/IoT topic: key rotation devices",
+   "description": "Practical guide for key rotation devices.",
+   "instructions": "Workflow:\n1. Locate where 'key rotation devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for key rotation devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_pki-for-fleets",
+   "name": "Embedded/IoT topic: pki for fleets",
+   "description": "Practical guide for pki for fleets.",
+   "instructions": "Workflow:\n1. Locate where 'pki for fleets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for pki for fleets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_trust-stores-devices",
+   "name": "Embedded/IoT topic: trust stores devices",
+   "description": "Practical guide for trust stores devices.",
+   "instructions": "Workflow:\n1. Locate where 'trust stores devices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for trust stores devices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_firmware-transparency",
+   "name": "Embedded/IoT topic: firmware transparency",
+   "description": "Practical guide for firmware transparency.",
+   "instructions": "Workflow:\n1. Locate where 'firmware transparency' applies in this project or task (file.search/file.read).\n2. Review the standard practice for firmware transparency (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_reproducible-firmware-builds",
+   "name": "Embedded/IoT topic: reproducible firmware builds",
+   "description": "Practical guide for reproducible firmware builds.",
+   "instructions": "Workflow:\n1. Locate where 'reproducible firmware builds' applies in this project or task (file.search/file.read).\n2. Review the standard practice for reproducible firmware builds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_release-ceremonies-hardware",
+   "name": "Embedded/IoT topic: release ceremonies hardware",
+   "description": "Practical guide for release ceremonies hardware.",
+   "instructions": "Workflow:\n1. Locate where 'release ceremonies hardware' applies in this project or task (file.search/file.read).\n2. Review the standard practice for release ceremonies hardware (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_evt-dvt-pvt-stages",
+   "name": "Embedded/IoT topic: EVT DVT PVT stages",
+   "description": "Practical guide for EVT DVT PVT stages.",
+   "instructions": "Workflow:\n1. Locate where 'EVT DVT PVT stages' applies in this project or task (file.search/file.read).\n2. Review the standard practice for EVT DVT PVT stages (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_design-reviews",
+   "name": "Embedded/IoT topic: design reviews",
+   "description": "Practical guide for design reviews.",
+   "instructions": "Workflow:\n1. Locate where 'design reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for design reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_interface-control-documents",
+   "name": "Embedded/IoT topic: interface control documents",
+   "description": "Practical guide for interface control documents.",
+   "instructions": "Workflow:\n1. Locate where 'interface control documents' applies in this project or task (file.search/file.read).\n2. Review the standard practice for interface control documents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_dfm-reviews",
+   "name": "Embedded/IoT topic: DFM reviews",
+   "description": "Practical guide for DFM reviews.",
+   "instructions": "Workflow:\n1. Locate where 'DFM reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for DFM reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_dft-reviews",
+   "name": "Embedded/IoT topic: DFT reviews",
+   "description": "Practical guide for DFT reviews.",
+   "instructions": "Workflow:\n1. Locate where 'DFT reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for DFT reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_security-reviews-hardware",
+   "name": "Embedded/IoT topic: security reviews hardware",
+   "description": "Practical guide for security reviews hardware.",
+   "instructions": "Workflow:\n1. Locate where 'security reviews hardware' applies in this project or task (file.search/file.read).\n2. Review the standard practice for security reviews hardware (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_privacy-reviews-iot",
+   "name": "Embedded/IoT topic: privacy reviews IoT",
+   "description": "Practical guide for privacy reviews IoT.",
+   "instructions": "Workflow:\n1. Locate where 'privacy reviews IoT' applies in this project or task (file.search/file.read).\n2. Review the standard practice for privacy reviews IoT (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_regulatory-checklists",
+   "name": "Embedded/IoT topic: regulatory checklists",
+   "description": "Practical guide for regulatory checklists.",
+   "instructions": "Workflow:\n1. Locate where 'regulatory checklists' applies in this project or task (file.search/file.read).\n2. Review the standard practice for regulatory checklists (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_launch-readiness-reviews",
+   "name": "Embedded/IoT topic: launch readiness reviews",
+   "description": "Practical guide for launch readiness reviews.",
+   "instructions": "Workflow:\n1. Locate where 'launch readiness reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for launch readiness reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_defect-prediction-basics",
+   "name": "Embedded/IoT topic: defect prediction basics",
+   "description": "Practical guide for defect prediction basics.",
+   "instructions": "Workflow:\n1. Locate where 'defect prediction basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for defect prediction basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_weibull-basics",
+   "name": "Embedded/IoT topic: weibull basics",
+   "description": "Practical guide for weibull basics.",
+   "instructions": "Workflow:\n1. Locate where 'weibull basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for weibull basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_mtbf-claims",
+   "name": "Embedded/IoT topic: MTBF claims",
+   "description": "Practical guide for MTBF claims.",
+   "instructions": "Workflow:\n1. Locate where 'MTBF claims' applies in this project or task (file.search/file.read).\n2. Review the standard practice for MTBF claims (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_accelerated-life-testing",
+   "name": "Embedded/IoT topic: accelerated life testing",
+   "description": "Practical guide for accelerated life testing.",
+   "instructions": "Workflow:\n1. Locate where 'accelerated life testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for accelerated life testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_quality-gates-production",
+   "name": "Embedded/IoT topic: quality gates production",
+   "description": "Practical guide for quality gates production.",
+   "instructions": "Workflow:\n1. Locate where 'quality gates production' applies in this project or task (file.search/file.read).\n2. Review the standard practice for quality gates production (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_first-pass-yield-tracking",
+   "name": "Embedded/IoT topic: first pass yield tracking",
+   "description": "Practical guide for first pass yield tracking.",
+   "instructions": "Workflow:\n1. Locate where 'first pass yield tracking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for first pass yield tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_test-time-optimization",
+   "name": "Embedded/IoT topic: test time optimization",
+   "description": "Practical guide for test time optimization.",
+   "instructions": "Workflow:\n1. Locate where 'test time optimization' applies in this project or task (file.search/file.read).\n2. Review the standard practice for test time optimization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_ipc-a-610-classes",
+   "name": "Embedded/IoT topic: IPC A 610 classes",
+   "description": "Practical guide for IPC A 610 classes.",
+   "instructions": "Workflow:\n1. Locate where 'IPC A 610 classes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for IPC A 610 classes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_esd-s2020",
+   "name": "Embedded/IoT topic: ESD s20.20",
+   "description": "Practical guide for ESD s20.20.",
+   "instructions": "Workflow:\n1. Locate where 'ESD s20.20' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ESD s20.20 (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_moisture-sensitivity-levels",
+   "name": "Embedded/IoT topic: moisture sensitivity levels",
+   "description": "Practical guide for moisture sensitivity levels.",
+   "instructions": "Workflow:\n1. Locate where 'moisture sensitivity levels' applies in this project or task (file.search/file.read).\n2. Review the standard practice for moisture sensitivity levels (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_dry-cabinets",
+   "name": "Embedded/IoT topic: dry cabinets",
+   "description": "Practical guide for dry cabinets.",
+   "instructions": "Workflow:\n1. Locate where 'dry cabinets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dry cabinets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_msd-tracking-systems",
+   "name": "Embedded/IoT topic: MSD tracking systems",
+   "description": "Practical guide for MSD tracking systems.",
+   "instructions": "Workflow:\n1. Locate where 'MSD tracking systems' applies in this project or task (file.search/file.read).\n2. Review the standard practice for MSD tracking systems (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_refresher-cadence",
+   "name": "Embedded/IoT topic: refresher cadence",
+   "description": "Practical guide for refresher cadence.",
+   "instructions": "Workflow:\n1. Locate where 'refresher cadence' applies in this project or task (file.search/file.read).\n2. Review the standard practice for refresher cadence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_competency-checks",
+   "name": "Embedded/IoT topic: competency checks",
+   "description": "Practical guide for competency checks.",
+   "instructions": "Workflow:\n1. Locate where 'competency checks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for competency checks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_iot_policy-maintenance-msd",
+   "name": "Embedded/IoT topic: policy maintenance MSD",
+   "description": "Practical guide for policy maintenance MSD.",
+   "instructions": "Workflow:\n1. Locate where 'policy maintenance MSD' applies in this project or task (file.search/file.read).\n2. Review the standard practice for policy maintenance MSD (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

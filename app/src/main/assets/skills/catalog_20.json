@@ -1,0 +1,243 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_cl_s3_bucket_listing",
+   "name": "S3 bucket listing checks",
+   "description": "Test bucket ACL hygiene (owned).",
+   "instructions": "Workflow:\n1. List your buckets' URLs (your inventory).\n2. Probe anonymous listing via process.exec curl.\n3. Record ListBucket/Get behavior.\n4. Flag public buckets.\n5. Recommend block-public-access.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_blob_store_acls",
+   "name": "Blob store ACL review",
+   "description": "Review cloud blob permissions.",
+   "instructions": "Workflow:\n1. Enumerate containers (your subscription UI).\n2. Test anonymous reads via curl probes.\n3. Review SAS token patterns for over-scope.\n4. Record misconfigs.\n5. Recommend least-privilege SAS.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_iam_policy_review",
+   "name": "IAM policy review",
+   "description": "Review identity policies for over-permission.",
+   "instructions": "Workflow:\n1. Export policies (authorized console/CLI).\n2. Analyze for wildcard actions (python.run_file).\n3. Map permissions to actual usage.\n4. Propose least-privilege edits.\n5. Document the diff.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_metadata_checks",
+   "name": "Instance metadata access",
+   "description": "Check metadata service hardening.",
+   "instructions": "Workflow:\n1. From your own instance, query metadata (process.exec curl).\n2. Check IMDSv2 enforcement on your instance.\n3. Review leaked-role risk in app code (file.search).\n4. Recommend hop limits/tokens.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_docker_socket_review",
+   "name": "Docker socket exposure",
+   "description": "Check docker.sock exposure.",
+   "instructions": "Workflow:\n1. process.exec ls -l /var/run/docker.sock.\n2. Note group membership risks.\n3. Review containers mounting it.\n4. Recommend rootless/removal.\n5. Record findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_container_image_scan",
+   "name": "Container image hygiene",
+   "description": "Review image contents.",
+   "instructions": "Workflow:\n1. List images (authorized docker commands).\n2. Check base image versions vs advisories (web.search).\n3. Look for embedded secrets (python.run_file scan).\n4. Recommend rebuilds.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_k8s_rbac_review",
+   "name": "K8s RBAC review",
+   "description": "Review cluster role bindings.",
+   "instructions": "Workflow:\n1. kubectl auth can-i probes (authorized).\n2. List cluster-admin bindings (python.run_file parse).\n3. Flag service accounts with excess power.\n4. Propose role narrowing.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_k8s_dashboard_check",
+   "name": "K8s dashboard exposure",
+   "description": "Check dashboard exposure.",
+   "instructions": "Workflow:\n1. Probe dashboard endpoints (http.replay).\n2. Note auth requirements.\n3. Review metrics exposure.\n4. Recommend disable/SSO.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_env_var_secret_scan",
+   "name": "Container env secret scan",
+   "description": "Find secrets in environment.",
+   "instructions": "Workflow:\n1. Dump env of your containers (authorized).\n2. Scan for key patterns (python.run_file).\n3. Rotate anything exposed.\n4. Recommend secret managers.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_ci_cd_token_review",
+   "name": "CI/CD token review",
+   "description": "Review pipeline credentials.",
+   "instructions": "Workflow:\n1. List pipeline secrets (authorized).\n2. Check scope of deploy keys (python.run_file analysis).\n3. Flag long-lived tokens.\n4. Recommend OIDC short-lived creds.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_terraform_state_review",
+   "name": "IaC state review",
+   "description": "Review state file hygiene.",
+   "instructions": "Workflow:\n1. Locate tfstate (authorized storage).\n2. Check public access (curl probes).\n3. Scan for secrets in state (python.run_file).\n4. Recommend encryption/locking.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_logging_review",
+   "name": "Cloud logging review",
+   "description": "Review audit log coverage.",
+   "instructions": "Workflow:\n1. List enabled logs (console).\n2. Check retention and destinations.\n3. Test that admin actions are logged (test event).\n4. Recommend gaps fixes.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_backup_exposure_check",
+   "name": "Backup exposure review",
+   "description": "Check backup accessibility.",
+   "instructions": "Workflow:\n1. Locate backups (authorized inventory).\n2. Probe access controls (curl).\n3. Test restore of one file to verify integrity.\n4. Recommend encryption + ACLs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cdn_origin_check",
+   "name": "CDN origin shielding",
+   "description": "Check origin exposure behind CDN.",
+   "instructions": "Workflow:\n1. Resolve origin hosts (DNS history web.search).\n2. Probe origin direct access (curl).\n3. Compare headers to CDN path.\n4. Recommend origin ACLs to CDN.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_cost_guard",
+   "name": "Cloud testing cost guards",
+   "description": "Avoid cost blowups while testing.",
+   "instructions": "Workflow:\n1. Estimate request costs before heavy probes (python.run_file).\n2. Set hard caps in tooling.\n3. Monitor spend during tests.\n4. Stop at thresholds.\n5. Report usage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_serverless_event_review",
+   "name": "Serverless event review",
+   "description": "Review function triggers.",
+   "instructions": "Workflow:\n1. List functions and triggers (authorized CLI).\n2. Check public invoke policies (python.run_file parse).\n3. Test anonymous invoke (denied expected).\n4. Recommend auth on triggers.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_s3_policy_wildcards",
+   "name": "Bucket policy wildcards",
+   "description": "Review bucket policies.",
+   "instructions": "Workflow:\n1. Fetch bucket policy (authorized).\n2. Scan for s3:* principals/actions (python.run_file).\n3. Propose scoped statements.\n4. Validate with policy tools conceptually.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_key_rotation",
+   "name": "Key rotation hygiene",
+   "description": "Review access key ages.",
+   "instructions": "Workflow:\n1. List keys and created dates (console).\n2. Flag stale keys (python.run_file).\n3. Rotate with user approval.\n4. Verify post-rotation access.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_waf_cloud_config",
+   "name": "Cloud WAF config review",
+   "description": "Review WAF rulesets.",
+   "instructions": "Workflow:\n1. List rules (console).\n2. Check default action and rate rules.\n3. Test benign block/allow (curl).\n4. Recommend tuned rules.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_trail_tamper",
+   "name": "Audit tamper checks",
+   "description": "Verify log integrity protections.",
+   "instructions": "Workflow:\n1. Check log file validation flags (console/CLI).\n2. Attempt (in lab) modification to confirm alerts.\n3. Review alerting paths.\n4. Recommend immutability.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_object_upload_acl",
+   "name": "Upload ACL verification",
+   "description": "Verify uploaded object permissions.",
+   "instructions": "Workflow:\n1. Upload a test object via your app.\n2. Fetch anonymously via curl.\n3. Record default ACL behavior.\n4. Recommend private-by-default.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_lambda_url_auth",
+   "name": "Function URL auth",
+   "description": "Check function URL auth modes.",
+   "instructions": "Workflow:\n1. List function URLs (authorized).\n2. Probe without auth (curl).\n3. Verify auth expectation.\n4. Recommend AWS_IAM/auth.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_ssrf_cloud_metadata",
+   "name": "SSRF to metadata chain (lab)",
+   "description": "Assess metadata SSRF impact in lab.",
+   "instructions": "Workflow:\n1. From a vulnerable lab app, probe metadata via SSRF (http.replay).\n2. Confirm role-name disclosure only (no credential theft demos).\n3. Document the chain risk.\n4. Recommend IMDSv2.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_sg_review",
+   "name": "Security group review",
+   "description": "Review SG rules.",
+   "instructions": "Workflow:\n1. List SGs (console).\n2. Flag 0.0.0.0/0 admin ports (python.run_file).\n3. Propose CIDR narrowing.\n4. Apply with approval.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_k8s_secret_mounts",
+   "name": "K8s secret mount review",
+   "description": "Review secret mounting patterns.",
+   "instructions": "Workflow:\n1. List pod specs (authorized kubectl).\n2. Check env vs file mounts (python.run_file parse).\n3. Flag env leaks in logs risk.\n4. Recommend file mounts + least scope.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_container_escape_note",
+   "name": "Container isolation review",
+   "description": "Review isolation posture.",
+   "instructions": "Workflow:\n1. Check privileged/hostPID containers (kubectl).\n2. Review capabilities dropped (python.run_file).\n3. Flag risky profiles.\n4. Recommend hardening profiles.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_registry_auth_review",
+   "name": "Registry auth review",
+   "description": "Review image registry access.",
+   "instructions": "Workflow:\n1. Check registry auth requirements (docker pull probes).\n2. Test anonymous pull on private registries (denied expected).\n3. Review pull secrets scope.\n4. Recommend token auth.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_dns_zone_review",
+   "name": "DNS zone review",
+   "description": "Review public DNS hygiene.",
+   "instructions": "Workflow:\n1. Enumerate records (authorized zone export).\n2. Flag stale/dangling CNAMEs (python.run_file resolve).\n3. Check SPF/DKIM/DMARC.\n4. Recommend cleanup.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_backup_restore_test",
+   "name": "Backup restore drill",
+   "description": "Verify backups actually restore.",
+   "instructions": "Workflow:\n1. Pick a small dataset (authorized).\n2. Restore to a scratch environment.\n3. Verify integrity (checksums via python.run_file).\n4. Record RTO/RPO observations.\n5. Report readiness.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_incident_runbook",
+   "name": "Cloud incident runbook",
+   "description": "Prepare response steps.",
+   "instructions": "Workflow:\n1. Draft runbook: detect, revoke, rotate, investigate (file.write).\n2. Include key revocation order.\n3. Assign owners per step.\n4. Tabletop-test mentally.\n5. Store with runbooks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_static_site_exposure",
+   "name": "Static site exposure",
+   "description": "Review static hosting configs.",
+   "instructions": "Workflow:\n1. List buckets/blobs serving sites (inventory).\n2. Check listing and header configs (curl).\n3. Review for staging copies exposed.\n4. Recommend separation.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_cloud_cron_review",
+   "name": "Scheduled jobs review",
+   "description": "Review scheduled functions.",
+   "instructions": "Workflow:\n1. List cron triggers (console).\n2. Check handlers for public input (file.search).\n3. Review error alerting.\n4. Recommend retries/alarms.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_iam_rename_guard",
+   "name": "IAM rename awareness",
+   "description": "Note rename/rotation pitfalls.",
+   "instructions": "Workflow:\n1. Check references to users/roles in policies (python.run_file).\n2. Flag hard-coded ARNs.\n3. Recommend role-based access.\n4. Plan rename safely.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_cl_multi_account_review",
+   "name": "Multi-account hygiene",
+   "description": "Review org-level separation.",
+   "instructions": "Workflow:\n1. List accounts and their purposes (console).\n2. Check cross-account roles scope (python.run_file).\n3. Flag broad trusts.\n4. Recommend guardrail policies.\n5. Record.",
+   "enabled": false
+  }
+ ]
+}

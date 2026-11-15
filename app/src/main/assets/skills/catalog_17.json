@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_fz_content_discovery_plan",
+   "name": "Content discovery planning",
+   "description": "Plan directory brute-force properly.",
+   "instructions": "Workflow:\n1. Pick wordlists sized to the target (cat_exp_wordlist_builder).\n2. Set politeness limits: rate and total requests.\n3. Run web.dirbrute with the plan.\n4. Filter noise (consistent 404s) with python.run_file.\n5. Verify hits manually via http.replay.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_param_discovery",
+   "name": "Parameter discovery",
+   "description": "Find hidden parameters.",
+   "instructions": "Workflow:\n1. Collect candidate names from JS bundles (process.exec curl + python.run_file).\n2. Probe with harmless values via http.replay.\n3. Watch for behavior changes.\n4. Automate the sweep with python.run_file.\n5. Document discovered params.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_vhost_discovery",
+   "name": "Virtual host discovery",
+   "description": "Enumerate vhosts on shared hosts.",
+   "instructions": "Workflow:\n1. Generate candidate hostnames from the domain (python.run_file).\n2. Probe via Host header with http.replay.\n3. Detect differing responses.\n4. Verify interesting vhosts in web.browser.\n5. Record findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_subdomain_brute_safe",
+   "name": "Subdomain enumeration",
+   "description": "Enumerate subdomains politely.",
+   "instructions": "Workflow:\n1. Start with passive sources (web.search).\n2. Brute only with permission and modest lists.\n3. Resolve and dedupe via python.run_file.\n4. Flag takeover candidates.\n5. Update the asset map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_api_endpoint_fuzz",
+   "name": "API endpoint fuzzing",
+   "description": "Fuzz API paths methodically.",
+   "instructions": "Workflow:\n1. Derive path candidates from docs and JS (cat_res_bounty_scope_check first).\n2. Fuzz with node/python runner at low rate.\n3. Cluster by status and response shape.\n4. Manually verify anomalies.\n5. Save the endpoint list.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_header_fuzz",
+   "name": "Header handling fuzzing",
+   "description": "Probe custom header processing.",
+   "instructions": "Workflow:\n1. Send marker headers via http.replay.\n2. Test reflection and parsing quirks.\n3. Watch for debug behaviors.\n4. Document parser oddities.\n5. Report anything exploitable.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_form_field_fuzz",
+   "name": "Form field fuzzing",
+   "description": "Fuzz form validations.",
+   "instructions": "Workflow:\n1. Map fields from the page (web.browser).\n2. Submit boundary values per field via http.replay.\n3. Record acceptance/rejection matrix.\n4. Automate the matrix build with python.run_file.\n5. Report weak validations.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_status_code_matrix",
+   "name": "Response status mapping",
+   "description": "Build a status-code map of the app.",
+   "instructions": "Workflow:\n1. Probe key routes with each method via http.replay.\n2. Tabulate method x route statuses.\n3. Spot unexpected 405/403 patterns.\n4. Verify anomalies manually.\n5. Save the matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_error_trigger_fuzz",
+   "name": "Error-triggering input classes",
+   "description": "Catalog inputs that break parsing.",
+   "instructions": "Workflow:\n1. Send type-confusion inputs (arrays, objects) via http.replay.\n2. Record stack traces/versions leaked.\n3. Group by root cause.\n4. Report info-leak findings.\n5. Recommend generic error handling.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_fuzz_scope_guard",
+   "name": "Fuzz scope guardrails",
+   "description": "Keep fuzzing inside bounds.",
+   "instructions": "Workflow:\n1. Confirm scope before any fuzz run.\n2. Cap: requests/sec, total, duration (python.run_file limiter).\n3. Monitor for 5xx storms; abort on them.\n4. Log the fuzz plan and actuals.\n5. Review impact with the owner.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_waf_probe_calibration",
+   "name": "WAF calibration for fuzzing",
+   "description": "Tune fuzzing to WAF behavior.",
+   "instructions": "Workflow:\n1. Send calibration probes; fingerprint blocks (python.run_file).\n2. Adjust encodings within policy.\n3. Keep rate below blocking threshold.\n4. Record calibration results.\n5. Re-check before long runs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_dns_brute_notes",
+   "name": "DNS brute methodology",
+   "description": "Enumerate DNS safely.",
+   "instructions": "Workflow:\n1. Use authoritative NS to avoid resolver caching bias (process.exec dig).\n2. Modest wordlists; measure NXDOMAIN rates.\n3. Detect wildcards first with python.run_file.\n4. Verify interesting records.\n5. Update the asset map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_port_fuzz_plan",
+   "name": "Port scan planning",
+   "description": "Plan service discovery.",
+   "instructions": "Workflow:\n1. Define port ranges from context (web ports vs full).\n2. Run net.portscan with sane timing.\n3. Fingerprint found services via banners.\n4. Map to likely exploits (cat_res_research flows).\n5. Record the service map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_bruteforce_ethics",
+   "name": "Credential testing ethics",
+   "description": "Handle credential testing responsibly.",
+   "instructions": "Workflow:\n1. Only test accounts you own or with written consent.\n2. Prefer lockout-safe patterns; monitor for lockouts.\n3. Use tiny wordlists for validation only.\n4. Stop at the first success signal.\n5. Report methodology honestly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_fuzz_result_dedup",
+   "name": "Fuzz result dedup",
+   "description": "Reduce fuzz noise.",
+   "instructions": "Workflow:\n1. Signature responses (status+length+hash) in python.run_file.\n2. Cluster and rank by uniqueness.\n3. Discard clusters of identical soft-404s.\n4. Review the survivors manually.\n5. Archive raw results.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_dirlist_prioritize",
+   "name": "Directory hit prioritization",
+   "description": "Rank discovered paths.",
+   "instructions": "Workflow:\n1. Score by name keywords (admin, api, backup) via python.run_file.\n2. Verify top candidates via http.replay.\n3. Note auth requirements.\n4. Feed the attack surface map.\n5. Record the shortlist.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_file_extension_fuzz",
+   "name": "Extension fuzzing",
+   "description": "Discover hidden file types.",
+   "instructions": "Workflow:\n1. Combine stems with common extensions (python.run_file).\n2. Probe with HEAD/GET via http.replay.\n3. Deduplicate by content hash.\n4. Verify meaningful hits (backups, configs).\n5. Report exposures.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_rate_policy_design",
+   "name": "Rate policy design",
+   "description": "Set explicit rate limits per target.",
+   "instructions": "Workflow:\n1. Agree limits with the owner (or default conservative).\n2. Encode them in the runner config (python.run_file).\n3. Enforce centrally in the limiter.\n4. Log adherence.\n5. Review after each run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_fuzz_metrics",
+   "name": "Fuzz metrics tracking",
+   "description": "Measure fuzzing effectiveness.",
+   "instructions": "Workflow:\n1. Track: requests, hits, unique signatures, time (python.run_file).\n2. Compare across wordlists.\n3. Keep the best performers.\n4. Prune weak lists.\n5. Save metrics history.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_graphql_introspection_fuzz",
+   "name": "GraphQL field fuzzing",
+   "description": "Enumerate GraphQL surfaces.",
+   "instructions": "Workflow:\n1. Introspect on your own instance (http.replay).\n2. Fuzz fields of interest at low depth.\n3. Watch for authz differences.\n4. Automate with python.run_file.\n5. Document sensitive fields.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_jwt_claim_fuzz",
+   "name": "JWT claim fuzzing",
+   "description": "Probe claim validation.",
+   "instructions": "Workflow:\n1. Obtain a valid token (your account).\n2. Mutate claims (exp, role) via python.run_file.\n3. Replay via http.replay and observe.\n4. Record which claims are enforced.\n5. Report verification gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_cookie_attr_fuzz",
+   "name": "Cookie attribute fuzzing",
+   "description": "Test cookie handling.",
+   "instructions": "Workflow:\n1. Vary cookie names/values via http.replay.\n2. Observe session behavior.\n3. Check for parsing quirks (delimiters).\n4. Document findings.\n5. Recommend hardening.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_http_method_fuzz",
+   "name": "HTTP method fuzzing",
+   "description": "Test method handling.",
+   "instructions": "Workflow:\n1. Probe TRACE/OPTIONS/PATCH on key routes via http.replay.\n2. Note unexpected 200s.\n3. Check CORS preflight behaviors.\n4. Automate with python.run_file.\n5. Report risks (TRACE, permissive OPTIONS).",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_upload_name_fuzz",
+   "name": "Upload filename fuzzing",
+   "description": "Probe filename handling.",
+   "instructions": "Workflow:\n1. Generate tricky names (double ext, unicode) via python.run_file.\n2. Upload benign contents via http.replay.\n3. Observe stored names.\n4. Check traversal markers in responses.\n5. Report sanitization gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_fz_fuzz_report_writer",
+   "name": "Fuzzing report writer",
+   "description": "Summarize fuzz campaigns.",
+   "instructions": "Workflow:\n1. Collect metrics and findings (file.read).\n2. Write methodology, limits, and results via python.run_file.\n3. Attach evidence files.\n4. Redact sensitive values.\n5. Deliver the report.",
+   "enabled": false
+  }
+ ]
+}

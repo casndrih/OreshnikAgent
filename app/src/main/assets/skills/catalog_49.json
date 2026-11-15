@@ -1,0 +1,999 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_apkf_apk-structure-audit",
+   "name": "APK topic: apk structure audit",
+   "description": "Practical guide for apk structure audit in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'apk structure audit' applies in this project (file.search/file.read).\n2. Review the standard practice for apk structure audit (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_zip-alignment-fix",
+   "name": "APK topic: zip alignment fix",
+   "description": "Practical guide for zip alignment fix in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'zip alignment fix' applies in this project (file.search/file.read).\n2. Review the standard practice for zip alignment fix (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_v1-v2-v3-signing-compare",
+   "name": "APK topic: v1 v2 v3 signing compare",
+   "description": "Practical guide for v1 v2 v3 signing compare in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'v1 v2 v3 signing compare' applies in this project (file.search/file.read).\n2. Review the standard practice for v1 v2 v3 signing compare (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_signing-scheme-upgrade",
+   "name": "APK topic: signing scheme upgrade",
+   "description": "Practical guide for signing scheme upgrade in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'signing scheme upgrade' applies in this project (file.search/file.read).\n2. Review the standard practice for signing scheme upgrade (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_keystore-migration",
+   "name": "APK topic: keystore migration",
+   "description": "Practical guide for keystore migration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'keystore migration' applies in this project (file.search/file.read).\n2. Review the standard practice for keystore migration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_play-app-signing-notes",
+   "name": "APK topic: play app signing notes",
+   "description": "Practical guide for play app signing notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'play app signing notes' applies in this project (file.search/file.read).\n2. Review the standard practice for play app signing notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_aab-vs-apk-choices",
+   "name": "APK topic: aab vs apk choices",
+   "description": "Practical guide for aab vs apk choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aab vs apk choices' applies in this project (file.search/file.read).\n2. Review the standard practice for aab vs apk choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_bundletool-builds",
+   "name": "APK topic: bundletool builds",
+   "description": "Practical guide for bundletool builds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'bundletool builds' applies in this project (file.search/file.read).\n2. Review the standard practice for bundletool builds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_universal-apk-extraction",
+   "name": "APK topic: universal apk extraction",
+   "description": "Practical guide for universal apk extraction in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'universal apk extraction' applies in this project (file.search/file.read).\n2. Review the standard practice for universal apk extraction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_split-apk-matching",
+   "name": "APK topic: split apk matching",
+   "description": "Practical guide for split apk matching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'split apk matching' applies in this project (file.search/file.read).\n2. Review the standard practice for split apk matching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_config-splits-analysis",
+   "name": "APK topic: config splits analysis",
+   "description": "Practical guide for config splits analysis in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'config splits analysis' applies in this project (file.search/file.read).\n2. Review the standard practice for config splits analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_density-splits",
+   "name": "APK topic: density splits",
+   "description": "Practical guide for density splits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'density splits' applies in this project (file.search/file.read).\n2. Review the standard practice for density splits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_language-splits",
+   "name": "APK topic: language splits",
+   "description": "Practical guide for language splits in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'language splits' applies in this project (file.search/file.read).\n2. Review the standard practice for language splits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_feature-module-graph",
+   "name": "APK topic: feature module graph",
+   "description": "Practical guide for feature module graph in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'feature module graph' applies in this project (file.search/file.read).\n2. Review the standard practice for feature module graph (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_on-demand-delivery-test",
+   "name": "APK topic: on demand delivery test",
+   "description": "Practical guide for on demand delivery test in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'on demand delivery test' applies in this project (file.search/file.read).\n2. Review the standard practice for on demand delivery test (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_install-time-modules",
+   "name": "APK topic: install time modules",
+   "description": "Practical guide for install time modules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'install time modules' applies in this project (file.search/file.read).\n2. Review the standard practice for install time modules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_asset-delivery-modes",
+   "name": "APK topic: asset delivery modes",
+   "description": "Practical guide for asset delivery modes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'asset delivery modes' applies in this project (file.search/file.read).\n2. Review the standard practice for asset delivery modes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_dex-method-id-budget",
+   "name": "APK topic: dex method id budget",
+   "description": "Practical guide for dex method id budget in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dex method id budget' applies in this project (file.search/file.read).\n2. Review the standard practice for dex method id budget (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_multidex-legacy-support",
+   "name": "APK topic: multidex legacy support",
+   "description": "Practical guide for multidex legacy support in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'multidex legacy support' applies in this project (file.search/file.read).\n2. Review the standard practice for multidex legacy support (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_main-dex-list-tuning",
+   "name": "APK topic: main dex list tuning",
+   "description": "Practical guide for main dex list tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'main dex list tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for main dex list tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_r8-full-mode-notes",
+   "name": "APK topic: r8 full mode notes",
+   "description": "Practical guide for r8 full mode notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'r8 full mode notes' applies in this project (file.search/file.read).\n2. Review the standard practice for r8 full mode notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_r8-optimization-flags",
+   "name": "APK topic: r8 optimization flags",
+   "description": "Practical guide for r8 optimization flags in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'r8 optimization flags' applies in this project (file.search/file.read).\n2. Review the standard practice for r8 optimization flags (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_proguard-mapping-retention",
+   "name": "APK topic: proguard mapping retention",
+   "description": "Practical guide for proguard mapping retention in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'proguard mapping retention' applies in this project (file.search/file.read).\n2. Review the standard practice for proguard mapping retention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_retrace-crash-stacks",
+   "name": "APK topic: retrace crash stacks",
+   "description": "Practical guide for retrace crash stacks in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'retrace crash stacks' applies in this project (file.search/file.read).\n2. Review the standard practice for retrace crash stacks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_resource-shrinker-behavior",
+   "name": "APK topic: resource shrinker behavior",
+   "description": "Practical guide for resource shrinker behavior in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'resource shrinker behavior' applies in this project (file.search/file.read).\n2. Review the standard practice for resource shrinker behavior (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_res-names-obfuscation",
+   "name": "APK topic: res names obfuscation",
+   "description": "Practical guide for res names obfuscation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'res names obfuscation' applies in this project (file.search/file.read).\n2. Review the standard practice for res names obfuscation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_keep-annotations-usage",
+   "name": "APK topic: keep annotations usage",
+   "description": "Practical guide for keep annotations usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'keep annotations usage' applies in this project (file.search/file.read).\n2. Review the standard practice for keep annotations usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_reflective-access-keep-rules",
+   "name": "APK topic: reflective access keep rules",
+   "description": "Practical guide for reflective access keep rules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'reflective access keep rules' applies in this project (file.search/file.read).\n2. Review the standard practice for reflective access keep rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_generated-classes-keeps",
+   "name": "APK topic: generated classes keeps",
+   "description": "Practical guide for generated classes keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'generated classes keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for generated classes keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_kotlin-metadata-keep",
+   "name": "APK topic: kotlin metadata keep",
+   "description": "Practical guide for kotlin metadata keep in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kotlin metadata keep' applies in this project (file.search/file.read).\n2. Review the standard practice for kotlin metadata keep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_compose-compiler-rules",
+   "name": "APK topic: compose compiler rules",
+   "description": "Practical guide for compose compiler rules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compose compiler rules' applies in this project (file.search/file.read).\n2. Review the standard practice for compose compiler rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_hilt-keeps",
+   "name": "APK topic: hilt keeps",
+   "description": "Practical guide for hilt keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hilt keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for hilt keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_room-schemas-export",
+   "name": "APK topic: room schemas export",
+   "description": "Practical guide for room schemas export in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'room schemas export' applies in this project (file.search/file.read).\n2. Review the standard practice for room schemas export (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_gson-models-keeps",
+   "name": "APK topic: gson models keeps",
+   "description": "Practical guide for gson models keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gson models keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for gson models keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_serialization-keeps",
+   "name": "APK topic: serialization keeps",
+   "description": "Practical guide for serialization keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'serialization keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for serialization keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_jni-keeps",
+   "name": "APK topic: jni keeps",
+   "description": "Practical guide for jni keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jni keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for jni keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_webview-js-bridge-keeps",
+   "name": "APK topic: webview js bridge keeps",
+   "description": "Practical guide for webview js bridge keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'webview js bridge keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for webview js bridge keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_enum-reflection-keeps",
+   "name": "APK topic: enum reflection keeps",
+   "description": "Practical guide for enum reflection keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'enum reflection keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for enum reflection keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_parcelable-keeps",
+   "name": "APK topic: parcelable keeps",
+   "description": "Practical guide for parcelable keeps in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'parcelable keeps' applies in this project (file.search/file.read).\n2. Review the standard practice for parcelable keeps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_serialization-proxy-notes",
+   "name": "APK topic: serialization proxy notes",
+   "description": "Practical guide for serialization proxy notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'serialization proxy notes' applies in this project (file.search/file.read).\n2. Review the standard practice for serialization proxy notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_debug-vs-release-parity",
+   "name": "APK topic: debug vs release parity",
+   "description": "Practical guide for debug vs release parity in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'debug vs release parity' applies in this project (file.search/file.read).\n2. Review the standard practice for debug vs release parity (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_staging-endpoint-injection",
+   "name": "APK topic: staging endpoint injection",
+   "description": "Practical guide for staging endpoint injection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'staging endpoint injection' applies in this project (file.search/file.read).\n2. Review the standard practice for staging endpoint injection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_flavor-dimension-design",
+   "name": "APK topic: flavor dimension design",
+   "description": "Practical guide for flavor dimension design in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flavor dimension design' applies in this project (file.search/file.read).\n2. Review the standard practice for flavor dimension design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_flavor-source-sets",
+   "name": "APK topic: flavor source sets",
+   "description": "Practical guide for flavor source sets in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flavor source sets' applies in this project (file.search/file.read).\n2. Review the standard practice for flavor source sets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_flavor-manifest-merges",
+   "name": "APK topic: flavor manifest merges",
+   "description": "Practical guide for flavor manifest merges in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flavor manifest merges' applies in this project (file.search/file.read).\n2. Review the standard practice for flavor manifest merges (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_buildconfig-fields",
+   "name": "APK topic: buildconfig fields",
+   "description": "Practical guide for buildconfig fields in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'buildconfig fields' applies in this project (file.search/file.read).\n2. Review the standard practice for buildconfig fields (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_version-catalog-adoption",
+   "name": "APK topic: version catalog adoption",
+   "description": "Practical guide for version catalog adoption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'version catalog adoption' applies in this project (file.search/file.read).\n2. Review the standard practice for version catalog adoption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_gradle-convention-plugins",
+   "name": "APK topic: gradle convention plugins",
+   "description": "Practical guide for gradle convention plugins in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'gradle convention plugins' applies in this project (file.search/file.read).\n2. Review the standard practice for gradle convention plugins (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_composite-builds",
+   "name": "APK topic: composite builds",
+   "description": "Practical guide for composite builds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'composite builds' applies in this project (file.search/file.read).\n2. Review the standard practice for composite builds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_include-flat-notes",
+   "name": "APK topic: include flat notes",
+   "description": "Practical guide for include flat notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'include flat notes' applies in this project (file.search/file.read).\n2. Review the standard practice for include flat notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_dependency-resolution-strategy",
+   "name": "APK topic: dependency resolution strategy",
+   "description": "Practical guide for dependency resolution strategy in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dependency resolution strategy' applies in this project (file.search/file.read).\n2. Review the standard practice for dependency resolution strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_snapshot-version-hygiene",
+   "name": "APK topic: snapshot version hygiene",
+   "description": "Practical guide for snapshot version hygiene in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'snapshot version hygiene' applies in this project (file.search/file.read).\n2. Review the standard practice for snapshot version hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_transitive-exclusion-patterns",
+   "name": "APK topic: transitive exclusion patterns",
+   "description": "Practical guide for transitive exclusion patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'transitive exclusion patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for transitive exclusion patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_api-vs-implementation",
+   "name": "APK topic: api vs implementation",
+   "description": "Practical guide for api vs implementation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api vs implementation' applies in this project (file.search/file.read).\n2. Review the standard practice for api vs implementation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_compileonly-usage",
+   "name": "APK topic: compileOnly usage",
+   "description": "Practical guide for compileOnly usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compileOnly usage' applies in this project (file.search/file.read).\n2. Review the standard practice for compileOnly usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_runtimeonly-usage",
+   "name": "APK topic: runtimeOnly usage",
+   "description": "Practical guide for runtimeOnly usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'runtimeOnly usage' applies in this project (file.search/file.read).\n2. Review the standard practice for runtimeOnly usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_test-fixtures-modules",
+   "name": "APK topic: test fixtures modules",
+   "description": "Practical guide for test fixtures modules in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'test fixtures modules' applies in this project (file.search/file.read).\n2. Review the standard practice for test fixtures modules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_annotation-processor-paths",
+   "name": "APK topic: annotation processor paths",
+   "description": "Practical guide for annotation processor paths in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'annotation processor paths' applies in this project (file.search/file.read).\n2. Review the standard practice for annotation processor paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_kapt-vs-ksp",
+   "name": "APK topic: kapt vs ksp",
+   "description": "Practical guide for kapt vs ksp in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'kapt vs ksp' applies in this project (file.search/file.read).\n2. Review the standard practice for kapt vs ksp (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_ksp-migration-notes",
+   "name": "APK topic: ksp migration notes",
+   "description": "Practical guide for ksp migration notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ksp migration notes' applies in this project (file.search/file.read).\n2. Review the standard practice for ksp migration notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_room-ksp-migration",
+   "name": "APK topic: room ksp migration",
+   "description": "Practical guide for room ksp migration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'room ksp migration' applies in this project (file.search/file.read).\n2. Review the standard practice for room ksp migration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_lint-baseline-creation",
+   "name": "APK topic: lint baseline creation",
+   "description": "Practical guide for lint baseline creation in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lint baseline creation' applies in this project (file.search/file.read).\n2. Review the standard practice for lint baseline creation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_lint-severity-tuning",
+   "name": "APK topic: lint severity tuning",
+   "description": "Practical guide for lint severity tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'lint severity tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for lint severity tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_custom-lint-rules-intro",
+   "name": "APK topic: custom lint rules intro",
+   "description": "Practical guide for custom lint rules intro in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'custom lint rules intro' applies in this project (file.search/file.read).\n2. Review the standard practice for custom lint rules intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_detekt-config",
+   "name": "APK topic: detekt config",
+   "description": "Practical guide for detekt config in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'detekt config' applies in this project (file.search/file.read).\n2. Review the standard practice for detekt config (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_ktlint-setup",
+   "name": "APK topic: ktlint setup",
+   "description": "Practical guide for ktlint setup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'ktlint setup' applies in this project (file.search/file.read).\n2. Review the standard practice for ktlint setup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_spotless-config",
+   "name": "APK topic: spotless config",
+   "description": "Practical guide for spotless config in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'spotless config' applies in this project (file.search/file.read).\n2. Review the standard practice for spotless config (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_editorconfig-android",
+   "name": "APK topic: editorconfig android",
+   "description": "Practical guide for editorconfig android in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'editorconfig android' applies in this project (file.search/file.read).\n2. Review the standard practice for editorconfig android (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_api-lint-tracking",
+   "name": "APK topic: api lint tracking",
+   "description": "Practical guide for api lint tracking in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'api lint tracking' applies in this project (file.search/file.read).\n2. Review the standard practice for api lint tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_binary-compatibility-validator",
+   "name": "APK topic: binary compatibility validator",
+   "description": "Practical guide for binary compatibility validator in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'binary compatibility validator' applies in this project (file.search/file.read).\n2. Review the standard practice for binary compatibility validator (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_manifest-placeholders",
+   "name": "APK topic: manifest placeholders",
+   "description": "Practical guide for manifest placeholders in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'manifest placeholders' applies in this project (file.search/file.read).\n2. Review the standard practice for manifest placeholders (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_manifest-merge-markers",
+   "name": "APK topic: manifest merge markers",
+   "description": "Practical guide for manifest merge markers in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'manifest merge markers' applies in this project (file.search/file.read).\n2. Review the standard practice for manifest merge markers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_library-manifest-conflicts",
+   "name": "APK topic: library manifest conflicts",
+   "description": "Practical guide for library manifest conflicts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'library manifest conflicts' applies in this project (file.search/file.read).\n2. Review the standard practice for library manifest conflicts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_tools-node-overrides",
+   "name": "APK topic: tools node overrides",
+   "description": "Practical guide for tools node overrides in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tools node overrides' applies in this project (file.search/file.read).\n2. Review the standard practice for tools node overrides (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_aidl-basics",
+   "name": "APK topic: aidl basics",
+   "description": "Practical guide for aidl basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'aidl basics' applies in this project (file.search/file.read).\n2. Review the standard practice for aidl basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_messenger-ipc",
+   "name": "APK topic: messenger ipc",
+   "description": "Practical guide for messenger ipc in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'messenger ipc' applies in this project (file.search/file.read).\n2. Review the standard practice for messenger ipc (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_content-provider-sharing",
+   "name": "APK topic: content provider sharing",
+   "description": "Practical guide for content provider sharing in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'content provider sharing' applies in this project (file.search/file.read).\n2. Review the standard practice for content provider sharing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_fileprovider-setup",
+   "name": "APK topic: fileprovider setup",
+   "description": "Practical guide for fileprovider setup in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fileprovider setup' applies in this project (file.search/file.read).\n2. Review the standard practice for fileprovider setup (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_fileprovider-paths",
+   "name": "APK topic: fileprovider paths",
+   "description": "Practical guide for fileprovider paths in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'fileprovider paths' applies in this project (file.search/file.read).\n2. Review the standard practice for fileprovider paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_camera-intent-flow",
+   "name": "APK topic: camera intent flow",
+   "description": "Practical guide for camera intent flow in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'camera intent flow' applies in this project (file.search/file.read).\n2. Review the standard practice for camera intent flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_storage-permissions-evolution",
+   "name": "APK topic: storage permissions evolution",
+   "description": "Practical guide for storage permissions evolution in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'storage permissions evolution' applies in this project (file.search/file.read).\n2. Review the standard practice for storage permissions evolution (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_scoped-storage-migration",
+   "name": "APK topic: scoped storage migration",
+   "description": "Practical guide for scoped storage migration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scoped storage migration' applies in this project (file.search/file.read).\n2. Review the standard practice for scoped storage migration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_media-store-relations",
+   "name": "APK topic: media store relations",
+   "description": "Practical guide for media store relations in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'media store relations' applies in this project (file.search/file.read).\n2. Review the standard practice for media store relations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_download-manager-integration",
+   "name": "APK topic: download manager integration",
+   "description": "Practical guide for download manager integration in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'download manager integration' applies in this project (file.search/file.read).\n2. Review the standard practice for download manager integration (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_app-clip-notes",
+   "name": "APK topic: app clip notes",
+   "description": "Practical guide for app clip notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'app clip notes' applies in this project (file.search/file.read).\n2. Review the standard practice for app clip notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_wear-os-pairing-notes",
+   "name": "APK topic: wear os pairing notes",
+   "description": "Practical guide for wear os pairing notes in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'wear os pairing notes' applies in this project (file.search/file.read).\n2. Review the standard practice for wear os pairing notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_android-tv-leanback",
+   "name": "APK topic: android tv leanback",
+   "description": "Practical guide for android tv leanback in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'android tv leanback' applies in this project (file.search/file.read).\n2. Review the standard practice for android tv leanback (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_android-auto-basics",
+   "name": "APK topic: android auto basics",
+   "description": "Practical guide for android auto basics in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'android auto basics' applies in this project (file.search/file.read).\n2. Review the standard practice for android auto basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_foldable-window-width",
+   "name": "APK topic: foldable window width",
+   "description": "Practical guide for foldable window width in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'foldable window width' applies in this project (file.search/file.read).\n2. Review the standard practice for foldable window width (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_tablet-layouts",
+   "name": "APK topic: tablet layouts",
+   "description": "Practical guide for tablet layouts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'tablet layouts' applies in this project (file.search/file.read).\n2. Review the standard practice for tablet layouts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_sw600dp-patterns",
+   "name": "APK topic: sw600dp patterns",
+   "description": "Practical guide for sw600dp patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'sw600dp patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for sw600dp patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_landscape-lock-cases",
+   "name": "APK topic: landscape lock cases",
+   "description": "Practical guide for landscape lock cases in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'landscape lock cases' applies in this project (file.search/file.read).\n2. Review the standard practice for landscape lock cases (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_rotation-state-retention",
+   "name": "APK topic: rotation state retention",
+   "description": "Practical guide for rotation state retention in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'rotation state retention' applies in this project (file.search/file.read).\n2. Review the standard practice for rotation state retention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_process-death-restore",
+   "name": "APK topic: process death restore",
+   "description": "Practical guide for process death restore in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'process death restore' applies in this project (file.search/file.read).\n2. Review the standard practice for process death restore (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_savedstatehandle-usage",
+   "name": "APK topic: savedstatehandle usage",
+   "description": "Practical guide for savedstatehandle usage in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'savedstatehandle usage' applies in this project (file.search/file.read).\n2. Review the standard practice for savedstatehandle usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_viewmodel-factory-patterns",
+   "name": "APK topic: viewmodel factory patterns",
+   "description": "Practical guide for viewmodel factory patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'viewmodel factory patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for viewmodel factory patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_hilt-viewmodel-injection",
+   "name": "APK topic: hilt viewmodel injection",
+   "description": "Practical guide for hilt viewmodel injection in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'hilt viewmodel injection' applies in this project (file.search/file.read).\n2. Review the standard practice for hilt viewmodel injection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_compose-viewmodel-interop",
+   "name": "APK topic: compose viewmodel interop",
+   "description": "Practical guide for compose viewmodel interop in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'compose viewmodel interop' applies in this project (file.search/file.read).\n2. Review the standard practice for compose viewmodel interop (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_flow-lifecycle-aware",
+   "name": "APK topic: flow lifecycle aware",
+   "description": "Practical guide for flow lifecycle aware in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flow lifecycle aware' applies in this project (file.search/file.read).\n2. Review the standard practice for flow lifecycle aware (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_repeatonlifecycle",
+   "name": "APK topic: repeatOnLifecycle",
+   "description": "Practical guide for repeatOnLifecycle in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'repeatOnLifecycle' applies in this project (file.search/file.read).\n2. Review the standard practice for repeatOnLifecycle (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_statein-sharing-started",
+   "name": "APK topic: stateIn sharing started",
+   "description": "Practical guide for stateIn sharing started in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'stateIn sharing started' applies in this project (file.search/file.read).\n2. Review the standard practice for stateIn sharing started (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_whilesubscribed-timeout",
+   "name": "APK topic: whilesubscribed timeout",
+   "description": "Practical guide for whilesubscribed timeout in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'whilesubscribed timeout' applies in this project (file.search/file.read).\n2. Review the standard practice for whilesubscribed timeout (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_cold-flow-caching",
+   "name": "APK topic: cold flow caching",
+   "description": "Practical guide for cold flow caching in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cold flow caching' applies in this project (file.search/file.read).\n2. Review the standard practice for cold flow caching (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_flow-flattening-choices",
+   "name": "APK topic: flow flattening choices",
+   "description": "Practical guide for flow flattening choices in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'flow flattening choices' applies in this project (file.search/file.read).\n2. Review the standard practice for flow flattening choices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_combine-vs-zip",
+   "name": "APK topic: combine vs zip",
+   "description": "Practical guide for combine vs zip in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'combine vs zip' applies in this project (file.search/file.read).\n2. Review the standard practice for combine vs zip (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_debounce-search-flows",
+   "name": "APK topic: debounce search flows",
+   "description": "Practical guide for debounce search flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'debounce search flows' applies in this project (file.search/file.read).\n2. Review the standard practice for debounce search flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_retry-when-flows",
+   "name": "APK topic: retry when flows",
+   "description": "Practical guide for retry when flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'retry when flows' applies in this project (file.search/file.read).\n2. Review the standard practice for retry when flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_catch-and-fallback",
+   "name": "APK topic: catch and fallback",
+   "description": "Practical guide for catch and fallback in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'catch and fallback' applies in this project (file.search/file.read).\n2. Review the standard practice for catch and fallback (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_error-transparency-ui",
+   "name": "APK topic: error transparency ui",
+   "description": "Practical guide for error transparency ui in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'error transparency ui' applies in this project (file.search/file.read).\n2. Review the standard practice for error transparency ui (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_loading-state-machines",
+   "name": "APK topic: loading state machines",
+   "description": "Practical guide for loading state machines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'loading state machines' applies in this project (file.search/file.read).\n2. Review the standard practice for loading state machines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_pagination-remote-mediator",
+   "name": "APK topic: pagination remote mediator",
+   "description": "Practical guide for pagination remote mediator in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pagination remote mediator' applies in this project (file.search/file.read).\n2. Review the standard practice for pagination remote mediator (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_room-paging-source",
+   "name": "APK topic: room paging source",
+   "description": "Practical guide for room paging source in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'room paging source' applies in this project (file.search/file.read).\n2. Review the standard practice for room paging source (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_paging3-customization",
+   "name": "APK topic: paging3 customization",
+   "description": "Practical guide for paging3 customization in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'paging3 customization' applies in this project (file.search/file.read).\n2. Review the standard practice for paging3 customization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_jumping-thresholds",
+   "name": "APK topic: jumping thresholds",
+   "description": "Practical guide for jumping thresholds in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'jumping thresholds' applies in this project (file.search/file.read).\n2. Review the standard practice for jumping thresholds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_placeholder-ui-paging",
+   "name": "APK topic: placeholder ui paging",
+   "description": "Practical guide for placeholder ui paging in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'placeholder ui paging' applies in this project (file.search/file.read).\n2. Review the standard practice for placeholder ui paging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_pull-refresh-paging",
+   "name": "APK topic: pull refresh paging",
+   "description": "Practical guide for pull refresh paging in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'pull refresh paging' applies in this project (file.search/file.read).\n2. Review the standard practice for pull refresh paging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_cached-paginated-lists",
+   "name": "APK topic: cached paginated lists",
+   "description": "Practical guide for cached paginated lists in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'cached paginated lists' applies in this project (file.search/file.read).\n2. Review the standard practice for cached paginated lists (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_search-across-paged-data",
+   "name": "APK topic: search across paged data",
+   "description": "Practical guide for search across paged data in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'search across paged data' applies in this project (file.search/file.read).\n2. Review the standard practice for search across paged data (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_deep-link-paging-state",
+   "name": "APK topic: deep link paging state",
+   "description": "Practical guide for deep link paging state in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'deep link paging state' applies in this project (file.search/file.read).\n2. Review the standard practice for deep link paging state (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_notification-trampolines",
+   "name": "APK topic: notification trampolines",
+   "description": "Practical guide for notification trampolines in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notification trampolines' applies in this project (file.search/file.read).\n2. Review the standard practice for notification trampolines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_notification-intents",
+   "name": "APK topic: notification intents",
+   "description": "Practical guide for notification intents in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notification intents' applies in this project (file.search/file.read).\n2. Review the standard practice for notification intents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_full-screen-intents",
+   "name": "APK topic: full screen intents",
+   "description": "Practical guide for full screen intents in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'full screen intents' applies in this project (file.search/file.read).\n2. Review the standard practice for full screen intents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_alarm-clock-flows",
+   "name": "APK topic: alarm clock flows",
+   "description": "Practical guide for alarm clock flows in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'alarm clock flows' applies in this project (file.search/file.read).\n2. Review the standard practice for alarm clock flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_exact-alarm-exemption",
+   "name": "APK topic: exact alarm exemption",
+   "description": "Practical guide for exact alarm exemption in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'exact alarm exemption' applies in this project (file.search/file.read).\n2. Review the standard practice for exact alarm exemption (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_foreground-service-whileinuse",
+   "name": "APK topic: foreground service whileinuse",
+   "description": "Practical guide for foreground service whileinuse in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'foreground service whileinuse' applies in this project (file.search/file.read).\n2. Review the standard practice for foreground service whileinuse (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_datasync-fgs-type",
+   "name": "APK topic: dataSync fgs type",
+   "description": "Practical guide for dataSync fgs type in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'dataSync fgs type' applies in this project (file.search/file.read).\n2. Review the standard practice for dataSync fgs type (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_mediaplayback-fgs",
+   "name": "APK topic: mediaPlayback fgs",
+   "description": "Practical guide for mediaPlayback fgs in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'mediaPlayback fgs' applies in this project (file.search/file.read).\n2. Review the standard practice for mediaPlayback fgs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_camera-mic-fgs-indicators",
+   "name": "APK topic: camera mic fgs indicators",
+   "description": "Practical guide for camera mic fgs indicators in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'camera mic fgs indicators' applies in this project (file.search/file.read).\n2. Review the standard practice for camera mic fgs indicators (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_post-notifications-permission",
+   "name": "APK topic: post notifications permission",
+   "description": "Practical guide for post notifications permission in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'post notifications permission' applies in this project (file.search/file.read).\n2. Review the standard practice for post notifications permission (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_notification-runtime-grant",
+   "name": "APK topic: notification runtime grant",
+   "description": "Practical guide for notification runtime grant in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notification runtime grant' applies in this project (file.search/file.read).\n2. Review the standard practice for notification runtime grant (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_channel-importance-tuning",
+   "name": "APK topic: channel importance tuning",
+   "description": "Practical guide for channel importance tuning in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'channel importance tuning' applies in this project (file.search/file.read).\n2. Review the standard practice for channel importance tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_badge-counts",
+   "name": "APK topic: badge counts",
+   "description": "Practical guide for badge counts in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'badge counts' applies in this project (file.search/file.read).\n2. Review the standard practice for badge counts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_direct-reply-actions",
+   "name": "APK topic: direct reply actions",
+   "description": "Practical guide for direct reply actions in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'direct reply actions' applies in this project (file.search/file.read).\n2. Review the standard practice for direct reply actions (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_notification-undo-patterns",
+   "name": "APK topic: notification undo patterns",
+   "description": "Practical guide for notification undo patterns in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notification undo patterns' applies in this project (file.search/file.read).\n2. Review the standard practice for notification undo patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_grouped-notifications",
+   "name": "APK topic: grouped notifications",
+   "description": "Practical guide for grouped notifications in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'grouped notifications' applies in this project (file.search/file.read).\n2. Review the standard practice for grouped notifications (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_summary-notifications",
+   "name": "APK topic: summary notifications",
+   "description": "Practical guide for summary notifications in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'summary notifications' applies in this project (file.search/file.read).\n2. Review the standard practice for summary notifications (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_notification-channels-export",
+   "name": "APK topic: notification channels export",
+   "description": "Practical guide for notification channels export in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'notification channels export' applies in this project (file.search/file.read).\n2. Review the standard practice for notification channels export (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_scoped-notifications",
+   "name": "APK topic: scoped notifications",
+   "description": "Practical guide for scoped notifications in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'scoped notifications' applies in this project (file.search/file.read).\n2. Review the standard practice for scoped notifications (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_android-13-media-permission",
+   "name": "APK topic: android 13 media permission",
+   "description": "Practical guide for android 13 media permission in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'android 13 media permission' applies in this project (file.search/file.read).\n2. Review the standard practice for android 13 media permission (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_nearby-devices-permission",
+   "name": "APK topic: nearby devices permission",
+   "description": "Practical guide for nearby devices permission in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'nearby devices permission' applies in this project (file.search/file.read).\n2. Review the standard practice for nearby devices permission (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_body-sensors-permission",
+   "name": "APK topic: body sensors permission",
+   "description": "Practical guide for body sensors permission in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'body sensors permission' applies in this project (file.search/file.read).\n2. Review the standard practice for body sensors permission (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkf_permissions-best-practice",
+   "name": "APK topic: permissions best practice",
+   "description": "Practical guide for permissions best practice in software projects.",
+   "instructions": "Workflow:\n1. Locate where 'permissions best practice' applies in this project (file.search/file.read).\n2. Review the standard practice for permissions best practice (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, or runtime check as appropriate.\n5. Record what was done and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

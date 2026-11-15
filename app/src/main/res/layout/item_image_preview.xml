@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ChatGPT-style image card: edge-to-edge rounded image with a subtle border. -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/divider"
+    app:strokeWidth="1dp">
+
+    <ImageView
+        android:id="@+id/ivImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="420dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/image_preview"
+        android:src="@drawable/ic_image_placeholder" />
+
+</com.google.android.material.card.MaterialCardView>

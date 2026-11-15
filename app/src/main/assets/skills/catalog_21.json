@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_mob_app_attack_surface",
+   "name": "Mobile attack surface mapping",
+   "description": "Map an app's exposure.",
+   "instructions": "Workflow:\n1. re.apk.manifest for components and permissions.\n2. List deep links and exported components.\n3. Note backup/debuggable flags.\n4. Summarize entry points.\n5. Save the map (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_sensitive_data_store",
+   "name": "Sensitive data storage audit",
+   "description": "Check how the app stores secrets.",
+   "instructions": "Workflow:\n1. re.apktool.decode; file.search for prefs/db usage.\n2. Inspect device files via root.exec (your app).\n3. Scan for plaintext tokens (python.run_file).\n4. Recommend EncryptedSharedPreferences/Keystore.\n5. Report findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_logcat_leak_audit",
+   "name": "Logcat leakage audit",
+   "description": "Find secrets in logs.",
+   "instructions": "Workflow:\n1. Run the app; capture logcat via process.exec.\n2. Grep for token/password patterns (python.run_file).\n3. Correlate with code (file.search Log calls).\n4. Recommend log hygiene.\n5. Record leaks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_network_layer_audit",
+   "name": "Mobile network layer audit",
+   "description": "Assess TLS usage.",
+   "instructions": "Workflow:\n1. Capture app traffic (http.capture).\n2. Check for cleartext endpoints (http.history).\n3. Review usesCleartextTraffic in manifest (re.apk.manifest).\n4. Note pinning presence (failure behavior).\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_cert_pinning_assess",
+   "name": "Certificate pinning assessment",
+   "description": "Characterize pinning behavior.",
+   "instructions": "Workflow:\n1. Attempt MITM capture (http.capture).\n2. Note failure modes when pinning blocks.\n3. Differentiate pinning vs cleartext blocks.\n4. Document bypass preconditions conceptually (own app).\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_backup_extraction",
+   "name": "Backup-based data extraction",
+   "description": "Test android:allowBackups impact.",
+   "instructions": "Workflow:\n1. Check manifest flag (re.apk.manifest).\n2. Create a backup on your device (adb backup via process.exec).\n3. Inspect the archive contents (re.hex.identify + unzip).\n4. Assess sensitive data exposure.\n5. Recommend allowBackup=false.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_deep_link_abuse",
+   "name": "Deep link abuse testing",
+   "description": "Test deep link handlers.",
+   "instructions": "Workflow:\n1. Enumerate links (re.apk.manifest).\n2. Fire crafted intents (process.exec am start).\n3. Observe parameter handling (androidreadscreen).\n4. Probe for injection into webviews/intents.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_exported_component_probe",
+   "name": "Exported component probing",
+   "description": "Test exported activities/services.",
+   "instructions": "Workflow:\n1. List exported components (re.apk.manifest).\n2. Invoke each with crafted intents (process.exec am).\n3. Observe behavior and data returned.\n4. Automate the probe list (python.run_file).\n5. Report access issues.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_webview_hardening_check",
+   "name": "WebView hardening review",
+   "description": "Review WebView settings.",
+   "instructions": "Workflow:\n1. file.search smali for setJavaScriptEnabled/addJavascriptInterface.\n2. Check file access flags.\n3. Note URL validation before load.\n4. Recommend hardening defaults.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_keystore_usage_review",
+   "name": "Keystore usage review",
+   "description": "Review key management.",
+   "instructions": "Workflow:\n1. file.search for KeyStore/KeyGenParameterSpec in smali.\n2. Note hardware-backed usage.\n3. Check key validity scopes.\n4. Recommend strong specs.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_root_detection_map",
+   "name": "Root detection mapping",
+   "description": "Locate root checks in the app.",
+   "instructions": "Workflow:\n1. file.search smali for su/busybox strings.\n2. re.ghidra.analyze native checks if present.\n3. Map each check to a bypass layer.\n4. Document (no live bypass without consent).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_frida_detection_note",
+   "name": "Frida/Xposed detection review",
+   "description": "Review instrumentation detection.",
+   "instructions": "Workflow:\n1. file.search for frida/xposed strings in smali.\n2. Check /proc scanning patterns in native libs (re.rabin2 strings).\n3. Map to enforcement points.\n4. Document findings.\n5. Keep within authorization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_smali_patch_flow",
+   "name": "Smali exploitation patch flow",
+   "description": "Patch an app for research (owned app).",
+   "instructions": "Workflow:\n1. re.apktool.decode.\n2. Locate the check with file.search; patch minimally (file.patch).\n3. re.apktool.build; re.apk.sign; re.apk.install.\n4. Verify behavior change (androidreadscreen).\n5. Document the patch.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_native_lib_audit",
+   "name": "Native library audit",
+   "description": "Assess native components.",
+   "instructions": "Workflow:\n1. List libs (re.rabin2).\n2. re.ghidra.analyze the interesting one.\n3. Note unsafe calls (strcpy/sprintf) in decompiled views.\n4. Recommend mitigations.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_clipboard_risk_note",
+   "name": "Clipboard handling review",
+   "description": "Review sensitive clipboard use.",
+   "instructions": "Workflow:\n1. Observe app copy flows (androidreadscreen).\n2. Check if tokens go through clipboard (file.search ClipboardManager).\n3. Note exposure window risks.\n4. Recommend avoidance.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_screenshot_blocking_check",
+   "name": "Screenshot blocking review",
+   "description": "Verify FLAG_SECURE usage.",
+   "instructions": "Workflow:\n1. Try android_screenshot on sensitive screens.\n2. Note blocked results.\n3. Correlate with smali flags (file.search FLAG_SECURE).\n4. Recommend coverage of sensitive screens.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_intent_redirection",
+   "name": "Intent redirection testing",
+   "description": "Test untrusted intent handling.",
+   "instructions": "Workflow:\n1. Find intent extras consumed into startActivity (file.search smali).\n2. Craft redirection intents (process.exec am).\n3. Observe privilege behaviors.\n4. Document the pattern.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_task_hijack_note",
+   "name": "Task hijacking awareness",
+   "description": "Review taskAffinity risks.",
+   "instructions": "Workflow:\n1. Check taskAffinity/launchMode (re.apk.manifest).\n2. Assess relaunch behaviors (UI test).\n3. Note exposure conditions.\n4. Recommend exclusions.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_pendingintent_review",
+   "name": "PendingIntent review",
+   "description": "Review mutability flags.",
+   "instructions": "Workflow:\n1. file.search PendingIntent usage in smali.\n2. Check FLAG_IMMUTABLE presence.\n3. Note mutable intents with extras.\n4. Recommend immutable defaults.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_provider_probe",
+   "name": "ContentProvider probing",
+   "description": "Test exported providers.",
+   "instructions": "Workflow:\n1. List providers (re.apk.manifest).\n2. Query via process.exec content commands (your app).\n3. Note data exposure.\n4. Check read/write permission guards.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_receiver_probe",
+   "name": "Receiver probing",
+   "description": "Test exported receivers.",
+   "instructions": "Workflow:\n1. List receivers (re.apk.manifest).\n2. Send crafted broadcasts (process.exec am broadcast).\n3. Observe handling.\n4. Automate cases (python.run_file).\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_permission_re_review",
+   "name": "Custom permission review",
+   "description": "Review custom permissions.",
+   "instructions": "Workflow:\n1. List permission declarations (re.apk.manifest).\n2. Check protectionLevel choices.\n3. Note signature-level usage.\n4. Recommend normal→signature where needed.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_ota_update_check",
+   "name": "Update mechanism review",
+   "description": "Review app update flow.",
+   "instructions": "Workflow:\n1. Locate update checks (file.search smali http urls).\n2. Check signature verification of downloaded APKs (decompiled logic).\n3. Note MITM implications (http.capture).\n4. Recommend signed updates.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_sdk_thirdparty_audit",
+   "name": "Third-party SDK audit",
+   "description": "Assess embedded SDK risk.",
+   "instructions": "Workflow:\n1. List SDK packages from smali tree (python.run_file).\n2. Check versions vs advisories (web.search).\n3. Note permissions they add.\n4. Recommend updates/removals.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mob_mobile_fuzz_intents",
+   "name": "Intent fuzzing",
+   "description": "Fuzz app intents safely.",
+   "instructions": "Workflow:\n1. Generate intent permutations (python.run_file).\n2. Fire at exported components (process.exec am).\n3. Watch for crashes via logcat.\n4. Cluster crashes by stack (python.run_file).\n5. Report crashes.",
+   "enabled": false
+  }
+ ]
+}

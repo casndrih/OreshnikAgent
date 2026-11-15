@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_nx_service_fingerprint",
+   "name": "Service fingerprinting",
+   "description": "Identify services precisely after a scan.",
+   "instructions": "Workflow:\n1. net.portscan to find open ports.\n2. Grab banners with process.exec (nc/curl as appropriate).\n3. Match versions via web.search.\n4. Record OS hints from TTLs where visible.\n5. Update the service map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_default_creds_check",
+   "name": "Default credential checks",
+   "description": "Verify default credentials on owned devices.",
+   "instructions": "Workflow:\n1. List the service's documented defaults (web.search).\n2. Attempt only on your own/lab systems.\n3. Log attempts and outcomes.\n4. Change any default found immediately.\n5. Report the finding.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_ftp_assessment",
+   "name": "FTP service assessment",
+   "description": "Assess anonymous FTP and layout.",
+   "instructions": "Workflow:\n1. Banner grab (process.exec).\n2. Test anonymous login on authorized hosts.\n3. List and inspect shared files (read-only).\n4. Note writable dirs cautiously.\n5. Report exposure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_smb_enum",
+   "name": "SMB enumeration",
+   "description": "Enumerate SMB shares safely.",
+   "instructions": "Workflow:\n1. Check guest/session access on authorized hosts (process.exec tools).\n2. List shares; note permissions.\n3. Sample file listings read-only.\n4. Flag open shares.\n5. Report with remediation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_smtp_user_enum",
+   "name": "SMTP user enumeration",
+   "description": "Test recipient verification behavior.",
+   "instructions": "Workflow:\n1. Use VRFY/EXPN/RCPT probing on your own mail server.\n2. Measure response differences (python.run_file).\n3. List confirmed users if enumeration works.\n4. Report the enumeration vector.\n5. Recommend uniform responses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_dns_zone_checks",
+   "name": "DNS zone assessment",
+   "description": "Check zone transfer and record hygiene.",
+   "instructions": "Workflow:\n1. Attempt AXFR against authorized NS (process.exec dig).\n2. Enumerate common records.\n3. Flag zone transfer if allowed.\n4. Verify with a second method.\n5. Report DNS hygiene.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_rdp_assessment",
+   "name": "RDP exposure review",
+   "description": "Assess RDP exposure.",
+   "instructions": "Workflow:\n1. Confirm port exposure (net.portscan).\n2. Check NLA/enforcement banners (process.exec).\n3. Note exposure to untrusted networks.\n4. Recommend gateway/VPN-only access.\n5. Record the review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_ssh_hardening_review",
+   "name": "SSH configuration review",
+   "description": "Review SSH endpoint settings.",
+   "instructions": "Workflow:\n1. Banner grab and note algorithms offered (process.exec ssh -Q probes).\n2. Check root login/password auth policy via config reads where authorized.\n3. Recommend modern algorithms and key-only auth.\n4. Verify after changes.\n5. Document the review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_database_service_review",
+   "name": "Database exposure review",
+   "description": "Check DB services exposure.",
+   "instructions": "Workflow:\n1. net.portscan for 3306/5432/1433/27017.\n2. Confirm they require auth (benign connect probes).\n3. Never brute production credentials.\n4. Recommend network ACLs.\n5. Record exposure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_iot_device_audit",
+   "name": "IoT device audit",
+   "description": "Audit smart devices on the LAN.",
+   "instructions": "Workflow:\n1. system.app_list/process_list for device apps.\n2. port scan the device (authorized).\n3. Check default creds and open Telnet (process.exec probes).\n4. Firmware notes via web.search.\n5. Report per-device findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_router_config_review",
+   "name": "Router configuration review",
+   "description": "Review home router posture.",
+   "instructions": "Workflow:\n1. Login to the admin UI (user provides access).\n2. Review WAN management, UPnP, DNS settings.\n3. Test default creds explicitly denied.\n4. Update firmware if user approves.\n5. Summarize changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_lan_device_inventory",
+   "name": "LAN inventory",
+   "description": "Map devices on the local network.",
+   "instructions": "Workflow:\n1. Scan the local /24 politely (process.exec nmap-like or arp).\n2. Resolve names; fingerprint MAC vendors (python.run_file).\n3. Flag unknown devices.\n4. Record the inventory.\n5. Report anomalies.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_wifi_security_review",
+   "name": "Wi-Fi security review",
+   "description": "Assess wireless posture.",
+   "instructions": "Workflow:\n1. Check supported auth modes via device UI (androidreadscreen).\n2. Note WPA2/WPA3 usage.\n3. Test guest isolation if permitted.\n4. Recommend WPA3 + strong PSK.\n5. Record the review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_vpn_endpoint_check",
+   "name": "VPN endpoint review",
+   "description": "Assess VPN exposure.",
+   "instructions": "Workflow:\n1. Port scan for VPN ports (net.portscan).\n2. Banner/ike probes (process.exec).\n3. Check for exposed admin panels (web.headervuln).\n4. Recommend MFA and gateway hardening.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_proxy_service_audit",
+   "name": "Proxy service audit",
+   "description": "Audit open proxy risk.",
+   "instructions": "Workflow:\n1. Identify proxy ports (net.portscan).\n2. Test open-relay behavior on owned hosts (process.exec curl via proxy).\n3. Flag open proxies.\n4. Recommend auth/ACLs.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_service_version_alerts",
+   "name": "Service version advisories",
+   "description": "Match versions to known CVEs.",
+   "instructions": "Workflow:\n1. Fingerprint versions (cat_nx_service_fingerprint).\n2. Query NVD by CPE (cat_res_nvd_query).\n3. List applicable CVEs with severity.\n4. Note exploit availability (cat_res_exploitdb_search).\n5. Prioritize remediation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_protocol_mitm_lab",
+   "name": "MITM lab methodology",
+   "description": "Set up controlled interception labs.",
+   "instructions": "Workflow:\n1. Build the lab: your AP/proxy + test client (file.write plan).\n2. Verify interception with http.capture.\n3. Practice TLS inspection on your own traffic.\n4. Document lessons.\n5. Never apply to third-party traffic.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_network_pivot_note",
+   "name": "Pivot awareness (authorized)",
+   "description": "Understand pivoting concepts safely.",
+   "instructions": "Workflow:\n1. Map reachable segments from a foothold (authorized only).\n2. Enumerate services via the pivot (benign probes).\n3. Document the technique, not damage.\n4. Keep changes reversible.\n5. Report the path with fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_firewall_rule_review",
+   "name": "Firewall rule review",
+   "description": "Review egress/ingress rules.",
+   "instructions": "Workflow:\n1. Collect rules (authorized: process.exec or UI).\n2. Flag any-any or stale rules (python.run_file).\n3. Propose tightened ruleset.\n4. Verify after changes.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_ids_alert_review",
+   "name": "IDS alert triage",
+   "description": "Triage IDS alerts from testing.",
+   "instructions": "Workflow:\n1. Correlate alerts with your test timeline (python.run_file).\n2. Classify true test signals vs noise.\n3. Feed back tuning suggestions.\n4. Record in engagement notes.\n5. Report coverage gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_network_report",
+   "name": "Network assessment report",
+   "description": "Write the network findings report.",
+   "instructions": "Workflow:\n1. Combine: hosts, services, vulns, misconfigs.\n2. Evidence per finding (banners, scans).\n3. Severity-ranked remediation.\n4. Redact sensitive strings.\n5. file.write and summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_wifi_capture_lab",
+   "name": "Wi-Fi capture lab",
+   "description": "Practice wireless capture legally.",
+   "instructions": "Workflow:\n1. Capture only your own AP/clients (tcpdump.capture).\n2. Analyze handshake presence (not cracking).\n3. Study frame types.\n4. Document lessons.\n5. Keep within law.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_bluetooth_scan_self",
+   "name": "Bluetooth posture (self devices)",
+   "description": "Review your paired devices.",
+   "instructions": "Workflow:\n1. List paired devices via settings UI (androidclickelement).\n2. Remove unknown pairs (with user approval).\n3. Check discoverability state.\n4. Record hygiene steps.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_nfc_relay_note",
+   "name": "NFC relay awareness",
+   "description": "Understand relay risks conceptually.",
+   "instructions": "Workflow:\n1. Explain relay attack preconditions.\n2. Map your NFC use cases (payments, badges).\n3. Recommend protection options.\n4. No live relay testing on third-party systems.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_nx_bandwidth_abuse_guard",
+   "name": "Abuse guardrails",
+   "description": "Prevent becoming an abuser.",
+   "instructions": "Workflow:\n1. No DDoS, no amplification, no scanning of third parties.\n2. Keep volume tiny and targeted.\n3. Monitor your own impact (http.capture).\n4. Stop on any owner request.\n5. Document compliance.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_031",
+      "name": "SQLMap target prep: Normalize a target URL",
+      "description": "Prepare a canonical endpoint that the app’s HTTP(S) validator accepts.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Include scheme, host, approved path, and real query string; remove fragments/whitespace while preserving meaningful values.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_032",
+      "name": "SQLMap target prep: Inventory approved parameters",
+      "description": "Build a concise list of query and body inputs before testing.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Use owner documentation or a normal app request; map each parameter to purpose and scope before selection.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_033",
+      "name": "SQLMap target prep: Select one parameter",
+      "description": "Reduce ambiguous results by testing a single input first.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Set the app’s `parameter` field to the exact approved name; broaden only after reviewing the first result.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_034",
+      "name": "SQLMap target prep: Handle repeated query keys",
+      "description": "Avoid guessing which duplicate key the server consumes.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Document the captured request; if the structured URL cannot represent it unambiguously, stop and request a supported fixture.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_035",
+      "name": "SQLMap target prep: Preserve original values",
+      "description": "Avoid changing business logic while testing.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Start from an owner-provided valid value; do not substitute identifiers that could access another person’s records.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_036",
+      "name": "SQLMap target prep: Recognize dynamic inputs",
+      "description": "Distinguish user-controlled values from server-generated tokens.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Document rotating fields; do not probe ephemeral values without an owner-approved stable workflow.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_037",
+      "name": "SQLMap target prep: Confirm method and endpoint",
+      "description": "Match the HTTP method to the approved application request.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Use GET for query-based requests; for body requests set `method` and supply the approved body through `data`.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_038",
+      "name": "SQLMap target prep: Capture baseline behavior",
+      "description": "Establish normal behavior before interpreting SQLMap output.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Record status, response stability, and expected behavior with a normal client, using the same endpoint and inputs.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_039",
+      "name": "SQLMap target prep: Validate port and TLS",
+      "description": "Check the URL uses the authorized port and expected HTTPS certificate behavior.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Keep host and scheme intact; resolve certificate or routing errors with the owner instead of disabling security controls.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_040",
+      "name": "SQLMap target prep: Encode query values carefully",
+      "description": "Avoid accidental changes to URL query structure.",
+      "category": "SQLMap / Target preparation",
+      "instructions": "Workflow:\n1. Normalize the exact HTTP(S) endpoint and identify candidate inputs from approved documentation or a normal request.\n2. Preserve a baseline and note redirects, dynamic values, and expected status codes.\n3. Use correctly URL-encoded values and verify names/values with a normal request before passing the URL to the app.\n4. Pass the full approved URL to `web.sqlmap`; use `parameter` to narrow to one named input.\n\nSafety: test only explicitly authorized targets. Keep defaults; do not enumerate or dump records, use shells/file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

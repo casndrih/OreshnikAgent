@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_091",
+      "name": "SQLMap validation: Account for baseline variability",
+      "description": "Avoid attributing ordinary response differences to SQL injection.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Capture a small baseline set with the same account/request; compare normal variability with the SQLMap signal.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_092",
+      "name": "SQLMap validation: Review noisy response bodies",
+      "description": "Do not treat timestamps or rotating banners as proof.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Identify dynamic regions with the owner; report a weak signal as inconclusive until repeatable.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_093",
+      "name": "SQLMap validation: Handle rotating tokens",
+      "description": "Prevent expiring CSRF or nonce values from creating false failures.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Confirm token freshness through the approved flow; if the app cannot refresh it, stop and document the limitation.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_094",
+      "name": "SQLMap validation: Assess dynamic pages",
+      "description": "Separate personalization or cache variation from injection behavior.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Keep account, request, and state constant; compare the same parameter and baseline instead of changing multiple inputs.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_095",
+      "name": "SQLMap validation: Check cache effects",
+      "description": "Determine whether a cache is serving stale responses.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Ask the owner about cache behavior and compare a normal request; do not add cache-bypass tricks outside the plan.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_096",
+      "name": "SQLMap validation: Repeat for reproducibility",
+      "description": "Confirm a finding with the smallest possible repeat test.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Repeat once at original settings and endpoint; stop if inconsistent and report the result as unconfirmed.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_097",
+      "name": "SQLMap validation: Isolate input variables",
+      "description": "Avoid changing parameter, method, headers, and profile together.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Keep values fixed except the input under review so the retest has a clear cause.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_098",
+      "name": "SQLMap validation: Use a control endpoint responsibly",
+      "description": "Use a comparable approved path to evaluate general response noise.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Confirm the control is in scope before requesting it; do not scan neighboring routes by assumption.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_099",
+      "name": "SQLMap validation: Treat blocking as inconclusive",
+      "description": "Distinguish a firewall response from an injection result.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. Stop on a block page or reset; report context and ask the owner to approve any retest.\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_100",
+      "name": "SQLMap validation: Never overclaim a clean result",
+      "description": "Communicate uncertainty when SQLMap could not evaluate an input reliably.",
+      "category": "SQLMap / False-positive control",
+      "instructions": "Workflow:\n1. Compare the scan with a normal baseline and verify the application reached the intended handler.\n2. Repeat only the same low-impact request when authorization and the test window permit.\n3. List tested request, profile, and errors/skips; say “no issue confirmed in this check,” not “secure.”\n4. Do not use bypass, tamper, or evasion to force a result; report unresolved ambiguity.\n\nSafety: stay within owner-authorized scope and use web.sqlmap with \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

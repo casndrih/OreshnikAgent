@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_101",
+      "name": "SQLMap evidence handling: Locate SQLMap output",
+      "description": "Find the app-managed artifact folder for an authorized run.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Use workspace `.sqlmap/output`; do not confuse it with the private engine under `filesDir/runtimes/sqlmap`.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_102",
+      "name": "SQLMap evidence handling: Preserve console transcript",
+      "description": "Keep enough engine output to support the finding without copying excessive content.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Save redacted stdout/stderr and link it to call settings; do not attach database contents or secrets.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_103",
+      "name": "SQLMap evidence handling: Protect session files",
+      "description": "Treat SQLMap sessions and logs as sensitive assessment artifacts.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Restrict workspace access, follow retention policy, and never reuse a session against another target.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_104",
+      "name": "SQLMap evidence handling: Redact before sharing",
+      "description": "Remove cookies, bearer tokens, identifiers, and unrelated response data from notes.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Keep only route, parameter, finding signal, and sanitized proof needed by the owner.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_105",
+      "name": "SQLMap evidence handling: Label each run",
+      "description": "Make output traceable to one approval and test window.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Record timestamp, target alias, parameter, method, profile, app/SQLMap versions, and operator without secrets.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_106",
+      "name": "SQLMap evidence handling: Apply retention limits",
+      "description": "Avoid accumulating old SQLMap logs.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Follow engagement retention rules; ask before deleting artifacts and preserve only required evidence.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_107",
+      "name": "SQLMap evidence handling: Prepare sanitized export",
+      "description": "Create a reviewable handoff with no raw credentials or unrelated response bodies.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Summarize the finding and artifact path; share files only through the owner-approved channel.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_108",
+      "name": "SQLMap evidence handling: Verify artifact completeness",
+      "description": "Check that expected output exists before reporting a completed run.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Record output directory and engine status; absence of artifacts is not a negative scan result.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_109",
+      "name": "SQLMap evidence handling: Clean artifacts carefully",
+      "description": "Remove expired assessment files only after confirming retention needs.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. List the exact run directory and obtain approval before deletion; never remove unrelated workspace data.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_110",
+      "name": "SQLMap evidence handling: Compare two runs",
+      "description": "Review only authorized runs with matching scope and settings.",
+      "category": "SQLMap / Output and evidence",
+      "instructions": "Workflow:\n1. Keep engine files private and SQLMap run artifacts in workspace `.sqlmap/output`.\n2. Associate each artifact with one authorized engagement and follow the agreed retention period.\n3. Compare redacted summaries/profile metadata and explain changed inputs or environment before drawing conclusions.\n4. Review files before sharing; remove credentials, personal data, and unnecessary response content.\n\nSafety: share only minimum redacted evidence. Do not include dumped records, live credentials, server files, or data outside the approved scope.",
+      "enabled": false
+    }
+  ]
+}

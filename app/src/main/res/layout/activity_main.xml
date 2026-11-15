@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_root">
+
+        <!-- Top bars container: holds the normal top bar and the selection bar.
+             Bubbles are constrained below this container so they can never draw
+             over the toolbar buttons (e.g. the Delete button during long-press
+             selection). -->
+        <FrameLayout
+            android:id="@+id/topBarsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineProvider="bounds"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp"
+                android:fitsSystemWindows="true">
+
+                <ImageButton
+                    android:id="@+id/btnMenu"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_menu"
+                    android:contentDescription="@string/open_drawer"
+                    app:tint="@color/text_primary" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnGhost"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_new_chat"
+                    android:contentDescription="@string/new_chat"
+                    app:tint="@color/text_primary" />
+            </LinearLayout>
+
+            <!-- Selection top bar (shown when messages are selected via long-press) -->
+            <LinearLayout
+                android:id="@+id/selectionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/bg_root"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btnCloseSelection"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="@string/close_selection"
+                    app:tint="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvSelectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="" />
+
+                <ImageButton
+                    android:id="@+id/btnOpenSelection"
+                    android:layout_width="40dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/open_message_action"
+                    android:src="@drawable/ic_file"
+                    android:visibility="gone"
+                    app:tint="@color/text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnCopySelection"
+                    android:layout_width="40dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/copy_message"
+                    android:src="@drawable/ic_copy"
+                    android:visibility="gone"
+                    app:tint="@color/text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnEditSelection"
+                    android:layout_width="40dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/edit_message"
+                    android:src="@drawable/ic_edit"
+                    android:visibility="gone"
+                    app:tint="@color/text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnSelectAll"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_check"
+                    android:contentDescription="@string/select_all"
+                    app:tint="@color/text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteSelection"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="@string/delete_selected"
+                    app:tint="#E53935" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Empty state: burst icon + greeting -->
+        <LinearLayout
+            android:id="@+id/emptyState"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintTop_toBottomOf="@id/topBarsContainer"
+            app:layout_constraintBottom_toTopOf="@id/composerCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableTopCompat="@drawable/ic_burst"
+                android:drawablePadding="20dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp"
+                android:lineSpacingExtra="2dp"
+                tools:text="Clocking in for the evening shift." />
+        </LinearLayout>
+
+        <!-- Message list, hidden until the first message is sent -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagesRecycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/topBarsContainer"
+            app:layout_constraintBottom_toTopOf="@id/composerCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Soft top-cast shadow: Android's elevation shadow is strongest below this bottom-anchored card. -->
+        <View
+            android:id="@+id/composerTopShadow"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:background="@drawable/bg_composer_top_shadow"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toTopOf="@id/composerCard"
+            app:layout_constraintStart_toStartOf="@id/composerCard"
+            app:layout_constraintEnd_toEndOf="@id/composerCard" />
+
+        <!-- Composer card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/composerCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="1dp"
+            app:cardMaxElevation="1dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp">
+
+                <!-- Message input -->
+                <!-- saveEnabled=false: every EditText always freezes its FULL text into the
+                     saved-instance-state Bundle (see EditText#getFreezesText), and this
+                     composer regularly holds large pasted dumps/code. That bundle rides in
+                     ONE Binder transaction at Activity.stop() and crashed with
+                     TransactionTooLargeException (564,072-byte parcel). Composer text is
+                     saved/restored explicitly (and capped, with a DB fallback) by
+                     MainActivity via STATE_COMPOSER_TEXT instead. -->
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:saveEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_chat"
+                    android:textColorHint="@color/text_secondary"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="6dp"
+                    android:minHeight="40dp"
+                    android:maxLines="6"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:importantForAutofill="no" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/composerAttachmentChips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="14dp"
+                    android:visibility="gone"
+                    app:chipSpacingHorizontal="6dp"
+                    app:chipSpacingVertical="4dp" />
+
+                <!-- Bottom controls -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="6dp">
+
+                    <ImageButton
+                        android:id="@+id/btnPlus"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_circle_gray_ripple"
+                        android:src="@drawable/ic_plus"
+                        android:contentDescription="@string/add_attachment"
+                        app:tint="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/btnModelSelector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_pill_ripple"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="9dp"
+                        android:text="@string/model_label"
+                        android:drawablePadding="6dp"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        app:drawableEndCompat="@drawable/ic_cloud_model"
+                        app:drawableTint="@color/text_secondary" />
+
+                    <ImageButton
+                        android:id="@+id/btnMic"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_circle_gray_ripple"
+                        android:src="@drawable/ic_mic"
+                        android:contentDescription="@string/voice_input"
+                        app:tint="@color/text_secondary" />
+
+                    <ImageButton
+                        android:id="@+id/btnSend"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_circle_brand"
+                        android:src="@drawable/ic_waveform"
+                        android:contentDescription="@string/voice_input"
+                        app:tint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compact conversation surface shown while Android displays this Activity in PiP. -->
+        <LinearLayout
+            android:id="@+id/pipChatOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/bg_root"
+            android:elevation="24dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/pipChatTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Current chat" />
+
+            <TextView
+                android:id="@+id/pipChatStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                tools:text="Thinking…" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pipMessagesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/bg_surface"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_drawer_menu"
+        app:itemTextAppearance="@style/NavItemTextAppearance"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemBackground="@drawable/bg_nav_item"
+        app:itemHorizontalPadding="12dp"
+        app:itemIconPadding="16dp" />
+
+    <!-- File-level diff panel, opened from a file row in the chat change summary. -->
+    <LinearLayout
+        android:id="@+id/fileDiffDrawer"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/bg_surface"
+        android:elevation="16dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_file"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Changes"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnCloseFileDiff"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Close file changes"
+                android:src="@drawable/ic_close"
+                app:tint="@color/text_secondary" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Last Turn"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvDiffTurnAdditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/status_online"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="+105" />
+
+            <TextView
+                android:id="@+id/tvDiffTurnDeletions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/chip_error_fg"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="-15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDiffFilePath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:maxLines="2"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="app/src/main/java/com/example/oreshik/agent/security/AccessibilityRootFixer.kt" />
+
+        <TextView
+            android:id="@+id/tvDiffFileCounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            tools:text="+50  -11   ·   Modified" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFileDiff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="4dp"
+                android:paddingBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvDiffEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="28dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="A text preview is unavailable for this file." />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

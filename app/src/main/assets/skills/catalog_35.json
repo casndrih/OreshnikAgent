@@ -1,0 +1,145 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_sec2_threat-model-feature",
+   "name": "Security engineering: threat model feature",
+   "description": "Perform threat model feature on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for threat model feature.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_authn-design-review",
+   "name": "Security engineering: authn design review",
+   "description": "Perform authn design review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for authn design review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_authz-matrix-audit",
+   "name": "Security engineering: authz matrix audit",
+   "description": "Perform authz matrix audit on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for authz matrix audit.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_session-policy-review",
+   "name": "Security engineering: session policy review",
+   "description": "Perform session policy review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for session policy review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_crypto-usage-audit",
+   "name": "Security engineering: crypto usage audit",
+   "description": "Perform crypto usage audit on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for crypto usage audit.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_randomness-audit",
+   "name": "Security engineering: randomness audit",
+   "description": "Perform randomness audit on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for randomness audit.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_secret-storage-review",
+   "name": "Security engineering: secret storage review",
+   "description": "Perform secret storage review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for secret storage review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_tls-config-review",
+   "name": "Security engineering: tls config review",
+   "description": "Perform tls config review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for tls config review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_input-pipeline-map",
+   "name": "Security engineering: input pipeline map",
+   "description": "Perform input pipeline map on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for input pipeline map.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_output-encoding-map",
+   "name": "Security engineering: output encoding map",
+   "description": "Perform output encoding map on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for output encoding map.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_file-upload-policy",
+   "name": "Security engineering: file upload policy",
+   "description": "Perform file upload policy on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for file upload policy.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_download-policy",
+   "name": "Security engineering: download policy",
+   "description": "Perform download policy on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for download policy.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_rate-limit-design",
+   "name": "Security engineering: rate limit design",
+   "description": "Perform rate limit design on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for rate limit design.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_anti-automation-review",
+   "name": "Security engineering: anti automation review",
+   "description": "Perform anti automation review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for anti automation review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_log-audit-design",
+   "name": "Security engineering: log audit design",
+   "description": "Perform log audit design on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for log audit design.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_privacy-data-map",
+   "name": "Security engineering: privacy data map",
+   "description": "Perform privacy data map on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for privacy data map.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_retention-policy",
+   "name": "Security engineering: retention policy",
+   "description": "Perform retention policy on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for retention policy.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_dsar-flow-review",
+   "name": "Security engineering: dsar flow review",
+   "description": "Perform dsar flow review on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for dsar flow review.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_pen-test-prep",
+   "name": "Security engineering: pen test prep",
+   "description": "Perform pen test prep on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for pen test prep.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sec2_fix-verification-loop",
+   "name": "Security engineering: fix verification loop",
+   "description": "Perform fix verification loop on this project.",
+   "instructions": "Workflow:\n1. Gather context (file.read relevant code/config).\n2. web.search the standard checklist for fix verification loop.\n3. Audit and record findings with file:line.\n4. Propose fixes with effort estimates.\n5. Track to completion.",
+   "enabled": false
+  }
+ ]
+}

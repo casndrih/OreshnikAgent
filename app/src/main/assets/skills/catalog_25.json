@@ -1,0 +1,390 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_wx3_wx3_union_select",
+   "name": "UNION-based extraction",
+   "description": "Use UNION SELECT for data extraction.",
+   "instructions": "Workflow:\n1. Determine column count via ORDER BY probes (http.replay).\n2. Find a reflecting column.\n3. Union the target table with proof columns.\n4. Extract minimal rows as evidence.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_error_based",
+   "name": "Error-based extraction",
+   "description": "Use error messages as data channels.",
+   "instructions": "Workflow:\n1. Induce cast/conversion errors carrying data (http.replay).\n2. Parse data from error text (python.run_file).\n3. Extract proof values.\n4. Rate-limit extraction.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_waf_bypass_sql",
+   "name": "SQLi WAF bypass techniques",
+   "description": "Evade filters lawfully in labs.",
+   "instructions": "Workflow:\n1. Fingerprint the filter (error diffs).\n2. Try case/comments/encoding variants (python.run_file matrix).\n3. Verify execution per variant.\n4. Keep the winning minimal payload.\n5. Document the filter.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_second_order_sqli",
+   "name": "Second-order SQLi",
+   "description": "Exploit stored-then-executed SQL.",
+   "instructions": "Workflow:\n1. Store payload via input A (http.replay).\n2. Trigger use in query B.\n3. Confirm error/data signal.\n4. Automate the pair test (python.run_file).\n5. Report the pair.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_hql_injection",
+   "name": "HQL/ORM injection",
+   "description": "Test ORM-layer injection.",
+   "instructions": "Workflow:\n1. Identify ORM query building (error signatures).\n2. Probe HQL-specific syntax via http.replay.\n3. Confirm differences from raw SQL.\n4. Report ORM misuse.\n5. Recommend parameterization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_xpath_injection",
+   "name": "XPath injection",
+   "description": "Test XML query building.",
+   "instructions": "Workflow:\n1. Locate XPath usage (error strings).\n2. Probe with metacharacters (http.replay).\n3. Extract node proof.\n4. Automate a small matrix (python.run_file).\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_template_sandbox_escape",
+   "name": "Sandbox escape awareness",
+   "description": "Understand sandboxed template limits.",
+   "instructions": "Workflow:\n1. Fingerprint the sandbox (probes).\n2. Enumerate blocked globals (error-driven, lab only).\n3. Document reachability limits.\n4. Recommend sandbox upgrades.\n5. No production escapes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_privesc_webshell",
+   "name": "Webshell detection hygiene",
+   "description": "Detect existing webshells (defense).",
+   "instructions": "Workflow:\n1. Scan webroots for suspicious files (python.run_file patterns).\n2. Compare with deploy manifests.\n3. Inspect access logs for odd patterns (python.run_file).\n4. Remove and rotate secrets on hit.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_deser_php",
+   "name": "PHP deserialization probes",
+   "description": "Test PHP object injection (lab).",
+   "instructions": "Workflow:\n1. Identify serialized cookies/params (http.capture).\n2. Craft gadget-chain probes from available classes (python.run_file).\n3. Confirm via benign callbacks only.\n4. Document the gadget.\n5. Recommend dropping serialization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx3_wx3_csv_injection",
+   "name": "CSV/Formula injection",
+   "description": "Test spreadsheet formula abuse.",
+   "instructions": "Workflow:\n1. Export data with =cmd-style cells via your app (http.replay input).\n2. Open in a spreadsheet (user-assisted lab).\n3. Observe formula execution.\n4. Report.\n5. Recommend cell prefix sanitization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_shellcode_basics",
+   "name": "Shellcode fundamentals (lab)",
+   "description": "Understand position-independent code.",
+   "instructions": "Workflow:\n1. Assemble tiny stubs (process.exec nasm if present).\n2. Test in a controlled harness (python.run_file loader).\n3. Analyze with re.ghidra.analyze.\n4. Document syscalls used.\n5. Lab only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_format_string",
+   "name": "Format string exploitation (lab)",
+   "description": "Exploit printf-family bugs.",
+   "instructions": "Workflow:\n1. Identify user-controlled format strings (file.read).\n2. Leak stack with %p walks (lab run).\n3. Write via %n in lab binaries.\n4. Document offset map.\n5. No production testing.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_heap_basics",
+   "name": "Heap exploitation intro (lab)",
+   "description": "Understand allocator behavior.",
+   "instructions": "Workflow:\n1. Study allocator of the target (web.search docs).\n2. Exercise with python.run_file crafted sequences.\n3. Observe with debuggers (process.exec gdb).\n4. Document primitives gained.\n5. Lab only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_fuzz_aho",
+   "name": "AFL-style fuzzing notes",
+   "description": "Run coverage-guided fuzzing locally.",
+   "instructions": "Workflow:\n1. Build the target with instrumentation (clang.exec flags).\n2. Seed corpus from samples (file.write).\n3. Run the fuzzer (process.exec) in the lab.\n4. Triage crashes (process.exec gdb).\n5. Report reproducers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_poc_fuzz_bridge",
+   "name": "PoC-to-fuzzer bridge",
+   "description": "Turn PoCs into fuzz seeds.",
+   "instructions": "Workflow:\n1. Extract request/payload structures (python.run_file).\n2. Generate seed corpus variants (python.run_file).\n3. Feed the fuzzer.\n4. Track new coverage.\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_exploit_reliability",
+   "name": "Exploit reliability engineering",
+   "description": "Measure exploit success rates.",
+   "instructions": "Workflow:\n1. Run the exploit N times against the lab (python.run_file).\n2. Record success/failure reasons.\n3. Improve determinism (timeouts, order).\n4. Report reliability %.\n5. Keep stats.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_reversing_protobuf",
+   "name": "Protobuf schema recovery",
+   "description": "Reverse wire formats.",
+   "instructions": "Workflow:\n1. Capture sample messages (tcpdump.capture).\n2. Decode field numbers/types (python.run_file protoc --decode_raw style).\n3. Reconstruct the schema (file.write).\n4. Validate against more samples.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_custom_cryptanalysis",
+   "name": "Custom cipher analysis",
+   "description": "Attack home-made ciphers.",
+   "instructions": "Workflow:\n1. Collect plaintext/ciphertext pairs (http.capture).\n2. Test for linearity/biases (python.run_file stats).\n3. Attempt key recovery in the lab.\n4. Document weaknesses.\n5. Recommend standard crypto.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_bypass_filter_chains",
+   "name": "Filter chain analysis",
+   "description": "Analyze layered input filters.",
+   "instructions": "Workflow:\n1. Map each layer's behavior (probe matrix, python.run_file).\n2. Find composition gaps.\n3. Craft payloads exploiting gaps (lab).\n4. Document the chain.\n5. Recommend simplification.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_exploit_docs",
+   "name": "Exploit documentation standards",
+   "description": "Document exploits professionally.",
+   "instructions": "Workflow:\n1. Sections: summary, prerequisites, steps, cleanup (file.write).\n2. Include reliability data.\n3. Attach the PoC with license.\n4. Redact sensitive targets.\n5. Version the doc.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_payload_obfuscation_lab",
+   "name": "Payload obfuscation (lab)",
+   "description": "Understand AV-style evasion conceptually.",
+   "instructions": "Workflow:\n1. Explain why obfuscation harms maintainability.\n2. Demo encoder layers in the lab (python.run_file).\n3. Detection notes for defenders.\n4. No deployment guidance.\n5. Ethical boundary stated.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_crlf_injection",
+   "name": "CRLF injection testing",
+   "description": "Test header/body injection.",
+   "instructions": "Workflow:\n1. Probe with %0d%0a in params (http.replay).\n2. Observe response splitting signals.\n3. Confirm header injection safely (benign header).\n4. Report.\n5. Recommend input sanitization.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_open_redirect_chains",
+   "name": "Open redirect chains",
+   "description": "Chain redirects for phishing risk.",
+   "instructions": "Workflow:\n1. Enumerate redirect endpoints (web.crawl).\n2. Test arbitrary targets (http.replay).\n3. Build a chain across hosts (conceptual).\n4. Report risk.\n5. Recommend allowlists.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_cache_poison_lab",
+   "name": "Cache poisoning (lab)",
+   "description": "Test cache key abuse safely.",
+   "instructions": "Workflow:\n1. Identify unkeyed inputs (param detective probes, python.run_file).\n2. Poison your own test cache entry only.\n3. Verify served content change.\n4. Revert immediately.\n5. Report with Vary/keys fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_exp2_exp2_websocket_smuggling",
+   "name": "WS handshake abuse (lab)",
+   "description": "Test upgrade handling.",
+   "instructions": "Workflow:\n1. Craft ambiguous upgrade requests (http.replay).\n2. Observe front/back behavior.\n3. Confirm desync safely in the lab.\n4. Document.\n5. Report stack fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_pwn_got_overwrite",
+   "name": "GOT overwrite basics (lab)",
+   "description": "Redirect execution via GOT.",
+   "instructions": "Workflow:\n1. Identify target GOT entry (re.rabin2 relocations).\n2. Compute write primitive usage.\n3. Overwrite in the lab run.\n4. Verify control.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_rerouting_calls",
+   "name": "Function hooking in labs",
+   "description": "Hook functions locally.",
+   "instructions": "Workflow:\n1. Use LD_PRELOAD (process.exec) for imports.\n2. Or patch entry bytes (mem.write in process memory via tools).\n3. Observe behavior differences.\n4. Document the hook.\n5. Lab only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_android_flags",
+   "name": "Android CTF challenges",
+   "description": "Solve mobile challenges.",
+   "instructions": "Workflow:\n1. re.apk.decode the challenge APK.\n2. Trace flag checks (file.search/re.ghidra.analyze).\n3. Patch or compute the flag (python.run_file).\n4. Verify in the app (androidopenapp).\n5. Write-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_wifi_challenges",
+   "name": "Wireless CTF challenges",
+   "description": "Solve Wi-Fi capture tasks.",
+   "instructions": "Workflow:\n1. Analyze provided pcaps (python.run_file).\n2. Extract handshakes presence (analysis only).\n3. Dictionary attempts on provided captures per rules.\n4. Record the method.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_blockchain_intro",
+   "name": "Blockchain challenge basics",
+   "description": "Understand contract challenges.",
+   "instructions": "Workflow:\n1. Read the contract source (file.read).\n2. Identify reentrancy/overflow patterns.\n3. Draft the exploit transaction (conceptual/local chain).\n4. Execute on the challenge testnet only.\n5. Write-up.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_osint_chains",
+   "name": "OSINT challenges",
+   "description": "Solve intelligence tasks.",
+   "instructions": "Workflow:\n1. Search pivots: names, images, domains (web.search).\n2. Cross-reference findings (python.run_file notes).\n3. Track a chain-of-custody file.\n4. Verify final answers.\n5. Document sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_lockpicking_logic",
+   "name": "Logical puzzles",
+   "description": "Solve logic-based challenges.",
+   "instructions": "Workflow:\n1. Formalize constraints (python.run_file solver sketches).\n2. Search the space smartly (prune).\n3. Validate the solution.\n4. Explain the reasoning.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_forensics_memory",
+   "name": "Memory forensics basics",
+   "description": "Analyze memory dumps.",
+   "instructions": "Workflow:\n1. Identify the OS/profile (python.run_file strings triage).\n2. Extract processes/history artifacts (python.run_file).\n3. Hunt flags/secrets.\n4. Record evidence paths.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_password_research",
+   "name": "Password research basics",
+   "description": "Analyze password distributions ethically.",
+   "instructions": "Workflow:\n1. Work only with provided/authorized datasets.\n2. Compute statistics (python.run_file).\n3. Derive patterns (masks).\n4. Document findings for defenders.\n5. No live attacks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ctf2_ctf2_scoring_strategy",
+   "name": "Event scoring strategy",
+   "description": "Maximize event points.",
+   "instructions": "Workflow:\n1. Inventory challenges and points (file.write).\n2. Order by expected-time-per-point.\n3. Time-box; hand off stuck ones.\n4. Track solved map.\n5. Post-event review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_exec_brief",
+   "name": "Executive risk brief",
+   "description": "Deliver leadership-ready briefs.",
+   "instructions": "Workflow:\n1. One page: top risks, business impact, asks (file.write).\n2. Quantify exposure in money/downtime terms.\n3. Visual summary (chart).\n4. Review with owner.\n5. Present.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_technical_appendix",
+   "name": "Technical appendix standards",
+   "description": "Detail for engineers.",
+   "instructions": "Workflow:\n1. Per-finding deep dives (file.write).\n2. Full evidence chains (references).\n3. Repro environments.\n4. Fix snippets.\n5. Test guidance.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_remediation_plan",
+   "name": "30/60/90 remediation plan",
+   "description": "Plan fixes over quarters.",
+   "instructions": "Workflow:\n1. Group fixes by effort/risk (python.run_file sort).\n2. Assign windows.\n3. Define success metrics.\n4. Review checkpoints.\n5. Publish.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_compliance_mapping",
+   "name": "Compliance mapping",
+   "description": "Map findings to standards.",
+   "instructions": "Workflow:\n1. Map to OWASP/PCI/SOC controls (web.search).\n2. Note gaps per control (python.run_file matrix).\n3. Recommend evidence to collect.\n4. Audit-readiness summary.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_metrics_review",
+   "name": "Program metrics review",
+   "description": "Review security KPIs.",
+   "instructions": "Workflow:\n1. MTTR, coverage, density trends (python.run_file).\n2. Explain movements.\n3. Recommend focus shifts.\n4. Publish dashboard (chart).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_board_update",
+   "name": "Board update style",
+   "description": "Communicate at board level.",
+   "instructions": "Workflow:\n1. Risk heatmap (chart).\n2. Three wins, three asks.\n3. No raw vulns.\n4. Trend arrows.\n5. Keep to one page.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_incident_report",
+   "name": "Incident report standards",
+   "description": "Write incident reports.",
+   "instructions": "Workflow:\n1. Facts timeline, impact, root cause (file.write).\n2. What worked/failed.\n3. Corrective actions with owners.\n4. Detection improvements.\n5. Review date.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_bugtriage_notes",
+   "name": "Bug triage notes",
+   "description": "Triage incoming reports fairly.",
+   "instructions": "Workflow:\n1. Reproduce first (verify claims).\n2. Score with the matrix (cat_tool_severity_matrix).\n3. Dup-check against register (python.run_file).\n4. Respond with timeline.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_threat_intel_brief",
+   "name": "Threat intel briefs",
+   "description": "Summarize threat landscape.",
+   "instructions": "Workflow:\n1. Relevant campaigns to your stack (web.search).\n2. IOCs and TTPs (file.write).\n3. Detection ideas.\n4. Actions for the week.\n5. Distribute.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rep2_rep2_training_deck",
+   "name": "Training deck builder",
+   "description": "Build security training decks.",
+   "instructions": "Workflow:\n1. Outline per audience (file.write).\n2. Slides from real findings (redacted).\n3. Hands-on demo steps.\n4. Quiz.\n5. Schedule.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_parallel_runner",
+   "name": "Parallel task runner",
+   "description": "Run tools concurrently, safely.",
+   "instructions": "Workflow:\n1. Worker pool with per-host locks (python.run_file).\n2. Global rate cap.\n3. Failure isolation per task.\n4. Aggregated logs.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_state_store",
+   "name": "Scan state store",
+   "description": "Persist run state.",
+   "instructions": "Workflow:\n1. JSON state with step pointers (file.write).\n2. Atomic writes (python.run_file).\n3. Resume support.\n4. History of runs.\n5. Prune old states.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_diff_visualizer",
+   "name": "Diff visualization",
+   "description": "Visualize scan diffs.",
+   "instructions": "Workflow:\n1. Render before/after tables (python.run_file).\n2. Color-code by change type (chart).\n3. Export PNG.\n4. Embed in reports.\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_ioc_extractor",
+   "name": "IOC extractor",
+   "description": "Pull indicators from reports.",
+   "instructions": "Workflow:\n1. Regex pass over artifacts (python.run_file).\n2. Normalize (domains, hashes, IPs).\n3. Score by source quality.\n4. Emit STIX-like JSON (file.write).\n5. Share.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_checklist_runner",
+   "name": "Checklist runner",
+   "description": "Execute checklists programmatically.",
+   "instructions": "Workflow:\n1. Define checks as JSON (file.write).\n2. Runner executes each (python.run_file).\n3. Records pass/fail with evidence.\n4. Summary report.\n5. Track over time.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_notes_merger",
+   "name": "Notes merger",
+   "description": "Merge multi-session notes.",
+   "instructions": "Workflow:\n1. Parse note files (file.read).\n2. Dedupe by topic (python.run_file).\n3. Merge timelines.\n4. Single canonical file.\n5. Archive raws.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_report_pdf_note",
+   "name": "Report export flow",
+   "description": "Produce final documents.",
+   "instructions": "Workflow:\n1. Render markdown to shareable format (user-approved export).\n2. Include charts and evidence links.\n3. Version the output.\n4. Store in the workspace.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_intake_form",
+   "name": "Engagement intake form",
+   "description": "Standardize engagement starts.",
+   "instructions": "Workflow:\n1. Intake template: scope, contacts, constraints (file.write).\n2. Validate completeness (python.run_file).\n3. Generate engagement folder.\n4. Kick off recon.\n5. Confirm with the owner.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_exit_report",
+   "name": "Engagement exit report",
+   "description": "Close engagements cleanly.",
+   "instructions": "Workflow:\n1. Deliverables list (file.write).\n2. Open items and risks.\n3. Data disposal confirmation.\n4. Lessons learned.\n5. Sign-off.",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool2_tool2_env_provision",
+   "name": "Lab provisioning notes",
+   "description": "Provision practice labs.",
+   "instructions": "Workflow:\n1. Compose lab from known-vulnerable images (file.write plan).\n2. Isolate network.\n3. Verify out-of-scope isolation.\n4. Snapshot baseline.\n5. Document.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_141",
+      "name": "SQLMap request boundaries: Prepare JSON request headers",
+      "description": "Represent an approved JSON body through supported app fields.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Put body in `data`, set expected method, and add one `Content-Type: application/json` line in `headers`.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_142",
+      "name": "SQLMap request boundaries: Format multi-line headers",
+      "description": "Supply multiple approved headers without shell escaping mistakes.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Separate each `Name: value` with a newline, inspect duplicates, and redact secrets before sharing.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_143",
+      "name": "SQLMap request boundaries: Use bounded API account",
+      "description": "Assess an API input without granting broad endpoint access.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Use temporary read-only identity, one approved route, and minimum headers; stop if response exposes data beyond the fixture.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_144",
+      "name": "SQLMap request boundaries: Handle unsupported request files",
+      "description": "Recognize when raw requests or multipart upload are not represented by the schema.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Do not approximate missing fields; request app support or a dedicated safe fixture before proceeding.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_145",
+      "name": "SQLMap request boundaries: Avoid CLI bypass",
+      "description": "Keep raw `process.exec` from defeating structured controls.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Use it for version/help inspection only; send target scans through `web.sqlmap` with explicit authorization.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_146",
+      "name": "SQLMap request boundaries: Test approved query input",
+      "description": "Use the supported URL parameter path for one named API input.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Preserve owner-approved URL, set `parameter` to the exact key, and do not probe undocumented sibling routes.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_147",
+      "name": "SQLMap request boundaries: Avoid identifier enumeration",
+      "description": "Keep identifiers constrained to owner-seeded test data.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Do not alter IDs to discover other users or tenants; use supplied values and report unexpected access immediately.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_148",
+      "name": "SQLMap request boundaries: Review redirect destination",
+      "description": "Account for HTTP behavior that may leave the named host.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Ask owner to confirm final destination; if outside allowlist, stop instead of trying alternate flags.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_149",
+      "name": "SQLMap request boundaries: Handle route-embedded values",
+      "description": "Do not assume an identifier in a route is a supported parameter.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. If not represented by query/body fields, document the limitation and request an approved test harness.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_150",
+      "name": "SQLMap request boundaries: Keep within detection scope",
+      "description": "Separate safe confirmation from post-detection exploitation features.",
+      "category": "SQLMap / Supported request boundaries",
+      "instructions": "Workflow:\n1. Compare the request with fields the app supports: URL, parameter, method, data, cookie, and headers.\n2. Use only structured fields that faithfully represent the approved request.\n3. Use structured low-impact scanning and stop when a finding is confirmed; do not invoke dump, shell, file, tamper, or destructive options.\n4. If a required feature is unsupported, document the gap and stop instead of bypassing app controls.\n\nSafety: test only owner-authorized scope with web.sqlmap and \u0007uthorized_target=true. Keep defaults; do not dump records, use shells/server-file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

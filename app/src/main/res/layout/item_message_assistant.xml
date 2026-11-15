@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ChatGPT-style assistant message: full-width plain text (no bubble),
+     media previews render at full width below the text, with a subtle
+     copy action + meta row underneath. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingVertical="6dp">
+
+    <!-- Multi-select checkbox row. Hidden outside selection mode. -->
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="2dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:visibility="gone"
+        android:buttonTint="@color/brand_600"
+        android:contentDescription="@string/toggle_message_selection" />
+
+    <!-- Response text: full width, selectable, comfortable line spacing.
+         saveEnabled=false (defensive): a selectable TextView freezes its text into instance
+         state once a selection checkpoint exists — a huge reply must never be able to ride in
+         the stop-transaction parcel (TransactionTooLargeException). -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvText"
+        android:saveEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"
+        android:linksClickable="true"
+        android:textIsSelectable="true" />
+
+    <!-- Media Preview Container (images, webviews, videos, live browser) -->
+    <LinearLayout
+        android:id="@+id/linkPreviewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <!-- Actions + meta row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="2dp">
+
+        <ImageButton
+            android:id="@+id/btnCopy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/ic_copy"
+            app:tint="@color/text_tertiary"
+            android:contentDescription="@string/copy_message" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/text_tertiary"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

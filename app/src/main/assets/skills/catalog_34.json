@@ -1,0 +1,145 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_data2_schema-design",
+   "name": "Data engineering: schema design",
+   "description": "Execute schema design for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_migration-plan",
+   "name": "Data engineering: migration plan",
+   "description": "Execute migration plan for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_index-strategy",
+   "name": "Data engineering: index strategy",
+   "description": "Execute index strategy for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_query-optimization",
+   "name": "Data engineering: query optimization",
+   "description": "Execute query optimization for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_n-plus-one-hunt",
+   "name": "Data engineering: n plus one hunt",
+   "description": "Execute n plus one hunt for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_connection-pool-tuning",
+   "name": "Data engineering: connection pool tuning",
+   "description": "Execute connection pool tuning for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_transaction-scope-review",
+   "name": "Data engineering: transaction scope review",
+   "description": "Execute transaction scope review for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_isolation-level-choice",
+   "name": "Data engineering: isolation level choice",
+   "description": "Execute isolation level choice for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_read-replica-routing",
+   "name": "Data engineering: read replica routing",
+   "description": "Execute read replica routing for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_caching-invalidation",
+   "name": "Data engineering: caching invalidation",
+   "description": "Execute caching invalidation for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_etl-batch-design",
+   "name": "Data engineering: etl batch design",
+   "description": "Execute etl batch design for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_stream-processing-basics",
+   "name": "Data engineering: stream processing basics",
+   "description": "Execute stream processing basics for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_idempotent-writes",
+   "name": "Data engineering: idempotent writes",
+   "description": "Execute idempotent writes for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_dedup-strategies",
+   "name": "Data engineering: dedup strategies",
+   "description": "Execute dedup strategies for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_partitioning-plan",
+   "name": "Data engineering: partitioning plan",
+   "description": "Execute partitioning plan for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_archival-policy",
+   "name": "Data engineering: archival policy",
+   "description": "Execute archival policy for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_pitr-restore-test",
+   "name": "Data engineering: pitr restore test",
+   "description": "Execute pitr restore test for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_slow-query-log-analysis",
+   "name": "Data engineering: slow query log analysis",
+   "description": "Execute slow query log analysis for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_orm-antipatterns",
+   "name": "Data engineering: orm antipatterns",
+   "description": "Execute orm antipatterns for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  },
+  {
+   "id": "cat_data2_db-contract-tests",
+   "name": "Data engineering: db contract tests",
+   "description": "Execute db contract tests for this codebase.",
+   "instructions": "Workflow:\n1. Locate relevant code/config (file.search).\n2. Apply the standard approach (web.search for the specific technique).\n3. Propose changes (file.patch) with rollback notes.\n4. Verify with tests or EXPLAIN-style analysis.\n5. Record outcome.",
+   "enabled": false
+  }
+ ]
+}

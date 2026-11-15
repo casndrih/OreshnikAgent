@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_arch_layered",
+   "name": "Pattern: layered",
+   "description": "Apply the layered pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of layered.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_hexagonal",
+   "name": "Pattern: hexagonal",
+   "description": "Apply the hexagonal pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of hexagonal.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_onion",
+   "name": "Pattern: onion",
+   "description": "Apply the onion pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of onion.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_clean",
+   "name": "Pattern: clean",
+   "description": "Apply the clean pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of clean.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_event-driven",
+   "name": "Pattern: event driven",
+   "description": "Apply the event driven pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of event driven.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_cqrs",
+   "name": "Pattern: cqrs",
+   "description": "Apply the cqrs pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of cqrs.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_event-sourcing",
+   "name": "Pattern: event sourcing",
+   "description": "Apply the event sourcing pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of event sourcing.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_microservices",
+   "name": "Pattern: microservices",
+   "description": "Apply the microservices pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of microservices.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_modular-monolith",
+   "name": "Pattern: modular monolith",
+   "description": "Apply the modular monolith pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of modular monolith.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_serverless",
+   "name": "Pattern: serverless",
+   "description": "Apply the serverless pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of serverless.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_pipeline",
+   "name": "Pattern: pipeline",
+   "description": "Apply the pipeline pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of pipeline.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_broker",
+   "name": "Pattern: broker",
+   "description": "Apply the broker pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of broker.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_blackboard",
+   "name": "Pattern: blackboard",
+   "description": "Apply the blackboard pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of blackboard.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_space-based",
+   "name": "Pattern: space based",
+   "description": "Apply the space based pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of space based.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_micro-frontends",
+   "name": "Pattern: micro frontends",
+   "description": "Apply the micro frontends pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of micro frontends.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_strangler-fig",
+   "name": "Pattern: strangler fig",
+   "description": "Apply the strangler fig pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of strangler fig.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_sidecar",
+   "name": "Pattern: sidecar",
+   "description": "Apply the sidecar pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of sidecar.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_ambassador",
+   "name": "Pattern: ambassador",
+   "description": "Apply the ambassador pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of ambassador.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_anti-corruption-layer",
+   "name": "Pattern: anti corruption layer",
+   "description": "Apply the anti corruption layer pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of anti corruption layer.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_saga",
+   "name": "Pattern: saga",
+   "description": "Apply the saga pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of saga.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_outbox",
+   "name": "Pattern: outbox",
+   "description": "Apply the outbox pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of outbox.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_circuit-breaker",
+   "name": "Pattern: circuit breaker",
+   "description": "Apply the circuit breaker pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of circuit breaker.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_bulkhead",
+   "name": "Pattern: bulkhead",
+   "description": "Apply the bulkhead pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of bulkhead.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_retry-budget",
+   "name": "Pattern: retry budget",
+   "description": "Apply the retry budget pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of retry budget.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  },
+  {
+   "id": "cat_arch_throttling",
+   "name": "Pattern: throttling",
+   "description": "Apply the throttling pattern correctly.",
+   "instructions": "Workflow:\n1. Read the current architecture summary (file.read README/docs).\n2. web.search canonical description of throttling.\n3. Map where it fits (or not) in this codebase.\n4. Propose an adoption slice (file.write).\n5. Implement a thin vertical slice (file.patch) if approved.",
+   "enabled": false
+  }
+ ]
+}

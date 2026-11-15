@@ -1,0 +1,299 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_lng_rust_cargo_basics",
+   "name": "Rust project basics",
+   "description": "Work with Cargo projects.",
+   "instructions": "Workflow:\n1. file.read Cargo.toml for deps and features.\n2. Patch code with ownership rules in mind.\n3. Build via process.exec cargo check (if available) else note unavailability.\n4. Fix warnings first errors second.\n5. Summarize changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_rust_safety_audit",
+   "name": "Rust unsafe audit",
+   "description": "Review unsafe blocks critically.",
+   "instructions": "Workflow:\n1. file.search for unsafe blocks.\n2. Justify each: FFI, perf, invariants (comments).\n3. Wrap with safe abstractions where possible.\n4. Test edge inputs via a harness.\n5. Document remaining risks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_go_module_work",
+   "name": "Go modules workflow",
+   "description": "Manage Go dependencies.",
+   "instructions": "Workflow:\n1. file.read go.mod.\n2. Pin versions; explain MVS choices.\n3. Run builds/tests via process.exec go commands when available.\n4. Fix vet findings.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_go_concurrency",
+   "name": "Go concurrency patterns",
+   "description": "Use goroutines safely.",
+   "instructions": "Workflow:\n1. file.search for goroutines and channels.\n2. Check for races (shared state) by reading.\n3. Add contexts for cancellation.\n4. Propose race detector runs (process.exec).\n5. Document invariants.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_swift_ios_basics",
+   "name": "Swift/iOS project reading",
+   "description": "Read iOS projects for review.",
+   "instructions": "Workflow:\n1. file.read Package.swift/project files.\n2. Map modules and targets.\n3. Note API usage needing review (web.search for lifecycle).\n4. Summarize architecture.\n5. Record open questions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_dotnet_solution_nav",
+   "name": ".NET solution navigation",
+   "description": "Navigate large .NET solutions.",
+   "instructions": "Workflow:\n1. file.read the .sln and csproj files.\n2. Map project references (python.run_file).\n3. Identify entry points.\n4. Note package versions.\n5. Summarize structure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_dotnet_async_review",
+   "name": "C# async review",
+   "description": "Review async correctness.",
+   "instructions": "Workflow:\n1. file.search for async/await patterns.\n2. Flag async-void and .Result/.Wait() deadlocks.\n3. Check ConfigureAwait usage in libraries.\n4. Propose fixes with file.patch.\n5. Note test needs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_node_express_review",
+   "name": "Express app review",
+   "description": "Review Node/Express apps.",
+   "instructions": "Workflow:\n1. file.read app entry and routes.\n2. Check middleware order (auth before routes).\n3. Flag unvalidated inputs.\n4. Recommend validation libs.\n5. Summarize findings.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_node_stream_pipeline",
+   "name": "Node streams correctness",
+   "description": "Review stream pipelines.",
+   "instructions": "Workflow:\n1. file.search for pipe/pipeline usage.\n2. Prefer pipeline() for error propagation.\n3. Check backpressure handling.\n4. Propose fixes.\n5. Test via node.exec script.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_python_asyncio_review",
+   "name": "asyncio review",
+   "description": "Review event-loop code.",
+   "instructions": "Workflow:\n1. file.search for asyncio usage.\n2. Flag blocking calls inside coroutines.\n3. Check task cancellation handling.\n4. Propose to_thread for blocking IO.\n5. Verify with a python.run_file smoke.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_python_typing_adoption",
+   "name": "Type hints adoption",
+   "description": "Add typing incrementally.",
+   "instructions": "Workflow:\n1. Pick a module; annotate public functions first.\n2. Use mypy-style checks conceptually (python.run_file if available).\n3. Fix revealed bugs, not just annotations.\n4. Keep runtime unchanged.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_pytest_suite_design",
+   "name": "pytest suite design",
+   "description": "Structure Python tests well.",
+   "instructions": "Workflow:\n1. file.list tests; note fixtures.\n2. Parametrize cases; keep tests isolated.\n3. Mock external edges.\n4. Run via python.run_file -m pytest when available.\n5. Report coverage focus.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_junit5_patterns",
+   "name": "JUnit 5 patterns",
+   "description": "Write modern Java tests.",
+   "instructions": "Workflow:\n1. file.list existing tests.\n2. Use @Nested for grouping; lifecycle per class.\n3. Assert with messages.\n4. Run with gradle.exec.\n5. Report counts.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_mockito_basics",
+   "name": "Mockito usage",
+   "description": "Mock dependencies correctly.",
+   "instructions": "Workflow:\n1. file.search mock usage.\n2. Prefer constructor injection for seams.\n3. Verify interactions only when behavior matters.\n4. Keep stubs minimal.\n5. Run with gradle.exec.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_kotlin_dsl_gradle_tasks",
+   "name": "Custom Gradle tasks",
+   "description": "Write useful build tasks.",
+   "instructions": "Workflow:\n1. file.read build.gradle.kts task blocks.\n2. Add small, cacheable tasks.\n3. Wire inputs/outputs for up-to-date checks.\n4. Verify with gradle.exec taskName.\n5. Document usage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_shell_strict_mode",
+   "name": "Strict shell scripts",
+   "description": "Harden bash scripts.",
+   "instructions": "Workflow:\n1. file.read the script.\n2. Add set -euo pipefail and traps.\n3. Quote everything (review via grep).\n4. Dry-run harness via process.exec bash -n.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_make_phony_targets",
+   "name": "Makefile best practices",
+   "description": "Improve Makefiles.",
+   "instructions": "Workflow:\n1. file.read the Makefile.\n2. Add .PHONY correctly.\n3. Refactor repeated recipes into patterns.\n4. Verify via make.exec -n (dry run).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_cmake_targets_modern",
+   "name": "Modern CMake targets",
+   "description": "Modernize CMake files.",
+   "instructions": "Workflow:\n1. file.read CMakeLists.\n2. Prefer target_* commands over globals.\n3. Set compile features instead of standards flags where possible.\n4. Verify configure via make.exec flow.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_clang_sanitizers",
+   "name": "Sanitizer builds",
+   "description": "Run sanitized builds.",
+   "instructions": "Workflow:\n1. Patch build flags for ASan/UBSan (file.patch).\n2. Build via clang.exec.\n3. Run the harness; read reports.\n4. Fix first root causes.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_gdb_core_triage",
+   "name": "Core dump triage",
+   "description": "Analyze crash cores.",
+   "instructions": "Workflow:\n1. Collect the core and binary (process.exec).\n2. Load in gdb (process.exec) and get backtrace.\n3. Map to source (file.read).\n4. Identify the faulting line.\n5. Propose fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_valgrind_memcheck",
+   "name": "Memory error hunting",
+   "description": "Use memcheck effectively.",
+   "instructions": "Workflow:\n1. Build with debug symbols (clang.exec).\n2. Run under valgrind via process.exec (if available).\n3. Triage definite leaks first.\n4. Fix and re-run.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_regex_engine_differences",
+   "name": "Regex dialect awareness",
+   "description": "Handle dialect differences.",
+   "instructions": "Workflow:\n1. Identify the regex engine in use (file.search imports).\n2. Test the pattern across dialects with python.run_file.\n3. Adjust syntax accordingly.\n4. Document dialect notes.\n5. Verify with samples.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_datetime_pitfalls",
+   "name": "Date/time pitfalls",
+   "description": "Avoid classic datetime bugs.",
+   "instructions": "Workflow:\n1. file.search date parsing/formatting.\n2. Prefer explicit zones and ISO parsing.\n3. Test DST boundaries via python.run_file.\n4. Fix naive datetime usage.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_float_money_handling",
+   "name": "Money and floats",
+   "description": "Handle currency correctly.",
+   "instructions": "Workflow:\n1. file.search float usage on money.\n2. Convert to decimal/integer minor units with file.patch.\n3. Round explicitly at boundaries.\n4. Add tests for rounding (gradle.exec/python.run_file).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_serialization_safety",
+   "name": "Serialization safety",
+   "description": "Review deserialization surfaces.",
+   "instructions": "Workflow:\n1. file.search for deserialization entry points.\n2. Prefer schema-validated formats.\n3. Restrict types (no arbitrary classes).\n4. Add size/depth caps.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_sql_injection_defense",
+   "name": "Parameterized queries everywhere",
+   "description": "Fix string SQL.",
+   "instructions": "Workflow:\n1. file.search string-concatenated SQL.\n2. Replace with parameters/prepared statements (file.patch).\n3. Add a lint rule mentally for the codebase.\n4. Test queries still work.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_xss_defense_encoding",
+   "name": "Output encoding defense",
+   "description": "Encode per context.",
+   "instructions": "Workflow:\n1. Locate render paths (file.search).\n2. Apply context-aware encoding helpers.\n3. Add CSP as defense-in-depth.\n4. Test with benign markers.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_authz_centralization",
+   "name": "Centralized authorization",
+   "description": "Consolidate authz checks.",
+   "instructions": "Workflow:\n1. Map ad-hoc checks (file.search).\n2. Introduce a policy module.\n3. Route checks through it (file.patch).\n4. Add policy tests.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_secrets_in_code_hunt",
+   "name": "Secrets in code cleanup",
+   "description": "Remove committed secrets.",
+   "instructions": "Workflow:\n1. Scan the repo (python.run_file patterns).\n2. Revoke/rotate anything found (user action list).\n3. Purge history only with user approval.\n4. Add scanning to CI (doc).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_dependency_pin_discipline",
+   "name": "Dependency pinning discipline",
+   "description": "Make builds reproducible.",
+   "instructions": "Workflow:\n1. file.read manifests for floating ranges.\n2. Pin to exact/minor-locked versions (file.patch).\n3. Commit lockfiles.\n4. Verify reproducible build once.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_error_budget_alerting",
+   "name": "Alert design basics",
+   "description": "Design sane alerts.",
+   "instructions": "Workflow:\n1. Map SLIs from logs/metrics (file.read).\n2. Draft SLO-based alerts.\n3. Avoid per-error spam.\n4. Document runbook links.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_logging_structure",
+   "name": "Structured logging",
+   "description": "Improve log usefulness.",
+   "instructions": "Workflow:\n1. file.search print/log statements.\n2. Introduce structured fields (json logs) via a helper.\n3. Correlate with request ids.\n4. Redact sensitive fields.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_api_client_sdk",
+   "name": "Client SDK design",
+   "description": "Wrap APIs in friendly SDKs.",
+   "instructions": "Workflow:\n1. file.read API usage scattered in code (file.search).\n2. Design a small client class.\n3. Migrate call sites (file.patch).\n4. Add retry/timeouts inside.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_feature_toggles_cleanup",
+   "name": "Toggle cleanup",
+   "description": "Remove stale flags.",
+   "instructions": "Workflow:\n1. file.search flag checks.\n2. List flags with dates (file.write).\n3. Remove expired ones (file.patch).\n4. Verify behavior.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_performance_budget_check",
+   "name": "Performance budgets",
+   "description": "Enforce perf budgets.",
+   "instructions": "Workflow:\n1. Define budgets for key flows (file.write).\n2. Measure with timing harnesses (python.run_file).\n3. Flag regressions in review.\n4. Track trends.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_code_archaeology",
+   "name": "Legacy code archaeology",
+   "description": "Understand old code fast.",
+   "instructions": "Workflow:\n1. file.read entry points; trace one flow end-to-end.\n2. Note dead branches and TODOs (file.search).\n3. Draw the flow in text.\n4. List safe cleanup candidates.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_api_deprecation_flow",
+   "name": "API deprecation flow",
+   "description": "Deprecate APIs kindly.",
+   "instructions": "Workflow:\n1. Announce via docs/changelog (file.patch).\n2. Add Sunset headers if web.\n3. Log usage of deprecated paths.\n4. Set removal date.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_test_data_factories",
+   "name": "Test data factories",
+   "description": "Generate test fixtures cleanly.",
+   "instructions": "Workflow:\n1. Create factory helpers (file.write).\n2. Randomize with fixed seeds.\n3. Scope cleanup after tests.\n4. Use in suites (gradle.exec/pytest).\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_contract_first_api",
+   "name": "Contract-first APIs",
+   "description": "Design APIs from contracts.",
+   "instructions": "Workflow:\n1. Write the OpenAPI spec first (file.write).\n2. Generate/validate handlers against it (python.run_file check).\n3. Keep docs in sync.\n4. Test via contract tests.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_chaos_lite_checks",
+   "name": "Light chaos checks",
+   "description": "Verify resilience cheaply.",
+   "instructions": "Workflow:\n1. Inject latency/errors at boundaries (test env only).\n2. Observe retry/circuit behaviors (logs).\n3. Record weaknesses.\n4. Fix with backoff/timeout changes.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_accessibility_basics",
+   "name": "Accessibility pass",
+   "description": "Improve a11y basics.",
+   "instructions": "Workflow:\n1. file.read layouts for contentDescription/labels.\n2. Check focus order and touch targets.\n3. Fix gaps (file.patch).\n4. Verify via androidreadscreen semantics.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_lng_i18n_readiness",
+   "name": "i18n readiness",
+   "description": "Prepare for translation.",
+   "instructions": "Workflow:\n1. Extract hardcoded strings (file.search).\n2. Move to resources (file.patch).\n3. Check plural/format handling.\n4. Test with pseudo-locale strings.\n5. Summarize.",
+   "enabled": false
+  }
+ ]
+}

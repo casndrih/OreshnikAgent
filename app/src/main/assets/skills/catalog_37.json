@@ -1,0 +1,187 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_tool3_git-advanced",
+   "name": "Toolchain: git advanced",
+   "description": "Use git advanced effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_github-cli",
+   "name": "Toolchain: github cli",
+   "description": "Use github cli effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_gitlab-cli",
+   "name": "Toolchain: gitlab cli",
+   "description": "Use gitlab cli effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_docker-compose",
+   "name": "Toolchain: docker compose",
+   "description": "Use docker compose effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_dockerfile-optimize",
+   "name": "Toolchain: dockerfile optimize",
+   "description": "Use dockerfile optimize effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_make-advanced",
+   "name": "Toolchain: make advanced",
+   "description": "Use make advanced effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_just-runner",
+   "name": "Toolchain: just runner",
+   "description": "Use just runner effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_task-runner",
+   "name": "Toolchain: task runner",
+   "description": "Use task runner effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_bazel-basics",
+   "name": "Toolchain: bazel basics",
+   "description": "Use bazel basics effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_pants-basics",
+   "name": "Toolchain: pants basics",
+   "description": "Use pants basics effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_gradle-kts-deep",
+   "name": "Toolchain: gradle kts deep",
+   "description": "Use gradle kts deep effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_maven-advanced",
+   "name": "Toolchain: maven advanced",
+   "description": "Use maven advanced effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_sbt-basics",
+   "name": "Toolchain: sbt basics",
+   "description": "Use sbt basics effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_cargo-workspaces",
+   "name": "Toolchain: cargo workspaces",
+   "description": "Use cargo workspaces effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_pnpm-workspaces",
+   "name": "Toolchain: pnpm workspaces",
+   "description": "Use pnpm workspaces effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_turbo-repo",
+   "name": "Toolchain: turbo repo",
+   "description": "Use turbo repo effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_nx-workspace",
+   "name": "Toolchain: nx workspace",
+   "description": "Use nx workspace effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_poetry-workspaces",
+   "name": "Toolchain: poetry workspaces",
+   "description": "Use poetry workspaces effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_uv-basics",
+   "name": "Toolchain: uv basics",
+   "description": "Use uv basics effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_tool3_pipx-tools",
+   "name": "Toolchain: pipx tools",
+   "description": "Use pipx tools effectively here.",
+   "instructions": "Workflow:\n1. Detect usage (file.search configs).\n2. web.search the tool's key workflows.\n3. Apply the relevant workflow (file.patch/process.exec).\n4. Verify results.\n5. Document tips (file.write).",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_vscode-tasks",
+   "name": "Editor setup: vscode tasks",
+   "description": "Configure vscode tasks for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_jetbrains-runs",
+   "name": "Editor setup: jetbrains runs",
+   "description": "Configure jetbrains runs for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_neovim-lsp",
+   "name": "Editor setup: neovim lsp",
+   "description": "Configure neovim lsp for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_emacs-magit",
+   "name": "Editor setup: emacs magit",
+   "description": "Configure emacs magit for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_sublime-build",
+   "name": "Editor setup: sublime build",
+   "description": "Configure sublime build for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_editor_zed-settings",
+   "name": "Editor setup: zed settings",
+   "description": "Configure zed settings for this project.",
+   "instructions": "Workflow:\n1. Detect project type (file.read manifests).\n2. web.search recommended settings.\n3. Write config (file.write).\n4. Verify tasks/launch configs.\n5. Document.",
+   "enabled": false
+  }
+ ]
+}

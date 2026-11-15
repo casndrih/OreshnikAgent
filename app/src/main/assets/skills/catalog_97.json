@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "ai_gguf_quantize_mobile_safe_001",
+      "name": "GGUF quantization — mobile-safe workflow",
+      "description": "Quantize an existing local GGUF model with llama.cpp while preserving its source and checking device limits.",
+      "category": "Local AI / GGUF model management",
+      "instructions": "Use this skill only when the user asks to quantize an existing GGUF or reduce its local storage footprint. Never upload model data or fetch a replacement model.\n\nWorkflow:\n1. Confirm which GGUF is intended. If the user means the current offline model, use the selected model default; otherwise pass its app-model-folder or workspace path as source_path.\n2. Choose a target explicitly when the user specifies one. Otherwise use Q4_K_M as the practical mobile default. Explain that lower-bit formats reduce disk and memory needs but can reduce model quality.\n3. Preserve the source. Call gguf.quantize with quantization_type, and use a distinct output_name only when requested. The tool writes a new file beside the input and will not overwrite an existing file.\n4. Leave allow_requantize false unless the user explicitly requests requantizing an already-quantized model. Repeated quantization can compound quality loss.\n5. Wait for the tool to finish; do not report success while it is still running. On success, report the output path, format, and size, then tell the user it remains unselected until they choose it in Models & thinking.",
+      "enabled": true
+    },
+    {
+      "id": "ai_gguf_quantize_format_choice_001",
+      "name": "GGUF quantization — choose a target format",
+      "description": "Select a supported llama.cpp GGUF quantization format based on device storage, memory, and quality needs.",
+      "category": "Local AI / GGUF model management",
+      "instructions": "Before choosing a target, identify whether the user prioritizes smaller files, better fidelity, or a balanced mobile model. Use only formats supported by gguf.quantize: Q4_K_M, Q5_K_M, Q6_K, Q8_0, Q4_0, Q3_K_M, Q4_K_S, and F16. Q4_K_M is a balanced starting point for phones; Q5_K_M and Q6_K preserve more precision at larger sizes; Q3_K_M prioritizes compactness; Q8_0 and F16 are larger. Exact size and quality depend on model architecture and source type. Do not promise a specific quality score or file size without measuring the produced model.\n\nWorkflow:\n1. Keep the input model unchanged and select a new output filename.\n2. Use gguf.quantize with the requested target. The tool derives a device-aware thread count, checks available storage, and reports a failed or completed operation.\n3. If the target is not supported by this app version, tell the user which formats are available instead of substituting silently.\n4. After completion, explain that quantization changes weights and may affect output quality. Suggest trying the result on representative prompts before switching the active offline model.",
+      "enabled": false
+    },
+    {
+      "id": "ai_gguf_requantization_quality_001",
+      "name": "GGUF requantization — quality safeguards",
+      "description": "Handle conversion from an already-quantized GGUF only with explicit user intent and clear quality safeguards.",
+      "category": "Local AI / GGUF model management",
+      "instructions": "Use this skill when the source GGUF is already quantized or llama.cpp reports that requantization is required. Requantization can lose more quality than quantizing from F16 or F32.\n\nWorkflow:\n1. Explain that the original file will be preserved, but the new output may have additional quality loss. Prefer obtaining an original higher-precision GGUF when practical.\n2. Do not set allow_requantize=true unless the user explicitly asked to requantize or clearly approves after the tradeoff is explained.\n3. Call gguf.quantize with allow_requantize=true only for that approved operation, and choose a distinct output name.\n4. Never replace or delete the original automatically. Report the output size and recommend a representative inference comparison before switching models.",
+      "enabled": false
+    },
+    {
+      "id": "ai_gguf_quantize_output_validation_001",
+      "name": "GGUF quantization — output validation",
+      "description": "Check the quantizer result and guide a local smoke check without claiming quantization guarantees model quality.",
+      "category": "Local AI / GGUF model management",
+      "instructions": "After gguf.quantize reports completion, verify that the output path exists in the returned metadata, has a nonzero size, and is distinct from the source. The tool performs a GGUF-header check; that does not prove the model loads or retains the desired quality.\n\nWorkflow:\n1. Report success only from a successful tool result. If the operation fails, keep the source and report the error without calling it completed.\n2. Tell the user to select the new file in Models & thinking to load it. Do not silently change the active model.\n3. If the user asks for a runtime check, load the output and try a short representative prompt. Report load or inference errors separately from quantization success.\n4. Compare a few task-relevant prompts with the original when quality matters. Do not claim objective equivalence without an actual evaluation.",
+      "enabled": false
+    }
+  ]
+}

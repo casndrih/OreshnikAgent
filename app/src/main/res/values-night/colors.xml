@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_500">#26C6DA</color>
+    <color name="brand_600">#00ACC1</color>
+    <color name="colorOnPrimary">#002025</color>
+    <color name="bg_root">#000000</color>
+    <color name="bg_surface">#080808</color>
+    <color name="bg_card">#111111</color>
+    <color name="bg_dialog">#080808</color>
+    <color name="bg_pill">#171717</color>
+    <color name="bg_pill_dark">#050505</color>
+    <color name="bg_assistant_bubble">#111111</color>
+    <color name="canvas_bg">#000000</color>
+    <color name="divider">#242424</color>
+    <color name="composer_stroke">#2EFFFFFF</color>
+    <color name="chip_stroke">#2A2A2A</color>
+    <color name="chip_running_bg">#082A30</color>
+    <color name="chip_error_fg">#F2B8B5</color>
+    <color name="chip_error_bg">#2C1513</color>
+    <color name="composer_icon_bg">@color/bg_pill_dark</color>
+    <color name="text_primary">#F5F5F5</color>
+    <color name="text_secondary">#B7B7B7</color>
+    <color name="text_tertiary">#777777</color>
+    <color name="ripple_on_light">#3300ACC1</color>
+    <color name="ripple_on_brand">#40002025</color>
+
+    <!-- Provider/validation chip tones: the light-mode pastel fills are blinding
+         on the black canvas and their dark text is unreadable, so night mode gets
+         deep muted fills that pair with the light text_primary. Also referenced
+         by ToolsActivity permission chips and bg_permission_chip. -->
+    <color name="brand_100">#1A2910</color>
+    <color name="chip_neutral">#1E1E1E</color>
+    <color name="chip_success">#12291A</color>
+    <color name="chip_error">#3A1512</color>
+    <color name="chip_warning">#33290D</color>
+
+    <!-- Model status dots: brighter variants that read on the black canvas -->
+    <color name="status_online">#4ADE80</color>
+    <color name="status_offline">#F87171</color>
+    <color name="status_timeout">#FBBF24</color>
+    <color name="status_probing">#777777</color>
+    <color name="colorBackgroundDark">#000000</color>
+    <color name="colorSurfaceDark">#111111</color>
+    <color name="colorOnBackgroundDark">#F5F5F5</color>
+    <color name="colorOnSurfaceDark">#F5F5F5</color>
+    <!-- App launcher icon -->
+    <color name="ic_launcher_background">#000000</color>
+    <color name="ic_launcher_tint">#FFFFFF</color>
+</resources>

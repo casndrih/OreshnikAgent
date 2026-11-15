@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "packs": [],
+  "format": {
+    "description": "Publish a runtime ZIP as a GitHub release asset, then add its HTTPS asset URL and SHA-256 checksum to packs.",
+    "archive": "ZIP containing runtime.json at its root and all manifest entrypoint files.",
+    "example": {
+      "id": "radare2-extra",
+      "name": "radare2 tools",
+      "version": "1.0.0",
+      "description": "Optional ARM64 reverse engineering utilities",
+      "url": "https://github.com/casndrih/OreshnikAgent/releases/download/runtime-packs/radare2-extra.zip",
+      "sha256": "64-character-hex-sha256"
+    }
+  }
+}

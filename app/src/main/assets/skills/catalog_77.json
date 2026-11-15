@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_071",
+      "name": "SQLMap scan profile: Keep the baseline profile",
+      "description": "Use the safest app profile as the comparison point for every assessment.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Leave level/risk/technique/threads unset so app applies level 1, risk 1, BEU, one thread; record these values.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_072",
+      "name": "SQLMap scan profile: Understand level breadth",
+      "description": "Know what changing SQLMap `level` means before requesting broader coverage.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Start at level 1; increase only with owner approval, one step at a time, for named input types in the plan.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_073",
+      "name": "SQLMap scan profile: Keep risk at one",
+      "description": "Prevent higher-risk payloads from being enabled casually.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Use `risk=1`; if a different profile is explicitly required, pause for approval and a monitored window.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_074",
+      "name": "SQLMap scan profile: Choose technique conservatively",
+      "description": "Limit techniques to the default Boolean/error/union set initially.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Use BEU by default; do not add time-based or stacked-query methods just to force a signal.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_075",
+      "name": "SQLMap scan profile: Limit concurrency",
+      "description": "Control target pressure and reduce noisy results.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Keep `threads=1`; higher values require written rate guidance and active owner monitoring.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_076",
+      "name": "SQLMap scan profile: Set request timeout",
+      "description": "Use a bounded wait appropriate for the approved environment.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Keep the 10-second default unless the owner specifies a safe value from 1–30 seconds; timeout does not justify more threads.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_077",
+      "name": "SQLMap scan profile: Understand retry limits",
+      "description": "Avoid repeated requests when a server is failing.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. The app fixes retries at one; report repeated network/service errors instead of rerunning many attempts.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_078",
+      "name": "SQLMap scan profile: Respond to rate limiting",
+      "description": "Treat 429, 503, or explicit throttling as a stop signal.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Stop the run, preserve timestamp and redacted context, and ask the owner for a new rate plan; do not evade the limit.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_079",
+      "name": "SQLMap scan profile: Expand coverage incrementally",
+      "description": "Make each approved increase reviewable and attributable.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Change one bounded setting in a new call, compare to baseline, and record the reason for the increase.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_080",
+      "name": "SQLMap scan profile: Avoid risky raw flags",
+      "description": "Keep the unrestricted CLI from bypassing the structured scan contract.",
+      "category": "SQLMap / Scan profiles and rate",
+      "instructions": "Workflow:\n1. Begin with app defaults: level 1, risk 1, BEU, one thread, 10-second timeout, and one retry.\n2. Change one profile value only when written scope permits and the owner understands added request volume.\n3. Do not pass dump, shell, server-file, tamper/evasion, or destructive options through `process.exec`.\n4. Stop on 429/503, unusual latency, or service degradation; do not raise load to overcome a block.\n\nSafety: scan only owner-authorized scope using web.sqlmap and \u0007uthorized_target=true. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

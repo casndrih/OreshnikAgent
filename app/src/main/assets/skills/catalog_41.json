@@ -1,0 +1,509 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_apkx_smali-cookbook--logging-injection",
+   "name": "smali cookbook — logging injection",
+   "description": "Inject logging into smali methods.",
+   "instructions": "Workflow:\n1. file.read the target method.\n2. Add invoke-static to a helper logger class (file.patch).\n3. Create the helper class (file.write).\n4. re.apktool.build; re.apk.sign; re.apk.install.\n5. Observe logs (process.exec logcat).",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_smali-cookbook--constant-change",
+   "name": "smali cookbook — constant change",
+   "description": "Change constants in smali.",
+   "instructions": "Workflow:\n1. file.search const instructions near the logic.\n2. file.patch the literal (mind width).\n3. re.apktool.build to validate.\n4. Sign+install (pipeline).\n5. Verify behavior (androidreadscreen).",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_smali-cookbook--branch-flip",
+   "name": "smali cookbook — branch flip",
+   "description": "Invert a condition safely.",
+   "instructions": "Workflow:\n1. file.read the branch (if-eqz/nez).\n2. Swap the condition (file.patch).\n3. Rebuild; verify both paths.\n4. Sign+install.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_smali-cookbook--method-redirect",
+   "name": "smali cookbook — method redirect",
+   "description": "Redirect a call to a new method.",
+   "instructions": "Workflow:\n1. Add the new method (file.write smali).\n2. Patch the invoke target (file.patch).\n3. Keep signature identical.\n4. Rebuild+sign+install.\n5. Verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_smali-cookbook--remove-call",
+   "name": "smali cookbook — remove call",
+   "description": "Neutralize a call.",
+   "instructions": "Workflow:\n1. file.read the invoke site.\n2. Replace with nop (file.patch).\n3. Check register side effects.\n4. Rebuild+sign+install.\n5. Verify.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-resource-rename",
+   "name": "apk resource rename",
+   "description": "Rename a resource safely.",
+   "instructions": "Workflow:\n1. file.search all usages of the name.\n2. Patch public.xml + usages (file.patch).\n3. re.apktool.build.\n4. Install and verify (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-layout-tweak",
+   "name": "apk layout tweak",
+   "description": "Edit a layout file.",
+   "instructions": "Workflow:\n1. file.read the decoded layout XML.\n2. Patch attributes (file.patch).\n3. Rebuild (re.apktool.build).\n4. Sign+install; verify (android_screenshot).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-value-swap-flows",
+   "name": "apk value swap flows",
+   "description": "Swap strings/colors/dims.",
+   "instructions": "Workflow:\n1. Locate values file (file.list values-*).\n2. Patch (file.patch).\n3. Rebuild+sign+install.\n4. Verify in app.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-menu-tweaks",
+   "name": "apk menu tweaks",
+   "description": "Add or edit menu items.",
+   "instructions": "Workflow:\n1. file.read menu XML.\n2. Patch items (file.patch).\n3. Ensure handler exists (file.search).\n4. Rebuild+install; verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-minSdk-bump",
+   "name": "apk minSdk bump",
+   "description": "Bump minSdk in a decoded APK.",
+   "instructions": "Workflow:\n1. Patch manifest minSdkVersion (file.patch).\n2. Check code for API guards (file.search VERSION).\n3. Rebuild+sign+install on a matching device.\n4. Record risks.\n5. Verify launch.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-targetSdk-bump",
+   "name": "apk targetSdk bump",
+   "description": "Bump targetSdkVersion.",
+   "instructions": "Workflow:\n1. Patch manifest (file.patch).\n2. Review behavior changes checklist (web.search).\n3. Rebuild+sign+install.\n4. Test core flows (androidopenapp).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-permission-trim",
+   "name": "apk permission trim",
+   "description": "Remove unused permissions.",
+   "instructions": "Workflow:\n1. Correlate manifest permissions with code (file.search uses).\n2. Remove unused (file.patch).\n3. Rebuild+sign+install.\n4. Verify features still work.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-network-cleartext",
+   "name": "apk network cleartext",
+   "description": "Toggle cleartext policy.",
+   "instructions": "Workflow:\n1. file.read networkSecurityConfig.\n2. Patch domain rules (file.patch).\n3. Rebuild+install.\n4. Verify traffic behavior (http.capture).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-backup-toggle",
+   "name": "apk backup toggle",
+   "description": "Toggle allowBackup.",
+   "instructions": "Workflow:\n1. Patch manifest (file.patch).\n2. Rebuild+sign+install.\n3. Test adb backup behavior (process.exec).\n4. Record.\n5. Recommend default-off.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-exported-tighten",
+   "name": "apk exported tighten",
+   "description": "Tighten exported components (own app).",
+   "instructions": "Workflow:\n1. List exported components (re.apk.manifest).\n2. Set exported=false where unused (file.patch).\n3. Rebuild+install.\n4. Probe again (process.exec am).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-icon-adaptive",
+   "name": "apk icon adaptive",
+   "description": "Add adaptive icon.",
+   "instructions": "Workflow:\n1. Create mipmap anydpi xml (file.write).\n2. Reference in manifest (file.patch).\n3. Rebuild+install.\n4. Verify launcher (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-splash-flow",
+   "name": "apk splash flow",
+   "description": "Modify splash behavior.",
+   "instructions": "Workflow:\n1. Locate splash activity/theme (file.search).\n2. Patch timing/resources (file.patch).\n3. Rebuild+install.\n4. Verify visually.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-deep-link-add",
+   "name": "apk deep link add",
+   "description": "Add a deep link handler (own app).",
+   "instructions": "Workflow:\n1. Patch manifest intent-filter (file.patch).\n2. Handle the intent in code/smali (file.read+patch).\n3. Rebuild+install.\n4. Test via process.exec am start.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-share-intent",
+   "name": "apk share intent",
+   "description": "Add share support (own app).",
+   "instructions": "Workflow:\n1. Patch manifest for SEND filters (file.patch).\n2. Handle incoming share (file.read+patch).\n3. Rebuild+install.\n4. Test share sheet (androidclickelement).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-notification-channels",
+   "name": "apk notification channels",
+   "description": "Fix notification channels (own app).",
+   "instructions": "Workflow:\n1. file.search NotificationChannel usage.\n2. Create channels pre-post (file.patch).\n3. Rebuild+install.\n4. Verify in settings (android.app_settings).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-widget-add",
+   "name": "apk widget add",
+   "description": "Add an app widget (own app).",
+   "instructions": "Workflow:\n1. Add receiver+xml meta (file.write/patch manifest).\n2. Implement provider (file.write smali/java path).\n3. Rebuild+install.\n4. Place widget (androidlongpress flow).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-shortcut-add",
+   "name": "apk shortcut add",
+   "description": "Add static shortcuts.",
+   "instructions": "Workflow:\n1. Patch manifest shortcuts meta (file.write/patch).\n2. Rebuild+install.\n3. Verify long-press shortcuts (androidlongpress).\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-locale-add",
+   "name": "apk locale add",
+   "description": "Add a new locale.",
+   "instructions": "Workflow:\n1. Create values-<locale> strings (file.write).\n2. Patch manifest localesConfig if used.\n3. Rebuild+install.\n4. Switch language (settings flow) and verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-rtl-pass",
+   "name": "apk rtl pass",
+   "description": "RTL support pass.",
+   "instructions": "Workflow:\n1. Search hardcoded left/right (file.search).\n2. Use start/end equivalents (file.patch).\n3. Rebuild+install.\n4. Verify with RTL locale (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-font-swap",
+   "name": "apk font swap",
+   "description": "Replace bundled fonts.",
+   "instructions": "Workflow:\n1. Locate res/font (file.list).\n2. Replace files (process.exec cp).\n3. Rebuild+install.\n4. Verify text rendering (android_screenshot).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-audio-asset-swap",
+   "name": "apk audio asset swap",
+   "description": "Swap bundled audio.",
+   "instructions": "Workflow:\n1. Locate res/raw assets (file.list).\n2. Replace (process.exec cp).\n3. Rebuild+install.\n4. Verify playback in-app.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-video-asset-swap",
+   "name": "apk video asset swap",
+   "description": "Swap bundled video.",
+   "instructions": "Workflow:\n1. Locate assets (file.list).\n2. Replace preserving codec/size guidance (process.exec cp).\n3. Rebuild+install.\n4. Verify playback.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-json-config-swap",
+   "name": "apk json config swap",
+   "description": "Swap embedded config JSON.",
+   "instructions": "Workflow:\n1. file.search assets for config json.\n2. Edit via extraction+repack (file.write).\n3. Rebuild+install.\n4. Verify app reads new config (logcat).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-update-url",
+   "name": "apk update url",
+   "description": "Point an app to your update server (own/lab).",
+   "instructions": "Workflow:\n1. file.search update endpoints in smali/strings.\n2. Patch URLs (file.patch).\n3. Rebuild+sign+install.\n4. Verify check flow (http.capture).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-analytics-optout",
+   "name": "apk analytics optout",
+   "description": "Force analytics off in a build.",
+   "instructions": "Workflow:\n1. file.search analytics init.\n2. Patch to no-op (file.patch).\n3. Rebuild+install.\n4. Verify no beacons (http.capture).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-ads-removal-own",
+   "name": "apk ads removal own",
+   "description": "Remove ad SDK calls (own app / ad-supported study).",
+   "instructions": "Workflow:\n1. Identify SDK packages (python.run_file class census).\n2. Patch init/show calls to no-op (file.patch).\n3. Rebuild+sign+install.\n4. Verify UI (androidreadscreen).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-tracking-guard",
+   "name": "apk tracking guard",
+   "description": "Neutralize tracking beacons (own app).",
+   "instructions": "Workflow:\n1. file.search beacon hosts in strings.\n2. Patch or blocklist (file.patch).\n3. Rebuild+install.\n4. Verify with http.capture (no beacons).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-obfuscator-undo-notes",
+   "name": "apk obfuscator undo notes",
+   "description": "Deobfuscate mapping-guided builds.",
+   "instructions": "Workflow:\n1. Locate mapping.txt alongside the build (file.list).\n2. Apply mapping to stacks (python.run_file retrace-style).\n3. Navigate by real names (file.search).\n4. Document the mapping use.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-r8-mapping-aware",
+   "name": "apk r8 mapping aware",
+   "description": "Use R8 mapping for traces.",
+   "instructions": "Workflow:\n1. Enable mapping output in build (file.patch).\n2. Keep mapping per release (file.write store).\n3. Retrace crashes (python.run_file).\n4. Fix at source (file.patch).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-split-merge-notes",
+   "name": "apk split merge notes",
+   "description": "Merge split APKs for single install (lab).",
+   "instructions": "Workflow:\n1. Analyze splits (re.apk.manifest each).\n2. Note merge constraints (python.run_file overlap check).\n3. Prefer install-multiple (process.exec).\n4. Document why merge is avoided.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-aab-extract",
+   "name": "apk aab extract",
+   "description": "Extract universal APK from AAB.",
+   "instructions": "Workflow:\n1. Locate bundletool (web.search).\n2. Build universal APK (process.exec bundletool).\n3. re.apk.sign the output.\n4. Install and verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-dynamic_feature_notes",
+   "name": "apk dynamic_feature_notes",
+   "description": "Understand dynamic features.",
+   "instructions": "Workflow:\n1. List on-demand modules from bundle metadata (file.read).\n2. Map install triggers in code (file.search).\n3. Test install flow on device.\n4. Record.\n5. Document gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-dexguard_note",
+   "name": "DexGuard-protected builds.",
+   "description": "Analyze DexGuard outputs.",
+   "instructions": "Workflow:\n1. Note string/class encryption layers (re.rabin2/apktool scan).\n2. Prefer dynamic analysis (cat_mem_* flows) for logic.\n3. Document findings.\n4. Avoid brute static unwrapping.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-flutter_bundle",
+   "name": "apk flutter_bundle",
+   "description": "Flutter app analysis.",
+   "instructions": "Workflow:\n1. Identify libapp.so + flutter assets (file.list).\n2. re.rabin2 the AOT snapshot (symbols limited).\n3. Analyze assets for routes/strings (python.run_file).\n4. Note Dart AOT limits honestly.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-react_native_bundle",
+   "name": "apk react_native_bundle",
+   "description": "React Native app analysis.",
+   "instructions": "Workflow:\n1. Locate index.android.bundle in assets (file.list).\n2. Extract and pretty-print JS (python.run_file).\n3. file.search the bundle for endpoints/keys.\n4. Note Hermes bytecode if present.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-xamarin_note",
+   "name": "apk xamarin_note",
+   "description": "Xamarin app analysis.",
+   "instructions": "Workflow:\n1. Identify assemblies.dll + libmonodroid (file.list).\n2. Analyze managed assemblies with appropriate tools (web.search).\n3. Note JNI bridges.\n4. Record structure.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_apkx_apk-unity_il2cpp_note",
+   "name": "apk unity_il2cpp_note",
+   "description": "Unity IL2CPP app analysis.",
+   "instructions": "Workflow:\n1. Confirm il2cpp via libil2cpp.so (re.rabin2).\n2. re.il2cpp.metadata with global-metadata.dat.\n3. Resolve key classes (re.il2cpp.resolve).\n4. Correlate with memory (re.mem.ida_correlate).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_code-coverage-gates",
+   "name": "Enforce coverage gates.",
+   "description": "Define minimum coverage per module.",
+   "instructions": "Workflow:\n1. Run coverage (gradle.exec).\n2. Gate merges at thresholds.\n3. Report deltas.\n4. Tune thresholds quarterly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_api-compat-checker",
+   "name": "API compatibility checks.",
+   "description": "Detect breaking API changes.",
+   "instructions": "Workflow:\n1. Generate API surface (tools/gradle tasks).\n2. Diff against baseline (python.run_file).\n3. Gate on breaking changes.\n4. Record exceptions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_semver-automation",
+   "name": "Automate versioning.",
+   "description": "Derive versions from commits.",
+   "instructions": "Workflow:\n1. Analyze git.log tags.\n2. Compute next version (python.run_file).\n3. Patch build files (file.patch).\n4. Tag via release flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_changelog-automation",
+   "name": "Automate changelogs.",
+   "description": "Generate changelogs from history.",
+   "instructions": "Workflow:\n1. Group commits by type (python.run_file).\n2. Render markdown (file.write).\n3. Review before release.\n4. Publish.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_release-notes-summary",
+   "name": "User-facing release notes.",
+   "description": "Write for humans.",
+   "instructions": "Workflow:\n1. Translate tech diffs to benefits.\n2. Group by user impact.\n3. Keep short.\n4. Publish with release.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_build-cache-tuning",
+   "name": "Tune build caches.",
+   "description": "Speed up builds.",
+   "instructions": "Workflow:\n1. Enable configuration cache (file.patch).\n2. Remote/local cache settings.\n3. Measure before/after (gradle.exec --profile).\n4. Record gains.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_parallel-test-tuning",
+   "name": "Parallelize tests.",
+   "description": "Shrink test wall time.",
+   "instructions": "Workflow:\n1. Detect safe parallelism (suite analysis).\n2. Configure runners (file.patch).\n3. Watch for flaky shared state.\n4. Record speedup.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_test-sharding",
+   "name": "Shard test suites.",
+   "description": "Distribute tests across workers.",
+   "instructions": "Workflow:\n1. Split by timing buckets (python.run_file).\n2. Configure shards (CI config).\n3. Aggregate reports.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_flaky-quarantine-flow",
+   "name": "Quarantine flaky tests.",
+   "description": "Keep main green.",
+   "instructions": "Workflow:\n1. Auto-detect flakes (CI stats).\n2. Move to quarantine suite.\n3. Ticket each with owner.\n4. Rehydrate after fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_code-owner-maps",
+   "name": "CODEOWNERS setup.",
+   "description": "Route reviews correctly.",
+   "instructions": "Workflow:\n1. Map paths to owners (file.write CODEOWNERS).\n2. Verify with a PR.\n3. Update on team changes.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_pr-size-discipline",
+   "name": "Small PR discipline.",
+   "description": "Keep reviews effective.",
+   "instructions": "Workflow:\n1. Break large changes into stacks.\n2. Enforce size guidance in template.\n3. Review slices independently.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_stacked-diffs-flow",
+   "name": "Stacked diffs workflow.",
+   "description": "Work in series.",
+   "instructions": "Workflow:\n1. Use tooling per repo (web.search).\n2. Keep each diff minimal.\n3. Rebase frequently.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_pre-commit-curate",
+   "name": "Curate pre-commit hooks.",
+   "description": "Fast, useful hooks.",
+   "instructions": "Workflow:\n1. Choose hooks (lint, fmt, secret scan).\n2. Keep runtime <10s.\n3. Verify on sample commits.\n4. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_format-on-save",
+   "name": "Format on save setup.",
+   "description": "Zero-style-debate formatting.",
+   "instructions": "Workflow:\n1. Configure formatter per IDE (file.write).\n2. Commit formatted code.\n3. Verify CI fmt check passes.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_commit-lint",
+   "name": "Commit message linting.",
+   "description": "Enforce conventions.",
+   "instructions": "Workflow:\n1. Add commitlint-style config (file.write).\n2. Verify with sample messages.\n3. Integrate with CI.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_branch-protection",
+   "name": "Branch protection setup.",
+   "description": "Protect main.",
+   "instructions": "Workflow:\n1. Define required checks (doc/infra).\n2. Require reviews.\n3. Test bypass attempts fail.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_release-branching",
+   "name": "Release branching model.",
+   "description": "Define branches.",
+   "instructions": "Workflow:\n1. Document gitflow/trunk decisions (file.write).\n2. Automate backports.\n3. Verify hotfix path.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_hotfix-runbook",
+   "name": "Hotfix runbook.",
+   "description": "Ship fixes fast.",
+   "instructions": "Workflow:\n1. Steps: branch, fix, test, tag (file.write).\n2. Verify on staging.\n3. Release with notes.\n4. Post-fix review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_env-matrix-doc",
+   "name": "Environment matrix doc.",
+   "description": "Document environments.",
+   "instructions": "Workflow:\n1. List envs and purposes (file.write).\n2. Config sources per env.\n3. Access rules.\n4. Review quarterly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_oncall-rotation-doc",
+   "name": "On-call rotation doc.",
+   "description": "Define rotation.",
+   "instructions": "Workflow:\n1. Schedule and handoff template (file.write).\n2. Escalation chain.\n3. Compensation policy (org).\n4. Review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_postmortem-culture",
+   "name": "Blameless postmortems.",
+   "description": "Foster culture.",
+   "instructions": "Workflow:\n1. Template with timeline/actions (file.write).\n2. Facilitate without blame.\n3. Track actions.\n4. Review adoption.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_error-budget-review",
+   "name": "Error budget reviews.",
+   "description": "Operate SLOs.",
+   "instructions": "Workflow:\n1. Compute budget burn (metrics).\n2. Freeze features on burn (policy).\n3. Review cadence.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_capacity-baseline",
+   "name": "Capacity baselines.",
+   "description": "Know your limits.",
+   "instructions": "Workflow:\n1. Load test key paths (tools).\n2. Record limits (file.write).\n3. Set alert thresholds.\n4. Re-test after major changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_cost-per-request",
+   "name": "Cost per request analysis.",
+   "description": "Understand unit economics.",
+   "instructions": "Workflow:\n1. Instrument costs (provider dashboards).\n2. Compute per-request (python.run_file).\n3. Optimize hotspots.\n4. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_data-retention-audit",
+   "name": "Data retention audit.",
+   "description": "Enforce retention.",
+   "instructions": "Workflow:\n1. Inventory data stores (file.write).\n2. Map retention rules.\n3. Automate purges.\n4. Verify with samples.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_privacy-data-map",
+   "name": "Privacy data mapping.",
+   "description": "Map personal data flows.",
+   "instructions": "Workflow:\n1. Trace PII through systems (file.search).\n2. Diagram flows (doc).\n3. Tag stores with sensitivity.\n4. Review access.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_consent-flow-review",
+   "name": "Consent flow review.",
+   "description": "Verify consent UX.",
+   "instructions": "Workflow:\n1. Locate consent capture (file.search).\n2. Check enforcement server-side.\n3. Test refusal paths.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_dsar-readiness",
+   "name": "DSAR readiness.",
+   "description": "Handle data requests.",
+   "instructions": "Workflow:\n1. Define export/delete flows (doc).\n2. Automate export where possible.\n3. Test a fake request.\n4. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_bug-bounty-internal",
+   "name": "Internal bug bounty.",
+   "description": "bug bounty internal",
+   "instructions": "Workflow:\n1. Define scope and rewards (doc).\n2. Triage workflow (cat_tool_triage_queue).\n3. Metrics: time-to-fix.\n4. Review.",
+   "enabled": false
+  },
+  {
+   "id": "cat_se_security-champions-program",
+   "name": "Security champions.",
+   "description": "Grow advocates.",
+   "instructions": "Workflow:\n1. Identify leads per team (doc).\n2. Monthly knowledge shares.\n3. Track security tasks moved.\n4. Review.",
+   "enabled": false
+  }
+ ]
+}

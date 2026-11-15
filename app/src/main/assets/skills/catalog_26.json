@@ -1,0 +1,173 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_res2_res2_nvd_feed_sync",
+   "name": "NVD feed sync habit",
+   "description": "Track new CVEs for your stack.",
+   "instructions": "Workflow:\n1. Identify your key products (file.read inventory).\n2. web.search recent CVEs weekly.\n3. Filter by version applicability (python.run_file).\n4. Queue for triage (cat_tool_triage_queue).\n5. Summarize deltas.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_advisory_diff",
+   "name": "Advisory diff review",
+   "description": "Spot changes in advisories.",
+   "instructions": "Workflow:\n1. Re-fetch key advisories periodically (web.crawl).\n2. Diff against saved copies (python.run_file).\n3. Flag scope/version changes.\n4. Update the register.\n5. Note regressions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_exploit_changelog",
+   "name": "PoC changelog watch",
+   "description": "Track PoC updates.",
+   "instructions": "Workflow:\n1. Bookmark key PoC repos (notes file).\n2. web.search for updates periodically.\n3. Diff changed files (process.exec diff).\n4. Re-triage (cat_res_poc_triage).\n5. Update the library.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_cwe_deep_dive",
+   "name": "CWE deep dive",
+   "description": "Study a weakness class thoroughly.",
+   "instructions": "Workflow:\n1. web.search the CWE page.\n2. Collect detection and mitigation guidance (file.write).\n3. Map to your codebase patterns (file.search).\n4. Propose scans.\n5. Teach the team.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_attacker_sim_notes",
+   "name": "Attacker simulation notes",
+   "description": "Plan realistic adversary emulation.",
+   "instructions": "Workflow:\n1. Pick an adversary profile (web.search reports).\n2. Map their TTPs to your controls (file.write).\n3. Plan safe emulations (lab/scope).\n4. Execute the safest subset.\n5. Report coverage.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_detection_gap_scan",
+   "name": "Detection gap scan",
+   "description": "Find unmonitored attack paths.",
+   "instructions": "Workflow:\n1. List detection sources (file.write inventory).\n2. Map attack paths to sources (python.run_file).\n3. Flag uncovered paths.\n4. Propose new detections.\n5. Track closure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_lab_network_notes",
+   "name": "Lab network design",
+   "description": "Design isolated practice networks.",
+   "instructions": "Workflow:\n1. Draft topology (file.write).\n2. Verify isolation rules.\n3. Provision targets (cat_tool2_env_provision).\n4. Snapshot the baseline.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_poc_license_audit",
+   "name": "PoC license audit",
+   "description": "Track licenses of collected PoCs.",
+   "instructions": "Workflow:\n1. Record license per PoC (file.write index).\n2. Flag restrictive ones.\n3. Respect terms in reuse.\n4. Clean incompatible items.\n5. Review quarterly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_vuln_econ_note",
+   "name": "Vulnerability economics",
+   "description": "Understand market context.",
+   "instructions": "Workflow:\n1. web.search exploit market reporting (conceptual).\n2. Note factors driving prices/demand.\n3. Relate to your assets' platforms.\n4. Adjust prioritization.\n5. Cite sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res2_res2_disclosure_case_study",
+   "name": "Disclosure case studies",
+   "description": "Learn from past disclosures.",
+   "instructions": "Workflow:\n1. Pick a notable case (web.search).\n2. Summarize timeline and outcomes (file.write).\n3. Extract lessons for your process.\n4. Share internally.\n5. Update playbooks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_log_pipeline",
+   "name": "Log pipeline hygiene",
+   "description": "Keep logs useful and safe.",
+   "instructions": "Workflow:\n1. Inventory log destinations (file.write).\n2. Verify redaction at each hop (python.run_file scans).\n3. Check retention windows.\n4. Fix leaks.\n5. Document flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_secret_scanner_ci",
+   "name": "CI secret scanning",
+   "description": "Add secret scans to pipelines.",
+   "instructions": "Workflow:\n1. Choose patterns (python.run_file list).\n2. Wire scan step (doc/config).\n3. Test with a fake secret.\n4. Block merges on hits.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_sbom_generate",
+   "name": "SBOM generation",
+   "description": "Produce software bills of materials.",
+   "instructions": "Workflow:\n1. Generate from manifests (python.run_file).\n2. Include licenses.\n3. Publish with releases.\n4. Use for advisory matching (cat_res2_nvd_feed_sync).\n5. Keep fresh.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_vuln_gate_policy",
+   "name": "Merge gate policy",
+   "description": "Define security merge gates.",
+   "instructions": "Workflow:\n1. Policy file: what blocks merges (file.write).\n2. Automate checks (scans).\n3. Track override reasons.\n4. Review policy quarterly.\n5. Summarize.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_perf_regression_ci",
+   "name": "Performance regression CI",
+   "description": "Catch perf regressions.",
+   "instructions": "Workflow:\n1. Benchmark harness per key flow (python.run_file).\n2. Run on changes.\n3. Compare to baseline (file.read).\n4. Flag regressions.\n5. Track trends.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_feature_risk_review",
+   "name": "Feature risk review",
+   "description": "Review new features for risk.",
+   "instructions": "Workflow:\n1. Read the design (file.read).\n2. Threat-model quickly (cat_ctf_threat_model_basics).\n3. List security tasks.\n4. Attach to the ticket.\n5. Review pre-merge.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_oncall_runbook",
+   "name": "On-call runbook",
+   "description": "Prepare operational runbooks.",
+   "instructions": "Workflow:\n1. Per-service runbooks (file.write).\n2. Alert-to-action mappings.\n3. Escalation contacts.\n4. Drill quarterly.\n5. Keep updated.",
+   "enabled": false
+  },
+  {
+   "id": "cat_dev3_dev3_incident_comms",
+   "name": "Incident communications",
+   "description": "Communicate during incidents.",
+   "instructions": "Workflow:\n1. Templates: internal update, customer note (file.write).\n2. Facts-only, no speculation.\n3. Update cadence agreed.\n4. Post-mortem link.\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_scan_type_matrix",
+   "name": "Scan type selection",
+   "description": "Pick scan types correctly.",
+   "instructions": "Workflow:\n1. Known value -> exact scan.\n2. Unknown -> unknown-scan then refine (cat_mem_scan_value).\n3. Float suspects -> float scan.\n4. Document choice and outcome.\n5. Learn per game.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_region_shortlist",
+   "name": "Region shortlisting",
+   "description": "Pick scan regions wisely.",
+   "instructions": "Workflow:\n1. mem.regions; classify (cat_mem_region_map).\n2. Prefer heap/anon RW.\n3. Exclude file-backed code.\n4. Record shortlist.\n5. Scan.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_value_validation",
+   "name": "Value validation ritual",
+   "description": "Confirm before writing.",
+   "instructions": "Workflow:\n1. mem.read target.\n2. Change in-game once; re-read.\n3. Only write after 2 confirmations.\n4. Snapshot originals (cat_mem_value_snapshots).\n5. Write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_post_write_watch",
+   "name": "Post-write monitoring",
+   "description": "Watch for rollback/anti-cheat.",
+   "instructions": "Workflow:\n1. After mem.write, re-read periodically (python.run_file loop).\n2. Note rollback timing (server sync vs local).\n3. Stop if integrity checks trigger (logcat).\n4. Document.\n5. Adjust strategy.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_session_cleanup",
+   "name": "Memory session cleanup",
+   "description": "End sessions cleanly.",
+   "instructions": "Workflow:\n1. Restore original values (mem.write originals).\n2. Verify in-game normal state (mem.visual.verify).\n3. Remove temp scripts (file.delete).\n4. Log the session summary (file.write).\n5. Close.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem3_mem3_multi_instance_guard",
+   "name": "Multi-instance safety",
+   "description": "Handle several running copies.",
+   "instructions": "Workflow:\n1. mem.process.list; disambiguate by pid age/user.\n2. Pin the pid in session notes.\n3. Guard writes with pid check (mem3 flow).\n4. Abort on pid change.\n5. Report.",
+   "enabled": false
+  }
+ ]
+}

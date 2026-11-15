@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme -->
+    <style name="Theme.Oreshik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurfaceDark</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceDark</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Oreshik.BottomSheetDialog</item>
+        <item name="android:colorBackground">@color/colorBackgroundDark</item>
+        <item name="android:textColorPrimary">@color/colorOnBackgroundDark</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
+        <!-- Status bar: dark canvas with light icons -->
+        <item name="android:statusBarColor">@color/colorBackgroundDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/colorBackgroundDark</item>
+        <item name="android:windowAnimationStyle">@style/AppWindowAnimation</item>
+    </style>
+</resources>

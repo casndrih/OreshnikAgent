@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_mem_env_check",
+   "name": "Memory environment diagnostics",
+   "description": "Verify the toolchain is ready before memory work.",
+   "instructions": "Workflow:\n1. mem.env.diagnose to check su, busybox and tool availability.\n2. root.info to confirm root access.\n3. If any component fails, report exactly which and stop.\n4. Only proceed when the environment is green.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_target_find",
+   "name": "Target process discovery",
+   "description": "Find the right process before touching memory.",
+   "instructions": "Workflow:\n1. mem.process.list to enumerate processes.\n2. Match by package name; note pid and user.\n3. Verify with a second listing that the pid is stable.\n4. Record the pid for all subsequent mem.* calls.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_region_map",
+   "name": "Memory region mapping",
+   "description": "Understand the target address space first.",
+   "instructions": "Workflow:\n1. mem.regions for the target pid.\n2. Classify regions: heap, stack, anonymous RW, file-backed.\n3. Note permissions per region; never write to r-x or r-- regions.\n4. Record candidate scan regions for the value hunt.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_scan_value",
+   "name": "Unknown-value scan flow",
+   "description": "Find a value when you do not know its type.",
+   "instructions": "Workflow:\n1. mem.scan first-scan on candidate regions.\n2. Change the value in-game; mem.scan refine with the new value.\n3. Narrow to a handful of addresses.\n4. Confirm with mem.read before any mem.write.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_scan_known",
+   "name": "Known-value scan flow",
+   "description": "Find a value whose exact number you can observe.",
+   "instructions": "Workflow:\n1. mem.scan exact value on RW regions.\n2. Change the value once; rescan with the new number.\n3. Repeat until candidates converge.\n4. Verify with mem.read; document the address.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_write_safe",
+   "name": "Controlled memory writes",
+   "description": "Write to verified addresses with backups.",
+   "instructions": "Workflow:\n1. mem.read the original bytes at the target.\n2. mem.write the new value; small, aligned writes only.\n3. mem.read to verify; observe in-game effect.\n4. Keep a record for rollback via mem.write of originals.",
+   "enabled": true
+  },
+  {
+   "id": "cat_mem_value_types",
+   "name": "Data type discipline",
+   "description": "Match scan type to the real storage type.",
+   "instructions": "Workflow:\n1. Suspect float for health/speed/coordinates; int for counts/currency.\n2. Try dword first; switch to float when dword refines fail.\n3. Beware doubled values (display*2) common in games.\n4. Let refinement results guide the type; never force it.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_pointer_chase",
+   "name": "Pointer chain chasing",
+   "description": "Find stable bases through pointer chains.",
+   "instructions": "Workflow:\n1. Find the dynamic address via scans.\n2. mem.read pointer-sized values at candidate offsets to walk the chain.\n3. Validate the chain survives a game restart.\n4. Document the final chain as base+off1+off2.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_float_tuning",
+   "name": "Float value tuning",
+   "description": "Tune float values precisely.",
+   "instructions": "Workflow:\n1. Locate the float address (mem.scan).\n2. mem.write a slightly larger value; observe direction of effect.\n3. Binary-search the sweet spot in small steps.\n4. Verify persistence after scene changes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_inject_verify",
+   "name": "Library injection with verification",
+   "description": "Inject a library and prove it landed.",
+   "instructions": "Workflow:\n1. mem.env.diagnose to confirm injector prerequisites.\n2. mem.inject with the library path.\n3. mem.inject.verify to confirm mapping.\n4. If anti-tamper kills it, try mem.zygisk spawn-time injection.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_zygisk_spawn",
+   "name": "Zygisk spawn-time injection",
+   "description": "Bypass startup anti-tamper via spawn injection.",
+   "instructions": "Workflow:\n1. Confirm Zygisk environment with mem.env.diagnose.\n2. mem.zygisk with the target package and library.\n3. Launch the game; mem.inject.verify mapping.\n4. Check logcat for injection errors.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_stealth_ops",
+   "name": "Stealth memory operations",
+   "description": "Operate without tripping integrity checks.",
+   "instructions": "Workflow:\n1. mem.stealth to enable stealth mode before writes.\n2. Perform the modification.\n3. mem.stealth.verify to confirm masking.\n4. Keep sessions short; re-verify after game updates.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_antidetect",
+   "name": "Anti-detection hardening",
+   "description": "Reduce modification footprints.",
+   "instructions": "Workflow:\n1. mem.antidetect before gameplay modifications.\n2. Re-apply after game restarts (protections re-init).\n3. Watch for crash-on-detect patterns in logcat.\n4. Combine with mem.stealth for layered cover.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_visual_adjust",
+   "name": "Visual value adjustment",
+   "description": "Modify values with on-screen verification.",
+   "instructions": "Workflow:\n1. Identify the on-screen value source (health bar, score).\n2. mem.scan and narrow to the backing address.\n3. mem.visual.adjust with the target change.\n4. mem.visual.verify to confirm the screen reflects it.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_autoplay_loop",
+   "name": "Visual auto-play agent",
+   "description": "Run the see-think-act game loop.",
+   "instructions": "Workflow:\n1. Launch the game (androidopenapp).\n2. mem.visual.autoplay to start the perception loop.\n3. Monitor its actions; intervene when it gets stuck.\n4. Stop and summarize learned patterns for the session.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_correlate_ida",
+   "name": "Static-to-runtime correlation",
+   "description": "Bridge static analysis and live memory.",
+   "instructions": "Workflow:\n1. Get the static address via re.il2cpp.resolve or re.ghidra.analyze.\n2. Find the module base with mem.regions.\n3. re.mem.ida_correlate to compute the runtime address.\n4. Verify with mem.read of expected content.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_hp_freeze",
+   "name": "Health value management",
+   "description": "Locate and manage health-like values.",
+   "instructions": "Workflow:\n1. First scan current health; take damage; refine scan.\n2. Repeat until few candidates remain.\n3. mem.read to confirm; mem.write or freeze via repeated writes.\n4. Observe two rounds of damage before claiming success.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_currency_edit",
+   "name": "Currency and resource edits",
+   "description": "Modify counted resources safely.",
+   "instructions": "Workflow:\n1. Spend or gain currency once to enable refinement.\n2. mem.scan refine to the exact integer.\n3. Confirm with mem.read; check for mirrored/derived values.\n4. Write a conservative value; observe sync behavior with servers.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_speed_edit",
+   "name": "Game speed adjustment",
+   "description": "Locate speed multipliers.",
+   "instructions": "Workflow:\n1. mem.scan float candidates around typical speed values.\n2. Change in-game speed context if possible; refine.\n3. mem.write modest changes; extreme values break physics.\n4. Verify stability for a full minute of play.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_position_read",
+   "name": "Position data reading",
+   "description": "Read player coordinates from memory.",
+   "instructions": "Workflow:\n1. mem.scan float triples near movement changes.\n2. Walk in one axis; refine by delta direction.\n3. Confirm the triple with mem.read during movement.\n4. Document the layout; useful for automation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_esp_hunt",
+   "name": "Render data discovery",
+   "description": "Find values used by the renderer.",
+   "instructions": "Workflow:\n1. Suspect matrices near known coordinate values.\n2. mem.scan around the position triple for adjacent structures.\n3. Validate changes visually via mem.visual.verify.\n4. Document offsets for repeat sessions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_crash_recovery",
+   "name": "Post-crash memory recovery",
+   "description": "Recover gracefully when the target dies.",
+   "instructions": "Workflow:\n1. Detect the crash via failed mem.* calls.\n2. Check mem.process.list; if gone, the game died.\n3. Relaunch with androidopenapp; re-derive addresses (ASLR!).\n4. Never write using stale addresses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_server_sync_caution",
+   "name": "Server-sync caution",
+   "description": "Know when memory edits will not stick.",
+   "instructions": "Workflow:\n1. Prefer offline or single-player targets for modifications.\n2. Watch for value snapping back after edits (server authority).\n3. Do not repeatedly fight server-side validation.\n4. Be explicit with the user about online risks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_multiprocess_pick",
+   "name": "Multi-process target selection",
+   "description": "Pick the right process in multi-process apps.",
+   "instructions": "Workflow:\n1. mem.process.list shows multiple entries for some apps.\n2. The main process usually has the largest memory footprint.\n3. Verify by scanning a known value in each candidate.\n4. Record the correct pid; avoid cross-process writes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_scan_perf",
+   "name": "Large-region scan performance",
+   "description": "Scan efficiently on big games.",
+   "instructions": "Workflow:\n1. Restrict scans to heap and anonymous RW regions (mem.regions).\n2. Scan in chunks; cancel unproductive regions early.\n3. Prefer refinement over ever-wider first scans.\n4. Report scan statistics with results.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_value_snapshots",
+   "name": "Value snapshots for rollback",
+   "description": "Snapshot memory state before experiments.",
+   "instructions": "Workflow:\n1. mem.read full values at target addresses.\n2. Store them in a workspace reference file (file.write).\n3. Proceed with experiments.\n4. Restore originals via mem.write when the user asks to revert.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_team_values",
+   "name": "Multiple instance handling",
+   "description": "Handle games with many similar values.",
+   "instructions": "Workflow:\n1. After refinement, test each candidate independently.\n2. The value that changes gameplay is the target.\n3. Note pointer paths for the true instance.\n4. Leave non-targets untouched.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_native_hook_verify",
+   "name": "Native patch verification",
+   "description": "Verify binary patches took effect.",
+   "instructions": "Workflow:\n1. mem.write the patched bytes at the computed address.\n2. mem.read back; byte-compare.\n3. Trigger the code path in-game.\n4. Observe behavior; check logcat for integrity-check crashes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_session_notes",
+   "name": "Memory session documentation",
+   "description": "Record findings for future sessions.",
+   "instructions": "Workflow:\n1. Note target version, module base and key addresses.\n2. Store with file.write in the workspace.\n3. memory.save durable facts (tool availability, game quirks) — never secrets.\n4. Reference notes at the next session start.",
+   "enabled": false
+  },
+  {
+   "id": "cat_mem_ethical_boundaries",
+   "name": "Ethical use boundaries",
+   "description": "Keep memory work within legal, ethical use.",
+   "instructions": "Workflow:\n1. Confirm the user owns the target or has permission.\n2. Refuse cheating in competitive online play.\n3. Prefer offline/educational targets.\n4. State the boundary plainly when a request crosses it.",
+   "enabled": false
+  }
+ ]
+}

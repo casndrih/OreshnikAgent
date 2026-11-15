@@ -1,0 +1,222 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_rel_android_release_keystore_mgmt",
+   "name": "Release keystore management",
+   "description": "Handle signing keys safely.",
+   "instructions": "Workflow:\n1. Locate keystore config (file.read gradle).\n2. Never commit keystores (file.search gitignore).\n3. Document key aliases and expiry (file.write).\n4. Plan backup/rotation.\n5. Verify signature config builds (gradle.exec).",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_version_code_strategy",
+   "name": "Version code strategy",
+   "description": "Design versionCode schemes.",
+   "instructions": "Workflow:\n1. Pick a scheme: major*1e6+minor*1e3+patch (file.write doc).\n2. Wire into build (file.patch version logic).\n3. Ensure monotonic per-variant.\n4. Verify with a build.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_proguard_release_pass",
+   "name": "R8 release pass",
+   "description": "Ship shrunk releases.",
+   "instructions": "Workflow:\n1. Enable minify+shrinkResources (file.patch).\n2. Collect missing-class errors from the build (gradle.exec).\n3. Add targeted keeps (file.patch proguard-rules).\n4. Test release on device (re.apk.install).\n5. Record rules added.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_crashlytics_style_setup",
+   "name": "Crash reporting setup",
+   "description": "Wire crash reporting.",
+   "instructions": "Workflow:\n1. Choose provider (web.search).\n2. Add SDK init (file.patch).\n3. Map NPEs to source lines.\n4. Verify a test crash appears.\n5. Document access.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_release_notes_flow",
+   "name": "Release notes flow",
+   "description": "Automate notes.",
+   "instructions": "Workflow:\n1. Draft from git.log since last tag (cat_fs_release_notes).\n2. Review with owner.\n3. Attach to the tag/release.\n4. Publish to store listing (user step).\n5. Archive.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_staged_rollout",
+   "name": "Staged rollout planning",
+   "description": "Ship gradually.",
+   "instructions": "Workflow:\n1. Pick track/percentage (file.write plan).\n2. Define halt criteria (crash rate threshold).\n3. Monitor post-release metrics.\n4. Halt/rollback drill.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_release_checklist",
+   "name": "Release checklist",
+   "description": "Gate every release.",
+   "instructions": "Workflow:\n1. Checklist file: version, signing, notes, QA signs (file.write).\n2. Verify each before tag.\n3. Tag and build (gradle.exec).\n4. Archive artifacts.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_build_flavors_release",
+   "name": "Release flavors",
+   "description": "Separate prod/staging.",
+   "instructions": "Workflow:\n1. Add staging flavor (file.patch).\n2. Distinct applicationId suffix.\n3. Endpoint sets per flavor (file.search BASE_URL).\n4. Build both (gradle.exec).\n5. Verify install side-by-side.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_artifact_verification",
+   "name": "Artifact verification",
+   "description": "Verify release binaries.",
+   "instructions": "Workflow:\n1. Hash artifacts (python.run_file sha256).\n2. Verify signature (re.apk.sign output/apksigner).\n3. Check version metadata (re.apk.manifest).\n4. Store hashes with release (file.write).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_store_listing_prep",
+   "name": "Store listing prep",
+   "description": "Prepare listing materials.",
+   "instructions": "Workflow:\n1. Screenshots per device class (android_screenshot).\n2. Descriptions and localized strings (file.write).\n3. Data-safety forms mapping from manifest permissions (python.run_file).\n4. Review policy compliance (web.search store policies).\n5. Submit.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_ota_update_check_flow",
+   "name": "In-app update flow",
+   "description": "Implement updates.",
+   "instructions": "Workflow:\n1. Choose API (Play in-app updates or custom).\n2. Wire the check (file.patch).\n3. Handle flexible vs immediate modes.\n4. Test with lower-version install.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_android_rollback_plan",
+   "name": "Release rollback plan",
+   "description": "Prepare rollbacks.",
+   "instructions": "Workflow:\n1. Previous-good artifacts retained (file.list).\n2. Server-side kill switches for risky features (remote config).\n3. Store rollback steps (file.write).\n4. Drill the rollback once.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_jar_fat_build",
+   "name": "Fat JAR builds",
+   "description": "Package runnable JARs.",
+   "instructions": "Workflow:\n1. Configure shadow-style plugin or manual merge (file.patch build).\n2. Handle service files merging.\n3. Build (gradle.exec jar task).\n4. Run with java.exec -jar to verify.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_jar_manifest_attrs",
+   "name": "JAR manifest attributes",
+   "description": "Set Main-Class/Class-Path.",
+   "instructions": "Workflow:\n1. file.read current MANIFEST.MF.\n2. Patch build to emit Main-Class (file.patch).\n3. Verify executable jar (java.exec).\n4. Note sealed/signed attrs if any.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_launch4j_style_exe",
+   "name": "Windows launcher packaging",
+   "description": "Wrap JARs into EXEs.",
+   "instructions": "Workflow:\n1. Choose launcher tool (web.search launch4j).\n2. Configure icon/version/heap (file.write config).\n3. Build wrapper (process.exec).\n4. Test launch on Windows.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_deb_packaging",
+   "name": "Debian packaging",
+   "description": "Build .deb packages.",
+   "instructions": "Workflow:\n1. Write control/postinst per docs (file.write debian/).\n2. dpkg-deb build (process.exec).\n3. Install in a test container (process.exec docker).\n4. Verify service entrypoints.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_rpm_packaging",
+   "name": "RPM packaging",
+   "description": "Build .rpm packages.",
+   "instructions": "Workflow:\n1. Write spec file (file.write).\n2. rpmbuild (process.exec).\n3. Install-test in a container.\n4. Verify scripts (pre/post).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_appimage_packaging",
+   "name": "AppImage packaging",
+   "description": "Build portable Linux apps.",
+   "instructions": "Workflow:\n1. Prepare AppDir layout (file.write).\n2. appimagetool build (process.exec).\n3. Test on clean system.\n4. Verify desktop integration.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_msi_packaging",
+   "name": "MSI packaging",
+   "description": "Build Windows installers.",
+   "instructions": "Workflow:\n1. Choose WiX (web.search docs).\n2. Author component/feature XML (file.write).\n3. Build MSI (process.exec candle/light).\n4. Test install/upgrade/uninstall.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_nsis_packaging",
+   "name": "NSIS packaging",
+   "description": "Build lightweight installers.",
+   "instructions": "Workflow:\n1. Author NSIS script (file.write).\n2. Compile (process.exec makensis).\n3. Test silent install flags.\n4. Sign the installer (code signing notes).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_pkg_macos_note",
+   "name": "macOS packaging note",
+   "description": "Understand .app bundles.",
+   "instructions": "Workflow:\n1. Bundle structure: Contents/MacOS, Info.plist (file.write).\n2. codesign steps (process.exec).\n3. Notarization prerequisites (web.search).\n4. Test on macOS (user step).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_portable_zips",
+   "name": "Portable ZIP distribution",
+   "description": "Ship ZIP-portable apps.",
+   "instructions": "Workflow:\n1. Assemble runtime + app into a folder (process.exec).\n2. Add launcher scripts (file.write).\n3. Test on a clean machine/container.\n4. Hash the artifact (python.run_file).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_installer_upgrade_paths",
+   "name": "Installer upgrade paths",
+   "description": "Test upgrade scenarios.",
+   "instructions": "Workflow:\n1. Matrix: old->new versions (file.write).\n2. Run each upgrade in a VM/container.\n3. Check data migration.\n4. Fix migration bugs.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_uninstaller_completeness",
+   "name": "Uninstaller completeness",
+   "description": "Remove everything on uninstall.",
+   "instructions": "Workflow:\n1. List created files/registry equivalents (python.run_file scan).\n2. Add cleanup steps (installer config).\n3. Test uninstall leaves nothing.\n4. Record.\n5. Verify in container.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_auto_update_channel",
+   "name": "Desktop auto-update",
+   "description": "Ship self-updaters.",
+   "instructions": "Workflow:\n1. Choose framework (web.search electron-updater/squirrel equivalents).\n2. Wire update check (file.patch).\n3. Sign updates; verify signature check.\n4. Test staged update path.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_crash_reporter_desktop",
+   "name": "Desktop crash reporting",
+   "description": "Capture desktop crashes.",
+   "instructions": "Workflow:\n1. Integrate crash handler (file.patch).\n2. Include stack + versions.\n3. Upload policy + privacy note.\n4. Test with a forced crash.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_license_activation_note",
+   "name": "Licensing flows",
+   "description": "Design activation checks.",
+   "instructions": "Workflow:\n1. Offline key validation approach (doc file.write).\n2. Machine binding choices.\n3. Grace periods.\n4. Test tamper cases in lab.\n5. Record decisions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_env_specific_builds",
+   "name": "Environment-specific builds",
+   "description": "Ship per-env configs.",
+   "instructions": "Workflow:\n1. Config injection per env (file.patch build).\n2. No secrets in artifacts (python.run_file scan).\n3. Build all envs (gradle.exec/make.exec).\n4. Smoke each.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_release_trains",
+   "name": "Release train planning",
+   "description": "Schedule releases.",
+   "instructions": "Workflow:\n1. Cadence doc (file.write).\n2. Freeze windows.\n3. Hotfix path separate.\n4. Calendar integration (user).\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_build_reproducibility",
+   "name": "Reproducible builds",
+   "description": "Make builds reproducible.",
+   "instructions": "Workflow:\n1. Pin toolchains/gradle wrapper (file.read/patch).\n2. Avoid timestamps in artifacts (config).\n3. Build twice; compare hashes (python.run_file).\n4. Document deltas.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_rel_desktop_artifact_signing_code",
+   "name": "Code signing artifacts",
+   "description": "Sign binaries.",
+   "instructions": "Workflow:\n1. Obtain cert (user).\n2. Sign (process.exec per platform).\n3. Verify signature (process.exec).\n4. Publish hashes.\n5. Record.",
+   "enabled": false
+  }
+ ]
+}

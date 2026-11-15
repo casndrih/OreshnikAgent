@@ -1,0 +1,271 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_wx2_ssrf_internal",
+   "name": "SSRF assessment",
+   "description": "Test server-side request forgery on authorized targets.",
+   "instructions": "Workflow:\n1. Identify URLs fetched server-side (webhooks, importers) via http.capture.\n2. Probe with harmless internal references via http.replay.\n3. Confirm reachability differences (response timing/errors).\n4. Map internal surface reachable from the vulnerable endpoint.\n5. Report with evidence and remediation (allowlists, no raw URL fetch).",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_ssrf_dns_only",
+   "name": "Blind SSRF via callbacks",
+   "description": "Confirm blind SSRF through DNS/HTTP callbacks.",
+   "instructions": "Workflow:\n1. Set up a DNS/webhook listener you control.\n2. Inject callback URLs via http.replay.\n3. Record callback arrivals with timestamps.\n4. Correlate with request parameters.\n5. Report the callback channel and trigger.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_xxe_parsing",
+   "name": "XXE assessment",
+   "description": "Test XML entity expansion on owned endpoints.",
+   "instructions": "Workflow:\n1. Find XML-accepting endpoints via http.capture.\n2. Probe with external entity references via http.replay.\n3. Confirm callbacks to your listener (OOB style).\n4. Avoid destructive billion-laughs on production.\n5. Report parser behavior and fix (disable DTDs).",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_deser_java",
+   "name": "Deserialization probes",
+   "description": "Recognize unsafe deserialization patterns.",
+   "instructions": "Workflow:\n1. Identify serialized blobs in traffic (http.capture).\n2. Fingerprint formats (Java serial, .NET, PHP serial) via python.run_file.\n3. Craft detection payloads via python.run_file generators.\n4. Confirm via non-destructive callbacks only.\n5. Report library versions and remediation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_lfi_path_walk",
+   "name": "Local file inclusion assessment",
+   "description": "Probe LFI with safe, read-only proofs.",
+   "instructions": "Workflow:\n1. Identify path parameters consumed server-side via http.capture.\n2. Probe traversal patterns via http.replay.\n3. Confirm with harmless known files (/etc/hostname equivalent).\n4. Map reachable file scope.\n5. Report with remediation (allowlists, chroot).",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_rfi_assessment",
+   "name": "Remote file inclusion checks",
+   "description": "Test RFI safely with controlled callbacks.",
+   "instructions": "Workflow:\n1. Locate include-like parameters via http.capture.\n2. Point to your own controlled URL via http.replay.\n3. Confirm callbacks; avoid executing third-party payloads.\n4. Document allow_url_include-dependent behavior.\n5. Report with configuration fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_auth_bypass_flow",
+   "name": "Authentication flow abuse",
+   "description": "Find flaws in login/session flows.",
+   "instructions": "Workflow:\n1. Map the auth flow from http.capture.\n2. Test state machine jumps (skip steps) via http.replay.\n3. Probe remember-me and reset flows for logic gaps.\n4. Document reproducible bypass chains.\n5. Recommend flow-level fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_session_fixation_check",
+   "name": "Session fixation testing",
+   "description": "Verify session ID handling.",
+   "instructions": "Workflow:\n1. Capture pre-auth and post-auth session IDs (http.capture).\n2. Test whether IDs persist across privilege changes (http.replay).\n3. Attempt fixation with attacker-set IDs on your own app.\n4. Document cookie flags alongside.\n5. Report regeneration gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_jwt_attack_lab",
+   "name": "JWT security assessment",
+   "description": "Assess JWT handling end to end.",
+   "instructions": "Workflow:\n1. Extract JWTs from http.capture (presence only, redact in reports).\n2. Decode header/payload with python.run_file.\n3. Test alg=none and key-confusion on your own instance via http.replay.\n4. Check expiry/audience enforcement.\n5. Report algorithm and verification gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_oauth_flow_review",
+   "name": "OAuth flow review",
+   "description": "Assess OAuth implementations.",
+   "instructions": "Workflow:\n1. Map the authorize/token dance via http.capture.\n2. Test state parameter enforcement (http.replay without state).\n3. Check redirect_uri validation.\n4. Probe code reuse.\n5. Report per-check results.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_privilege_escalation_web",
+   "name": "Privilege boundary testing",
+   "description": "Find vertical/horizontal privilege gaps.",
+   "instructions": "Workflow:\n1. Enumerate roles from http.capture traffic.\n2. Replay privileged requests as lower-privileged users (http.replay).\n3. Document endpoints lacking enforcement.\n4. Automate the matrix with python.run_file.\n5. Report a privilege matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_business_logic_abuse",
+   "name": "Business logic abuse",
+   "description": "Test workflow-integrity assumptions.",
+   "instructions": "Workflow:\n1. Map a purchase/booking flow via http.capture.\n2. Replay with negative/zero quantities, reordered steps (http.replay).\n3. Observe acceptance of invalid states.\n4. Document economic impact hypothetically (no real orders).\n5. Report flow weaknesses.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_race_condition_web",
+   "name": "Race condition testing",
+   "description": "Test TOCTOU on critical actions.",
+   "instructions": "Workflow:\n1. Identify single-use or limited resources via http.capture.\n2. Replay concurrent requests with http.capture.repeat small bursts.\n3. Observe double-consumption on your own test app.\n4. Automate precise timing with python.run_file threads.\n5. Report the race window.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_idor_automation",
+   "name": "IDOR automation sweep",
+   "description": "Sweep object references for authorization gaps.",
+   "instructions": "Workflow:\n1. Collect object IDs from http.history.\n2. Replay with substituted IDs via http.replay on your own test data.\n3. Automate the sweep with python.run_file.\n4. Record which endpoints leak foreign objects.\n5. Report an IDOR matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_mass_assignment_probe",
+   "name": "Mass assignment testing",
+   "description": "Test over-posting on APIs.",
+   "instructions": "Workflow:\n1. Capture update requests (http.capture).\n2. Add privileged fields (role, isAdmin) via http.replay.\n3. Observe acceptance on your own instance.\n4. Confirm effect via a read-back request.\n5. Report field allowlist remediation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_api_bola_chains",
+   "name": "BOLA chain discovery",
+   "description": "Chain object-level gaps into impact.",
+   "instructions": "Workflow:\n1. Map object relationships from http.history.\n2. Test cross-object references with http.replay.\n3. Automate chain building with python.run_file.\n4. Document a full attack path as proof.\n5. Recommend object-owner checks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_graphql_abuse",
+   "name": "GraphQL API assessment",
+   "description": "Assess GraphQL endpoints.",
+   "instructions": "Workflow:\n1. Introspect the schema on your own instance (http.replay).\n2. Map queries/mutations of interest.\n3. Probe batching and depth abuse lightly.\n4. Test field-level authz on a few objects.\n5. Report with remediation (depth limits, persisted queries).",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_rest_param_pollution",
+   "name": "HTTP parameter pollution",
+   "description": "Test duplicate-parameter handling.",
+   "instructions": "Workflow:\n1. Identify param-consuming endpoints via http.capture.\n2. Send duplicated params with differing values via http.replay.\n3. Observe which occurrence wins server-side.\n4. Assess security-relevant consequences (price, role).\n5. Report parser behavior.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_host_header_attacks",
+   "name": "Host header abuse",
+   "description": "Test host-dependent logic.",
+   "instructions": "Workflow:\n1. Replay with attacker host values via http.replay.\n2. Observe password-reset/link generation behavior.\n3. Test cache-key implications lightly.\n4. Document poisoning preconditions.\n5. Report with strict host validation fix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_request_smuggling_note",
+   "name": "Request smuggling triage",
+   "description": "Assess smuggling preconditions safely.",
+   "instructions": "Workflow:\n1. Compare front/back server behavior with ambiguous Content-Length via http.replay.\n2. Use timing and benign diffs only; never poison shared caches.\n3. Document proxy/stack fingerprints.\n4. Escalate only with explicit permission.\n5. Report with stack-level remediation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_cache_deception",
+   "name": "Web cache deception checks",
+   "description": "Test cache-key behavior.",
+   "instructions": "Workflow:\n1. Identify cacheable paths via response headers (http.capture).\n2. Replay path-variant requests via http.replay.\n3. Check whether private responses get cached.\n4. Keep tests off shared production caches.\n5. Report header/config fixes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_csrf_flow_check",
+   "name": "CSRF enforcement review",
+   "description": "Verify anti-CSRF protections.",
+   "instructions": "Workflow:\n1. Capture state-changing requests (http.capture).\n2. Replay without tokens via http.replay.\n3. Check SameSite and Origin checks indirectly.\n4. Document token scoping gaps.\n5. Report per-endpoint enforcement.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_csp_bypass_analysis",
+   "name": "CSP bypass analysis",
+   "description": "Assess Content-Security-Policy strength.",
+   "instructions": "Workflow:\n1. Fetch CSP headers (web.headervuln).\n2. Analyze allowances (unsafe-inline, wildcards) with python.run_file.\n3. Identify bypass primitives.\n4. Verify a benign inline marker via web.browser.\n5. Report tightened policy text.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_websocket_exploit_ws",
+   "name": "WebSocket endpoint abuse",
+   "description": "Assess WS authorization.",
+   "instructions": "Workflow:\n1. Capture the WS handshake and frames (tcpdump.capture).\n2. Replay frames with altered identities via python.run_file client.\n3. Test cross-origin origin checks.\n4. Document auth on subscribe/publish.\n5. Report enforcement gaps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_file_upload_exploit",
+   "name": "Upload chain assessment",
+   "description": "Probe upload validation chains.",
+   "instructions": "Workflow:\n1. Locate upload endpoints (web.crawl).\n2. Test extension/MIME/content validation layers with benign files (http.replay).\n3. Map the storage location from responses.\n4. Check execution preconditions hypothetically.\n5. Report the validation model.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_ssti_poc_lib",
+   "name": "SSTI PoC snippet library",
+   "description": "Maintain reusable SSTI probes.",
+   "instructions": "Workflow:\n1. Collect engine-specific detection strings into a workspace file (file.write).\n2. Implement a sender helper with python.run_file.\n3. Run detection across targets on your scope.\n4. Record hits with engine versions.\n5. Keep the library updated.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_injection_recon_suite",
+   "name": "Injection recon sweep",
+   "description": "Run the full injection recon across a target.",
+   "instructions": "Workflow:\n1. Enumerate inputs (web.dirbrute + http.history).\n2. Apply one probe class per input with python.run_file orchestration.\n3. Aggregate signals into a matrix.\n4. Escalate only promising, authorized findings.\n5. Output a prioritized shortlist.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_exploit_poc_standards",
+   "name": "PoC quality standards",
+   "description": "Write professional proof-of-concept scripts.",
+   "instructions": "Workflow:\n1. Structure: docstring, target, usage, safe default.\n2. Include --dry-run and explicit consent flag.\n3. Log each request/response pair to a file.\n4. Fail closed on unexpected responses.\n5. Ship with file.write and test on your lab target.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_vuln_writeup_prep",
+   "name": "Vulnerability write-up prep",
+   "description": "Prepare reproducible write-ups.",
+   "instructions": "Workflow:\n1. Reproduce from a clean state; record exact steps.\n2. Capture minimal evidence (two requests max per finding).\n3. Redact secrets and personal data.\n4. Add impact and fix sections.\n5. Store as markdown via file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_remediation_advisor",
+   "name": "Remediation advising",
+   "description": "Turn findings into fixes.",
+   "instructions": "Workflow:\n1. Map each finding to concrete controls.\n2. Provide code-level and config-level fixes.\n3. Order by effort/impact.\n4. Add regression-test suggestions.\n5. Deliver a remediation checklist.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_retest_cycle",
+   "name": "Retest management",
+   "description": "Verify remediation over time.",
+   "instructions": "Workflow:\n1. Keep an issue tracker file in the workspace (file.write).\n2. Re-run original probes on each fix claim (http.replay).\n3. Update status: fixed/partial/open.\n4. Notify on regressions.\n5. Summarize the trend.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_scope_manager",
+   "name": "Engagement scope management",
+   "description": "Keep exploitation work organized.",
+   "instructions": "Workflow:\n1. Maintain scope.md in the workspace (file.write).\n2. Log every tested host with timestamps.\n3. Track rate limits and WAF responses.\n4. Stop on scope drift; update the file.\n5. Close with a compliance summary.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_evidence_collector",
+   "name": "Evidence collection discipline",
+   "description": "Standardize evidence for findings.",
+   "instructions": "Workflow:\n1. Save request/response pairs via http.history export to files.\n2. Redact tokens automatically with python.run_file.\n3. Hash and timestamp evidence files.\n4. Index them for the report.\n5. Verify hashes before writing the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_exploit_safety_limits",
+   "name": "Exploitation safety limits",
+   "description": "Prevent collateral damage.",
+   "instructions": "Workflow:\n1. Never run destructive payloads on production.\n2. Prefer read-only proofs.\n3. Cap automated request counts.\n4. Back off on errors/5xx storms.\n5. Record all limits in the engagement file.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_client_side_storage_audit",
+   "name": "Client storage audit",
+   "description": "Review tokens in browser storage.",
+   "instructions": "Workflow:\n1. Open the target in web.browser.\n2. Inspect localStorage/cookies via JS evaluation where possible.\n3. Report token placement (never echo values).\n4. Recommend HttpOnly/secure storage patterns.\n5. Summarize exposure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_third_party_script_audit",
+   "name": "Third-party JS audit",
+   "description": "Assess external script risk.",
+   "instructions": "Workflow:\n1. List external scripts on the page (process.exec curl + python.run_file parse).\n2. Check SRI presence.\n3. Note script origins and versions.\n4. Report supply-chain exposure.\n5. Recommend SRI and allowlisting.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_api_schema_drift",
+   "name": "API schema drift detection",
+   "description": "Watch for silent API changes.",
+   "instructions": "Workflow:\n1. Baseline key endpoints with http.capture.\n2. Re-capture after releases.\n3. Diff payloads with python.run_file.\n4. Flag breaking changes.\n5. Notify with a change report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_wx2_auth_token_lifecycle",
+   "name": "Token lifecycle assessment",
+   "description": "Assess refresh/rotation logic.",
+   "instructions": "Workflow:\n1. Capture token refresh flows (http.capture).\n2. Test replay of old tokens via http.replay.\n3. Check revocation after password change on your instance.\n4. Document lifetime policies.\n5. Report gaps.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_061",
+      "name": "SQLMap authenticated requests: Use an approved session cookie",
+      "description": "Test an authenticated endpoint without expanding account scope.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Set `cookie` to the temporary test session, scan only the approved URL/parameter, and redact the cookie from evidence.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_062",
+      "name": "SQLMap authenticated requests: Redact session material",
+      "description": "Prevent tokens and cookies from entering output or reports.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Replace values with `[REDACTED]`; do not repeat secrets in `cookie`, `headers`, progress messages, or copied transcripts.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_063",
+      "name": "SQLMap authenticated requests: Format custom headers",
+      "description": "Pass required headers in the app’s expected format.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Use one `Name: value` header per line in `headers`; remove duplicates and verify the endpoint accepts them normally.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_064",
+      "name": "SQLMap authenticated requests: Handle authorization headers",
+      "description": "Use a short-lived test token only when authentication checks are approved.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Add the exact Authorization line under `headers`, keep the token out of evidence, and revoke it after the test.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_065",
+      "name": "SQLMap authenticated requests: Handle CSRF tokens",
+      "description": "Recognize when a rotating token makes a captured request stale.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Ask for a stable test fixture or approved flow; do not repeatedly reuse invalid tokens or bypass CSRF protections.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_066",
+      "name": "SQLMap authenticated requests: Manage session rotation",
+      "description": "Prevent requests from continuing with expired or replaced credentials.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Use a fresh temporary cookie per approved run, stop on authentication redirects, and avoid automatic credential refresh.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_067",
+      "name": "SQLMap authenticated requests: Isolate the test account",
+      "description": "Limit possible effects of an authenticated request.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Use a read-only test account with seeded data; confirm it cannot access another tenant or perform transactions.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_068",
+      "name": "SQLMap authenticated requests: Map header and body inputs",
+      "description": "Identify which channel carries the approved parameter.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Check the normal request, then set `parameter` to one named input; do not move values between URL, body, and headers without approval.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_069",
+      "name": "SQLMap authenticated requests: Use temporary credentials",
+      "description": "Reduce lifetime and blast radius of secrets used in the app scan.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Request a dedicated test account, enter secrets only into call fields, rotate them after completion, and report only the account role.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_070",
+      "name": "SQLMap authenticated requests: Remove credentials afterward",
+      "description": "Close the authentication loop when the assessment ends.",
+      "category": "SQLMap / Headers and sessions",
+      "instructions": "Workflow:\n1. Obtain a temporary, least-privileged test identity and exact approved request headers.\n2. Pass only required values through `cookie` or newline-separated `headers`; never place secrets in notes.\n3. Ask the owner to revoke temporary tokens, cookies, or passwords; verify saved output contains no unredacted values.\n4. Keep one endpoint in scope and rotate credentials after testing.\n\nSafety: use only explicitly authorized accounts and targets with \u0007uthorized_target=true. Keep app defaults; do not dump records, open shells, read/write server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

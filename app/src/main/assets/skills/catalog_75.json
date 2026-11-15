@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_051",
+      "name": "SQLMap POST/body: Assess a form POST field",
+      "description": "Check one approved form field through the structured body interface.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Set `method=POST`, put the original test form body in `data`, name the field with `parameter`, and retain low-impact defaults.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_052",
+      "name": "SQLMap POST/body: Preserve body encoding",
+      "description": "Prevent re-encoding from changing form semantics.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Copy the owner-provided URL-encoded body into `data`; verify field names and delimiters with a normal request first.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_053",
+      "name": "SQLMap POST/body: Send a JSON body",
+      "description": "Represent an approved JSON request through supported fields.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Set the expected method, put JSON in `data`, add `Content-Type: application/json` in `headers`, and select one field when recognized.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_054",
+      "name": "SQLMap POST/body: Assess an XML body",
+      "description": "Prepare a bounded XML request without real account data.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Place approved XML in `data`, add its exact content type in `headers`, and confirm with the owner which field is testable.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_055",
+      "name": "SQLMap POST/body: Respect multipart limits",
+      "description": "Recognize when the schema cannot faithfully reproduce a file upload.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Do not replace a multipart file part with guessed text; document the limitation and request a supported fixture.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_056",
+      "name": "SQLMap POST/body: Use a designated test login",
+      "description": "Keep form testing isolated from a real account.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Obtain a temporary test account, send only its approved form body, and ask the owner to revoke or rotate the credential after testing.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_057",
+      "name": "SQLMap POST/body: Avoid sending personal data",
+      "description": "Keep body examples synthetic and limited to the required schema.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Remove names, payment data, tokens, and live identifiers from `data`; use seeded test values supplied by the owner.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_058",
+      "name": "SQLMap POST/body: Select a body parameter",
+      "description": "Limit a POST check to the field named in the assessment plan.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Set `parameter` to the exact body key and verify SQLMap reports that same key before drawing a conclusion.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_059",
+      "name": "SQLMap POST/body: Match the intended POST method",
+      "description": "Ensure the app call reflects how the endpoint normally receives its request.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Set `method=POST` when required, preserve the original route, and do not use a different method to bypass controls.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_060",
+      "name": "SQLMap POST/body: Validate body response behavior",
+      "description": "Compare the normal test request with SQLMap output for the same body.",
+      "category": "SQLMap / POST and request bodies",
+      "instructions": "Workflow:\n1. Use an owner-approved request body from a test account or fixture; avoid real user data.\n2. Set `method` to the expected method and supply the body through `data`; select one field with `parameter` when possible.\n3. Check status and response stability; if validation fails before reaching the input handler, correct the fixture before retrying.\n4. Add only required headers and keep the scan profile conservative.\n\nSafety: test only explicitly authorized scope with \u0007uthorized_target=true. Do not send live personal data, dump records, use shells/server file access, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

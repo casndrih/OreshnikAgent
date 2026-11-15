@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_081",
+      "name": "SQLMap result analysis: Recognize a SQLMap detection",
+      "description": "Classify an explicit injection indication without overstating impact.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Capture the parameter, technique, and backend evidence shown; treat it as a signal to validate, not permission to enumerate data.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_082",
+      "name": "SQLMap result analysis: Map finding to its parameter",
+      "description": "Ensure the reported input matches the scope and request intended.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Compare SQLMap’s parameter name with the app call and captured URL/body; flag mismatches for review.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_083",
+      "name": "SQLMap result analysis: Interpret backend fingerprint",
+      "description": "Report a database-family fingerprint as identification evidence, not exploitation.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Quote only minimal backend details; do not follow with database enumeration or row retrieval.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_084",
+      "name": "SQLMap result analysis: Interpret version output",
+      "description": "Separate version identification from authorization to inspect data.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Record whether the version was inferred or returned, redact host details as needed, and stop at the approved proof point.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_085",
+      "name": "SQLMap result analysis: Read exit codes accurately",
+      "description": "Distinguish successful process completion from a positive finding.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Use `ok`, `exitCode`, console text, and error together; zero does not mean vulnerable and nonzero does not mean secure.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_086",
+      "name": "SQLMap result analysis: Classify an incomplete scan",
+      "description": "Avoid marking a partial run as clean.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Note whether setup, DNS, TLS, authentication, timeout, or throttling stopped evaluation before the input was tested.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_087",
+      "name": "SQLMap result analysis: Handle unknown backend identity",
+      "description": "Keep the finding centered on input behavior when the backend is not fingerprinted.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Do not guess a product; report the observed signal and leave backend identity unknown pending owner confirmation.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_088",
+      "name": "SQLMap result analysis: Qualify a negative result",
+      "description": "State the exact request and profile that produced no confirmed signal.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Limit the claim to the tested input; do not certify the endpoint or database as SQLi-free.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_089",
+      "name": "SQLMap result analysis: Preserve console meaning",
+      "description": "Return SQLMap output without paraphrasing away caveats.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Separate stdout, stderr, and app error text, then redact secrets before placing evidence in a report.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_090",
+      "name": "SQLMap result analysis: Stop before enumeration",
+      "description": "Keep the assessment at detection and minimal proof.",
+      "category": "SQLMap / Result interpretation",
+      "instructions": "Workflow:\n1. Read complete console output and exit code; distinguish setup, transport, and detection messages.\n2. Match every result to the approved endpoint and named parameter.\n3. Do not add database/table/column enumeration or dumping after a positive signal; report evidence and move to remediation.\n4. State confidence and limitations; never infer access to database contents from a detection message.\n\nSafety: use only authorized checks. Do not enumerate or dump records, open shells, access server files, use evasion, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

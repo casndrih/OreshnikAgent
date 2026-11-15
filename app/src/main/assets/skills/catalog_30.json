@@ -1,0 +1,285 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_sch_dep_semver_policy",
+   "name": "Semantic versioning policy",
+   "description": "Adopt SemVer rigorously.",
+   "instructions": "Workflow:\n1. Write the versioning policy (file.write).\n2. Classify API changes before release.\n3. Tag releases with the scheme.\n4. Verify changelog matches.\n5. Automate checks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_lockfile_audit",
+   "name": "Lockfile auditing",
+   "description": "Audit dependency locks.",
+   "instructions": "Workflow:\n1. file.read lockfiles.\n2. python.run_file: duplicate/major-conflict detection.\n3. Cross-check against advisories (web.search).\n4. Propose bumps.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_license_scan",
+   "name": "License scanning",
+   "description": "Check license compatibility.",
+   "instructions": "Workflow:\n1. Enumerate deps (file.read manifests).\n2. Fetch licenses (web.search per package).\n3. Flag incompatible licenses (python.run_file).\n4. Recommend replacements.\n5. Record matrix.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_transitive_depth",
+   "name": "Transitive dependency mapping",
+   "description": "Map full dep trees.",
+   "instructions": "Workflow:\n1. Run dependency task (gradle.exec dependencies / npm ls).\n2. Parse tree (python.run_file).\n3. Find version convergence issues.\n4. Propose forced alignments.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_vuln_watch",
+   "name": "Dependency vulnerability watch",
+   "description": "Continuous CVE matching.",
+   "instructions": "Workflow:\n1. Export dep list (SBOM).\n2. Match against advisories (web.search feeds).\n3. Rank by severity+reachability.\n4. File upgrade tasks.\n5. Report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_abandoned_detect",
+   "name": "Abandoned dependency detection",
+   "description": "Find unmaintained packages.",
+   "instructions": "Workflow:\n1. Check last release dates (web.search).\n2. Flag >2y dormant packages.\n3. Assess replacement candidates.\n4. Plan migrations.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_proxy_setup",
+   "name": "Dependency proxy setup",
+   "description": "Control dependency inflow.",
+   "instructions": "Workflow:\n1. Configure proxy/mirror for builds (file.patch).\n2. Allowlist registries.\n3. Log fetches.\n4. Review quarterly.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_commit_pinning",
+   "name": "Commit pinning for actions",
+   "description": "Pin CI actions to SHAs.",
+   "instructions": "Workflow:\n1. List workflow actions (file.read).\n2. Replace tags with SHAs (file.patch).\n3. Dependabot for updates.\n4. Verify CI green.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_checksum_verify",
+   "name": "Artifact checksum verification",
+   "description": "Verify downloaded deps.",
+   "instructions": "Workflow:\n1. Enable checksum verification in builds (file.patch).\n2. Pin checksums for critical artifacts.\n3. Verify builds fail on mismatch.\n4. Document policy.\n5. Record.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_dep_private_registry",
+   "name": "Private registry setup",
+   "description": "Host internal packages.",
+   "instructions": "Workflow:\n1. Set up registry (user/infra).\n2. Publish internal libs (process.exec).\n3. Configure auth via env (no secrets in repo).\n4. Verify resolution.\n5. Document.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_android-jetpack",
+   "name": "Framework checklist: android-jetpack",
+   "description": "Security & quality checklist for android-jetpack projects.",
+   "instructions": "Workflow:\n1. Read the project's android-jetpack usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_android-compose",
+   "name": "Framework checklist: android-compose",
+   "description": "Security & quality checklist for android-compose projects.",
+   "instructions": "Workflow:\n1. Read the project's android-compose usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_spring-boot",
+   "name": "Framework checklist: spring-boot",
+   "description": "Security & quality checklist for spring-boot projects.",
+   "instructions": "Workflow:\n1. Read the project's spring-boot usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_micronaut",
+   "name": "Framework checklist: micronaut",
+   "description": "Security & quality checklist for micronaut projects.",
+   "instructions": "Workflow:\n1. Read the project's micronaut usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_quarkus",
+   "name": "Framework checklist: quarkus",
+   "description": "Security & quality checklist for quarkus projects.",
+   "instructions": "Workflow:\n1. Read the project's quarkus usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_django",
+   "name": "Framework checklist: django",
+   "description": "Security & quality checklist for django projects.",
+   "instructions": "Workflow:\n1. Read the project's django usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_flask",
+   "name": "Framework checklist: flask",
+   "description": "Security & quality checklist for flask projects.",
+   "instructions": "Workflow:\n1. Read the project's flask usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_fastapi",
+   "name": "Framework checklist: fastapi",
+   "description": "Security & quality checklist for fastapi projects.",
+   "instructions": "Workflow:\n1. Read the project's fastapi usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_rails",
+   "name": "Framework checklist: rails",
+   "description": "Security & quality checklist for rails projects.",
+   "instructions": "Workflow:\n1. Read the project's rails usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_sinatra",
+   "name": "Framework checklist: sinatra",
+   "description": "Security & quality checklist for sinatra projects.",
+   "instructions": "Workflow:\n1. Read the project's sinatra usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_laravel",
+   "name": "Framework checklist: laravel",
+   "description": "Security & quality checklist for laravel projects.",
+   "instructions": "Workflow:\n1. Read the project's laravel usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_symfony",
+   "name": "Framework checklist: symfony",
+   "description": "Security & quality checklist for symfony projects.",
+   "instructions": "Workflow:\n1. Read the project's symfony usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_express",
+   "name": "Framework checklist: express",
+   "description": "Security & quality checklist for express projects.",
+   "instructions": "Workflow:\n1. Read the project's express usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_nestjs",
+   "name": "Framework checklist: nestjs",
+   "description": "Security & quality checklist for nestjs projects.",
+   "instructions": "Workflow:\n1. Read the project's nestjs usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_fastify",
+   "name": "Framework checklist: fastify",
+   "description": "Security & quality checklist for fastify projects.",
+   "instructions": "Workflow:\n1. Read the project's fastify usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_aspnet",
+   "name": "Framework checklist: aspnet",
+   "description": "Security & quality checklist for aspnet projects.",
+   "instructions": "Workflow:\n1. Read the project's aspnet usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_gin",
+   "name": "Framework checklist: gin",
+   "description": "Security & quality checklist for gin projects.",
+   "instructions": "Workflow:\n1. Read the project's gin usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_echo",
+   "name": "Framework checklist: echo",
+   "description": "Security & quality checklist for echo projects.",
+   "instructions": "Workflow:\n1. Read the project's echo usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_fiber",
+   "name": "Framework checklist: fiber",
+   "description": "Security & quality checklist for fiber projects.",
+   "instructions": "Workflow:\n1. Read the project's fiber usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_actix",
+   "name": "Framework checklist: actix",
+   "description": "Security & quality checklist for actix projects.",
+   "instructions": "Workflow:\n1. Read the project's actix usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_axum",
+   "name": "Framework checklist: axum",
+   "description": "Security & quality checklist for axum projects.",
+   "instructions": "Workflow:\n1. Read the project's axum usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_rocket",
+   "name": "Framework checklist: rocket",
+   "description": "Security & quality checklist for rocket projects.",
+   "instructions": "Workflow:\n1. Read the project's rocket usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_flask-restful",
+   "name": "Framework checklist: flask-restful",
+   "description": "Security & quality checklist for flask-restful projects.",
+   "instructions": "Workflow:\n1. Read the project's flask-restful usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_graphql-yoga",
+   "name": "Framework checklist: graphql-yoga",
+   "description": "Security & quality checklist for graphql-yoga projects.",
+   "instructions": "Workflow:\n1. Read the project's graphql-yoga usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_apollo-server",
+   "name": "Framework checklist: apollo-server",
+   "description": "Security & quality checklist for apollo-server projects.",
+   "instructions": "Workflow:\n1. Read the project's apollo-server usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_urllib3-requests",
+   "name": "Framework checklist: urllib3-requests",
+   "description": "Security & quality checklist for urllib3-requests projects.",
+   "instructions": "Workflow:\n1. Read the project's urllib3-requests usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_retrofit",
+   "name": "Framework checklist: retrofit",
+   "description": "Security & quality checklist for retrofit projects.",
+   "instructions": "Workflow:\n1. Read the project's retrofit usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_okhttp",
+   "name": "Framework checklist: okhttp",
+   "description": "Security & quality checklist for okhttp projects.",
+   "instructions": "Workflow:\n1. Read the project's okhttp usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_gson-jackson-moshi",
+   "name": "Framework checklist: gson-jackson-moshi",
+   "description": "Security & quality checklist for gson-jackson-moshi projects.",
+   "instructions": "Workflow:\n1. Read the project's gson-jackson-moshi usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  },
+  {
+   "id": "cat_sch_fw_ktor",
+   "name": "Framework checklist: ktor",
+   "description": "Security & quality checklist for ktor projects.",
+   "instructions": "Workflow:\n1. Read the project's ktor usage (file.search).\n2. Apply the framework's official security checklist (web.search docs).\n3. Audit config defaults (file.read).\n4. List gaps with fixes.\n5. Track as tasks.",
+   "enabled": false
+  }
+ ]
+}

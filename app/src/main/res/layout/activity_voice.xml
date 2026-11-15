@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/canvas_bg"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/voice_title"
+        app:titleTextColor="@color/text_primary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivOrb"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/bg_circle_brand"
+        android:alpha="0.3"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/tvStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voice_listening"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/tvTranscript"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvTranscript"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/voice_placeholder"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus"
+        app:layout_constraintBottom_toTopOf="@id/tvResponse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResponse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvTranscript"
+        app:layout_constraintBottom_toTopOf="@id/btnMicLarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnMicLarge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/bg_circle_brand"
+        android:contentDescription="@string/toggle_voice_input"
+        android:src="@drawable/ic_mic"
+        android:scaleType="center"
+        app:tint="@color/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

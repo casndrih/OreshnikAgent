@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvAboutVersion" type="id" />
+    <item name="chipGroupAbout" type="id" />
+    <item name="aboutFeatureList" type="id" />
+</resources>

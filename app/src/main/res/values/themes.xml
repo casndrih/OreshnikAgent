@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light theme -->
+    <style name="Theme.Oreshik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary / accent color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Oreshik.BottomSheetDialog</item>
+        <!-- Backgrounds -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <!-- Status bar: light cream bar with dark icons -->
+        <item name="android:statusBarColor">@color/bg_root</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_root</item>
+        <item name="android:windowAnimationStyle">@style/AppWindowAnimation</item>
+    </style>
+</resources>

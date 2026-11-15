@@ -1,0 +1,1692 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_soc_core_log-pipeline-design",
+   "name": "Log pipeline design",
+   "description": "Build a reliable security logging pipeline.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_core_detection-engineering-loop",
+   "name": "Detection engineering loop",
+   "description": "Turn threats into tested detections.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_core_incident-triage-runbook",
+   "name": "Incident triage runbook",
+   "description": "Triage alerts without thrash.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_core_threat-hunting-cadence",
+   "name": "Threat hunting cadence",
+   "description": "Hunt proactively, not reactively.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_core_asset-inventory-hygiene",
+   "name": "Asset inventory hygiene",
+   "description": "Know what you defend.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_core_vulnerability-management-slas",
+   "name": "Vulnerability management SLAs",
+   "description": "Operate remediation timelines.",
+   "instructions": "Workflow:\n1. Locate where '%TOPIC%' applies in this project or task (file.search/file.read).\n2. Review the standard practice for %TOPIC% (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_siem-engineering",
+   "name": "Blue team topic: SIEM engineering",
+   "description": "Practical guide for SIEM engineering.",
+   "instructions": "Workflow:\n1. Locate where 'SIEM engineering' applies in this project or task (file.search/file.read).\n2. Review the standard practice for SIEM engineering (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_correlation-rules",
+   "name": "Blue team topic: correlation rules",
+   "description": "Practical guide for correlation rules.",
+   "instructions": "Workflow:\n1. Locate where 'correlation rules' applies in this project or task (file.search/file.read).\n2. Review the standard practice for correlation rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_use-case-development",
+   "name": "Blue team topic: use case development",
+   "description": "Practical guide for use case development.",
+   "instructions": "Workflow:\n1. Locate where 'use case development' applies in this project or task (file.search/file.read).\n2. Review the standard practice for use case development (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_alert-quality-metrics",
+   "name": "Blue team topic: alert quality metrics",
+   "description": "Practical guide for alert quality metrics.",
+   "instructions": "Workflow:\n1. Locate where 'alert quality metrics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for alert quality metrics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_false-positive-budgets",
+   "name": "Blue team topic: false positive budgets",
+   "description": "Practical guide for false positive budgets.",
+   "instructions": "Workflow:\n1. Locate where 'false positive budgets' applies in this project or task (file.search/file.read).\n2. Review the standard practice for false positive budgets (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_soc-metrics-mttd-mttr",
+   "name": "Blue team topic: SOC metrics MTTD MTTR",
+   "description": "Practical guide for SOC metrics MTTD MTTR.",
+   "instructions": "Workflow:\n1. Locate where 'SOC metrics MTTD MTTR' applies in this project or task (file.search/file.read).\n2. Review the standard practice for SOC metrics MTTD MTTR (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_shift-handover-notes",
+   "name": "Blue team topic: shift handover notes",
+   "description": "Practical guide for shift handover notes.",
+   "instructions": "Workflow:\n1. Locate where 'shift handover notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for shift handover notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_case-management",
+   "name": "Blue team topic: case management",
+   "description": "Practical guide for case management.",
+   "instructions": "Workflow:\n1. Locate where 'case management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for case management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_playbook-automation-soar",
+   "name": "Blue team topic: playbook automation SOAR",
+   "description": "Practical guide for playbook automation SOAR.",
+   "instructions": "Workflow:\n1. Locate where 'playbook automation SOAR' applies in this project or task (file.search/file.read).\n2. Review the standard practice for playbook automation SOAR (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_enrichment-pipelines",
+   "name": "Blue team topic: enrichment pipelines",
+   "description": "Practical guide for enrichment pipelines.",
+   "instructions": "Workflow:\n1. Locate where 'enrichment pipelines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for enrichment pipelines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_threat-intel-feeds",
+   "name": "Blue team topic: threat intel feeds",
+   "description": "Practical guide for threat intel feeds.",
+   "instructions": "Workflow:\n1. Locate where 'threat intel feeds' applies in this project or task (file.search/file.read).\n2. Review the standard practice for threat intel feeds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ioc-management",
+   "name": "Blue team topic: IOC management",
+   "description": "Practical guide for IOC management.",
+   "instructions": "Workflow:\n1. Locate where 'IOC management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for IOC management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tip-basics",
+   "name": "Blue team topic: TIP basics",
+   "description": "Practical guide for TIP basics.",
+   "instructions": "Workflow:\n1. Locate where 'TIP basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for TIP basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_misp-usage",
+   "name": "Blue team topic: MISP usage",
+   "description": "Practical guide for MISP usage.",
+   "instructions": "Workflow:\n1. Locate where 'MISP usage' applies in this project or task (file.search/file.read).\n2. Review the standard practice for MISP usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_stix-taxii",
+   "name": "Blue team topic: STIX TAXII",
+   "description": "Practical guide for STIX TAXII.",
+   "instructions": "Workflow:\n1. Locate where 'STIX TAXII' applies in this project or task (file.search/file.read).\n2. Review the standard practice for STIX TAXII (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_sigma-rule-writing",
+   "name": "Blue team topic: sigma rule writing",
+   "description": "Practical guide for sigma rule writing.",
+   "instructions": "Workflow:\n1. Locate where 'sigma rule writing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for sigma rule writing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_yara-hunting",
+   "name": "Blue team topic: yara hunting",
+   "description": "Practical guide for yara hunting.",
+   "instructions": "Workflow:\n1. Locate where 'yara hunting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for yara hunting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_osint-for-defense",
+   "name": "Blue team topic: osint for defense",
+   "description": "Practical guide for osint for defense.",
+   "instructions": "Workflow:\n1. Locate where 'osint for defense' applies in this project or task (file.search/file.read).\n2. Review the standard practice for osint for defense (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_attack-surface-monitoring",
+   "name": "Blue team topic: attack surface monitoring",
+   "description": "Practical guide for attack surface monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'attack surface monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for attack surface monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_closures-of-exposure",
+   "name": "Blue team topic: closures of exposure",
+   "description": "Practical guide for closures of exposure.",
+   "instructions": "Workflow:\n1. Locate where 'closures of exposure' applies in this project or task (file.search/file.read).\n2. Review the standard practice for closures of exposure (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_edr-deployment-strategy",
+   "name": "Blue team topic: EDR deployment strategy",
+   "description": "Practical guide for EDR deployment strategy.",
+   "instructions": "Workflow:\n1. Locate where 'EDR deployment strategy' applies in this project or task (file.search/file.read).\n2. Review the standard practice for EDR deployment strategy (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_edr-policy-tuning",
+   "name": "Blue team topic: EDR policy tuning",
+   "description": "Practical guide for EDR policy tuning.",
+   "instructions": "Workflow:\n1. Locate where 'EDR policy tuning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for EDR policy tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_edr-exclusion-risks",
+   "name": "Blue team topic: EDR exclusion risks",
+   "description": "Practical guide for EDR exclusion risks.",
+   "instructions": "Workflow:\n1. Locate where 'EDR exclusion risks' applies in this project or task (file.search/file.read).\n2. Review the standard practice for EDR exclusion risks (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_telemetry-coverage-mapping",
+   "name": "Blue team topic: telemetry coverage mapping",
+   "description": "Practical guide for telemetry coverage mapping.",
+   "instructions": "Workflow:\n1. Locate where 'telemetry coverage mapping' applies in this project or task (file.search/file.read).\n2. Review the standard practice for telemetry coverage mapping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_endpoint-hardening-baselines",
+   "name": "Blue team topic: endpoint hardening baselines",
+   "description": "Practical guide for endpoint hardening baselines.",
+   "instructions": "Workflow:\n1. Locate where 'endpoint hardening baselines' applies in this project or task (file.search/file.read).\n2. Review the standard practice for endpoint hardening baselines (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_cis-benchmarks-automation",
+   "name": "Blue team topic: CIS benchmarks automation",
+   "description": "Practical guide for CIS benchmarks automation.",
+   "instructions": "Workflow:\n1. Locate where 'CIS benchmarks automation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for CIS benchmarks automation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_patch-cadence-design",
+   "name": "Blue team topic: patch cadence design",
+   "description": "Practical guide for patch cadence design.",
+   "instructions": "Workflow:\n1. Locate where 'patch cadence design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for patch cadence design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_emergency-patching-flow",
+   "name": "Blue team topic: emergency patching flow",
+   "description": "Practical guide for emergency patching flow.",
+   "instructions": "Workflow:\n1. Locate where 'emergency patching flow' applies in this project or task (file.search/file.read).\n2. Review the standard practice for emergency patching flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_zero-day-response",
+   "name": "Blue team topic: zero day response",
+   "description": "Practical guide for zero day response.",
+   "instructions": "Workflow:\n1. Locate where 'zero day response' applies in this project or task (file.search/file.read).\n2. Review the standard practice for zero day response (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_iocs-vs-ioas",
+   "name": "Blue team topic: IOCs vs IOAs",
+   "description": "Practical guide for IOCs vs IOAs.",
+   "instructions": "Workflow:\n1. Locate where 'IOCs vs IOAs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for IOCs vs IOAs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_behavioral-detections",
+   "name": "Blue team topic: behavioral detections",
+   "description": "Practical guide for behavioral detections.",
+   "instructions": "Workflow:\n1. Locate where 'behavioral detections' applies in this project or task (file.search/file.read).\n2. Review the standard practice for behavioral detections (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ueba-basics",
+   "name": "Blue team topic: UEBA basics",
+   "description": "Practical guide for UEBA basics.",
+   "instructions": "Workflow:\n1. Locate where 'UEBA basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for UEBA basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_insider-risk-program",
+   "name": "Blue team topic: insider risk program",
+   "description": "Practical guide for insider risk program.",
+   "instructions": "Workflow:\n1. Locate where 'insider risk program' applies in this project or task (file.search/file.read).\n2. Review the standard practice for insider risk program (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_data-loss-prevention-tuning",
+   "name": "Blue team topic: data loss prevention tuning",
+   "description": "Practical guide for data loss prevention tuning.",
+   "instructions": "Workflow:\n1. Locate where 'data loss prevention tuning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for data loss prevention tuning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_dlp-false-positives",
+   "name": "Blue team topic: DLP false positives",
+   "description": "Practical guide for DLP false positives.",
+   "instructions": "Workflow:\n1. Locate where 'DLP false positives' applies in this project or task (file.search/file.read).\n2. Review the standard practice for DLP false positives (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_email-security-stack",
+   "name": "Blue team topic: email security stack",
+   "description": "Practical guide for email security stack.",
+   "instructions": "Workflow:\n1. Locate where 'email security stack' applies in this project or task (file.search/file.read).\n2. Review the standard practice for email security stack (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_phishing-defense-layers",
+   "name": "Blue team topic: phishing defense layers",
+   "description": "Practical guide for phishing defense layers.",
+   "instructions": "Workflow:\n1. Locate where 'phishing defense layers' applies in this project or task (file.search/file.read).\n2. Review the standard practice for phishing defense layers (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_dmarc-enforcement",
+   "name": "Blue team topic: DMARC enforcement",
+   "description": "Practical guide for DMARC enforcement.",
+   "instructions": "Workflow:\n1. Locate where 'DMARC enforcement' applies in this project or task (file.search/file.read).\n2. Review the standard practice for DMARC enforcement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_spoofing-simulations",
+   "name": "Blue team topic: spoofing simulations",
+   "description": "Practical guide for spoofing simulations.",
+   "instructions": "Workflow:\n1. Locate where 'spoofing simulations' applies in this project or task (file.search/file.read).\n2. Review the standard practice for spoofing simulations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_user-awareness-metrics",
+   "name": "Blue team topic: user awareness metrics",
+   "description": "Practical guide for user awareness metrics.",
+   "instructions": "Workflow:\n1. Locate where 'user awareness metrics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for user awareness metrics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_phishing-report-buttons",
+   "name": "Blue team topic: phishing report buttons",
+   "description": "Practical guide for phishing report buttons.",
+   "instructions": "Workflow:\n1. Locate where 'phishing report buttons' applies in this project or task (file.search/file.read).\n2. Review the standard practice for phishing report buttons (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_malware-triage-workflow",
+   "name": "Blue team topic: malware triage workflow",
+   "description": "Practical guide for malware triage workflow.",
+   "instructions": "Workflow:\n1. Locate where 'malware triage workflow' applies in this project or task (file.search/file.read).\n2. Review the standard practice for malware triage workflow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_sandbox-detonation",
+   "name": "Blue team topic: sandbox detonation",
+   "description": "Practical guide for sandbox detonation.",
+   "instructions": "Workflow:\n1. Locate where 'sandbox detonation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for sandbox detonation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_static-analysis-triage",
+   "name": "Blue team topic: static analysis triage",
+   "description": "Practical guide for static analysis triage.",
+   "instructions": "Workflow:\n1. Locate where 'static analysis triage' applies in this project or task (file.search/file.read).\n2. Review the standard practice for static analysis triage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ransomware-readiness",
+   "name": "Blue team topic: ransomware readiness",
+   "description": "Practical guide for ransomware readiness.",
+   "instructions": "Workflow:\n1. Locate where 'ransomware readiness' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ransomware readiness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_backups-immutability",
+   "name": "Blue team topic: backups immutability",
+   "description": "Practical guide for backups immutability.",
+   "instructions": "Workflow:\n1. Locate where 'backups immutability' applies in this project or task (file.search/file.read).\n2. Review the standard practice for backups immutability (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_recovery-testing",
+   "name": "Blue team topic: recovery testing",
+   "description": "Practical guide for recovery testing.",
+   "instructions": "Workflow:\n1. Locate where 'recovery testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for recovery testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tabletop-exercises",
+   "name": "Blue team topic: tabletop exercises",
+   "description": "Practical guide for tabletop exercises.",
+   "instructions": "Workflow:\n1. Locate where 'tabletop exercises' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tabletop exercises (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_crisis-comms-templates",
+   "name": "Blue team topic: crisis comms templates",
+   "description": "Practical guide for crisis comms templates.",
+   "instructions": "Workflow:\n1. Locate where 'crisis comms templates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for crisis comms templates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_forensic-imaging",
+   "name": "Blue team topic: forensic imaging",
+   "description": "Practical guide for forensic imaging.",
+   "instructions": "Workflow:\n1. Locate where 'forensic imaging' applies in this project or task (file.search/file.read).\n2. Review the standard practice for forensic imaging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_evidence-chain-of-custody",
+   "name": "Blue team topic: evidence chain of custody",
+   "description": "Practical guide for evidence chain of custody.",
+   "instructions": "Workflow:\n1. Locate where 'evidence chain of custody' applies in this project or task (file.search/file.read).\n2. Review the standard practice for evidence chain of custody (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_timeline-reconstruction",
+   "name": "Blue team topic: timeline reconstruction",
+   "description": "Practical guide for timeline reconstruction.",
+   "instructions": "Workflow:\n1. Locate where 'timeline reconstruction' applies in this project or task (file.search/file.read).\n2. Review the standard practice for timeline reconstruction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_memory-forensics-basics",
+   "name": "Blue team topic: memory forensics basics",
+   "description": "Practical guide for memory forensics basics.",
+   "instructions": "Workflow:\n1. Locate where 'memory forensics basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for memory forensics basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_volatility-workflows",
+   "name": "Blue team topic: volatility workflows",
+   "description": "Practical guide for volatility workflows.",
+   "instructions": "Workflow:\n1. Locate where 'volatility workflows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for volatility workflows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_disk-forensics-artifacts",
+   "name": "Blue team topic: disk forensics artifacts",
+   "description": "Practical guide for disk forensics artifacts.",
+   "instructions": "Workflow:\n1. Locate where 'disk forensics artifacts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for disk forensics artifacts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_windows-event-log-analysis",
+   "name": "Blue team topic: windows event log analysis",
+   "description": "Practical guide for windows event log analysis.",
+   "instructions": "Workflow:\n1. Locate where 'windows event log analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for windows event log analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_sysmon-telemetry",
+   "name": "Blue team topic: sysmon telemetry",
+   "description": "Practical guide for sysmon telemetry.",
+   "instructions": "Workflow:\n1. Locate where 'sysmon telemetry' applies in this project or task (file.search/file.read).\n2. Review the standard practice for sysmon telemetry (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_powershell-logging",
+   "name": "Blue team topic: powershell logging",
+   "description": "Practical guide for powershell logging.",
+   "instructions": "Workflow:\n1. Locate where 'powershell logging' applies in this project or task (file.search/file.read).\n2. Review the standard practice for powershell logging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_linux-auditd",
+   "name": "Blue team topic: linux auditd",
+   "description": "Practical guide for linux auditd.",
+   "instructions": "Workflow:\n1. Locate where 'linux auditd' applies in this project or task (file.search/file.read).\n2. Review the standard practice for linux auditd (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ebpf-monitoring-intro",
+   "name": "Blue team topic: eBPF monitoring intro",
+   "description": "Practical guide for eBPF monitoring intro.",
+   "instructions": "Workflow:\n1. Locate where 'eBPF monitoring intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for eBPF monitoring intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_network-detection-ndr",
+   "name": "Blue team topic: network detection NDR",
+   "description": "Practical guide for network detection NDR.",
+   "instructions": "Workflow:\n1. Locate where 'network detection NDR' applies in this project or task (file.search/file.read).\n2. Review the standard practice for network detection NDR (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_zeek-logging",
+   "name": "Blue team topic: zeek logging",
+   "description": "Practical guide for zeek logging.",
+   "instructions": "Workflow:\n1. Locate where 'zeek logging' applies in this project or task (file.search/file.read).\n2. Review the standard practice for zeek logging (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_suricata-rules",
+   "name": "Blue team topic: suricata rules",
+   "description": "Practical guide for suricata rules.",
+   "instructions": "Workflow:\n1. Locate where 'suricata rules' applies in this project or task (file.search/file.read).\n2. Review the standard practice for suricata rules (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_pcap-investigation",
+   "name": "Blue team topic: pcap investigation",
+   "description": "Practical guide for pcap investigation.",
+   "instructions": "Workflow:\n1. Locate where 'pcap investigation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for pcap investigation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_dns-security-monitoring",
+   "name": "Blue team topic: dns security monitoring",
+   "description": "Practical guide for dns security monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'dns security monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dns security monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tls-inspection-debates",
+   "name": "Blue team topic: tls inspection debates",
+   "description": "Practical guide for tls inspection debates.",
+   "instructions": "Workflow:\n1. Locate where 'tls inspection debates' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tls inspection debates (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_identity-telemetry",
+   "name": "Blue team topic: identity telemetry",
+   "description": "Practical guide for identity telemetry.",
+   "instructions": "Workflow:\n1. Locate where 'identity telemetry' applies in this project or task (file.search/file.read).\n2. Review the standard practice for identity telemetry (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_impossible-travel-detection",
+   "name": "Blue team topic: impossible travel detection",
+   "description": "Practical guide for impossible travel detection.",
+   "instructions": "Workflow:\n1. Locate where 'impossible travel detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for impossible travel detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_privileged-access-monitoring",
+   "name": "Blue team topic: privileged access monitoring",
+   "description": "Practical guide for privileged access monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'privileged access monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for privileged access monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_pam-basics",
+   "name": "Blue team topic: PAM basics",
+   "description": "Practical guide for PAM basics.",
+   "instructions": "Workflow:\n1. Locate where 'PAM basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for PAM basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_secrets-scanning-runtime",
+   "name": "Blue team topic: secrets scanning runtime",
+   "description": "Practical guide for secrets scanning runtime.",
+   "instructions": "Workflow:\n1. Locate where 'secrets scanning runtime' applies in this project or task (file.search/file.read).\n2. Review the standard practice for secrets scanning runtime (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_container-security-monitoring",
+   "name": "Blue team topic: container security monitoring",
+   "description": "Practical guide for container security monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'container security monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for container security monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_k8s-audit-log-analysis",
+   "name": "Blue team topic: k8s audit log analysis",
+   "description": "Practical guide for k8s audit log analysis.",
+   "instructions": "Workflow:\n1. Locate where 'k8s audit log analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for k8s audit log analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_cloud-trail-review",
+   "name": "Blue team topic: cloud trail review",
+   "description": "Practical guide for cloud trail review.",
+   "instructions": "Workflow:\n1. Locate where 'cloud trail review' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cloud trail review (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_guardduty-style-alerts",
+   "name": "Blue team topic: guardduty style alerts",
+   "description": "Practical guide for guardduty style alerts.",
+   "instructions": "Workflow:\n1. Locate where 'guardduty style alerts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for guardduty style alerts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_iac-scanning",
+   "name": "Blue team topic: IaC scanning",
+   "description": "Practical guide for IaC scanning.",
+   "instructions": "Workflow:\n1. Locate where 'IaC scanning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for IaC scanning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_policy-as-code-opa",
+   "name": "Blue team topic: policy as code OPA",
+   "description": "Practical guide for policy as code OPA.",
+   "instructions": "Workflow:\n1. Locate where 'policy as code OPA' applies in this project or task (file.search/file.read).\n2. Review the standard practice for policy as code OPA (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_admission-control-hardening",
+   "name": "Blue team topic: admission control hardening",
+   "description": "Practical guide for admission control hardening.",
+   "instructions": "Workflow:\n1. Locate where 'admission control hardening' applies in this project or task (file.search/file.read).\n2. Review the standard practice for admission control hardening (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_attack-path-mapping",
+   "name": "Blue team topic: attack path mapping",
+   "description": "Practical guide for attack path mapping.",
+   "instructions": "Workflow:\n1. Locate where 'attack path mapping' applies in this project or task (file.search/file.read).\n2. Review the standard practice for attack path mapping (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_crown-jewels-analysis",
+   "name": "Blue team topic: crown jewels analysis",
+   "description": "Practical guide for crown jewels analysis.",
+   "instructions": "Workflow:\n1. Locate where 'crown jewels analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for crown jewels analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_risk-register-operations",
+   "name": "Blue team topic: risk register operations",
+   "description": "Practical guide for risk register operations.",
+   "instructions": "Workflow:\n1. Locate where 'risk register operations' applies in this project or task (file.search/file.read).\n2. Review the standard practice for risk register operations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_control-mapping-nist",
+   "name": "Blue team topic: control mapping NIST",
+   "description": "Practical guide for control mapping NIST.",
+   "instructions": "Workflow:\n1. Locate where 'control mapping NIST' applies in this project or task (file.search/file.read).\n2. Review the standard practice for control mapping NIST (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_iso-27001-operations",
+   "name": "Blue team topic: ISO 27001 operations",
+   "description": "Practical guide for ISO 27001 operations.",
+   "instructions": "Workflow:\n1. Locate where 'ISO 27001 operations' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ISO 27001 operations (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_soc-2-evidence-collection",
+   "name": "Blue team topic: SOC 2 evidence collection",
+   "description": "Practical guide for SOC 2 evidence collection.",
+   "instructions": "Workflow:\n1. Locate where 'SOC 2 evidence collection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for SOC 2 evidence collection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_audit-readiness-sprints",
+   "name": "Blue team topic: audit readiness sprints",
+   "description": "Practical guide for audit readiness sprints.",
+   "instructions": "Workflow:\n1. Locate where 'audit readiness sprints' applies in this project or task (file.search/file.read).\n2. Review the standard practice for audit readiness sprints (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_compliance-drift-alerts",
+   "name": "Blue team topic: compliance drift alerts",
+   "description": "Practical guide for compliance drift alerts.",
+   "instructions": "Workflow:\n1. Locate where 'compliance drift alerts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for compliance drift alerts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_third-party-risk-assessments",
+   "name": "Blue team topic: third party risk assessments",
+   "description": "Practical guide for third party risk assessments.",
+   "instructions": "Workflow:\n1. Locate where 'third party risk assessments' applies in this project or task (file.search/file.read).\n2. Review the standard practice for third party risk assessments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_vendor-security-reviews",
+   "name": "Blue team topic: vendor security reviews",
+   "description": "Practical guide for vendor security reviews.",
+   "instructions": "Workflow:\n1. Locate where 'vendor security reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for vendor security reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_bug-bounty-triage-ops",
+   "name": "Blue team topic: bug bounty triage ops",
+   "description": "Practical guide for bug bounty triage ops.",
+   "instructions": "Workflow:\n1. Locate where 'bug bounty triage ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for bug bounty triage ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_disclosure-handling",
+   "name": "Blue team topic: disclosure handling",
+   "description": "Practical guide for disclosure handling.",
+   "instructions": "Workflow:\n1. Locate where 'disclosure handling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for disclosure handling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_public-comms-during-incidents",
+   "name": "Blue team topic: public comms during incidents",
+   "description": "Practical guide for public comms during incidents.",
+   "instructions": "Workflow:\n1. Locate where 'public comms during incidents' applies in this project or task (file.search/file.read).\n2. Review the standard practice for public comms during incidents (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_regulatory-notification-paths",
+   "name": "Blue team topic: regulatory notification paths",
+   "description": "Practical guide for regulatory notification paths.",
+   "instructions": "Workflow:\n1. Locate where 'regulatory notification paths' applies in this project or task (file.search/file.read).\n2. Review the standard practice for regulatory notification paths (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_breach-cost-tracking",
+   "name": "Blue team topic: breach cost tracking",
+   "description": "Practical guide for breach cost tracking.",
+   "instructions": "Workflow:\n1. Locate where 'breach cost tracking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for breach cost tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_insurance-coordination",
+   "name": "Blue team topic: insurance coordination",
+   "description": "Practical guide for insurance coordination.",
+   "instructions": "Workflow:\n1. Locate where 'insurance coordination' applies in this project or task (file.search/file.read).\n2. Review the standard practice for insurance coordination (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_law-enforcement-liaison",
+   "name": "Blue team topic: law enforcement liaison",
+   "description": "Practical guide for law enforcement liaison.",
+   "instructions": "Workflow:\n1. Locate where 'law enforcement liaison' applies in this project or task (file.search/file.read).\n2. Review the standard practice for law enforcement liaison (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_retainer-management",
+   "name": "Blue team topic: retainer management",
+   "description": "Practical guide for retainer management.",
+   "instructions": "Workflow:\n1. Locate where 'retainer management' applies in this project or task (file.search/file.read).\n2. Review the standard practice for retainer management (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_purple-team-programs",
+   "name": "Blue team topic: purple team programs",
+   "description": "Practical guide for purple team programs.",
+   "instructions": "Workflow:\n1. Locate where 'purple team programs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for purple team programs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_detection-coverage-matrices",
+   "name": "Blue team topic: detection coverage matrices",
+   "description": "Practical guide for detection coverage matrices.",
+   "instructions": "Workflow:\n1. Locate where 'detection coverage matrices' applies in this project or task (file.search/file.read).\n2. Review the standard practice for detection coverage matrices (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_attack-simulation-automation",
+   "name": "Blue team topic: attack simulation automation",
+   "description": "Practical guide for attack simulation automation.",
+   "instructions": "Workflow:\n1. Locate where 'attack simulation automation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for attack simulation automation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_baseline-drift-detection",
+   "name": "Blue team topic: baseline drift detection",
+   "description": "Practical guide for baseline drift detection.",
+   "instructions": "Workflow:\n1. Locate where 'baseline drift detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for baseline drift detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_file-integrity-monitoring",
+   "name": "Blue team topic: file integrity monitoring",
+   "description": "Practical guide for file integrity monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'file integrity monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for file integrity monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_honeypot-deployment",
+   "name": "Blue team topic: honeypot deployment",
+   "description": "Practical guide for honeypot deployment.",
+   "instructions": "Workflow:\n1. Locate where 'honeypot deployment' applies in this project or task (file.search/file.read).\n2. Review the standard practice for honeypot deployment (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_deception-tech-basics",
+   "name": "Blue team topic: deception tech basics",
+   "description": "Practical guide for deception tech basics.",
+   "instructions": "Workflow:\n1. Locate where 'deception tech basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for deception tech basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_threat-actor-profiling",
+   "name": "Blue team topic: threat actor profiling",
+   "description": "Practical guide for threat actor profiling.",
+   "instructions": "Workflow:\n1. Locate where 'threat actor profiling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for threat actor profiling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_campaign-tracking",
+   "name": "Blue team topic: campaign tracking",
+   "description": "Practical guide for campaign tracking.",
+   "instructions": "Workflow:\n1. Locate where 'campaign tracking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for campaign tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_victimology-basics",
+   "name": "Blue team topic: victimology basics",
+   "description": "Practical guide for victimology basics.",
+   "instructions": "Workflow:\n1. Locate where 'victimology basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for victimology basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_malware-config-extraction",
+   "name": "Blue team topic: malware config extraction",
+   "description": "Practical guide for malware config extraction.",
+   "instructions": "Workflow:\n1. Locate where 'malware config extraction' applies in this project or task (file.search/file.read).\n2. Review the standard practice for malware config extraction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_c2-traffic-patterns",
+   "name": "Blue team topic: C2 traffic patterns",
+   "description": "Practical guide for C2 traffic patterns.",
+   "instructions": "Workflow:\n1. Locate where 'C2 traffic patterns' applies in this project or task (file.search/file.read).\n2. Review the standard practice for C2 traffic patterns (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_beacon-detection",
+   "name": "Blue team topic: beacon detection",
+   "description": "Practical guide for beacon detection.",
+   "instructions": "Workflow:\n1. Locate where 'beacon detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for beacon detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_dns-tunneling-detection",
+   "name": "Blue team topic: dns tunneling detection",
+   "description": "Practical guide for dns tunneling detection.",
+   "instructions": "Workflow:\n1. Locate where 'dns tunneling detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for dns tunneling detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tls-fingerprinting-defense",
+   "name": "Blue team topic: tls fingerprinting defense",
+   "description": "Practical guide for tls fingerprinting defense.",
+   "instructions": "Workflow:\n1. Locate where 'tls fingerprinting defense' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tls fingerprinting defense (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_lateral-movement-hunting",
+   "name": "Blue team topic: lateral movement hunting",
+   "description": "Practical guide for lateral movement hunting.",
+   "instructions": "Workflow:\n1. Locate where 'lateral movement hunting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for lateral movement hunting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_kerberos-attack-detection",
+   "name": "Blue team topic: kerberos attack detection",
+   "description": "Practical guide for kerberos attack detection.",
+   "instructions": "Workflow:\n1. Locate where 'kerberos attack detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for kerberos attack detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ntlm-relay-defenses",
+   "name": "Blue team topic: ntlm relay defenses",
+   "description": "Practical guide for ntlm relay defenses.",
+   "instructions": "Workflow:\n1. Locate where 'ntlm relay defenses' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ntlm relay defenses (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ad-audit-scripts",
+   "name": "Blue team topic: ad audit scripts",
+   "description": "Practical guide for ad audit scripts.",
+   "instructions": "Workflow:\n1. Locate where 'ad audit scripts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ad audit scripts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_gpo-hygiene-reviews",
+   "name": "Blue team topic: gpo hygiene reviews",
+   "description": "Practical guide for gpo hygiene reviews.",
+   "instructions": "Workflow:\n1. Locate where 'gpo hygiene reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for gpo hygiene reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_local-admin-reduction",
+   "name": "Blue team topic: local admin reduction",
+   "description": "Practical guide for local admin reduction.",
+   "instructions": "Workflow:\n1. Locate where 'local admin reduction' applies in this project or task (file.search/file.read).\n2. Review the standard practice for local admin reduction (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_credential-rotation-ops",
+   "name": "Blue team topic: credential rotation ops",
+   "description": "Practical guide for credential rotation ops.",
+   "instructions": "Workflow:\n1. Locate where 'credential rotation ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for credential rotation ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_service-account-vaulting",
+   "name": "Blue team topic: service account vaulting",
+   "description": "Practical guide for service account vaulting.",
+   "instructions": "Workflow:\n1. Locate where 'service account vaulting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for service account vaulting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_key-management-ops",
+   "name": "Blue team topic: key management ops",
+   "description": "Practical guide for key management ops.",
+   "instructions": "Workflow:\n1. Locate where 'key management ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for key management ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_hsm-basics-ops",
+   "name": "Blue team topic: hsm basics ops",
+   "description": "Practical guide for hsm basics ops.",
+   "instructions": "Workflow:\n1. Locate where 'hsm basics ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for hsm basics ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_certificate-lifecycle-monitoring",
+   "name": "Blue team topic: certificate lifecycle monitoring",
+   "description": "Practical guide for certificate lifecycle monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'certificate lifecycle monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for certificate lifecycle monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_expiring-cert-alerts",
+   "name": "Blue team topic: expiring cert alerts",
+   "description": "Practical guide for expiring cert alerts.",
+   "instructions": "Workflow:\n1. Locate where 'expiring cert alerts' applies in this project or task (file.search/file.read).\n2. Review the standard practice for expiring cert alerts (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ca-compromise-response",
+   "name": "Blue team topic: ca compromise response",
+   "description": "Practical guide for ca compromise response.",
+   "instructions": "Workflow:\n1. Locate where 'ca compromise response' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ca compromise response (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_supply-chain-watch",
+   "name": "Blue team topic: supply chain watch",
+   "description": "Practical guide for supply chain watch.",
+   "instructions": "Workflow:\n1. Locate where 'supply chain watch' applies in this project or task (file.search/file.read).\n2. Review the standard practice for supply chain watch (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_sbom-monitoring",
+   "name": "Blue team topic: sbom monitoring",
+   "description": "Practical guide for sbom monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'sbom monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for sbom monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_vendor-incident-intake",
+   "name": "Blue team topic: vendor incident intake",
+   "description": "Practical guide for vendor incident intake.",
+   "instructions": "Workflow:\n1. Locate where 'vendor incident intake' applies in this project or task (file.search/file.read).\n2. Review the standard practice for vendor incident intake (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ransom-note-analysis",
+   "name": "Blue team topic: ransom note analysis",
+   "description": "Practical guide for ransom note analysis.",
+   "instructions": "Workflow:\n1. Locate where 'ransom note analysis' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ransom note analysis (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_extortion-response-ethics",
+   "name": "Blue team topic: extortion response ethics",
+   "description": "Practical guide for extortion response ethics.",
+   "instructions": "Workflow:\n1. Locate where 'extortion response ethics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for extortion response ethics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_backup-restore-drills",
+   "name": "Blue team topic: backup restore drills",
+   "description": "Practical guide for backup restore drills.",
+   "instructions": "Workflow:\n1. Locate where 'backup restore drills' applies in this project or task (file.search/file.read).\n2. Review the standard practice for backup restore drills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_bcp-dr-testing",
+   "name": "Blue team topic: bcp dr testing",
+   "description": "Practical guide for bcp dr testing.",
+   "instructions": "Workflow:\n1. Locate where 'bcp dr testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for bcp dr testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_crisis-leadership",
+   "name": "Blue team topic: crisis leadership",
+   "description": "Practical guide for crisis leadership.",
+   "instructions": "Workflow:\n1. Locate where 'crisis leadership' applies in this project or task (file.search/file.read).\n2. Review the standard practice for crisis leadership (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_psych-safety-in-ir",
+   "name": "Blue team topic: psych safety in IR",
+   "description": "Practical guide for psych safety in IR.",
+   "instructions": "Workflow:\n1. Locate where 'psych safety in IR' applies in this project or task (file.search/file.read).\n2. Review the standard practice for psych safety in IR (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_analyst-burnout-prevention",
+   "name": "Blue team topic: analyst burnout prevention",
+   "description": "Practical guide for analyst burnout prevention.",
+   "instructions": "Workflow:\n1. Locate where 'analyst burnout prevention' applies in this project or task (file.search/file.read).\n2. Review the standard practice for analyst burnout prevention (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_detection-debt-backlog",
+   "name": "Blue team topic: detection debt backlog",
+   "description": "Practical guide for detection debt backlog.",
+   "instructions": "Workflow:\n1. Locate where 'detection debt backlog' applies in this project or task (file.search/file.read).\n2. Review the standard practice for detection debt backlog (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_automation-roi-tracking",
+   "name": "Blue team topic: automation ROI tracking",
+   "description": "Practical guide for automation ROI tracking.",
+   "instructions": "Workflow:\n1. Locate where 'automation ROI tracking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for automation ROI tracking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_case-quality-reviews",
+   "name": "Blue team topic: case quality reviews",
+   "description": "Practical guide for case quality reviews.",
+   "instructions": "Workflow:\n1. Locate where 'case quality reviews' applies in this project or task (file.search/file.read).\n2. Review the standard practice for case quality reviews (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_threat-intel-curation",
+   "name": "Blue team topic: threat intel curation",
+   "description": "Practical guide for threat intel curation.",
+   "instructions": "Workflow:\n1. Locate where 'threat intel curation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for threat intel curation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_analyst-enablement",
+   "name": "Blue team topic: analyst enablement",
+   "description": "Practical guide for analyst enablement.",
+   "instructions": "Workflow:\n1. Locate where 'analyst enablement' applies in this project or task (file.search/file.read).\n2. Review the standard practice for analyst enablement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_runbook-maintenance",
+   "name": "Blue team topic: runbook maintenance",
+   "description": "Practical guide for runbook maintenance.",
+   "instructions": "Workflow:\n1. Locate where 'runbook maintenance' applies in this project or task (file.search/file.read).\n2. Review the standard practice for runbook maintenance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_on-call-rotation-design",
+   "name": "Blue team topic: on-call rotation design",
+   "description": "Practical guide for on-call rotation design.",
+   "instructions": "Workflow:\n1. Locate where 'on-call rotation design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for on-call rotation design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_escalation-ladders",
+   "name": "Blue team topic: escalation ladders",
+   "description": "Practical guide for escalation ladders.",
+   "instructions": "Workflow:\n1. Locate where 'escalation ladders' applies in this project or task (file.search/file.read).\n2. Review the standard practice for escalation ladders (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_war-room-coordination",
+   "name": "Blue team topic: war room coordination",
+   "description": "Practical guide for war room coordination.",
+   "instructions": "Workflow:\n1. Locate where 'war room coordination' applies in this project or task (file.search/file.read).\n2. Review the standard practice for war room coordination (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_incident-comms-cadence",
+   "name": "Blue team topic: incident comms cadence",
+   "description": "Practical guide for incident comms cadence.",
+   "instructions": "Workflow:\n1. Locate where 'incident comms cadence' applies in this project or task (file.search/file.read).\n2. Review the standard practice for incident comms cadence (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_executive-updates-style",
+   "name": "Blue team topic: executive updates style",
+   "description": "Practical guide for executive updates style.",
+   "instructions": "Workflow:\n1. Locate where 'executive updates style' applies in this project or task (file.search/file.read).\n2. Review the standard practice for executive updates style (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_board-reporting-security",
+   "name": "Blue team topic: board reporting security",
+   "description": "Practical guide for board reporting security.",
+   "instructions": "Workflow:\n1. Locate where 'board reporting security' applies in this project or task (file.search/file.read).\n2. Review the standard practice for board reporting security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_metrics-that-matter",
+   "name": "Blue team topic: metrics that matter",
+   "description": "Practical guide for metrics that matter.",
+   "instructions": "Workflow:\n1. Locate where 'metrics that matter' applies in this project or task (file.search/file.read).\n2. Review the standard practice for metrics that matter (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_trend-analysis-ops",
+   "name": "Blue team topic: trend analysis ops",
+   "description": "Practical guide for trend analysis ops.",
+   "instructions": "Workflow:\n1. Locate where 'trend analysis ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for trend analysis ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_capacity-planning-soc",
+   "name": "Blue team topic: capacity planning soc",
+   "description": "Practical guide for capacity planning soc.",
+   "instructions": "Workflow:\n1. Locate where 'capacity planning soc' applies in this project or task (file.search/file.read).\n2. Review the standard practice for capacity planning soc (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tool-sprawl-audits",
+   "name": "Blue team topic: tool sprawl audits",
+   "description": "Practical guide for tool sprawl audits.",
+   "instructions": "Workflow:\n1. Locate where 'tool sprawl audits' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tool sprawl audits (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_telemetry-cost-control",
+   "name": "Blue team topic: telemetry cost control",
+   "description": "Practical guide for telemetry cost control.",
+   "instructions": "Workflow:\n1. Locate where 'telemetry cost control' applies in this project or task (file.search/file.read).\n2. Review the standard practice for telemetry cost control (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_log-sampling-strategies",
+   "name": "Blue team topic: log sampling strategies",
+   "description": "Practical guide for log sampling strategies.",
+   "instructions": "Workflow:\n1. Locate where 'log sampling strategies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for log sampling strategies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_storage-tiering-logs",
+   "name": "Blue team topic: storage tiering logs",
+   "description": "Practical guide for storage tiering logs.",
+   "instructions": "Workflow:\n1. Locate where 'storage tiering logs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for storage tiering logs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_retention-legal-holds",
+   "name": "Blue team topic: retention legal holds",
+   "description": "Practical guide for retention legal holds.",
+   "instructions": "Workflow:\n1. Locate where 'retention legal holds' applies in this project or task (file.search/file.read).\n2. Review the standard practice for retention legal holds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_deletion-policies-compliance",
+   "name": "Blue team topic: deletion policies compliance",
+   "description": "Practical guide for deletion policies compliance.",
+   "instructions": "Workflow:\n1. Locate where 'deletion policies compliance' applies in this project or task (file.search/file.read).\n2. Review the standard practice for deletion policies compliance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_privacy-in-monitoring",
+   "name": "Blue team topic: privacy in monitoring",
+   "description": "Practical guide for privacy in monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'privacy in monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for privacy in monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_anonymization-in-telemetry",
+   "name": "Blue team topic: anonymization in telemetry",
+   "description": "Practical guide for anonymization in telemetry.",
+   "instructions": "Workflow:\n1. Locate where 'anonymization in telemetry' applies in this project or task (file.search/file.read).\n2. Review the standard practice for anonymization in telemetry (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_insider-threat-ethics",
+   "name": "Blue team topic: insider threat ethics",
+   "description": "Practical guide for insider threat ethics.",
+   "instructions": "Workflow:\n1. Locate where 'insider threat ethics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for insider threat ethics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_workplace-privacy-law-basics",
+   "name": "Blue team topic: workplace privacy law basics",
+   "description": "Practical guide for workplace privacy law basics.",
+   "instructions": "Workflow:\n1. Locate where 'workplace privacy law basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for workplace privacy law basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_works-councils-notes",
+   "name": "Blue team topic: works councils notes",
+   "description": "Practical guide for works councils notes.",
+   "instructions": "Workflow:\n1. Locate where 'works councils notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for works councils notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_cross-border-data-flows",
+   "name": "Blue team topic: cross border data flows",
+   "description": "Practical guide for cross border data flows.",
+   "instructions": "Workflow:\n1. Locate where 'cross border data flows' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cross border data flows (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_classification-programs",
+   "name": "Blue team topic: classification programs",
+   "description": "Practical guide for classification programs.",
+   "instructions": "Workflow:\n1. Locate where 'classification programs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for classification programs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_labeling-enforcement",
+   "name": "Blue team topic: labeling enforcement",
+   "description": "Practical guide for labeling enforcement.",
+   "instructions": "Workflow:\n1. Locate where 'labeling enforcement' applies in this project or task (file.search/file.read).\n2. Review the standard practice for labeling enforcement (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_clean-desk-verification",
+   "name": "Blue team topic: clean desk verification",
+   "description": "Practical guide for clean desk verification.",
+   "instructions": "Workflow:\n1. Locate where 'clean desk verification' applies in this project or task (file.search/file.read).\n2. Review the standard practice for clean desk verification (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_physical-security-tie-ins",
+   "name": "Blue team topic: physical security tie ins",
+   "description": "Practical guide for physical security tie ins.",
+   "instructions": "Workflow:\n1. Locate where 'physical security tie ins' applies in this project or task (file.search/file.read).\n2. Review the standard practice for physical security tie ins (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_badge-data-analytics",
+   "name": "Blue team topic: badge data analytics",
+   "description": "Practical guide for badge data analytics.",
+   "instructions": "Workflow:\n1. Locate where 'badge data analytics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for badge data analytics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_visitor-logs-review",
+   "name": "Blue team topic: visitor logs review",
+   "description": "Practical guide for visitor logs review.",
+   "instructions": "Workflow:\n1. Locate where 'visitor logs review' applies in this project or task (file.search/file.read).\n2. Review the standard practice for visitor logs review (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_insider-program-governance",
+   "name": "Blue team topic: insider program governance",
+   "description": "Practical guide for insider program governance.",
+   "instructions": "Workflow:\n1. Locate where 'insider program governance' applies in this project or task (file.search/file.read).\n2. Review the standard practice for insider program governance (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_monthly-metrics-pack",
+   "name": "Blue team topic: monthly metrics pack",
+   "description": "Practical guide for monthly metrics pack.",
+   "instructions": "Workflow:\n1. Locate where 'monthly metrics pack' applies in this project or task (file.search/file.read).\n2. Review the standard practice for monthly metrics pack (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_quarterly-board-deck",
+   "name": "Blue team topic: quarterly board deck",
+   "description": "Practical guide for quarterly board deck.",
+   "instructions": "Workflow:\n1. Locate where 'quarterly board deck' applies in this project or task (file.search/file.read).\n2. Review the standard practice for quarterly board deck (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_annual-threat-report",
+   "name": "Blue team topic: annual threat report",
+   "description": "Practical guide for annual threat report.",
+   "instructions": "Workflow:\n1. Locate where 'annual threat report' applies in this project or task (file.search/file.read).\n2. Review the standard practice for annual threat report (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_industry-benchmarking",
+   "name": "Blue team topic: industry benchmarking",
+   "description": "Practical guide for industry benchmarking.",
+   "instructions": "Workflow:\n1. Locate where 'industry benchmarking' applies in this project or task (file.search/file.read).\n2. Review the standard practice for industry benchmarking (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_maturity-assessments",
+   "name": "Blue team topic: maturity assessments",
+   "description": "Practical guide for maturity assessments.",
+   "instructions": "Workflow:\n1. Locate where 'maturity assessments' applies in this project or task (file.search/file.read).\n2. Review the standard practice for maturity assessments (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_roadmap-prioritization-security",
+   "name": "Blue team topic: roadmap prioritization security",
+   "description": "Practical guide for roadmap prioritization security.",
+   "instructions": "Workflow:\n1. Locate where 'roadmap prioritization security' applies in this project or task (file.search/file.read).\n2. Review the standard practice for roadmap prioritization security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_budget-defense-narratives",
+   "name": "Blue team topic: budget defense narratives",
+   "description": "Practical guide for budget defense narratives.",
+   "instructions": "Workflow:\n1. Locate where 'budget defense narratives' applies in this project or task (file.search/file.read).\n2. Review the standard practice for budget defense narratives (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_tool-rationalization",
+   "name": "Blue team topic: tool rationalization",
+   "description": "Practical guide for tool rationalization.",
+   "instructions": "Workflow:\n1. Locate where 'tool rationalization' applies in this project or task (file.search/file.read).\n2. Review the standard practice for tool rationalization (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_buy-vs-build-security",
+   "name": "Blue team topic: buy vs build security",
+   "description": "Practical guide for buy vs build security.",
+   "instructions": "Workflow:\n1. Locate where 'buy vs build security' applies in this project or task (file.search/file.read).\n2. Review the standard practice for buy vs build security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_vendor-evaluation-criteria",
+   "name": "Blue team topic: vendor evaluation criteria",
+   "description": "Practical guide for vendor evaluation criteria.",
+   "instructions": "Workflow:\n1. Locate where 'vendor evaluation criteria' applies in this project or task (file.search/file.read).\n2. Review the standard practice for vendor evaluation criteria (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_poc-to-production-security",
+   "name": "Blue team topic: poc to production security",
+   "description": "Practical guide for poc to production security.",
+   "instructions": "Workflow:\n1. Locate where 'poc to production security' applies in this project or task (file.search/file.read).\n2. Review the standard practice for poc to production security (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_integration-debt",
+   "name": "Blue team topic: integration debt",
+   "description": "Practical guide for integration debt.",
+   "instructions": "Workflow:\n1. Locate where 'integration debt' applies in this project or task (file.search/file.read).\n2. Review the standard practice for integration debt (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_api-security-monitoring",
+   "name": "Blue team topic: api security monitoring",
+   "description": "Practical guide for api security monitoring.",
+   "instructions": "Workflow:\n1. Locate where 'api security monitoring' applies in this project or task (file.search/file.read).\n2. Review the standard practice for api security monitoring (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_webhook-security-ops",
+   "name": "Blue team topic: webhook security ops",
+   "description": "Practical guide for webhook security ops.",
+   "instructions": "Workflow:\n1. Locate where 'webhook security ops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for webhook security ops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_supply-chain-incident-example-studies",
+   "name": "Blue team topic: supply chain incident example studies",
+   "description": "Practical guide for supply chain incident example studies.",
+   "instructions": "Workflow:\n1. Locate where 'supply chain incident example studies' applies in this project or task (file.search/file.read).\n2. Review the standard practice for supply chain incident example studies (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_-tabletop-facilitation-skills",
+   "name": "Blue team topic:  tabletop facilitation skills",
+   "description": "Practical guide for  tabletop facilitation skills.",
+   "instructions": "Workflow:\n1. Locate where ' tabletop facilitation skills' applies in this project or task (file.search/file.read).\n2. Review the standard practice for  tabletop facilitation skills (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_crisis-simulation-design",
+   "name": "Blue team topic: crisis simulation design",
+   "description": "Practical guide for crisis simulation design.",
+   "instructions": "Workflow:\n1. Locate where 'crisis simulation design' applies in this project or task (file.search/file.read).\n2. Review the standard practice for crisis simulation design (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_executive-tabletops",
+   "name": "Blue team topic: executive tabletops",
+   "description": "Practical guide for executive tabletops.",
+   "instructions": "Workflow:\n1. Locate where 'executive tabletops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for executive tabletops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_technical-debriefs",
+   "name": "Blue team topic: technical debriefs",
+   "description": "Practical guide for technical debriefs.",
+   "instructions": "Workflow:\n1. Locate where 'technical debriefs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for technical debriefs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_lessons-learned-loops",
+   "name": "Blue team topic: lessons learned loops",
+   "description": "Practical guide for lessons learned loops.",
+   "instructions": "Workflow:\n1. Locate where 'lessons learned loops' applies in this project or task (file.search/file.read).\n2. Review the standard practice for lessons learned loops (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_detection-as-code-ci",
+   "name": "Blue team topic: detection as code CI",
+   "description": "Practical guide for detection as code CI.",
+   "instructions": "Workflow:\n1. Locate where 'detection as code CI' applies in this project or task (file.search/file.read).\n2. Review the standard practice for detection as code CI (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_rule-regression-testing",
+   "name": "Blue team topic: rule regression testing",
+   "description": "Practical guide for rule regression testing.",
+   "instructions": "Workflow:\n1. Locate where 'rule regression testing' applies in this project or task (file.search/file.read).\n2. Review the standard practice for rule regression testing (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_telemetry-unit-tests",
+   "name": "Blue team topic: telemetry unit tests",
+   "description": "Practical guide for telemetry unit tests.",
+   "instructions": "Workflow:\n1. Locate where 'telemetry unit tests' applies in this project or task (file.search/file.read).\n2. Review the standard practice for telemetry unit tests (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_golden-datasets-for-detection",
+   "name": "Blue team topic: golden datasets for detection",
+   "description": "Practical guide for golden datasets for detection.",
+   "instructions": "Workflow:\n1. Locate where 'golden datasets for detection' applies in this project or task (file.search/file.read).\n2. Review the standard practice for golden datasets for detection (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_coverage-heatmaps",
+   "name": "Blue team topic: coverage heatmaps",
+   "description": "Practical guide for coverage heatmaps.",
+   "instructions": "Workflow:\n1. Locate where 'coverage heatmaps' applies in this project or task (file.search/file.read).\n2. Review the standard practice for coverage heatmaps (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_gap-analysis-reports",
+   "name": "Blue team topic: gap analysis reports",
+   "description": "Practical guide for gap analysis reports.",
+   "instructions": "Workflow:\n1. Locate where 'gap analysis reports' applies in this project or task (file.search/file.read).\n2. Review the standard practice for gap analysis reports (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_purple-team-calendars",
+   "name": "Blue team topic: purple team calendars",
+   "description": "Practical guide for purple team calendars.",
+   "instructions": "Workflow:\n1. Locate where 'purple team calendars' applies in this project or task (file.search/file.read).\n2. Review the standard practice for purple team calendars (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_threat-led-validation",
+   "name": "Blue team topic: threat led validation",
+   "description": "Practical guide for threat led validation.",
+   "instructions": "Workflow:\n1. Locate where 'threat led validation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for threat led validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_adversary-emulation-plans",
+   "name": "Blue team topic: adversary emulation plans",
+   "description": "Practical guide for adversary emulation plans.",
+   "instructions": "Workflow:\n1. Locate where 'adversary emulation plans' applies in this project or task (file.search/file.read).\n2. Review the standard practice for adversary emulation plans (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ctid-flow-notes",
+   "name": "Blue team topic: ctid flow notes",
+   "description": "Practical guide for ctid flow notes.",
+   "instructions": "Workflow:\n1. Locate where 'ctid flow notes' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ctid flow notes (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_attack-iq-style-tooling",
+   "name": "Blue team topic: attack iq style tooling",
+   "description": "Practical guide for attack iq style tooling.",
+   "instructions": "Workflow:\n1. Locate where 'attack iq style tooling' applies in this project or task (file.search/file.read).\n2. Review the standard practice for attack iq style tooling (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_caldera-usage",
+   "name": "Blue team topic: caldera usage",
+   "description": "Practical guide for caldera usage.",
+   "instructions": "Workflow:\n1. Locate where 'caldera usage' applies in this project or task (file.search/file.read).\n2. Review the standard practice for caldera usage (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_atomic-red-team-runs",
+   "name": "Blue team topic: atomic red team runs",
+   "description": "Practical guide for atomic red team runs.",
+   "instructions": "Workflow:\n1. Locate where 'atomic red team runs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for atomic red team runs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_validation-reporting",
+   "name": "Blue team topic: validation reporting",
+   "description": "Practical guide for validation reporting.",
+   "instructions": "Workflow:\n1. Locate where 'validation reporting' applies in this project or task (file.search/file.read).\n2. Review the standard practice for validation reporting (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_security-champions-soc-liaison",
+   "name": "Blue team topic: security champions soc liaison",
+   "description": "Practical guide for security champions soc liaison.",
+   "instructions": "Workflow:\n1. Locate where 'security champions soc liaison' applies in this project or task (file.search/file.read).\n2. Review the standard practice for security champions soc liaison (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_incident-retrospective-facilitation",
+   "name": "Blue team topic: incident retrospective facilitation",
+   "description": "Practical guide for incident retrospective facilitation.",
+   "instructions": "Workflow:\n1. Locate where 'incident retrospective facilitation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for incident retrospective facilitation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_oncall-wellbeing-soc",
+   "name": "Blue team topic: oncall wellbeing soc",
+   "description": "Practical guide for oncall wellbeing soc.",
+   "instructions": "Workflow:\n1. Locate where 'oncall wellbeing soc' applies in this project or task (file.search/file.read).\n2. Review the standard practice for oncall wellbeing soc (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_shift-handover-quality",
+   "name": "Blue team topic: shift handover quality",
+   "description": "Practical guide for shift handover quality.",
+   "instructions": "Workflow:\n1. Locate where 'shift handover quality' applies in this project or task (file.search/file.read).\n2. Review the standard practice for shift handover quality (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_knowledge-base-soc",
+   "name": "Blue team topic: knowledge base soc",
+   "description": "Practical guide for knowledge base soc.",
+   "instructions": "Workflow:\n1. Locate where 'knowledge base soc' applies in this project or task (file.search/file.read).\n2. Review the standard practice for knowledge base soc (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_runbook-versioning",
+   "name": "Blue team topic: runbook versioning",
+   "description": "Practical guide for runbook versioning.",
+   "instructions": "Workflow:\n1. Locate where 'runbook versioning' applies in this project or task (file.search/file.read).\n2. Review the standard practice for runbook versioning (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_triage-queue-hygiene",
+   "name": "Blue team topic: triage queue hygiene",
+   "description": "Practical guide for triage queue hygiene.",
+   "instructions": "Workflow:\n1. Locate where 'triage queue hygiene' applies in this project or task (file.search/file.read).\n2. Review the standard practice for triage queue hygiene (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_escalation-criteria",
+   "name": "Blue team topic: escalation criteria",
+   "description": "Practical guide for escalation criteria.",
+   "instructions": "Workflow:\n1. Locate where 'escalation criteria' applies in this project or task (file.search/file.read).\n2. Review the standard practice for escalation criteria (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_case-severity-rubric",
+   "name": "Blue team topic: case severity rubric",
+   "description": "Practical guide for case severity rubric.",
+   "instructions": "Workflow:\n1. Locate where 'case severity rubric' applies in this project or task (file.search/file.read).\n2. Review the standard practice for case severity rubric (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_stakeholder-matrix",
+   "name": "Blue team topic: stakeholder matrix",
+   "description": "Practical guide for stakeholder matrix.",
+   "instructions": "Workflow:\n1. Locate where 'stakeholder matrix' applies in this project or task (file.search/file.read).\n2. Review the standard practice for stakeholder matrix (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_regulator-relationships",
+   "name": "Blue team topic: regulator relationships",
+   "description": "Practical guide for regulator relationships.",
+   "instructions": "Workflow:\n1. Locate where 'regulator relationships' applies in this project or task (file.search/file.read).\n2. Review the standard practice for regulator relationships (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_law-enforcement-referrals",
+   "name": "Blue team topic: law enforcement referrals",
+   "description": "Practical guide for law enforcement referrals.",
+   "instructions": "Workflow:\n1. Locate where 'law enforcement referrals' applies in this project or task (file.search/file.read).\n2. Review the standard practice for law enforcement referrals (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_privacy-breach-thresholds",
+   "name": "Blue team topic: privacy breach thresholds",
+   "description": "Practical guide for privacy breach thresholds.",
+   "instructions": "Workflow:\n1. Locate where 'privacy breach thresholds' applies in this project or task (file.search/file.read).\n2. Review the standard practice for privacy breach thresholds (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_state-breach-laws-overview",
+   "name": "Blue team topic: state breach laws overview",
+   "description": "Practical guide for state breach laws overview.",
+   "instructions": "Workflow:\n1. Locate where 'state breach laws overview' applies in this project or task (file.search/file.read).\n2. Review the standard practice for state breach laws overview (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_eu-gdpr-72-hour-flow",
+   "name": "Blue team topic: eu gdpr 72 hour flow",
+   "description": "Practical guide for eu gdpr 72 hour flow.",
+   "instructions": "Workflow:\n1. Locate where 'eu gdpr 72 hour flow' applies in this project or task (file.search/file.read).\n2. Review the standard practice for eu gdpr 72 hour flow (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_class-action-basics",
+   "name": "Blue team topic: class action basics",
+   "description": "Practical guide for class action basics.",
+   "instructions": "Workflow:\n1. Locate where 'class action basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for class action basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_litigation-hold-process",
+   "name": "Blue team topic: litigation hold process",
+   "description": "Practical guide for litigation hold process.",
+   "instructions": "Workflow:\n1. Locate where 'litigation hold process' applies in this project or task (file.search/file.read).\n2. Review the standard practice for litigation hold process (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_e-discovery-basics",
+   "name": "Blue team topic: e discovery basics",
+   "description": "Practical guide for e discovery basics.",
+   "instructions": "Workflow:\n1. Locate where 'e discovery basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for e discovery basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_chain-of-custody-digital",
+   "name": "Blue team topic: chain of custody digital",
+   "description": "Practical guide for chain of custody digital.",
+   "instructions": "Workflow:\n1. Locate where 'chain of custody digital' applies in this project or task (file.search/file.read).\n2. Review the standard practice for chain of custody digital (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_expert-witness-prep",
+   "name": "Blue team topic: expert witness prep",
+   "description": "Practical guide for expert witness prep.",
+   "instructions": "Workflow:\n1. Locate where 'expert witness prep' applies in this project or task (file.search/file.read).\n2. Review the standard practice for expert witness prep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_report-writing-forensics",
+   "name": "Blue team topic: report writing forensics",
+   "description": "Practical guide for report writing forensics.",
+   "instructions": "Workflow:\n1. Locate where 'report writing forensics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for report writing forensics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_peer-review-forensics",
+   "name": "Blue team topic: peer review forensics",
+   "description": "Practical guide for peer review forensics.",
+   "instructions": "Workflow:\n1. Locate where 'peer review forensics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for peer review forensics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_qa-process-forensic-labs",
+   "name": "Blue team topic: qa process forensic labs",
+   "description": "Practical guide for qa process forensic labs.",
+   "instructions": "Workflow:\n1. Locate where 'qa process forensic labs' applies in this project or task (file.search/file.read).\n2. Review the standard practice for qa process forensic labs (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_accreditation-iso-17025-intro",
+   "name": "Blue team topic: accreditation ISO 17025 intro",
+   "description": "Practical guide for accreditation ISO 17025 intro.",
+   "instructions": "Workflow:\n1. Locate where 'accreditation ISO 17025 intro' applies in this project or task (file.search/file.read).\n2. Review the standard practice for accreditation ISO 17025 intro (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_lab-tool-validation",
+   "name": "Blue team topic: lab tool validation",
+   "description": "Practical guide for lab tool validation.",
+   "instructions": "Workflow:\n1. Locate where 'lab tool validation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for lab tool validation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_method-validation-basics",
+   "name": "Blue team topic: method validation basics",
+   "description": "Practical guide for method validation basics.",
+   "instructions": "Workflow:\n1. Locate where 'method validation basics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for method validation basics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_error-rates-forensics",
+   "name": "Blue team topic: error rates forensics",
+   "description": "Practical guide for error rates forensics.",
+   "instructions": "Workflow:\n1. Locate where 'error rates forensics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for error rates forensics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_bias-in-forensic-tools",
+   "name": "Blue team topic: bias in forensic tools",
+   "description": "Practical guide for bias in forensic tools.",
+   "instructions": "Workflow:\n1. Locate where 'bias in forensic tools' applies in this project or task (file.search/file.read).\n2. Review the standard practice for bias in forensic tools (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_court-admissibility-daubert",
+   "name": "Blue team topic: court admissibility daubert",
+   "description": "Practical guide for court admissibility daubert.",
+   "instructions": "Workflow:\n1. Locate where 'court admissibility daubert' applies in this project or task (file.search/file.read).\n2. Review the standard practice for court admissibility daubert (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_testimony-preparation",
+   "name": "Blue team topic: testimony preparation",
+   "description": "Practical guide for testimony preparation.",
+   "instructions": "Workflow:\n1. Locate where 'testimony preparation' applies in this project or task (file.search/file.read).\n2. Review the standard practice for testimony preparation (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_cross-examination-prep",
+   "name": "Blue team topic: cross examination prep",
+   "description": "Practical guide for cross examination prep.",
+   "instructions": "Workflow:\n1. Locate where 'cross examination prep' applies in this project or task (file.search/file.read).\n2. Review the standard practice for cross examination prep (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_ethics-expert-witness",
+   "name": "Blue team topic: ethics expert witness",
+   "description": "Practical guide for ethics expert witness.",
+   "instructions": "Workflow:\n1. Locate where 'ethics expert witness' applies in this project or task (file.search/file.read).\n2. Review the standard practice for ethics expert witness (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  },
+  {
+   "id": "cat_soc_continuing-education-forensics",
+   "name": "Blue team topic: continuing education forensics",
+   "description": "Practical guide for continuing education forensics.",
+   "instructions": "Workflow:\n1. Locate where 'continuing education forensics' applies in this project or task (file.search/file.read).\n2. Review the standard practice for continuing education forensics (web.search authoritative docs).\n3. Apply the smallest correct change or artifact (file.patch/file.write).\n4. Verify with a build, test, measurement, or runtime check as appropriate.\n5. Record what was done, evidence, and any follow-ups.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Oreshik</string>
+    <string name="hint_chat">Describe a coding task…</string>
+        <string name="model_label">Choose model</string>
+    <string name="choose_model">Choose a model</string>
+
+    <!-- Navigation Drawer Sections -->
+
+    <!-- AI Section Items -->
+    <string name="nav_models">Models &amp; thinking</string>
+    <string name="nav_providers">Providers</string>
+    <string name="nav_memory">Memory</string>
+
+    <!-- Configuration Section Items -->
+
+    <!-- Agent Section Items -->
+    <string name="nav_skills">Skills</string>
+    <string name="nav_tools">Agent tools</string>
+
+    <!-- Developer Section Items -->
+
+    <!-- Storage Section Items -->
+
+    <!-- Personalisation Section Items -->
+
+    <!-- Security Section Items -->
+    <string name="nav_backup_restore">Backup &amp; Restore</string>
+    <string name="nav_about">About</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_header_subtitle">Automated agent</string>
+    <string name="search_models">Search models…</string>
+    <string name="thinking_level">Thinking level</string>
+    <string name="models_empty">No models found. Check the provider connection and refresh.</string>
+
+    <!-- Common -->
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="nav_new_chat">New chat</string>
+
+    <!-- Voice screen -->
+    <string name="voice_title">Voice</string>
+    <string name="voice_status_listening">Listening…</string>
+    <string name="voice_status_thinking">Thinking…</string>
+    <string name="voice_status_idle">Tap to start</string>
+    <string name="voice_listening">Listening…</string>
+    <string name="voice_placeholder">Tap the microphone to start speaking</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Settings</string>
+
+    <!-- Attachment sheet -->
+    <string name="attach_title">Add to message</string>
+    <string name="attach_camera">Camera</string>
+    <string name="attach_files">Files</string>
+    <string name="attach_gallery">Photos &amp; videos</string>
+    <string name="attach_docs">Documents</string>
+
+    <string name="accessibility_service_description">Allows the coding agent to inspect and navigate visible Android UI when you explicitly enable the service.</string>
+    <string name="privileged_operations">Privileged operations</string>
+    <string name="allow_the_agent_to_request_su_root_only_for_explicitly_elevated_tools_android_must_already_be_rooted_and_a_root_manager_must_grant_the_request">Allow the agent to request su/root only for explicitly elevated tools. Android must already be rooted and a root manager must grant the request.</string>
+    <string name="approximate_characters_before_compaction">Approximate characters before compaction</string>
+    <string name="agent_behavior">Agent behavior</string>
+    <string name="the_agent_asks_the_selected_model_to_summarize_older_context_and_keeps_recent_messages_live_reducing_context_growth_without_losing_project_decisions">The agent asks the selected model to summarize older context and keeps recent messages live, reducing context growth without losing project decisions.</string>
+    <string name="accessibility_is_optional_and_must_be_explicitly_enabled_in_android_settings_it_lets_the_agent_inspect_visible_ui_click_controls_scroll_change_focus_and_perform_back_home_recents_actions">Accessibility is optional and must be explicitly enabled in Android Settings. It lets the agent inspect visible UI, click controls, scroll, change focus and perform Back/Home/Recents actions.</string>
+    <string name="maximum_agent_steps">Maximum agent steps</string>
+    <!-- Shown in the live value pill next to the slider, e.g. "24 steps". -->
+    <plurals name="max_agent_steps_value_fmt">
+        <item quantity="one">%1$d step</item>
+        <item quantity="other">%1$d steps</item>
+    </plurals>
+    <string name="reset">Reset</string>
+    <string name="device_automation">Device automation</string>
+    <string name="background_operation">Background operation</string>
+    <string name="android_always_keeps_the_app_process_inside_its_os_uid_sandbox_this_switch_controls_the_agent_s_workspace_boundary_only_when_disabled_the_agent_can_use_the_shared_device_storage_workspace_if_android_all_files_access_has_been_granted">The agent workspace is stored in private app storage. Files in the workspace are available only to this app unless you export or share them.</string>
+    <string name="android_os_permissions_amp_workspace"><![CDATA[Android OS permissions & workspace]]></string>
+    <string name="the_agent_uses_a_foreground_service_and_a_short_partial_wakelock_while_processing_android_still_requires_you_to_approve_battery_optimization_exemption_the_app_cannot_silently_disable_system_power_management">The agent uses a foreground service and a short partial wakelock while processing. Android still requires you to approve battery-optimization exemption; the app cannot silently disable system power management.</string>
+    <string name="new_chat">New chat</string>
+    <string name="copy_message">Copy message</string>
+    <string name="add_attachment">Add attachment</string>
+    <string name="voice_input">Voice input</string>
+    <string name="send">Send</string>
+    <string name="stop_response">Stop the current response</string>
+    <string name="stop_speaking">Stop reading aloud</string>
+    <string name="allow_unrestricted_background_operation">Allow unrestricted background operation</string>
+    <string name="open_accessibility_settings">Open Accessibility settings</string>
+    <string name="enable_accessibility_tools">Enable Accessibility tools for Agent</string>
+    <!-- MIUI accessibility bypass -->
+    <string name="fix_miui_restrictions">Fix MIUI background restrictions (root)</string>
+    <string name="fix_miui_restrictions_description">With root enabled, re-applies the MIUI/HyperOS bypass: background appops, Doze whitelist, PowerKeeper “No restrictions”, autostart, standby bucket and the accessibility-service grant. Each step is verified and the report is shown below.</string>
+    <string name="miui_fix_status">MIUI bypass status</string>
+    <string name="keep_alive_notification_title">Oreshik Agent computer use active</string>
+    <string name="keep_alive_notification_text">Keeping the accessibility agent alive against battery restrictions.</string>
+    <string name="auto_allow_workspace_reads">Auto-allow workspace reads</string>
+    <string name="save_conversation_history">Save conversation history</string>
+    <string name="grant_android_runtime_permissions">Grant Android runtime permissions</string>
+    <string name="allow_network_tools">Allow network tools</string>
+    <string name="allow_process_build_tools">Allow process/build tools</string>
+    <string name="automatically_compress_long_chats">Automatically compress long chats</string>
+    <string name="ask_before_file_changes">Ask before file changes</string>
+    <string name="remove">Remove</string>
+    <string name="close">Close</string>
+    <string name="close_selection">Close selection</string>
+    <string name="select_all">Select all</string>
+    <string name="delete_selected">Delete selected</string>
+    <string name="open_message_action">Open selected message</string>
+    <string name="toggle_message_selection">Select message</string>
+    <string name="toggle_selinux_permissive">Toggle SELinux Permissive mode</string>
+    <string name="download_optional_runtime_tools">Download Optional Runtime Tools</string>
+    <plurals name="selected_count">
+        <item quantity="one">%1$d message selected</item>
+        <item quantity="other">%1$d messages selected</item>
+    </plurals>
+    <string name="open_message">Open message</string>
+    <string name="edit_message">Edit</string>
+    <string name="allow_root_su_operations">Allow root / su operations</string>
+    <string name="agent_memory">Agent memory</string>
+    <string name="allow_cross_session_context">Allow cross-session context</string>
+    <string name="allow_cross_session_context_description">When on, the agent may use memories and summaries from other chats. When off, it uses this chat’s memories and manually saved global memories.</string>
+    <string name="memory_auto_learn">Autonomous learning — automatically remember durable facts from conversations</string>
+    <string name="session_menu_dont_remember">Don\'t remember this chat</string>
+    <string name="session_menu_resume_remember">Resume remembering this chat</string>
+    <string name="install_runtime_pack_zip">Import custom runtime pack (.zip)</string>
+    <string name="runtime_manager_description">Bundled toolpacks are installed into app-owned storage. Download optional runtime ZIP packs from the project catalogue or import a compatible ZIP containing runtime.json.</string>
+    <string name="link_preview_icon">Link preview icon</string>
+    <string name="image_preview">Image preview</string>
+    <string name="video_preview">Video preview</string>
+    <string name="play_video">Play video</string>
+    <string name="web_preview_icon">Web preview icon</string>
+    <string name="refresh_models">Refresh models</string>
+    <string name="app_developed_by_cn_drih">App developed by CN\'drih</string>
+    <string name="no_saved_chats_yet">No saved chats yet</string>
+    <string name="chats">Chats</string>
+    <string name="live_navigate_back">Navigate back</string>
+    <string name="live_navigate_forward">Navigate forward</string>
+    <string name="live_reload">Reload page</string>
+    <string name="live_reattach_hint">Tap to show the live browsing view here</string>
+
+    <!-- Wake word assistant -->
+    <string name="wake_word_assistant">Wake word assistant</string>
+    <string name="wake_word_description">Always-on voice control, in foreground and background. Say “Hey Oreshik”, “Hey Bro”, “Hi Oreshik”, “Hey Casper” or “Hi Casper” followed by a request — for example “open WhatsApp and send a text message to John”, “SSH into my server”, “open Gmail and send a message”, “create me a file”, “uninstall this app”. The assistant executes and talks back, asking for confirmation when needed.</string>
+    <string name="enable_wake_word_assistant">Enable wake word assistant</string>
+    <string name="wake_word_boost_volume">Boost volume during talkback</string>
+    <string name="wake_word_boost_volume_description">Raises the media volume while the assistant speaks confirmations so you can hear them clearly, then restores it.</string>
+    <string name="wake_word_status_listening">Wake word assistant: LISTENING • say “Hey Oreshik” or “Hey Casper” followed by your request</string>
+    <string name="wake_word_status_mic_missing">Wake word assistant: enabled in app, but microphone permission is missing. Grant Android runtime permissions above.</string>
+    <string name="wake_word_status_disabled">Wake word assistant: disabled — the always-on speech/mic listener is off and the microphone is not in use</string>
+    <string name="wake_word_notification_title">Wake word assistant</string>
+    <string name="wake_word_notification_text">Listening for “Hey Oreshik” or “Hey Casper”…</string>
+    <string name="wake_word_confirm_variants">Please confirm. Do you want to proceed?|Should I go ahead?|Want me to do it?|Say go ahead if that\'s right.|Confirm and I\'ll do it.</string>
+    <string name="wake_word_yes_ack_variants">Yes?|I\'m listening.|Go ahead.|Mm-hm?|What do you need?</string>
+    <string name="wake_word_cancel_variants">Okay, cancelled.|Alright, dropped it.|No problem, cancelled.|Stopped.</string>
+    <string name="wake_word_didnt_catch_variants">Sorry, I didn\'t catch that. Say go ahead, proceed, or cancel.|Didn\'t quite hear you — go ahead or cancel?|One more time: go ahead, or cancel?</string>
+    <string name="wake_word_timeout_variants">I didn\'t hear a confirmation, so I cancelled.|No answer, so I left it alone.|Still waiting — say the wake word again when you need it.</string>
+    <string name="wake_word_working_on_it">Okay, working on it.</string>
+  <!-- '|'-separated talkback variants; WakeWordService picks one at random for natural speech. -->
+  <string name="wake_word_working_variants">Okay, working on it.|On it.|Got it, one sec.|Sure, give me a moment.|Let me take care of that.</string>
+  <string name="wake_word_done_variants">Done.|All set.|That\'s done.|Finished.</string>
+    <string name="speech_clarification_description">Checks transcribed commands for likely mishearings and ambiguity before executing, and asks a short question when clarification is genuinely needed. Clear commands run without interruption. Applies to voice-control modes only — never to typed chat.</string>
+    <string name="enable_speech_clarification">Enable intelligent speech clarification</string>
+
+    <!-- Key management -->
+    <string name="key_management_description">Manage one or multiple NVIDIA API keys. Keys are stored locally and never shown unmasked or logged. With multiple keys, eligible requests rotate automatically across healthy keys; rate-limited keys cool down and return automatically.</string>
+    <string name="paste_new_api_key">Paste NVIDIA API key (nvapi-…)</string>
+    <string name="add_key">Add key</string>
+    <string name="no_keys_yet">No keys configured yet</string>
+    <string name="remove_key">Remove key</string>
+    <string name="manage_api_keys">Manage API keys</string>
+
+    <!-- Theme / appearance -->
+    <string name="appearance">Appearance</string>
+    <string name="app_theme_description">Choose Light, Dark, or follow the system theme. Applies immediately and persists across restarts.</string>
+    <string name="change_theme">Change theme</string>
+    <string name="theme_mode_light">Light</string>
+    <string name="theme_mode_dark">Dark</string>
+    <string name="theme_mode_system">Follow system</string>
+    <string name="theme_status_follow_system">Theme: Follow system</string>
+    <string name="theme_status_light">Theme: Light</string>
+    <string name="theme_status_dark">Theme: Dark</string>
+    <string name="auto_vpn_when_the_direct_network_is_slow_or_dns_is_broken_test_free_public_proxies_and_route_model_traffic_through_the_fastest_verified_one_https_keeps_your_api_key_private_all_traffic_falls_back_to_direct_when_no_proxy_helps">Auto-VPN: when the direct network is slow or DNS is broken, test free public proxies and route model traffic through the fastest verified one (HTTPS keeps your API key private). All traffic falls back to direct when no proxy helps.</string>
+
+    <!-- Tool Card Strings -->
+    <string name="about_tagline">A standalone Android coding agent with native tools, permissions and an app-owned Python runtime.</string>
+
+    <string name="about_whats_inside">What\'s inside</string>
+    <string name="about_highlights">Highlights</string>
+
+    <string name="about_hi_privacy">Local-first privacy — no telemetry, your code stays on device</string>
+    <string name="about_hi_runtime">App-owned Python runtime — bring your own packages</string>
+    <string name="about_hi_tools">Extensible tool system — shell, file ops, network, and more</string>
+    <string name="about_hi_sessions">Persistent sessions — pick up where you left off</string>
+
+    <string name="about_chip_privacy">Privacy-first</string>
+    <string name="about_chip_runtime">Python runtime</string>
+    <string name="about_chip_tools">Tool system</string>
+    <string name="about_chip_sessions">Sessions</string>
+    <string name="about_chip_offline">Works offline</string>
+    <string name="about_chip_opensource">Open source</string>
+    <string name="tool_icon_desc">Tool icon</string>
+    <string name="expand_tool">Expand tool details</string>
+    <string name="collapse_tool">Collapse tool details</string>
+    <string name="parameters">Parameters:</string>
+    <string name="required_permissions">Required Permissions:</string>
+
+    <!-- Config / diagnostics screens -->
+    <string name="config_saved_locally">Saved locally.</string>
+    <string name="config_setting_key">Setting</string>
+    <string name="doctor_subtitle">Local runtime, workspace and agent capabilities</string>
+    <string name="memory_empty">No memories saved yet.</string>
+    <string name="memory_delete">Delete</string>
+    <string name="placeholder_not_backed_yet">"%1$s" isn\'t backed by a live Standalone AgentAgent endpoint yet.</string>
+    <string name="mcp_subtitle">Manage Model Context Protocol server definitions, transports, credentials and enablement.</string>
+    <string name="mcp_add_server">+ Add MCP server</string>
+    <string name="mcp_select_preset">Select Preset Template:</string>
+    <string name="about_version_line">Oreshik Agent • %1$s</string>
+    <string name="models_status_line">%1$s %2$s • %3$s</string>
+    <string name="models_refreshing">Refreshing %1$s model catalog…</string>
+    <string name="models_loading">Loading %1$s models…</string>
+    <plurals name="models_probing_fmt">
+        <item quantity="one">Checking %1$d model on %2$s…</item>
+        <item quantity="other">Checking %1$d models on %2$s…</item>
+    </plurals>
+    <string name="model_status_online">Online</string>
+    <string name="model_status_offline">Offline</string>
+    <string name="model_status_timeout">Timeout / rate-limited</string>
+    <string name="model_status_probing">Checking…</string>
+    <string name="selinux_mode_fmt">SELinux mode: %1$s</string>
+    <string name="android_permissions_status_fmt">Camera: %1$s • Microphone: %2$s • Notifications: %3$s • Battery unrestricted: %4$s</string>
+    <string name="provider_header_fmt">%1$s (%2$s)</string>
+    <string name="chatgpt_continue">Continue with ChatGPT</string>
+    <string name="chatgpt_add_account">Add account</string>
+    <string name="chatgpt_switch_account">Choose ChatGPT account</string>
+    <string name="chatgpt_sign_out">Sign out of this account</string>
+    <string name="chatgpt_not_connected">Sign in with ChatGPT to load account models and use eligible ChatGPT plan access. No API key is needed.</string>
+    <string name="chatgpt_connected_fmt">Connected to ChatGPT as %1$s. Model access follows your account’s plan and shared usage limits.</string>
+    <string name="chatgpt_connecting">Waiting for ChatGPT sign-in…</string>
+    <string name="chatgpt_signing_out">Signing out…</string>
+    <string name="chatgpt_models_need_signin">Sign in with ChatGPT to load this account’s models.</string>
+    <string name="chatgpt_account_picker_title">ChatGPT accounts</string>
+    <string name="chatgpt_signed_out_fmt">%1$s (signed out)</string>
+    <string name="no_api_keys_configured">No API keys configured</string>
+    <string name="single_api_key_configured">1 API key configured</string>
+    <string name="api_keys_configured_with_rotation">%1$d API keys configured (requests rotate across keys)</string>
+    <string name="provider_endpoint_updated_fmt">Endpoint updated for %1$s</string>
+    <string name="enter_api_key">Enter an API key</string>
+    <string name="api_key_added">Key added</string>
+    <string name="active">ACTIVE</string>
+    <string name="set_as_active">Set as Active</string>
+    <string name="provider_set_as_active_fmt">%1$s set as active provider</string>
+    <string name="working_only_on">Working only: ON</string>
+    <string name="working_only_off">Working only: OFF</string>
+    <string name="no_keys_to_validate">No keys to validate</string>
+    <string name="all_providers_validation_summary_fmt">All providers: %1$s, %2$s</string>
+    <plurals name="working_count_fmt">
+        <item quantity="one">%1$d working</item>
+        <item quantity="other">%1$d working</item>
+    </plurals>
+    <plurals name="failed_count_fmt">
+        <item quantity="one">%1$d failed</item>
+        <item quantity="other">%1$d failed</item>
+    </plurals>
+    <string name="add_api_key_first">Add an API key first</string>
+    <string name="search_provider_models_fmt">Search %1$s models…</string>
+    <string name="selected_model_fmt">Selected: %1$s</string>
+    <string name="no_model_selected">No model selected</string>
+    <string name="thinking_level_fmt">Thinking: %1$s</string>
+    <string name="models_filter_status_fmt">%1$s • %2$s</string>
+    <string name="models_filter_status_with_tested_fmt">%1$s • %2$s • %3$s</string>
+    <plurals name="models_shown_count_fmt">
+        <item quantity="one">%1$d shown of %2$d</item>
+        <item quantity="other">%1$d shown of %2$d</item>
+    </plurals>
+    <plurals name="tested_count_words_fmt">
+        <item quantity="one">%1$d tested</item>
+        <item quantity="other">%1$d tested</item>
+    </plurals>
+    <plurals name="models_refreshed_count_fmt">
+        <item quantity="one">Refreshed: %1$d model</item>
+        <item quantity="other">Refreshed: %1$d models</item>
+    </plurals>
+    <plurals name="models_refreshed_from_provider_fmt">
+        <item quantity="one">Refreshed: %1$d model from %2$s</item>
+        <item quantity="other">Refreshed: %1$d models from %2$s</item>
+    </plurals>
+    <string name="not_applicable">N/A</string>
+    <string name="unknown_error">unknown</string>
+    <string name="unknown_validation_error">Unknown</string>
+    <string name="not_validated">Not validated</string>
+    <plurals name="validating_keys_fmt">
+        <item quantity="one">Validating %1$d key…</item>
+        <item quantity="other">Validating %1$d keys…</item>
+    </plurals>
+    <string name="validated_keys_fmt">Validated: %1$s, %2$s</string>
+    <string name="validating_ellipsis">Validating…</string>
+    <string name="testing_model_fmt">Testing %1$s… (%2$d/%3$d)</string>
+    <string name="validate_all_keys">Validate All Keys</string>
+    <string name="test_models">Test Models</string>
+    <string name="tested_count_fmt">%1$d / %2$d</string>
+    <string name="tested_summary_fmt">Tested: %1$s, %2$s</string>
+    <string name="testing_ellipsis">Testing…</string>
+    <plurals name="models_count_fmt">
+        <item quantity="one">%1$d model</item>
+        <item quantity="other">%1$d models</item>
+    </plurals>
+    <string name="loading_catalog">Loading catalog…</string>
+    <string name="load_failed_fmt">Failed: %1$s</string>
+    <string name="no_models_to_test">No models to test (catalog empty or fetch failed)</string>
+    <string name="loading_models_for">Loading %1$s models…</string>
+    <string name="catalog_not_supported">Model catalog not supported</string>
+    <plurals name="models_loaded_fmt">
+        <item quantity="one">%1$d model loaded</item>
+        <item quantity="other">%1$d models loaded</item>
+    </plurals>
+    <string name="cached">Cached</string>
+    <string name="loading_model_catalog">Loading model catalog…</string>
+    <string name="loaded">Loaded</string>
+    <string name="load_models_failed_fmt">Failed to load models: %1$s</string>
+    <string name="error">Error</string>
+    <string name="refreshing_models_for">Refreshing %1$s models…</string>
+    <string name="refreshing_ellipsis">Refreshing…</string>
+    <string name="refresh_failed_fmt">Refresh failed: %1$s</string>
+    <plurals name="chip_validated_fmt">
+        <item quantity="one">✓ Validated (%1$d model)</item>
+        <item quantity="other">✓ Validated (%1$d models)</item>
+    </plurals>
+    <string name="chip_validation_failed_fmt">✗ Failed: %1$s</string>
+    <string name="provisioning_packs">Installing bundled APK toolpacks…</string>
+    <string name="percent_fmt">%1$d%%</string>
+    <string name="recognition_error_fmt">Recognition error %1$d</string>
+    <string name="wake_diagnostics_subtitle">Live status of background wake-word listening, Android/MIUI restrictions and suggested fixes</string>
+    <string name="mic_permission_not_granted">Microphone permission not granted</string>
+    <string name="no_recognition_service">No recognition service available on this device</string>
+    <string name="testing_mic_prompt">Testing… say anything…</string>
+    <string name="mic_test_recording">Recording… say anything</string>
+    <string name="mic_test_recording_audio">Recording… audio is flowing</string>
+    <string name="mic_test_processing">Processing…</string>
+    <string name="status_ok">OK</string>
+    <string name="status_info">Info</string>
+    <string name="apply_root_rollback">Apply with root (rollback available)</string>
+    <string name="rollback_autostart">Roll back autostart change</string>
+    <string name="connecting_to_repo">Connecting to repository…</string>
+    <string name="voice_status_processing">Processing…</string>
+    <string name="voice_status_unavailable">Speech unavailable</string>
+    <string name="skills_subtitle">Create, edit, enable, disable and delete reusable agent workflows.</string>
+    <string name="add_skill">+ Add skill</string>
+    <string name="skill_hint_name">Skill name</string>
+    <string name="skill_hint_description">Short description (shown in the skill index)</string>
+    <string name="skill_hint_category">Category (e.g. general, coding, security)</string>
+    <string name="skill_hint_instructions">Full instructions / playbook (markdown; pulled on demand)</string>
+    <string name="tools_subtitle">Native tool registry and execution permissions by category</string>
+    <string name="no_tools_registered">No tools registered</string>
+    <string name="tool_param_line">  • %1$s: %2$s</string>
+    <string name="tool_call_count_fmt">×%1$d</string>
+    <string name="copied">Copied</string>
+    <string name="download_progress_fmt">%1$s / %2$s</string>
+    <string name="progress_pending">…</string>
+    <string name="root_access_disabled">Root access: disabled</string>
+    <string name="root_access_checking">Root access: checking…</string>
+    <string name="root_access_enabled_uid">Root access: ENABLED • %1$s</string>
+    <string name="root_access_unavailable">Root access: enabled in app, but no usable su provider was detected</string>
+    <string name="first_run_root_setup_title">Set up device access</string>
+    <string name="first_run_root_setup_message">Continue only if this is your device and you understand the access. The app will ask your root manager for su. If approved, it will grant this app’s declared runtime permissions (camera, microphone, contacts, SMS, notifications, and shared storage where supported), enable notification access to read notifications from other apps, enable its accessibility service so the agent can inspect and control visible UI, enable root-based screen capture, and enable root-only agent tools. On Xiaomi, Redmi, POCO, MIUI, or HyperOS it will apply app-specific background and autostart fixes. You can turn off Allow root in Settings. Android’s MediaProjection screen-sharing consent remains a separate system prompt.</string>
+    <string name="first_run_root_setup_enable">Continue with root</string>
+    <string name="first_run_root_setup_later">Not now</string>
+    <string name="first_run_root_setup_progress_title">Setting up device access</string>
+    <string name="first_run_root_setup_progress_message">Waiting for root authorization and applying the selected app permissions…</string>
+    <string name="first_run_root_setup_result_title">Device access setup</string>
+    <string name="skill_export">Export</string>
+    <string name="skill_import">Import</string>
+    <string name="skills_all_on">All on</string>
+    <string name="skills_all_off">All off</string>
+
+    <!-- Backup & restore (Settings screen) -->
+    <string name="backup_restore_description">Export everything the app stores to one JSON file: API keys and endpoints, the active provider + model, every toggle, all chat sessions, long-term memories, skills, MCP servers and the theme. Restore re-imports a backup file and replaces the current data. The file contains your API keys in plain text — store it somewhere safe.</string>
+    <string name="backup_button">Back up all app config</string>
+    <string name="restore_button">Restore from backup…</string>
+    <string name="backup_preparing_status">Preparing backup…</string>
+    <string name="backup_restoring_status">Restoring…</string>
+    <string name="backup_confirm_overwrite_title">Restore backup?</string>
+    <string name="backup_confirm_overwrite">Restoring replaces your CURRENT configuration and data with the contents of the backup file: settings (incl. the active API key), providers, sessions, memories, skills, MCP servers and theme are overwritten. This cannot be undone.</string>
+    <string name="backup_restore_failed_fmt">Restore failed: %1$s</string>
+    <string name="backup_write_failed_fmt">Backup failed: %1$s</string>
+    <string name="config_save">Save</string>
+    <string name="runtime_manager_title">Runtime Manager</string>
+    <string name="memory_description">Memory is stored locally in Room and can be disabled from Settings.</string>
+    <string name="memory_placeholder">Remember something useful…</string>
+    <string name="save_memory">Save memory</string>
+    <string name="active_provider_label">Active Provider:</string>
+    <string name="none_value">None</string>
+    <string name="install_bundled_packs">Repair bundled APK toolpacks</string>
+    <string name="settings_providers_description">API keys, endpoints and providers (NVIDIA, OpenRouter, BlueSmind, NaraRouter) are managed in the Providers screen — open the navigation drawer and tap Providers.</string>
+    <string name="compression_threshold_hint">70000</string>
+    <string name="agent_steps_default">24 steps</string>
+    <string name="enable_screen_capture_permission">Enable screen capture permission</string>
+    <string name="network_resilience_vision">Network resilience + vision</string>
+    <string name="auto_vpn_slow_network">Auto-VPN on slow network (free proxies)</string>
+    <string name="test_network_find_proxy">Test network and find fast proxy now</string>
+    <string name="auto_vpn_idle">Auto-VPN: idle</string>
+    <string name="vision_model_screen_analysis">Use vision models for screen analysis (computer use)</string>
+    <string name="vision_model_description">Adds a vision-language model pass on screenshots using the ACTIVE provider (OpenRouter, BlueSmind, NaraRouter, NVIDIA…): sees custom-drawn UI that the accessibility tree misses, and suggests the next tap. The agent can also call androidanalyze directly.</string>
+    <string name="vision_model_auto">Vision model: auto</string>
+    <string name="open_app_permission_settings">Open app permission settings</string>
+    <string name="paste_api_key_here">Paste API key here</string>
+    <string name="api_endpoint_base_url">API endpoint (base URL)</string>
+    <string name="api_url_example">https://api.provider.com/v1</string>
+    <string name="validate">Validate</string>
+    <string name="select_model">Select Model</string>
+    <string name="set_active">Set Active</string>
+    <string name="more_options">More options</string>
+    <string name="nav_mcp_hub">MCP Hub</string>
+    <string name="nav_wake_word_diagnostics">Wake-word diagnostics</string>
+    <string name="toggle_voice_input">Start or stop voice input</string>
+</resources>

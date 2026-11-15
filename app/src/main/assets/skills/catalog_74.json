@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_041",
+      "name": "SQLMap GET assessment: Run a single-parameter GET check",
+      "description": "Perform an initial low-intensity assessment of one authorized query input.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Pass the approved URL, set `authorized_target=true`, select one parameter, and leave level/risk/technique/thread defaults unchanged.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_042",
+      "name": "SQLMap GET assessment: Assess one suspected input",
+      "description": "Narrow SQLMap attention to the input identified by review or the owner.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Set `parameter` to the exact query key and compare its result with baseline; do not add unrelated inputs.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_043",
+      "name": "SQLMap GET assessment: Compare a control endpoint",
+      "description": "Separate a parameter signal from general application instability.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Choose a comparable endpoint only if explicitly in scope; use its baseline to interpret noise, not to expand testing.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_044",
+      "name": "SQLMap GET assessment: Keep the first pass minimal",
+      "description": "Avoid broad test coverage before an initial result is understood.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Use level 1, risk 1, BEU, one thread; record limitations rather than increasing coverage automatically.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_045",
+      "name": "SQLMap GET assessment: Use the default techniques",
+      "description": "Understand the conservative Boolean/error/union setting for an initial request.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Leave `technique` unset or set `BEU`; do not add time-based or stacked-query methods without explicit approval.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_046",
+      "name": "SQLMap GET assessment: Assess a small parameter set",
+      "description": "Test approved query inputs in separate, reviewable calls.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Run one parameter at a time with `parameter`, preserve the same profile, and stop when evidence is sufficient.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_047",
+      "name": "SQLMap GET assessment: Repeat a stable GET observation",
+      "description": "Check reproducibility without increasing request intensity.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Repeat once in the approved window with the same URL and settings; compare status, response stability, and console result.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_048",
+      "name": "SQLMap GET assessment: Establish an unauthenticated baseline",
+      "description": "Avoid adding account state until the endpoint requires it.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Test the approved public endpoint without cookies first; add authenticated context only if explicitly approved.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_049",
+      "name": "SQLMap GET assessment: Plan a short GET window",
+      "description": "Fit a bounded check into a monitored service window.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Use one thread and the 10-second default timeout; coordinate a stop time and halt on service warnings.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_050",
+      "name": "SQLMap GET assessment: Interpret a negative GET result",
+      "description": "State exactly what a low-intensity GET check did and did not establish.",
+      "category": "SQLMap / GET workflows",
+      "instructions": "Workflow:\n1. Confirm a stable, authorized GET request and retain its normal-response baseline.\n2. Begin with app defaults: level 1, risk 1, technique BEU, one thread, and a short timeout.\n3. Report the tested parameter/profile; do not claim other parameters, methods, or paths are secure.\n4. Review the named parameter result; do not enumerate or retrieve database contents.\n\nSafety: use web.sqlmap with \u0007uthorized_target=true only for owner-authorized scope. Do not dump records, open shells, access server files, evade controls, or perform destructive actions.",
+      "enabled": false
+    }
+  ]
+}

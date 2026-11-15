@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "cat_sqlmap_001",
+      "name": "SQLMap runtime: Verify bundled engine",
+      "description": "Confirm SQLMap is present in the app runtime rather than relying on a workspace package.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Use `runtime.sqlmap.status`; accept READY only when the report names a version and an app-private path under `filesDir/runtimes/sqlmap`.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": true
+    },
+    {
+      "id": "cat_sqlmap_002",
+      "name": "SQLMap runtime: Install the bundled pack",
+      "description": "Set up SQLMap from the APK asset without a package-index dependency.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Call `runtime.sqlmap.install`, wait for its completion message, then run status and confirm the bundled version.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_003",
+      "name": "SQLMap runtime: Check SQLMap capability",
+      "description": "Determine whether this install can dispatch SQLMap through the runtime layer.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Run `runtime.info` and compare the `sqlmap` capability with `runtime.sqlmap.status`; treat Python capability as a separate prerequisite.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_004",
+      "name": "SQLMap runtime: Recover a partial unpack",
+      "description": "Repair an interrupted or incomplete runtime setup safely.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Read status first; rerun `runtime.sqlmap.install` so the manager stages the bundled wheel and swaps it in only after validating the entrypoint and license.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_005",
+      "name": "SQLMap runtime: Distinguish engine and workspace data",
+      "description": "Keep engine installation separate from scan output and sessions.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Use the private runtime path for engine files and workspace `.sqlmap/output` for run artifacts; never copy the wheel into `.python-packages`.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_006",
+      "name": "SQLMap runtime: Operate without root",
+      "description": "Confirm runtime setup is independent of root-dependent native toolpacks.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Use the dedicated status and install tools; if native provisioning reports a root issue, check SQLMap readiness separately.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_007",
+      "name": "SQLMap runtime: Confirm pinned version",
+      "description": "Report the installed SQLMap version from the app runtime registry.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Use `runtime.sqlmap.status`; compare its version with the bundled version in this build, and avoid upgrading through pip.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_008",
+      "name": "SQLMap runtime: Preserve upstream license",
+      "description": "Verify that runtime unpack retains the SQLMap license alongside the engine.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Inspect the reported private runtime path and confirm `sqlmap/LICENSE` is present; do not edit upstream package files.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_009",
+      "name": "SQLMap runtime: Avoid duplicate pip installs",
+      "description": "Prevent multiple SQLMap copies from shadowing the app-managed engine.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Use bundled status and install tools; do not run `pip install sqlmap` or place another copy on the workspace Python path.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    },
+    {
+      "id": "cat_sqlmap_010",
+      "name": "SQLMap runtime: Handle missing runtime asset",
+      "description": "Diagnose an APK that lacks the bundled wheel or has a packaging mismatch.",
+      "category": "SQLMap / Runtime",
+      "instructions": "Workflow:\n1. Query `runtime.sqlmap.status` and confirm the bundled version and private runtime path.\n2. If the pack is absent or incomplete, call `runtime.sqlmap.install`; it unpacks the APK asset without pip download or root.\n3. Check runtime status, capture the exact setup error and app version, and verify the build includes `assets/toolpacks/sqlmap.whl`.\n4. Preserve the upstream license and keep engine files separate from workspace scan artifacts.\n\nSafety: use only owner-authorized targets. For scans, use web.sqlmap with \u0007uthorized_target=true, app defaults, and no data dumping, shells, server file access, tamper/evasion, or destructive options.",
+      "enabled": false
+    }
+  ]
+}

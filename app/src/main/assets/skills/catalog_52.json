@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ghid_what_it_is",
+   "name": "What re.ghidra.analyze really is",
+   "description": "Understand the tool before using it.",
+   "instructions": "Workflow:\n1. re.ghidra.analyze is a Ghidra-STYLE headless analysis approximation: Ghidra itself is a desktop Java app and cannot run on-device.\n2. The tool pipelines three stages: rabin2 -I (file identification, the language-detection analog), rabin2 -E -s (entrypoints and symbols), and r2 aaa/aa with afl (functions), axff~? (xref counts), izz~? (strings).\n3. The bundled ghidra pack (analyzeHeadless, GHIDRA_HOME) exists for real headless runs via process.exec when JDK is provisioned.\n4. Choose the right layer per task: metadata (rabin2), code analysis (r2), or true Ghidra decompilation (analyzeHeadless via JDK).\n5. Never claim real Ghidra decompilation when only the r2 approximation ran; label the engine in every report.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_pack_check",
+   "name": "Ghidra pack readiness",
+   "description": "Verify the runtime pack before relying on real headless runs.",
+   "instructions": "Workflow:\n1. runtime.info to check the ghidra pack (version 12.1.2, entrypoints analyzeHeadless + ghidraRun).\n2. Verify java availability: the bundled JDK pack is required by analyzeHeadless.\n3. If the pack is missing, trigger provisioning from Runtime UI (heavy pack; extracts after core packs).\n4. Path layout: ghidra/support/analyzeHeadless; the tool env sets GHIDRA_HOME and puts ghidra/support on PATH.\n5. Check provisioning status in logs before long analysis sessions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_engine_map",
+   "name": "Analysis engine map",
+   "description": "Map each RE task to the right engine.",
+   "instructions": "Workflow:\n1. File/section/symbol metadata: re.rabin2 (fast, no analysis pass needed).\n2. Function discovery and xrefs: re.r2.analyze or re.ghidra.analyze stage 3 (r2 aaa).\n3. Decompilation-grade output: real Ghidra headless via process.exec + JDK (when provisioned), or IDA idat64 if installed.\n4. Managed (Java/Kotlin) views: jadx + javap proxies, not native disassembly.\n5. IL2CPP managed views: re.il2cpp.metadata, not Ghidra.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_quick_start",
+   "name": "Ghidra-style quick start",
+   "description": "Run the standard first-pass analysis.",
+   "instructions": "Workflow:\n1. re.ghidra.analyze with file_path; keep deep=true (default) for the aaa auto-analysis pass.\n2. Read the three report sections in order: File Identification, Entrypoints & Symbols, Function Analysis (aaa).\n3. Note the function count and xref counts (axff~?) as binary complexity indicators.\n4. Pull the izz~? string listing for immediate recon leads.\n5. Capture the report into a workspace file (file.write) for the evidence chain.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_deep_vs_quick",
+   "name": "Deep vs quick analysis",
+   "description": "Choose the right analysis level.",
+   "instructions": "Workflow:\n1. deep=true runs r2 aaa (full auto-analysis: functions, refs, flags). Use for real analysis work.\n2. deep=false runs r2 aa (basic) — use for quick metadata-only passes on huge binaries where aaa would take minutes.\n3. Strategy: aa first to sanity-check the file loads, then aaa for the real pass.\n4. For very large binaries, prefer targeted re.r2.analyze commands over full aaa.\n5. Record which level ran; xref/function counts differ between aa and aaa.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_output_limits",
+   "name": "Output size management",
+   "description": "Handle the 120k default cap correctly.",
+   "instructions": "Workflow:\n1. max_output clamps 10000..400000 chars; the report is truncated with a visible [report truncated at N chars] marker.\n2. For big binaries, raise max_output toward 400000 rather than losing the function list.\n3. Better: run stage-equivalents separately via re.rabin2 (metadata) and re.r2.analyze (targeted commands) to keep each output small.\n4. Save truncated reports and re-run missing sections deliberately.\n5. Never summarize from a truncated report without noting the truncation.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_report_anatomy",
+   "name": "Report anatomy",
+   "description": "Parse the three-stage report correctly.",
+   "instructions": "Workflow:\n1. Stage 1 (rabin2 -I): format, arch, bits, endian, OS, compiler, pic/relro/canary hardening flags.\n2. Stage 2 (rabin2 -E -s): entrypoints plus symbol table — the naming layer for everything later.\n3. Stage 3 (r2): afl function list, axff~? xref counts, izz~? strings.\n4. Hardening flags from stage 1 (canary/PIC/RELRO/NX) shape exploitation-style assessments.\n5. Use stage-2 addresses as inputs to re.ida.offset / re.mem.ida_correlate for runtime work.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_headless_run",
+   "name": "Real headless Ghidra runs",
+   "description": "Use analyzeHeadless via process.exec.",
+   "instructions": "Workflow:\n1. Confirm ghidra pack + JDK: runtime.info, then check ghidra/support/analyzeHeadless exists (runtime exposes it on PATH and sets GHIDRA_HOME).\n2. Import and analyze: process.exec analyzeHeadless <project_dir> <project_name> -import <binary> -analysisTimeoutPerFile 600.\n3. List functions after analysis: -postScript with a listing script, or re-import to the same project to reuse analysis.\n4. Headless is slow on-device; prefer it only when r2 output is insufficient (e.g. decompiler-grade pseudocode needs).\n5. Save project logs to the workspace; headless runs create project files — keep them in a dedicated directory.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_headless_scripts",
+   "name": "Headless post-scripts",
+   "description": "Extract structured results from headless runs.",
+   "instructions": "Workflow:\n1. analyzeHeadless supports -postScript <script.py> (Jython) or .java scripts for custom extraction.\n2. Common extracts: function lists with sizes, decompiled C for selected functions, defined strings, data type managers.\n3. Write scripts to the workspace (file.write) and pass absolute paths.\n4. Keep scripts side-effect free: read Program API, print results, no database mutations unless intended.\n5. Capture script stdout into workspace files for the evidence chain.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_headless_decompile",
+   "name": "Headless decompilation",
+   "description": "Get decompiler-grade pseudocode.",
+   "instructions": "Workflow:\n1. Ghidra's decompiler is the main reason to run real headless Ghidra instead of the r2 approximation.\n2. Use a post-script that iterates functions and calls DecompInterface to dump C-like pseudocode per function.\n3. Target only the functions of interest (by name filter or address range) — full-binary decompilation is impractical on-device.\n4. Pair with re.ghidra.analyze stage 2 symbol names to pick decompile targets.\n5. Label output as Ghidra-decompiler-grade (distinct from r2 pdf-style disassembly).",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_project_reuse",
+   "name": "Project reuse strategy",
+   "description": "Reuse analysis databases across sessions.",
+   "instructions": "Workflow:\n1. Headless projects persist analysis; re-importing the same binary into the same project skips re-analysis.\n2. Keep one project per binary version: <binary>.<version> naming in a dedicated workspace folder.\n3. Verify reuse worked: second run should be much faster (no analysis phase).\n4. Delete stale projects (file.delete) when the binary version is retired to save disk.\n5. Record project paths in session notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_vs_ida_r2",
+   "name": "Ghidra vs IDA vs r2 vs built-in",
+   "description": "Choose engines deliberately per task.",
+   "instructions": "Workflow:\n1. Built-in ELF analyzer (re.ida.analyze): structure metadata, always available, no dependencies.\n2. r2 (re.r2.analyze / re.ghidra.analyze): fast function discovery, xrefs, strings; no decompiler.\n3. Ghidra headless: decompiler-grade pseudocode; heavy (JDK + pack); slow on-device.\n4. IDA (idat64): alternative decompiler/xref engine when installed (check re.ida.capabilities).\n5. State the engine per finding; never mix results without labeling.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_native_lib_flow",
+   "name": "Native library workflow",
+   "description": "Analyze a .so end to end.",
+   "instructions": "Workflow:\n1. re.rabin2 -I for hardening flags (canary/RELRO/NX) and architecture.\n2. re.ghidra.analyze deep=true for the function inventory and strings.\n3. Pick targets: exported JNI functions (Java_ prefixed) and interesting strings.\n4. Deep dive: re.r2.analyze with targeted commands (pdf @ sym.func) or headless decompile for the chosen functions.\n5. Runtime correlation when needed: re.ida.offset / re.mem.ida_correlate against a live process.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_jni_mapping",
+   "name": "JNI bridge mapping",
+   "description": "Map Java-to-native surfaces with the Ghidra-style flow.",
+   "instructions": "Workflow:\n1. Get native method declarations from the decoded smali (file.search '.method public native').\n2. Stage-2 symbols from re.ghidra.analyze contain Java_<class>_<method> exports.\n3. Pair declarations to exports; note RegisterNatives-based bindings that bypass static naming.\n4. Mark unpaired natives as dynamic-registration candidates for runtime analysis.\n5. Record the JNI map (java method -> native symbol -> address).",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_strings_leads",
+   "name": "String-driven analysis",
+   "description": "Turn izz~? output into analysis leads.",
+   "instructions": "Workflow:\n1. Stage-3 izz~? strings reveal endpoints, file paths, version strings, and error messages.\n2. Cross-reference interesting strings: re.r2.analyze with 'izz' then 'axt @ <addr>' for code references.\n3. Classify: config markers, crypto hints (AES/RC4 constants), anti-debug messages.\n4. Feed crypto-looking constants into the wider analysis (cat_re2_crypto_detect).\n5. Record leads with their string addresses for the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_hardening_read",
+   "name": "Hardening assessment",
+   "description": "Read the hardening story from stage 1.",
+   "instructions": "Workflow:\n1. rabin2 -I exposes: canary (stack protector), nx, pic/PIE, relro (partial/full), and stripped status.\n2. Map each flag to its meaning: canary=stack-overflow mitigation, full RELRO=GOT protection, PIC=ASLR-compatible.\n3. Missing mitigations are findings for defensive reports; their presence shapes exploitation work.\n4. Correlate with build config when the binary is your own (file.read build flags).\n5. Record the hardening table per binary.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_il2cpp_pairing",
+   "name": "Ghidra + IL2CPP pairing",
+   "description": "Analyze Unity games with the right split.",
+   "instructions": "Workflow:\n1. Managed view: re.il2cpp.metadata gives classes/methods/fields from global-metadata.dat — never re-derive these in Ghidra.\n2. Native view: re.ghidra.analyze stage 2-3 for libil2cpp.so symbols (il2cpp_*, CodeGen*) and function inventory.\n3. Bridge: method native_symbol_candidates (metadata) -> stage-2 symbol addresses -> re.ida.offset for runtime.\n4. Decompile only the target methods (headless) rather than the whole multi-MB lib.\n5. Record the three-layer map per analyzed method.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_ctf_flow",
+   "name": "CTF binary workflow",
+   "description": "Solve binary challenges with the Ghidra-style flow.",
+   "instructions": "Workflow:\n1. Triage: re.rabin2 -I (arch, stripped?) then re.ghidra.analyze deep=true.\n2. Find the win/check function: stage-2 symbols or string pivots (izz~? then axt).\n3. Disassemble precisely: re.r2.analyze with pdf @ <symbol>.\n4. For decompilation-grade understanding, run headless Ghidra on the challenge (small binaries analyze fast).\n5. Extract the logic, compute the solution (python.run_file), verify against the challenge.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_compare_versions",
+   "name": "Version diffing with the pipeline",
+   "description": "Compare two builds of a native lib.",
+   "instructions": "Workflow:\n1. Run re.ghidra.analyze on both; capture stage-2 symbol lists to workspace files.\n2. Diff symbol sets with python.run_file (added/removed/renamed).\n3. Compare stage-3 function counts and sizes for changed areas.\n4. For changed functions, targeted disassembly (pdf) or headless decompile of both versions.\n5. Summarize deltas with engine labels and evidence paths.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_evidence_chain",
+   "name": "Evidence chaining (Ghidra flows)",
+   "description": "Keep headless-pipeline claims reproducible.",
+   "instructions": "Workflow:\n1. Record the exact tool invocations: re.ghidra.analyze(file_path, deep=true) or process.exec analyzeHeadless ... -postScript ...\n2. Save stage outputs and headless logs to workspace files; reference paths in the report.\n3. Label engine per claim: rabin2 metadata, r2 analysis, Ghidra decompiler, IDA.\n4. Re-run the chain before publishing; r2 aaa is deterministic but versions matter.\n5. Speculation is labeled speculation — addresses without verification stay hypotheses.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_report_format",
+   "name": "Ghidra-style report standards",
+   "description": "Write professional reports from this pipeline.",
+   "instructions": "Workflow:\n1. Header: target, size, hash, arch, tool/pack versions (ghidra pack 12.1.2 when used), date.\n2. Methodology section: which of the 3 stages ran, analysis level (aa vs aaa), and any headless decompilation.\n3. Findings: each with symbol, address, stage evidence, and interpretation.\n4. Hardening table from stage 1; strings table of interest from stage 3.\n5. Appendix: full function inventory reference (workspace file).",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_large_binary",
+   "name": "Large binary strategy",
+   "description": "Analyze multi-MB libraries sanely.",
+   "instructions": "Workflow:\n1. Never run deep=true as the first step on huge binaries; start with rabin2 metadata only.\n2. Use targeted re.r2.analyze command sets (iS; is~Java_; afl~<prefix>) instead of full aaa.\n3. If aaa is required, raise max_output and expect a long timeout; run it once and persist the report.\n4. Headless Ghidra on large libs: restrict to -processor + address-range scripted exports.\n5. Time-box passes; log skipped areas explicitly for later sessions.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ghid_limits_honesty",
+   "name": "Honest limits of the approximation",
+   "description": "Know what the Ghidra-style tool cannot do.",
+   "instructions": "Workflow:\n1. No real Ghidra decompiler in re.ghidra.analyze itself — it is r2-based approximation output.\n2. No data-type/struct recovery engine; struct_recovery (IDA pack) is static heuristics only.\n3. No signature analysis (FID), no version tracking, no program diffing — those are desktop-Ghidra features.\n4. r2 function detection can split or merge functions differently than Ghidra's analysis; counts are indicative, not canonical.\n5. State these limits whenever reports might imply desktop-Ghidra-grade output.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_own_binaries",
+   "name": "Ghidra workflows on your own builds",
+   "description": "Practice end to end on software you built.",
+   "instructions": "Workflow:\n1. Build a native sample with the NDK pack (clang.exec), keeping symbols unstripped.\n2. Run the full pipeline: re.rabin2, re.ghidra.analyze deep=true, then headless Ghidra decompile of a chosen function.\n3. Verify the decompiled logic against your original C/C++ source (file.read).\n4. Practice the evidence chain: save all outputs, label engines, re-run to confirm reproducibility.\n5. This is the recommended sandbox for learning before analyzing unknown binaries.",
+   "enabled": true
+  },
+  {
+   "id": "cat_ghid_troubleshoot",
+   "name": "Pipeline troubleshooting",
+   "description": "Diagnose failures in the Ghidra-style flow.",
+   "instructions": "Workflow:\n1. r2/rabin2 not found: check the radare2 pack in runtime.info; re-provision if missing.\n2. Empty function list after aaa: binary may be packed/stripped; check stage-1 hardening and entropy hints.\n3. analyzeHeadless fails: JDK pack missing or GHIDRA_HOME unset; verify both before retrying.\n4. Truncated reports: raise max_output or split stage-equivalent runs.\n5. Timeouts on aaa: switch to deep=false, or targeted r2 commands; record the partial result.",
+   "enabled": false
+  }
+ ]
+}

@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_ci_job_lint",
+   "name": "CI job design: lint",
+   "description": "Design the 'lint' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_unit-tests",
+   "name": "CI job design: unit-tests",
+   "description": "Design the 'unit-tests' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_integration-tests",
+   "name": "CI job design: integration-tests",
+   "description": "Design the 'integration-tests' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_build-release",
+   "name": "CI job design: build-release",
+   "description": "Design the 'build-release' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_artifact-upload",
+   "name": "CI job design: artifact-upload",
+   "description": "Design the 'artifact-upload' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_sbom",
+   "name": "CI job design: sbom",
+   "description": "Design the 'sbom' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_secret-scan",
+   "name": "CI job design: secret-scan",
+   "description": "Design the 'secret-scan' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_container-build",
+   "name": "CI job design: container-build",
+   "description": "Design the 'container-build' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_deploy-staging",
+   "name": "CI job design: deploy-staging",
+   "description": "Design the 'deploy-staging' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_smoke-tests",
+   "name": "CI job design: smoke-tests",
+   "description": "Design the 'smoke-tests' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_performance-budget",
+   "name": "CI job design: performance-budget",
+   "description": "Design the 'performance-budget' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_accessibility-scan",
+   "name": "CI job design: accessibility-scan",
+   "description": "Design the 'accessibility-scan' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_license-scan",
+   "name": "CI job design: license-scan",
+   "description": "Design the 'license-scan' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_doc-build",
+   "name": "CI job design: doc-build",
+   "description": "Design the 'doc-build' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_coverage-report",
+   "name": "CI job design: coverage-report",
+   "description": "Design the 'coverage-report' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_mutation-sample",
+   "name": "CI job design: mutation-sample",
+   "description": "Design the 'mutation-sample' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_e2e-critical",
+   "name": "CI job design: e2e-critical",
+   "description": "Design the 'e2e-critical' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_changelog-verify",
+   "name": "CI job design: changelog-verify",
+   "description": "Design the 'changelog-verify' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_version-check",
+   "name": "CI job design: version-check",
+   "description": "Design the 'version-check' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_job_cache-warm",
+   "name": "CI job design: cache-warm",
+   "description": "Design the 'cache-warm' CI job properly.",
+   "instructions": "Workflow:\n1. file.read current pipeline config.\n2. Define inputs/outputs and caching for the job.\n3. Set timeouts and failure policies.\n4. Add retry only for flaky infra (not tests).\n5. Verify on a sample run.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_github-actions",
+   "name": "Pipeline patterns: github-actions",
+   "description": "Best-practice structure for github-actions pipelines.",
+   "instructions": "Workflow:\n1. file.read the github-actions config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_gitlab-ci",
+   "name": "Pipeline patterns: gitlab-ci",
+   "description": "Best-practice structure for gitlab-ci pipelines.",
+   "instructions": "Workflow:\n1. file.read the gitlab-ci config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_jenkins",
+   "name": "Pipeline patterns: jenkins",
+   "description": "Best-practice structure for jenkins pipelines.",
+   "instructions": "Workflow:\n1. file.read the jenkins config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_circleci",
+   "name": "Pipeline patterns: circleci",
+   "description": "Best-practice structure for circleci pipelines.",
+   "instructions": "Workflow:\n1. file.read the circleci config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_azure-pipelines",
+   "name": "Pipeline patterns: azure-pipelines",
+   "description": "Best-practice structure for azure-pipelines pipelines.",
+   "instructions": "Workflow:\n1. file.read the azure-pipelines config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_bitbucket-pipelines",
+   "name": "Pipeline patterns: bitbucket-pipelines",
+   "description": "Best-practice structure for bitbucket-pipelines pipelines.",
+   "instructions": "Workflow:\n1. file.read the bitbucket-pipelines config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_drone",
+   "name": "Pipeline patterns: drone",
+   "description": "Best-practice structure for drone pipelines.",
+   "instructions": "Workflow:\n1. file.read the drone config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_teamcity",
+   "name": "Pipeline patterns: teamcity",
+   "description": "Best-practice structure for teamcity pipelines.",
+   "instructions": "Workflow:\n1. file.read the teamcity config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_buildkite",
+   "name": "Pipeline patterns: buildkite",
+   "description": "Best-practice structure for buildkite pipelines.",
+   "instructions": "Workflow:\n1. file.read the buildkite config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  },
+  {
+   "id": "cat_ci_sys_argocd",
+   "name": "Pipeline patterns: argocd",
+   "description": "Best-practice structure for argocd pipelines.",
+   "instructions": "Workflow:\n1. file.read the argocd config.\n2. Organize stages: lint->test->build->scan->deploy.\n3. Cache dependencies keyed correctly.\n4. Gate deploys on scans.\n5. Document the flow.",
+   "enabled": false
+  }
+ ]
+}

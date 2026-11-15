@@ -1,0 +1,313 @@
+{
+ "version": 1,
+ "skills": [
+  {
+   "id": "cat_res_cve_lookup",
+   "name": "CVE lookup workflow",
+   "description": "Research a CVE id end to end.",
+   "instructions": "Workflow:\n1. web.search the CVE id; open the NVD page (web.crawl).\n2. Extract CVSS, affected versions, CWE.\n3. Find patch commits via web.search on the project repo.\n4. Summarize: what, where, how bad, fixed-in.\n5. Save the brief with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_nvd_query",
+   "name": "NVD/CPE querying",
+   "description": "Find CVEs by product and version.",
+   "instructions": "Workflow:\n1. Determine the CPE for the product (web.search).\n2. web.search NVD for cpe matches and version ranges.\n3. Collect CVE list with severities.\n4. Filter by exploitability signals (KEV, PoC existence).\n5. Deliver a prioritized table.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_cwe_mapping",
+   "name": "CWE classification",
+   "description": "Classify a weakness correctly.",
+   "instructions": "Workflow:\n1. Read the finding description carefully.\n2. web.search the CWE catalog for candidate classes.\n3. Match root cause, not symptom.\n4. Note parent/child CWE relationships.\n5. Record CWE id with rationale.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_cvss_scoring",
+   "name": "CVSS v3/v4 scoring",
+   "description": "Score a vulnerability defensibly.",
+   "instructions": "Workflow:\n1. Parse the vector components from the finding.\n2. web.search the FIRST calculator guidance for edge cases.\n3. Score and cross-check the vector string.\n4. Explain each metric choice in one line.\n5. Attach the vector to the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_kev_watch",
+   "name": "CISA KEV awareness",
+   "description": "Check known-exploited status.",
+   "instructions": "Workflow:\n1. web.search the CVE plus KEV.\n2. Note dates and required action.\n3. Prioritize KEV-listed items in remediation.\n4. Record the KEV entry in notes.\n5. Report urgency honestly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploitdb_search",
+   "name": "Exploit-DB research",
+   "description": "Find public PoCs for a CVE.",
+   "instructions": "Workflow:\n1. web.search exploit-db for the CVE/product.\n2. Read the PoC source before running anything.\n3. Assess quality: works? safe? version-specific?\n4. Adapt only for authorized targets.\n5. Save the reference in workspace notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_github_advisory_scan",
+   "name": "GitHub advisory research",
+   "description": "Mine GHSA data for a dependency.",
+   "instructions": "Workflow:\n1. web.search GHSA plus the package name.\n2. Check affected version ranges against your lockfile (file.read).\n3. Note patched versions.\n4. Cross-check with CVE ids.\n5. Summarize upgrade needs.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_poc_triage",
+   "name": "PoC triage discipline",
+   "description": "Evaluate a public exploit before use.",
+   "instructions": "Workflow:\n1. Read the entire PoC (file.read after download).\n2. Hunt for malicious side effects (reverse shells, destructive ops).\n3. Check target-version applicability.\n4. Sandbox it: run only against your lab.\n5. Document the verdict.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploit_adaptation",
+   "name": "PoC adaptation workflow",
+   "description": "Adapt a PoC to your environment.",
+   "instructions": "Workflow:\n1. Identify hardcoded values (hosts, offsets, paths) with file.search.\n2. Parameterize them with file.patch.\n3. Adjust for version differences using the patch diff as a guide.\n4. Test in small steps against your lab.\n5. Keep an adaptation changelog.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_patch_diff_research",
+   "name": "Patch diff analysis",
+   "description": "Turn a patch into an exploit hypothesis.",
+   "instructions": "Workflow:\n1. Obtain the fixed version source (web.search repo).\n2. Diff vulnerable vs fixed (process.exec diff or git).\n3. Isolate the security-relevant change.\n4. Form the exploitation hypothesis from the guard added.\n5. Validate against your lab instance.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_changelog_security_scan",
+   "name": "Changelog security mining",
+   "description": "Extract security notes from release notes.",
+   "instructions": "Workflow:\n1. web.crawl the project changelog page.\n2. Search for security/CVE mentions with python.run_file.\n3. Map releases to fixed issues.\n4. Note unpatched older branches.\n5. Summarize exposure windows.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_advisory_timeline",
+   "name": "Disclosure timeline analysis",
+   "description": "Understand when things were public.",
+   "instructions": "Workflow:\n1. Collect dates: report, CVE, patch, PoC release (web.search).\n2. Build the timeline.\n3. Assess patch-gap exposure.\n4. Relate to your asset versions.\n5. Report the risk window.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_vuln_correlation",
+   "name": "Multi-source correlation",
+   "description": "Merge NVD, GHSA, vendor advisories.",
+   "instructions": "Workflow:\n1. Gather entries for the same issue from each source (web.search).\n2. Normalize: id, affected, fixed, severity.\n3. Resolve conflicts (prefer vendor for fix versions).\n4. Produce a single authoritative record.\n5. Save it to the workspace.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_epss_context",
+   "name": "EPSS context",
+   "description": "Use exploitation probability signals.",
+   "instructions": "Workflow:\n1. web.search the CVE plus EPSS.\n2. Note the score and date.\n3. Combine with KEV and exposure.\n4. Prioritize remediation accordingly.\n5. Explain the signal in the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_vendor_advisory_read",
+   "name": "Vendor advisory parsing",
+   "description": "Read advisories like an analyst.",
+   "instructions": "Workflow:\n1. Open the vendor advisory (web.crawl).\n2. Extract affected products/versions exactly.\n3. Note workarounds vs full fixes.\n4. Check scanner-compatible identifiers.\n5. Summarize action items.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_security_mailinglist_dig",
+   "name": "Mailing list research",
+   "description": "Mine oss-security and similar lists.",
+   "instructions": "Workflow:\n1. web.search the topic plus oss-security.\n2. Read the full thread for exploitability discussion.\n3. Note maintainer responses and PoC links.\n4. Extract version constraints.\n5. Summarize with links.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_bugtracker_mine",
+   "name": "Bug tracker mining",
+   "description": "Use public trackers for recon.",
+   "instructions": "Workflow:\n1. web.search the project issues for security keywords.\n2. Filter resolved-but-unpatched older versions.\n3. Note reproducer steps posted publicly.\n4. Correlate with your versions.\n5. Report exposure.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_commit_history_research",
+   "name": "Commit history research",
+   "description": "Find the vulnerable code introduction.",
+   "instructions": "Workflow:\n1. Browse the repo history around the affected file (web.search links).\n2. Locate the introducing commit.\n3. Read the surrounding intent.\n4. Estimate affected version range.\n5. Document with commit ids.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_fuzzing_public_knowledge",
+   "name": "Fuzzer findings research",
+   "description": "Learn from public fuzzing artifacts.",
+   "instructions": "Workflow:\n1. web.search the project plus OSS-Fuzz issues.\n2. Read crash types and stacks.\n3. Note which are security-relevant.\n4. Check fix status per version.\n5. Summarize for your target.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_threat_actor_context",
+   "name": "Threat actor context",
+   "description": "Add attacker context to findings.",
+   "instructions": "Workflow:\n1. web.search the CVE plus threat reports.\n2. Note observed exploitation patterns.\n3. Map to your asset's exposure.\n4. Prioritize by real-world targeting.\n5. Cite sources in the report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_detection_guidance",
+   "name": "Detection guidance authoring",
+   "description": "Write detection rules for a vuln class.",
+   "instructions": "Workflow:\n1. Describe the exploit signature from the PoC.\n2. Map to log sources available.\n3. Draft detection logic (pseudo or SIEM syntax).\n4. Propose test events.\n5. Save the rule with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_mitigation_interim",
+   "name": "Interim mitigation design",
+   "description": "Protect systems before patching.",
+   "instructions": "Workflow:\n1. List available controls (WAF rules, config flags).\n2. Assess each against the exploit primitive.\n3. Choose minimal-impact mitigations.\n4. Document bypass caveats honestly.\n5. Provide rollback steps.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_vuln_intel_digest",
+   "name": "Weekly intel digest",
+   "description": "Turn feeds into a digest.",
+   "instructions": "Workflow:\n1. web.search latest KEV and critical advisories.\n2. Filter to your stack (file.read inventory).\n3. Summarize top 10 with actions.\n4. Save the digest with file.write.\n5. Present the shortlist in chat.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_license_risk_note",
+   "name": "Exploit reuse legality",
+   "description": "Know the rules for public PoCs.",
+   "instructions": "Workflow:\n1. Check the PoC license before reuse (file.read).\n2. Attribute correctly.\n3. Respect disclosure norms.\n4. Never use PoCs on unauthorized targets.\n5. Note constraints in your report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_research_note_system",
+   "name": "Research note system",
+   "description": "Keep research organized.",
+   "instructions": "Workflow:\n1. One file per CVE in the workspace (file.write).\n2. Sections: summary, affected, PoC status, notes.\n3. Link evidence files.\n4. Update after each session.\n5. Index all files for search.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploitdb_mirror_local",
+   "name": "Local PoC reference library",
+   "description": "Curate vetted PoCs locally.",
+   "instructions": "Workflow:\n1. Save key PoCs into a workspace folder (file.write).\n2. Record source, license, verdict per file.\n3. Keep a catalog index.\n4. Re-verify after target updates.\n5. Clean out stale items.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_version_fingerprinting",
+   "name": "Version fingerprinting",
+   "description": "Identify exact target versions.",
+   "instructions": "Workflow:\n1. Gather headers, meta, and banner data (web.headervuln, process.exec curl).\n2. Cross-check with behavior probes.\n3. Map to CPE for CVE matching.\n4. Note uncertainty honestly.\n5. Record in the engagement notes.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploitability_triage",
+   "name": "Exploitability triage",
+   "description": "Decide what is worth deeper work.",
+   "instructions": "Workflow:\n1. Score: exposure, auth requirements, PoC maturity, impact.\n2. Rank candidates in a table.\n3. Pick the top item; justify.\n4. Defer the rest with reasons.\n5. Log the decision.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_disclosure_norms",
+   "name": "Disclosure norms briefing",
+   "description": "Understand responsible practices.",
+   "instructions": "Workflow:\n1. web.search the project's security policy.\n2. Follow the stated reporting channel.\n3. Respect embargo timelines.\n4. Never publish unpatched issues.\n5. Keep the user informed of obligations.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_cve_monitoring_setup",
+   "name": "CVE monitoring setup",
+   "description": "Track your stack's advisories.",
+   "instructions": "Workflow:\n1. Inventory components (file.read manifests).\n2. web.search per-component advisory feeds.\n3. Summarize a monitoring plan.\n4. Save the plan with file.write.\n5. Review cadence: weekly.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_redteam_brief_template",
+   "name": "Red team brief template",
+   "description": "Structure authorized engagements.",
+   "instructions": "Workflow:\n1. Sections: scope, rules, contacts, timeframe.\n2. Include explicit out-of-scope items.\n3. Define evidence handling.\n4. Get sign-off before activity.\n5. Store the brief with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_attack_surface_map",
+   "name": "Attack surface mapping",
+   "description": "Enumerate what an attacker sees.",
+   "instructions": "Workflow:\n1. Combine port scan (net.portscan) and crawl (web.crawl).\n2. List services, endpoints, and auth modes.\n3. Version-fingerprint each (cat_res_version_fingerprinting flow).\n4. Prioritize entry points.\n5. Save the map with file.write.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_initial_access_planning",
+   "name": "Initial access planning",
+   "description": "Plan the first authorized probe.",
+   "instructions": "Workflow:\n1. Review the attack surface map.\n2. Pick the weakest credible entry point.\n3. Define success signals before acting.\n4. Prepare rollback/abort criteria.\n5. Execute minimally; log everything.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_privilege_path_research",
+   "name": "Privilege path research",
+   "description": "Plan escalation logically.",
+   "instructions": "Workflow:\n1. Inventory privileges gained so far.\n2. Enumerate next-hop targets (services, creds, misconfigs).\n3. Research known paths via web.search for your stack.\n4. Validate hypotheses in the lab.\n5. Document the chain.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_post_exploit_reporting",
+   "name": "Post-exploitation reporting",
+   "description": "Report beyond the initial breach.",
+   "instructions": "Workflow:\n1. Record actions taken with timestamps.\n2. Quantify impact reached (data/systems).\n3. Include screenshots/paths as evidence files.\n4. Map each action to the rules of engagement.\n5. Deliver the full chain report.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_purple_team_loop",
+   "name": "Purple team loop",
+   "description": "Turn findings into detection tests.",
+   "instructions": "Workflow:\n1. For each validated finding, draft a detection test.\n2. Execute the attack once; verify the alert fires.\n3. Tune and re-test.\n4. Record results per control.\n5. Save the loop log.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_lab_setup_notes",
+   "name": "Vulnerable lab setup",
+   "description": "Build safe practice environments.",
+   "instructions": "Workflow:\n1. web.search deliberately vulnerable apps for the target stack.\n2. Set up in an isolated environment only.\n3. Document setup steps (file.write).\n4. Verify isolation before testing.\n5. Keep the lab inventory.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploit_maturity_scale",
+   "name": "Exploit maturity assessment",
+   "description": "Grade PoC maturity honestly.",
+   "instructions": "Workflow:\n1. Classify: theoretical, functional, reliable, weaponized.\n2. Base the grade on evidence from research.\n3. Note dependencies (auth, config).\n4. Use the grade in prioritization.\n5. Cite sources.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_zero_day_handling",
+   "name": "Zero-day handling ethics",
+   "description": "Handle unpatched issues responsibly.",
+   "instructions": "Workflow:\n1. Confirm the issue is truly unpatched (web.search).\n2. Follow coordinated disclosure norms.\n3. Limit PoC distribution.\n4. Notify the vendor privately.\n5. Document your timeline.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_bounty_scope_check",
+   "name": "Bounty program compliance",
+   "description": "Operate within program rules.",
+   "instructions": "Workflow:\n1. Read the program policy fully (web.crawl).\n2. Note allowed targets and methods.\n3. Respect rate and impact limits.\n4. Track findings against the policy.\n5. Submit through official channels only.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_osint_asset_link",
+   "name": "OSINT to asset linking",
+   "description": "Connect public data to your assets.",
+   "instructions": "Workflow:\n1. web.search the org plus technology keywords.\n2. Note exposed docs, repos, subdomains.\n3. Verify each against your scope list.\n4. Record provenance.\n5. Feed the attack surface map.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_research_digest_writeup",
+   "name": "Research digest writing",
+   "description": "Publish internal research digests.",
+   "instructions": "Workflow:\n1. Collect the period's notable findings.\n2. Summarize each in 3 lines with links.\n3. Rank by relevance to your stack.\n4. file.write the digest.\n5. Share with the shortlist in chat.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_exploit_history_note",
+   "name": "Exploit history awareness",
+   "description": "Know a CVE's exploitation history.",
+   "instructions": "Workflow:\n1. web.search the CVE plus campaign/malware mentions.\n2. Note first-seen dates and actors.\n3. Relate to patch adoption.\n4. Adjust urgency accordingly.\n5. Cite everything.",
+   "enabled": false
+  },
+  {
+   "id": "cat_res_poc_safety_lab",
+   "name": "PoC safety testing",
+   "description": "Run unknown PoCs safely.",
+   "instructions": "Workflow:\n1. Static review first (file.read).\n2. Run inside an isolated VM/container you own.\n3. Monitor outbound connections (tcpdump.capture).\n4. Never run against production.\n5. Record behavior.",
+   "enabled": false
+  }
+ ]
+}
