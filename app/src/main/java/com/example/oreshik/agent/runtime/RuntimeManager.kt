@@ -1000,8 +1000,8 @@ class RuntimeManager(private val context: Context) {
         }
         env["ANDROID_HOME"] = File(runtimes, "android-sdk").absolutePath
         env["ANDROID_SDK_ROOT"] = env["ANDROID_HOME"] ?: ""
-        File(runtimes, "cli-tools/libexec/git-core").takeIf { it.isDirectory }
-            ?.let { env["GIT_EXEC_PATH"] = it.absolutePath }
+        listOf(File(runtimes, "cli-tools/libexec/git-core"), File(runtimes, "termux-arm64/libexec/git-core"))
+            .firstOrNull { it.isDirectory }?.let { env["GIT_EXEC_PATH"] = it.absolutePath }
         val certFile = listOf(
             File(runtimes, "libs/etc/tls/cert.pem"),
             File(runtimes, "cli-tools/etc/tls/cert.pem"),
