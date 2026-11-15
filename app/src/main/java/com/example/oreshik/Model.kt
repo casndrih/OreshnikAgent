@@ -70,10 +70,19 @@ object ModelCapabilities {
         val advertisedParameters = parameterArrays.flatMap { array ->
             array.mapNotNull { item -> item.takeIf { it.isJsonPrimitive }?.asString?.lowercase() }
         }
-        val explicit = parameterArrays.isNotEmpty() || levelArrays.isNotEmpty()
-        val advertised = advertisedParameters.any {
+        val explicitFlags = listOfNotNull(
+            entry.get("supports_reasoning"),
+            entry.get("reasoning_supported"),
+            capabilityObject?.get("supports_reasoning"),
+            capabilityObject?.get("reasoning"),
+        )
+        val explicitFlag = explicitFlags.firstNotNullOfOrNull { value ->
+            if (value.isJsonPrimitive && value.asJsonPrimitive.isBoolean) value.asBoolean else null
+        }
+        val explicit = explicitFlag != null || parameterArrays.isNotEmpty() || levelArrays.isNotEmpty()
+        val advertised = explicitFlag ?: (advertisedParameters.any {
             it.contains("reasoning_effort") || it == "reasoning" || it.contains("thinking")
-        } || advertisedLevels.isNotEmpty()
+        } || advertisedLevels.isNotEmpty())
         val heuristicText = "$id $description".lowercase()
         val heuristic = listOf("deepseek-r", "deepseek-v3.2", "deepseek-v4", "qwen3", "qwen3.5", "qwq", "reason", "thinking", "glm-", "nemotron-", "o1", "o3", "o4", "r1").any { it in heuristicText }
         val supported = if (explicit) advertised else heuristic
