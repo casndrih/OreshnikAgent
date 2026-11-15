@@ -229,7 +229,7 @@ class WebCrawlTool : AgentTool {
                         return@use ToolResult.failure("HTTP ${response.code}: ${response.message}")
                     }
                     val contentType = response.header("Content-Type") ?: ""
-                    val body = response.body
+                    val body = response.body ?: return@use ToolResult.failure("Empty response body")
                     if (contentType.isNotBlank() && !contentType.contains("html", ignoreCase = true) &&
                         !contentType.contains("text/plain", ignoreCase = true) && !contentType.contains("xml", ignoreCase = true)) {
                         return@use ToolResult.failure("Unsupported content type for page extraction: $contentType")
