@@ -62,6 +62,8 @@ The provider layer is managed through a common provider registry.
 - Select an active provider and model.
 - Store and manage provider credentials in the app's key-management/settings screens.
 - Fetch model lists from providers which expose model discovery.
+- Detect reasoning-effort support from model metadata, then verify it with a low-cost live probe; compatible providers receive reasoning parameters only for supported models and fall back cleanly when rejected.
+- Show live model status separately for online, offline, transient/rate-limited, restricted by credentials/plan, unavailable model IDs, and probing. Probe results are endpoint/key scoped and expire instead of being treated as permanent truth.
 - Validate configured provider keys.
 - Add and remove OpenAI-compatible API profiles.
 - Keep online-provider selection separate from offline execution mode.
@@ -219,9 +221,11 @@ Memory is intended to support continuity across tasks. Users should avoid storin
 ### Skills
 
 - Skill repository and database-backed skill management.
-- Seeded skill catalogue assets.
-- Skill listing and activation through agent tools.
-- Request-time retrieval of relevant skill instructions.
+- Seeded skill catalogue assets plus live Skills.sh community search.
+- Import a selected GitHub `SKILL.md` with size/frontmatter validation; community skills are installed disabled for user review.
+- Skill listing, editing, deletion, bulk enable/disable, import/export, and activation through agent tools.
+- Request-time matching uses names, descriptions, categories, and instruction-body tokens; only the top relevant instructions are injected.
+- Imported skill content is treated as untrusted guidance and cannot override app permissions or higher-priority safety rules.
 
 Skills guide the agent's workflow; they do not grant permissions or override tool security checks.
 
@@ -384,7 +388,7 @@ The following are **proposed enhancements**, not claims about features already s
 ### P1 — Agent quality and control
 
 - Add a visual task-plan panel with cancellation and pause/resume controls (workflow step retries and resume checkpoints are available through agent tools).
-- Add provider capability detection for vision, tool calling, streaming, context limits, and structured output.
+- Extend provider capability detection to vision, streaming, context limits, and structured output (reasoning-effort detection and fallback are implemented).
 
 ### P2 — Runtime and developer experience
 
