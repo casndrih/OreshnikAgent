@@ -41,13 +41,13 @@ class ProviderMetricsTool : AgentTool {
                         append(row.host).append(" · ").append(row.model).append('\n')
                         append("Requests: ").append(row.requests)
                             .append(" (").append(row.successes).append(" successful, ").append(row.failures).append(" failed)").append('\n')
-                        append("Tokens: ").append(row.promptTokens).append(" input + ").append(row.completionTokens).append(" output").append('\n')
+                        append("Tokens: ").append(row.promptTokens).append(" input + ").append(row.completionTokens).append(" output (usage returned for ").append(row.usageReports).append("/").append(row.requests).append(" requests)").append('\n')
                         append("Latency: avg ").append(row.averageLatencyMs).append(" ms, last ").append(row.lastLatencyMs).append(" ms").append('\n')
                         append("Estimated cost: ").append(cost?.let { "USD %.6f".format(Locale.US, it) } ?: "not configured")
                             .append('\n').append("Updated: ").append(formatter.format(Date(row.updatedAt)))
                     }
                 }
-                ToolResult.success(output + "\n\nEstimated total for priced models: USD %.6f (%d/%d models priced).".format(Locale.US, knownCost, priced, rows.size))
+                ToolResult.success(output + "\n\nEstimated observed-usage total for priced models: USD %.6f (%d/%d models priced).".format(Locale.US, knownCost, priced, rows.size))
             }
             "set_pricing" -> runCatching {
                 val host = args["host"]?.asString?.trim().orEmpty()
