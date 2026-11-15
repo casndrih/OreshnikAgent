@@ -6,8 +6,6 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
-import android.graphics.RadialGradient
-import android.graphics.Shader
 import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
@@ -38,30 +36,10 @@ class LiveCursorView @JvmOverloads constructor(
     private val cursorSize = 48f * density
     private val idleFadeMs = 5000L
 
-    // Keep the pointer legible on both light and dark pages. The radial
-    // gradient is drawn behind the arrow and does not rely on hardware blur.
-    private val glowRadius = cursorSize * 0.78f
-    private val glowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        shader = RadialGradient(
-            0f,
-            0f,
-            glowRadius,
-            intArrayOf(0xB300E5FF.toInt(), 0x6600D9FF, 0x0000D9FF),
-            floatArrayOf(0f, 0.48f, 1f),
-            Shader.TileMode.CLAMP,
-        )
-    }
-
     // Arrow paints (same look as the system-wide AgentCursorOverlay arrow).
     private val arrowFill = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = 0xFF073B46.toInt() // dark teal for contrast on bright pages
         style = Paint.Style.FILL
-    }
-    private val arrowGlowOutline = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = 0xE600E5FF.toInt()
-        style = Paint.Style.STROKE
-        // The path is normalized and scaled by cursorSize in drawArrow().
-        strokeWidth = 6f / 48f
     }
     private val arrowOutline = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.WHITE
@@ -204,19 +182,11 @@ class LiveCursorView @JvmOverloads constructor(
     }
 
     private fun drawArrow(canvas: Canvas, x: Float, y: Float) {
-        // Soft cyan shadow centered around the arrow body.
-        canvas.withTranslation(x + cursorSize * 0.38f, y + cursorSize * 0.4f) {
-            glowPaint.alpha = (fadeAlpha * 255).toInt()
-            canvas.drawCircle(0f, 0f, glowRadius, glowPaint)
-        }
-
         // Align the arrow TIP (path point 0.28, 0.12) with the target point.
         canvas.withTranslation(x - 0.28f * cursorSize, y - 0.12f * cursorSize) {
             canvas.scale(cursorSize, cursorSize)
             arrowFill.alpha = (fadeAlpha * 255).toInt()
-            arrowGlowOutline.alpha = (fadeAlpha * 255).toInt()
             arrowOutline.alpha = (fadeAlpha * 255).toInt()
-            canvas.drawPath(arrowPath, arrowGlowOutline)
             canvas.drawPath(arrowPath, arrowFill)
             canvas.drawPath(arrowPath, arrowOutline)
         }
