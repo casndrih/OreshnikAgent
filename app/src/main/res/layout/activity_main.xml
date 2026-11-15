@@ -205,8 +205,6 @@
             android:layout_marginBottom="18dp"
             app:cardBackgroundColor="@color/bg_card"
             app:cardCornerRadius="26dp"
-            app:cardElevation="1dp"
-            app:cardMaxElevation="1dp"
             app:strokeWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -320,7 +318,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/bg_root"
-            android:elevation="24dp"
             android:orientation="vertical"
             android:paddingHorizontal="10dp"
             android:paddingVertical="6dp"
@@ -388,7 +385,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:background="@color/bg_surface"
-        android:elevation="16dp"
         android:fitsSystemWindows="true"
         android:orientation="vertical">
 
