@@ -221,7 +221,8 @@ class OpenAiCompatibleProvider(
                         val rejectedReasoning = shouldSendReasoning && response.code in 400..499 &&
                             (lower.contains("reasoning_effort") || lower.contains("reasoning effort") ||
                              lower.contains("unknown parameter") || lower.contains("unsupported parameter") ||
-                             lower.contains("unrecognized request argument"))
+                             lower.contains("unrecognized request argument") ||
+                             (lower.contains("unknown variant") && (lower.contains("effort") || lower.contains("low") || lower.contains("high"))))
                         if (rejectedReasoning) {
                             val fallbackBody = body.deepCopy().apply { remove("reasoning_effort") }
                             val fallbackRequest = Request.Builder().url("$baseUrl/chat/completions")
