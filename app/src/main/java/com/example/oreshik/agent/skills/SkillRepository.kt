@@ -29,6 +29,9 @@ object SkillRepository {
     /** Minimum score (distinct token hits) for a skill to be auto-injected. */
     const val MIN_AUTO_MATCH_SCORE = 2
 
+    /** Small bounded scan window keeps auto-matching affordable with 25K+ installed skills. */
+    private const val MAX_MATCH_BODY_CHARS = 2000
+
     // ------------------------------------------------------------------
     // Pure matching / rendering logic (unit-tested, no Android APIs)
     // ------------------------------------------------------------------
@@ -57,16 +60,19 @@ object SkillRepository {
      * Relevance of [skill] to [query]: number of distinct query tokens found in the skill's
      * name/description/category, plus a small bonus for multi-token name hits.
      */
-    internal fun scoreSkill(skill: SkillEntity, query: String): Int {
-        val queryTokens = tokenize(query)
+    internal fun scoreSkill(skill: SkillEntity, query: String): Int =
+        scoreSkillTokens(skill, tokenize(query))
+
+    private fun scoreSkillTokens(skill: SkillEntity, queryTokens: List<String>): Int {
         if (queryTokens.isEmpty()) return 0
-        // Match against the actual playbook too: many long-tail skills have broad descriptions.
+        // Match metadata exactly and scan only a bounded prefix of the playbook. Avoid
+        // allocating token sets for every long instruction body on every chat turn.
         val metadataTokens = HashSet(tokenize(skill.name + " " + skill.description + " " + skill.category))
-        val instructionTokens = HashSet(tokenize(skill.instructions.take(6000)))
+        val instructionPrefix = skill.instructions.take(MAX_MATCH_BODY_CHARS)
         var score = 0
         for (token in queryTokens) {
             if (metadataTokens.contains(token)) score += 1
-            else if (instructionTokens.contains(token)) score += 1
+            else if (instructionPrefix.contains(token, ignoreCase = true)) score += 1
         }
         // Bonus when two or more tokens of the skill NAME appear verbatim — strong intent signal.
         val nameTokens = HashSet(tokenize(skill.name))
@@ -86,10 +92,12 @@ object SkillRepository {
         minScore: Int = MIN_AUTO_MATCH_SCORE,
     ): List<SkillEntity> {
         if (query.isBlank()) return emptyList()
+        val queryTokens = tokenize(query)
+        if (queryTokens.isEmpty()) return emptyList()
         val scored = ArrayList<Pair<SkillEntity, Int>>(skills.size)
         for (skill in skills) {
             if (!skill.enabled) continue
-            val score = scoreSkill(skill, query)
+            val score = scoreSkillTokens(skill, queryTokens)
             if (score >= minScore) scored.add(skill to score)
         }
         scored.sortWith { a, b ->
