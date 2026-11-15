@@ -53,7 +53,14 @@ class ModelAdapter(
             append(kindLabel(model))
             append(" • ")
             append(model.description.ifBlank { "Model" })
-            if (model.reasoning) append("  •  Thinking: ${model.thinkingLevels.joinToString(" / ")}")
+            if (model.reasoning) {
+                val capabilityLabel = when (model.reasoningVerified) {
+                    true -> "verified"
+                    false -> "unsupported"
+                    null -> "auto-detect"
+                }
+                append("  •  Thinking ($capabilityLabel): ${model.thinkingLevels.joinToString(" / ")}")
+            }
             when (model.tested) {
                 true -> append("  •  ✓ responds")
                 false -> append("  •  ✗ ${model.testNote}")
