@@ -70,6 +70,18 @@ class SkillMatchingTest {
     }
 
     @Test
+    fun `instruction body tokens can trigger a long-tail skill`() {
+        val playbook = skill(
+            "schema-migration",
+            "Database maintenance",
+            "A general database operations guide.",
+            instructions = "When protobuf schema migrations are requested, compare old and new message fields and preserve wire compatibility.",
+        )
+        val score = SkillRepository.scoreSkill(playbook, "protobuf schema migrations")
+        assertTrue("instruction-body matches should reach threshold: got $score", score >= SkillRepository.MIN_AUTO_MATCH_SCORE)
+    }
+
+    @Test
     fun `unrelated query scores zero`() {
         val skill = skill("coding", "General coding", "Inspect, edit, test and verify source code.")
         assertEquals(0, SkillRepository.scoreSkill(skill, "banana spaceship xylophone"))
