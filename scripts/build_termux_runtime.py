@@ -140,6 +140,14 @@ def main():
             metadata.append({"name":name,"version":item.get("Version",""),"architecture":item.get("Architecture",""),"filename":filename,"sha256":digest})
         source=extract/PREFIX
         if not source.is_dir(): raise RuntimeError("Expected Termux prefix absent: "+str(source))
+        # Some Termux packages ship dangling optional service/doc symlinks. Drop only
+        # links whose targets are absent from this dependency-closed extraction; all
+        # resolvable links are dereferenced into ordinary files by rsync below.
+        dangling=0
+        for link in source.rglob("*"):
+            if link.is_symlink() and not link.exists():
+                link.unlink(); dangling+=1
+        print(f"Removed {dangling} dangling package symlinks before relocation",flush=True)
         subprocess.run(["rsync","-aL","--safe-links",str(source)+"/",str(stage)+"/"],check=True)
         patch_shebangs(stage)
         entrypoints={name:f"bin/{name}" for name in ENTRYPOINTS if (stage/"bin"/name).is_file()}
