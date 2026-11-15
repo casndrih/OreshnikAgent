@@ -5,7 +5,7 @@ import argparse, hashlib, json, lzma, re, shutil, subprocess, tempfile, urllib.r
 from pathlib import Path
 
 PREFIX = "data/data/com.termux/files/usr"
-PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curl","wget","jq","ripgrep","sqlite","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","file","diffutils","tar","gzip","zip","unzip","tree"]
+PACKAGES = ["bash","busybox","coreutils","findutils","grep","sed","gawk","git","openssh","curlie","libcurl","wget","jq","ripgrep","libsqlite","libmagic","openssl","rsync","inetutils","dnsutils","iproute2","net-tools","nmap","procps","psmisc","diffutils","tar","gzip","zip","unzip","tree","make"]
 ENTRYPOINTS = ["bash","busybox","sh","env","git","ssh","scp","sftp","curlie","wget","jq","rg","sqlite3","openssl","rsync","nmap","ping","traceroute","dig","nslookup","ifconfig","netstat","ip","ss","tar","gzip","gunzip","zip","unzip","find","grep","sed","awk","gawk","diff","cmp","tree","file","head","tail","sort","uniq","cut","tr","wc","make"]
 UA = "OreshnikAgent-TermuxRuntimeBuilder/1.0"
 
