@@ -201,6 +201,7 @@ object ModelTester {
 
     private fun runProbe(providerId: String, m: Model, baseUrl: String, key: String): Model {
         val t0 = System.currentTimeMillis()
+        val probeEffort = m.thinkingLevels.firstOrNull { !it.equals("off", true) } ?: "low"
         try {
             val root = JsonObject().apply {
                 addProperty("model", m.id)
@@ -208,7 +209,7 @@ object ModelTester {
                 addProperty("max_tokens", if (m.kind == "reasoning") 512 else 16)
                 addProperty("temperature", 0.0)
                 // Test the actual reasoning parameter, not just ordinary chat availability.
-                if (m.reasoning) addProperty("reasoning_effort", "low")
+                if (m.reasoning) addProperty("reasoning_effort", probeEffort)
             }
             val body = gson.toJson(root).toRequestBody("application/json".toMediaType())
             val request = Request.Builder()
