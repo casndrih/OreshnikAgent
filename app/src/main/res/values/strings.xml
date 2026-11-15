@@ -370,7 +370,7 @@
     <string name="skills_all_off">All off</string>
 
     <!-- Backup & restore (Settings screen) -->
-    <string name="backup_restore_description">Export everything the app stores to one JSON file: API keys and endpoints, the active provider + model, every toggle, all chat sessions, long-term memories, skills, MCP servers and the theme. Restore re-imports a backup file and replaces the current data. The file contains your API keys in plain text — store it somewhere safe.</string>
+    <string name="backup_restore_description">Export app settings, provider credentials, chat sessions, memories, skills, MCP servers and theme to an encrypted backup. A passphrase is required to create and restore new backups. Keep it safe: it cannot be recovered. Older unencrypted JSON backups remain supported.</string>
     <string name="backup_button">Back up all app config</string>
     <string name="restore_button">Restore from backup…</string>
     <string name="backup_preparing_status">Preparing backup…</string>
