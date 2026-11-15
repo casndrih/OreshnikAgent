@@ -239,8 +239,8 @@ class OpenAiCompatibleProvider(
                             }
                             reasoningSupport[model] = false
                         }
-                        AppLogger.w(TAG, "chat $model failed with HTTP \${response.code}: \${responseBody.take(300)}")
-                        Result.failure(IllegalStateException("HTTP \${response.code}: \${responseBody.take(1500)}"))
+                        AppLogger.w(TAG, "chat $model failed with HTTP ${response.code}: ${responseBody.take(300)}")
+                        Result.failure(IllegalStateException("HTTP ${response.code}: ${responseBody.take(1500)}"))
                     } else {
                         if (shouldSendReasoning) reasoningSupport[model] = true
                         val parsed = gson.fromJson(responseBody, JsonObject::class.java)
