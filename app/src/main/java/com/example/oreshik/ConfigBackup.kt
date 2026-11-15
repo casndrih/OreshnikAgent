@@ -19,6 +19,12 @@ import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream
+import java.security.SecureRandom
+import javax.crypto.Cipher
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.GCMParameterSpec
+import javax.crypto.spec.PBEKeySpec
+import javax.crypto.spec.SecretKeySpec
 import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -40,8 +46,8 @@ import java.util.Locale
  * re-applies the theme + refreshes AgentConfig's in-memory cache so the running process
  * picks up restored values without a restart.
  *
- * SECURITY NOTE: the backup contains API keys in PLAIN TEXT. The file lives wherever
- * the user saved it (their storage, their control) — the UI warns about this.
+ * New exports are encrypted with a user passphrase using PBKDF2-HMAC-SHA256 and
+ * AES-256-GCM. Legacy plain JSON backups remain importable for compatibility.
  */
 object ConfigBackup {
     private const val TAG = "ConfigBackup"
@@ -51,6 +57,10 @@ object ConfigBackup {
 
     private const val WRAPPER_KEY = "oreshikBackup"
     private const val MAX_BACKUP_BYTES = 100L * 1024L * 1024L
+    private val ENCRYPTED_MAGIC = "ORESHIKENC1".toByteArray(Charsets.US_ASCII)
+    private const val PBKDF2_ITERATIONS = 210_000
+    private const val SALT_BYTES = 16
+    private const val GCM_IV_BYTES = 12
 
     /** File-name suggestion for the SAF create dialog. */
     fun suggestedFileName(): String =
