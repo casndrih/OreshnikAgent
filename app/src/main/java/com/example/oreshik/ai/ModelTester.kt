@@ -6,6 +6,7 @@ import com.example.oreshik.logging.AppLogger
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
@@ -207,7 +208,7 @@ object ModelTester {
             }
             val body = gson.toJson(root).toRequestBody("application/json".toMediaType())
             val request = Request.Builder()
-                .url(baseUrl.trimEnd('/') + "/chat/completions")
+                .url(completionUrl(baseUrl))
                 .post(body)
                 .apply { if (key.isNotBlank()) header("Authorization", "Bearer $key") }
                 .build()
@@ -269,8 +270,18 @@ object ModelTester {
                 )
             }
         } catch (t: Throwable) {
+            if (t is CancellationException) throw t
             AppLogger.w("ModelTester", "$providerId ${m.id} probe failed: ${t.message}")
             return m.copy(tested = false, testNote = t.message?.take(80) ?: "network error")
+        }
+    }
+
+    private fun completionUrl(baseUrl: String): String {
+        val base = baseUrl.trimEnd('/')
+        return when {
+            base.endsWith("/chat/completions") -> base
+            base.endsWith("/v1") -> "$base/chat/completions"
+            else -> "$base/v1/chat/completions"
         }
     }
 
