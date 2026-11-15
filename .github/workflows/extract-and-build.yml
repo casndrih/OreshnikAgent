@@ -1,4 +1,5 @@
 name: Extract source and build APK
+# Re-run CI after Python 3.12 toolchain fix
 
 on:
   push:
