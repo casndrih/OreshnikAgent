@@ -64,7 +64,10 @@ class ModelAdapter(
         // tested/testNote fields cover everything else (null → gray pulsing "checking").
         holder.statusDot.setStatus(statusOverrides[model.id] ?: ModelTester.statusFor(model))
         // Grey out models that failed the live test so they are visibly excluded.
-        holder.itemView.alpha = if (model.tested == false) 0.45f else 1f
+        holder.itemView.alpha = when (ModelTester.statusFor(model)) {
+            ModelTester.ModelStatus.OFFLINE, ModelTester.ModelStatus.UNAVAILABLE -> 0.45f
+            else -> 1f
+        }
         holder.itemView.setOnClickListener { onModelSelected(model) }
     }
 
