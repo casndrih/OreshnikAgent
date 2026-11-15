@@ -97,8 +97,22 @@ jobs:
             "ndk;30.0.16248370" \
             "cmake;4.1.2"
 
+      - name: Run unit tests and generate dependency report
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./gradlew :app:testDebugUnitTest --stacktrace
+          ./gradlew :app:dependencies --configuration releaseRuntimeClasspath > dependency-report.txt
+
       - name: Build release APK
         run: ./gradlew :app:assembleRelease --stacktrace
+
+      - name: Generate APK checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd app/build/outputs/apk/release
+          sha256sum *.apk > SHA256SUMS.txt
 
       - name: Upload release APK
         uses: actions/upload-artifact@v4
